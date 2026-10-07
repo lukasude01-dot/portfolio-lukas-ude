@@ -1,21 +1,46 @@
 {
     "_help": "AI WORKFLOW BLUEPRINT (shown on /ai/).",
-
-    "title": "AI-Supported Content Pipeline",
-    "category": ["Content", "Research"],
-    "description": "Research, structure and first drafts with AI – voice, judgement and final edit stay human.",
+    "title": "KI-gestützte Content-Pipeline",
+    "category": [
+        "Content",
+        "Recherche"
+    ],
+    "description": "Recherche, Struktur und erste Entwürfe mit KI – Tonalität, Urteil und finaler Schliff bleiben menschlich.",
     "year": "2026",
     "featured": false,
     "concept": true,
     "order": 2,
-
     "steps": [
-        { "label": "Brief", "role": "Human", "text": "Goal, audience and the one message are defined first." },
-        { "label": "Research", "role": "AI", "text": "AI collects questions, objections and angles from sources you provide." },
-        { "label": "Outline", "role": "AI", "text": "A structure is proposed and checked against the brief." },
-        { "label": "Draft & edit", "role": "Human", "text": "Writing and editing in the brand voice – AI suggests, a person decides." },
-        { "label": "Publish", "role": "System", "text": "Scheduled, documented and stored for reuse." }
+        {
+            "label": "Briefing",
+            "role": "Human",
+            "text": "Ziel, Zielgruppe und die eine Botschaft werden zuerst festgelegt."
+        },
+        {
+            "label": "Recherche",
+            "role": "AI",
+            "text": "KI sammelt Fragen, Einwände und Blickwinkel aus den Quellen, die du vorgibst."
+        },
+        {
+            "label": "Gliederung",
+            "role": "AI",
+            "text": "Eine Struktur wird vorgeschlagen und mit dem Briefing abgeglichen."
+        },
+        {
+            "label": "Schreiben & Redigieren",
+            "role": "Human",
+            "text": "Schreiben und Redigieren in der Markenstimme – KI schlägt vor, ein Mensch entscheidet."
+        },
+        {
+            "label": "Veröffentlichen",
+            "role": "System",
+            "text": "Geplant, dokumentiert und für die Wiederverwendung abgelegt."
+        }
     ],
-    "outputs": ["Content brief", "Draft in brand voice", "Reusable research notes"],
-    "humanInLoop": "Facts are checked and every text is edited by a person before publishing."
+    "outputs": [
+        "Content-Briefing",
+        "Entwurf in Markenstimme",
+        "Wiederverwendbare Recherche-Notizen"
+    ],
+    "humanInLoop": "Fakten werden geprüft und jeder Text wird vor der Veröffentlichung von einem Menschen redigiert."
 }

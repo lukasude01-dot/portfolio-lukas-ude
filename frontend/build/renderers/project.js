@@ -17,15 +17,15 @@ export const projectRenderers = {
     "project-body": ({ project }) => html`${(project.body || []).map((paragraph) => html`<p>${paragraph}</p>`)}`,
 
     "project-next": ({ next, section }) => html`
-        <nav class="project-next theme-dark" aria-label="More work">
+        <nav class="project-next theme-dark" aria-label="Weitere Arbeiten">
             <div class="container project-next__inner">
                 ${next ? html`
-                <a class="project-next__link" href="${next.url}" data-cursor-label="Next">
-                    <span class="eyebrow">Next project</span>
+                <a class="project-next__link" href="${next.url}" data-cursor-label="Weiter">
+                    <span class="eyebrow">Nächstes Projekt</span>
                     <span class="project-next__title heading-2">${next.title}</span>
                     <span class="project-next__arrow" aria-hidden="true">→</span>
                 </a>` : ""}
-                <a class="text-link" href="${section.href}">All ${section.label.toLowerCase()} →</a>
+                <a class="text-link" href="${section.href}">Alle ${section.label} →</a>
             </div>
         </nav>`
 };

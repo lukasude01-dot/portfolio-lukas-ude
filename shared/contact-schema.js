@@ -14,26 +14,27 @@
  * This file is PUBLIC (it is copied to the website).
  * It must only contain validation rules, never secrets.
  *
- * SAFE TO EDIT: labels, max lengths, topic options.
+ * SAFE TO EDIT: labels, messages, max lengths, topic options.
  * EDIT WITH CARE: field names (must match the HTML form in
  * /frontend/components/contact-form.html).
  */
 
 export const CONTACT_TOPICS = [
-    "Funnels & Landing Pages",
+    "Funnels & Landingpages",
     "Creatives & Copy",
     "Design",
-    "AI & Systems",
-    "Something else"
+    "KI & Systeme",
+    "Etwas anderes"
 ];
 
+// "required" = message when the field is empty
 export const CONTACT_FIELDS = {
-    name: { label: "Name", required: true, maxLength: 120 },
-    email: { label: "E-mail", required: true, maxLength: 200, type: "email" },
-    company: { label: "Company", required: false, maxLength: 160 },
-    topic: { label: "Topic", required: true, options: CONTACT_TOPICS },
-    message: { label: "Message", required: true, minLength: 20, maxLength: 4000 },
-    privacy: { label: "Privacy consent", required: true, type: "checkbox" }
+    name: { label: "Name", required: "Bitte gib deinen Namen ein.", maxLength: 120 },
+    email: { label: "E-Mail", required: "Bitte gib deine E-Mail-Adresse ein.", maxLength: 200, type: "email" },
+    company: { label: "Unternehmen", required: false, maxLength: 160 },
+    topic: { label: "Thema", required: "Bitte wähle ein Thema.", options: CONTACT_TOPICS },
+    message: { label: "Nachricht", required: "Bitte schreib mir eine kurze Nachricht.", minLength: 20, maxLength: 4000 },
+    privacy: { label: "Datenschutz", required: "Bitte bestätige, dass du die Datenschutzhinweise gelesen hast.", type: "checkbox" }
 };
 
 // Simple, deliberately permissive e-mail check (the real test is the reply).
@@ -56,7 +57,7 @@ export function validateContact(input = {}) {
         if (rules.type === "checkbox") {
             const checked = raw === true || raw === "true" || raw === "on";
             values[name] = checked;
-            if (rules.required && !checked) errors[name] = "Please confirm that you have read the privacy notice.";
+            if (rules.required && !checked) errors[name] = rules.required;
             continue;
         }
 
@@ -64,17 +65,17 @@ export function validateContact(input = {}) {
         values[name] = value;
 
         if (!value) {
-            if (rules.required) errors[name] = `Please enter your ${rules.label.toLowerCase()}.`;
+            if (rules.required) errors[name] = rules.required;
             continue;
         }
         if (rules.minLength && value.length < rules.minLength) {
-            errors[name] = `Please write at least ${rules.minLength} characters.`;
+            errors[name] = `Bitte schreib mindestens ${rules.minLength} Zeichen.`;
         } else if (rules.maxLength && value.length > rules.maxLength) {
-            errors[name] = `Please keep it under ${rules.maxLength} characters.`;
+            errors[name] = `Bitte bleib unter ${rules.maxLength} Zeichen.`;
         } else if (rules.type === "email" && !EMAIL_PATTERN.test(value)) {
-            errors[name] = "Please enter a valid e-mail address.";
+            errors[name] = "Bitte gib eine gültige E-Mail-Adresse ein.";
         } else if (rules.options && !rules.options.includes(value)) {
-            errors[name] = "Please choose one of the options.";
+            errors[name] = "Bitte wähle eine der Optionen.";
         }
     }
 

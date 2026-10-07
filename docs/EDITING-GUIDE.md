@@ -64,6 +64,7 @@ Datei: `frontend/pages/index.html` → suche `EDIT: MAIN HERO HEADLINE`
 ```
 
 Nur den Text zwischen `>` und `</span>` ändern. Die zweite Zeile ist kursiv/messingfarben.
+Der Slogan bleibt bewusst Englisch (Logo-Slogan) – alle anderen Texte der Website sind Deutsch.
 
 ## 2. Normalen Text ändern
 
@@ -126,7 +127,7 @@ Datei: `frontend/config/site.js` → `navigation`
 
 ```js
 navigation: [
-    { label: "Work", href: "/work/" },
+    { label: "Arbeiten", href: "/work/" },
     { label: "Blog", href: "/blog/" },   // neuer Punkt
     ...
 ]
@@ -221,8 +222,8 @@ Ganz oben in jeder Seite in `frontend/pages/` steht ein Block zwischen `---`:
 
 ```
 ---
-title: Funnels & Landing Pages
-description: Funnels and landing pages you can try yourself ...
+title: Funnels & Landingpages
+description: Funnels und Landingpages zum Selbst-Ausprobieren ...
 path: /funnels/
 ---
 ```

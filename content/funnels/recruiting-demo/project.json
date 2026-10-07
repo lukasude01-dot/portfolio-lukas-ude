@@ -1,46 +1,64 @@
 {
     "_help": "FUNNEL CASE STUDY. See /docs/CONTENT-GUIDE.md -> Funnels. 'example': true marks example content (shown as 'Concept'); remove it when this is real client work.",
-
-    "title": "Recruiting Funnel for a Carpentry Workshop",
-    "category": ["Recruiting"],
-    "description": "A 60-second application funnel that replaces CV and cover letter with four simple questions – built for skilled trades.",
+    "title": "Recruiting-Funnel für eine Tischlerei",
+    "category": [
+        "Recruiting"
+    ],
+    "description": "Ein Bewerbungs-Funnel in 60 Sekunden, der Lebenslauf und Anschreiben durch vier einfache Fragen ersetzt – gebaut fürs Handwerk.",
     "year": "2026",
-    "client": "Tischlerei Nordholz (fictional brand)",
-    "services": ["Funnel strategy", "Copywriting", "Landing page design", "Multi-step application"],
+    "client": "Tischlerei Nordholz (fiktive Marke)",
+    "services": [
+        "Funnel-Strategie",
+        "Copywriting",
+        "Landingpage-Design",
+        "Mehrstufige Bewerbung"
+    ],
     "featured": true,
     "example": true,
     "order": 1,
     "status": "published",
-
     "demoPath": "/demos/recruiting-demo/",
-    "demoNotice": "Portfolio demonstration for a fictional brand. The live demo works like a real funnel, but no data is sent or stored.",
-
-    "thumbnail": { "src": "cover.jpg", "alt": "Recruiting landing page with the headline 'Feierabend um 16 Uhr' on a warm walnut background" },
-
-    "context": "Skilled trades compete for very few applicants. Many good carpenters are employed and not actively searching – a long application form with CV upload is the first reason not to apply.",
-    "objective": "Make applying as easy as answering a few questions on the phone, so passive candidates take the first step.",
-    "objectiveShort": "Lower the barrier to apply for passive candidates.",
-
+    "demoNotice": "Portfolio-Demonstration für eine fiktive Marke. Die Live-Demo funktioniert wie ein echter Funnel, es werden aber keine Daten gesendet oder gespeichert.",
+    "thumbnail": {
+        "src": "cover.jpg",
+        "alt": "Recruiting-Landingpage mit der Headline „Feierabend um 16 Uhr“ auf warmem Nussbaum-Hintergrund"
+    },
+    "context": "Handwerksbetriebe konkurrieren um sehr wenige Bewerber. Viele gute Tischler:innen sind angestellt und suchen nicht aktiv – ein langes Formular mit Lebenslauf-Upload ist der erste Grund, sich nicht zu bewerben.",
+    "objective": "Die Bewerbung so einfach machen wie ein paar Fragen am Telefon, damit auch passive Kandidat:innen den ersten Schritt gehen.",
+    "objectiveShort": "Die Hürde für passive Kandidat:innen senken.",
     "audience": [
-        "Trained carpenters (Tischler:innen) aged 22–45, currently employed",
-        "Mainly reached on mobile, often in the evening",
-        "Value fair working hours, craftsmanship and a respectful team more than perks"
+        "Ausgebildete Tischler:innen zwischen 22 und 45, aktuell angestellt",
+        "Vor allem mobil erreichbar, oft abends",
+        "Legen mehr Wert auf faire Arbeitszeiten, Handwerk und ein respektvolles Team als auf Extras"
     ],
-
     "strategy": [
-        "Lead with the strongest real benefit (predictable working hours) instead of generic employer claims",
-        "Remove the CV: four questions qualify enough for a first phone call",
-        "Answer objections early (salary, lateral entry, process) in a short FAQ",
-        "Keep one action on every screen: apply"
+        "Mit dem stärksten echten Vorteil (planbare Arbeitszeiten) starten statt mit allgemeinen Arbeitgeber-Floskeln",
+        "Den Lebenslauf weglassen: vier Fragen reichen für ein erstes Telefonat",
+        "Einwände früh beantworten (Gehalt, Quereinstieg, Ablauf) – in einem kurzen FAQ",
+        "Auf jedem Screen genau eine Handlung: bewerben"
     ],
-
     "structure": [
-        { "step": "Ad", "title": "Social ad", "text": "A pattern-interrupt hook about working hours, targeted at carpenters in the region." },
-        { "step": "Landing", "title": "Landing page", "text": "Headline, three proof points, benefits and a three-step process." },
-        { "step": "Application", "title": "4-step form", "text": "Training, experience, start date, contact – one question per screen." },
-        { "step": "Thank you", "title": "Confirmation", "text": "Clear next step (phone call within two working days) to reduce uncertainty." }
+        {
+            "step": "Anzeige",
+            "title": "Social Ad",
+            "text": "Ein Hook zu den Arbeitszeiten, der das Scrollen unterbricht – ausgespielt an Tischler:innen in der Region."
+        },
+        {
+            "step": "Landingpage",
+            "title": "Landingpage",
+            "text": "Headline, drei Belege, Vorteile und ein Ablauf in drei Schritten."
+        },
+        {
+            "step": "Bewerbung",
+            "title": "Formular in 4 Schritten",
+            "text": "Ausbildung, Erfahrung, Starttermin, Kontakt – eine Frage pro Screen."
+        },
+        {
+            "step": "Danke",
+            "title": "Bestätigung",
+            "text": "Klarer nächster Schritt (Anruf innerhalb von zwei Werktagen), um Unsicherheit zu nehmen."
+        }
     ],
-
     "copy": {
         "headline": "Feierabend um 16 Uhr. Und Arbeit, die bleibt.",
         "subheadline": "Bewirb dich in 60 Sekunden – ohne Lebenslauf, ohne Anschreiben.",
@@ -49,32 +67,68 @@
             "Massivholz statt Spanplatte am Fließband.",
             "Bewerben in 60 Sekunden – ohne Lebenslauf."
         ],
-        "tone": "Direct, respectful and concrete. Short sentences, the language of the workshop – no HR jargon, no superlatives."
+        "tone": "Direkt, respektvoll und konkret. Kurze Sätze, die Sprache der Werkstatt – kein HR-Jargon, keine Superlative."
     },
-
     "visual": {
         "palette": [
-            { "name": "Walnut", "hex": "#2A1F17" },
-            { "name": "Linen", "hex": "#F3EEE6" },
-            { "name": "Copper", "hex": "#B4552A" },
-            { "name": "Oak", "hex": "#6B4630" }
+            {
+                "name": "Nussbaum",
+                "hex": "#2A1F17"
+            },
+            {
+                "name": "Leinen",
+                "hex": "#F3EEE6"
+            },
+            {
+                "name": "Kupfer",
+                "hex": "#B4552A"
+            },
+            {
+                "name": "Eiche",
+                "hex": "#6B4630"
+            }
         ],
-        "typography": "One bold sans-serif with tight headlines – practical and confident.",
-        "imagery": "Wood-grain texture instead of stock photos. In a real project: authentic photos from the workshop and team.",
-        "layout": "Mobile first, large touch targets and a sticky apply button on small screens."
+        "typography": "Eine kräftige Sans-Serif mit eng gesetzten Headlines – praktisch und selbstbewusst.",
+        "imagery": "Holzmaserung statt Stockfotos. In einem echten Projekt: authentische Fotos aus Werkstatt und Team.",
+        "layout": "Mobile first, große Touch-Flächen und ein fixierter Bewerben-Button auf kleinen Bildschirmen."
     },
-
     "ctaStructure": [
-        { "role": "Primary", "text": "In 60 Sekunden bewerben", "where": "Hero, after the process section and as a sticky button on mobile" },
-        { "role": "Secondary", "text": "So läuft's ab", "where": "Hero – for visitors who need more information first" },
-        { "role": "Form", "text": "Bewerbung absenden", "where": "Last step of the application" }
+        {
+            "role": "Primär",
+            "text": "In 60 Sekunden bewerben",
+            "where": "Hero, nach dem Ablauf und als fixierter Button auf dem Handy"
+        },
+        {
+            "role": "Sekundär",
+            "text": "So läuft's ab",
+            "where": "Hero – für alle, die erst mehr wissen wollen"
+        },
+        {
+            "role": "Formular",
+            "text": "Bewerbung absenden",
+            "where": "Letzter Schritt der Bewerbung"
+        }
     ],
-
     "journey": [
-        { "title": "Sees the ad in the evening", "text": "The working-hours hook speaks to a real frustration, not to an abstract employer brand." },
-        { "title": "Lands on the page", "text": "Headline and three proof points confirm the promise within seconds." },
-        { "title": "Checks the details", "text": "Benefits, process and FAQ answer the typical doubts before they stop the click." },
-        { "title": "Applies in four taps", "text": "One question per screen, progress bar, no uploads – finished on the sofa." },
-        { "title": "Knows what happens next", "text": "The confirmation promises a phone call within two working days." }
+        {
+            "title": "Sieht die Anzeige am Abend",
+            "text": "Der Hook zu den Arbeitszeiten trifft einen echten Frust – keine abstrakte Arbeitgebermarke."
+        },
+        {
+            "title": "Landet auf der Seite",
+            "text": "Headline und drei Belege bestätigen das Versprechen in Sekunden."
+        },
+        {
+            "title": "Prüft die Details",
+            "text": "Vorteile, Ablauf und FAQ beantworten die typischen Zweifel, bevor sie den Klick verhindern."
+        },
+        {
+            "title": "Bewirbt sich mit vier Taps",
+            "text": "Eine Frage pro Screen, Fortschrittsbalken, kein Upload – erledigt auf dem Sofa."
+        },
+        {
+            "title": "Weiß, was als Nächstes passiert",
+            "text": "Die Bestätigung verspricht einen Anruf innerhalb von zwei Werktagen."
+        }
     ]
 }

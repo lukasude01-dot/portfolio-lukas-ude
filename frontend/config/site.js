@@ -28,16 +28,16 @@ export const siteConfig = {
 
     name: "Lukas Ude",
 
-    // EDIT: TAGLINE (shown in hero, footer, page titles)
+    // EDIT: TAGLINE (logo slogan – deliberately stays English)
     tagline: "Rooted in ideas. Built for growth.",
 
     // EDIT: DESCRIPTOR (the small line above headlines)
-    descriptor: "Marketing · AI · Systems",
+    descriptor: "Marketing · KI · Systeme",
 
     // EDIT: DEFAULT SEO DESCRIPTION (used when a page has none)
     description:
-        "Lukas Ude connects creative marketing, copy, funnels and design with " +
-        "AI-supported workflows and clear systems – from the first idea to a process that runs.",
+        "Lukas Ude verbindet kreatives Marketing, Copywriting, Funnels und Design mit " +
+        "KI-gestützten Workflows und klaren Systemen – von der ersten Idee bis zum laufenden Prozess.",
 
 
     // ---------------------------------------------------------
@@ -57,8 +57,8 @@ export const siteConfig = {
     // domain before going live, e.g. "https://www.your-domain.de".
     url: "http://localhost:3000",
 
-    language: "en",
-    locale: "en_US",
+    language: "de",
+    locale: "de_DE",
 
 
     // ---------------------------------------------------------
@@ -72,7 +72,7 @@ export const siteConfig = {
 
     // EDIT: LOCATION (optional, e.g. "Hamburg, Germany")
     // EXAMPLE VALUE
-    location: "Germany",
+    location: "Deutschland",
 
     // EDIT: SOCIAL LINKS  (empty url = not shown)
     social: [
@@ -89,13 +89,13 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     navigation: [
-        { label: "Work", href: "/work/" },
+        { label: "Arbeiten", href: "/work/" },
         { label: "Funnels", href: "/funnels/" },
         { label: "Creatives", href: "/creatives/" },
         { label: "Design", href: "/design/" },
-        { label: "AI", href: "/ai/" },
-        { label: "About", href: "/about/" },
-        { label: "Contact", href: "/contact/" }
+        { label: "KI", href: "/ai/" },
+        { label: "Über mich", href: "/about/" },
+        { label: "Kontakt", href: "/contact/" }
     ],
 
     legalNavigation: [
@@ -109,8 +109,8 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     cta: {
-        primary: { label: "View my work", href: "/work/" },
-        secondary: { label: "Work with me", href: "/contact/" }
+        primary: { label: "Meine Arbeiten", href: "/work/" },
+        secondary: { label: "Zusammenarbeiten", href: "/contact/" }
     },
 
 
@@ -141,7 +141,7 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     qr: {
-        label: "Scan to open portfolio",
+        label: "Scannen und Portfolio öffnen",
         path: "/"          // e.g. "/contact/" to open the contact page
     },
 
@@ -154,13 +154,13 @@ export const siteConfig = {
     ogImage: "/assets/images/og/og-default.jpg",
 
     // Used in structured data (schema.org/Person)
-    jobTitle: "Marketing, AI & Systems",
+    jobTitle: "Marketing, KI & Systeme",
     knowsAbout: [
         "Marketing",
         "Copywriting",
-        "Funnels and landing pages",
-        "Graphic design",
-        "AI-supported marketing",
-        "Marketing automation"
+        "Funnels und Landingpages",
+        "Grafikdesign",
+        "KI-gestütztes Marketing",
+        "Marketing-Automatisierung"
     ]
 };

@@ -1,47 +1,69 @@
 {
     "_help": "FUNNEL CASE STUDY. See /docs/CONTENT-GUIDE.md -> Funnels. 'example': true marks example content (shown as 'Concept'); remove it when this is real client work.",
-
-    "title": "Lead Generation Quiz for a Stove Retailer",
-    "category": ["Lead Generation"],
-    "description": "A five-question 'stove check' that gives visitors an honest recommendation first – and turns curiosity into qualified enquiries.",
+    "title": "Leadgenerierungs-Quiz für einen Kaminofen-Händler",
+    "category": [
+        "Leadgenerierung"
+    ],
+    "description": "Ein „Ofen-Check“ mit fünf Fragen, der zuerst eine ehrliche Empfehlung gibt – und aus Neugier qualifizierte Anfragen macht.",
     "year": "2026",
-    "client": "Ofenhaus Alder (fictional brand)",
-    "services": ["Funnel strategy", "Quiz logic", "Copywriting", "Landing page design"],
+    "client": "Ofenhaus Alder (fiktive Marke)",
+    "services": [
+        "Funnel-Strategie",
+        "Quiz-Logik",
+        "Copywriting",
+        "Landingpage-Design"
+    ],
     "featured": true,
     "example": true,
     "order": 2,
     "status": "published",
-
     "demoPath": "/demos/lead-generation-demo/",
-    "demoNotice": "Portfolio demonstration for a fictional brand. The live demo works like a real funnel, but no data is sent or stored.",
-
-    "thumbnail": { "src": "cover.jpg", "alt": "Dark landing page with an ember glow and the question 'Welcher Kaminofen passt wirklich zu deinem Zuhause?' next to a quiz" },
-
-    "context": "Buying a wood-burning stove is a considered decision. Most visitors are early in their research and are not ready for a sales call – a classic 'request a quote' form loses them.",
-    "objective": "Offer something useful first (a recommendation), and collect qualified enquiries with the information a consultant needs.",
-    "objectiveShort": "Turn early-stage visitors into qualified enquiries.",
-
+    "demoNotice": "Portfolio-Demonstration für eine fiktive Marke. Die Live-Demo funktioniert wie ein echter Funnel, es werden aber keine Daten gesendet oder gespeichert.",
+    "thumbnail": {
+        "src": "cover.jpg",
+        "alt": "Dunkle Landingpage mit Glut-Schimmer und der Frage „Welcher Kaminofen passt wirklich zu deinem Zuhause?“ neben einem Quiz"
+    },
+    "context": "Ein Kaminofen ist eine überlegte Anschaffung. Die meisten Besucher stehen noch am Anfang ihrer Recherche und wollen kein Verkaufsgespräch – ein klassisches „Angebot anfordern“-Formular verliert sie.",
+    "objective": "Zuerst etwas Nützliches bieten (eine Empfehlung) und dabei qualifizierte Anfragen mit allen Infos sammeln, die ein Berater braucht.",
+    "objectiveShort": "Besucher in der Recherchephase zu qualifizierten Anfragen machen.",
     "audience": [
-        "Home owners and future home owners planning a stove",
-        "Early in the decision: comparing options, unsure about size and requirements",
-        "Want advice without sales pressure"
+        "Haus- und künftige Hausbesitzer, die einen Ofen planen",
+        "Früh in der Entscheidung: vergleichen, unsicher bei Größe und Voraussetzungen",
+        "Wollen Beratung ohne Verkaufsdruck"
     ],
-
     "strategy": [
-        "Replace 'request a quote' with a 'free stove check' – value before contact",
-        "Ask the questions a consultant would ask anyway (room size, living situation, goal, timing)",
-        "Personalise the result page so the visitor sees immediate value",
-        "Position the consultation as optional to reduce pressure"
+        "„Angebot anfordern“ durch einen „kostenlosen Ofen-Check“ ersetzen – erst Nutzen, dann Kontakt",
+        "Die Fragen stellen, die ein Berater sowieso stellen würde (Raumgröße, Wohnsituation, Ziel, Zeitpunkt)",
+        "Die Ergebnisseite personalisieren, damit der Nutzen sofort sichtbar ist",
+        "Die Beratung als optional positionieren, um Druck rauszunehmen"
     ],
-
     "structure": [
-        { "step": "Ad", "title": "Search & social", "text": "Question-led ads: 'Which stove fits your living room?'" },
-        { "step": "Quiz", "title": "5 questions", "text": "Living situation, room size, goal and timing – one tap each." },
-        { "step": "Contact", "title": "Name, e-mail, postcode", "text": "Asked only after the visitor has invested in the answers." },
-        { "step": "Result", "title": "Personal recommendation", "text": "Power range and next steps based on the answers." },
-        { "step": "Follow-up", "title": "Optional appointment", "text": "In a real setup: e-mail with the recommendation and an appointment link." }
+        {
+            "step": "Anzeige",
+            "title": "Suche & Social",
+            "text": "Anzeigen, die mit einer Frage starten: „Welcher Ofen passt zu deinem Wohnzimmer?“"
+        },
+        {
+            "step": "Quiz",
+            "title": "5 Fragen",
+            "text": "Wohnsituation, Raumgröße, Ziel und Zeitpunkt – je ein Tap."
+        },
+        {
+            "step": "Kontakt",
+            "title": "Name, E-Mail, PLZ",
+            "text": "Erst gefragt, wenn der Besucher schon in die Antworten investiert hat."
+        },
+        {
+            "step": "Ergebnis",
+            "title": "Persönliche Empfehlung",
+            "text": "Leistungsbereich und nächste Schritte auf Basis der Antworten."
+        },
+        {
+            "step": "Follow-up",
+            "title": "Optionaler Termin",
+            "text": "In einem echten Setup: E-Mail mit Empfehlung und Terminlink."
+        }
     ],
-
     "copy": {
         "headline": "Welcher Kaminofen passt wirklich zu deinem Zuhause?",
         "subheadline": "Fünf kurze Fragen – danach bekommst du eine ehrliche Empfehlung.",
@@ -50,32 +72,68 @@
             "Erst die Empfehlung, dann das Gespräch.",
             "In 2 Minuten zur passenden Ofengröße."
         ],
-        "tone": "Calm and advisory. Explains instead of selling and names a real problem (oversized stoves) to build trust."
+        "tone": "Ruhig und beratend. Erklärt statt zu verkaufen und benennt ein echtes Problem (zu große Öfen), um Vertrauen aufzubauen."
     },
-
     "visual": {
         "palette": [
-            { "name": "Charcoal", "hex": "#1F1C19" },
-            { "name": "Cream", "hex": "#F6F1EA" },
-            { "name": "Ember", "hex": "#C2541F" },
-            { "name": "Ash", "hex": "#E3DACE" }
+            {
+                "name": "Anthrazit",
+                "hex": "#1F1C19"
+            },
+            {
+                "name": "Creme",
+                "hex": "#F6F1EA"
+            },
+            {
+                "name": "Glut",
+                "hex": "#C2541F"
+            },
+            {
+                "name": "Asche",
+                "hex": "#E3DACE"
+            }
         ],
-        "typography": "Bold sans-serif headlines, generous line height for the explanations.",
-        "imagery": "A warm ember glow instead of stock photos. In a real project: photos of installed stoves in customers' homes.",
-        "layout": "Quiz visible above the fold on desktop – the first answer is one tap away."
+        "typography": "Kräftige Sans-Serif-Headlines, großzügiger Zeilenabstand für die Erklärungen.",
+        "imagery": "Warmer Glut-Schimmer statt Stockfotos. In einem echten Projekt: Fotos eingebauter Öfen bei Kunden.",
+        "layout": "Auf dem Desktop ist das Quiz sofort sichtbar – die erste Antwort ist nur einen Tap entfernt."
     },
-
     "ctaStructure": [
-        { "role": "Primary", "text": "Weiter / Empfehlung anzeigen", "where": "Inside the quiz, visible in the hero" },
-        { "role": "Sticky", "text": "Kostenlosen Ofen-Check starten", "where": "Sticky button on mobile after the hero" },
-        { "role": "After result", "text": "Optional appointment", "where": "Result page and follow-up e-mail" }
+        {
+            "role": "Primär",
+            "text": "Weiter / Empfehlung anzeigen",
+            "where": "Im Quiz, direkt im Hero sichtbar"
+        },
+        {
+            "role": "Fixiert",
+            "text": "Kostenlosen Ofen-Check starten",
+            "where": "Fixierter Button auf dem Handy nach dem Hero"
+        },
+        {
+            "role": "Nach dem Ergebnis",
+            "text": "Optionaler Termin",
+            "where": "Ergebnisseite und Follow-up-E-Mail"
+        }
     ],
-
     "journey": [
-        { "title": "Searches for stove advice", "text": "The ad asks the question the visitor already has." },
-        { "title": "Starts the quiz immediately", "text": "No reading required – the first question is visible right away." },
-        { "title": "Invests in the answers", "text": "Each tap moves forward; the progress bar shows how little is left." },
-        { "title": "Shares contact details", "text": "Asked at the end, when the recommendation is one step away." },
-        { "title": "Receives real value", "text": "A personal recommendation – and the option to talk to a consultant." }
+        {
+            "title": "Sucht nach Ofen-Beratung",
+            "text": "Die Anzeige stellt die Frage, die der Besucher ohnehin hat."
+        },
+        {
+            "title": "Startet sofort das Quiz",
+            "text": "Kein Lesen nötig – die erste Frage ist direkt sichtbar."
+        },
+        {
+            "title": "Investiert in die Antworten",
+            "text": "Jeder Tap bringt weiter, der Fortschrittsbalken zeigt, wie wenig noch fehlt."
+        },
+        {
+            "title": "Gibt Kontaktdaten an",
+            "text": "Erst am Ende gefragt, wenn die Empfehlung nur noch einen Schritt entfernt ist."
+        },
+        {
+            "title": "Bekommt echten Nutzen",
+            "text": "Eine persönliche Empfehlung – und die Option, mit einem Berater zu sprechen."
+        }
     ]
 }

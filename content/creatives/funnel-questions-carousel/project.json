@@ -1,55 +1,69 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
-
-    "title": "Carousel: 3 Questions Before Every Funnel",
-    "category": ["Social", "Brand"],
-    "description": "An educational Instagram carousel that shares a working method instead of a promise.",
+    "title": "Karussell: 3 Fragen vor jedem Funnel",
+    "category": [
+        "Social",
+        "Marke"
+    ],
+    "description": "Ein erklärendes Instagram-Karussell, das eine Arbeitsmethode teilt statt eines Versprechens.",
     "year": "2026",
     "client": "Lukas Ude",
-    "services": ["Content concept", "Copywriting", "Carousel design"],
+    "services": [
+        "Content-Konzept",
+        "Copywriting",
+        "Karussell-Design"
+    ],
     "featured": false,
     "concept": true,
     "order": 4,
-
-    "brand": { "name": "Lukas Ude", "initials": "LU", "domain": "lukasude.de" },
-
-    "thumbnail": { "src": "slide-1-cover.jpg", "alt": "Carousel cover: '3 questions before every funnel' on dark green" },
-
-    "objective": "Show expertise through a useful method – content people save and share.",
-    "insight": "Most funnels fail before the first line of copy: the decision they should lead to is unclear.",
+    "brand": {
+        "name": "Lukas Ude",
+        "initials": "LU",
+        "domain": "lukasude.de"
+    },
+    "thumbnail": {
+        "src": "slide-1-cover.jpg",
+        "alt": "Karussell-Cover: „3 Fragen vor jedem Funnel“ auf Dunkelgrün"
+    },
+    "objective": "Expertise über eine nützliche Methode zeigen – Content, den Menschen speichern und teilen.",
+    "insight": "Die meisten Funnels scheitern vor der ersten Textzeile: Unklar ist, zu welcher Entscheidung sie führen sollen.",
     "approach": [
-        "Cover with a clear promise of value",
-        "One question per slide, one sentence of explanation",
-        "Alternating dark and light slides – the website's rhythm in the feed"
+        "Cover mit klarem Nutzenversprechen",
+        "Eine Frage pro Slide, ein Satz Erklärung",
+        "Abwechselnd dunkle und helle Slides – der Rhythmus der Website im Feed"
     ],
-
     "ads": [
         {
             "label": "Cover",
             "format": "portrait",
-            "image": { "src": "slide-1-cover.jpg", "alt": "Carousel slide 1: '3 questions before every funnel.'" },
-            "hook": "3 questions before every funnel.",
-            "primaryText": "Before I write a single headline, I answer three questions.\nSave this for your next landing page.",
-            "headline": "3 questions before every funnel",
-            "cta": "Learn more"
+            "image": {
+                "src": "slide-1-cover.jpg",
+                "alt": "Karussell-Slide 1: „3 Fragen vor jedem Funnel.“"
+            },
+            "hook": "3 Fragen vor jedem Funnel.",
+            "primaryText": "Bevor ich eine einzige Headline schreibe, beantworte ich drei Fragen.\nSpeicher dir das für deine nächste Landingpage.",
+            "headline": "3 Fragen vor jedem Funnel",
+            "cta": "Mehr erfahren"
         },
         {
-            "label": "Question 01",
+            "label": "Frage 01",
             "format": "portrait",
-            "image": { "src": "slide-2-question.jpg", "alt": "Carousel slide 2: 'What is the one decision this page should lead to?'" },
-            "hook": "What is the one decision this page should lead to?",
-            "primaryText": "If the answer has an “and” in it, you are building two funnels.",
-            "headline": "Question 01",
-            "cta": "Learn more"
+            "image": {
+                "src": "slide-2-question.jpg",
+                "alt": "Karussell-Slide 2: „Zu welcher einen Entscheidung soll diese Seite führen?“"
+            },
+            "hook": "Zu welcher einen Entscheidung soll diese Seite führen?",
+            "primaryText": "Wenn die Antwort ein „und“ enthält, baust du zwei Funnels.",
+            "headline": "Frage 01",
+            "cta": "Mehr erfahren"
         }
     ],
-
     "hooks": [
-        "3 questions before every funnel.",
-        "Most funnels fail before the first headline.",
-        "One page. One decision."
+        "3 Fragen vor jedem Funnel.",
+        "Die meisten Funnels scheitern vor der ersten Headline.",
+        "Eine Seite. Eine Entscheidung."
     ],
     "headlines": [
-        "3 questions before every funnel"
+        "3 Fragen vor jedem Funnel"
     ]
 }

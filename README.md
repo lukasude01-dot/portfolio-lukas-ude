@@ -1,6 +1,8 @@
 # Lukas Ude – Portfolio & Business Website
 
-**Rooted in ideas. Built for growth.** · Marketing · AI · Systems
+**Rooted in ideas. Built for growth.** · Marketing · KI · Systeme
+
+Website language: **German** (only the logo slogan stays English). Code and developer docs are in English; the editing guide for beginners is in German.
 
 A cinematic, editorial personal brand website: funnels you can click through,
 ad creatives with their copy, design work, AI workflow blueprints, an About page

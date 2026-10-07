@@ -19,14 +19,14 @@ export const SECTION_LABELS = {
     funnels: "Funnel",
     creatives: "Creatives & Copy",
     design: "Design",
-    ai: "AI & Systems"
+    ai: "KI & Systeme"
 };
 
 /** Small badge: "Live demo" for funnels with a demo, "Concept" for example/concept work */
 export function projectBadges(project) {
     const badges = [];
-    if (project.demoPath) badges.push("Live demo");
-    if (project.example || project.concept) badges.push("Concept");
+    if (project.demoPath) badges.push("Live-Demo");
+    if (project.example || project.concept) badges.push("Konzept");
     return badges;
 }
 
@@ -52,7 +52,7 @@ export function workCard(project, { sizes = "(min-width: 900px) 45vw, 100vw", si
 
     return html`
         <article class="work-card work-card--${size}" data-filter-item data-filter-values="${filterValues}">
-            <a class="work-card__link" href="${project.url}" data-cursor-label="View">
+            <a class="work-card__link" href="${project.url}" data-cursor-label="Ansehen">
                 <div class="work-card__media" data-reveal="mask">
                     ${project.thumbnail
                         ? html`<img src="${project.thumbnail.src}" alt="${project.thumbnail.alt || ""}" sizes="${sizes}" data-responsive>`
@@ -64,7 +64,7 @@ export function workCard(project, { sizes = "(min-width: 900px) 45vw, 100vw", si
                     <p class="work-card__text">${project.description}</p>
                     <p class="work-card__badges">
                         ${projectBadges(project).map((badge) => html`<span class="badge">${badge}</span>`)}
-                        <span class="work-card__more" aria-hidden="true">View project →</span>
+                        <span class="work-card__more" aria-hidden="true">Projekt ansehen →</span>
                     </p>
                 </div>
             </a>
@@ -96,11 +96,11 @@ export const workRenderers = {
 
     // WORK PAGE - FILTERS
     "work-filters": ({ content }) => {
-        const filters = [{ label: "All", value: "all" }];
+        const filters = [{ label: "Alle", value: "all" }];
         for (const [section, label] of Object.entries(SECTION_LABELS)) {
             if (content[section].length) filters.push({ label, value: section });
         }
-        return filterBar(filters, { label: "Filter work by discipline", target: "work-grid" });
+        return filterBar(filters, { label: "Arbeiten nach Disziplin filtern", target: "work-grid" });
     },
 
     // WORK PAGE - ALL PROJECTS
@@ -108,5 +108,5 @@ export const workRenderers = {
             <div class="work-grid" id="work-grid" data-filter-list>
                 ${content.all.map((project) => workCard(project, { headingLevel: 2 }))}
             </div>
-            <p class="filter-empty text-muted" data-filter-empty hidden>No work in this category yet.</p>`
+            <p class="filter-empty text-muted" data-filter-empty hidden>In dieser Kategorie gibt es noch keine Arbeiten.</p>`
 };

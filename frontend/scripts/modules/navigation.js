@@ -70,7 +70,7 @@ function initMobileMenu(header) {
         requestAnimationFrame(() => menu.classList.add("is-open"));
         header.classList.add("is-menu-open");
         toggle.setAttribute("aria-expanded", "true");
-        if (label) label.textContent = "Close";
+        if (label) label.textContent = "Schließen";
         document.body.classList.add("is-menu-locked");
         menu.querySelector("a")?.focus();
     };
@@ -79,7 +79,7 @@ function initMobileMenu(header) {
         menu.classList.remove("is-open");
         header.classList.remove("is-menu-open");
         toggle.setAttribute("aria-expanded", "false");
-        if (label) label.textContent = "Menu";
+        if (label) label.textContent = "Menü";
         document.body.classList.remove("is-menu-locked");
         closeTimer = setTimeout(() => { menu.hidden = true; }, MENU_ANIMATION_MS);
         if (returnFocus) toggle.focus();

@@ -57,7 +57,7 @@ const includeDrafts = args.has("--drafts");
 const DETAIL_TEMPLATES = {
     funnels: { template: "funnel-project.html", parent: { label: "Funnels", href: "/funnels/" } },
     creatives: { template: "creative-project.html", parent: { label: "Creatives", href: "/creatives/" } },
-    design: { template: "design-project.html", parent: { label: "Design", href: "/design/" } }
+    design: { template: "design-project.html", parent: { label: "Designarbeiten", href: "/design/" } }
 };
 
 
@@ -194,7 +194,7 @@ async function buildProjectPages(site, content) {
                 path: project.url,
                 ogImage: project.thumbnail?.src,
                 bodyClass: `page-project page-project--${section}`,
-                breadcrumbs: [{ label: "Home", href: "/" }, settings.parent, { label: project.title, href: project.url }]
+                breadcrumbs: [{ label: "Startseite", href: "/" }, settings.parent, { label: project.title, href: project.url }]
             }, {});
 
             const htmlOutput = await renderPage({

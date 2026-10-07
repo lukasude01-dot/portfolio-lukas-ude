@@ -1,47 +1,63 @@
 {
     "_help": "MY JOURNEY (About page). One object per station, newest first. Replace every [ADD ...] placeholder with your real information. Delete entries you do not need. 'type' is a short label such as Experience, Education, Project, Certificate. 'tags' are optional small badges.",
-
     "entries": [
         {
-            "period": "[ADD DATE] – today",
-            "type": "Experience",
-            "title": "[ADD JOB TITLE]",
-            "organisation": "[ADD EMPLOYMENT]",
-            "location": "[ADD LOCATION]",
-            "description": "[ADD DESCRIPTION – what you are responsible for, e.g. campaigns, funnels, creatives, automation]",
-            "tags": ["Marketing", "Funnels", "AI"]
+            "period": "[ADD DATUM] – heute",
+            "type": "Berufserfahrung",
+            "title": "[ADD POSITION]",
+            "organisation": "[ADD ARBEITGEBER]",
+            "location": "[ADD ORT]",
+            "description": "[ADD BESCHREIBUNG – wofür du verantwortlich bist, z. B. Kampagnen, Funnels, Creatives, Automatisierung]",
+            "tags": [
+                "Marketing",
+                "Funnels",
+                "KI"
+            ]
         },
         {
-            "period": "[ADD DATE]",
-            "type": "Experience",
-            "title": "[ADD JOB TITLE]",
-            "organisation": "[ADD EMPLOYMENT]",
-            "location": "[ADD LOCATION]",
-            "description": "[ADD DESCRIPTION]",
-            "tags": ["Copywriting", "Design"]
+            "period": "[ADD DATUM]",
+            "type": "Berufserfahrung",
+            "title": "[ADD POSITION]",
+            "organisation": "[ADD ARBEITGEBER]",
+            "location": "[ADD ORT]",
+            "description": "[ADD BESCHREIBUNG]",
+            "tags": [
+                "Copywriting",
+                "Design"
+            ]
         },
         {
-            "period": "[ADD DATE]",
-            "type": "Project",
-            "title": "[ADD PROJECT]",
-            "organisation": "[ADD CLIENT OR CONTEXT]",
+            "period": "[ADD DATUM]",
+            "type": "Projekt",
+            "title": "[ADD PROJEKT]",
+            "organisation": "[ADD KUNDE ODER KONTEXT]",
             "location": "",
-            "description": "[ADD DESCRIPTION – a project that shaped how you work with AI or automation]",
-            "tags": ["AI", "Automation"]
+            "description": "[ADD BESCHREIBUNG – ein Projekt, das deine Arbeit mit KI oder Automatisierung geprägt hat]",
+            "tags": [
+                "KI",
+                "Automatisierung"
+            ]
         },
         {
-            "period": "[ADD DATE]",
-            "type": "Education",
-            "title": "[ADD DEGREE OR TRAINING]",
-            "organisation": "[ADD SCHOOL / UNIVERSITY]",
-            "location": "[ADD LOCATION]",
-            "description": "[ADD DESCRIPTION]",
+            "period": "[ADD DATUM]",
+            "type": "Ausbildung",
+            "title": "[ADD ABSCHLUSS ODER AUSBILDUNG]",
+            "organisation": "[ADD SCHULE / HOCHSCHULE]",
+            "location": "[ADD ORT]",
+            "description": "[ADD BESCHREIBUNG]",
             "tags": []
         }
     ],
-
     "certificates": [
-        { "year": "[ADD DATE]", "title": "[ADD CERTIFICATE]", "issuer": "[ADD ISSUER]" },
-        { "year": "[ADD DATE]", "title": "[ADD CERTIFICATE]", "issuer": "[ADD ISSUER]" }
+        {
+            "year": "[ADD DATUM]",
+            "title": "[ADD ZERTIFIKAT]",
+            "issuer": "[ADD ANBIETER]"
+        },
+        {
+            "year": "[ADD DATUM]",
+            "title": "[ADD ZERTIFIKAT]",
+            "issuer": "[ADD ANBIETER]"
+        }
     ]
 }

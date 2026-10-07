@@ -1,27 +1,48 @@
 {
     "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design.",
-
-    "title": "Poster Series – Rooted in Ideas",
-    "category": ["Print", "Branding"],
-    "description": "Three posters that translate the brand line and the five-step process into print – alternating dark, light and green.",
+    "title": "Posterserie – Rooted in Ideas",
+    "category": [
+        "Print",
+        "Branding"
+    ],
+    "description": "Drei Poster, die den Markenslogan und den Prozess in fünf Schritten in Print übersetzen – abwechselnd dunkel, hell und grün.",
     "year": "2026",
     "client": "Lukas Ude",
-    "services": ["Poster design", "Typography", "Art direction"],
+    "services": [
+        "Posterdesign",
+        "Typografie",
+        "Art Direction"
+    ],
     "featured": false,
     "concept": true,
     "order": 3,
     "layout": "tall",
-
-    "thumbnail": { "src": "poster-water.jpg", "alt": "Dark poster with a river at sunset and the words 'Rooted in ideas.'" },
-
+    "thumbnail": {
+        "src": "poster-water.jpg",
+        "alt": "Dunkles Poster mit einem Fluss im Sonnenuntergang und den Worten „Rooted in ideas.“"
+    },
     "body": [
-        "Each poster carries one part of the brand: the tagline in two halves, and the process from idea to execution.",
-        "The layouts follow the website's rhythm – dark, light, green – and use the image language of the CI: warm light, deep shadows, nature."
+        "Jedes Poster trägt einen Teil der Marke: den Slogan in zwei Hälften und den Prozess von der Idee bis zur Umsetzung.",
+        "Die Layouts folgen dem Rhythmus der Website – dunkel, hell, grün – und nutzen die Bildsprache des CI: warmes Licht, tiefe Schatten, Natur."
     ],
-
     "images": [
-        { "src": "poster-water.jpg", "alt": "Poster 01: river at sunset, 'Rooted in ideas.'", "caption": "01 – Rooted in ideas.", "size": "half" },
-        { "src": "poster-forest.jpg", "alt": "Poster 02: misty forest on ivory, 'Built for growth.'", "caption": "02 – Built for growth.", "size": "half" },
-        { "src": "poster-system.jpg", "alt": "Poster 03: dark green with the five process steps and 'From idea to system.'", "caption": "03 – From idea to system.", "size": "half" }
+        {
+            "src": "poster-water.jpg",
+            "alt": "Poster 01: Fluss im Sonnenuntergang, „Rooted in ideas.“",
+            "caption": "01 – Rooted in ideas.",
+            "size": "half"
+        },
+        {
+            "src": "poster-forest.jpg",
+            "alt": "Poster 02: nebliger Wald auf Elfenbein, „Built for growth.“",
+            "caption": "02 – Built for growth.",
+            "size": "half"
+        },
+        {
+            "src": "poster-system.jpg",
+            "alt": "Poster 03: Dunkelgrün mit den fünf Prozessschritten und „Von der Idee zum System.“",
+            "caption": "03 – Von der Idee zum System.",
+            "size": "half"
+        }
     ]
 }

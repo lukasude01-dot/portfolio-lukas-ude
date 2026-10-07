@@ -49,9 +49,9 @@ export const siteRenderers = {
     // FOOTER - CONTACT LINKS (e-mail + social, only if set in site.js)
     "footer-contact": ({ site }) => html`
                     <ul class="site-footer__list" role="list">
-                        <li><a class="link-underline" href="/contact/">Contact form</a></li>
+                        <li><a class="link-underline" href="/contact/">Kontaktformular</a></li>
                         ${site.email ? html`<li><a class="link-underline" href="mailto:${site.email}">${site.email}</a></li>` : ""}
-                        ${visibleSocial(site).map((profile) => html`<li><a class="link-underline" href="${safeUrl(profile.url)}" rel="noopener me" target="_blank">${profile.label}<span class="visually-hidden"> (opens in a new tab)</span></a></li>`)}
+                        ${visibleSocial(site).map((profile) => html`<li><a class="link-underline" href="${safeUrl(profile.url)}" rel="noopener me" target="_blank">${profile.label}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a></li>`)}
                         ${site.location ? html`<li class="text-muted">${site.location}</li>` : ""}
                     </ul>`,
 
@@ -69,23 +69,23 @@ export const siteRenderers = {
     "contact-details": ({ site }) => {
         const social = visibleSocial(site);
         if (!site.email && !site.location && social.length === 0) {
-            return html`<p class="text-muted">The form is the quickest way to reach me.</p>`;
+            return html`<p class="text-muted">Über das Formular erreichst du mich am schnellsten.</p>`;
         }
         return html`
                     <dl class="contact-details">
                         ${site.email ? html`
                         <div class="contact-details__item">
-                            <dt class="label">E-mail</dt>
+                            <dt class="label">E-Mail</dt>
                             <dd><a class="link-underline" href="mailto:${site.email}">${site.email}</a></dd>
                         </div>` : ""}
                         ${social.map((profile) => html`
                         <div class="contact-details__item">
                             <dt class="label">${profile.label}</dt>
-                            <dd><a class="link-underline" href="${safeUrl(profile.url)}" rel="noopener me" target="_blank">${profile.url.replace(/^https?:\/\/(www\.)?/, "")}<span class="visually-hidden"> (opens in a new tab)</span></a></dd>
+                            <dd><a class="link-underline" href="${safeUrl(profile.url)}" rel="noopener me" target="_blank">${profile.url.replace(/^https?:\/\/(www\.)?/, "")}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a></dd>
                         </div>`)}
                         ${site.location ? html`
                         <div class="contact-details__item">
-                            <dt class="label">Based in</dt>
+                            <dt class="label">Standort</dt>
                             <dd>${site.location}</dd>
                         </div>` : ""}
                     </dl>`;
@@ -93,7 +93,7 @@ export const siteRenderers = {
 
     // BREADCRUMBS (project pages)
     breadcrumbs: ({ page }) => html`
-            <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <nav class="breadcrumbs" aria-label="Brotkrumen-Navigation">
                 <ol role="list">
                     ${page.breadcrumbs.map((crumb, index) => index === page.breadcrumbs.length - 1
                         ? html`<li><span aria-current="page">${crumb.label}</span></li>`

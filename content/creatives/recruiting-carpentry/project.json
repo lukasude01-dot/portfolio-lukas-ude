@@ -1,65 +1,83 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Each entry in 'ads' is one variation (image + copy). 'format': square | portrait | story. 'example': true marks example content (shown as 'Concept').",
-
-    "title": "Recruiting Ads for a Carpentry Workshop",
-    "category": ["Recruiting", "Performance"],
-    "description": "Three Meta ad variations that lead with concrete working conditions instead of employer-brand clichés.",
+    "title": "Recruiting-Anzeigen für eine Tischlerei",
+    "category": [
+        "Recruiting",
+        "Performance"
+    ],
+    "description": "Drei Meta-Anzeigenvarianten, die mit konkreten Arbeitsbedingungen starten statt mit Arbeitgeber-Klischees.",
     "year": "2026",
-    "client": "Tischlerei Nordholz (fictional brand)",
-    "services": ["Ad concept", "Hooks & headlines", "Primary text", "Creative design"],
+    "client": "Tischlerei Nordholz (fiktive Marke)",
+    "services": [
+        "Anzeigenkonzept",
+        "Hooks & Headlines",
+        "Primary Texts",
+        "Creative-Design"
+    ],
     "featured": true,
     "example": true,
     "order": 1,
-
-    "brand": { "name": "Tischlerei Nordholz", "initials": "NH", "domain": "nordholz-tischlerei.de" },
-
-    "thumbnail": { "src": "ad-working-hours.jpg", "alt": "Recruiting ad: 'Feierabend um 16 Uhr. Wirklich.' on a walnut background" },
-
-    "objective": "Reach employed carpenters who are not actively looking and send them to a 60-second application funnel.",
-    "insight": "Skilled workers do not respond to 'great team, great benefits'. They respond to the one thing their current job gets wrong – often planning and working hours.",
+    "brand": {
+        "name": "Tischlerei Nordholz",
+        "initials": "NH",
+        "domain": "nordholz-tischlerei.de"
+    },
+    "thumbnail": {
+        "src": "ad-working-hours.jpg",
+        "alt": "Recruiting-Anzeige: „Feierabend um 16 Uhr. Wirklich.“ auf Nussbaum-Hintergrund"
+    },
+    "objective": "Angestellte Tischler:innen erreichen, die nicht aktiv suchen, und sie zu einem 60-Sekunden-Bewerbungsfunnel führen.",
+    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf das eine, was ihr aktueller Job falsch macht – oft Planbarkeit und Arbeitszeiten.",
     "approach": [
-        "Each variation tests ONE motive: working hours, quality of work, effort to apply",
-        "Typographic creatives: readable in one second in a busy feed",
-        "Primary text in the voice of the workshop, not of HR",
-        "Same CTA and landing page for clean comparison"
+        "Jede Variante testet EIN Motiv: Arbeitszeit, Qualität der Arbeit, Aufwand der Bewerbung",
+        "Typografische Creatives: im vollen Feed in einer Sekunde lesbar",
+        "Primary Text in der Sprache der Werkstatt, nicht der Personalabteilung",
+        "Gleicher CTA und gleiche Landingpage für einen sauberen Vergleich"
     ],
-
     "ads": [
         {
-            "label": "Working hours",
+            "label": "Arbeitszeit",
             "format": "portrait",
-            "image": { "src": "ad-working-hours.jpg", "alt": "Ad creative: 'Feierabend um 16 Uhr. Wirklich.'" },
+            "image": {
+                "src": "ad-working-hours.jpg",
+                "alt": "Anzeigen-Creative: „Feierabend um 16 Uhr. Wirklich.“"
+            },
             "hook": "Feierabend um 16 Uhr. Wirklich.",
             "primaryText": "Kein „mal eben noch“ um 18 Uhr.\nBei Nordholz ist Montag bis Donnerstag um 16 Uhr Schluss – und freitags um 13 Uhr.\nWir suchen Tischler:innen, die gutes Handwerk mit einem planbaren Leben verbinden wollen.",
             "headline": "Tischler:in (m/w/d) – in 60 Sek. bewerben",
             "description": "Ohne Lebenslauf",
             "cta": "Jetzt bewerben",
-            "rationale": "Leads with the strongest concrete benefit. 'Wirklich.' anticipates the doubt."
+            "rationale": "Startet mit dem stärksten konkreten Vorteil. „Wirklich.“ nimmt den Zweifel vorweg."
         },
         {
-            "label": "Quality of work",
+            "label": "Qualität der Arbeit",
             "format": "square",
-            "image": { "src": "ad-solid-wood.jpg", "alt": "Ad creative: 'Massivholz. Statt Spanplatte am Fließband.'" },
+            "image": {
+                "src": "ad-solid-wood.jpg",
+                "alt": "Anzeigen-Creative: „Massivholz. Statt Spanplatte am Fließband.“"
+            },
             "hook": "Massivholz statt Spanplatte am Fließband.",
             "primaryText": "Du hast Tischler:in gelernt, um Möbel zu bauen – nicht, um Teile zu sortieren.\nBei uns betreust du Projekte vom Aufmaß bis zur Montage.",
             "headline": "Eigene Projekte. Kleines Team.",
             "description": "Tischlerei Nordholz",
             "cta": "Mehr erfahren",
-            "rationale": "Speaks to professional pride – for candidates who are frustrated by industrial production."
+            "rationale": "Spricht den Berufsstolz an – für alle, die von industrieller Fertigung frustriert sind."
         },
         {
-            "label": "Effort to apply",
+            "label": "Aufwand der Bewerbung",
             "format": "square",
-            "image": { "src": "ad-no-cv.jpg", "alt": "Ad creative: '60 Sekunden. Vier Fragen. Kein Lebenslauf.'" },
+            "image": {
+                "src": "ad-no-cv.jpg",
+                "alt": "Anzeigen-Creative: „60 Sekunden. Vier Fragen. Kein Lebenslauf.“"
+            },
             "hook": "60 Sekunden. Kein Lebenslauf.",
             "primaryText": "Bewerben dauert bei uns so lange wie diese Anzeige zu lesen.\nVier Fragen, dann rufen wir dich an.",
             "headline": "Bewerbung ohne Papierkram",
             "description": "Tischler:in (m/w/d)",
             "cta": "Jetzt bewerben",
-            "rationale": "Removes the biggest barrier for passive candidates: effort."
+            "rationale": "Nimmt die größte Hürde für passive Kandidat:innen: den Aufwand."
         }
     ],
-
     "hooks": [
         "Feierabend um 16 Uhr. Wirklich.",
         "Massivholz statt Spanplatte am Fließband.",

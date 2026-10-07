@@ -1,20 +1,40 @@
 {
     "_help": "AI WORKFLOW BLUEPRINT (shown on /ai/).",
-
-    "title": "Ad Copy Variation System",
-    "category": ["Copywriting", "Creative"],
-    "description": "A structured way to develop and organise hook and headline variations for testing.",
+    "title": "System für Anzeigentext-Varianten",
+    "category": [
+        "Copywriting",
+        "Kreation"
+    ],
+    "description": "Ein strukturierter Weg, Hook- und Headline-Varianten für Tests zu entwickeln und zu ordnen.",
     "year": "2026",
     "featured": false,
     "concept": true,
     "order": 3,
-
     "steps": [
-        { "label": "Insight", "role": "Human", "text": "One customer insight and one motive per test." },
-        { "label": "Variations", "role": "AI", "text": "AI generates hook and headline options within clear rules for tone and length." },
-        { "label": "Selection", "role": "Human", "text": "The strongest, most honest options are chosen and refined." },
-        { "label": "Library", "role": "System", "text": "Variations are stored with motive, format and status – ready for the next campaign." }
+        {
+            "label": "Insight",
+            "role": "Human",
+            "text": "Ein Kunden-Insight und ein Motiv pro Test."
+        },
+        {
+            "label": "Varianten",
+            "role": "AI",
+            "text": "KI erzeugt Hook- und Headline-Optionen nach klaren Regeln für Ton und Länge."
+        },
+        {
+            "label": "Auswahl",
+            "role": "Human",
+            "text": "Die stärksten, ehrlichsten Optionen werden ausgewählt und verfeinert."
+        },
+        {
+            "label": "Bibliothek",
+            "role": "System",
+            "text": "Varianten werden mit Motiv, Format und Status abgelegt – bereit für die nächste Kampagne."
+        }
     ],
-    "outputs": ["Hook library", "Test plan per motive"],
-    "humanInLoop": "No copy goes live without human selection and editing."
+    "outputs": [
+        "Hook-Bibliothek",
+        "Testplan pro Motiv"
+    ],
+    "humanInLoop": "Kein Text geht live ohne menschliche Auswahl und Überarbeitung."
 }

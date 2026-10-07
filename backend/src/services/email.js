@@ -27,23 +27,23 @@ const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character
 
 function plainText(message) {
     return [
-        `New message via the website contact form`,
+        `Neue Nachricht über das Kontaktformular der Website`,
         ``,
-        `Name:    ${message.name}`,
-        `E-mail:  ${message.email}`,
-        `Company: ${message.company || "-"}`,
-        `Topic:   ${message.topic}`,
+        `Name:        ${message.name}`,
+        `E-Mail:      ${message.email}`,
+        `Unternehmen: ${message.company || "-"}`,
+        `Thema:       ${message.topic}`,
         ``,
         message.message
     ].join("\n");
 }
 
 function htmlBody(message) {
-    return `<h2>New message via the website contact form</h2>
+    return `<h2>Neue Nachricht über das Kontaktformular der Website</h2>
 <p><strong>Name:</strong> ${escapeHtml(message.name)}<br>
-<strong>E-mail:</strong> ${escapeHtml(message.email)}<br>
-<strong>Company:</strong> ${escapeHtml(message.company || "-")}<br>
-<strong>Topic:</strong> ${escapeHtml(message.topic)}</p>
+<strong>E-Mail:</strong> ${escapeHtml(message.email)}<br>
+<strong>Unternehmen:</strong> ${escapeHtml(message.company || "-")}<br>
+<strong>Thema:</strong> ${escapeHtml(message.topic)}</p>
 <p>${escapeHtml(message.message).replace(/\n/g, "<br>")}</p>`;
 }
 
@@ -69,7 +69,7 @@ async function sendWithResend(message, { config }) {
             from: config.contact.fromEmail,
             to: [config.contact.toEmail],
             reply_to: message.email,
-            subject: `Website contact: ${message.topic} – ${message.name}`,
+            subject: `Kontaktanfrage: ${message.topic} – ${message.name}`,
             text: plainText(message),
             html: htmlBody(message)
         }),

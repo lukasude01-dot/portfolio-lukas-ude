@@ -63,11 +63,11 @@ export function createApp(config, { deliver } = {}) {
         try {
             if (route) return await route(request, response);
 
-            if (pathname.startsWith("/api/")) return sendJson(response, 404, { ok: false, error: "Not found." });
+            if (pathname.startsWith("/api/")) return sendJson(response, 404, { ok: false, error: "Nicht gefunden." });
 
             if (serveStatic && (request.method === "GET" || request.method === "HEAD")) return serveStatic(request, response);
 
-            return sendJson(response, 404, { ok: false, error: "Not found." });
+            return sendJson(response, 404, { ok: false, error: "Nicht gefunden." });
         } catch (error) {
             if (error instanceof HttpError) {
                 logger.warn({ area: "SERVER", message: `${request.method} ${pathname} rejected.`, reason: error.message });
@@ -75,7 +75,7 @@ export function createApp(config, { deliver } = {}) {
             }
             // Unexpected error: full details in the log, generic message for visitors.
             logger.error({ area: "SERVER", message: `Unexpected error in ${request.method} ${pathname}.`, module: "backend/server", reason: error.stack || error.message });
-            if (!response.headersSent) sendJson(response, 500, { ok: false, error: "Something went wrong. Please try again." });
+            if (!response.headersSent) sendJson(response, 500, { ok: false, error: "Etwas ist schiefgelaufen. Bitte versuche es noch einmal." });
             else response.end();
         }
     };

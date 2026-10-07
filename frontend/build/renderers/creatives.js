@@ -24,7 +24,7 @@ import { html } from "../lib/html.js";
 import { filterBar, projectBadges } from "./work.js";
 
 // SAFE TO EDIT: filter buttons on the creatives page (value = category in project.json, lower case)
-const CREATIVE_FILTERS = ["Recruiting", "Lead Generation", "Brand", "Social", "Performance"];
+const CREATIVE_FILTERS = ["Recruiting", "Leadgenerierung", "Marke", "Social", "Performance"];
 
 function paragraphs(text = "") {
     return String(text).split(/\n+/).filter(Boolean).map((line) => html`<p>${line}</p>`);
@@ -46,7 +46,7 @@ export function adMockup(ad, brand = {}, { sizes = "(min-width: 900px) 30vw, 90v
                         <span class="ad-mockup__avatar" aria-hidden="true">${brand.initials || initials(brand.name)}</span>
                         <div class="ad-mockup__identity">
                             <p class="ad-mockup__brand">${brand.name}</p>
-                            <p class="ad-mockup__sponsored">Sponsored · Mockup</p>
+                            <p class="ad-mockup__sponsored">Gesponsert · Mockup</p>
                         </div>
                         <span class="ad-mockup__dots" aria-hidden="true">···</span>
                     </div>
@@ -62,7 +62,7 @@ export function adMockup(ad, brand = {}, { sizes = "(min-width: 900px) 30vw, 90v
                         </div>
                         <span class="ad-mockup__cta">${ad.cta}</span>
                     </div>
-                    <figcaption class="ad-mockup__label">Portfolio mockup – not a live ad</figcaption>
+                    <figcaption class="ad-mockup__label">Portfolio-Mockup – keine echte Anzeige</figcaption>
                 </figure>`;
 }
 
@@ -71,7 +71,7 @@ function copyCard(ad) {
     return html`
                 <div class="copy-card">
                     <p class="copy-card__row"><span class="label">Hook</span><span class="copy-card__hook">${ad.hook || ad.headline}</span></p>
-                    <div class="copy-card__row"><span class="label">Primary text</span><div class="copy-card__primary">${paragraphs(ad.primaryText)}</div></div>
+                    <div class="copy-card__row"><span class="label">Primary Text</span><div class="copy-card__primary">${paragraphs(ad.primaryText)}</div></div>
                     <p class="copy-card__row"><span class="label">Headline</span><span>${ad.headline}</span></p>
                     <p class="copy-card__row"><span class="label">CTA</span><span class="copy-card__cta">${ad.cta}</span></p>
                 </div>`;
@@ -81,15 +81,15 @@ export const creativeRenderers = {
 
     "creative-filters": ({ content }) => {
         const used = new Set(content.creatives.flatMap((project) => project.categories));
-        const filters = [{ label: "All", value: "all" }, ...CREATIVE_FILTERS.filter((name) => used.has(name)).map((name) => ({ label: name, value: name.toLowerCase() }))];
-        return filterBar(filters, { label: "Filter creatives by category", target: "creatives-grid" });
+        const filters = [{ label: "Alle", value: "all" }, ...CREATIVE_FILTERS.filter((name) => used.has(name)).map((name) => ({ label: name, value: name.toLowerCase() }))];
+        return filterBar(filters, { label: "Creatives nach Kategorie filtern", target: "creatives-grid" });
     },
 
     "creative-views": () => html`
-            <div class="view-switch" role="group" aria-label="Choose how creatives are shown" data-view-switch data-view-target="creatives-grid">
+            <div class="view-switch" role="group" aria-label="Ansicht der Creatives wählen" data-view-switch data-view-target="creatives-grid">
                 <button class="view-switch__button" type="button" data-view="creative" aria-pressed="false">Creative</button>
                 <button class="view-switch__button" type="button" data-view="copy" aria-pressed="false">Copy</button>
-                <button class="view-switch__button" type="button" data-view="combined" aria-pressed="true">Combined</button>
+                <button class="view-switch__button" type="button" data-view="combined" aria-pressed="true">Kombiniert</button>
             </div>`,
 
     // CREATIVES PAGE - GRID (each card contains all three views; CSS shows one)
@@ -112,23 +112,23 @@ export const creativeRenderers = {
                         <p class="label">${project.categories.join(" · ")}</p>
                         <h2 class="creative-card__title"><a href="${project.url}">${project.title}</a></h2>
                         <p class="creative-card__meta text-small text-muted">
-                            ${project.ads.length} variation${project.ads.length === 1 ? "" : "s"}
+                            ${project.ads.length} ${project.ads.length === 1 ? "Variante" : "Varianten"}
                             ${projectBadges(project).map((badge) => html` · ${badge}`)}
                         </p>
-                        <a class="text-link" href="${project.url}" aria-label="Open case: ${project.title}">Open case →</a>
+                        <a class="text-link" href="${project.url}" aria-label="Case öffnen: ${project.title}">Case öffnen →</a>
                     </div>
                 </article>`;
                 })}
             </div>
-            <p class="filter-empty text-muted" data-filter-empty hidden>No creatives in this category yet.</p>`,
+            <p class="filter-empty text-muted" data-filter-empty hidden>In dieser Kategorie gibt es noch keine Creatives.</p>`,
 
     // CREATIVE CASE - KEY FACTS
     "creative-facts": ({ project }) => html`
                 <dl class="project-facts">
-                    <div><dt class="label">Brand</dt><dd>${project.client}</dd></div>
-                    <div><dt class="label">Year</dt><dd>${project.year}</dd></div>
-                    <div><dt class="label">Category</dt><dd>${project.categories.join(", ")}</dd></div>
-                    <div><dt class="label">Services</dt><dd>${(project.services || []).join(", ")}</dd></div>
+                    <div><dt class="label">Marke</dt><dd>${project.client}</dd></div>
+                    <div><dt class="label">Jahr</dt><dd>${project.year}</dd></div>
+                    <div><dt class="label">Kategorie</dt><dd>${project.categories.join(", ")}</dd></div>
+                    <div><dt class="label">Leistungen</dt><dd>${(project.services || []).join(", ")}</dd></div>
                 </dl>`,
 
     "creative-approach": ({ project }) => html`<ul class="bullet-list" role="list">${(project.approach || []).map((item) => html`<li>${item}</li>`)}</ul>`,
@@ -140,7 +140,7 @@ export const creativeRenderers = {
                     <article class="variation">
                         <div class="variation__mockup" data-reveal>${adMockup(ad, project.brand, { sizes: "(min-width: 900px) 34vw, 90vw" })}</div>
                         <div class="variation__copy">
-                            <p class="eyebrow">Variation ${String.fromCharCode(65 + index)}</p>
+                            <p class="eyebrow">Variante ${String.fromCharCode(65 + index)}</p>
                             <h3 class="heading-3">${ad.label}</h3>
                             ${ad.rationale ? html`<p class="text-muted">${ad.rationale}</p>` : ""}
                             ${copyCard(ad)}

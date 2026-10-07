@@ -29,13 +29,13 @@ export function devicePreview(project, { interactiveMobile = true } = {}) {
                 <div class="device-preview__desktop" inert>
                     <div class="device-preview__bar" aria-hidden="true"><span></span><span></span><span></span></div>
                     <div class="device-preview__screen" data-device-screen data-device-width="1440">
-                        <iframe src="${src}" title="Desktop preview: ${project.title}" loading="lazy" tabindex="-1" width="1440" height="900"></iframe>
+                        <iframe src="${src}" title="Desktop-Vorschau: ${project.title}" loading="lazy" tabindex="-1" width="1440" height="900"></iframe>
                     </div>
                 </div>
                 <!-- DEVICE PREVIEW - MOBILE (scrollable) -->
                 <div class="device-preview__mobile"${interactiveMobile ? "" : html` inert`}>
                     <div class="device-preview__screen" data-device-screen data-device-width="390">
-                        <iframe src="${src}" title="Mobile preview: ${project.title}" loading="lazy" width="390" height="844"></iframe>
+                        <iframe src="${src}" title="Mobile Vorschau: ${project.title}" loading="lazy" width="390" height="844"></iframe>
                     </div>
                 </div>
             </div>`;
@@ -60,13 +60,13 @@ export const funnelRenderers = {
                         <h2 class="funnel-item__title heading-2">${project.title}</h2>
                         <p class="text-lead">${project.description}</p>
                         <dl class="fact-list">
-                            <div><dt class="label">Objective</dt><dd>${project.objectiveShort || project.objective}</dd></div>
-                            <div><dt class="label">Structure</dt><dd>${(project.structure || []).map((step) => step.step).join(" → ")}</dd></div>
+                            <div><dt class="label">Ziel</dt><dd>${project.objectiveShort || project.objective}</dd></div>
+                            <div><dt class="label">Aufbau</dt><dd>${(project.structure || []).map((step) => step.step).join(" → ")}</dd></div>
                         </dl>
                         <p class="funnel-item__badges">${projectBadges(project).map((badge) => html`<span class="badge">${badge}</span>`)}</p>
                         <div class="button-row">
-                            <a class="button button--primary" href="${project.url}">Read the case<span class="button__arrow" aria-hidden="true">→</span></a>
-                            ${project.demoPath ? html`<a class="button button--ghost" href="${safeUrl(project.demoPath)}" target="_blank" rel="noopener">View live demo<span class="visually-hidden"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>` : ""}
+                            <a class="button button--primary" href="${project.url}">Case Study lesen<span class="button__arrow" aria-hidden="true">→</span></a>
+                            ${project.demoPath ? html`<a class="button button--ghost" href="${safeUrl(project.demoPath)}" target="_blank" rel="noopener">Live-Demo öffnen<span class="visually-hidden"> (öffnet in neuem Tab)</span> <span aria-hidden="true">↗</span></a>` : ""}
                         </div>
                     </div>
                 </article>`)}
@@ -75,15 +75,15 @@ export const funnelRenderers = {
     // FUNNEL CASE - KEY FACTS
     "funnel-facts": ({ project }) => html`
                 <dl class="project-facts">
-                    <div><dt class="label">Client</dt><dd>${project.client}</dd></div>
-                    <div><dt class="label">Year</dt><dd>${project.year}</dd></div>
-                    <div><dt class="label">Type</dt><dd>${project.categories.join(", ")}</dd></div>
-                    <div><dt class="label">Services</dt><dd>${(project.services || []).join(", ")}</dd></div>
+                    <div><dt class="label">Kunde</dt><dd>${project.client}</dd></div>
+                    <div><dt class="label">Jahr</dt><dd>${project.year}</dd></div>
+                    <div><dt class="label">Art</dt><dd>${project.categories.join(", ")}</dd></div>
+                    <div><dt class="label">Leistungen</dt><dd>${(project.services || []).join(", ")}</dd></div>
                 </dl>`,
 
     // FUNNEL CASE - DEMO NOTICE
     "funnel-demo-notice": ({ project }) => project.demoNotice ? html`
-                <p class="notice"><span class="label">Note</span> ${project.demoNotice}</p>` : "",
+                <p class="notice"><span class="label">Hinweis</span> ${project.demoNotice}</p>` : "",
 
     // FUNNEL CASE - TARGET AUDIENCE + STRATEGY
     "funnel-audience": ({ project }) => list(project.audience),
@@ -107,17 +107,17 @@ export const funnelRenderers = {
         return html`
                 <div class="copy-concept">
                     <figure class="copy-concept__headline">
-                        <figcaption class="label">Main headline</figcaption>
+                        <figcaption class="label">Haupt-Headline</figcaption>
                         <blockquote><p>${copy.headline}</p></blockquote>
                         ${copy.subheadline ? html`<p class="text-muted">${copy.subheadline}</p>` : ""}
                     </figure>
                     <div class="copy-concept__columns">
                         <div>
-                            <h3 class="label">Hook options</h3>
+                            <h3 class="label">Hook-Varianten</h3>
                             ${list(copy.hooks)}
                         </div>
                         <div>
-                            <h3 class="label">Tone of voice</h3>
+                            <h3 class="label">Tonalität</h3>
                             <p>${copy.tone}</p>
                         </div>
                     </div>
@@ -138,8 +138,8 @@ export const funnelRenderers = {
                         </li>`)}
                     </ul>
                     <dl class="fact-list">
-                        ${visual.typography ? html`<div><dt class="label">Typography</dt><dd>${visual.typography}</dd></div>` : ""}
-                        ${visual.imagery ? html`<div><dt class="label">Imagery</dt><dd>${visual.imagery}</dd></div>` : ""}
+                        ${visual.typography ? html`<div><dt class="label">Typografie</dt><dd>${visual.typography}</dd></div>` : ""}
+                        ${visual.imagery ? html`<div><dt class="label">Bildsprache</dt><dd>${visual.imagery}</dd></div>` : ""}
                         ${visual.layout ? html`<div><dt class="label">Layout</dt><dd>${visual.layout}</dd></div>` : ""}
                     </dl>
                 </div>`;
@@ -186,5 +186,5 @@ export const funnelRenderers = {
 
     // FUNNEL CASE - DEMO BUTTON
     "funnel-demo-button": ({ project }) => project.demoPath ? html`
-                <a class="button button--primary" href="${safeUrl(project.demoPath)}" target="_blank" rel="noopener">View live demo<span class="visually-hidden"> (opens in a new tab)</span><span class="button__arrow" aria-hidden="true">↗</span></a>` : ""
+                <a class="button button--primary" href="${safeUrl(project.demoPath)}" target="_blank" rel="noopener">Live-Demo öffnen<span class="visually-hidden"> (öffnet in neuem Tab)</span><span class="button__arrow" aria-hidden="true">↗</span></a>` : ""
 };

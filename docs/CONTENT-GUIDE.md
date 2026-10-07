@@ -109,7 +109,7 @@ One entry in `ads`:
 
 `format`: `square` (1:1), `portrait` (4:5), `story` (9:16). `\n` makes a new line.
 
-**Filters** on `/creatives/`: Recruiting, Lead Generation, Brand, Social, Performance.
+**Filters** on `/creatives/`: Recruiting, Leadgenerierung, Marke, Social, Performance.
 Write the category exactly like that. The list is in `/frontend/build/renderers/creatives.js`.
 
 **Copywriting only (no image)?** Use any neutral image (e.g. a typographic card) and
@@ -137,7 +137,7 @@ Folder: `/content/ai/<slug>/`. Shown on `/ai/` as workflow blueprints (anchor `#
 
 | Field | Meaning |
 |---|---|
-| `steps` | `{ "label", "role": "Human" \| "AI" \| "System", "text" }` |
+| `steps` | `{ "label", "role": "Human" \| "AI" \| "System", "text" }` – shown on the page as Mensch / KI / System |
 | `outputs` | list |
 | `humanInLoop` | where a person stays in control |
 | `tools` | optional text |

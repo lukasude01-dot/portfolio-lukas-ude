@@ -102,11 +102,11 @@ export function initLightbox() {
 function createDialog() {
     const dialog = document.createElement("dialog");
     dialog.className = "lightbox";
-    dialog.setAttribute("aria-label", "Image preview");
+    dialog.setAttribute("aria-label", "Bildvorschau");
     dialog.innerHTML = `
         <div class="lightbox__top">
             <p class="lightbox__counter"></p>
-            <button class="lightbox__button" type="button" data-lightbox-close>Close <span aria-hidden="true">×</span></button>
+            <button class="lightbox__button" type="button" data-lightbox-close>Schließen <span aria-hidden="true">×</span></button>
         </div>
         <div class="lightbox__stage">
             <img class="lightbox__image" alt="">
@@ -114,8 +114,8 @@ function createDialog() {
         <div class="lightbox__bottom">
             <p class="lightbox__caption"></p>
             <div class="lightbox__controls">
-                <button class="lightbox__button" type="button" data-lightbox-previous aria-label="Previous image">←</button>
-                <button class="lightbox__button" type="button" data-lightbox-next aria-label="Next image">→</button>
+                <button class="lightbox__button" type="button" data-lightbox-previous aria-label="Vorheriges Bild">←</button>
+                <button class="lightbox__button" type="button" data-lightbox-next aria-label="Nächstes Bild">→</button>
             </div>
         </div>`;
     document.body.append(dialog);

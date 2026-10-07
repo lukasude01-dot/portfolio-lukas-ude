@@ -24,7 +24,7 @@
                      /shared/contact-schema.js.
                 ===================================================== -->
                 <noscript>
-                    <p class="contact-form__noscript">The form needs JavaScript to protect against spam. You can also reach me via the links on this page.</p>
+                    <p class="contact-form__noscript">Das Formular benötigt JavaScript zum Schutz vor Spam. Du erreichst mich auch über die Links auf dieser Seite.</p>
                 </noscript>
                 <form class="contact-form" novalidate
                       data-contact-form
@@ -41,22 +41,22 @@
 
                         <!-- CONTACT FORM - E-MAIL -->
                         <div class="form-field">
-                            <label class="form-field__label" for="contact-email">E-mail <span aria-hidden="true">*</span></label>
+                            <label class="form-field__label" for="contact-email">E-Mail <span aria-hidden="true">*</span></label>
                             <input class="form-field__input" id="contact-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="contact-email-error">
                             <p class="form-field__error" id="contact-email-error" data-error-for="email"></p>
                         </div>
 
                         <!-- CONTACT FORM - COMPANY (optional) -->
                         <div class="form-field">
-                            <label class="form-field__label" for="contact-company">Company <span class="form-field__optional">(optional)</span></label>
+                            <label class="form-field__label" for="contact-company">Unternehmen <span class="form-field__optional">(optional)</span></label>
                             <input class="form-field__input" id="contact-company" name="company" type="text" autocomplete="organization" maxlength="160">
                         </div>
 
                         <!-- CONTACT FORM - TOPIC (options from /shared/contact-schema.js) -->
                         <div class="form-field">
-                            <label class="form-field__label" for="contact-topic">What is it about? <span aria-hidden="true">*</span></label>
+                            <label class="form-field__label" for="contact-topic">Worum geht es? <span aria-hidden="true">*</span></label>
                             <select class="form-field__input form-field__select" id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
-                                <option value="">Please choose</option>
+                                <option value="">Bitte auswählen</option>
                                 <!-- @render contact-topics -->
                             </select>
                             <p class="form-field__error" id="contact-topic-error" data-error-for="topic"></p>
@@ -65,9 +65,9 @@
 
                     <!-- CONTACT FORM - MESSAGE -->
                     <div class="form-field">
-                        <label class="form-field__label" for="contact-message">Your message <span aria-hidden="true">*</span></label>
+                        <label class="form-field__label" for="contact-message">Deine Nachricht <span aria-hidden="true">*</span></label>
                         <textarea class="form-field__input form-field__textarea" id="contact-message" name="message" rows="6" required minlength="20" maxlength="4000" aria-describedby="contact-message-hint contact-message-error"></textarea>
-                        <p class="form-field__hint" id="contact-message-hint">Where are you today, and what should work better?</p>
+                        <p class="form-field__hint" id="contact-message-hint">Wo stehst du heute – und was soll besser funktionieren?</p>
                         <p class="form-field__error" id="contact-message-error" data-error-for="message"></p>
                     </div>
 
@@ -75,7 +75,7 @@
                          Invisible to people. Bots fill it in -> the server rejects
                          the message. DO NOT REMOVE. -->
                     <div class="contact-form__honeypot" aria-hidden="true">
-                        <label for="contact-website">Leave this field empty</label>
+                        <label for="contact-website">Dieses Feld leer lassen</label>
                         <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
                     </div>
 
@@ -83,8 +83,8 @@
                     <div class="form-field form-field--checkbox">
                         <input class="form-field__checkbox" id="contact-privacy" name="privacy" type="checkbox" required aria-describedby="contact-privacy-error">
                         <label for="contact-privacy">
-                            I agree that my details are used to answer my request.
-                            More in the <a href="/datenschutz/">privacy policy (Datenschutz)</a>.
+                            Ich bin einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verwendet werden.
+                            Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.
                         </label>
                         <p class="form-field__error" id="contact-privacy-error" data-error-for="privacy"></p>
                     </div>
@@ -92,9 +92,9 @@
                     <div class="contact-form__footer">
                         <!-- EDIT: SUBMIT BUTTON TEXT -->
                         <button class="button button--primary" type="submit" data-submit>
-                            <span data-submit-label>Send message</span><span class="button__arrow" aria-hidden="true">→</span>
+                            <span data-submit-label>Nachricht senden</span><span class="button__arrow" aria-hidden="true">→</span>
                         </button>
-                        <p class="contact-form__note text-small text-muted">Your message is sent securely. No tracking, no newsletter.</p>
+                        <p class="contact-form__note text-small text-muted">Deine Nachricht wird verschlüsselt übertragen. Kein Tracking, kein Newsletter.</p>
                     </div>
 
                     <!-- CONTACT FORM - STATUS MESSAGES (success / error) -->

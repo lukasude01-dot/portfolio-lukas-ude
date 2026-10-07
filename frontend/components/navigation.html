@@ -20,7 +20,7 @@
         <div class="site-header__inner container">
 
             <!-- EDIT: LOGO (mark + wordmark) -->
-            <a class="brand-logo" href="/" aria-label="{{ site.name }} – Home">
+            <a class="brand-logo" href="/" aria-label="{{ site.name }} – Startseite">
                 <img class="brand-logo__mark brand-logo__mark--ivory" src="/assets/brand/logo-mark-ivory.svg" alt="" width="40" height="40">
                 <img class="brand-logo__mark brand-logo__mark--obsidian" src="/assets/brand/logo-mark-obsidian.svg" alt="" width="40" height="40">
                 <span class="brand-logo__divider" aria-hidden="true"></span>
@@ -28,20 +28,20 @@
             </a>
 
             <!-- NAVIGATION - DESKTOP LINKS (generated from site.js) -->
-            <nav class="site-nav" aria-label="Main">
+            <nav class="site-nav" aria-label="Hauptnavigation">
                 <!-- @render navigation-links -->
             </nav>
 
             <!-- NAVIGATION - MOBILE MENU BUTTON -->
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
-                <span class="menu-toggle__label" data-menu-label>Menu</span>
+                <span class="menu-toggle__label" data-menu-label>Menü</span>
                 <span class="menu-toggle__lines" aria-hidden="true"><span></span><span></span></span>
             </button>
         </div>
 
         <!-- NAVIGATION - MOBILE MENU OVERLAY -->
         <div class="mobile-menu theme-dark" id="mobile-menu" data-mobile-menu hidden>
-            <nav class="mobile-menu__nav container" aria-label="Mobile">
+            <nav class="mobile-menu__nav container" aria-label="Mobile Navigation">
                 <!-- @render navigation-links-mobile -->
             </nav>
             <p class="mobile-menu__footer container eyebrow">{{ site.descriptor }}</p>

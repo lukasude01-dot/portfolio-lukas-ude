@@ -1,41 +1,70 @@
 {
     "_help": "SKILLS (About page). One group per discipline. 'skills' lists what you do in that area. 'tools' is optional – replace [ADD TOOLS] with the software you actually use, or delete the line.",
-
     "groups": [
         {
             "name": "Marketing",
-            "summary": "Positioning, offers and campaigns that connect to a clear goal.",
-            "skills": ["Campaign concepts", "Target audience analysis", "Offer and message development", "Recruiting and lead generation campaigns"],
+            "summary": "Positionierung, Angebote und Kampagnen mit klarem Ziel.",
+            "skills": [
+                "Kampagnenkonzepte",
+                "Zielgruppenanalyse",
+                "Angebots- und Botschaftsentwicklung",
+                "Recruiting- und Leadgenerierungs-Kampagnen"
+            ],
             "tools": "[ADD TOOLS]"
         },
         {
             "name": "Copywriting",
-            "summary": "Words that are clear before they are clever.",
-            "skills": ["Hooks and headlines", "Ad primary text", "Landing page copy", "Tone of voice"],
+            "summary": "Texte, die erst klar und dann clever sind.",
+            "skills": [
+                "Hooks und Headlines",
+                "Anzeigentexte (Primary Text)",
+                "Landingpage-Texte",
+                "Tonalität"
+            ],
             "tools": "[ADD TOOLS]"
         },
         {
-            "name": "Graphic Design",
-            "summary": "Calm, precise visuals with a consistent line.",
-            "skills": ["Brand identity", "Social media creatives", "Print (posters, flyers, cards)", "Campaign assets"],
+            "name": "Grafikdesign",
+            "summary": "Ruhige, präzise Gestaltung mit klarer Linie.",
+            "skills": [
+                "Markenidentität",
+                "Social-Media-Creatives",
+                "Print (Poster, Flyer, Karten)",
+                "Kampagnenmaterial"
+            ],
             "tools": "[ADD TOOLS]"
         },
         {
             "name": "Funnels",
-            "summary": "User journeys that lead to one decision.",
-            "skills": ["Landing pages", "Multi-step forms", "CTA structure", "Funnel strategy"],
+            "summary": "User Journeys, die zu einer Entscheidung führen.",
+            "skills": [
+                "Landingpages",
+                "Mehrstufige Formulare",
+                "CTA-Struktur",
+                "Funnel-Strategie"
+            ],
             "tools": "[ADD TOOLS]"
         },
         {
-            "name": "AI",
-            "summary": "A practical tool inside the process – with people in control.",
-            "skills": ["AI-supported research", "AI-assisted copywriting", "AI-assisted creative workflows", "Prompt and workflow design"],
+            "name": "KI",
+            "summary": "Ein praktisches Werkzeug im Prozess – mit Menschen in der Verantwortung.",
+            "skills": [
+                "KI-gestützte Recherche",
+                "KI-gestütztes Copywriting",
+                "KI-gestützte Kreativ-Workflows",
+                "Prompt- und Workflow-Design"
+            ],
             "tools": "[ADD TOOLS]"
         },
         {
-            "name": "Automation & Systems",
-            "summary": "Processes that keep working when it gets busy.",
-            "skills": ["Marketing automation", "Lead routing and follow-up", "Process documentation", "Workflow design"],
+            "name": "Automatisierung & Systeme",
+            "summary": "Prozesse, die auch laufen, wenn viel los ist.",
+            "skills": [
+                "Marketing-Automatisierung",
+                "Anfragen-Zuordnung und Follow-up",
+                "Prozessdokumentation",
+                "Workflow-Design"
+            ],
             "tools": "[ADD TOOLS]"
         }
     ]

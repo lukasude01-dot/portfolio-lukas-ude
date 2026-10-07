@@ -15,6 +15,8 @@
 import { html } from "../lib/html.js";
 
 const ROLES = ["Human", "AI", "System"];
+// Shown on the page (the English values stay in project.json and CSS)
+const ROLE_LABELS = { Human: "Mensch", AI: "KI", System: "System" };
 
 export const aiRenderers = {
 
@@ -23,7 +25,7 @@ export const aiRenderers = {
                 ${content.ai.map((workflow) => html`
                 <article class="workflow" id="workflow-${workflow.slug}">
                     <header class="workflow__header">
-                        <p class="eyebrow">${workflow.categories.join(" · ")} · Blueprint</p>
+                        <p class="eyebrow">${workflow.categories.join(" · ")} · Blaupause</p>
                         <h3 class="workflow__title heading-3">${workflow.title}</h3>
                         <p class="text-muted">${workflow.description}</p>
                     </header>
@@ -34,7 +36,7 @@ export const aiRenderers = {
                             return html`
                         <li class="workflow__step workflow__step--${role.toLowerCase()}" data-reveal data-reveal-delay="${Math.min(index + 1, 5)}">
                             <span class="workflow__node" aria-hidden="true"></span>
-                            <p class="workflow__role label">${role}</p>
+                            <p class="workflow__role label">${ROLE_LABELS[role]}</p>
                             <h4 class="workflow__step-title">${step.label}</h4>
                             <p class="workflow__step-text">${step.text}</p>
                         </li>`;
@@ -42,8 +44,8 @@ export const aiRenderers = {
                     </ol>
 
                     <dl class="workflow__facts">
-                        ${workflow.outputs ? html`<div><dt class="label">Output</dt><dd>${workflow.outputs.join(", ")}</dd></div>` : ""}
-                        ${workflow.humanInLoop ? html`<div><dt class="label">Human in the loop</dt><dd>${workflow.humanInLoop}</dd></div>` : ""}
+                        ${workflow.outputs ? html`<div><dt class="label">Ergebnis</dt><dd>${workflow.outputs.join(", ")}</dd></div>` : ""}
+                        ${workflow.humanInLoop ? html`<div><dt class="label">Menschliche Kontrolle</dt><dd>${workflow.humanInLoop}</dd></div>` : ""}
                         ${workflow.tools ? html`<div><dt class="label">Tools</dt><dd>${workflow.tools}</dd></div>` : ""}
                     </dl>
                 </article>`)}

@@ -1,33 +1,45 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
-
-    "title": "Lead Ads for a Stove Retailer",
-    "category": ["Lead Generation", "Performance"],
-    "description": "Educational ad concepts that open with a real buying mistake and lead into a free 'stove check' quiz.",
+    "title": "Lead-Anzeigen für einen Kaminofen-Händler",
+    "category": [
+        "Leadgenerierung",
+        "Performance"
+    ],
+    "description": "Erklärende Anzeigenkonzepte, die mit einem echten Kauffehler starten und in ein kostenloses „Ofen-Check“-Quiz führen.",
     "year": "2026",
-    "client": "Ofenhaus Alder (fictional brand)",
-    "services": ["Ad concept", "Copywriting", "Creative design"],
+    "client": "Ofenhaus Alder (fiktive Marke)",
+    "services": [
+        "Anzeigenkonzept",
+        "Copywriting",
+        "Creative-Design"
+    ],
     "featured": false,
     "example": true,
     "order": 2,
-
-    "brand": { "name": "Ofenhaus Alder", "initials": "OA", "domain": "ofenhaus-alder.de" },
-
-    "thumbnail": { "src": "ad-common-mistake.jpg", "alt": "Lead ad: 'Der häufigste Fehler beim Kaminofen? Zu viel Leistung.'" },
-
-    "objective": "Generate qualified enquiries from people early in their research – without a hard sales message.",
-    "insight": "Buyers fear making an expensive mistake. Naming the most common one builds trust faster than any discount.",
+    "brand": {
+        "name": "Ofenhaus Alder",
+        "initials": "OA",
+        "domain": "ofenhaus-alder.de"
+    },
+    "thumbnail": {
+        "src": "ad-common-mistake.jpg",
+        "alt": "Lead-Anzeige: „Der häufigste Fehler beim Kaminofen? Zu viel Leistung.“"
+    },
+    "objective": "Qualifizierte Anfragen von Menschen am Anfang ihrer Recherche gewinnen – ohne harte Verkaufsbotschaft.",
+    "insight": "Käufer haben Angst vor einem teuren Fehler. Den häufigsten zu benennen, schafft schneller Vertrauen als jeder Rabatt.",
     "approach": [
-        "Lead with expertise, not with price",
-        "Visualise the answer (room size → power) so the ad is useful on its own",
-        "One clear next step: the free 2-minute stove check"
+        "Mit Expertise starten, nicht mit dem Preis",
+        "Die Antwort visualisieren (Raumgröße → Leistung), damit die Anzeige schon allein nützlich ist",
+        "Ein klarer nächster Schritt: der kostenlose 2-Minuten-Ofen-Check"
     ],
-
     "ads": [
         {
-            "label": "Common mistake",
+            "label": "Häufiger Fehler",
             "format": "portrait",
-            "image": { "src": "ad-common-mistake.jpg", "alt": "Ad creative: 'Der häufigste Fehler beim Kaminofen? Zu viel Leistung.'" },
+            "image": {
+                "src": "ad-common-mistake.jpg",
+                "alt": "Anzeigen-Creative: „Der häufigste Fehler beim Kaminofen? Zu viel Leistung.“"
+            },
             "hook": "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
             "primaryText": "Ein zu großer Ofen läuft gedrosselt, rußt und wird kaum genutzt.\nMit unserem kostenlosen Ofen-Check findest du in 2 Minuten heraus, welche Leistung zu deinem Raum passt.",
             "headline": "Kostenloser Ofen-Check in 2 Minuten",
@@ -35,9 +47,12 @@
             "cta": "Mehr erfahren"
         },
         {
-            "label": "Room size",
+            "label": "Raumgröße",
             "format": "square",
-            "image": { "src": "ad-room-size.jpg", "alt": "Ad creative comparing room sizes with stove power: 4–6 kW, 6–8 kW, 8+ kW" },
+            "image": {
+                "src": "ad-room-size.jpg",
+                "alt": "Anzeigen-Creative, das Raumgrößen mit Ofenleistung vergleicht: 4–6 kW, 6–8 kW, 8+ kW"
+            },
             "hook": "Welcher Ofen passt zu deinem Wohnzimmer?",
             "primaryText": "Faustregel: Die Raumgröße entscheidet.\nFür deine persönliche Empfehlung brauchst du nur fünf Antworten.",
             "headline": "Welche Ofengröße passt zu dir?",
@@ -45,7 +60,6 @@
             "cta": "Jetzt starten"
         }
     ],
-
     "hooks": [
         "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
         "Welcher Ofen passt zu deinem Wohnzimmer?",

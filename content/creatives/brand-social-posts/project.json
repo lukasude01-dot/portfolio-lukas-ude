@@ -1,66 +1,83 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
-
-    "seoTitle": "Brand Posts",
-    "title": "Brand Posts – Lukas Ude",
-    "category": ["Brand", "Social"],
-    "description": "A calm editorial post series for the Lukas Ude brand, built from the CI's image language and typography.",
+    "seoTitle": "Markenposts",
+    "title": "Markenposts – Lukas Ude",
+    "category": [
+        "Marke",
+        "Social"
+    ],
+    "description": "Eine ruhige, editoriale Post-Serie für die Marke Lukas Ude – gebaut aus der Bildsprache und Typografie des CI.",
     "year": "2026",
     "client": "Lukas Ude",
-    "services": ["Brand content", "Copywriting", "Creative design"],
+    "services": [
+        "Marken-Content",
+        "Copywriting",
+        "Creative-Design"
+    ],
     "featured": true,
     "concept": true,
     "order": 3,
-
-    "brand": { "name": "Lukas Ude", "initials": "LU", "domain": "lukasude.de" },
-
-    "thumbnail": { "src": "post-idea-to-system.jpg", "alt": "Brand post: 'From idea to system.' over a river at sunset" },
-
-    "objective": "Make the brand idea visible in the feed: nature, craft and systems – calm instead of loud.",
-    "insight": "In a feed full of hype, restraint stands out. Few words, strong typography, real atmosphere.",
+    "brand": {
+        "name": "Lukas Ude",
+        "initials": "LU",
+        "domain": "lukasude.de"
+    },
+    "thumbnail": {
+        "src": "post-idea-to-system.jpg",
+        "alt": "Markenpost: „Von der Idee zum System.“ über einem Fluss im Sonnenuntergang"
+    },
+    "objective": "Die Markenidee im Feed sichtbar machen: Natur, Handwerk und Systeme – ruhig statt laut.",
+    "insight": "In einem Feed voller Hype fällt Zurückhaltung auf. Wenige Worte, starke Typografie, echte Atmosphäre.",
     "approach": [
-        "CI typography: Cormorant Garamond for statements, Manrope for details",
-        "Images from the CI image language: warm light, deep shadows, nature",
-        "One thought per post – short enough to read while scrolling"
+        "CI-Typografie: Cormorant Garamond für Statements, Manrope für Details",
+        "Bilder aus der CI-Bildsprache: warmes Licht, tiefe Schatten, Natur",
+        "Ein Gedanke pro Post – kurz genug zum Lesen beim Scrollen"
     ],
-
     "ads": [
         {
-            "label": "From idea to system",
+            "label": "Von der Idee zum System",
             "format": "portrait",
-            "image": { "src": "post-idea-to-system.jpg", "alt": "Brand post: 'From idea to system.' with the Lukas Ude logo" },
-            "hook": "From idea to system.",
-            "primaryText": "Every good campaign starts with an idea.\nIt only grows when there is a system behind it.",
-            "headline": "Marketing · AI · Systems",
-            "cta": "Learn more"
+            "image": {
+                "src": "post-idea-to-system.jpg",
+                "alt": "Markenpost: „Von der Idee zum System.“ mit dem Lukas-Ude-Logo"
+            },
+            "hook": "Von der Idee zum System.",
+            "primaryText": "Jede gute Kampagne beginnt mit einer Idee.\nWachsen kann sie erst mit einem System dahinter.",
+            "headline": "Marketing · KI · Systeme",
+            "cta": "Mehr erfahren"
         },
         {
             "label": "Rooted in ideas",
             "format": "square",
-            "image": { "src": "post-rooted.jpg", "alt": "Brand post: logo and tagline over a misty forest" },
+            "image": {
+                "src": "post-rooted.jpg",
+                "alt": "Markenpost: Logo und Slogan über einem nebligen Wald"
+            },
             "hook": "Rooted in ideas. Built for growth.",
-            "primaryText": "The brand line in one image.",
+            "primaryText": "Die Markenidee in einem Bild.",
             "headline": "Rooted in ideas. Built for growth.",
-            "cta": "Learn more"
+            "cta": "Mehr erfahren"
         },
         {
-            "label": "Clear, not loud",
+            "label": "Klar statt laut",
             "format": "square",
-            "image": { "src": "post-calm-marketing.jpg", "alt": "Brand post: 'Good marketing is not loud. It is clear.' on ivory" },
-            "hook": "Good marketing is not loud.",
-            "primaryText": "Good marketing is not loud. It is clear.\nOne message, one audience, one next step.",
-            "headline": "Notes on marketing",
-            "cta": "Learn more"
+            "image": {
+                "src": "post-calm-marketing.jpg",
+                "alt": "Markenpost: „Gutes Marketing ist nicht laut. Es ist klar.“ auf Elfenbein"
+            },
+            "hook": "Gutes Marketing ist nicht laut.",
+            "primaryText": "Gutes Marketing ist nicht laut. Es ist klar.\nEine Botschaft, eine Zielgruppe, ein nächster Schritt.",
+            "headline": "Notizen zum Marketing",
+            "cta": "Mehr erfahren"
         }
     ],
-
     "hooks": [
-        "From idea to system.",
-        "Good marketing is not loud. It is clear.",
+        "Von der Idee zum System.",
+        "Gutes Marketing ist nicht laut. Es ist klar.",
         "Rooted in ideas. Built for growth."
     ],
     "headlines": [
-        "Marketing · AI · Systems",
-        "Notes on marketing"
+        "Marketing · KI · Systeme",
+        "Notizen zum Marketing"
     ]
 }

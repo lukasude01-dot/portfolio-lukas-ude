@@ -31,8 +31,8 @@ export const designRenderers = {
 
     "design-filters": ({ content }) => {
         const categories = [...new Set(content.design.flatMap((project) => project.categories))];
-        const filters = [{ label: "All", value: "all" }, ...categories.map((name) => ({ label: name, value: name.toLowerCase() }))];
-        return filterBar(filters, { label: "Filter design work by category", target: "design-grid" });
+        const filters = [{ label: "Alle", value: "all" }, ...categories.map((name) => ({ label: name, value: name.toLowerCase() }))];
+        return filterBar(filters, { label: "Designarbeiten nach Kategorie filtern", target: "design-grid" });
     },
 
     // DESIGN PAGE - EDITORIAL GRID
@@ -44,7 +44,7 @@ export const designRenderers = {
                     const gallery = project.images || [];
                     return html`
                 <article class="design-tile design-tile--${layout}" data-filter-item data-filter-values="${filterValues}" data-lightbox-group>
-                    <a class="design-tile__link" href="${project.url}" data-cursor-label="View">
+                    <a class="design-tile__link" href="${project.url}" data-cursor-label="Ansehen">
                         <div class="design-tile__media" data-reveal="mask">
                             <img src="${project.thumbnail.src}" alt="${project.thumbnail.alt}" sizes="${TILE_SIZES[layout]}" data-responsive>
                         </div>
@@ -56,21 +56,21 @@ export const designRenderers = {
                     </a>
                     ${gallery.length ? html`
                     <a class="design-tile__quick-view" href="${gallery[0].src}" data-lightbox data-caption="${gallery[0].caption || gallery[0].alt}">
-                        <span class="visually-hidden">Full-screen preview: ${project.title}</span>
+                        <span class="visually-hidden">Vollbild-Vorschau: ${project.title}</span>
                         <span aria-hidden="true">⤢</span>
                     </a>
                     ${gallery.slice(1).map((image) => html`<a href="${image.src}" data-lightbox data-caption="${image.caption || image.alt}" hidden tabindex="-1">${image.alt}</a>`)}` : ""}
                 </article>`;
                 })}
             </div>
-            <p class="filter-empty text-muted" data-filter-empty hidden>No design work in this category yet.</p>`,
+            <p class="filter-empty text-muted" data-filter-empty hidden>In dieser Kategorie gibt es noch keine Designarbeiten.</p>`,
 
     "design-facts": ({ project }) => html`
                 <dl class="project-facts">
-                    <div><dt class="label">Client</dt><dd>${project.client}</dd></div>
-                    <div><dt class="label">Year</dt><dd>${project.year}</dd></div>
-                    <div><dt class="label">Category</dt><dd>${project.categories.join(", ")}</dd></div>
-                    <div><dt class="label">Services</dt><dd>${(project.services || []).join(", ")}</dd></div>
+                    <div><dt class="label">Kunde</dt><dd>${project.client}</dd></div>
+                    <div><dt class="label">Jahr</dt><dd>${project.year}</dd></div>
+                    <div><dt class="label">Kategorie</dt><dd>${project.categories.join(", ")}</dd></div>
+                    <div><dt class="label">Leistungen</dt><dd>${(project.services || []).join(", ")}</dd></div>
                 </dl>`,
 
     "design-body": ({ project }) => html`${(project.body || []).map((paragraph) => html`<p>${paragraph}</p>`)}`,
@@ -80,7 +80,7 @@ export const designRenderers = {
                 <div class="design-gallery" data-lightbox-group>
                     ${(project.images || []).map((image) => html`
                     <figure class="design-gallery__item design-gallery__item--${image.size || "full"}" data-reveal>
-                        <a href="${image.src}" data-lightbox data-caption="${image.caption || image.alt}" data-cursor-label="Enlarge">
+                        <a href="${image.src}" data-lightbox data-caption="${image.caption || image.alt}" data-cursor-label="Vergrößern">
                             <img src="${image.src}" alt="${image.alt}" sizes="${image.size === "half" ? "(min-width: 900px) 50vw, 100vw" : "100vw"}" data-responsive>
                         </a>
                         ${image.caption ? html`<figcaption class="text-small text-muted">${image.caption}</figcaption>` : ""}

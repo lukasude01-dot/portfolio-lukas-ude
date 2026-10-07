@@ -22,14 +22,14 @@ const MAX_BODY_BYTES = 16 * 1024; // 16 KB is plenty for a contact message
 export async function readJsonBody(request) {
     const contentType = request.headers["content-type"] || "";
     if (!contentType.startsWith("application/json")) {
-        throw new HttpError(415, "Unsupported request.", `Content-Type was "${contentType}"`);
+        throw new HttpError(415, "Anfrage wird nicht unterstützt.", `Content-Type was "${contentType}"`);
     }
 
     const chunks = [];
     let size = 0;
     for await (const chunk of request) {
         size += chunk.length;
-        if (size > MAX_BODY_BYTES) throw new HttpError(413, "Message too large.", `Body larger than ${MAX_BODY_BYTES} bytes`);
+        if (size > MAX_BODY_BYTES) throw new HttpError(413, "Nachricht zu groß.", `Body larger than ${MAX_BODY_BYTES} bytes`);
         chunks.push(chunk);
     }
 
@@ -38,7 +38,7 @@ export async function readJsonBody(request) {
         if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("not an object");
         return data;
     } catch (error) {
-        throw new HttpError(400, "Invalid request.", `Body is not valid JSON (${error.message})`);
+        throw new HttpError(400, "Ungültige Anfrage.", `Body is not valid JSON (${error.message})`);
     }
 }
 

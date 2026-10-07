@@ -5,56 +5,56 @@
     "category": [
         "Branding"
     ],
-    "description": "A personal brand system between nature, craft and modern systems: logo, colour, typography, image language and applications.",
+    "description": "Ein persönliches Markensystem zwischen Natur, Handwerk und modernen Systemen: Logo, Farbe, Typografie, Bildsprache und Anwendungen.",
     "year": "2026",
     "client": "Lukas Ude",
     "services": [
-        "Logo system",
-        "Colour & typography",
-        "Image language",
-        "Brand applications"
+        "Logosystem",
+        "Farbe & Typografie",
+        "Bildsprache",
+        "Markenanwendungen"
     ],
     "featured": true,
     "order": 1,
     "layout": "feature",
     "thumbnail": {
         "src": "logo-system-overview.jpg",
-        "alt": "Lukas Ude logo system board: primary logo on dark and light, vertical version, icon, favicon and applications"
+        "alt": "Logosystem von Lukas Ude: Primärlogo auf dunkel und hell, vertikale Variante, Icon, Favicon und Anwendungen"
     },
     "body": [
-        "The identity is built on one idea: Cinematic Heritage × Modern Systems. A tree grows from flowing water; its branches turn into connection nodes and a rising chart. Nature, ideas and growth in one mark.",
-        "The system stays deliberately restrained: monochrome logo use, a vertical separator, generous clear space. Colour comes from nature – obsidian, ivory, British green, forest and tobacco – with brass as a rare accent (55% black, 30% ivory, 10% natural tones, 5% brass).",
-        "Typography pairs an editorial serif (Cormorant Garamond) with a precise sans-serif (Manrope). The image language follows six principles: cinematic, not glossy; authentic, not staged; warm practical light; deep shadows and texture; nature and technology; no neon-AI clichés."
+        "Die Identität basiert auf einer Idee: Cinematic Heritage × Modern Systems. Ein Baum wächst aus fließendem Wasser; seine Äste werden zu Verbindungsknoten und einer steigenden Kurve. Natur, Ideen und Wachstum in einem Zeichen.",
+        "Das System ist bewusst zurückhaltend: Logo nur monochrom, vertikaler Trenner, großzügiger Schutzraum. Die Farben kommen aus der Natur – Obsidian, Elfenbein, British Green, Forest und Tobacco – mit Messing als seltenem Akzent (55 % Schwarz, 30 % Elfenbein, 10 % Naturtöne, 5 % Messing).",
+        "Die Typografie kombiniert eine editoriale Serif (Cormorant Garamond) mit einer präzisen Sans-Serif (Manrope). Die Bildsprache folgt sechs Prinzipien: cineastisch statt glänzend; authentisch statt inszeniert; warmes, natürliches Licht; tiefe Schatten und Textur; Natur und Technik; keine Neon-KI-Klischees."
     ],
     "images": [
         {
             "src": "logo-system-overview.jpg",
-            "alt": "Overview board of the logo system with variants and applications",
-            "caption": "Logo system – primary, vertical, icon, favicon, negative and applications.",
+            "alt": "Übersicht des Logosystems mit Varianten und Anwendungen",
+            "caption": "Logosystem – Primär, vertikal, Icon, Favicon, Negativ und Anwendungen.",
             "size": "full"
         },
         {
             "src": "ci-sheet.jpg",
-            "alt": "Corporate identity sheet with logo, colours, typography, image language and voice",
-            "caption": "Corporate identity sheet – the one-page reference for the brand.",
+            "alt": "Corporate-Identity-Sheet mit Logo, Farben, Typografie, Bildsprache und Tonalität",
+            "caption": "Corporate Identity Sheet – die einseitige Referenz der Marke.",
             "size": "full"
         },
         {
             "src": "primary-logo-light.jpg",
-            "alt": "Primary logo on an ivory background",
-            "caption": "Primary logo on light backgrounds.",
+            "alt": "Primärlogo auf Elfenbein",
+            "caption": "Primärlogo auf hellem Grund.",
             "size": "half"
         },
         {
             "src": "colour-variants.jpg",
-            "alt": "The logo mark on black, ivory and dark green",
-            "caption": "Alternative colour variants.",
+            "alt": "Das Logozeichen auf Schwarz, Elfenbein und Dunkelgrün",
+            "caption": "Alternative Farbvarianten.",
             "size": "half"
         },
         {
             "src": "icon-sizes-favicon.jpg",
-            "alt": "Icon, minimal version, small sizes from 64 to 16 pixels and the favicon",
-            "caption": "Icon and favicon – tested down to 16 px.",
+            "alt": "Icon, Minimal-Variante, kleine Größen von 64 bis 16 Pixel und das Favicon",
+            "caption": "Icon und Favicon – getestet bis 16 px.",
             "size": "full"
         }
     ]

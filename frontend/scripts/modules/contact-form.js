@@ -24,13 +24,13 @@ import { validateContact } from "../shared/contact-schema.js";
 
 // SAFE TO EDIT: messages shown to visitors
 const MESSAGES = {
-    sending: "Sending …",
-    successTitle: "Thank you – your message has arrived.",
-    successText: "I'll get back to you personally as soon as I can.",
-    errorTitle: "Your message could not be sent.",
-    errorText: "Please try again in a moment.",
-    rateLimited: "Too many messages in a short time. Please try again later.",
-    invalid: "Please check the highlighted fields."
+    sending: "Wird gesendet …",
+    successTitle: "Danke – deine Nachricht ist angekommen.",
+    successText: "Ich melde mich so bald wie möglich persönlich bei dir.",
+    errorTitle: "Deine Nachricht konnte nicht gesendet werden.",
+    errorText: "Bitte versuche es gleich noch einmal.",
+    rateLimited: "Zu viele Nachrichten in kurzer Zeit. Bitte versuche es später noch einmal.",
+    invalid: "Bitte prüfe die markierten Felder."
 };
 
 export function initContactForm() {
