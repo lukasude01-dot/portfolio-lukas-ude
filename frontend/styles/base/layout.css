@@ -1,0 +1,103 @@
+/* ==========================================================
+   LAYOUT HELPERS
+   Containers, section spacing and simple grids that are
+   reused on every page.
+========================================================== */
+
+
+/* CONTAINER - centres content and adds page padding */
+
+.container {
+    width: 100%;
+    max-width: calc(var(--content-width) + 2 * var(--page-gutter));
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+}
+
+.container--narrow {
+    max-width: calc(56rem + 2 * var(--page-gutter));
+}
+
+
+/* SECTION - vertical rhythm between big page sections */
+
+.section {
+    position: relative;
+    padding-block: var(--spacing-section);
+}
+
+.section--compact {
+    padding-block: var(--spacing-2xl);
+}
+
+.section--flush-top {
+    padding-top: 0;
+}
+
+
+/* SECTION HEADER - eyebrow + heading + optional text */
+
+.section-header {
+    display: grid;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--spacing-xl);
+    max-width: 52rem;
+}
+
+.section-header--split {
+    max-width: none;
+    grid-template-columns: 1fr;
+    align-items: end;
+}
+
+@media (min-width: 900px) {
+    .section-header--split {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+
+/* DIVIDER LINE */
+
+.rule {
+    height: 1px;
+    border: 0;
+    background-color: var(--color-line);
+}
+
+
+/* ACCESSIBILITY HELPERS */
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: var(--layer-skip-link);
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-ivory);
+    color: var(--color-obsidian);
+    font-weight: 600;
+    transform: translateY(-200%);
+    transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   END LAYOUT HELPERS
+========================================================== */

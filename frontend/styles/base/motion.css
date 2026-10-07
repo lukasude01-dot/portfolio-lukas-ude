@@ -1,0 +1,119 @@
+/* ==========================================================
+   MOTION
+   Scroll-triggered reveals used across the whole site.
+
+   HOW IT WORKS:
+   1. Add  data-reveal  to any element in the HTML.
+   2. /frontend/scripts/modules/reveal.js adds the class
+      "is-revealed" when the element scrolls into view.
+   3. The CSS below animates the change.
+
+   Variants (value of data-reveal):
+   - data-reveal          fade + move up (default)
+   - data-reveal="fade"   fade only
+   - data-reveal="mask"   image wipes in from bottom (image masks)
+   - data-reveal="line"   horizontal line draws from left
+
+   Optional delay:  data-reveal-delay="1" ... "5"
+
+   Without JavaScript nothing is hidden (the .js class is set
+   by a script, so content stays visible if JS fails).
+========================================================== */
+
+
+/* REVEAL - DEFAULT (fade + translate) */
+
+.js [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-distance), 0);
+    transition:
+        opacity var(--duration-reveal) var(--ease-cinematic),
+        transform var(--duration-reveal) var(--ease-cinematic);
+}
+
+.js [data-reveal="fade"] {
+    transform: none;
+}
+
+/* REVEAL - IMAGE MASK (slow wipe upwards)
+   EDIT WITH CARE: the clip is applied to the CHILD (picture/img),
+   because browsers do not report fully clipped elements as visible. */
+
+.js [data-reveal="mask"] {
+    opacity: 1;
+    transform: none;
+}
+
+.js [data-reveal="mask"] > * {
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path var(--duration-reveal) var(--ease-cinematic);
+}
+
+.js [data-reveal="mask"] img {
+    transform: scale(1.08);
+    transition: transform calc(var(--duration-reveal) * 1.4) var(--ease-cinematic);
+}
+
+/* REVEAL - LINE DRAW */
+
+.js [data-reveal="line"] {
+    opacity: 1;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+/* REVEALED STATE (added by reveal.js) */
+
+.js [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+.js [data-reveal="mask"].is-revealed > * {
+    clip-path: inset(0 0 0 0);
+}
+
+.js [data-reveal="mask"].is-revealed img {
+    transform: scale(1);
+}
+
+/* STAGGER DELAYS */
+
+[data-reveal-delay="1"],
+[data-reveal-delay="1"][data-reveal="mask"] > * { transition-delay: 120ms !important; }
+[data-reveal-delay="2"],
+[data-reveal-delay="2"][data-reveal="mask"] > * { transition-delay: 240ms !important; }
+[data-reveal-delay="3"],
+[data-reveal-delay="3"][data-reveal="mask"] > * { transition-delay: 360ms !important; }
+[data-reveal-delay="4"],
+[data-reveal-delay="4"][data-reveal="mask"] > * { transition-delay: 480ms !important; }
+[data-reveal-delay="5"],
+[data-reveal-delay="5"][data-reveal="mask"] > * { transition-delay: 600ms !important; }
+
+
+/* REDUCED MOTION
+   Visitors who ask their system for less motion get no
+   animations at all - everything is simply visible. */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .js [data-reveal],
+    .js [data-reveal="mask"] > *,
+    .js [data-reveal] img {
+        opacity: 1;
+        transform: none !important;
+        clip-path: none !important;
+    }
+}
+
+/* ==========================================================
+   END MOTION
+========================================================== */

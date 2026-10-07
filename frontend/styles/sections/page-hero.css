@@ -1,0 +1,67 @@
+/* ==========================================================
+   PAGE HERO
+   The opening section of every sub page (Work, Funnels,
+   Creatives, Design, AI, About, Contact, project pages).
+   HTML: top section of each file in /frontend/pages/
+========================================================== */
+
+
+/* PAGE HERO - CONTAINER */
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(var(--header-height) + var(--spacing-2xl));
+    padding-bottom: var(--spacing-xl);
+}
+
+.page-hero__inner {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+.page-hero__title {
+    max-width: 16ch;
+}
+
+.page-hero__title em {
+    display: block;
+}
+
+.page-hero__intro {
+    max-width: 38rem;
+}
+
+
+/* PAGE HERO - SPLIT VARIANT (title left, text right) */
+
+@media (min-width: 900px) {
+    .page-hero--split .page-hero__inner {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        align-items: end;
+        column-gap: var(--spacing-2xl);
+    }
+
+    .page-hero--split .page-hero__eyebrow {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* PAGE HERO - TOOLBAR (filters under the hero) */
+
+.page-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-small);
+    padding-block: var(--spacing-medium);
+    border-block: 1px solid var(--color-line);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ==========================================================
+   END PAGE HERO
+========================================================== */

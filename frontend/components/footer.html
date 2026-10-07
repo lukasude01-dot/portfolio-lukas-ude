@@ -1,0 +1,55 @@
+    <!-- =========================================================
+         FOOTER  (bottom of every page)
+
+         PURPOSE:
+         Brand statement, navigation, contact links, the QR share
+         card and legal links (Impressum / Datenschutz).
+
+         EDIT HERE:
+         - Statement text: below ("EDIT: FOOTER STATEMENT")
+         - Links, e-mail, social profiles: /frontend/config/site.js
+         - QR code: /frontend/components/qr-share.html
+
+         RELATED STYLES:
+         /frontend/styles/components/footer.css
+    ========================================================= -->
+    <footer class="site-footer theme-dark">
+        <div class="container">
+
+            <!-- FOOTER - STATEMENT -->
+            <div class="site-footer__statement">
+                <img class="site-footer__mark" src="/assets/brand/logo-mark-ivory.svg" alt="" width="72" height="72" loading="lazy">
+                <!-- EDIT: FOOTER STATEMENT -->
+                <p class="site-footer__tagline">Rooted in ideas.<br><em>Built for growth.</em></p>
+            </div>
+
+            <div class="site-footer__grid">
+
+                <!-- FOOTER - NAVIGATION -->
+                <nav class="site-footer__column" aria-label="Footer">
+                    <h2 class="site-footer__heading label">Explore</h2>
+                    <!-- @render footer-links -->
+                </nav>
+
+                <!-- FOOTER - CONTACT -->
+                <div class="site-footer__column">
+                    <h2 class="site-footer__heading label">Contact</h2>
+                    <!-- @render footer-contact -->
+                </div>
+
+                <!-- FOOTER - QR SHARE CARD -->
+                <div class="site-footer__column site-footer__column--qr">
+<!-- @include qr-share -->
+                </div>
+            </div>
+
+            <!-- FOOTER - BOTTOM BAR (copyright + legal) -->
+            <div class="site-footer__bottom">
+                <p>© {{ site.year }} {{ site.name }} · {{ site.descriptor }}</p>
+                <nav aria-label="Legal">
+                    <!-- @render legal-links -->
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->

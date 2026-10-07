@@ -1,0 +1,277 @@
+/* ==========================================================
+   NAVIGATION
+   Site header with logo, desktop menu and mobile menu overlay.
+   HTML:   /frontend/components/navigation.html
+   SCRIPT: /frontend/scripts/modules/navigation.js
+========================================================== */
+
+
+/* NAVIGATION - HEADER BAR */
+
+.site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: var(--layer-header);
+    height: var(--header-height);
+    color: var(--color-ivory);
+    transition:
+        background-color var(--duration-medium) var(--ease-standard),
+        border-color var(--duration-medium) var(--ease-standard),
+        color var(--duration-medium) var(--ease-standard),
+        transform var(--duration-medium) var(--ease-cinematic);
+    border-bottom: 1px solid transparent;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    height: 100%;
+}
+
+/* After scrolling down: solid background (added by navigation.js) */
+.site-header.is-scrolled {
+    background-color: rgba(9, 10, 9, 0.94);
+    border-bottom-color: var(--color-obsidian-line);
+    color: var(--color-ivory);
+}
+
+/* Hidden while scrolling down, shown again when scrolling up */
+.site-header.is-hidden {
+    transform: translateY(-100%);
+}
+
+/* Pages with a LIGHT hero: dark logo/text until the visitor scrolls.
+   (set with "headerTheme: light" in the page front matter) */
+[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) {
+    color: var(--color-obsidian);
+}
+
+
+/* NAVIGATION - LOGO */
+
+.brand-logo {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.brand-logo__mark {
+    width: 2.35rem;
+    height: 2.35rem;
+}
+
+.brand-logo__mark--obsidian {
+    display: none;
+}
+
+[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) .brand-logo__mark--ivory {
+    display: none;
+}
+
+[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) .brand-logo__mark--obsidian {
+    display: block;
+}
+
+.brand-logo__divider {
+    width: 1px;
+    height: 1.75rem;
+    background-color: currentColor;
+    opacity: 0.45;
+}
+
+.brand-logo__wordmark {
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.brand-logo__first {
+    font-weight: 300;
+}
+
+.brand-logo__last {
+    font-weight: 800;
+}
+
+
+/* NAVIGATION - DESKTOP LINKS */
+
+.site-nav {
+    display: none;
+}
+
+.site-nav__list {
+    display: flex;
+    gap: clamp(1.25rem, 2.2vw, 2.4rem);
+}
+
+.site-nav__link {
+    position: relative;
+    display: inline-block;
+    padding-block: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.2rem;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform var(--duration-medium) var(--ease-cinematic);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.site-nav__link[aria-current="page"]::after {
+    transform: scaleX(1);
+    background-color: var(--color-brass);
+}
+
+
+/* NAVIGATION - MOBILE MENU BUTTON */
+
+.menu-toggle {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 44px;            /* touch-friendly size */
+    padding-inline: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.menu-toggle__lines {
+    display: grid;
+    gap: 6px;
+    width: 26px;
+}
+
+.menu-toggle__lines span {
+    display: block;
+    height: 1px;
+    background-color: currentColor;
+    transition: transform var(--duration-medium) var(--ease-cinematic);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__lines span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__lines span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+
+/* NAVIGATION - MOBILE MENU OVERLAY */
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 2rem;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity var(--duration-medium) var(--ease-standard);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+}
+
+.mobile-menu__list {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.mobile-menu__link {
+    display: flex;
+    align-items: baseline;
+    gap: 1.1rem;
+    padding-block: 0.45rem;
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity var(--duration-slow) var(--ease-cinematic),
+        transform var(--duration-slow) var(--ease-cinematic);
+}
+
+.mobile-menu.is-open .mobile-menu__link {
+    opacity: 1;
+    transform: none;
+}
+
+.mobile-menu__list li:nth-child(2) .mobile-menu__link { transition-delay: 40ms; }
+.mobile-menu__list li:nth-child(3) .mobile-menu__link { transition-delay: 80ms; }
+.mobile-menu__list li:nth-child(4) .mobile-menu__link { transition-delay: 120ms; }
+.mobile-menu__list li:nth-child(5) .mobile-menu__link { transition-delay: 160ms; }
+.mobile-menu__list li:nth-child(6) .mobile-menu__link { transition-delay: 200ms; }
+.mobile-menu__list li:nth-child(7) .mobile-menu__link { transition-delay: 240ms; }
+
+.mobile-menu__link[aria-current="page"] {
+    font-style: italic;
+    color: var(--color-brass);
+}
+
+.mobile-menu__number {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+}
+
+.mobile-menu__footer {
+    margin-top: 2rem;
+}
+
+/* Prevent page scrolling behind the open menu */
+.is-menu-locked {
+    overflow: hidden;
+}
+
+
+/* NAVIGATION - DESKTOP BREAKPOINT
+   EDIT WITH CARE: below this width the mobile menu is used. */
+
+@media (min-width: 1080px) {
+    .site-nav {
+        display: block;
+    }
+
+    .menu-toggle,
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* ==========================================================
+   END NAVIGATION
+========================================================== */

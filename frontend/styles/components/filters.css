@@ -1,0 +1,88 @@
+/* ==========================================================
+   FILTERS & VIEW SWITCH
+   .filter-bar   category buttons (Work, Creatives, Design)
+   .view-switch  CREATIVE / COPY / COMBINED (Creatives page)
+   SCRIPTS: /frontend/scripts/modules/filters.js
+            /frontend/scripts/modules/creative-views.js
+========================================================== */
+
+
+/* FILTER BAR */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-bar__button,
+.view-switch__button {
+    min-height: 44px;              /* touch-friendly */
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    transition:
+        border-color var(--duration-fast) var(--ease-standard),
+        color var(--duration-fast) var(--ease-standard),
+        background-color var(--duration-fast) var(--ease-standard);
+}
+
+.filter-bar__button:hover,
+.view-switch__button:hover {
+    color: var(--color-text);
+    border-color: color-mix(in srgb, var(--color-text) 40%, transparent);
+}
+
+.filter-bar__button[aria-pressed="true"] {
+    color: var(--color-background);
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+}
+
+
+/* VIEW SWITCH (segmented control) */
+
+.view-switch {
+    display: inline-flex;
+    padding: 4px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+}
+
+.view-switch__button {
+    border-color: transparent;
+}
+
+.view-switch__button[aria-pressed="true"] {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+}
+
+
+/* FILTERED-OUT ITEMS */
+
+[data-filter-item].is-filtered-out {
+    display: none;
+}
+
+[data-filter-item].is-filter-entering {
+    animation: filter-enter var(--duration-slow) var(--ease-cinematic);
+}
+
+@keyframes filter-enter {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+
+.filter-empty {
+    padding-block: var(--spacing-xl);
+}
+
+/* ==========================================================
+   END FILTERS & VIEW SWITCH
+========================================================== */

@@ -1,0 +1,96 @@
+/* ==========================================================
+   DEVICE PREVIEW
+   Desktop browser frame + phone frame showing a LIVE funnel
+   demo (iframes). Used on /funnels/ and funnel case pages.
+
+   HTML:   /frontend/build/renderers/funnels.js -> devicePreview()
+   SCRIPT: /frontend/scripts/modules/device-preview.js
+           (scales the iframes to fit the frames)
+
+   EDIT WITH CARE: the scaling depends on the frame widths.
+========================================================== */
+
+
+/* DEVICE PREVIEW - LAYOUT (desktop frame with phone in front) */
+
+.device-preview {
+    position: relative;
+    padding-bottom: 12%;
+    padding-right: 10%;
+}
+
+
+/* DEVICE PREVIEW - DESKTOP FRAME */
+
+.device-preview__desktop {
+    border: 1px solid rgba(238, 234, 224, 0.14);
+    border-radius: var(--border-radius-large);
+    background-color: #050605;
+    overflow: hidden;
+    box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.8);
+}
+
+.device-preview__bar {
+    display: flex;
+    gap: 6px;
+    padding: 0.65rem 0.8rem;
+    border-bottom: 1px solid rgba(238, 234, 224, 0.08);
+}
+
+.device-preview__bar span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(238, 234, 224, 0.18);
+}
+
+
+/* DEVICE PREVIEW - SCREEN (iframe is scaled by JS via --preview-scale) */
+
+.device-preview__screen {
+    position: relative;
+    overflow: hidden;
+    --preview-scale: 0.4;
+}
+
+.device-preview__desktop .device-preview__screen {
+    aspect-ratio: 1440 / 900;
+}
+
+.device-preview__mobile .device-preview__screen {
+    aspect-ratio: 390 / 844;
+}
+
+.device-preview__screen iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    background-color: #fff;
+    transform: scale(var(--preview-scale));
+    transform-origin: 0 0;
+}
+
+
+/* DEVICE PREVIEW - PHONE FRAME */
+
+.device-preview__mobile {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 27%;
+    min-width: 150px;
+    padding: 7px;
+    border: 1px solid rgba(238, 234, 224, 0.2);
+    border-radius: var(--border-radius-device);
+    background-color: #050605;
+    box-shadow: 0 40px 70px -30px rgba(0, 0, 0, 0.85);
+}
+
+.device-preview__mobile .device-preview__screen {
+    border-radius: calc(var(--border-radius-device) - 7px);
+}
+
+/* ==========================================================
+   END DEVICE PREVIEW
+========================================================== */

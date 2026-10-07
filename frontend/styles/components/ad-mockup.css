@@ -1,0 +1,179 @@
+/* ==========================================================
+   AD MOCKUP
+   Social-ad style frame for creatives: brand, "Sponsored",
+   primary text, creative, headline, CTA.
+
+   It shows the STRUCTURE of a social ad in the website's own
+   style – it does not copy any platform's interface and is
+   labelled "Portfolio mockup – not a live ad".
+
+   HTML: /frontend/build/renderers/creatives.js -> adMockup()
+========================================================== */
+
+
+/* AD MOCKUP - FRAME */
+
+.ad-mockup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30rem;
+    border: 1px solid rgba(9, 10, 9, 0.08);
+    border-radius: var(--border-radius-large);
+    background-color: #FBFAF6;
+    color: #16130F;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.55);
+}
+
+
+/* AD MOCKUP - HEADER (brand + sponsored) */
+
+.ad-mockup__header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 0.95rem 0.6rem;
+}
+
+.ad-mockup__avatar {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: var(--color-british-green);
+    color: var(--color-ivory);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.ad-mockup__identity {
+    flex: 1;
+    min-width: 0;
+}
+
+.ad-mockup__brand {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.ad-mockup__sponsored {
+    font-size: 0.75rem;
+    color: #6A655B;
+}
+
+.ad-mockup__dots {
+    color: #6A655B;
+    letter-spacing: 0.1em;
+}
+
+
+/* AD MOCKUP - PRIMARY TEXT */
+
+.ad-mockup__primary-text {
+    display: grid;
+    gap: 0.5em;
+    padding: 0 0.95rem 0.75rem;
+}
+
+/* In grids the text is shortened to 3 lines */
+.ad-mockup__primary-text--clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ad-mockup__primary-text--clamped p {
+    display: inline;
+}
+
+.ad-mockup__primary-text--clamped p + p::before {
+    content: " ";
+}
+
+
+/* AD MOCKUP - CREATIVE (image) */
+
+.ad-mockup__creative {
+    background-color: #E7E2D6;
+}
+
+.ad-mockup__creative picture,
+.ad-mockup__creative img {
+    width: 100%;
+    height: 100%;
+}
+
+.ad-mockup__creative img {
+    object-fit: cover;
+}
+
+.ad-mockup--square .ad-mockup__creative { aspect-ratio: 1 / 1; }
+.ad-mockup--portrait .ad-mockup__creative { aspect-ratio: 4 / 5; }
+.ad-mockup--story .ad-mockup__creative { aspect-ratio: 9 / 16; }
+
+
+/* AD MOCKUP - FOOTER (headline + CTA) */
+
+.ad-mockup__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.95rem;
+    background-color: #F1EEE6;
+}
+
+.ad-mockup__link {
+    flex: 1;
+    min-width: 0;
+}
+
+.ad-mockup__domain {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6A655B;
+}
+
+.ad-mockup__headline {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.ad-mockup__description {
+    font-size: 0.8rem;
+    color: #6A655B;
+}
+
+.ad-mockup__cta {
+    flex: none;
+    padding: 0.55rem 0.85rem;
+    border-radius: var(--border-radius);
+    background-color: #E2DDD0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* AD MOCKUP - LABEL ("not a live ad") */
+
+.ad-mockup__label {
+    padding: 0.45rem 0.95rem;
+    border-top: 1px solid rgba(9, 10, 9, 0.06);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6A655B;
+}
+
+/* ==========================================================
+   END AD MOCKUP
+========================================================== */

@@ -1,0 +1,129 @@
+/* ==========================================================
+   TIMELINE
+   MY JOURNEY on the About page (CV as a vertical timeline).
+   HTML:    /frontend/build/renderers/career.js -> timeline
+   CONTENT: /content/career/timeline.json
+========================================================== */
+
+
+/* TIMELINE - LIST + VERTICAL LINE */
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    left: 0.45rem;
+    width: 1px;
+    background-color: var(--color-line);
+}
+
+
+/* TIMELINE - ONE ENTRY */
+
+.timeline__entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0 0 var(--spacing-large) 2.25rem;
+}
+
+.timeline__node {
+    position: absolute;
+    top: 0.45rem;
+    left: 0;
+    width: 0.95rem;
+    height: 0.95rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    background-color: var(--color-background);
+}
+
+.timeline__node::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+}
+
+.timeline__date {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-style: italic;
+}
+
+.timeline__type {
+    color: var(--color-text-muted);
+}
+
+.timeline__title {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+.timeline__organisation {
+    font-weight: 600;
+}
+
+.timeline__text {
+    max-width: 40rem;
+    color: var(--color-text-muted);
+}
+
+.timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+
+/* TIMELINE - DESKTOP (date left, content right, line in the middle) */
+
+@media (min-width: 900px) {
+    .timeline::before {
+        left: calc(14rem + 1.95rem);
+    }
+
+    .timeline__entry {
+        grid-template-columns: 14rem 1fr;
+        gap: 4rem;
+        padding-left: 0;
+    }
+
+    .timeline__period {
+        text-align: right;
+    }
+
+    .timeline__node {
+        left: calc(14rem + 1.5rem);
+    }
+}
+
+
+/* PLACEHOLDER HIGHLIGHT  e.g. [ADD DATE]
+   Visible on purpose so missing info is noticed before launch. */
+
+.placeholder {
+    padding: 0.05em 0.35em;
+    border: 1px dashed var(--color-accent);
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 0.8em;
+    font-style: normal;
+    letter-spacing: 0.06em;
+}
+
+/* ==========================================================
+   END TIMELINE
+========================================================== */

@@ -1,0 +1,61 @@
+/* ==========================================================
+   MAIN STYLESHEET  (list of all CSS files, in order)
+
+   PURPOSE:
+   This file only IMPORTS the other CSS files. The build
+   combines them into one file: /dist/styles/main.css
+
+   HOW TO FIND THE RIGHT FILE:
+   base/        design tokens, fonts, reset, layout, motion
+   components/  pieces used on many pages (buttons, cards, ...)
+   sections/    big homepage / page sections (hero, CTA, ...)
+   pages/       styles that belong to ONE page only
+
+   ADDING A NEW CSS FILE:
+   Create it in the right folder and add an @import line below.
+
+   EDIT WITH CARE: the order matters (later files win).
+========================================================== */
+
+/* BASE */
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+@import url("./base/layout.css");
+@import url("./base/motion.css");
+
+/* COMPONENTS */
+@import url("./components/buttons.css");
+@import url("./components/navigation.css");
+@import url("./components/footer.css");
+@import url("./components/cards.css");
+@import url("./components/content-blocks.css");
+@import url("./components/filters.css");
+@import url("./components/forms.css");
+@import url("./components/ad-mockup.css");
+@import url("./components/device-preview.css");
+@import url("./components/timeline.css");
+@import url("./components/lightbox.css");
+@import url("./components/qr-share.css");
+@import url("./components/cursor-label.css");
+
+/* SECTIONS */
+@import url("./sections/hero.css");
+@import url("./sections/page-hero.css");
+@import url("./sections/brand-core.css");
+@import url("./sections/services.css");
+@import url("./sections/featured-work.css");
+@import url("./sections/process.css");
+@import url("./sections/about-teaser.css");
+@import url("./sections/cta.css");
+
+/* PAGES */
+@import url("./pages/work.css");
+@import url("./pages/project.css");
+@import url("./pages/funnels.css");
+@import url("./pages/creatives.css");
+@import url("./pages/design.css");
+@import url("./pages/ai.css");
+@import url("./pages/about.css");
+@import url("./pages/contact.css");
+@import url("./pages/legal.css");

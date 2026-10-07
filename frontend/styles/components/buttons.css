@@ -1,0 +1,144 @@
+/* ==========================================================
+   BUTTONS & LINKS
+   .button--primary  filled button (main action)
+   .button--ghost    outlined button (secondary action)
+   .text-link        small uppercase link with arrow
+   .link-underline   text link with animated underline
+   .badge            small label, e.g. "Live demo", "Concept"
+========================================================== */
+
+
+/* BUTTON - BASE */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    min-height: 3.25rem;
+    padding: 0.95rem 1.7rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1;
+    transition:
+        background-color var(--duration-medium) var(--ease-cinematic),
+        border-color var(--duration-medium) var(--ease-cinematic),
+        color var(--duration-medium) var(--ease-cinematic);
+}
+
+.button__arrow {
+    display: inline-block;
+    transition: transform var(--duration-medium) var(--ease-cinematic);
+}
+
+.button:hover .button__arrow,
+.button:focus-visible .button__arrow {
+    transform: translateX(4px);
+}
+
+
+/* BUTTON - PRIMARY (ivory on dark sections, obsidian on light sections) */
+
+.button--primary {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+    background-color: var(--color-accent);
+    color: var(--color-obsidian);
+}
+
+.theme-light .button--primary:hover,
+.theme-light .button--primary:focus-visible {
+    color: var(--color-ivory);
+}
+
+
+/* BUTTON - GHOST (outline) */
+
+.button--ghost {
+    border-color: color-mix(in srgb, var(--color-text) 35%, transparent);
+    color: var(--color-text);
+}
+
+.button--ghost:hover,
+.button--ghost:focus-visible {
+    border-color: var(--color-text);
+}
+
+.button[disabled],
+.button[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+}
+
+
+/* TEXT LINK (uppercase, with arrow) */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 0.4rem;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    transition: border-color var(--duration-medium) var(--ease-cinematic);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+    border-color: currentColor;
+}
+
+
+/* LINK WITH ANIMATED UNDERLINE */
+
+.link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size var(--duration-medium) var(--ease-cinematic);
+}
+
+.link-underline:hover,
+.link-underline:focus-visible {
+    background-size: 100% 1px;
+}
+
+
+/* BADGE */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   END BUTTONS & LINKS
+========================================================== */

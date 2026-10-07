@@ -1,0 +1,19 @@
+{
+    "name": "lukas-ude-frontend",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Static website of Lukas Ude – built from /frontend and /content into /frontend/dist.",
+    "type": "module",
+    "engines": {
+        "node": ">=20.11"
+    },
+    "scripts": {
+        "build": "node build/build.js",
+        "build:drafts": "node build/build.js --drafts",
+        "watch": "node build/build.js --watch"
+    },
+    "devDependencies": {
+        "qrcode": "1.5.4",
+        "sharp": "0.35.5"
+    }
+}

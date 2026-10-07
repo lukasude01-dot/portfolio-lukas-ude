@@ -1,0 +1,104 @@
+/* ==========================================================
+   PROCESS SECTION
+   IDEA → STRATEGY → CREATION → SYSTEM → EXECUTION
+   with a connecting line that draws in on scroll.
+   HTML: /frontend/pages/index.html -> PROCESS SECTION
+   (the same classes are reused on /ai/ and /funnels/)
+========================================================== */
+
+
+/* PROCESS - STEPS */
+
+.process__steps {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-large);
+    padding-left: 2.25rem;
+}
+
+/* The connecting line (vertical on mobile, horizontal on desktop) */
+.process__line {
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.45rem;
+    width: 1px;
+    background-color: var(--color-accent);
+    opacity: 0.6;
+}
+
+.js .process__line[data-reveal="line"] {
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 2200ms var(--ease-cinematic);
+}
+
+.js .process__line[data-reveal="line"].is-revealed {
+    transform: none;
+}
+
+.process__step {
+    position: relative;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.process__node {
+    position: absolute;
+    top: 0.35rem;
+    left: -2.25rem;
+    width: 0.95rem;
+    height: 0.95rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    background-color: var(--color-background);
+}
+
+.process__number {
+    color: var(--color-accent);
+}
+
+.process__title {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+.process__text {
+    color: var(--color-text-muted);
+    max-width: 22rem;
+}
+
+
+/* PROCESS - DESKTOP (horizontal) */
+
+@media (min-width: 900px) {
+    .process__steps {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: var(--spacing-medium);
+        padding-left: 0;
+        padding-top: 2.5rem;
+    }
+
+    .process__line {
+        top: 0.45rem;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: 1px;
+    }
+
+    .js .process__line[data-reveal="line"] {
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+
+    .process__node {
+        top: -2.5rem;
+        left: 0;
+    }
+}
+
+/* ==========================================================
+   END PROCESS SECTION
+========================================================== */

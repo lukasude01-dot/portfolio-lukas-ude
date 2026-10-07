@@ -1,0 +1,50 @@
+    <!-- =========================================================
+         NAVIGATION  (site header, shown on every page)
+
+         PURPOSE:
+         Logo + main menu. On small screens the menu opens as a
+         full-screen overlay via the "Menu" button.
+
+         EDIT HERE:
+         - Menu items: /frontend/config/site.js -> navigation
+           (the links below are generated from that list)
+         - Logo file:  /frontend/assets/brand/logo-mark-ivory.svg
+
+         RELATED STYLES:
+         /frontend/styles/components/navigation.css
+
+         RELATED SCRIPT:
+         /frontend/scripts/modules/navigation.js
+    ========================================================= -->
+    <header class="site-header" data-site-header>
+        <div class="site-header__inner container">
+
+            <!-- EDIT: LOGO (mark + wordmark) -->
+            <a class="brand-logo" href="/" aria-label="{{ site.name }} – Home">
+                <img class="brand-logo__mark brand-logo__mark--ivory" src="/assets/brand/logo-mark-ivory.svg" alt="" width="40" height="40">
+                <img class="brand-logo__mark brand-logo__mark--obsidian" src="/assets/brand/logo-mark-obsidian.svg" alt="" width="40" height="40">
+                <span class="brand-logo__divider" aria-hidden="true"></span>
+                <span class="brand-logo__wordmark"><span class="brand-logo__first">Lukas</span> <span class="brand-logo__last">Ude</span></span>
+            </a>
+
+            <!-- NAVIGATION - DESKTOP LINKS (generated from site.js) -->
+            <nav class="site-nav" aria-label="Main">
+                <!-- @render navigation-links -->
+            </nav>
+
+            <!-- NAVIGATION - MOBILE MENU BUTTON -->
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+                <span class="menu-toggle__label" data-menu-label>Menu</span>
+                <span class="menu-toggle__lines" aria-hidden="true"><span></span><span></span></span>
+            </button>
+        </div>
+
+        <!-- NAVIGATION - MOBILE MENU OVERLAY -->
+        <div class="mobile-menu theme-dark" id="mobile-menu" data-mobile-menu hidden>
+            <nav class="mobile-menu__nav container" aria-label="Mobile">
+                <!-- @render navigation-links-mobile -->
+            </nav>
+            <p class="mobile-menu__footer container eyebrow">{{ site.descriptor }}</p>
+        </div>
+    </header>
+    <!-- ================= END NAVIGATION ================= -->

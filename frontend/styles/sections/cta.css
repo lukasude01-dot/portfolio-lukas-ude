@@ -1,0 +1,48 @@
+/* ==========================================================
+   CTA SECTION
+   Green "Let's build something that works." band.
+   HTML: /frontend/components/cta-band.html
+========================================================== */
+
+.cta {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--spacing-section);
+}
+
+/* Faint topographic lines in the background */
+.cta__lines {
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/textures/contours.svg");
+    background-size: cover;
+    background-position: 30% 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.cta__inner {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-medium);
+    justify-items: start;
+}
+
+.cta__heading em {
+    display: inline-block;
+}
+
+.cta__text {
+    max-width: 36rem;
+}
+
+.cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-small);
+}
+
+/* ==========================================================
+   END CTA SECTION
+========================================================== */

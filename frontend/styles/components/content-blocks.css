@@ -1,0 +1,136 @@
+/* ==========================================================
+   CONTENT BLOCKS
+   Small reusable text elements used on many pages:
+   bullet lists, fact lists, project facts, notices,
+   breadcrumbs and textures.
+========================================================== */
+
+
+/* BULLET LIST - short line instead of a dot */
+
+.bullet-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 1.6rem;
+}
+
+.bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    width: 0.9rem;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+
+/* FACT LIST - label + value pairs */
+
+.fact-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.fact-list > div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.fact-list dt {
+    color: var(--color-text-muted);
+}
+
+
+/* PROJECT FACTS - row of key facts under project headlines */
+
+.project-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: var(--spacing-medium);
+    padding-block: var(--spacing-medium);
+    border-block: 1px solid var(--color-line);
+}
+
+.project-facts > div {
+    display: grid;
+    gap: 0.35rem;
+    align-content: start;
+}
+
+.project-facts dt {
+    color: var(--color-text-muted);
+}
+
+
+/* NOTICE - e.g. "This is a portfolio demonstration" */
+
+.notice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.85rem;
+    padding: 1rem 1.25rem;
+    border-left: 2px solid var(--color-accent);
+    background-color: var(--color-surface);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.notice .label {
+    color: var(--color-accent);
+}
+
+
+/* BREADCRUMBS */
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.breadcrumbs li + li::before {
+    content: "/";
+    margin-right: 0.5rem;
+    opacity: 0.5;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-text);
+}
+
+
+/* TEXTURES - subtle film grain + topographic lines (nature × precision) */
+
+.texture-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/textures/grain.svg");
+    background-size: 240px 240px;
+    opacity: 0.07;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.texture-contours {
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/textures/contours.svg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   END CONTENT BLOCKS
+========================================================== */

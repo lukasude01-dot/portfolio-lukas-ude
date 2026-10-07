@@ -1,0 +1,236 @@
+/* ==========================================================
+   HERO SECTION
+   Controls layout, typography and image treatment of the
+   homepage hero (dark, cinematic, real portrait).
+   HTML: /frontend/pages/index.html -> HERO SECTION
+========================================================== */
+
+
+/* HERO - MAIN CONTAINER */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* HERO - PROFILE IMAGE
+   Cinematic treatment WITHOUT changing the photo itself:
+   dark vignette + fades into the background + warm light. */
+
+.hero__portrait {
+    position: relative;
+    z-index: 0;
+    height: 64svh;
+    min-height: 420px;
+    margin-top: calc(var(--header-height) - 0.5rem); /* keeps the head clear of the logo */
+}
+
+.hero__portrait-frame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hero__portrait-frame picture,
+.hero__portrait-frame img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero__portrait-frame img {
+    object-fit: cover;
+    object-position: 50% 0%;
+    filter: contrast(1.06) saturate(0.92);
+}
+
+/* Vignette: darkens the studio backdrop towards the edges */
+.hero__portrait-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(ellipse 70% 60% at 52% 32%, transparent 35%, rgba(9, 10, 9, 0.72) 100%);
+    pointer-events: none;
+}
+
+/* Fades: image melts into the obsidian background */
+.hero__portrait-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(0deg, var(--color-obsidian) 0%, rgba(9, 10, 9, 0.6) 22%, transparent 48%),
+        linear-gradient(180deg, rgba(9, 10, 9, 0.55) 0%, transparent 22%);
+    pointer-events: none;
+}
+
+/* Warm practical light (soft brass glow) */
+.hero__portrait-light {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    z-index: 2;
+    width: 55%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(154, 129, 92, 0.32), transparent 65%);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
+
+
+/* HERO - CONTENT */
+
+.hero__inner {
+    position: relative;
+    z-index: 2;
+    margin-top: -22svh;
+    padding-bottom: var(--spacing-xl);
+}
+
+.hero__content {
+    display: grid;
+    gap: var(--spacing-medium);
+    max-width: 52rem;
+}
+
+
+/* HERO - HEADLINE */
+
+.hero__headline {
+    display: grid;
+}
+
+.hero__line {
+    display: block;
+}
+
+
+/* HERO - INTRO TEXT + BUTTONS */
+
+.hero__intro {
+    max-width: 34rem;
+}
+
+.hero__actions {
+    margin-top: var(--spacing-2xs);
+}
+
+
+/* HERO - POSITIONING INDEX (Marketing / AI / Systems) */
+
+.hero__index {
+    display: grid;
+    gap: 1rem;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid rgba(238, 234, 224, 0.14);
+    max-width: 50rem;
+}
+
+.hero__index-item {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.hero__index-item dt {
+    color: var(--color-accent);
+}
+
+.hero__index-item dd {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+
+/* HERO - SCROLL CUE */
+
+.hero__scroll {
+    position: absolute;
+    right: var(--page-gutter);
+    bottom: var(--spacing-large);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--color-text-muted);
+    writing-mode: vertical-rl;
+}
+
+.hero__scroll-line {
+    position: relative;
+    width: 1px;
+    height: 4.5rem;
+    overflow: hidden;
+    background-color: rgba(238, 234, 224, 0.15);
+}
+
+.hero__scroll-line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-ivory);
+    transform: translateY(-100%);
+    animation: hero-scroll-line 2.8s var(--ease-cinematic) infinite;
+}
+
+@keyframes hero-scroll-line {
+    0% { transform: translateY(-100%); }
+    55% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
+
+/* HERO - TABLET & DESKTOP
+   The portrait moves to the right and becomes full height. */
+
+@media (min-width: 900px) {
+    .hero {
+        justify-content: center;
+        min-height: max(100svh, 720px);
+    }
+
+    .hero__portrait {
+        position: absolute;
+        top: calc(var(--header-height) + 1rem);
+        right: 0;
+        bottom: 0;
+        width: 46%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .hero__portrait-frame::after {
+        background:
+            linear-gradient(90deg, var(--color-obsidian) 0%, rgba(9, 10, 9, 0.55) 18%, transparent 45%),
+            linear-gradient(270deg, rgba(9, 10, 9, 0.6) 0%, transparent 22%),
+            linear-gradient(0deg, var(--color-obsidian) 0%, transparent 30%),
+            linear-gradient(180deg, var(--color-obsidian) 0%, rgba(9, 10, 9, 0.35) 8%, transparent 22%);
+    }
+
+    .hero__inner {
+        margin-top: 0;
+        padding-top: calc(var(--header-height) + var(--spacing-xl));
+        padding-bottom: var(--spacing-large);
+    }
+
+    .hero__index {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-large);
+    }
+
+    .hero__scroll {
+        display: flex;
+    }
+}
+
+/* ==========================================================
+   END HERO SECTION
+========================================================== */

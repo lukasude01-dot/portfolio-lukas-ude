@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- =========================================================
+     PAGE LAYOUT  (the frame around every page)
+
+     PURPOSE:
+     Every page in /frontend/pages is placed inside this layout.
+     It adds the <head>, skip link, navigation and footer.
+
+     EDIT HERE:
+     Usually nothing. Edit the parts instead:
+     - <head> / SEO tags     -> /frontend/components/head.html
+     - NAVIGATION            -> /frontend/components/navigation.html
+     - FOOTER                -> /frontend/components/footer.html
+     - Page content          -> /frontend/pages/<page>.html
+
+     DO NOT EDIT WITHOUT TESTING: affects every page.
+========================================================= -->
+<html lang="{{ site.language }}">
+<head>
+<!-- @include head -->
+</head>
+<body class="{{ page.bodyClass }}" data-header-theme="{{ page.headerTheme }}">
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- @include navigation -->
+
+    <main id="main-content" tabindex="-1">
+{{{ page.body }}}
+    </main>
+
+<!-- @include footer -->
+
+</body>
+</html>
+<!-- ================= END PAGE LAYOUT ================= -->

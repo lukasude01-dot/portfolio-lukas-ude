@@ -1,0 +1,47 @@
+{
+    "_help": "MY JOURNEY (About page). One object per station, newest first. Replace every [ADD ...] placeholder with your real information. Delete entries you do not need. 'type' is a short label such as Experience, Education, Project, Certificate. 'tags' are optional small badges.",
+
+    "entries": [
+        {
+            "period": "[ADD DATE] – today",
+            "type": "Experience",
+            "title": "[ADD JOB TITLE]",
+            "organisation": "[ADD EMPLOYMENT]",
+            "location": "[ADD LOCATION]",
+            "description": "[ADD DESCRIPTION – what you are responsible for, e.g. campaigns, funnels, creatives, automation]",
+            "tags": ["Marketing", "Funnels", "AI"]
+        },
+        {
+            "period": "[ADD DATE]",
+            "type": "Experience",
+            "title": "[ADD JOB TITLE]",
+            "organisation": "[ADD EMPLOYMENT]",
+            "location": "[ADD LOCATION]",
+            "description": "[ADD DESCRIPTION]",
+            "tags": ["Copywriting", "Design"]
+        },
+        {
+            "period": "[ADD DATE]",
+            "type": "Project",
+            "title": "[ADD PROJECT]",
+            "organisation": "[ADD CLIENT OR CONTEXT]",
+            "location": "",
+            "description": "[ADD DESCRIPTION – a project that shaped how you work with AI or automation]",
+            "tags": ["AI", "Automation"]
+        },
+        {
+            "period": "[ADD DATE]",
+            "type": "Education",
+            "title": "[ADD DEGREE OR TRAINING]",
+            "organisation": "[ADD SCHOOL / UNIVERSITY]",
+            "location": "[ADD LOCATION]",
+            "description": "[ADD DESCRIPTION]",
+            "tags": []
+        }
+    ],
+
+    "certificates": [
+        { "year": "[ADD DATE]", "title": "[ADD CERTIFICATE]", "issuer": "[ADD ISSUER]" },
+        { "year": "[ADD DATE]", "title": "[ADD CERTIFICATE]", "issuer": "[ADD ISSUER]" }
+    ]
+}

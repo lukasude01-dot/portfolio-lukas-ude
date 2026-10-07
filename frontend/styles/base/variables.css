@@ -1,0 +1,187 @@
+/* ==========================================================
+   DESIGN TOKENS  (the single source of truth for the look)
+
+   PURPOSE:
+   Every colour, font, size, spacing value and animation timing
+   used on the website is defined here. Other CSS files only
+   REFERENCE these variables, e.g. `color: var(--color-text);`.
+
+   Change a value here and it changes everywhere.
+
+   SOURCE:
+   Values are taken from the Lukas Ude Corporate Identity Sheet
+   (/source-assets/lukas-ude-corporate-identity-sheet.pdf).
+   Colour ratio from the CI:
+   55% black / 30% ivory / 10% natural tones / 5% brass.
+   -> Brass is an ACCENT. Use it sparingly.
+========================================================== */
+
+:root {
+
+    /* ------------------------------------------------------
+       1. BRAND COLOURS  (exact CI values)
+       SAFE TO EDIT: change the hex codes to adjust the palette.
+    ------------------------------------------------------ */
+    --color-obsidian: #090A09;       /* main dark background */
+    --color-ivory: #EEEAE0;          /* main light background / light text */
+    --color-british-green: #18251D;  /* deep natural green */
+    --color-forest: #2D3B30;         /* lighter forest green */
+    --color-tobacco: #71543C;        /* warm brown detail colour */
+    --color-brass: #9A815C;          /* restrained accent (use rarely!) */
+
+    /* ------------------------------------------------------
+       2. DERIVED COLOURS  (shades built from the brand colours)
+       EDIT WITH CARE: these keep text readable (contrast).
+    ------------------------------------------------------ */
+    --color-obsidian-raised: #111311;   /* cards on dark backgrounds */
+    --color-obsidian-line: #1E211E;     /* dividers on dark */
+    --color-ivory-deep: #E2DDD0;        /* cards on light backgrounds */
+    --color-ivory-line: #CFC8B8;        /* dividers on light */
+    --color-brass-dark: #75603F;        /* brass for TEXT on ivory (readable) */
+    --color-ink-muted: #4A463F;         /* secondary text on ivory */
+    --color-ivory-muted: #B4AFA4;       /* secondary text on dark */
+    --color-success: #5E7A5F;           /* positive form states */
+    --color-error: #B5654A;             /* error form states */
+
+    /* ------------------------------------------------------
+       3. SEMANTIC COLOURS  (what the colours are USED for)
+       Sections switch between dark and light by changing
+       these variables (see .theme-dark / .theme-light below).
+    ------------------------------------------------------ */
+    --color-background: var(--color-obsidian);
+    --color-surface: var(--color-obsidian-raised);
+    --color-text: var(--color-ivory);
+    --color-text-muted: var(--color-ivory-muted);
+    --color-line: var(--color-obsidian-line);
+    --color-accent: var(--color-brass);
+    --color-green: var(--color-british-green);
+
+    /* ------------------------------------------------------
+       4. TYPOGRAPHY
+       --font-display: editorial serif for big statements
+       --font-body:    precise sans-serif for UI and text
+       SAFE TO EDIT: font names (the files are loaded in
+       /frontend/styles/base/typography.css).
+    ------------------------------------------------------ */
+    --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+    /* Font sizes scale smoothly between mobile and desktop
+       using clamp(minimum, preferred, maximum). */
+    --text-xs: 0.75rem;                                   /* 12px – labels */
+    --text-sm: 0.875rem;                                  /* 14px – meta text */
+    --text-base: 1rem;                                    /* 16px – body text */
+    --text-md: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); /* lead text */
+    --text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    --text-xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+    --text-2xl: clamp(2.25rem, 1.6rem + 2.8vw, 4rem);
+    --text-3xl: clamp(2.75rem, 1.8rem + 4.4vw, 6rem);
+    --text-display: clamp(3.1rem, 1.6rem + 6.4vw, 8.25rem); /* hero headline */
+
+    --line-height-tight: 1.02;
+    --line-height-heading: 1.12;
+    --line-height-body: 1.65;
+
+    --letter-spacing-label: 0.22em;   /* small uppercase labels */
+    --letter-spacing-wide: 0.08em;
+
+    /* ------------------------------------------------------
+       5. SPACING
+       One spacing scale for margins, paddings and gaps.
+    ------------------------------------------------------ */
+    --spacing-3xs: 0.25rem;   /* 4px  */
+    --spacing-2xs: 0.5rem;    /* 8px  */
+    --spacing-xs: 0.75rem;    /* 12px */
+    --spacing-small: 1rem;    /* 16px */
+    --spacing-medium: 1.5rem; /* 24px */
+    --spacing-large: 2.5rem;  /* 40px */
+    --spacing-xl: clamp(3rem, 2rem + 4vw, 5rem);
+    --spacing-2xl: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+    --spacing-section: clamp(5rem, 3.5rem + 7vw, 10rem); /* space between big sections */
+
+    /* ------------------------------------------------------
+       6. LAYOUT
+       EDIT WITH CARE: affects the width of all content.
+    ------------------------------------------------------ */
+    --content-width: 1360px;      /* maximum width of page content */
+    --content-width-text: 44rem;  /* comfortable reading width */
+    --page-gutter: clamp(1.25rem, 0.6rem + 3vw, 3.5rem); /* left/right page padding */
+    --header-height: 4.75rem;
+
+    /* ------------------------------------------------------
+       7. SHAPES
+       The CI is calm and precise -> small radii only.
+    ------------------------------------------------------ */
+    --border-radius: 2px;
+    --border-radius-large: 6px;
+    --border-radius-device: 28px;  /* phone frame in funnel previews */
+    --border-width: 1px;
+
+    /* ------------------------------------------------------
+       8. MOTION
+       Slow, controlled, cinematic. No bounce.
+       SAFE TO EDIT: durations.
+    ------------------------------------------------------ */
+    --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-fast: 220ms;
+    --duration-medium: 600ms;
+    --duration-slow: 1100ms;
+    --duration-reveal: 1400ms;
+    --reveal-distance: 28px;
+
+    /* ------------------------------------------------------
+       9. LAYERS (z-index)
+    ------------------------------------------------------ */
+    --layer-base: 1;
+    --layer-header: 50;
+    --layer-menu: 60;
+    --layer-lightbox: 80;
+    --layer-skip-link: 100;
+}
+
+
+/* ==========================================================
+   SECTION THEMES
+   Add class="theme-dark", "theme-light" or "theme-green"
+   to a <section> to switch its colours.
+   This creates the dark / light rhythm of the website.
+========================================================== */
+
+.theme-dark {
+    --color-background: var(--color-obsidian);
+    --color-surface: var(--color-obsidian-raised);
+    --color-text: var(--color-ivory);
+    --color-text-muted: var(--color-ivory-muted);
+    --color-line: var(--color-obsidian-line);
+    --color-accent: var(--color-brass);
+}
+
+.theme-light {
+    --color-background: var(--color-ivory);
+    --color-surface: var(--color-ivory-deep);
+    --color-text: var(--color-obsidian);
+    --color-text-muted: var(--color-ink-muted);
+    --color-line: var(--color-ivory-line);
+    --color-accent: var(--color-brass-dark);
+}
+
+.theme-green {
+    --color-background: var(--color-british-green);
+    --color-surface: var(--color-forest);
+    --color-text: var(--color-ivory);
+    --color-text-muted: #B9BCAF;
+    --color-line: #2A3A2F;
+    --color-accent: #B39A72;
+}
+
+.theme-dark,
+.theme-light,
+.theme-green {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* ==========================================================
+   END DESIGN TOKENS
+========================================================== */

@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Generated website (built by `npm run build`)
+frontend/dist/
+frontend/.cache/
+
+# Secrets – never commit real environment files
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

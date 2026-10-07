@@ -1,0 +1,37 @@
+        <!-- =========================================================
+             CTA  (call to action before the footer)
+
+             PURPOSE:
+             Invites visitors to get in touch. Used at the end of
+             most pages via the include line  "@include cta-band"
+
+             EDIT HERE:
+             - Headline and text below
+             - Button labels/links: /frontend/config/site.js -> cta
+
+             RELATED STYLES:
+             /frontend/styles/sections/cta.css
+        ========================================================= -->
+        <section class="cta theme-green" aria-labelledby="cta-heading">
+            <div class="cta__lines" aria-hidden="true"></div>
+            <div class="container cta__inner">
+                <p class="eyebrow eyebrow--line" data-reveal>Work with me</p>
+
+                <!-- EDIT: CTA HEADLINE -->
+                <h2 class="cta__heading heading-1" id="cta-heading" data-reveal data-reveal-delay="1">
+                    Let's build something<br><em class="heading-accent">that works.</em>
+                </h2>
+
+                <!-- EDIT: CTA TEXT -->
+                <p class="cta__text text-lead" data-reveal data-reveal-delay="2">
+                    A funnel, a campaign, a set of creatives or a process that should run on its own –
+                    tell me where you are and where you want to go.
+                </p>
+
+                <div class="cta__actions" data-reveal data-reveal-delay="3">
+                    <a class="button button--primary" href="{{ site.cta.secondary.href }}">{{ site.cta.secondary.label }}<span class="button__arrow" aria-hidden="true">→</span></a>
+                    <a class="button button--ghost" href="{{ site.cta.primary.href }}">{{ site.cta.primary.label }}</a>
+                </div>
+            </div>
+        </section>
+        <!-- ================= END CTA ================= -->

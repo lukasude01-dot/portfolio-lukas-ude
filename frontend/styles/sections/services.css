@@ -1,0 +1,150 @@
+/* ==========================================================
+   SERVICES SECTION
+   Editorial list of disciplines with hover image (desktop).
+   HTML:   /frontend/pages/index.html -> SERVICES SECTION
+   SCRIPT: /frontend/scripts/modules/services-preview.js
+========================================================== */
+
+
+/* SERVICES - LAYOUT */
+
+.services__layout {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.services__list {
+    border-top: 1px solid var(--color-line);
+}
+
+
+/* SERVICES - ONE ROW */
+
+.services__item {
+    border-bottom: 1px solid var(--color-line);
+}
+
+.services__link {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    grid-template-areas:
+        "number title arrow"
+        ".      text  .";
+    column-gap: var(--spacing-small);
+    row-gap: 0.4rem;
+    padding-block: clamp(1.4rem, 2.5vw, 2.1rem);
+    transition: padding var(--duration-slow) var(--ease-cinematic);
+}
+
+.services__number {
+    grid-area: number;
+    padding-top: 0.7em;
+    color: var(--color-accent);
+}
+
+.services__title {
+    grid-area: title;
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 300;
+    line-height: 1.15;
+    transition: transform var(--duration-slow) var(--ease-cinematic), color var(--duration-medium) var(--ease-standard);
+}
+
+.services__text {
+    grid-area: text;
+    max-width: 32rem;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.services__arrow {
+    grid-area: arrow;
+    align-self: center;
+    font-size: 1.3rem;
+    color: var(--color-text-muted);
+    transition: transform var(--duration-slow) var(--ease-cinematic), color var(--duration-medium) var(--ease-standard);
+}
+
+.services__link:hover .services__title,
+.services__link:focus-visible .services__title {
+    transform: translateX(0.6rem);
+}
+
+.services__link:hover .services__arrow,
+.services__link:focus-visible .services__arrow {
+    transform: translateX(0.4rem);
+    color: var(--color-accent);
+}
+
+/* When one row is hovered, the others step back */
+.services__list:hover .services__item:not(:hover) .services__title {
+    color: var(--color-text-muted);
+}
+
+
+/* SERVICES - HOVER PREVIEW IMAGES (desktop only) */
+
+.services__preview {
+    display: none;
+}
+
+
+/* SERVICES - DESKTOP */
+
+@media (min-width: 1000px) {
+    .services__layout {
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+        gap: var(--spacing-2xl);
+        align-items: start;
+    }
+
+    .services__title {
+        font-size: var(--text-2xl);
+    }
+
+    .services__number {
+        padding-top: 1.2em;
+    }
+
+    .services__preview {
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+        display: block;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        background-color: var(--color-surface);
+    }
+
+    .services__preview-image {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: scale(1.06);
+        transition: opacity var(--duration-slow) var(--ease-standard), transform 1800ms var(--ease-cinematic);
+    }
+
+    .services__preview-image.is-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .services__preview-image picture,
+    .services__preview-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .services__preview::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 55%, rgba(9, 10, 9, 0.55));
+    }
+}
+
+/* ==========================================================
+   END SERVICES SECTION
+========================================================== */

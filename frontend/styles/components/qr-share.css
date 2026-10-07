@@ -1,0 +1,43 @@
+/* ==========================================================
+   QR SHARE CARD
+   Small, quiet QR code (footer + contact page).
+   HTML: /frontend/components/qr-share.html
+
+   EDIT WITH CARE:
+   Keep the code at least ~96px wide and keep the light
+   background, otherwise phones may fail to scan it.
+========================================================== */
+
+.qr-share {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.qr-share__code {
+    flex: none;
+    width: 7rem;
+    height: 7rem;
+    border-radius: var(--border-radius);
+    background-color: var(--color-ivory); /* fallback while loading */
+}
+
+.qr-share__caption {
+    display: grid;
+    gap: 0.35rem;
+    max-width: 12rem;
+}
+
+.qr-share__caption .label {
+    color: var(--color-accent);
+}
+
+.qr-share__url {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   END QR SHARE CARD
+========================================================== */

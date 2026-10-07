@@ -1,0 +1,22 @@
+                    <!-- =====================================================
+                         QR SHARE CARD
+
+                         PURPOSE:
+                         Small QR code that opens the website on a phone.
+
+                         EDIT HERE:
+                         - Destination: /frontend/config/site.js -> url and qr.path
+                           (the QR image is generated automatically by the build)
+                         - Label text:  /frontend/config/site.js -> qr.label
+
+                         RELATED STYLES:
+                         /frontend/styles/components/qr-share.css
+                    ===================================================== -->
+                    <figure class="qr-share">
+                        <img class="qr-share__code" src="/assets/qr/site-qr.svg" alt="QR code that opens {{ site.url }}" width="112" height="112" loading="lazy">
+                        <figcaption class="qr-share__caption">
+                            <span class="label">{{ site.qr.label }}</span>
+                            <span class="qr-share__url">{{ site.url }}</span>
+                        </figcaption>
+                    </figure>
+                    <!-- ================= END QR SHARE CARD ================= -->
