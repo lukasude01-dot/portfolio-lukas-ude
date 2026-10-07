@@ -1,0 +1,191 @@
+<!doctype html>
+<!-- =========================================================
+     FUNNEL DEMO: RECRUITING  (fictional brand "Tischlerei Nordholz")
+
+     PURPOSE:
+     A working recruiting landing page with a 4-step application.
+     It is a PORTFOLIO DEMONSTRATION: the brand is fictional and
+     no data is sent anywhere (see demos/shared/demo-funnel.js).
+
+     EDIT HERE:
+     - Texts directly in this file (German, like a real client page)
+     - Colours: /frontend/demos/recruiting-demo/theme.css
+     - Case study text: /content/funnels/recruiting-demo/project.json
+
+     RELATED FILES:
+     /frontend/demos/shared/demo-base.css   (shared demo styles)
+     /frontend/demos/shared/demo-funnel.js  (multi-step logic)
+========================================================= -->
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tischler:in werden bei Nordholz – Demo-Funnel</title>
+    <meta name="description" content="Portfolio-Demo: Recruiting-Funnel für eine fiktive Tischlerei.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/demos/shared/demo-base.css">
+    <link rel="stylesheet" href="/demos/recruiting-demo/theme.css">
+    <script src="/demos/shared/demo-funnel.js" defer></script>
+</head>
+<body>
+
+<!-- @include demo-bar -->
+
+    <!-- HEADER -->
+    <header class="nh-header">
+        <div class="demo-container nh-header__inner">
+            <a class="nh-logo" href="#top"><span class="nh-logo__mark" aria-hidden="true"></span>Nordholz<small>Tischlerei</small></a>
+            <a class="demo-button nh-header__cta" href="#bewerben">Jetzt bewerben</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="nh-hero" data-hero>
+            <div class="demo-container nh-hero__inner">
+                <div class="nh-hero__content">
+                    <p class="nh-eyebrow">Wir suchen · Tischler:in (m/w/d) · Vollzeit</p>
+                    <h1 class="nh-hero__title">Feierabend um 16 Uhr.<br><span>Und Arbeit, die bleibt.</span></h1>
+                    <p class="nh-hero__text">Massivholzmöbel für echte Kunden – statt Spanplatte am Fließband. Bewirb dich in 60 Sekunden. Ohne Lebenslauf, ohne Anschreiben.</p>
+                    <div class="nh-hero__actions">
+                        <a class="demo-button" href="#bewerben">In 60 Sekunden bewerben →</a>
+                        <a class="demo-button demo-button--ghost nh-ghost" href="#ablauf">So läuft's ab</a>
+                    </div>
+                    <ul class="nh-checks" role="list">
+                        <li>Unbefristeter Vertrag</li>
+                        <li>Freitag ab 13 Uhr frei</li>
+                        <li>Eigene Projekte von A bis Z</li>
+                    </ul>
+                </div>
+                <div class="nh-hero__visual" aria-hidden="true">
+                    <div class="nh-grain"></div>
+                    <p class="nh-hero__quote">„Bei uns baust du ein Möbelstück vom ersten Strich bis zur Montage.“</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="nh-section">
+            <div class="demo-container">
+                <p class="nh-eyebrow">Was dich erwartet</p>
+                <h2 class="nh-heading">Gutes Handwerk braucht gute Bedingungen.</h2>
+                <ul class="nh-benefits" role="list">
+                    <li><span>01</span><h3>Planbare Zeiten</h3><p>Mo–Do 7–16 Uhr, Freitag bis 13 Uhr. Überstunden werden ausgeglichen.</p></li>
+                    <li><span>02</span><h3>Moderne Werkstatt</h3><p>CNC, Formatkreissäge, Absaugung – damit du dich aufs Handwerk konzentrierst.</p></li>
+                    <li><span>03</span><h3>Echte Verantwortung</h3><p>Du betreust Projekte vom Aufmaß bis zur Montage beim Kunden.</p></li>
+                    <li><span>04</span><h3>Kleines Team</h3><p>Acht Leute, kurze Wege, Entscheidungen ohne Umwege.</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="nh-section nh-section--dark" id="ablauf">
+            <div class="demo-container">
+                <p class="nh-eyebrow">So läuft's ab</p>
+                <h2 class="nh-heading">Drei Schritte. Kein Papierkram.</h2>
+                <ol class="nh-steps" role="list">
+                    <li><strong>1. Kurz bewerben</strong><p>Vier Fragen beantworten – dauert etwa 60 Sekunden.</p></li>
+                    <li><strong>2. Telefonat</strong><p>Wir rufen dich innerhalb von zwei Werktagen an.</p></li>
+                    <li><strong>3. Probetag</strong><p>Du lernst Team und Werkstatt kennen – bezahlt.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- APPLICATION (multi-step form) -->
+        <section class="nh-section nh-apply" id="bewerben" data-form-section>
+            <div class="demo-container nh-apply__inner">
+                <div>
+                    <p class="nh-eyebrow">Bewerbung</p>
+                    <h2 class="nh-heading">Bereit für die Werkstatt?</h2>
+                    <p class="nh-muted">Keine Unterlagen nötig. Wir melden uns persönlich bei dir.</p>
+                </div>
+
+                <form class="demo-form" data-demo-funnel novalidate>
+                    <div class="demo-form__progress" data-progress>
+                        <span data-progress-label>Schritt 1 von 4</span>
+                        <div class="demo-form__bar"><span data-progress-bar></span></div>
+                    </div>
+
+                    <fieldset class="demo-step" data-step>
+                        <legend class="demo-step__question" tabindex="-1">Hast du eine abgeschlossene Ausbildung als Tischler:in?</legend>
+                        <div class="demo-options">
+                            <div class="demo-option"><input type="radio" name="ausbildung" id="a1" value="ja"><label for="a1">Ja, Gesellenbrief</label></div>
+                            <div class="demo-option"><input type="radio" name="ausbildung" id="a2" value="meister"><label for="a2">Ja, Meister:in</label></div>
+                            <div class="demo-option"><input type="radio" name="ausbildung" id="a3" value="quereinstieg"><label for="a3">Nein, aber Erfahrung mit Holz</label></div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="demo-step" data-step>
+                        <legend class="demo-step__question" tabindex="-1">Wie viel Berufserfahrung bringst du mit?</legend>
+                        <div class="demo-options demo-options--grid">
+                            <div class="demo-option"><input type="radio" name="erfahrung" id="e1" value="0-2"><label for="e1">0–2 Jahre</label></div>
+                            <div class="demo-option"><input type="radio" name="erfahrung" id="e2" value="3-5"><label for="e2">3–5 Jahre</label></div>
+                            <div class="demo-option"><input type="radio" name="erfahrung" id="e3" value="6-10"><label for="e3">6–10 Jahre</label></div>
+                            <div class="demo-option"><input type="radio" name="erfahrung" id="e4" value="10+"><label for="e4">Mehr als 10 Jahre</label></div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="demo-step" data-step>
+                        <legend class="demo-step__question" tabindex="-1">Wann könntest du starten?</legend>
+                        <div class="demo-options">
+                            <div class="demo-option"><input type="radio" name="start" id="s1" value="sofort"><label for="s1">Sofort</label></div>
+                            <div class="demo-option"><input type="radio" name="start" id="s2" value="1-3"><label for="s2">In 1–3 Monaten</label></div>
+                            <div class="demo-option"><input type="radio" name="start" id="s3" value="spaeter"><label for="s3">Später / noch offen</label></div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="demo-step" data-step data-step-contact>
+                        <legend class="demo-step__question" tabindex="-1">Wie erreichen wir dich?</legend>
+                        <div class="demo-field"><label for="nh-name">Vor- und Nachname</label><input id="nh-name" name="name" type="text" autocomplete="name" required></div>
+                        <div class="demo-field"><label for="nh-phone">Telefonnummer</label><input id="nh-phone" name="telefon" type="tel" autocomplete="tel" required></div>
+                        <div class="demo-consent"><input id="nh-consent" name="consent" type="checkbox" required><label for="nh-consent">Ich bin einverstanden, dass meine Angaben zur Kontaktaufnahme genutzt werden. (Demo – es wird nichts gespeichert.)</label></div>
+                    </fieldset>
+
+                    <div class="demo-done" data-done hidden>
+                        <div class="demo-done__icon" aria-hidden="true">✓</div>
+                        <h3 tabindex="-1">Danke – deine Bewerbung ist angekommen.</h3>
+                        <p>Wir rufen dich innerhalb von zwei Werktagen an. Bis dahin musst du nichts weiter tun.</p>
+                        <p class="demo-done__badge">Demo: Es wurden keine Daten gesendet oder gespeichert.</p>
+                        <p><button class="demo-form__back" type="button" data-restart>↺ Demo neu starten</button></p>
+                    </div>
+
+                    <p class="demo-form__error" role="alert" data-error></p>
+
+                    <div class="demo-form__nav" data-nav>
+                        <button class="demo-form__back" type="button" data-back>← Zurück</button>
+                        <button class="demo-button" type="button" data-next data-label="Weiter" data-final-label="Bewerbung absenden">Weiter</button>
+                    </div>
+                    <p class="demo-form__note">Dauert ca. 60 Sekunden · Kein Lebenslauf nötig</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="nh-section">
+            <div class="demo-container nh-faq">
+                <h2 class="nh-heading">Häufige Fragen</h2>
+                <div class="demo-faq">
+                    <details><summary>Brauche ich einen Lebenslauf?</summary><p>Nein. Die vier Fragen reichen für den ersten Kontakt. Alles Weitere besprechen wir am Telefon.</p></details>
+                    <details><summary>Wie hoch ist das Gehalt?</summary><p>Wir zahlen nach Erfahrung und sprechen offen darüber – schon im ersten Telefonat.</p></details>
+                    <details><summary>Kann ich als Quereinsteiger:in anfangen?</summary><p>Wenn du Erfahrung mit Holz mitbringst: ja. Sag es uns einfach in der Bewerbung.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="nh-footer">
+        <div class="demo-container">
+            <p>Tischlerei Nordholz ist eine fiktive Marke – erstellt als Portfolio-Demonstration.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="demo-sticky-cta" data-sticky-cta>
+        <a class="demo-button" href="#bewerben">In 60 Sekunden bewerben →</a>
+    </div>
+
+</body>
+</html>

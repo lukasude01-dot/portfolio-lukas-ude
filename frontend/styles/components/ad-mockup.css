@@ -83,6 +83,9 @@
 
 /* In grids the text is shortened to 3 lines */
 .ad-mockup__primary-text--clamped {
+    /* margin instead of padding, so no half 4th line shows */
+    padding-bottom: 0;
+    margin-bottom: 0.75rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;

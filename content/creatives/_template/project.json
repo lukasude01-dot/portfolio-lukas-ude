@@ -1,0 +1,36 @@
+{
+    "_help": "TEMPLATE – copy this folder, rename it, add your images next to this file. Folders starting with _ are ignored. See /docs/CONTENT-GUIDE.md -> Creatives.",
+
+    "title": "[ADD TITLE]",
+    "category": ["Recruiting"],
+    "description": "[ADD ONE-SENTENCE DESCRIPTION]",
+    "year": "[ADD YEAR]",
+    "client": "[ADD CLIENT]",
+    "services": ["Ad concept", "Copywriting"],
+    "featured": false,
+    "order": 10,
+    "status": "draft",
+
+    "brand": { "name": "[ADD BRAND NAME]", "initials": "AB", "domain": "example.com" },
+    "thumbnail": { "src": "ad-1.jpg", "alt": "[DESCRIBE THE IMAGE]" },
+
+    "objective": "[ADD]",
+    "insight": "[ADD]",
+    "approach": ["[ADD]"],
+
+    "ads": [
+        {
+            "label": "[ADD VARIATION NAME]",
+            "format": "square",
+            "image": { "src": "ad-1.jpg", "alt": "[DESCRIBE THE IMAGE]" },
+            "hook": "[ADD HOOK]",
+            "primaryText": "[ADD PRIMARY TEXT – use \\n for a new line]",
+            "headline": "[ADD HEADLINE]",
+            "description": "",
+            "cta": "Learn more",
+            "rationale": ""
+        }
+    ],
+    "hooks": ["[ADD]"],
+    "headlines": ["[ADD]"]
+}

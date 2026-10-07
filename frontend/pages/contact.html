@@ -1,0 +1,57 @@
+---
+# PAGE SETTINGS - CONTACT
+title: Contact
+description: Get in touch with Lukas Ude about funnels, creatives and copy, design or AI-supported marketing systems.
+path: /contact/
+bodyClass: page-contact
+headerTheme: dark
+---
+
+        <!-- =========================================================
+             CONTACT SECTION
+
+             PURPOSE:
+             Headline, contact form, direct contact details and QR code.
+
+             EDIT HERE:
+             - Headline ("EDIT: CONTACT HEADLINE") and intro text
+             - Form fields: /frontend/components/contact-form.html
+             - E-mail, LinkedIn, location: /frontend/config/site.js
+
+             RELATED STYLES:
+             /frontend/styles/pages/contact.css
+             /frontend/styles/components/forms.css
+
+             RELATED SCRIPT:
+             /frontend/scripts/modules/contact-form.js
+             (backend: /backend/src/routes/contact.js)
+        ========================================================= -->
+        <section class="contact theme-dark texture-grain" aria-labelledby="contact-heading">
+            <div class="texture-contours" aria-hidden="true"></div>
+            <div class="container contact__inner">
+
+                <div class="contact__intro">
+                    <p class="eyebrow eyebrow--line" data-reveal>Contact</p>
+                    <!-- EDIT: CONTACT HEADLINE -->
+                    <h1 class="heading-1" id="contact-heading" data-reveal data-reveal-delay="1">Let's build something<em class="heading-accent">that works.</em></h1>
+                    <!-- EDIT: CONTACT INTRO -->
+                    <p class="text-lead" data-reveal data-reveal-delay="2">
+                        Tell me briefly where you are and what should work better. A few sentences are
+                        enough – we will sort out the details together.
+                    </p>
+
+                    <div class="contact__details" data-reveal data-reveal-delay="3">
+<!-- @render contact-details -->
+                    </div>
+
+                    <div class="contact__qr" data-reveal data-reveal-delay="4">
+<!-- @include qr-share -->
+                    </div>
+                </div>
+
+                <div class="contact__form" data-reveal data-reveal-delay="2">
+<!-- @include contact-form -->
+                </div>
+            </div>
+        </section>
+        <!-- ================= END CONTACT SECTION ================= -->

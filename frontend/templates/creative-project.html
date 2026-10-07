@@ -1,1 +1,83 @@
-<p>stub</p>
+        <!-- =========================================================
+             CREATIVE PROJECT TEMPLATE  (one page per creative case)
+
+             PURPOSE:
+             Builds /creatives/<slug>/ for every folder in
+             /content/creatives/. All text comes from project.json.
+
+             EDIT HERE:
+             Only the LAYOUT of all creative case pages.
+
+             RELATED STYLES:
+             /frontend/styles/pages/project.css
+             /frontend/styles/pages/creatives.css
+             /frontend/styles/components/ad-mockup.css
+
+             GENERATED PARTS:
+             /frontend/build/renderers/creatives.js
+        ========================================================= -->
+
+
+        <!-- CREATIVE PROJECT - HERO -->
+        <section class="project-hero theme-dark" aria-labelledby="project-heading">
+            <div class="texture-contours" aria-hidden="true"></div>
+            <div class="container project-hero__inner">
+<!-- @render breadcrumbs -->
+                <p class="eyebrow eyebrow--line" data-reveal>Creatives &amp; Copy · {{ project.year }}</p>
+                <h1 class="project-hero__title heading-1" id="project-heading" data-reveal data-reveal-delay="1">{{ project.title }}</h1>
+                <p class="project-hero__intro text-lead" data-reveal data-reveal-delay="2">{{ project.description }}</p>
+                <p class="project-hero__badges" data-reveal data-reveal-delay="3"><!-- @render project-badges --></p>
+                <div data-reveal data-reveal-delay="4">
+<!-- @render creative-facts -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CREATIVE PROJECT - OBJECTIVE, INSIGHT, APPROACH -->
+        <section class="project-section theme-light section" aria-labelledby="objective-heading">
+            <div class="container project-columns project-columns--three">
+                <div>
+                    <p class="eyebrow eyebrow--line">Objective</p>
+                    <h2 class="heading-3" id="objective-heading">The goal</h2>
+                    <p>{{ project.objective }}</p>
+                </div>
+                <div>
+                    <p class="eyebrow eyebrow--line">Insight</p>
+                    <h2 class="heading-3">The tension</h2>
+                    <p>{{ project.insight }}</p>
+                </div>
+                <div>
+                    <p class="eyebrow eyebrow--line">Approach</p>
+                    <h2 class="heading-3">The plan</h2>
+<!-- @render creative-approach -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CREATIVE PROJECT - VARIATIONS (mockup + copy) -->
+        <section class="project-section theme-dark section" aria-labelledby="variations-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line">Variations</p>
+                    <h2 class="heading-2" id="variations-heading">Creative and copy, side by side.</h2>
+                </header>
+<!-- @render creative-variations -->
+            </div>
+        </section>
+
+
+        <!-- CREATIVE PROJECT - HOOK & HEADLINE LIBRARY -->
+        <section class="project-section theme-light section" aria-labelledby="hooks-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line">Copy library</p>
+                    <h2 class="heading-2" id="hooks-heading">Hooks &amp; headlines.</h2>
+                </header>
+<!-- @render creative-hooks -->
+            </div>
+        </section>
+
+<!-- @render project-next -->
+        <!-- ================= END CREATIVE PROJECT TEMPLATE ================= -->

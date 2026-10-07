@@ -1,1 +1,30 @@
-/* placeholder */
+/* ==========================================================
+   WORK PAGE
+   Grid of all projects on /work/.
+   HTML: /frontend/pages/work.html
+         /frontend/build/renderers/work.js -> "work-grid"
+========================================================== */
+
+/* WORK GRID - two staggered columns on desktop */
+
+.work-grid {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 800px) {
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: var(--spacing-large);
+        row-gap: var(--spacing-2xl);
+    }
+
+    /* Every second card starts lower -> editorial rhythm */
+    .work-grid > :nth-child(even):not(.is-filtered-out) {
+        margin-top: var(--spacing-xl);
+    }
+}
+
+/* ==========================================================
+   END WORK PAGE
+========================================================== */

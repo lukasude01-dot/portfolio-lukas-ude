@@ -53,7 +53,9 @@ export const siteConfig = {
     //   PUBLIC_SITE_URL=https://staging.example.com npm run build
     // ---------------------------------------------------------
 
-    url: "https://lukasude.de",
+    // EXAMPLE VALUE: local development address. Replace with the real
+    // domain before going live, e.g. "https://www.your-domain.de".
+    url: "http://localhost:3000",
 
     language: "en",
     locale: "en_US",
@@ -65,15 +67,18 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     // EDIT: PUBLIC E-MAIL ADDRESS (shown on the contact page)
-    email: "",
+    // EXAMPLE VALUE – replace with your real address.
+    email: "hello@example.com",
 
     // EDIT: LOCATION (optional, e.g. "Hamburg, Germany")
-    location: "",
+    // EXAMPLE VALUE
+    location: "Germany",
 
     // EDIT: SOCIAL LINKS  (empty url = not shown)
     social: [
-        { label: "LinkedIn", url: "" },
-        { label: "Instagram", url: "" }
+        // EXAMPLE VALUES – replace with your real profile links.
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/example" },
+        { label: "Instagram", url: "https://www.instagram.com/example" }
     ],
 
 

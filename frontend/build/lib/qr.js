@@ -23,7 +23,7 @@ import { log } from "./logger.js";
 export async function createQrCode(site, distDir) {
     const destination = new URL(site.qr.path || "/", site.url).href;
 
-    if (!destination.startsWith("https://")) {
+    if (!destination.startsWith("https://") && !destination.includes("localhost")) {
         log.warn("QR CODE", `QR destination "${destination}" does not use https://. Check siteConfig.url.`);
     }
 

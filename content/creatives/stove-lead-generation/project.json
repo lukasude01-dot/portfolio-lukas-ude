@@ -1,0 +1,58 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
+
+    "title": "Lead Ads for a Stove Retailer",
+    "category": ["Lead Generation", "Performance"],
+    "description": "Educational ad concepts that open with a real buying mistake and lead into a free 'stove check' quiz.",
+    "year": "2026",
+    "client": "Ofenhaus Alder (fictional brand)",
+    "services": ["Ad concept", "Copywriting", "Creative design"],
+    "featured": false,
+    "example": true,
+    "order": 2,
+
+    "brand": { "name": "Ofenhaus Alder", "initials": "OA", "domain": "ofenhaus-alder.de" },
+
+    "thumbnail": { "src": "ad-common-mistake.jpg", "alt": "Lead ad: 'Der häufigste Fehler beim Kaminofen? Zu viel Leistung.'" },
+
+    "objective": "Generate qualified enquiries from people early in their research – without a hard sales message.",
+    "insight": "Buyers fear making an expensive mistake. Naming the most common one builds trust faster than any discount.",
+    "approach": [
+        "Lead with expertise, not with price",
+        "Visualise the answer (room size → power) so the ad is useful on its own",
+        "One clear next step: the free 2-minute stove check"
+    ],
+
+    "ads": [
+        {
+            "label": "Common mistake",
+            "format": "portrait",
+            "image": { "src": "ad-common-mistake.jpg", "alt": "Ad creative: 'Der häufigste Fehler beim Kaminofen? Zu viel Leistung.'" },
+            "hook": "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
+            "primaryText": "Ein zu großer Ofen läuft gedrosselt, rußt und wird kaum genutzt.\nMit unserem kostenlosen Ofen-Check findest du in 2 Minuten heraus, welche Leistung zu deinem Raum passt.",
+            "headline": "Kostenloser Ofen-Check in 2 Minuten",
+            "description": "Unverbindliche Empfehlung",
+            "cta": "Mehr erfahren"
+        },
+        {
+            "label": "Room size",
+            "format": "square",
+            "image": { "src": "ad-room-size.jpg", "alt": "Ad creative comparing room sizes with stove power: 4–6 kW, 6–8 kW, 8+ kW" },
+            "hook": "Welcher Ofen passt zu deinem Wohnzimmer?",
+            "primaryText": "Faustregel: Die Raumgröße entscheidet.\nFür deine persönliche Empfehlung brauchst du nur fünf Antworten.",
+            "headline": "Welche Ofengröße passt zu dir?",
+            "description": "Ofenhaus Alder",
+            "cta": "Jetzt starten"
+        }
+    ],
+
+    "hooks": [
+        "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
+        "Welcher Ofen passt zu deinem Wohnzimmer?",
+        "Erst die Empfehlung, dann das Gespräch."
+    ],
+    "headlines": [
+        "Kostenloser Ofen-Check in 2 Minuten",
+        "Welche Ofengröße passt zu dir?"
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
+
+    "seoTitle": "Brand Posts",
+    "title": "Brand Posts – Lukas Ude",
+    "category": ["Brand", "Social"],
+    "description": "A calm editorial post series for the Lukas Ude brand, built from the CI's image language and typography.",
+    "year": "2026",
+    "client": "Lukas Ude",
+    "services": ["Brand content", "Copywriting", "Creative design"],
+    "featured": true,
+    "concept": true,
+    "order": 3,
+
+    "brand": { "name": "Lukas Ude", "initials": "LU", "domain": "lukasude.de" },
+
+    "thumbnail": { "src": "post-idea-to-system.jpg", "alt": "Brand post: 'From idea to system.' over a river at sunset" },
+
+    "objective": "Make the brand idea visible in the feed: nature, craft and systems – calm instead of loud.",
+    "insight": "In a feed full of hype, restraint stands out. Few words, strong typography, real atmosphere.",
+    "approach": [
+        "CI typography: Cormorant Garamond for statements, Manrope for details",
+        "Images from the CI image language: warm light, deep shadows, nature",
+        "One thought per post – short enough to read while scrolling"
+    ],
+
+    "ads": [
+        {
+            "label": "From idea to system",
+            "format": "portrait",
+            "image": { "src": "post-idea-to-system.jpg", "alt": "Brand post: 'From idea to system.' with the Lukas Ude logo" },
+            "hook": "From idea to system.",
+            "primaryText": "Every good campaign starts with an idea.\nIt only grows when there is a system behind it.",
+            "headline": "Marketing · AI · Systems",
+            "cta": "Learn more"
+        },
+        {
+            "label": "Rooted in ideas",
+            "format": "square",
+            "image": { "src": "post-rooted.jpg", "alt": "Brand post: logo and tagline over a misty forest" },
+            "hook": "Rooted in ideas. Built for growth.",
+            "primaryText": "The brand line in one image.",
+            "headline": "Rooted in ideas. Built for growth.",
+            "cta": "Learn more"
+        },
+        {
+            "label": "Clear, not loud",
+            "format": "square",
+            "image": { "src": "post-calm-marketing.jpg", "alt": "Brand post: 'Good marketing is not loud. It is clear.' on ivory" },
+            "hook": "Good marketing is not loud.",
+            "primaryText": "Good marketing is not loud. It is clear.\nOne message, one audience, one next step.",
+            "headline": "Notes on marketing",
+            "cta": "Learn more"
+        }
+    ],
+
+    "hooks": [
+        "From idea to system.",
+        "Good marketing is not loud. It is clear.",
+        "Rooted in ideas. Built for growth."
+    ],
+    "headlines": [
+        "Marketing · AI · Systems",
+        "Notes on marketing"
+    ]
+}

@@ -1,1 +1,59 @@
-<p>stub</p>
+        <!-- =========================================================
+             DESIGN PROJECT TEMPLATE  (one page per design project)
+
+             PURPOSE:
+             Builds /design/<slug>/ for every folder in /content/design/.
+             All text and images come from project.json.
+
+             EDIT HERE:
+             Only the LAYOUT of all design project pages.
+
+             RELATED STYLES:
+             /frontend/styles/pages/project.css
+             /frontend/styles/pages/design.css
+
+             RELATED SCRIPT:
+             /frontend/scripts/modules/lightbox.js (click to enlarge)
+
+             GENERATED PARTS:
+             /frontend/build/renderers/design.js
+        ========================================================= -->
+
+
+        <!-- DESIGN PROJECT - HERO -->
+        <section class="project-hero theme-dark" aria-labelledby="project-heading">
+            <div class="texture-contours" aria-hidden="true"></div>
+            <div class="container project-hero__inner">
+<!-- @render breadcrumbs -->
+                <p class="eyebrow eyebrow--line" data-reveal>Design · {{ project.year }}</p>
+                <h1 class="project-hero__title heading-1" id="project-heading" data-reveal data-reveal-delay="1">{{ project.title }}</h1>
+                <p class="project-hero__intro text-lead" data-reveal data-reveal-delay="2">{{ project.description }}</p>
+                <p class="project-hero__badges" data-reveal data-reveal-delay="3"><!-- @render project-badges --></p>
+                <div data-reveal data-reveal-delay="4">
+<!-- @render design-facts -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DESIGN PROJECT - STORY -->
+        <section class="project-section theme-light section" aria-labelledby="story-heading">
+            <div class="container project-story">
+                <p class="eyebrow eyebrow--line">About the project</p>
+                <h2 class="visually-hidden" id="story-heading">About the project</h2>
+                <div class="prose project-story__text">
+<!-- @render design-body -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DESIGN PROJECT - GALLERY -->
+        <section class="project-section theme-dark section" aria-label="Gallery">
+            <div class="container">
+<!-- @render design-gallery -->
+            </div>
+        </section>
+
+<!-- @render project-next -->
+        <!-- ================= END DESIGN PROJECT TEMPLATE ================= -->

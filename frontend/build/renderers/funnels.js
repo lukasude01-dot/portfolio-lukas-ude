@@ -113,7 +113,7 @@ export const funnelRenderers = {
                     </figure>
                     <div class="copy-concept__columns">
                         <div>
-                            <h3 class="label">Hooks tested in the concept</h3>
+                            <h3 class="label">Hook options</h3>
                             ${list(copy.hooks)}
                         </div>
                         <div>

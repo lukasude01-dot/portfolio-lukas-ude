@@ -1,0 +1,20 @@
+{
+    "_help": "AI WORKFLOW BLUEPRINT (shown on /ai/).",
+
+    "title": "Ad Copy Variation System",
+    "category": ["Copywriting", "Creative"],
+    "description": "A structured way to develop and organise hook and headline variations for testing.",
+    "year": "2026",
+    "featured": false,
+    "concept": true,
+    "order": 3,
+
+    "steps": [
+        { "label": "Insight", "role": "Human", "text": "One customer insight and one motive per test." },
+        { "label": "Variations", "role": "AI", "text": "AI generates hook and headline options within clear rules for tone and length." },
+        { "label": "Selection", "role": "Human", "text": "The strongest, most honest options are chosen and refined." },
+        { "label": "Library", "role": "System", "text": "Variations are stored with motive, format and status – ready for the next campaign." }
+    ],
+    "outputs": ["Hook library", "Test plan per motive"],
+    "humanInLoop": "No copy goes live without human selection and editing."
+}

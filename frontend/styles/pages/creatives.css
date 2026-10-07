@@ -1,1 +1,226 @@
-/* placeholder */
+/* ==========================================================
+   CREATIVES PAGE + CREATIVE CASE PARTS
+   HTML:   /frontend/pages/creatives.html
+           /frontend/build/renderers/creatives.js
+   SCRIPT: /frontend/scripts/modules/creative-views.js
+========================================================== */
+
+
+/* CREATIVES - GRID */
+
+.creatives-grid {
+    display: grid;
+    gap: var(--spacing-xl) var(--spacing-large);
+    align-items: start;
+}
+
+@media (min-width: 700px) {
+    .creatives-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1100px) {
+    .creatives-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+
+/* CREATIVE CARD - shows ONE of the three views
+   (data-view on the grid: creative | copy | combined) */
+
+.creative-card {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+.creative-card__view {
+    display: none;
+}
+
+[data-view="creative"] .creative-card__view--creative,
+[data-view="copy"] .creative-card__view--copy,
+[data-view="combined"] .creative-card__view--combined {
+    display: block;
+    animation: filter-enter var(--duration-slow) var(--ease-cinematic);
+}
+
+.creative-card__image {
+    overflow: hidden;
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-surface);
+}
+
+.creative-card__image picture,
+.creative-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-format--square { aspect-ratio: 1 / 1; }
+.ad-format--portrait { aspect-ratio: 4 / 5; }
+.ad-format--story { aspect-ratio: 9 / 16; }
+
+.creative-card .ad-mockup {
+    max-width: none;
+}
+
+.creative-card__info {
+    display: grid;
+    gap: 0.35rem;
+    justify-items: start;
+}
+
+.creative-card__info .label {
+    color: var(--color-accent);
+}
+
+.creative-card__title {
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+.creative-card__title a:hover {
+    color: var(--color-accent);
+}
+
+
+/* COPY CARD (copy view + case pages) */
+
+.copy-card {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-surface);
+}
+
+.copy-card__row {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.copy-card__row:last-child {
+    border-bottom: 0;
+}
+
+.copy-card__row .label {
+    color: var(--color-text-muted);
+}
+
+.copy-card__hook {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.2;
+}
+
+.copy-card__primary {
+    display: grid;
+    gap: 0.5em;
+}
+
+.copy-card__cta {
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+
+/* CREATIVE CASE - VARIATIONS */
+
+.variation-list {
+    display: grid;
+    gap: var(--spacing-2xl);
+}
+
+.variation {
+    display: grid;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.variation__copy {
+    display: grid;
+    gap: var(--spacing-small);
+}
+
+@media (min-width: 900px) {
+    .variation {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+        gap: var(--spacing-2xl);
+    }
+
+    .variation:nth-child(even) .variation__mockup { order: 2; }
+}
+
+
+/* CREATIVE CASE - HOOK LIBRARY */
+
+.hook-library {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.hook-library h3 {
+    margin-bottom: var(--spacing-small);
+    color: var(--color-accent);
+}
+
+.hook-library__list {
+    counter-reset: hook;
+    border-top: 1px solid var(--color-line);
+}
+
+.hook-library__list li {
+    counter-increment: hook;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--color-line);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+}
+
+.hook-library__list li::before {
+    content: counter(hook, decimal-leading-zero);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    padding-top: 0.5em;
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 900px) {
+    .hook-library { grid-template-columns: 1fr 1fr; gap: var(--spacing-2xl); }
+}
+
+
+/* PRINCIPLES LIST (Creatives + AI pages) */
+
+.principles-list {
+    display: grid;
+    gap: var(--spacing-large);
+}
+
+.principles-list li {
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+    padding-top: var(--spacing-small);
+    border-top: 1px solid var(--color-line);
+}
+
+.principles-list .label {
+    color: var(--color-accent);
+}
+
+.principles-list h3 {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+@media (min-width: 800px) {
+    .principles-list { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+}
+
+/* ==========================================================
+   END CREATIVES PAGE
+========================================================== */

@@ -1,0 +1,15 @@
+{
+    "name": "lukas-ude-backend",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Backend for lukasude: contact API, security headers, optional static hosting of the built website. No runtime dependencies.",
+    "type": "module",
+    "engines": {
+        "node": ">=22.9"
+    },
+    "scripts": {
+        "start": "node --env-file-if-exists=.env src/server.js",
+        "dev": "node --env-file-if-exists=.env --watch-path=src --watch-path=../shared src/server.js",
+        "test": "node --test test/*.test.js"
+    }
+}

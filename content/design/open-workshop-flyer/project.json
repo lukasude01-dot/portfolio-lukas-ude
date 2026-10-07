@@ -1,0 +1,26 @@
+{
+    "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design.",
+
+    "title": "Open Workshop Flyer",
+    "category": ["Print"],
+    "description": "A two-sided event flyer for a carpentry workshop that doubles as a recruiting touchpoint.",
+    "year": "2026",
+    "client": "Tischlerei Nordholz (fictional brand)",
+    "services": ["Flyer design", "Copywriting"],
+    "featured": false,
+    "example": true,
+    "order": 4,
+    "layout": "standard",
+
+    "thumbnail": { "src": "flyer-front.jpg", "alt": "Flyer front: 'Tag der offenen Werkstatt.' on linen" },
+
+    "body": [
+        "The front sells the event in three seconds: what, when, where. The back carries the programme – and closes with the recruiting message, linked to the online application funnel.",
+        "Same visual language as the recruiting ads and landing page, so every touchpoint feels like one brand."
+    ],
+
+    "images": [
+        { "src": "flyer-front.jpg", "alt": "Flyer front with headline, wood texture and event details", "caption": "Front.", "size": "half" },
+        { "src": "flyer-back.jpg", "alt": "Flyer back with programme and recruiting message", "caption": "Back.", "size": "half" }
+    ]
+}

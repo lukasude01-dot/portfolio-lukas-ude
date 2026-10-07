@@ -1,0 +1,20 @@
+{
+    "_help": "TEMPLATE – copy this folder, rename it, add your images next to this file. Folders starting with _ are ignored. See /docs/CONTENT-GUIDE.md -> Design.",
+
+    "title": "[ADD TITLE]",
+    "category": ["Print"],
+    "description": "[ADD ONE-SENTENCE DESCRIPTION]",
+    "year": "[ADD YEAR]",
+    "client": "[ADD CLIENT]",
+    "services": ["[ADD SERVICE]"],
+    "featured": false,
+    "order": 10,
+    "layout": "standard",
+    "status": "draft",
+
+    "thumbnail": { "src": "image-1.jpg", "alt": "[DESCRIBE THE IMAGE]" },
+    "body": ["[ADD PARAGRAPH]"],
+    "images": [
+        { "src": "image-1.jpg", "alt": "[DESCRIBE THE IMAGE]", "caption": "", "size": "full" }
+    ]
+}

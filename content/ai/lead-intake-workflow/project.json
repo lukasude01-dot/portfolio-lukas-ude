@@ -1,0 +1,21 @@
+{
+    "_help": "AI WORKFLOW BLUEPRINT (shown on /ai/). Each step: label, role (Human | AI | System), text. See /docs/CONTENT-GUIDE.md -> AI.",
+
+    "title": "Lead Intake & Follow-up",
+    "category": ["Automation"],
+    "description": "From form submission to a prepared first conversation – without anything getting lost.",
+    "year": "2026",
+    "featured": true,
+    "concept": true,
+    "order": 1,
+
+    "steps": [
+        { "label": "Capture", "role": "System", "text": "The funnel form sends answers to a central inbox or CRM – validated and in one structure." },
+        { "label": "Summarise", "role": "AI", "text": "AI turns the answers into a short brief: need, timing, open questions." },
+        { "label": "Route", "role": "System", "text": "Rules assign the lead to the right person and create a task with a due date." },
+        { "label": "Review", "role": "Human", "text": "A person checks the brief and decides on the next step." },
+        { "label": "Follow up", "role": "System", "text": "Confirmation and reminder go out on time – personal, not generic." }
+    ],
+    "outputs": ["Structured lead record", "Short brief per enquiry", "Follow-up task"],
+    "humanInLoop": "Every lead is reviewed by a person before the first reply."
+}

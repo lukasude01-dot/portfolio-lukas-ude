@@ -1,1 +1,218 @@
-/* placeholder */
+/* ==========================================================
+   ABOUT PAGE
+   HTML: /frontend/pages/about.html
+========================================================== */
+
+
+/* ABOUT - HERO (light, with real portrait) */
+
+.about-hero {
+    padding-top: calc(var(--header-height) + var(--spacing-xl));
+    padding-bottom: var(--spacing-section);
+}
+
+.about-hero__inner {
+    display: grid;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.about-hero__content {
+    display: grid;
+    gap: var(--spacing-medium);
+    justify-items: start;
+}
+
+.about-hero__content h1 em {
+    display: block;
+}
+
+.about-hero__text {
+    display: grid;
+    gap: var(--spacing-small);
+    max-width: 38rem;
+}
+
+.about-hero__portrait {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+}
+
+.about-hero__portrait picture,
+.about-hero__portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+
+/* Soft vignette – the photo itself is not changed */
+.about-hero__portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 70% at 50% 35%, transparent 50%, rgba(9, 10, 9, 0.35));
+    pointer-events: none;
+}
+
+@media (min-width: 900px) {
+    .about-hero__inner {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        gap: var(--spacing-2xl);
+    }
+}
+
+
+/* ABOUT - VALUES */
+
+.about-values__layout {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.about-values__list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--color-line);
+}
+
+.about-values__list li {
+    display: grid;
+    gap: 0.35rem;
+    padding-block: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.about-values__list h3 {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+.about-values__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-small);
+    align-items: start;
+}
+
+.about-values__images figure {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    aspect-ratio: 3 / 4;
+}
+
+.about-values__images figure:last-child {
+    margin-top: var(--spacing-xl);
+}
+
+.about-values__images picture,
+.about-values__images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 900px) {
+    .about-values__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-2xl);
+    }
+}
+
+
+/* ABOUT - CERTIFICATES */
+
+.about-certificates {
+    display: grid;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-line);
+}
+
+.about-certificates > .label {
+    color: var(--color-accent);
+}
+
+.certificate-list {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 700px) {
+    .certificate-list { grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+}
+
+.certificate {
+    display: grid;
+    gap: 0.3rem;
+    padding: var(--spacing-medium);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+}
+
+.certificate__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+}
+
+
+/* ABOUT - SKILLS GRID */
+
+.skills-grid {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 700px) {
+    .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1100px) {
+    .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.skill-group {
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+    padding: var(--spacing-large) var(--spacing-medium);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+}
+
+.skill-group__number {
+    color: var(--color-accent);
+}
+
+.skill-group__title {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+.skill-group__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.skill-group__list li {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+    font-size: var(--text-sm);
+}
+
+.skill-group__tools {
+    margin-top: 0.4rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   END ABOUT PAGE
+========================================================== */

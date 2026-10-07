@@ -1,1 +1,72 @@
-/* placeholder */
+/* ==========================================================
+   CONTACT PAGE
+   HTML: /frontend/pages/contact.html
+========================================================== */
+
+.contact {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(var(--header-height) + var(--spacing-2xl));
+    padding-bottom: var(--spacing-section);
+}
+
+.contact__inner {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-2xl);
+}
+
+.contact__intro {
+    display: grid;
+    gap: var(--spacing-medium);
+    align-content: start;
+}
+
+.contact__intro h1 em {
+    display: block;
+}
+
+.contact__details {
+    margin-top: var(--spacing-small);
+}
+
+.contact-details {
+    display: grid;
+    gap: var(--spacing-small);
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid var(--color-line);
+}
+
+.contact-details__item {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: var(--spacing-small);
+    align-items: baseline;
+}
+
+.contact-details__item dt {
+    color: var(--color-accent);
+}
+
+.contact__qr {
+    margin-top: var(--spacing-small);
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid var(--color-line);
+}
+
+.contact__form {
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius-large);
+    background-color: rgba(17, 19, 17, 0.85);
+}
+
+@media (min-width: 1000px) {
+    .contact__inner {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+}
+
+/* ==========================================================
+   END CONTACT PAGE
+========================================================== */

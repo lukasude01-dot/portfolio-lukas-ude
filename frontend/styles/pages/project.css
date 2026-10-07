@@ -1,1 +1,159 @@
-/* placeholder */
+/* ==========================================================
+   PROJECT PAGES
+   Shared layout of funnel, creative and design case pages.
+   HTML: /frontend/templates/*-project.html
+========================================================== */
+
+
+/* PROJECT - HERO */
+
+.project-hero {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(var(--header-height) + var(--spacing-xl));
+    padding-bottom: var(--spacing-xl);
+}
+
+.project-hero__inner {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+.project-hero__title {
+    max-width: 20ch;
+}
+
+.project-hero__intro {
+    max-width: 44rem;
+}
+
+.project-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+.project-hero__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-hero .project-facts {
+    margin-top: var(--spacing-small);
+}
+
+.project-hero .notice {
+    margin-top: var(--spacing-medium);
+}
+
+
+/* PROJECT - PREVIEW */
+
+.project-preview__hint {
+    margin-top: var(--spacing-medium);
+    text-align: right;
+}
+
+
+/* PROJECT - TEXT COLUMNS */
+
+.project-columns {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.project-columns > div {
+    display: grid;
+    gap: var(--spacing-small);
+    align-content: start;
+}
+
+.project-columns--spaced {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-line);
+}
+
+@media (min-width: 900px) {
+    .project-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-2xl);
+    }
+
+    .project-columns--three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--spacing-xl);
+    }
+}
+
+.project-section__subheader {
+    margin-top: var(--spacing-2xl);
+}
+
+.project-story {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+.project-story__text {
+    font-size: var(--text-md);
+}
+
+
+/* PROJECT - "TRY THE DEMO" BAND */
+
+.project-demo-cta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+
+/* PROJECT - NEXT PROJECT */
+
+.project-next {
+    border-top: 1px solid var(--color-line);
+}
+
+.project-next__inner {
+    display: grid;
+    gap: var(--spacing-medium);
+    padding-block: var(--spacing-xl);
+}
+
+.project-next__link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 0.5rem var(--spacing-medium);
+}
+
+.project-next__link .eyebrow {
+    grid-column: 1 / -1;
+}
+
+.project-next__title {
+    transition: color var(--duration-medium) var(--ease-standard);
+}
+
+.project-next__arrow {
+    font-size: var(--text-2xl);
+    transition: transform var(--duration-slow) var(--ease-cinematic);
+}
+
+.project-next__link:hover .project-next__title {
+    color: var(--color-accent);
+}
+
+.project-next__link:hover .project-next__arrow {
+    transform: translateX(0.75rem);
+}
+
+/* ==========================================================
+   END PROJECT PAGES
+========================================================== */

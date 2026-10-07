@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- =========================================================
+     FUNNEL DEMO: LEAD GENERATION  (fictional brand "Ofenhaus Alder")
+
+     PURPOSE:
+     A lead-generation quiz funnel for a stove retailer:
+     5 short questions -> contact -> personalised recommendation.
+     It is a PORTFOLIO DEMONSTRATION: the brand is fictional and
+     no data is sent anywhere (see demos/shared/demo-funnel.js).
+
+     EDIT HERE:
+     - Texts directly in this file (German, like a real client page)
+     - Colours: /frontend/demos/lead-generation-demo/theme.css
+     - Case study text: /content/funnels/lead-generation-demo/project.json
+
+     RELATED FILES:
+     /frontend/demos/shared/demo-base.css
+     /frontend/demos/shared/demo-funnel.js
+========================================================= -->
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcher Kaminofen passt zu dir? – Demo-Funnel</title>
+    <meta name="description" content="Portfolio-Demo: Lead-Generation-Funnel für einen fiktiven Kaminofen-Fachhandel.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/demos/shared/demo-base.css">
+    <link rel="stylesheet" href="/demos/lead-generation-demo/theme.css">
+    <script src="/demos/shared/demo-funnel.js" defer></script>
+</head>
+<body>
+
+<!-- @include demo-bar -->
+
+    <!-- HEADER -->
+    <header class="oa-header">
+        <div class="demo-container oa-header__inner">
+            <a class="oa-logo" href="#top">Ofenhaus <em>Alder</em></a>
+            <span class="oa-header__meta">Kaminöfen · Beratung · Montage</span>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO + QUIZ -->
+        <section class="oa-hero" data-hero>
+            <div class="demo-container oa-hero__inner">
+                <div class="oa-hero__content">
+                    <p class="oa-eyebrow">Kostenloser Ofen-Check · 2 Minuten</p>
+                    <h1 class="oa-hero__title">Welcher Kaminofen passt wirklich zu deinem Zuhause?</h1>
+                    <p class="oa-hero__text">Fünf kurze Fragen – danach bekommst du eine ehrliche Empfehlung für Leistung, Bauart und nächste Schritte. Unverbindlich.</p>
+                    <ul class="oa-points" role="list">
+                        <li><strong>Passende Leistung</strong> statt überdimensioniertem Ofen</li>
+                        <li><strong>Klare nächste Schritte</strong> – vom Schornsteinfeger bis zur Montage</li>
+                        <li><strong>Persönliche Beratung</strong> nur, wenn du sie möchtest</li>
+                    </ul>
+                </div>
+
+                <div data-form-section id="ofen-check">
+                    <form class="demo-form oa-form" data-demo-funnel novalidate>
+                        <div class="demo-form__progress" data-progress>
+                            <span data-progress-label>Schritt 1 von 5</span>
+                            <div class="demo-form__bar"><span data-progress-bar></span></div>
+                        </div>
+
+                        <fieldset class="demo-step" data-step>
+                            <legend class="demo-step__question" tabindex="-1">Wo soll der Ofen stehen?</legend>
+                            <div class="demo-options">
+                                <div class="demo-option"><input type="radio" name="wohnen" id="w1" value="haus"><label for="w1">Im eigenen Haus</label></div>
+                                <div class="demo-option"><input type="radio" name="wohnen" id="w2" value="wohnung"><label for="w2">In einer Eigentumswohnung</label></div>
+                                <div class="demo-option"><input type="radio" name="wohnen" id="w3" value="neubau"><label for="w3">Im Neubau (noch in Planung)</label></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="demo-step" data-step>
+                            <legend class="demo-step__question" tabindex="-1">Wie groß ist der Raum?</legend>
+                            <div class="demo-options">
+                                <div class="demo-option"><input type="radio" name="raum" id="r1" value="klein"><label for="r1">Bis 30 m²</label></div>
+                                <div class="demo-option"><input type="radio" name="raum" id="r2" value="mittel"><label for="r2">30–60 m²</label></div>
+                                <div class="demo-option"><input type="radio" name="raum" id="r3" value="gross"><label for="r3">Über 60 m² / offener Wohnbereich</label></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="demo-step" data-step>
+                            <legend class="demo-step__question" tabindex="-1">Was ist dir am wichtigsten?</legend>
+                            <div class="demo-options">
+                                <div class="demo-option"><input type="radio" name="ziel" id="z1" value="heizkosten"><label for="z1">Heizkosten senken</label></div>
+                                <div class="demo-option"><input type="radio" name="ziel" id="z2" value="atmosphaere"><label for="z2">Gemütliche Atmosphäre</label></div>
+                                <div class="demo-option"><input type="radio" name="ziel" id="z3" value="design"><label for="z3">Design, das zum Raum passt</label></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="demo-step" data-step>
+                            <legend class="demo-step__question" tabindex="-1">Wann möchtest du den Ofen nutzen?</legend>
+                            <div class="demo-options">
+                                <div class="demo-option"><input type="radio" name="zeit" id="t1" value="winter"><label for="t1">Noch diesen Winter</label></div>
+                                <div class="demo-option"><input type="radio" name="zeit" id="t2" value="jahr"><label for="t2">Innerhalb eines Jahres</label></div>
+                                <div class="demo-option"><input type="radio" name="zeit" id="t3" value="info"><label for="t3">Ich informiere mich erst</label></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="demo-step" data-step data-step-contact>
+                            <legend class="demo-step__question" tabindex="-1">Wohin dürfen wir deine Empfehlung schicken?</legend>
+                            <div class="demo-field"><label for="oa-name">Vorname</label><input id="oa-name" name="name" type="text" autocomplete="given-name" required></div>
+                            <div class="demo-field"><label for="oa-email">E-Mail</label><input id="oa-email" name="email" type="email" autocomplete="email" required></div>
+                            <div class="demo-field"><label for="oa-plz">Postleitzahl</label><input id="oa-plz" name="plz" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
+                            <div class="demo-consent"><input id="oa-consent" name="consent" type="checkbox" required><label for="oa-consent">Ich bin einverstanden, dass meine Angaben zur Beantwortung genutzt werden. (Demo – es wird nichts gespeichert.)</label></div>
+                        </fieldset>
+
+                        <div class="demo-done" data-done hidden>
+                            <div class="demo-done__icon" aria-hidden="true">✓</div>
+                            <h3 tabindex="-1">Deine Empfehlung, <span data-answer="name"></span></h3>
+                            <p data-show-if="raum=klein"><strong>Kompakter Kaminofen, ca. 4–6 kW.</strong> Für kleinere Räume reicht wenig Leistung – so wird es gemütlich statt zu heiß.</p>
+                            <p data-show-if="raum=mittel"><strong>Kaminofen mit ca. 6–8 kW.</strong> Ideal für Wohnzimmer dieser Größe, gerne mit Speichersteinen für lange Wärme.</p>
+                            <p data-show-if="raum=gross"><strong>Wasserführender Ofen oder 8–10 kW mit Speichermasse.</strong> Für offene Bereiche lohnt sich die Einbindung ins Heizsystem.</p>
+                            <p data-show-if="wohnen=wohnung">Für Wohnungen klären wir vorab die Zustimmung der Eigentümergemeinschaft und den Schornsteinanschluss.</p>
+                            <p>Nächster Schritt: Wir senden dir die Empfehlung per E-Mail und bieten dir optional einen Vor-Ort-Termin an.</p>
+                            <p class="demo-done__badge">Demo: Es wurden keine Daten gesendet oder gespeichert.</p>
+                            <p><button class="demo-form__back" type="button" data-restart>↺ Demo neu starten</button></p>
+                        </div>
+
+                        <p class="demo-form__error" role="alert" data-error></p>
+
+                        <div class="demo-form__nav" data-nav>
+                            <button class="demo-form__back" type="button" data-back>← Zurück</button>
+                            <button class="demo-button" type="button" data-next data-label="Weiter" data-final-label="Empfehlung anzeigen">Weiter</button>
+                        </div>
+                        <p class="demo-form__note">Unverbindlich · Keine Weitergabe an Dritte</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY -->
+        <section class="oa-section">
+            <div class="demo-container">
+                <h2 class="oa-heading">Warum erst fragen, dann verkaufen?</h2>
+                <div class="oa-why">
+                    <article><h3>Zu viel Leistung ist das häufigste Problem.</h3><p>Ein zu großer Ofen läuft gedrosselt, rußt und wird selten genutzt. Die richtige Größe beginnt mit dem Raum.</p></article>
+                    <article><h3>Die Technik hängt vom Haus ab.</h3><p>Schornstein, Zuluft, Bodenplatte: Wir klären früh, was bei dir möglich ist.</p></article>
+                    <article><h3>Beratung ohne Druck.</h3><p>Du entscheidest, ob du nach der Empfehlung mit uns sprechen möchtest.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="oa-section oa-section--light">
+            <div class="demo-container oa-faq">
+                <h2 class="oa-heading">Häufige Fragen</h2>
+                <div class="demo-faq">
+                    <details><summary>Ist der Ofen-Check wirklich kostenlos?</summary><p>Ja. Du bekommst die Empfehlung ohne Verpflichtung.</p></details>
+                    <details><summary>Brauche ich einen Schornstein?</summary><p>In den meisten Fällen ja. Wir prüfen gemeinsam, ob ein vorhandener Zug genutzt werden kann.</p></details>
+                    <details><summary>Wie schnell geht die Montage?</summary><p>Das hängt von Ofen und Schornsteinfeger ab – den Ablauf erklären wir im Gespräch.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="oa-footer">
+        <div class="demo-container">
+            <p>Ofenhaus Alder ist eine fiktive Marke – erstellt als Portfolio-Demonstration.</p>
+        </div>
+    </footer>
+
+    <div class="demo-sticky-cta" data-sticky-cta>
+        <a class="demo-button" href="#ofen-check">Kostenlosen Ofen-Check starten →</a>
+    </div>
+
+</body>
+</html>

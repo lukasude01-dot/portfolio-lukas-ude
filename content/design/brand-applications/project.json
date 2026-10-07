@@ -1,0 +1,54 @@
+{
+    "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design.",
+    "seoTitle": "Brand Applications",
+    "title": "Brand Applications – Lukas Ude",
+    "category": [
+        "Branding",
+        "Print"
+    ],
+    "description": "The logo system applied to print and merchandise: business cards, embossing, cap and shirt.",
+    "year": "2026",
+    "client": "Lukas Ude",
+    "services": [
+        "Business cards",
+        "Merchandise",
+        "Print production files"
+    ],
+    "featured": false,
+    "order": 2,
+    "layout": "wide",
+    "thumbnail": {
+        "src": "application-business-cards.jpg",
+        "alt": "Black business cards with the Lukas Ude logo and wordmark on dark stone"
+    },
+    "body": [
+        "A brand only becomes real when it leaves the screen. The applications test the logo where it has to work hardest: small, embossed, embroidered and on textured material.",
+        "The monochrome logo and generous clear space from the CI keep every application calm and recognisable."
+    ],
+    "images": [
+        {
+            "src": "application-business-cards.jpg",
+            "alt": "Black business cards with the logo and wordmark",
+            "caption": "Business cards.",
+            "size": "half"
+        },
+        {
+            "src": "application-emboss.jpg",
+            "alt": "Logo embossed into dark leather",
+            "caption": "Embossing.",
+            "size": "half"
+        },
+        {
+            "src": "application-cap.jpg",
+            "alt": "Black cap with embroidered logo",
+            "caption": "Merchandise – cap.",
+            "size": "half"
+        },
+        {
+            "src": "application-shirt.jpg",
+            "alt": "Black T-shirt with a small chest logo",
+            "caption": "Merchandise – shirt.",
+            "size": "half"
+        }
+    ]
+}

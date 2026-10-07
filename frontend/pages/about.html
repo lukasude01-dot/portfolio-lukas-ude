@@ -1,0 +1,152 @@
+---
+# PAGE SETTINGS - ABOUT
+title: About
+description: About Lukas Ude – marketing, copy, design, funnels, AI and systems. Journey, skills and the way I work.
+path: /about/
+bodyClass: page-about
+headerTheme: light
+---
+
+        <!-- =========================================================
+             ABOUT HERO
+
+             PURPOSE:
+             Personal introduction with the real portrait.
+
+             EDIT HERE:
+             - Headline ("EDIT: ABOUT HEADLINE")
+             - Introduction ("EDIT: ABOUT INTRODUCTION")
+             - Portrait ("EDIT: ABOUT IMAGE")
+
+             RELATED STYLES:
+             /frontend/styles/pages/about.css
+        ========================================================= -->
+        <section class="about-hero theme-light" aria-labelledby="about-heading">
+            <div class="container about-hero__inner">
+                <div class="about-hero__content">
+                    <p class="eyebrow eyebrow--line" data-reveal>About Lukas Ude</p>
+                    <!-- EDIT: ABOUT HEADLINE -->
+                    <h1 class="heading-1" id="about-heading" data-reveal data-reveal-delay="1">Ideas with roots.<em class="heading-accent">Work with structure.</em></h1>
+                    <!-- EDIT: ABOUT INTRODUCTION -->
+                    <div class="about-hero__text" data-reveal data-reveal-delay="2">
+                        <p class="text-lead">
+                            I'm Lukas – I work at the point where marketing ideas become something that
+                            actually runs: the message, the creative, the landing page and the process behind it.
+                        </p>
+                        <p class="text-muted">
+                            Marketing, copywriting, design, funnels, AI and automation are not separate
+                            services for me, but parts of one system. I like calm work, clear words and
+                            details that hold up. Nature is where I get perspective; systems are how I
+                            turn it into progress.
+                        </p>
+                        <p class="text-muted"><mark class="placeholder">[ADD PERSONAL DETAIL – e.g. where you are based, what drives you]</mark></p>
+                    </div>
+                    <div class="button-row" data-reveal data-reveal-delay="3">
+                        <a class="button button--primary" href="/contact/">Work with me<span class="button__arrow" aria-hidden="true">→</span></a>
+                        <a class="button button--ghost" href="#journey">My journey</a>
+                    </div>
+                </div>
+
+                <!-- EDIT: ABOUT IMAGE (your real photo) -->
+                <figure class="about-hero__portrait" data-reveal="mask">
+                    <img src="/assets/images/portrait/lukas-ude-portrait.jpg"
+                         alt="Lukas Ude, smiling, in a black T-shirt"
+                         sizes="(min-width: 900px) 38vw, 90vw"
+                         loading="eager" data-responsive>
+                </figure>
+            </div>
+        </section>
+        <!-- ================= END ABOUT HERO ================= -->
+
+
+        <!-- =========================================================
+             ABOUT VALUES  (how I work, from the CI voice)
+
+             PURPOSE:
+             Four working principles: calm, direct, precise, purposeful.
+
+             RELATED STYLES:
+             /frontend/styles/pages/about.css
+        ========================================================= -->
+        <section class="about-values theme-dark section" aria-labelledby="about-values-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line" data-reveal>How I work</p>
+                    <h2 class="heading-2" id="about-values-heading" data-reveal data-reveal-delay="1">Calm. Direct. Precise. Purposeful.</h2>
+                </header>
+                <div class="about-values__layout">
+                    <ul class="about-values__list" role="list">
+                        <li data-reveal><h3>Calm</h3><p class="text-muted">Clear thinking first. No hype, no buzzwords, no rushed decisions.</p></li>
+                        <li data-reveal><h3>Direct</h3><p class="text-muted">Honest feedback and messages that say what they mean.</p></li>
+                        <li data-reveal><h3>Precise</h3><p class="text-muted">Details that work on every screen and in every step of the process.</p></li>
+                        <li data-reveal><h3>Purposeful</h3><p class="text-muted">Every element – a word, an image, an automation – has a job to do.</p></li>
+                    </ul>
+                    <div class="about-values__images">
+                        <figure data-reveal="mask"><img src="/assets/images/mood/mood-details.jpg" alt="Fly-fishing reel and map on a wooden table in warm light" sizes="(min-width: 900px) 25vw, 50vw" data-responsive></figure>
+                        <figure data-reveal="mask" data-reveal-delay="2"><img src="/assets/images/mood/mood-brand-moment.jpg" alt="Black mug with the Lukas Ude logo next to handwritten notes" sizes="(min-width: 900px) 25vw, 50vw" data-responsive></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= END ABOUT VALUES ================= -->
+
+
+        <!-- =========================================================
+             TIMELINE  (MY JOURNEY)
+
+             PURPOSE:
+             Visual CV: education, experience, projects.
+
+             EDIT HERE:
+             Nothing in this file – edit /content/career/timeline.json
+
+             RELATED STYLES:
+             /frontend/styles/components/timeline.css
+
+             GENERATED BY:
+             /frontend/build/renderers/career.js -> "timeline", "certificates"
+        ========================================================= -->
+        <section class="about-journey theme-light section" id="journey" aria-labelledby="journey-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line" data-reveal>My journey</p>
+                    <h2 class="heading-2" id="journey-heading" data-reveal data-reveal-delay="1">How I got here.</h2>
+                </header>
+<!-- @render timeline -->
+
+                <div class="about-certificates">
+                    <h3 class="label">Certificates</h3>
+<!-- @render certificates -->
+                </div>
+            </div>
+        </section>
+        <!-- ================= END TIMELINE ================= -->
+
+
+        <!-- =========================================================
+             SKILLS
+
+             PURPOSE:
+             Skills by discipline.
+
+             EDIT HERE:
+             Nothing in this file – edit /content/career/skills.json
+
+             RELATED STYLES:
+             /frontend/styles/pages/about.css
+
+             GENERATED BY:
+             /frontend/build/renderers/career.js -> "skills"
+        ========================================================= -->
+        <section class="about-skills theme-dark section" aria-labelledby="skills-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line" data-reveal>Skills</p>
+                    <h2 class="heading-2" id="skills-heading" data-reveal data-reveal-delay="1">One toolkit. Connected disciplines.</h2>
+                </header>
+<!-- @render skills -->
+            </div>
+        </section>
+        <!-- ================= END SKILLS ================= -->
+
+<!-- @include cta-band -->

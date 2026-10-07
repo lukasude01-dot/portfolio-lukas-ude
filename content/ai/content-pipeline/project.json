@@ -1,0 +1,21 @@
+{
+    "_help": "AI WORKFLOW BLUEPRINT (shown on /ai/).",
+
+    "title": "AI-Supported Content Pipeline",
+    "category": ["Content", "Research"],
+    "description": "Research, structure and first drafts with AI – voice, judgement and final edit stay human.",
+    "year": "2026",
+    "featured": false,
+    "concept": true,
+    "order": 2,
+
+    "steps": [
+        { "label": "Brief", "role": "Human", "text": "Goal, audience and the one message are defined first." },
+        { "label": "Research", "role": "AI", "text": "AI collects questions, objections and angles from sources you provide." },
+        { "label": "Outline", "role": "AI", "text": "A structure is proposed and checked against the brief." },
+        { "label": "Draft & edit", "role": "Human", "text": "Writing and editing in the brand voice – AI suggests, a person decides." },
+        { "label": "Publish", "role": "System", "text": "Scheduled, documented and stored for reuse." }
+    ],
+    "outputs": ["Content brief", "Draft in brand voice", "Reusable research notes"],
+    "humanInLoop": "Facts are checked and every text is edited by a person before publishing."
+}

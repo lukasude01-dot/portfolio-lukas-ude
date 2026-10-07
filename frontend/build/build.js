@@ -96,6 +96,9 @@ async function loadSiteConfig() {
     site.contactTokenUrl = `${site.apiOrigin}${site.contactForm.tokenEndpoint}`;
     site.year = new Date().getFullYear();
 
+    if (site.url.includes("localhost")) log.warn("SITE CONFIG", `site.url is "${site.url}" (local example). Set your real domain before going live – canonical URLs, sitemap and QR code use it.`);
+    if (site.email.endsWith("@example.com")) log.warn("SITE CONFIG", "site.email is still the example address.");
+    if (site.social.some((profile) => profile.url.includes("/example"))) log.warn("SITE CONFIG", "site.social still contains example links.");
     if (!site.email) log.warn("SITE CONFIG", "site.email is empty – no public e-mail address is shown on the contact page.");
     if (!site.social.some((profile) => profile.url)) log.warn("SITE CONFIG", "No social links set in site.social (e.g. LinkedIn).");
     return site;
@@ -163,6 +166,9 @@ async function buildPages(site, content) {
         const name = file.replace(/\.html$/, "");
         const defaultPath = name === "index" ? "/" : `/${name}/`;
         const page = createPageData(site, data, { path: defaultPath });
+
+        const placeholders = body.match(/\[ADD [^\]]+\]/g) || [];
+        if (placeholders.length) log.warn("PLACEHOLDERS", `pages/${file}: ${placeholders.length} placeholder(s) still to fill in.`);
 
         const htmlOutput = await renderPage({ site, content, page, body, sourceName: `pages/${file}` });
         writeFile(outputPathFor(page.path), htmlOutput);

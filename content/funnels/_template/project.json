@@ -1,0 +1,33 @@
+{
+    "_help": "TEMPLATE – copy this whole folder, rename it (the folder name becomes the URL), then fill in the fields. Folders starting with _ are ignored by the build. See /docs/CONTENT-GUIDE.md -> Funnels.",
+
+    "title": "[ADD TITLE]",
+    "category": ["Recruiting"],
+    "description": "[ADD ONE-SENTENCE DESCRIPTION]",
+    "year": "[ADD YEAR]",
+    "client": "[ADD CLIENT]",
+    "services": ["Funnel strategy", "Copywriting"],
+    "featured": false,
+    "order": 10,
+    "status": "draft",
+
+    "demoPath": "/demos/[ADD-DEMO-FOLDER]/",
+    "demoNotice": "",
+
+    "thumbnail": { "src": "cover.jpg", "alt": "[DESCRIBE THE IMAGE]" },
+
+    "context": "[ADD CONTEXT]",
+    "objective": "[ADD OBJECTIVE]",
+    "objectiveShort": "[ADD SHORT OBJECTIVE]",
+    "audience": ["[ADD TARGET AUDIENCE]"],
+    "strategy": ["[ADD STRATEGY POINT]"],
+    "structure": [
+        { "step": "Ad", "title": "[ADD]", "text": "[ADD]" },
+        { "step": "Landing", "title": "[ADD]", "text": "[ADD]" }
+    ],
+    "copy": { "headline": "[ADD]", "subheadline": "[ADD]", "hooks": ["[ADD]"], "tone": "[ADD]" },
+    "visual": { "palette": [{ "name": "Primary", "hex": "#000000" }], "typography": "[ADD]", "imagery": "[ADD]", "layout": "[ADD]" },
+    "ctaStructure": [{ "role": "Primary", "text": "[ADD]", "where": "[ADD]" }],
+    "journey": [{ "title": "[ADD]", "text": "[ADD]" }],
+    "screenshots": []
+}

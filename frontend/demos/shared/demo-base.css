@@ -1,0 +1,378 @@
+/* ==========================================================
+   DEMO BASE STYLES  (shared by all live funnel demos)
+
+   PURPOSE:
+   Layout, demo bar, multi-step form and FAQ styles that every
+   demo uses. Each demo sets its own brand colours with the
+   variables below in its own theme.css – the demos are client
+   work for (fictional) brands, so they deliberately do NOT use
+   the Lukas Ude design system.
+
+   USED BY: /frontend/demos/<demo>/index.html
+========================================================== */
+
+
+/* DEMO - THEME VARIABLES (overridden in each demo's theme.css) */
+
+:root {
+    --demo-background: #F5F1EA;
+    --demo-surface: #FFFFFF;
+    --demo-ink: #1D1A16;
+    --demo-muted: #5E574D;
+    --demo-line: #DDD5C8;
+    --demo-accent: #B4552A;
+    --demo-accent-ink: #FFFFFF;
+    --demo-dark: #1D1A16;
+    --demo-radius: 10px;
+    --demo-font-display: "Manrope", system-ui, sans-serif;
+    --demo-font-body: "Manrope", system-ui, sans-serif;
+    --demo-width: 1180px;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("/assets/fonts/manrope-variable-latin.woff2") format("woff2");
+    font-weight: 200 800;
+    font-display: swap;
+}
+
+
+/* DEMO - RESET */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+    background: var(--demo-background);
+    color: var(--demo-ink);
+    font-family: var(--demo-font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--demo-accent); outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+.demo-container {
+    width: 100%;
+    max-width: calc(var(--demo-width) + 3rem);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.demo-visually-hidden {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+
+/* DEMO BAR (portfolio notice) */
+
+.demo-bar {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    padding: 0.55rem 1.5rem;
+    background: #090A09;
+    color: #EEEAE0;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.demo-bar__link {
+    color: #C9B48F;
+    text-decoration: none;
+}
+
+.demo-bar__link:hover { text-decoration: underline; }
+
+
+/* DEMO - BUTTONS */
+
+.demo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.6rem;
+    border: 0;
+    border-radius: var(--demo-radius);
+    background: var(--demo-accent);
+    color: var(--demo-accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 200ms ease, filter 200ms ease;
+}
+
+.demo-button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+.demo-button--ghost {
+    background: transparent;
+    color: var(--demo-ink);
+    box-shadow: inset 0 0 0 1px var(--demo-line);
+}
+
+
+/* DEMO - MULTI-STEP FORM (data-demo-funnel) */
+
+.demo-form {
+    position: relative;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border-radius: calc(var(--demo-radius) * 1.6);
+    background: var(--demo-surface);
+    color: var(--demo-ink);
+    box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.45);
+}
+
+.demo-form__progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--demo-muted);
+}
+
+.demo-form__bar {
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--demo-line);
+    overflow: hidden;
+}
+
+.demo-form__bar span {
+    display: block;
+    height: 100%;
+    width: var(--progress, 25%);
+    background: var(--demo-accent);
+    transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-step { border: 0; padding: 0; min-width: 0; }
+.demo-step:not(.is-active) { display: none; }
+.demo-step.is-active { animation: demo-step-in 450ms cubic-bezier(0.22, 1, 0.36, 1); }
+
+@keyframes demo-step-in {
+    from { opacity: 0; transform: translateX(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+.demo-step__question {
+    margin-bottom: 1.25rem;
+    font-family: var(--demo-font-display);
+    font-size: clamp(1.3rem, 1.1rem + 1vw, 1.7rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.demo-options {
+    display: grid;
+    gap: 0.65rem;
+}
+
+@media (min-width: 560px) {
+    .demo-options--grid { grid-template-columns: 1fr 1fr; }
+}
+
+.demo-option { position: relative; }
+
+.demo-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.demo-option label {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-height: 3.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--demo-line);
+    border-radius: var(--demo-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.demo-option label::before {
+    content: "";
+    flex: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1.5px solid var(--demo-line);
+    border-radius: 50%;
+    transition: border 200ms ease;
+}
+
+.demo-option label:hover { border-color: var(--demo-accent); }
+.demo-option input:focus-visible + label { outline: 2px solid var(--demo-accent); outline-offset: 2px; }
+
+.demo-option input:checked + label {
+    border-color: var(--demo-accent);
+    background: color-mix(in srgb, var(--demo-accent) 8%, transparent);
+}
+
+.demo-option input:checked + label::before {
+    border: 5px solid var(--demo-accent);
+}
+
+.demo-field { display: grid; gap: 0.35rem; margin-bottom: 0.9rem; }
+.demo-field label { font-size: 0.85rem; font-weight: 600; }
+
+.demo-field input {
+    min-height: 3.25rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--demo-line);
+    border-radius: var(--demo-radius);
+    background: var(--demo-surface);
+    font-size: 1rem;
+}
+
+.demo-field input:focus { outline: 2px solid var(--demo-accent); outline-offset: 0; border-color: transparent; }
+.demo-field input[aria-invalid="true"] { border-color: #B3261E; }
+
+.demo-consent {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--demo-muted);
+}
+
+.demo-consent input { width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; accent-color: var(--demo-accent); }
+
+.demo-form__error {
+    margin-top: 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #B3261E;
+}
+
+.demo-form__error:empty { display: none; }
+
+.demo-form__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.demo-form__back {
+    border: 0;
+    background: none;
+    color: var(--demo-muted);
+    font-weight: 600;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.demo-form__note {
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: var(--demo-muted);
+}
+
+/* DEMO - FINAL SCREEN */
+
+.demo-done { text-align: left; }
+.demo-done.is-active { animation: demo-step-in 450ms cubic-bezier(0.22, 1, 0.36, 1); }
+
+.demo-done__icon {
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--demo-accent);
+    color: var(--demo-accent-ink);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.demo-done h3 {
+    margin-bottom: 0.6rem;
+    font-family: var(--demo-font-display);
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.demo-done p + p { margin-top: 0.6rem; }
+
+.demo-done__badge {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: var(--demo-background);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--demo-muted);
+}
+
+
+/* DEMO - FAQ */
+
+.demo-faq { display: grid; gap: 0.6rem; }
+
+.demo-faq details {
+    border: 1px solid var(--demo-line);
+    border-radius: var(--demo-radius);
+    background: var(--demo-surface);
+}
+
+.demo-faq summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.demo-faq summary::-webkit-details-marker { display: none; }
+.demo-faq summary::after { content: "+"; color: var(--demo-accent); font-size: 1.25rem; line-height: 1; }
+.demo-faq details[open] summary::after { content: "–"; }
+.demo-faq details p { padding: 0 1.25rem 1.2rem; color: var(--demo-muted); }
+
+
+/* DEMO - STICKY MOBILE CTA */
+
+.demo-sticky-cta {
+    position: fixed;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    z-index: 20;
+    transform: translateY(150%);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-sticky-cta.is-visible { transform: none; }
+.demo-sticky-cta .demo-button { width: 100%; box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 900px) {
+    .demo-sticky-cta { display: none; }
+}
+
+/* ==========================================================
+   END DEMO BASE STYLES
+========================================================== */

@@ -1,1 +1,266 @@
-/* placeholder */
+/* ==========================================================
+   FUNNELS PAGE + FUNNEL CASE PARTS
+   HTML: /frontend/pages/funnels.html
+         /frontend/build/renderers/funnels.js
+========================================================== */
+
+
+/* FUNNELS - LIST (one row per funnel) */
+
+.funnel-list {
+    display: grid;
+    gap: var(--spacing-2xl);
+}
+
+.funnel-item {
+    display: grid;
+    gap: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-line);
+}
+
+.funnel-item__content {
+    display: grid;
+    gap: var(--spacing-medium);
+    align-content: center;
+}
+
+.funnel-item__content .fact-list {
+    padding-block: var(--spacing-small);
+}
+
+.funnel-item__badges {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+    .funnel-item {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: var(--spacing-2xl);
+        align-items: center;
+    }
+
+    /* Alternate sides for rhythm */
+    .funnel-item:nth-child(even) .funnel-item__preview {
+        order: 2;
+    }
+}
+
+
+/* FUNNEL CASE - STEP DIAGRAM (funnel structure) */
+
+.step-diagram {
+    display: grid;
+    gap: var(--spacing-medium);
+    counter-reset: step;
+}
+
+@media (min-width: 800px) {
+    .step-diagram {
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+}
+
+.step-diagram__step {
+    position: relative;
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+    padding: var(--spacing-medium);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+}
+
+/* Connector arrow between steps (desktop) */
+@media (min-width: 800px) {
+    .step-diagram__step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        top: 1.4rem;
+        right: -1.15rem;
+        z-index: 1;
+        color: var(--color-accent);
+    }
+}
+
+.step-diagram__number {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+.step-diagram__label {
+    color: var(--color-text-muted);
+}
+
+.step-diagram__title {
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+.step-diagram__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+
+/* FUNNEL CASE - COPY CONCEPT */
+
+.copy-concept {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.copy-concept__headline {
+    display: grid;
+    gap: var(--spacing-small);
+    padding: var(--spacing-xl) 0;
+    border-block: 1px solid var(--color-line);
+}
+
+.copy-concept__headline blockquote {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.copy-concept__headline figcaption {
+    color: var(--color-accent);
+}
+
+.copy-concept__columns {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.copy-concept__columns h3 {
+    margin-bottom: var(--spacing-small);
+    color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+    .copy-concept__columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* FUNNEL CASE - VISUAL CONCEPT (swatches) */
+
+.visual-concept {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.swatch-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    gap: var(--spacing-small);
+}
+
+.swatch {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.swatch__colour {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+}
+
+.swatch__name {
+    font-weight: 600;
+}
+
+.swatch__hex {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 900px) {
+    .visual-concept {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+
+/* FUNNEL CASE - CTA STRUCTURE */
+
+.cta-structure {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 800px) {
+    .cta-structure {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+}
+
+.cta-structure__item {
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+    padding-top: var(--spacing-small);
+    border-top: 1px solid var(--color-accent);
+}
+
+.cta-structure__item .label {
+    color: var(--color-accent);
+}
+
+.cta-structure__text {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+}
+
+
+/* FUNNEL CASE - USER JOURNEY */
+
+.journey {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--color-line);
+}
+
+.journey__step {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: var(--spacing-small);
+    padding-block: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.journey__number {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.journey__title {
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+
+/* FUNNEL CASE - SCREENSHOTS */
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-xl);
+}
+
+/* ==========================================================
+   END FUNNELS PAGE
+========================================================== */

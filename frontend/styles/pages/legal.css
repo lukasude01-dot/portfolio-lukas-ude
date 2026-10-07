@@ -1,1 +1,50 @@
-/* placeholder */
+/* ==========================================================
+   LEGAL PAGES (Impressum, Datenschutz) + 404 PAGE
+   HTML: /frontend/pages/impressum.html, datenschutz.html, 404.html
+========================================================== */
+
+.legal {
+    min-height: 70vh;
+    padding-top: calc(var(--header-height) + var(--spacing-2xl));
+    padding-bottom: var(--spacing-section);
+}
+
+.legal .heading-1 {
+    margin-block: var(--spacing-small) var(--spacing-large);
+}
+
+.legal__notice {
+    margin-bottom: var(--spacing-xl);
+}
+
+.legal__content h2 {
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+
+/* 404 PAGE */
+
+.not-found {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    overflow: hidden;
+    padding-top: var(--header-height);
+}
+
+.not-found__inner {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-medium);
+    justify-items: start;
+}
+
+.not-found h1 em {
+    display: block;
+}
+
+/* ==========================================================
+   END LEGAL PAGES
+========================================================== */

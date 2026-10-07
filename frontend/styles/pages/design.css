@@ -1,1 +1,171 @@
-/* placeholder */
+/* ==========================================================
+   DESIGN PAGE + DESIGN CASE GALLERY
+   HTML:   /frontend/pages/design.html
+           /frontend/build/renderers/design.js
+   SCRIPT: /frontend/scripts/modules/lightbox.js
+========================================================== */
+
+
+/* DESIGN GRID - editorial grid with different tile sizes
+   ("layout" in project.json: feature | wide | tall | standard) */
+
+.design-grid {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 900px) {
+    .design-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 15rem;
+        grid-auto-flow: dense;
+    }
+
+    .design-tile--feature { grid-column: span 2; grid-row: span 3; }
+    .design-tile--wide { grid-column: span 2; grid-row: span 2; }
+    .design-tile--tall { grid-row: span 3; }
+    .design-tile--standard { grid-row: span 2; }
+}
+
+
+/* DESIGN TILE */
+
+.design-tile {
+    position: relative;
+    min-height: 20rem;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+}
+
+.design-tile__link,
+.design-tile__media,
+.design-tile__media picture,
+.design-tile__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.design-tile__media {
+    position: absolute;
+    inset: 0;
+}
+
+.design-tile__media img {
+    object-fit: cover;
+    transition: transform 1800ms var(--ease-cinematic);
+}
+
+.design-tile__link:hover .design-tile__media img,
+.design-tile__link:focus-visible .design-tile__media img {
+    transform: scale(1.04);
+}
+
+/* Overlay with title (always visible on touch, on hover with mouse) */
+.design-tile__overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: grid;
+    gap: 0.35rem;
+    padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+    background: linear-gradient(0deg, rgba(9, 10, 9, 0.9), transparent);
+    color: var(--color-ivory);
+    transition: opacity var(--duration-medium) var(--ease-standard), transform var(--duration-medium) var(--ease-cinematic);
+}
+
+.design-tile__overlay .label {
+    color: var(--color-brass);
+}
+
+.design-tile__title {
+    font-size: var(--text-xl);
+    font-weight: 400;
+}
+
+.design-tile__badges {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.design-tile__badges .badge {
+    color: var(--color-ivory-muted);
+    border-color: rgba(238, 234, 224, 0.25);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .design-tile__overlay {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    .design-tile:hover .design-tile__overlay,
+    .design-tile:focus-within .design-tile__overlay {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Full-screen preview button */
+.design-tile__quick-view {
+    position: absolute;
+    top: var(--spacing-small);
+    right: var(--spacing-small);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(9, 10, 9, 0.75);
+    color: var(--color-ivory);
+    font-size: 1.1rem;
+    transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.design-tile__quick-view:hover,
+.design-tile__quick-view:focus-visible {
+    background-color: var(--color-brass);
+    color: var(--color-obsidian);
+}
+
+
+/* DESIGN CASE - GALLERY */
+
+.design-gallery {
+    display: grid;
+    gap: var(--spacing-large) var(--spacing-medium);
+}
+
+.design-gallery__item {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.design-gallery__item a {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.design-gallery__item img {
+    width: 100%;
+    transition: transform 1600ms var(--ease-cinematic);
+}
+
+.design-gallery__item a:hover img {
+    transform: scale(1.02);
+}
+
+@media (min-width: 900px) {
+    .design-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .design-gallery__item--full {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================================
+   END DESIGN PAGE
+========================================================== */
