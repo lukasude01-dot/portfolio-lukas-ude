@@ -123,7 +123,10 @@ export async function buildResponsiveImages(pageHtml, { distDir, cacheDir, resol
             widths.push(Math.min(originalWidth, WIDTHS[WIDTHS.length - 1]));
             const uniqueWidths = [...new Set(widths)];
 
-            const fallbackFormat = metadata.hasAlpha ? "png" : "jpeg";
+            // PNG only for images with real transparency (an opaque alpha channel is ignored)
+            // (alpha values of 250+ count as opaque – tiny export artefacts are ignored)
+            const isOpaque = metadata.hasAlpha ? (await sharp(source).stats()).channels[3].min >= 250 : true;
+            const fallbackFormat = isOpaque ? "jpeg" : "png";
             const publicDir = path.posix.dirname(attributes.src);
             const shared = { publicDir, publicUrl: attributes.src, cacheDir, distDir };
 

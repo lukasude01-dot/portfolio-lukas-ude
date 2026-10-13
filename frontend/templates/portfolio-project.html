@@ -1,0 +1,69 @@
+        <!-- =========================================================
+             PORTFOLIO PROJECT TEMPLATE  (one page per portfolio project)
+
+             PURPOSE:
+             Builds /portfolio/<slug>/ for every folder in
+             /content/portfolio/. All text and images come from that
+             folder's project.json.
+
+             STRUCTURE:
+             A. Project header (title, category, status, introduction)
+             B. Main motif – complete and uncropped
+             C. Aufgabenstellung / Gestalterischer Ansatz / Leistungen
+             D. Further motifs (only if the project has several)
+             E. Next project
+             F. Contact CTA
+
+             EDIT HERE:
+             Only the LAYOUT of all portfolio pages.
+
+             RELATED STYLES:
+             /frontend/styles/pages/portfolio.css
+
+             GENERATED PARTS:
+             /frontend/build/renderers/portfolio.js
+        ========================================================= -->
+
+
+        <!-- PORTFOLIO PROJECT - A. HEADER -->
+        <section class="portfolio-project-hero theme-dark" aria-labelledby="project-heading">
+            <div class="container portfolio-project-hero__inner">
+<!-- @render breadcrumbs -->
+                <p class="eyebrow eyebrow--line" data-reveal>{{ project.categories.0 }} · {{ project.projectStatus }}</p>
+                <h1 class="portfolio-project-hero__title heading-1" id="project-heading" data-reveal data-reveal-delay="1">{{ project.title }}</h1>
+                <p class="portfolio-project-hero__intro text-lead" data-reveal data-reveal-delay="2">{{ project.description }}</p>
+                <div data-reveal data-reveal-delay="3">
+<!-- @render portfolio-facts -->
+<!-- @render portfolio-notice -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PORTFOLIO PROJECT - B. MAIN MOTIF -->
+        <section class="portfolio-stage theme-dark" aria-label="Hauptmotiv">
+            <div class="container">
+<!-- @render portfolio-main -->
+            </div>
+        </section>
+
+
+        <!-- PORTFOLIO PROJECT - C. PROJECT DESCRIPTION -->
+        <section class="portfolio-description theme-light section" aria-label="Projektbeschreibung">
+            <div class="container">
+<!-- @render portfolio-brief -->
+            </div>
+        </section>
+
+
+        <!-- PORTFOLIO PROJECT - D. FURTHER MOTIFS -->
+<!-- @render portfolio-gallery -->
+
+
+        <!-- PORTFOLIO PROJECT - E. NEXT PROJECT -->
+<!-- @render portfolio-next -->
+
+
+        <!-- PORTFOLIO PROJECT - F. CONTACT CTA -->
+<!-- @include portfolio-cta -->
+        <!-- ================= END PORTFOLIO PROJECT TEMPLATE ================= -->

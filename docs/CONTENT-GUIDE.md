@@ -4,6 +4,7 @@ All portfolio content lives in `/content`. **One folder = one project.**
 
 ```
 /content
+  /portfolio/<slug>/project.json   + images   ← finished graphic design work (Selected Work)
   /funnels/<slug>/project.json     + images
   /creatives/<slug>/project.json   + images
   /design/<slug>/project.json      + images
@@ -39,6 +40,31 @@ All portfolio content lives in `/content`. **One folder = one project.**
 | `example` | – | `true` = example content (fictional), shown as "Concept" and listed as a build warning |
 | `concept` | – | `true` = your own concept work, shown as "Concept" |
 | `seoTitle`, `seoDescription` | – | override the page title/description in Google |
+
+---
+
+## Portfolio
+
+Folder: `/content/portfolio/<slug>/`. Page: `/portfolio/<slug>/`. Overview: `/portfolio/` ("Selected Work").
+
+For finished graphics (ads, posters, branding). **The graphics are never cropped**, neither in the
+overview nor on the detail page. Put the original files (WebP, JPG or PNG) next to `project.json`.
+The build creates optimised AVIF/WebP/JPEG copies and leaves the originals untouched.
+
+| Field | Meaning |
+|---|---|
+| `projectStatus` | label on the card, e.g. `"Konzeptarbeit"`, `"Eigenprojekt"`, `"Demo-Kampagne"`, `"Kundenprojekt"` |
+| `disclaimer` | note on the detail page, e.g. "Keine offizielle Zusammenarbeit mit Ford." (empty = no note) |
+| `task` | text for **Aufgabenstellung** |
+| `approach` | text for **Gestalterischer Ansatz** |
+| `services` | list for **Leistungen** |
+| `images` | all motifs `{ "src", "alt", "caption" }`. The **first** is the main motif, the others appear under "Weitere Motive" |
+| `thumbnail` | image used in other grids (homepage, /work/) |
+| `layout` | card size on `/portfolio/`: `feature` (large, left), `side` (next to it), `tall` (large vertical), `wide` (broad card showing all motifs), `closing` (full width, all motifs) |
+| `order` | position in the grid (1 = first) |
+
+The asymmetric grid is designed for this order: `feature`, `side`, `tall`, `wide`, `closing`.
+When you add a sixth project, start a new pair, e.g. `feature` + `side` again.
 
 ---
 

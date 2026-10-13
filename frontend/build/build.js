@@ -55,6 +55,7 @@ const includeDrafts = args.has("--drafts");
 
 // Section pages that get one detail page per project
 const DETAIL_TEMPLATES = {
+    portfolio: { template: "portfolio-project.html", parent: { label: "Portfolio", href: "/portfolio/" } },
     funnels: { template: "funnel-project.html", parent: { label: "Funnels", href: "/funnels/" } },
     creatives: { template: "creative-project.html", parent: { label: "Creatives", href: "/creatives/" } },
     design: { template: "design-project.html", parent: { label: "Designarbeiten", href: "/design/" } }

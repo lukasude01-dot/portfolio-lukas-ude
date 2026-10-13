@@ -1,0 +1,34 @@
+{
+    "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
+    "title": "Trout Camp 2027 – Schwedisch-Lappland",
+    "category": [
+        "Outdoor",
+        "Travel",
+        "Advertising"
+    ],
+    "description": "Konzeption einer Reiseanzeige für ein mehrtägiges Fliegenfischer-Erlebnis in Schwedisch-Lappland. Die Gestaltung verbindet authentische Outdoor-Fotografie mit markanter Editorial-Typografie.",
+    "projectStatus": "Konzeptarbeit",
+    "disclaimer": "Konzeptarbeit. Das gezeigte Reiseangebot ist beispielhaft und nicht buchbar.",
+    "services": [
+        "Travel Advertising",
+        "Grafikdesign",
+        "Bildgestaltung",
+        "Informationshierarchie"
+    ],
+    "featured": true,
+    "order": 3,
+    "layout": "tall",
+    "thumbnail": {
+        "src": "trout-camp-2027.webp",
+        "alt": "Reiseanzeige: Fliegenfischer in orangefarbener Jacke im Fluss vor Wald, vertikaler TROUT-Schriftzug, CAMP 2027 und Reisedaten auf hellem Papier"
+    },
+    "task": "Ein mehrtägiges Fliegenfischer-Erlebnis so darstellen, dass Atmosphäre und die wichtigsten Reiseinfos auf einen Blick erfasst werden.",
+    "approach": "Das Format teilt sich in Papier und Natur: links die Fakten – Dauer, Region, Guiding, Helikopterflug, Ort – in klarer Hierarchie, rechts die Fotografie. Der vertikale TROUT-Schriftzug verbindet beide Hälften. Die orangefarbene Jacke des Anglers greift den Buchungs-Button auf.",
+    "images": [
+        {
+            "src": "trout-camp-2027.webp",
+            "alt": "Reiseanzeige: Fliegenfischer in orangefarbener Jacke im Fluss vor Wald, vertikaler TROUT-Schriftzug, CAMP 2027 und Reisedaten auf hellem Papier",
+            "caption": "Hauptmotiv, Hochformat 4:5."
+        }
+    ]
+}

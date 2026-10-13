@@ -1,0 +1,44 @@
+{
+    "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
+    "title": "Lukas Ude – Personal Brand Identity",
+    "category": [
+        "Personal Branding",
+        "Corporate Design",
+        "Editorial"
+    ],
+    "description": "Unterschiedliche visuelle Ansätze für meine persönliche Markenidentität. Die Arbeiten verbinden Portraitfotografie, Naturmotive, experimentelle Typografie und eine konsistente visuelle Markenwelt.",
+    "projectStatus": "Eigenprojekt",
+    "disclaimer": "",
+    "services": [
+        "Personal Branding",
+        "Corporate Design",
+        "Editorial Layout",
+        "Bildkomposition"
+    ],
+    "featured": true,
+    "order": 5,
+    "layout": "closing",
+    "thumbnail": {
+        "src": "personal-branding-lukas.webp",
+        "alt": "Markenmotiv: Portrait von Lukas Ude, links heller Bereich mit Waldtextur, großer vertikaler LUKAS-Schriftzug und Logo"
+    },
+    "task": "Eine persönliche Marke sichtbar machen, die Natur, Ideen und Systeme verbindet – über mehrere Motive hinweg erkennbar, aber nicht gleichförmig.",
+    "approach": "Drei Ansätze mit einer gemeinsamen Basis aus Logo, Slogan und Editorial-Typografie: ein Portrait vor Waldkulisse mit großem „Built for growth“, ein Portrait mit selektiver Unschärfe, das den Blick auf die Augen lenkt, und ein Motiv, in dem ein vertikaler LUKAS-Schriftzug Portrait und Waldtextur verbindet.",
+    "images": [
+        {
+            "src": "personal-branding-wald.webp",
+            "alt": "Portrait von Lukas Ude vor einem Waldweg, großer Schriftzug „Built for growth“ und Logo",
+            "caption": "Motiv 1 – Portrait vor Waldkulisse."
+        },
+        {
+            "src": "personal-branding-fokus.webp",
+            "alt": "Portrait von Lukas Ude mit selektiver Unschärfe, scharf sind nur die Augen, Schriftzug „Built for growth.“ und Logo mit Wortmarke",
+            "caption": "Motiv 2 – Selektive Unschärfe."
+        },
+        {
+            "src": "personal-branding-lukas.webp",
+            "alt": "Markenmotiv: Portrait von Lukas Ude, links heller Bereich mit Waldtextur, großer vertikaler LUKAS-Schriftzug und Logo",
+            "caption": "Motiv 3 – Vertikaler LUKAS-Schriftzug."
+        }
+    ]
+}

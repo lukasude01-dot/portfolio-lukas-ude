@@ -89,7 +89,7 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     navigation: [
-        { label: "Arbeiten", href: "/work/" },
+        { label: "Portfolio", href: "/portfolio/" },
         { label: "Funnels", href: "/funnels/" },
         { label: "Creatives", href: "/creatives/" },
         { label: "Design", href: "/design/" },
@@ -109,7 +109,7 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     cta: {
-        primary: { label: "Meine Arbeiten", href: "/work/" },
+        primary: { label: "Meine Arbeiten", href: "/portfolio/" },
         secondary: { label: "Zusammenarbeiten", href: "/contact/" }
     },
 

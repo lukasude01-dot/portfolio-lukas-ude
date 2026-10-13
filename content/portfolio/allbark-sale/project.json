@@ -1,0 +1,34 @@
+{
+    "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
+    "title": "ALLBARK – Fashion Sale Campaign",
+    "category": [
+        "Fashion",
+        "E-Commerce",
+        "Social Ads"
+    ],
+    "description": "Gestaltung einer aufmerksamkeitsstarken Sale-Anzeige für eine Streetwear-Marke. Die visuelle Konzeption verbindet Produktfotografie, expressive Typografie und eine direkte Verkaufsbotschaft.",
+    "projectStatus": "Konzeptarbeit",
+    "disclaimer": "Konzeptarbeit. Die Rabattaktion ist ein gestalterisches Beispiel.",
+    "services": [
+        "Social Ad Design",
+        "E-Commerce Creative",
+        "Typografie",
+        "CTA-Gestaltung"
+    ],
+    "featured": false,
+    "order": 2,
+    "layout": "side",
+    "thumbnail": {
+        "src": "allbark-sale.webp",
+        "alt": "Sale-Anzeige: Person im grünen ALLBARK-Hoodie von hinten, vertikaler SALE-Schriftzug, orangefarbene 20 % auf alles und der Button „Jetzt shoppen!“"
+    },
+    "task": "Eine Sale-Anzeige für eine Streetwear-Marke, die im Feed sofort als Angebot erkennbar ist und trotzdem den Charakter der Marke zeigt.",
+    "approach": "Das Produkt steht im Mittelpunkt: der Hoodie mit Rückenprint, getragen statt freigestellt. Ein vertikaler SALE-Schriftzug rahmt das Bild, die Rabattbotschaft sitzt in Orange daneben. Der Pinselstrich hinter „Jetzt shoppen!“ bringt die Handschrift der Marke in den Call-to-Action.",
+    "images": [
+        {
+            "src": "allbark-sale.webp",
+            "alt": "Sale-Anzeige: Person im grünen ALLBARK-Hoodie von hinten, vertikaler SALE-Schriftzug, orangefarbene 20 % auf alles und der Button „Jetzt shoppen!“",
+            "caption": "Hauptmotiv, Hochformat 4:5."
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "_help": "TEMPLATE – copy this folder, rename it (the folder name becomes the URL /portfolio/<name>/), add your images and fill in the fields. Folders starting with _ are ignored. PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
+    "title": "[ADD TITLE]",
+    "category": [
+        "[ADD CATEGORY]"
+    ],
+    "description": "[ADD SHORT INTRODUCTION]",
+    "projectStatus": "Konzeptarbeit",
+    "disclaimer": "",
+    "services": [
+        "[ADD SERVICE]"
+    ],
+    "featured": false,
+    "order": 10,
+    "layout": "side",
+    "status": "draft",
+    "thumbnail": {
+        "src": "motiv-1.webp",
+        "alt": "[DESCRIBE THE IMAGE]"
+    },
+    "task": "[ADD AUFGABENSTELLUNG]",
+    "approach": "[ADD GESTALTERISCHER ANSATZ]",
+    "images": [
+        {
+            "src": "motiv-1.webp",
+            "alt": "[DESCRIBE THE IMAGE]",
+            "caption": ""
+        }
+    ]
+}

@@ -169,6 +169,14 @@ Wie Punkt 9 in `content/design/`. Mit `"layout"` bestimmst du die Kachelgröße:
 `feature` (groß), `wide` (breit), `tall` (hoch), `standard`.
 Alle Bilder für die Projektseite stehen in `"images"` (`"size": "full"` oder `"half"`).
 
+## 12b. Portfolio-Projekt (fertige Grafiken) hinzufügen
+
+1. Ordner `content/portfolio/_template` kopieren und umbenennen (z. B. `mein-plakat` → Adresse `/portfolio/mein-plakat/`).
+2. Deine fertigen Grafiken (WebP, JPG oder PNG) in den Ordner legen – unverändert, sie werden **nie beschnitten**.
+3. In `project.json` ausfüllen: Titel, Kategorie, `projectStatus` (z. B. „Konzeptarbeit“, „Eigenprojekt“, „Kundenprojekt“),
+   `task` (Aufgabenstellung), `approach` (Gestalterischer Ansatz), `services` (Leistungen), Bilder mit Bildbeschreibung (`alt`).
+4. `"status": "draft"` auf `"published"` setzen. Mit `"layout"` bestimmst du die Kartengröße (siehe CONTENT-GUIDE → Portfolio).
+
 ## 13. Funnel hinzufügen
 
 1. Projekt wie Punkt 9 in `content/funnels/` anlegen.

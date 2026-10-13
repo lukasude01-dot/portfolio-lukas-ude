@@ -36,6 +36,18 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | ABOUT (teaser) | `styles/sections/about-teaser.css` | `assets/images/mood/` |
 | CTA | `styles/sections/cta.css` | `components/cta-band.html` |
 
+## PORTFOLIO (`/portfolio/`, `/portfolio/<slug>/`)
+
+| Part | File |
+|---|---|
+| Overview page ("Selected Work") | `frontend/pages/portfolio.html` |
+| Project page layout | `frontend/templates/portfolio-project.html` |
+| Grid, motifs, description, next project | `frontend/build/renderers/portfolio.js` |
+| Contact CTA ("Du hast ein Projekt im Kopf?") | `frontend/components/portfolio-cta.html` |
+| Styles | `frontend/styles/pages/portfolio.css` |
+| Full-screen view | `frontend/scripts/modules/lightbox.js` |
+| Content + original graphics | `/content/portfolio/<slug>/` |
+
 ## WORK (`/work/`)
 
 | Part | File |

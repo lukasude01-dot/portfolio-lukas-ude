@@ -16,6 +16,7 @@ import { html } from "../lib/html.js";
 
 // SAFE TO EDIT: how each section is named on cards
 export const SECTION_LABELS = {
+    portfolio: "Portfolio",
     funnels: "Funnel",
     creatives: "Creatives & Copy",
     design: "Design",
@@ -26,7 +27,8 @@ export const SECTION_LABELS = {
 export function projectBadges(project) {
     const badges = [];
     if (project.demoPath) badges.push("Live-Demo");
-    if (project.example || project.concept) badges.push("Konzept");
+    if (project.projectStatus) badges.push(project.projectStatus);
+    else if (project.example || project.concept) badges.push("Konzept");
     return badges;
 }
 
@@ -51,7 +53,7 @@ export function workCard(project, { sizes = "(min-width: 900px) 45vw, 100vw", si
     const title = headingLevel === 2 ? html`<h2 class="work-card__title">${project.title}</h2>` : html`<h3 class="work-card__title">${project.title}</h3>`;
 
     return html`
-        <article class="work-card work-card--${size}" data-filter-item data-filter-values="${filterValues}">
+        <article class="work-card work-card--${size}${project.section === "portfolio" ? " work-card--poster" : ""}" data-filter-item data-filter-values="${filterValues}">
             <a class="work-card__link" href="${project.url}" data-cursor-label="Ansehen">
                 <div class="work-card__media" data-reveal="mask">
                     ${project.thumbnail

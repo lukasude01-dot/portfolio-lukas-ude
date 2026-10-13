@@ -1,0 +1,39 @@
+{
+    "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
+    "title": "KFZ-Mechatroniker – Recruiting Campaign",
+    "category": [
+        "Recruiting",
+        "Performance Creatives",
+        "Social Ads"
+    ],
+    "description": "Zwei unterschiedliche visuelle Ansätze für die Personalgewinnung im Automotive-Bereich: eine emotionale Werkstattsituation mit klaren Arbeitgebervorteilen und eine farbintensive, aufmerksamkeitsstarke Ansprache.",
+    "projectStatus": "Demo-Kampagne",
+    "disclaimer": "Demo-Kampagne. Musterunternehmen („Autohaus Test GmbH“), Gehaltsangaben und Benefits sind illustrative Angaben und keine realen Stellenangebote.",
+    "services": [
+        "Recruiting Creatives",
+        "Social Advertising",
+        "Bildkomposition",
+        "Copy-Visual-Hierarchie"
+    ],
+    "featured": false,
+    "order": 4,
+    "layout": "wide",
+    "thumbnail": {
+        "src": "recruiting-werkstatt.webp",
+        "alt": "Recruiting-Anzeige: KFZ-Mechatroniker arbeitet am Motor in einer dunklen Werkstatt, Headline „Schraube an deiner Zukunft!“"
+    },
+    "task": "Fachkräfte für eine Autowerkstatt gewinnen – mit zwei Motiven, die unterschiedliche Ansprachen testen: Atmosphäre und Vorteile gegen Aufmerksamkeit und Direktheit.",
+    "approach": "Variante eins zeigt den Arbeitsalltag in der Werkstatt, dunkel und ruhig, mit drei Vorteilen und dem Gehalt als hervorgehobenem Element. Variante zwei setzt auf ein kräftiges Blau, eine direkte Headline und Werkzeuge als Bildrahmen; die Vorteile sind mit Linien an die Person gebunden. Beide enden mit demselben klaren „Jetzt bewerben!“.",
+    "images": [
+        {
+            "src": "recruiting-werkstatt.webp",
+            "alt": "Recruiting-Anzeige im Hochformat: KFZ-Mechatroniker am Motor in einer dunklen Werkstatt, Headline „Schraube an deiner Zukunft!“, Vorteile, Jahresgehalt und Button „Jetzt bewerben!“",
+            "caption": "Variante 1 – Werkstatt, Story-Format 9:16."
+        },
+        {
+            "src": "recruiting-schrauberprofi.webp",
+            "alt": "Recruiting-Anzeige im Quadrat: KFZ-Mechatroniker vor blauem Hintergrund, Headline „Wir suchen unseren Schrauberprofi!“, Werkzeuge, Vorteile und Button „Jetzt bewerben!“",
+            "caption": "Variante 2 – Schrauberprofi, Feed-Format 1:1."
+        }
+    ]
+}

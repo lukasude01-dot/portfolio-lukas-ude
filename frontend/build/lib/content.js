@@ -8,7 +8,7 @@
  *   /content/<section>/<project-slug>/project.json   <- the text
  *   /content/<section>/<project-slug>/*.jpg|png|webp <- its images
  *
- *   Sections: funnels, creatives, design, ai
+ *   Sections: portfolio, funnels, creatives, design, ai
  *   The folder name becomes the URL, e.g.
  *   /content/funnels/recruiting-demo/ -> /funnels/recruiting-demo/
  *
@@ -33,7 +33,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { log } from "./logger.js";
 
-export const CONTENT_SECTIONS = ["funnels", "creatives", "design", "ai"];
+export const CONTENT_SECTIONS = ["portfolio", "funnels", "creatives", "design", "ai"];
 
 const IMAGE_FILE = /\.(jpe?g|png|webp|avif|gif|svg)$/i;
 const PLACEHOLDER = /\[ADD [^\]]+\]/g;

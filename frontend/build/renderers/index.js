@@ -14,6 +14,7 @@
  *   ai.js         /ai/ workflow blueprints
  *   career.js     /about/ timeline, certificates, skills
  *   project.js    parts shared by every project page (next project)
+ *   portfolio.js  /portfolio/ grid + portfolio project pages
  */
 
 import { siteRenderers } from "./site.js";
@@ -24,6 +25,7 @@ import { designRenderers } from "./design.js";
 import { aiRenderers } from "./ai.js";
 import { careerRenderers } from "./career.js";
 import { projectRenderers } from "./project.js";
+import { portfolioRenderers } from "./portfolio.js";
 
 export const renderers = {
     ...siteRenderers,
@@ -33,5 +35,6 @@ export const renderers = {
     ...designRenderers,
     ...aiRenderers,
     ...careerRenderers,
-    ...projectRenderers
+    ...projectRenderers,
+    ...portfolioRenderers
 };
