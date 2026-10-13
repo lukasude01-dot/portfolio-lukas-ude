@@ -23,22 +23,22 @@
         "alt": "Markenmotiv: Portrait von Lukas Ude, links heller Bereich mit Waldtextur, großer vertikaler LUKAS-Schriftzug und Logo"
     },
     "task": "Eine persönliche Marke sichtbar machen, die Natur, Ideen und Systeme verbindet – über mehrere Motive hinweg erkennbar, aber nicht gleichförmig.",
-    "approach": "Drei Ansätze mit einer gemeinsamen Basis aus Logo, Slogan und Editorial-Typografie: ein Portrait vor Waldkulisse mit großem „Built for growth“, ein Portrait mit selektiver Unschärfe, das den Blick auf die Augen lenkt, und ein Motiv, in dem ein vertikaler LUKAS-Schriftzug Portrait und Waldtextur verbindet.",
+    "approach": "Drei Ansätze mit einer gemeinsamen Basis aus Logo, Slogan und Editorial-Typografie: Im Hauptmotiv verbindet ein vertikaler LUKAS-Schriftzug Portrait und Waldtextur. Dazu kommen ein Portrait vor Waldkulisse mit großem „Built for growth“ und ein Portrait mit selektiver Unschärfe, das den Blick auf die Augen lenkt.",
     "images": [
+        {
+            "src": "personal-branding-lukas.webp",
+            "alt": "Markenmotiv: Portrait von Lukas Ude, links heller Bereich mit Waldtextur, großer vertikaler LUKAS-Schriftzug und Logo",
+            "caption": "Hauptmotiv – vertikaler LUKAS-Schriftzug."
+        },
         {
             "src": "personal-branding-wald.webp",
             "alt": "Portrait von Lukas Ude vor einem Waldweg, großer Schriftzug „Built for growth“ und Logo",
-            "caption": "Motiv 1 – Portrait vor Waldkulisse."
+            "caption": "Motiv 2 – Portrait vor Waldkulisse."
         },
         {
             "src": "personal-branding-fokus.webp",
             "alt": "Portrait von Lukas Ude mit selektiver Unschärfe, scharf sind nur die Augen, Schriftzug „Built for growth.“ und Logo mit Wortmarke",
-            "caption": "Motiv 2 – Selektive Unschärfe."
-        },
-        {
-            "src": "personal-branding-lukas.webp",
-            "alt": "Markenmotiv: Portrait von Lukas Ude, links heller Bereich mit Waldtextur, großer vertikaler LUKAS-Schriftzug und Logo",
-            "caption": "Motiv 3 – Vertikaler LUKAS-Schriftzug."
+            "caption": "Motiv 3 – Selektive Unschärfe."
         }
     ]
 }

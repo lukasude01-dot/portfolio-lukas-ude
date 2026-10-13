@@ -185,6 +185,13 @@
     background-size: 100% 1px;
 }
 
+/* Closing card: the first motif (main image) is shown large */
+@media (min-width: 700px) {
+    .portfolio-card--closing .portfolio-card__image:first-child {
+        flex-grow: 2;
+    }
+}
+
 .portfolio-card--closing .portfolio-card__title {
     font-size: var(--text-2xl);
 }
