@@ -1,0 +1,72 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
+    "title": "KFZ-Mechatroniker – Recruiting Ads",
+    "category": [
+        "Recruiting",
+        "Performance"
+    ],
+    "description": "Zwei Recruiting-Varianten für Story und Feed: Werkstatt-Atmosphäre gegen farbintensive Direktansprache.",
+    "year": "2026",
+    "client": "Autohaus Test GmbH (Demo-Kampagne)",
+    "services": [
+        "Recruiting Creatives",
+        "Social Advertising",
+        "Copy-Visual-Hierarchie"
+    ],
+    "featured": false,
+    "order": 4,
+    "brand": {
+        "name": "Autohaus Test GmbH",
+        "initials": "AT",
+        "domain": "Demo-Kampagne"
+    },
+    "thumbnail": {
+        "src": "/media/portfolio/recruiting-kfz/recruiting-werkstatt.webp",
+        "alt": "Recruiting-Anzeige: KFZ-Mechatroniker in dunkler Werkstatt, Headline „Schraube an deiner Zukunft!“"
+    },
+    "objective": "KFZ-Mechatroniker:innen für eine Werkstatt gewinnen und zwei Ansprachen gegeneinander testen.",
+    "insight": "Fachkräfte wollen zuerst wissen, was sie konkret bekommen: Gehalt, Urlaub, Wechselprämie.",
+    "approach": [
+        "Variante 1: Werkstatt-Situation, ruhig, Gehalt hervorgehoben",
+        "Variante 2: Kräftiges Blau, direkte Headline, Werkzeuge als Bildrahmen",
+        "Gleicher Call-to-Action für einen sauberen Vergleich",
+        "Hinweis: Unternehmen, Gehalt und Benefits sind illustrative Demo-Angaben"
+    ],
+    "ads": [
+        {
+            "label": "Werkstatt (Story)",
+            "format": "story",
+            "image": {
+                "src": "/media/portfolio/recruiting-kfz/recruiting-werkstatt.webp",
+                "alt": "Recruiting-Anzeige im Story-Format: KFZ-Mechatroniker am Motor, Headline „Schraube an deiner Zukunft!“, Vorteile, Jahresgehalt und Button „Jetzt bewerben!“"
+            },
+            "hook": "Schraube an deiner Zukunft!",
+            "primaryText": "1.000 € Wechselprämie, 30 Tage Urlaub, 48.000 € Jahresgehalt.\nKFZ-Mechatroniker (m/w/d) in Musterstadt.\n(Demo-Kampagne – keine reale Stelle.)",
+            "headline": "KFZ-Mechatroniker (m/w/d) gesucht",
+            "cta": "Jetzt bewerben",
+            "rationale": "Emotionale Werkstattszene, die Vorteile als klare Liste."
+        },
+        {
+            "label": "Schrauberprofi (Feed)",
+            "format": "square",
+            "image": {
+                "src": "/media/portfolio/recruiting-kfz/recruiting-schrauberprofi.webp",
+                "alt": "Recruiting-Anzeige im Quadrat: KFZ-Mechatroniker vor blauem Hintergrund, Headline „Wir suchen unseren Schrauberprofi!“ und Button „Jetzt bewerben!“"
+            },
+            "hook": "Wir suchen unseren Schrauberprofi!",
+            "primaryText": "Du kennst jedes Auto von innen? Dann suchen wir dich.\n(Demo-Kampagne – keine reale Stelle.)",
+            "headline": "Schrauberprofi gesucht – Musterstadt",
+            "cta": "Jetzt bewerben",
+            "rationale": "Hohe Farbintensität und direkte Ansprache für maximale Aufmerksamkeit im Feed."
+        }
+    ],
+    "hooks": [
+        "Schraube an deiner Zukunft!",
+        "Wir suchen unseren Schrauberprofi!"
+    ],
+    "headlines": [
+        "KFZ-Mechatroniker (m/w/d) gesucht",
+        "Schrauberprofi gesucht – Musterstadt"
+    ],
+    "projectStatus": "Demo-Kampagne"
+}

@@ -16,7 +16,7 @@
     ],
     "featured": true,
     "example": true,
-    "order": 1,
+    "order": 10,
     "brand": {
         "name": "Tischlerei Nordholz",
         "initials": "NH",

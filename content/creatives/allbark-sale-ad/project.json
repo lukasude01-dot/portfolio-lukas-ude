@@ -1,0 +1,57 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
+    "title": "ALLBARK – Sale Ad",
+    "category": [
+        "Social",
+        "Performance"
+    ],
+    "description": "Sale-Anzeige für eine Streetwear-Marke: Produkt getragen, Rabatt klar, Call-to-Action mit Handschrift.",
+    "year": "2026",
+    "client": "ALLBARK (Konzeptarbeit)",
+    "services": [
+        "Social Ad Design",
+        "E-Commerce Creative",
+        "CTA-Gestaltung"
+    ],
+    "featured": false,
+    "order": 2,
+    "brand": {
+        "name": "ALLBARK",
+        "initials": "AB",
+        "domain": "Konzeptarbeit"
+    },
+    "thumbnail": {
+        "src": "/media/portfolio/allbark-sale/allbark-sale.webp",
+        "alt": "Sale-Anzeige mit Person im grünen ALLBARK-Hoodie und vertikalem SALE-Schriftzug"
+    },
+    "objective": "Eine Rabattaktion im Feed sofort erkennbar machen, ohne den Markencharakter zu verlieren.",
+    "insight": "Ein Sale wirkt glaubwürdiger, wenn man das Produkt im echten Einsatz sieht.",
+    "approach": [
+        "Produkt getragen statt freigestellt – mit Rückenprint im Fokus",
+        "Vertikaler SALE-Schriftzug als Rahmen",
+        "Rabatt in Orange, CTA auf einem Pinselstrich"
+    ],
+    "ads": [
+        {
+            "label": "Sale",
+            "format": "portrait",
+            "image": {
+                "src": "/media/portfolio/allbark-sale/allbark-sale.webp",
+                "alt": "Sale-Anzeige: Person im grünen ALLBARK-Hoodie von hinten, vertikaler SALE-Schriftzug, 20 % auf alles und Button „Jetzt shoppen!“"
+            },
+            "hook": "SALE – 20 % auf alles",
+            "primaryText": "20 % auf alles – auch auf deinen neuen Lieblingshoodie.\nNur für kurze Zeit.",
+            "headline": "20 % auf alles",
+            "cta": "Jetzt shoppen",
+            "rationale": "Produkt, Angebot und Handlung in einem Blick."
+        }
+    ],
+    "hooks": [
+        "SALE – 20 % auf alles",
+        "Dein neuer Lieblingshoodie. Jetzt 20 % günstiger."
+    ],
+    "headlines": [
+        "20 % auf alles"
+    ],
+    "projectStatus": "Konzeptarbeit"
+}

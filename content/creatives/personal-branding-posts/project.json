@@ -1,0 +1,81 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
+    "title": "Lukas Ude – Personal Branding Posts",
+    "category": [
+        "Marke",
+        "Social"
+    ],
+    "description": "Drei Social-Motive für die eigene Marke: Portrait, Natur und Editorial-Typografie in einer Bildwelt.",
+    "year": "2026",
+    "client": "Lukas Ude (Eigenprojekt)",
+    "services": [
+        "Personal Branding",
+        "Social Media Design",
+        "Editorial Layout"
+    ],
+    "featured": false,
+    "order": 5,
+    "brand": {
+        "name": "Lukas Ude",
+        "initials": "LU",
+        "domain": "Eigenprojekt"
+    },
+    "thumbnail": {
+        "src": "/media/portfolio/personal-branding/personal-branding-lukas.webp",
+        "alt": "Markenmotiv mit Portrait von Lukas Ude und vertikalem LUKAS-Schriftzug"
+    },
+    "objective": "Die eigene Marke im Feed wiedererkennbar machen – mit Gesicht, Haltung und klarer Bildsprache.",
+    "insight": "Eine Personenmarke braucht das Gesicht im Mittelpunkt – und einen roten Faden, der jedes Motiv verbindet.",
+    "approach": [
+        "Logo, Slogan und Editorial-Typografie als gemeinsame Basis",
+        "Natur als zweite Ebene: Wald, Nebel, Weg",
+        "Jedes Motiv mit eigenem Gestaltungsprinzip"
+    ],
+    "ads": [
+        {
+            "label": "LUKAS",
+            "format": "portrait",
+            "image": {
+                "src": "/media/portfolio/personal-branding/personal-branding-lukas.webp",
+                "alt": "Markenmotiv: Portrait von Lukas Ude, vertikaler LUKAS-Schriftzug und Waldtextur"
+            },
+            "hook": "Rooted in ideas. Built for growth.",
+            "primaryText": "Marketing, Design und Automation – mit Wurzeln in guten Ideen.",
+            "headline": "Lukas Ude",
+            "cta": "Mehr erfahren"
+        },
+        {
+            "label": "Built for growth",
+            "format": "portrait",
+            "image": {
+                "src": "/media/portfolio/personal-branding/personal-branding-wald.webp",
+                "alt": "Portrait von Lukas Ude vor einem Waldweg mit großem Schriftzug „Built for growth“"
+            },
+            "hook": "Built for growth.",
+            "primaryText": "Ideen brauchen Wurzeln. Wachstum braucht Systeme.",
+            "headline": "Lukas Ude",
+            "cta": "Mehr erfahren"
+        },
+        {
+            "label": "Fokus",
+            "format": "portrait",
+            "image": {
+                "src": "/media/portfolio/personal-branding/personal-branding-fokus.webp",
+                "alt": "Portrait von Lukas Ude mit selektiver Unschärfe, nur die Augen sind scharf"
+            },
+            "hook": "Built for growth.",
+            "primaryText": "Fokus auf das, was wirkt.",
+            "headline": "Lukas Ude",
+            "cta": "Mehr erfahren"
+        }
+    ],
+    "hooks": [
+        "Rooted in ideas. Built for growth.",
+        "Ideen brauchen Wurzeln. Wachstum braucht Systeme.",
+        "Fokus auf das, was wirkt."
+    ],
+    "headlines": [
+        "Lukas Ude"
+    ],
+    "projectStatus": "Eigenprojekt"
+}

@@ -1,0 +1,57 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
+    "title": "Trout Camp 2027 – Travel Ad",
+    "category": [
+        "Social",
+        "Performance"
+    ],
+    "description": "Reiseanzeige für ein Fliegenfischer-Camp: Atmosphäre und alle wichtigen Fakten in einem Motiv.",
+    "year": "2026",
+    "client": "Trout Camp (Konzeptarbeit, nicht buchbar)",
+    "services": [
+        "Travel Advertising",
+        "Informationshierarchie",
+        "Bildgestaltung"
+    ],
+    "featured": false,
+    "order": 3,
+    "brand": {
+        "name": "Trout Camp",
+        "initials": "TC",
+        "domain": "Konzeptarbeit"
+    },
+    "thumbnail": {
+        "src": "/media/portfolio/trout-camp/trout-camp-2027.webp",
+        "alt": "Reiseanzeige mit Fliegenfischer im Fluss und vertikalem TROUT-Schriftzug"
+    },
+    "objective": "Ein Reiseerlebnis so zeigen, dass Stimmung und Eckdaten sofort verstanden werden.",
+    "insight": "Bei Reisen entscheidet zuerst das Gefühl – direkt danach die Fakten.",
+    "approach": [
+        "Zweigeteiltes Layout: Fakten auf Papier, Natur im Bild",
+        "Vertikaler TROUT-Schriftzug verbindet beide Hälften",
+        "Orange als Leitfarbe von der Jacke bis zum Buchungs-Button"
+    ],
+    "ads": [
+        {
+            "label": "Camp 2027",
+            "format": "portrait",
+            "image": {
+                "src": "/media/portfolio/trout-camp/trout-camp-2027.webp",
+                "alt": "Reiseanzeige: Fliegenfischer in orangefarbener Jacke im Fluss vor Wald, vertikaler TROUT-Schriftzug, CAMP 2027, Reisedaten und Button „Hier buchen!“"
+            },
+            "hook": "TROUT CAMP 2027",
+            "primaryText": "7 Tage Schwedisch-Lappland. Guiding, Helikopterflug, klare Flüsse.\n(Beispielangebot – Konzeptarbeit, nicht buchbar.)",
+            "headline": "Trout Camp 2027 – Kiruna, Schweden",
+            "cta": "Mehr erfahren",
+            "rationale": "Fotografie für das Gefühl, Typografie für die Entscheidung."
+        }
+    ],
+    "hooks": [
+        "TROUT CAMP 2027",
+        "7 Tage Schwedisch-Lappland."
+    ],
+    "headlines": [
+        "Trout Camp 2027 – Kiruna, Schweden"
+    ],
+    "projectStatus": "Konzeptarbeit"
+}
