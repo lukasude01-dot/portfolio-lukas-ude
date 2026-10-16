@@ -19,11 +19,14 @@
  * /frontend/components/contact-form.html).
  */
 
+// The packages on /leistungen/ link to the form with their topic
+// pre-selected (/content/leistungen/pakete.json -> "topic").
 export const CONTACT_TOPICS = [
-    "Funnels & Landingpages",
+    "Landingpage",
+    "Funnel & Meta Ads",
     "Creatives & Copy",
-    "Design",
-    "KI & Systeme",
+    "KI-Systeme & Automatisierung",
+    "Laufende Betreuung",
     "Etwas anderes"
 ];
 

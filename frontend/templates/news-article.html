@@ -1,0 +1,44 @@
+        <!-- =========================================================
+             NEWS ARTICLE TEMPLATE  (one page per article)
+
+             PURPOSE:
+             Builds /news/<slug>/ for every folder in /content/news/.
+             Title, date and text come from article.md.
+
+             EDIT HERE:
+             Only the LAYOUT of all article pages. To write or change
+             an article, edit /content/news/<slug>/article.md
+             (see /docs/CONTENT-GUIDE.md -> News).
+
+             RELATED STYLES:
+             /frontend/styles/pages/news.css
+
+             GENERATED PARTS:
+             /frontend/build/renderers/news.js
+        ========================================================= -->
+
+
+        <!-- NEWS ARTICLE - HEADER -->
+        <section class="news-article__hero theme-light" aria-labelledby="article-heading">
+            <div class="container news-article__header">
+<!-- @render breadcrumbs -->
+                <p class="eyebrow" data-reveal><span>{{ article.category }}</span><span><time datetime="{{ article.date }}">{{ article.dateLabel }}</time></span><span>{{ article.readingTime }} Min. Lesezeit</span></p>
+                <h1 class="news-article__title heading-1" id="article-heading" data-reveal data-reveal-delay="1">{{ article.title }}</h1>
+                <p class="news-article__intro text-lead" data-reveal data-reveal-delay="2">{{ article.description }}</p>
+                <p class="news-article__author label" data-reveal data-reveal-delay="3">Von {{ site.name }}</p>
+            </div>
+        </section>
+
+<!-- @render news-cover -->
+
+        <!-- NEWS ARTICLE - TEXT -->
+        <section class="news-article__body theme-light section section--flush-top">
+            <div class="container">
+                <div class="prose news-article__text">
+{{{ article.html }}}
+                </div>
+<!-- @render news-more -->
+            </div>
+        </section>
+
+<!-- @include cta-band -->

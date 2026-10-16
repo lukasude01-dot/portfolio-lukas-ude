@@ -1,7 +1,7 @@
 ---
 # PAGE SETTINGS - PORTFOLIO (Selected Work)
 title: Portfolio
-description: Ausgewählte Arbeiten von Lukas Ude aus Grafikdesign, Advertising und visueller Markenkommunikation aus Automotive, Fashion, Travel, Recruiting und Personal Branding.
+description: Portfolio von Lukas Ude mit ausgewählten Arbeiten aus Automotive, Fashion, Travel, Recruiting und Personal Branding sowie Funnels, Creatives, Design und KI-Systemen.
 path: /portfolio/
 bodyClass: page-portfolio
 headerTheme: dark
@@ -34,6 +34,8 @@ headerTheme: dark
         </section>
         <!-- ================= END PORTFOLIO HERO ================= -->
 
+<!-- @include portfolio-subnav -->
+
 
         <!-- =========================================================
              PORTFOLIO GRID
@@ -58,5 +60,68 @@ headerTheme: dark
             </div>
         </section>
         <!-- ================= END PORTFOLIO GRID ================= -->
+
+        <!-- =========================================================
+             PORTFOLIO AREAS
+
+             PURPOSE:
+             Links to the other portfolio areas (Funnels, Creatives,
+             Design, KI & Systeme) below the selected work.
+
+             EDIT HERE:
+             - Titles and short texts of the four areas below
+
+             RELATED STYLES:
+             /frontend/styles/sections/services.css (same list style)
+        ========================================================= -->
+        <section class="portfolio-areas theme-dark section" aria-labelledby="portfolio-areas-heading">
+            <div class="container">
+                <header class="section-header section-header--split">
+                    <div>
+                        <p class="eyebrow eyebrow--line" data-reveal>Weitere Bereiche</p>
+                        <h2 class="heading-2" id="portfolio-areas-heading" data-reveal data-reveal-delay="1">Mehr als einzelne Motive.</h2>
+                    </div>
+                    <p class="text-lead" data-reveal data-reveal-delay="2">
+                        Neben den ausgewählten Arbeiten findest du hier Funnels zum Ausprobieren, Anzeigenkonzepte
+                        mit ihren Texten, Designarbeiten und die KI-Workflows, die alles miteinander verbinden.
+                    </p>
+                </header>
+                <ol class="services__list" role="list">
+                    <li class="services__item" data-reveal>
+                        <a class="services__link" href="/portfolio/funnels/">
+                            <span class="services__number label">02</span>
+                            <span class="services__title">Funnels &amp; Landingpages</span>
+                            <span class="services__text">Funktionierende Demo-Funnels zum Durchklicken, mit Strategie, Aufbau und Texten erklärt.</span>
+                            <span class="services__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                    <li class="services__item" data-reveal>
+                        <a class="services__link" href="/portfolio/creatives/">
+                            <span class="services__number label">03</span>
+                            <span class="services__title">Creatives &amp; Copy</span>
+                            <span class="services__text">Anzeigenkonzepte für Meta Ads mit Motiven, Hooks, Headlines und Primary Texts.</span>
+                            <span class="services__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                    <li class="services__item" data-reveal>
+                        <a class="services__link" href="/portfolio/design/">
+                            <span class="services__number label">04</span>
+                            <span class="services__title">Design</span>
+                            <span class="services__text">Markenidentität, Printmedien und Kampagnenmaterial mit einer klaren visuellen Linie.</span>
+                            <span class="services__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                    <li class="services__item" data-reveal>
+                        <a class="services__link" href="/portfolio/ki/">
+                            <span class="services__number label">05</span>
+                            <span class="services__title">KI &amp; Systeme</span>
+                            <span class="services__text">KI-gestützte Workflows und Automatisierungen, die Marketing effizienter und planbarer machen.</span>
+                            <span class="services__arrow" aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <!-- ================= END PORTFOLIO AREAS ================= -->
 
 <!-- @include portfolio-cta -->

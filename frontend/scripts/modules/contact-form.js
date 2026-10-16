@@ -42,6 +42,14 @@ export function initContactForm() {
     const submitLabel = form.querySelector("[data-submit-label]");
     const defaultLabel = submitLabel.textContent;
 
+    // Pre-select the topic when coming from a package on /leistungen/,
+    // e.g. /contact/?thema=Landingpage (only values that exist in the list)
+    const requestedTopic = new URL(window.location.href).searchParams.get("thema");
+    const topicSelect = form.elements.namedItem("topic");
+    if (requestedTopic && topicSelect && [...topicSelect.options].some((option) => option.value === requestedTopic)) {
+        topicSelect.value = requestedTopic;
+    }
+
     let tokenPromise = null;
     const getToken = () => {
         tokenPromise ??= fetchToken(form.dataset.tokenEndpoint).catch((error) => {

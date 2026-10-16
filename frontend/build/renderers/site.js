@@ -37,6 +37,14 @@ export const siteRenderers = {
                     <li><a class="site-nav__link" href="${safeUrl(item.href)}"${currentAttribute(item, page)}>${item.label}</a></li>`)}
                 </ul>`,
 
+    // PORTFOLIO SUB-NAVIGATION (Ausgewählte Arbeiten, Funnels, ...)
+    // Links come from site.js -> portfolioNavigation.
+    "portfolio-subnav": ({ site, page }) => html`
+                <ul class="portfolio-subnav__list" role="list">
+                    ${site.portfolioNavigation.map((item) => html`
+                    <li><a class="portfolio-subnav__link" href="${safeUrl(item.href)}"${page.path === item.href ? html` aria-current="page"` : ""}>${item.label}</a></li>`)}
+                </ul>`,
+
     // NAVIGATION - MOBILE LINKS (large, numbered)
     "navigation-links-mobile": ({ site, page }) => html`
                 <ol class="mobile-menu__list" role="list">

@@ -38,6 +38,7 @@
 @import url("./components/lightbox.css");
 @import url("./components/qr-share.css");
 @import url("./components/cursor-label.css");
+@import url("./components/portfolio-subnav.css");
 
 /* SECTIONS */
 @import url("./sections/hero.css");
@@ -51,6 +52,8 @@
 
 /* PAGES */
 @import url("./pages/work.css");
+@import url("./pages/services.css");
+@import url("./pages/news.css");
 @import url("./pages/portfolio.css");
 @import url("./pages/project.css");
 @import url("./pages/funnels.css");

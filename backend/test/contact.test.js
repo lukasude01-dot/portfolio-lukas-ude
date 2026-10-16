@@ -19,7 +19,7 @@ const VALID_MESSAGE = {
     name: "Test Person",
     email: "test@example.com",
     company: "",
-    topic: "Design",
+    topic: "Landingpage",
     message: "Hello, this is a sufficiently long test message.",
     privacy: true,
     website: ""

@@ -7,14 +7,16 @@
  *
  * Which file contains which renderer:
  *   site.js       navigation, footer, legal links, contact details
- *   work.js       project cards, featured work, /work/ grid
- *   funnels.js    /funnels/ list + funnel case parts
- *   creatives.js  /creatives/ grid, ad mockups, creative case parts
- *   design.js     /design/ grid + design case gallery
- *   ai.js         /ai/ workflow blueprints
+ *   work.js       project cards, featured work grid
+ *   funnels.js    /portfolio/funnels/ list + funnel case parts
+ *   creatives.js  /portfolio/creatives/ grid, ad mockups, case parts
+ *   design.js     /portfolio/design/ grid + design case gallery
+ *   ai.js         /portfolio/ki/ workflow blueprints
  *   career.js     /about/ timeline, certificates, skills
  *   project.js    parts shared by every project page (next project)
  *   portfolio.js  /portfolio/ grid + portfolio project pages
+ *   services.js   /leistungen/ package cards
+ *   news.js       /news/ article list, homepage news teaser
  */
 
 import { siteRenderers } from "./site.js";
@@ -26,6 +28,8 @@ import { aiRenderers } from "./ai.js";
 import { careerRenderers } from "./career.js";
 import { projectRenderers } from "./project.js";
 import { portfolioRenderers } from "./portfolio.js";
+import { servicesRenderers } from "./services.js";
+import { newsRenderers } from "./news.js";
 
 export const renderers = {
     ...siteRenderers,
@@ -36,5 +40,7 @@ export const renderers = {
     ...aiRenderers,
     ...careerRenderers,
     ...projectRenderers,
-    ...portfolioRenderers
+    ...portfolioRenderers,
+    ...servicesRenderers,
+    ...newsRenderers
 };

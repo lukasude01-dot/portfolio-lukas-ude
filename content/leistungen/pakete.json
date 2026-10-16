@@ -1,0 +1,78 @@
+{
+    "_help": "LEISTUNGEN / PAKETE (page /leistungen/). One object per package, shown in this order. 'price' is the small line under the title (e.g. 'ab 1.200 €' or 'Preis auf Anfrage'). 'includes' is the list of what the package contains. 'topic' must match one of the CONTACT_TOPICS in /shared/contact-schema.js, so the contact form opens with this topic selected. 'highlight': true gives the card a stronger frame (use for one package at most).",
+    "packages": [
+        {
+            "name": "Landingpage",
+            "price": "Preis auf Anfrage",
+            "summary": "Für alle, die ein Angebot klar und überzeugend präsentieren möchten. Du bekommst eine Seite, die genau eine Aufgabe erfüllt: aus Besuchern Anfragen zu machen.",
+            "includes": [
+                "Analyse von Zielgruppe und Angebot",
+                "Seitenstruktur und überzeugende Texte",
+                "Gestaltung in deinem Corporate Design",
+                "Umsetzung, optimiert für das Smartphone",
+                "Kontaktformular mit automatischer Weiterleitung",
+                "Übergabe mit kurzer Einweisung"
+            ],
+            "idealFor": "Neue Angebote, Recruiting-Kampagnen und Leadgenerierung",
+            "topic": "Landingpage"
+        },
+        {
+            "name": "Funnel & Meta Ads",
+            "price": "Preis auf Anfrage",
+            "summary": "Das Komplettpaket für planbare Anfragen über Facebook und Instagram. Von der Zielgruppenanalyse bis zur laufenden Optimierung kommt alles aus einer Hand.",
+            "includes": [
+                "Zielgruppenanalyse und Positionierung",
+                "Funnel-Strategie und Customer Journey",
+                "Landingpage oder mehrstufiger Funnel",
+                "Creatives und Anzeigentexte in mehreren Varianten",
+                "Einrichtung der Kampagnen im Werbeanzeigenmanager",
+                "Auswertung und laufende Optimierung"
+            ],
+            "idealFor": "Recruiting, Leadgenerierung und neue Kundengruppen",
+            "topic": "Funnel & Meta Ads",
+            "highlight": true
+        },
+        {
+            "name": "Creatives & Copy",
+            "price": "Preis auf Anfrage",
+            "summary": "Für Unternehmen, die bereits Kampagnen schalten und frische Motive mit starken Texten brauchen. Jede Variante ist so angelegt, dass sie sich sauber testen lässt.",
+            "includes": [
+                "Anzeigenmotive im Feed- und Story-Format",
+                "Hooks, Headlines und Primary Texts",
+                "Mehrere Varianten für aussagekräftige Tests",
+                "Gestaltung in deinem Corporate Design",
+                "Empfehlungen für die nächsten Tests"
+            ],
+            "idealFor": "Laufende Kampagnen, die neue Impulse brauchen",
+            "topic": "Creatives & Copy"
+        },
+        {
+            "name": "KI-Systeme & Automatisierung",
+            "price": "Preis auf Anfrage",
+            "summary": "Für Betriebe, die wiederkehrende Aufgaben abgeben und Abläufe verlässlicher machen möchten. KI und Automatisierung übernehmen die Routine, dein Team behält die Kontrolle.",
+            "includes": [
+                "Analyse deiner bestehenden Abläufe",
+                "Konzeption KI-gestützter Workflows",
+                "Automatisierung von Anfragen und Follow-ups",
+                "Dokumentation, damit dein Team die Abläufe selbst nutzen kann",
+                "Datenschutzbewusste Umsetzung"
+            ],
+            "idealFor": "Teams mit vielen Anfragen und wiederkehrenden Aufgaben",
+            "topic": "KI-Systeme & Automatisierung"
+        },
+        {
+            "name": "Laufende Betreuung",
+            "price": "Monatlich, Preis auf Anfrage",
+            "summary": "Marketing als feste Partnerschaft. Ich kümmere mich dauerhaft um deine Kampagnen, damit du dich voll auf dein Geschäft konzentrieren kannst.",
+            "includes": [
+                "Steuerung und Optimierung deiner Kampagnen",
+                "Regelmäßig neue Creatives und Texte",
+                "Monatliche Auswertung mit klaren Empfehlungen",
+                "Feste Termine zur Abstimmung",
+                "Ein direkter Ansprechpartner statt wechselnder Agenturteams"
+            ],
+            "idealFor": "Unternehmen, die Marketing langfristig abgeben möchten",
+            "topic": "Laufende Betreuung"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+/* ==========================================================
+   PORTFOLIO SUB-NAVIGATION
+   Links between the portfolio areas (Ausgewählte Arbeiten,
+   Funnels, Creatives, Design, KI & Systeme).
+   HTML: /frontend/components/portfolio-subnav.html
+========================================================== */
+
+.portfolio-subnav {
+    border-block: 1px solid var(--color-line);
+    background-color: var(--color-background);
+}
+
+.portfolio-subnav__list {
+    display: flex;
+    gap: var(--spacing-large);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.portfolio-subnav__list::-webkit-scrollbar {
+    display: none;
+}
+
+.portfolio-subnav__link {
+    display: inline-block;
+    padding-block: 1.15rem;
+    border-bottom: 1px solid transparent;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-text-muted);
+    transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.portfolio-subnav__link:hover,
+.portfolio-subnav__link:focus-visible {
+    color: var(--color-text);
+}
+
+.portfolio-subnav__link[aria-current="page"] {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Space between the sub-navigation and a section that has no top padding */
+.portfolio-subnav + .section--flush-top {
+    padding-top: var(--spacing-xl);
+}
+
+/* ==========================================================
+   END PORTFOLIO SUB-NAVIGATION
+========================================================== */

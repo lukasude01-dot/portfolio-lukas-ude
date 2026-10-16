@@ -89,13 +89,26 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     navigation: [
-        { label: "Portfolio", href: "/portfolio/" },
-        { label: "Funnels", href: "/funnels/" },
-        { label: "Creatives", href: "/creatives/" },
-        { label: "Design", href: "/design/" },
-        { label: "KI", href: "/ai/" },
+        { label: "Start", href: "/" },
         { label: "Über mich", href: "/about/" },
+        { label: "Portfolio", href: "/portfolio/" },
+        { label: "Leistungen", href: "/leistungen/" },
+        { label: "News", href: "/news/" },
         { label: "Kontakt", href: "/contact/" }
+    ],
+
+    // ---------------------------------------------------------
+    // PORTFOLIO SUB-NAVIGATION  (shown on the portfolio pages)
+    // SAFE TO EDIT: labels and order. The "href" values must match
+    // the page paths of the portfolio sub-pages.
+    // ---------------------------------------------------------
+
+    portfolioNavigation: [
+        { label: "Ausgewählte Arbeiten", href: "/portfolio/" },
+        { label: "Funnels", href: "/portfolio/funnels/" },
+        { label: "Creatives", href: "/portfolio/creatives/" },
+        { label: "Design", href: "/portfolio/design/" },
+        { label: "KI & Systeme", href: "/portfolio/ki/" }
     ],
 
     legalNavigation: [

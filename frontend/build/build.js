@@ -26,7 +26,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { log } from "./lib/logger.js";
 import { renderTemplate, parseFrontMatter } from "./lib/template.js";
-import { loadContent } from "./lib/content.js";
+import { loadContent, SECTION_PATHS } from "./lib/content.js";
 import { buildResponsiveImages } from "./lib/images.js";
 import { copyFolder, bundleCss } from "./lib/assets.js";
 import { createQrCode } from "./lib/qr.js";
@@ -54,11 +54,13 @@ const args = new Set(process.argv.slice(2));
 const includeDrafts = args.has("--drafts");
 
 // Section pages that get one detail page per project
+// ("parent" is the section page, shown in the breadcrumbs and the back link)
+const PORTFOLIO_CRUMB = { label: "Portfolio", href: SECTION_PATHS.portfolio };
 const DETAIL_TEMPLATES = {
-    portfolio: { template: "portfolio-project.html", parent: { label: "Portfolio", href: "/portfolio/" } },
-    funnels: { template: "funnel-project.html", parent: { label: "Funnels", href: "/funnels/" } },
-    creatives: { template: "creative-project.html", parent: { label: "Creatives", href: "/creatives/" } },
-    design: { template: "design-project.html", parent: { label: "Designarbeiten", href: "/design/" } }
+    portfolio: { template: "portfolio-project.html", parent: PORTFOLIO_CRUMB },
+    funnels: { template: "funnel-project.html", parent: { label: "Funnels", href: SECTION_PATHS.funnels } },
+    creatives: { template: "creative-project.html", parent: { label: "Creatives", href: SECTION_PATHS.creatives } },
+    design: { template: "design-project.html", parent: { label: "Designarbeiten", href: SECTION_PATHS.design } }
 };
 
 
@@ -80,7 +82,7 @@ function writeFile(relativePath, contents) {
     fs.writeFileSync(target, contents);
 }
 
-/** "/funnels/recruiting-demo/" -> "funnels/recruiting-demo/index.html" */
+/** "/portfolio/funnels/recruiting-demo/" -> "portfolio/funnels/recruiting-demo/index.html" */
 function outputPathFor(pagePath) {
     if (pagePath.endsWith(".html")) return pagePath.replace(/^\//, "");
     return path.posix.join(pagePath.replace(/^\//, ""), "index.html");
@@ -146,6 +148,11 @@ function copyStaticFiles(content) {
     fs.mkdirSync(path.join(DIST, "scripts", "shared"), { recursive: true });
     fs.copyFileSync(path.join(SHARED, "contact-schema.js"), path.join(DIST, "scripts", "shared", "contact-schema.js"));
 
+    // News images: /content/news/<slug>/* -> /dist/media/news/<slug>/*
+    for (const article of content.news) {
+        copyFolder(article.sourceFolder, path.join(DIST, "media", "news", article.slug), (file) => !file.endsWith(".md") && !path.basename(file).startsWith("."));
+    }
+
     // Project images: /content/<section>/<slug>/* -> /dist/media/<section>/<slug>/*
     for (const project of content.all) {
         copyFolder(project.sourceFolder, path.join(DIST, "media", project.section, project.slug), (file) => !file.endsWith(".json") && !path.basename(file).startsWith("."));
@@ -195,7 +202,12 @@ async function buildProjectPages(site, content) {
                 path: project.url,
                 ogImage: project.thumbnail?.src,
                 bodyClass: `page-project page-project--${section}`,
-                breadcrumbs: [{ label: "Startseite", href: "/" }, settings.parent, { label: project.title, href: project.url }]
+                breadcrumbs: [
+                    { label: "Startseite", href: "/" },
+                    ...(settings.parent === PORTFOLIO_CRUMB ? [] : [PORTFOLIO_CRUMB]),
+                    settings.parent,
+                    { label: project.title, href: project.url }
+                ]
             }, {});
 
             const htmlOutput = await renderPage({
@@ -207,6 +219,35 @@ async function buildProjectPages(site, content) {
             builtPages.push(page);
             log.info(`${page.path.padEnd(34)} <- content/${section}/${project.slug}`);
         }
+    }
+    return builtPages;
+}
+
+/** One page per news article: /content/news/<slug>/ -> /news/<slug>/ */
+async function buildNewsPages(site, content) {
+    log.step("Building news articles");
+    const template = fs.readFileSync(path.join(TEMPLATES_DIR, "news-article.html"), "utf8");
+    const builtPages = [];
+
+    for (const [index, article] of content.news.entries()) {
+        const page = createPageData(site, {
+            title: article.title,
+            description: article.description,
+            path: article.url,
+            ogImage: article.image,
+            bodyClass: "page-news-article",
+            headerTheme: "light",
+            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: "News", href: "/news/" }, { label: article.title, href: article.url }]
+        }, {});
+
+        const htmlOutput = await renderPage({
+            site, content, page, body: template,
+            extra: { article, newer: content.news[index - 1] || null, older: content.news[index + 1] || null },
+            sourceName: `templates/news-article.html (${article.slug})`
+        });
+        writeFile(outputPathFor(page.path), htmlOutput);
+        builtPages.push(page);
+        log.info(`${page.path.padEnd(34)} <- content/news/${article.slug}`);
     }
     return builtPages;
 }
@@ -275,7 +316,11 @@ async function build() {
 
     copyStaticFiles(content);
     buildCss();
-    const pages = [...(await buildPages(site, content)), ...(await buildProjectPages(site, content))];
+    const pages = [
+        ...(await buildPages(site, content)),
+        ...(await buildProjectPages(site, content)),
+        ...(await buildNewsPages(site, content))
+    ];
     await buildDemos(site, content);
     await buildSeoFiles(site, pages);
 
