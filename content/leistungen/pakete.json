@@ -1,21 +1,86 @@
 {
-    "_help": "LEISTUNGEN / PAKETE (page /leistungen/). One object per package, shown in this order. 'price' is the small line under the title (e.g. 'ab 1.200 €' or 'Preis auf Anfrage'). 'includes' is the list of what the package contains. 'topic' must match one of the CONTACT_TOPICS in /shared/contact-schema.js, so the contact form opens with this topic selected. 'highlight': true gives the card a stronger frame (use for one package at most). 'id' (optional) becomes an anchor, e.g. /leistungen/#paket-website.",
+    "_help": "LEISTUNGEN / PAKETE. One object per package, shown in this order on /leistungen/. Each package also gets its own page /leistungen/<slug>/ built from 'detail'. Card fields: name, price ('ab 1.200 €' or 'Preis auf Anfrage'), summary, includes (list), idealFor, topic (must match CONTACT_TOPICS in /shared/contact-schema.js, pre-selects the contact form), highlight (stronger frame, one package at most), slug (folder name of the detail page, lower case, no umlauts). Detail page fields in 'detail': headline + headlineAccent, intro, problemTitle + problem (paragraphs), benefits (4 x title/text), steps (4 x title/text), faq (question/answer), related (label/href, a link at the end).",
     "packages": [
         {
             "id": "website",
             "name": "Website für dein Unternehmen",
             "price": "Preis auf Anfrage",
-            "summary": "Ein moderner, schneller und sicherer Internetauftritt für kleine und mittelständische Unternehmen. Gebaut mit KI-Unterstützung, aber geplant, geprüft und verantwortet von mir.",
+            "summary": "Ein moderner, schneller und sicherer Internetauftritt für kleine und mittelständische Unternehmen. Geplant, umgesetzt und geprüft von mir.",
             "includes": [
                 "Struktur, Texte und Gestaltung passend zu deinem Unternehmen",
-                "KI-gestützte Entwicklung, jede Seite von mir geprüft und getestet",
+                "Effiziente Entwicklung, jede Seite von mir geprüft und getestet",
                 "Saubere Trennung von Frontend und Backend",
                 "Sicherheit von Anfang an: keine Zugangsdaten im Browser, geschützte Formulare, Sicherheits-Header",
                 "Datenschutzfreundlich ohne unnötige Tracker und externe Dienste",
                 "Schnelle Ladezeiten und optimiert für das Smartphone"
             ],
             "idealFor": "Handwerksbetriebe und Mittelständler, die einen modernen und verlässlichen Auftritt brauchen",
-            "topic": "Website"
+            "topic": "Website",
+            "slug": "website",
+            "detail": {
+                "headline": "Eine Website, die für dich arbeitet.",
+                "headlineAccent": "Modern. Schnell. Sicher.",
+                "intro": "Deine Website ist oft der erste Eindruck, den Kunden und Bewerber von deinem Unternehmen bekommen. Ich baue dir einen modernen Auftritt, der klar zeigt, wofür du stehst, auf jedem Gerät schnell lädt und sauber aufgebaut ist.",
+                "problemTitle": "Warum viele Websites nicht funktionieren",
+                "problem": [
+                    "Viele Unternehmensseiten sind veraltet, langsam oder auf dem Smartphone kaum zu bedienen. Andere wurden schnell zusammengeklickt und sehen zwar modern aus, doch niemand weiß genau, was technisch dahintersteckt.",
+                    "Eine gute Website ist beides: verständlich für deine Kunden und sauber gebaut unter der Oberfläche. Genau darauf lege ich Wert."
+                ],
+                "benefits": [
+                    {
+                        "title": "Klare Inhalte",
+                        "text": "Struktur und Texte, die schnell zeigen, was du anbietest und warum man sich für dich entscheiden sollte."
+                    },
+                    {
+                        "title": "Sorgfältig umgesetzt",
+                        "text": "Ich entwickle mit modernen Werkzeugen und arbeite dadurch effizient. Jede Seite prüfe und teste ich selbst, bevor sie online geht."
+                    },
+                    {
+                        "title": "Sicher aufgebaut",
+                        "text": "Frontend und Backend sind sauber getrennt. Zugangsdaten landen nie im Browser und Formulare sind gegen Spam und Missbrauch geschützt."
+                    },
+                    {
+                        "title": "Schnell und datenschutzfreundlich",
+                        "text": "Schriften werden selbst ausgeliefert und auf unnötige Tracker wird verzichtet. Das sorgt für kurze Ladezeiten und vereinfacht den Datenschutz."
+                    }
+                ],
+                "steps": [
+                    {
+                        "title": "Ziele klären",
+                        "text": "Wir besprechen, wen deine Website erreichen soll und was Besucher dort tun sollen, zum Beispiel anfragen oder sich bewerben."
+                    },
+                    {
+                        "title": "Struktur und Texte",
+                        "text": "Ich entwickle den Aufbau der Seiten und schreibe Texte, die deine Kunden verstehen und überzeugen."
+                    },
+                    {
+                        "title": "Gestaltung und Umsetzung",
+                        "text": "Die Website entsteht in deinem Corporate Design, optimiert für Smartphone, Tablet und Desktop."
+                    },
+                    {
+                        "title": "Prüfung und Livegang",
+                        "text": "Vor dem Start teste ich Funktionen, Formulare und Sicherheit. Danach geht deine Website online und du bekommst eine kurze Einweisung."
+                    }
+                ],
+                "faq": [
+                    {
+                        "question": "Nutzt du KI beim Bauen der Website?",
+                        "answer": "Ja, als Werkzeug. Moderne KI-Werkzeuge helfen mir, schneller und damit günstiger zu arbeiten. Die Planung, die Texte und die Prüfung jeder Seite übernehme ich selbst. So bekommst du eine durchdachte Website statt einer ungeprüften Vorlage."
+                    },
+                    {
+                        "question": "Kann ich Inhalte später selbst ändern?",
+                        "answer": "Das hängt davon ab, wie deine Website aufgebaut ist. Wir klären vorab gemeinsam, welche Inhalte du selbst pflegen möchtest, und finden die passende Lösung."
+                    },
+                    {
+                        "question": "Was brauche ich für den Start?",
+                        "answer": "Ein paar Informationen zu deinem Unternehmen und deinem Angebot reichen. Logo, Fotos und bestehende Texte helfen, wenn sie vorhanden sind. Alles Weitere erarbeiten wir gemeinsam."
+                    }
+                ],
+                "related": {
+                    "label": "Zum Portfolio",
+                    "href": "/portfolio/"
+                }
+            }
         },
         {
             "name": "Landingpage",
@@ -30,7 +95,73 @@
                 "Übergabe mit kurzer Einweisung"
             ],
             "idealFor": "Neue Angebote, Recruiting-Kampagnen und Leadgenerierung",
-            "topic": "Landingpage"
+            "topic": "Landingpage",
+            "id": "landingpage",
+            "slug": "landingpage",
+            "detail": {
+                "headline": "Eine Seite. Ein Ziel.",
+                "headlineAccent": "Mehr Anfragen.",
+                "intro": "Eine Landingpage konzentriert sich auf genau eine Sache: Besucher von deinem Angebot zu überzeugen und zur Anfrage zu führen. Ohne Ablenkung und ohne Umwege.",
+                "problemTitle": "Warum Anzeigen oft ins Leere laufen",
+                "problem": [
+                    "Viele Kampagnen schicken Interessenten auf die Startseite einer Website. Dort finden sie zwar viele Informationen, aber keinen klaren nächsten Schritt. Die Folge: Sie klicken weg.",
+                    "Eine Landingpage ist genau auf die Anzeige und die Zielgruppe abgestimmt. Sie greift die Botschaft auf, beantwortet die wichtigsten Fragen und macht das Anfragen so einfach wie möglich."
+                ],
+                "benefits": [
+                    {
+                        "title": "Eine klare Botschaft",
+                        "text": "Die Seite zeigt in wenigen Sekunden, was du anbietest und für wen es gedacht ist."
+                    },
+                    {
+                        "title": "Texte, die überzeugen",
+                        "text": "Ich schreibe die Texte so, dass sie Einwände früh beantworten und Vertrauen aufbauen."
+                    },
+                    {
+                        "title": "Einfache Anfrage",
+                        "text": "Kurze Formulare oder wenige gezielte Fragen senken die Hürde und bringen mehr Anfragen."
+                    },
+                    {
+                        "title": "Für das Smartphone gemacht",
+                        "text": "Die meisten Besucher kommen über das Handy. Deshalb ist die Seite von Anfang an mobil gedacht."
+                    }
+                ],
+                "steps": [
+                    {
+                        "title": "Angebot und Zielgruppe",
+                        "text": "Wir klären, wen die Seite erreichen soll und welche Entscheidung am Ende stehen soll."
+                    },
+                    {
+                        "title": "Aufbau und Texte",
+                        "text": "Ich entwickle die Struktur der Seite und schreibe die Texte."
+                    },
+                    {
+                        "title": "Gestaltung und Umsetzung",
+                        "text": "Die Seite entsteht in deinem Corporate Design und wird an dein Postfach oder dein System angebunden."
+                    },
+                    {
+                        "title": "Start und Auswertung",
+                        "text": "Nach dem Start schauen wir uns an, wie die Seite funktioniert, und verbessern sie gezielt."
+                    }
+                ],
+                "faq": [
+                    {
+                        "question": "Was ist der Unterschied zu einer Website?",
+                        "answer": "Eine Website stellt dein ganzes Unternehmen vor. Eine Landingpage konzentriert sich auf ein einziges Angebot und ein einziges Ziel, zum Beispiel Bewerbungen für eine Stelle oder Anfragen für ein Produkt."
+                    },
+                    {
+                        "question": "Brauche ich dafür Werbeanzeigen?",
+                        "answer": "Nicht unbedingt. Ihre volle Wirkung entfaltet eine Landingpage aber in Kombination mit gezielten Kampagnen, zum Beispiel über Meta Ads."
+                    },
+                    {
+                        "question": "Wohin gehen die Anfragen?",
+                        "answer": "Anfragen landen direkt dort, wo du sie bearbeitest, zum Beispiel in deinem E-Mail-Postfach."
+                    }
+                ],
+                "related": {
+                    "label": "Landingpages zum Ausprobieren",
+                    "href": "/portfolio/funnels/"
+                }
+            }
         },
         {
             "name": "Funnel & Meta Ads",
@@ -46,7 +177,73 @@
             ],
             "idealFor": "Recruiting, Leadgenerierung und neue Kundengruppen",
             "topic": "Funnel & Meta Ads",
-            "highlight": true
+            "highlight": true,
+            "id": "funnel-meta-ads",
+            "slug": "funnel-meta-ads",
+            "detail": {
+                "headline": "Planbare Anfragen.",
+                "headlineAccent": "Über Facebook und Instagram.",
+                "intro": "Mit einem durchdachten Funnel und gezielten Meta Ads erreichst du genau die Menschen, die dein Angebot brauchen. Ich übernehme alles von der Zielgruppenanalyse bis zur laufenden Optimierung.",
+                "problemTitle": "Warum Werbung allein nicht reicht",
+                "problem": [
+                    "Viele Unternehmen schalten Anzeigen, ohne genau zu wissen, wen sie erreichen wollen und was danach passieren soll. Das Budget ist schnell verbraucht, die Anfragen bleiben aus.",
+                    "Ein Funnel denkt den ganzen Weg mit: von der ersten Anzeige im Feed über die Landingpage bis zur Anfrage. Jeder Schritt hat eine klare Aufgabe und lässt sich messen und verbessern."
+                ],
+                "benefits": [
+                    {
+                        "title": "Genaue Zielgruppenanalyse",
+                        "text": "Ich finde heraus, wer dein Angebot wirklich braucht und wie diese Menschen angesprochen werden möchten."
+                    },
+                    {
+                        "title": "Durchdachter Funnel",
+                        "text": "Anzeige, Landingpage und Anfrage greifen nahtlos ineinander."
+                    },
+                    {
+                        "title": "Creatives und Texte aus einer Hand",
+                        "text": "Motive und Anzeigentexte entstehen passend zu deiner Zielgruppe und deiner Marke."
+                    },
+                    {
+                        "title": "Laufende Optimierung",
+                        "text": "Ich werte die Ergebnisse regelmäßig aus und verbessere Targeting, Anzeigen und Seite gezielt."
+                    }
+                ],
+                "steps": [
+                    {
+                        "title": "Analyse",
+                        "text": "Wir klären Angebot, Zielgruppe und das Ziel der Kampagne."
+                    },
+                    {
+                        "title": "Strategie",
+                        "text": "Ich plane den Funnel und die Botschaften für jede Station."
+                    },
+                    {
+                        "title": "Umsetzung",
+                        "text": "Creatives, Texte und Landingpage entstehen. Danach richte ich die Kampagnen im Werbeanzeigenmanager ein."
+                    },
+                    {
+                        "title": "Optimierung",
+                        "text": "Nach dem Start werte ich die Ergebnisse aus und verbessere die Kampagne fortlaufend."
+                    }
+                ],
+                "faq": [
+                    {
+                        "question": "Wie viel Werbebudget brauche ich?",
+                        "answer": "Das hängt von deinem Ziel, deiner Region und deiner Zielgruppe ab. Wir legen das Budget gemeinsam fest, sodass es zu deinem Unternehmen passt."
+                    },
+                    {
+                        "question": "Funktioniert das auch für Recruiting?",
+                        "answer": "Ja. Gerade im Recruiting erreichst du über Facebook und Instagram viele Fachkräfte, die gar nicht aktiv nach einem neuen Job suchen."
+                    },
+                    {
+                        "question": "Wie schnell sehe ich Ergebnisse?",
+                        "answer": "Das hängt von Angebot, Zielgruppe und Budget ab. Wichtig ist, die Kampagne in den ersten Wochen genau zu beobachten und gezielt zu optimieren."
+                    }
+                ],
+                "related": {
+                    "label": "Funnels zum Ausprobieren",
+                    "href": "/portfolio/funnels/"
+                }
+            }
         },
         {
             "name": "Creatives & Copy",
@@ -60,7 +257,73 @@
                 "Empfehlungen für die nächsten Tests"
             ],
             "idealFor": "Laufende Kampagnen, die neue Impulse brauchen",
-            "topic": "Creatives & Copy"
+            "topic": "Creatives & Copy",
+            "id": "creatives-copy",
+            "slug": "creatives-copy",
+            "detail": {
+                "headline": "Motive, die stoppen.",
+                "headlineAccent": "Worte, die wirken.",
+                "intro": "Für laufende Kampagnen brauchst du regelmäßig frische Anzeigen. Ich gestalte Motive und schreibe Texte, die im Feed auffallen, schnell verstanden werden und zu deiner Marke passen.",
+                "problemTitle": "Warum Anzeigen ihre Wirkung verlieren",
+                "problem": [
+                    "Auch gute Anzeigen nutzen sich ab. Wer immer wieder dasselbe Motiv sieht, scrollt irgendwann einfach weiter. Gleichzeitig fehlt im Tagesgeschäft oft die Zeit, neue Varianten zu entwickeln.",
+                    "Mit neuen Creatives und Texten bekommt deine Kampagne frische Impulse. Jede Variante ist so angelegt, dass sie sich sauber testen lässt."
+                ],
+                "benefits": [
+                    {
+                        "title": "Klare Motive",
+                        "text": "Ein Gedanke pro Anzeige, gut lesbar auf dem Smartphone."
+                    },
+                    {
+                        "title": "Starke Texte",
+                        "text": "Hooks, Headlines und Primary Texts in der Sprache deiner Zielgruppe."
+                    },
+                    {
+                        "title": "Varianten zum Testen",
+                        "text": "Mehrere Ansätze, die sich jeweils in einem Punkt unterscheiden. So lernst du, was wirklich funktioniert."
+                    },
+                    {
+                        "title": "Passend zu deiner Marke",
+                        "text": "Alle Motive entstehen in deinem Corporate Design und stärken die Wiedererkennung."
+                    }
+                ],
+                "steps": [
+                    {
+                        "title": "Briefing",
+                        "text": "Wir besprechen Kampagne, Zielgruppe und bisherige Ergebnisse."
+                    },
+                    {
+                        "title": "Ideen und Texte",
+                        "text": "Ich entwickle Ansätze und schreibe die Anzeigentexte."
+                    },
+                    {
+                        "title": "Gestaltung",
+                        "text": "Die Motive entstehen im Feed- und im Story-Format."
+                    },
+                    {
+                        "title": "Übergabe",
+                        "text": "Du bekommst alle Varianten mit Empfehlungen für die nächsten Tests."
+                    }
+                ],
+                "faq": [
+                    {
+                        "question": "In welchen Formaten bekomme ich die Creatives?",
+                        "answer": "Standardmäßig im Feed- und im Story-Format für Facebook und Instagram. Weitere Formate stimmen wir bei Bedarf ab."
+                    },
+                    {
+                        "question": "Kann ich nur Texte oder nur Motive buchen?",
+                        "answer": "Ja. Das Paket lässt sich an deinen Bedarf anpassen."
+                    },
+                    {
+                        "question": "Schaltest du die Anzeigen auch?",
+                        "answer": "Wenn du möchtest, gerne. Dafür eignen sich das Paket Funnel & Meta Ads oder die laufende Betreuung."
+                    }
+                ],
+                "related": {
+                    "label": "Anzeigenkonzepte ansehen",
+                    "href": "/portfolio/creatives/"
+                }
+            }
         },
         {
             "name": "Laufende Betreuung",
@@ -74,7 +337,73 @@
                 "Ein direkter Ansprechpartner statt wechselnder Agenturteams"
             ],
             "idealFor": "Unternehmen, die Marketing langfristig abgeben möchten",
-            "topic": "Laufende Betreuung"
+            "topic": "Laufende Betreuung",
+            "id": "betreuung",
+            "slug": "betreuung",
+            "detail": {
+                "headline": "Dein Marketing in festen Händen.",
+                "headlineAccent": "Monat für Monat.",
+                "intro": "Mit der laufenden Betreuung gibst du dein Marketing dauerhaft ab. Ich kümmere mich um deine Kampagnen, damit du dich voll auf dein Geschäft konzentrieren kannst.",
+                "problemTitle": "Warum Marketing oft liegen bleibt",
+                "problem": [
+                    "Im Alltag eines Betriebs hat Marketing selten Priorität. Kampagnen laufen ungeprüft weiter, Anzeigen werden nicht erneuert und Chancen bleiben ungenutzt.",
+                    "Bei der laufenden Betreuung hast du einen festen Ansprechpartner, der dein Marketing im Blick behält, regelmäßig auswertet und gezielt verbessert."
+                ],
+                "benefits": [
+                    {
+                        "title": "Ein fester Ansprechpartner",
+                        "text": "Kein wechselndes Agenturteam, sondern direkter Kontakt zu mir."
+                    },
+                    {
+                        "title": "Regelmäßig frische Inhalte",
+                        "text": "Neue Creatives und Texte halten deine Kampagnen lebendig."
+                    },
+                    {
+                        "title": "Klare Auswertungen",
+                        "text": "Jeden Monat bekommst du eine verständliche Auswertung mit konkreten Empfehlungen."
+                    },
+                    {
+                        "title": "Enge Abstimmung",
+                        "text": "Feste Termine sorgen dafür, dass wir immer auf dem gleichen Stand sind."
+                    }
+                ],
+                "steps": [
+                    {
+                        "title": "Bestandsaufnahme",
+                        "text": "Wir schauen uns gemeinsam an, wo dein Marketing heute steht."
+                    },
+                    {
+                        "title": "Plan",
+                        "text": "Ich lege Ziele und Schwerpunkte für die nächsten Monate fest."
+                    },
+                    {
+                        "title": "Betreuung",
+                        "text": "Ich steuere die Kampagnen, erstelle neue Inhalte und behalte die Zahlen im Blick."
+                    },
+                    {
+                        "title": "Abstimmung",
+                        "text": "In festen Terminen besprechen wir Ergebnisse und nächste Schritte."
+                    }
+                ],
+                "faq": [
+                    {
+                        "question": "Wie lange läuft die Betreuung?",
+                        "answer": "Das vereinbaren wir individuell. Wichtig ist mir eine Zusammenarbeit, die für beide Seiten passt."
+                    },
+                    {
+                        "question": "Kann ich mit einem einzelnen Projekt starten?",
+                        "answer": "Ja. Viele Unternehmen beginnen mit einer Landingpage oder einer Kampagne und entscheiden danach, ob sie die laufende Betreuung möchten."
+                    },
+                    {
+                        "question": "Wie erreiche ich dich?",
+                        "answer": "Du hast immer einen direkten Draht zu mir, per E-Mail, Telefon oder in unseren festen Terminen."
+                    }
+                ],
+                "related": {
+                    "label": "Mehr über mich",
+                    "href": "/about/"
+                }
+            }
         }
     ]
 }

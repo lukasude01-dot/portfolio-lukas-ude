@@ -251,6 +251,33 @@ async function buildNewsPages(site, content) {
     return builtPages;
 }
 
+/** One explanation page per service package: /leistungen/<slug>/ */
+async function buildServicePages(site, content) {
+    log.step("Building service pages");
+    const template = fs.readFileSync(path.join(TEMPLATES_DIR, "service-page.html"), "utf8");
+    const builtPages = [];
+
+    for (const item of content.packages.filter((entry) => entry.slug && entry.detail)) {
+        const page = createPageData(site, {
+            title: item.name,
+            description: item.detail.intro,
+            path: item.url,
+            bodyClass: "page-service",
+            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: "Leistungen", href: "/leistungen/" }, { label: item.name, href: item.url }]
+        }, {});
+
+        const htmlOutput = await renderPage({
+            site, content, page, body: template,
+            extra: { item, detail: item.detail },
+            sourceName: `templates/service-page.html (${item.slug})`
+        });
+        writeFile(outputPathFor(page.path), htmlOutput);
+        builtPages.push(page);
+        log.info(`${page.path.padEnd(34)} <- content/leistungen/pakete.json (${item.slug})`);
+    }
+    return builtPages;
+}
+
 /** Live funnel demos: standalone landing pages without the main layout. */
 async function buildDemos(site, content) {
     log.step("Building funnel demos");
@@ -318,7 +345,8 @@ async function build() {
     const pages = [
         ...(await buildPages(site, content)),
         ...(await buildProjectPages(site, content)),
-        ...(await buildNewsPages(site, content))
+        ...(await buildNewsPages(site, content)),
+        ...(await buildServicePages(site, content))
     ];
     await buildDemos(site, content);
     await buildSeoFiles(site, pages);

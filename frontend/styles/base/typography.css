@@ -199,6 +199,15 @@ h3,
     text-decoration-color: var(--color-accent);
 }
 
+/* IMAGE CAPTION  (short line below content images, not below
+   background images). Use: <figcaption class="figure-caption"> */
+.figure-caption {
+    margin-top: 0.75rem;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
 /* ==========================================================
    END TYPOGRAPHY
 ========================================================== */

@@ -1,0 +1,91 @@
+        <!-- =========================================================
+             SERVICE PAGE TEMPLATE  (one page per package)
+
+             PURPOSE:
+             Builds /leistungen/<slug>/ for every package in
+             /content/leistungen/pakete.json that has a "slug" and
+             a "detail" block.
+
+             EDIT HERE:
+             Only the LAYOUT of all package pages. Texts live in
+             /content/leistungen/pakete.json -> "detail".
+
+             RELATED STYLES:
+             /frontend/styles/pages/services.css
+
+             GENERATED PARTS:
+             /frontend/build/renderers/services.js
+        ========================================================= -->
+
+
+        <!-- SERVICE PAGE - HERO -->
+        <section class="page-hero theme-dark" aria-labelledby="service-heading">
+            <div class="texture-contours" aria-hidden="true"></div>
+            <div class="container page-hero__inner">
+<!-- @render breadcrumbs -->
+                <p class="page-hero__eyebrow eyebrow eyebrow--line" data-reveal>{{ item.name }}</p>
+                <h1 class="page-hero__title heading-1" id="service-heading" data-reveal data-reveal-delay="1">{{ detail.headline }}<em class="heading-accent">{{ detail.headlineAccent }}</em></h1>
+                <p class="page-hero__intro text-lead" data-reveal data-reveal-delay="2">{{ detail.intro }}</p>
+                <div class="button-row" data-reveal data-reveal-delay="3">
+                    <a class="button button--primary" href="#enthalten">Was enthalten ist<span class="button__arrow" aria-hidden="true">→</span></a>
+                    <a class="button button--ghost" href="/leistungen/">Alle Leistungen</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVICE PAGE - WHY -->
+        <section class="service-why theme-light section" aria-labelledby="service-why-heading">
+            <div class="container service-split">
+                <h2 class="heading-2" id="service-why-heading" data-reveal>{{ detail.problemTitle }}</h2>
+                <div class="service-split__text" data-reveal data-reveal-delay="1">
+<!-- @render service-problem -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVICE PAGE - BENEFITS + WHAT IS INCLUDED -->
+        <section class="service-benefits-section theme-sand section" id="enthalten" aria-labelledby="service-benefits-heading">
+            <div class="container service-split">
+                <div>
+                    <p class="eyebrow eyebrow--line" data-reveal>Was dich erwartet</p>
+                    <h2 class="heading-2 visually-hidden" id="service-benefits-heading">Was dich erwartet</h2>
+<!-- @render service-benefits -->
+                </div>
+                <div class="service-includes" data-reveal data-reveal-delay="2">
+<!-- @render service-includes -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVICE PAGE - STEPS -->
+        <section class="process theme-dark section" aria-labelledby="service-steps-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line" data-reveal>Ablauf</p>
+                    <h2 class="heading-2" id="service-steps-heading" data-reveal data-reveal-delay="1">So gehen wir vor.</h2>
+                </header>
+<!-- @render service-steps -->
+            </div>
+        </section>
+
+
+        <!-- SERVICE PAGE - FAQ + OTHER PACKAGES -->
+        <section class="service-faq-section theme-light section" aria-labelledby="service-faq-heading">
+            <div class="container service-split">
+                <div>
+                    <p class="eyebrow eyebrow--line" data-reveal>Häufige Fragen</p>
+                    <h2 class="heading-2" id="service-faq-heading" data-reveal data-reveal-delay="1">Gut zu wissen.</h2>
+                    <p class="service-related" data-reveal data-reveal-delay="2"><a class="text-link" href="{{ detail.related.href }}">{{ detail.related.label }} →</a></p>
+                </div>
+                <div data-reveal data-reveal-delay="2">
+<!-- @render service-faq -->
+                    <p class="label service-others__label">Weitere Leistungen</p>
+<!-- @render service-others -->
+                </div>
+            </div>
+        </section>
+
+<!-- @include cta-band -->

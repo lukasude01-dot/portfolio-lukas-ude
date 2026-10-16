@@ -98,7 +98,7 @@
     align-items: start;
 }
 
-.about-values__images figure {
+.about-values__frame {
     overflow: hidden;
     border-radius: var(--border-radius);
     aspect-ratio: 3 / 4;
@@ -111,6 +111,9 @@
 /* A single image uses the full width of the image column */
 .about-values__images figure:only-child {
     grid-column: 1 / -1;
+}
+
+.about-values__images figure:only-child .about-values__frame {
     aspect-ratio: 4 / 5;
 }
 

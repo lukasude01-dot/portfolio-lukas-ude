@@ -39,12 +39,15 @@ headerTheme: light
                     </div>
                 </div>
 
-                <!-- EDIT: ABOUT IMAGE (your real photo) -->
-                <figure class="about-hero__portrait" data-reveal="mask">
-                    <img src="/assets/images/portrait/lukas-ude-portrait.jpg"
-                         alt="Lukas Ude, lächelnd, im schwarzen T-Shirt"
-                         sizes="(min-width: 900px) 38vw, 90vw"
-                         loading="eager" data-responsive>
+                <!-- EDIT: ABOUT IMAGE (your real photo) + caption below -->
+                <figure class="about-hero__figure">
+                    <div class="about-hero__portrait" data-reveal="mask">
+                        <img src="/assets/images/portrait/lukas-ude-portrait.jpg"
+                             alt="Lukas Ude, lächelnd, im schwarzen T-Shirt"
+                             sizes="(min-width: 900px) 38vw, 90vw"
+                             loading="eager" data-responsive>
+                    </div>
+                    <figcaption class="figure-caption">Lukas Ude, Marketing, Advertising und KI-Systeme.</figcaption>
                 </figure>
             </div>
         </section>
@@ -76,7 +79,11 @@ headerTheme: light
                         <li data-reveal><h3>Effizient mit KI</h3><p class="text-muted">Ich beschäftige mich intensiv mit KI-Systemen und ihrer Entwicklung. Sie machen meine Arbeit schneller und günstiger, ersetzen aber nicht die Qualität. Diese entsteht weiterhin durch menschliche Erfahrung und Sorgfalt.</p></li>
                     </ul>
                     <div class="about-values__images">
-                        <figure data-reveal="mask"><img src="/assets/images/nature/waldhang.jpg" alt="Waldhang mit Fichten und Birken an einem bewölkten Sommertag" sizes="(min-width: 900px) 25vw, 50vw" data-responsive></figure>
+                        <!-- EDIT: IMAGE + CAPTION -->
+                        <figure>
+                            <div class="about-values__frame" data-reveal="mask"><img src="/assets/images/nature/waldhang.jpg" alt="Waldhang mit Fichten und Birken an einem bewölkten Sommertag" sizes="(min-width: 900px) 40vw, 90vw" data-responsive></div>
+                            <figcaption class="figure-caption">Die Natur ist für mich der Ort, an dem ich den Kopf frei bekomme.</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>

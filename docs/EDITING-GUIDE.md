@@ -354,6 +354,25 @@ Aktuell zeigt der Code auf `http://localhost:3000` (Beispielwert). **Vor dem Liv
 
 ---
 
+## 24. Bildunterschriften
+
+Jedes inhaltliche Bild bekommt eine kurze Bildunterschrift, damit Leser sofort verstehen,
+warum das Bild da ist. Hintergrundbilder (z. B. das Waldbild im Banner der Startseite)
+brauchen keine.
+
+- **In Seiten** (`frontend/pages/*.html`): das Bild in ein `<figure>` setzen und darunter
+  `<figcaption class="figure-caption">Kurzer Satz zum Bild.</figcaption>` schreiben.
+  Beispiel: die beiden Bilder auf `about.html`.
+- **In Projekten** (`content/.../project.json`): beim Bild das Feld `"caption"` ausfüllen.
+
+## 25. Seiten zu den Leistungen
+
+Jedes Paket auf `/leistungen/` hat eine eigene Seite, z. B. `/leistungen/website/`.
+Alle Texte stehen in `content/leistungen/pakete.json` im Block `"detail"` des Pakets:
+Überschrift, Einleitung, „Warum“-Absätze, vier Vorteile, vier Schritte, häufige Fragen
+und ein Link am Ende. `"slug"` bestimmt die Adresse (Kleinbuchstaben, keine Umlaute).
+Das Aussehen aller Paketseiten steuert `frontend/templates/service-page.html`.
+
 ## Vor dem Livegang
 
 1. `npm run build` – Warnungen lesen und abarbeiten (Beispielinhalte, `[ADD …]`, Domain).

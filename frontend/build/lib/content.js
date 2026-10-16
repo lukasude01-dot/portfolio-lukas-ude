@@ -215,6 +215,7 @@ export function loadContent(contentDir, options = {}) {
     const packagesFile = path.join(contentDir, "leistungen", "pakete.json");
     content.packages = fs.existsSync(packagesFile) ? readJson(packagesFile).packages || [] : [];
     for (const item of content.packages) {
+        item.url = item.slug ? `/leistungen/${item.slug}/` : "";
         if (item.topic && !CONTACT_TOPICS.includes(item.topic)) {
             log.warn("CONTENT", `content/leistungen/pakete.json: topic "${item.topic}" of "${item.name}" is not in CONTACT_TOPICS (/shared/contact-schema.js).`);
         }
