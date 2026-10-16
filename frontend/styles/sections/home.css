@@ -279,6 +279,84 @@
     color: var(--color-text-muted);
 }
 
+/* STEPS COMPACT  (six steps with icons, one line each) */
+
+.steps-compact {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-large) var(--spacing-medium);
+}
+
+.steps-compact__line {
+    display: none;
+}
+
+.steps-compact__item {
+    display: grid;
+    gap: 0.4rem;
+    align-content: start;
+}
+
+.steps-compact__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 0.4rem;
+    padding: 0.45rem;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background-color: var(--color-background);
+    color: var(--color-accent);
+}
+
+.steps-compact__number {
+    color: var(--color-text-muted);
+}
+
+.steps-compact__title {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.steps-compact__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* Desktop: six columns on one line, connected by a line that draws in */
+@media (min-width: 1000px) {
+    .steps-compact {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .steps-compact__line {
+        display: block;
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+        right: 1.2rem;
+        height: 1px;
+        background-color: var(--color-line);
+        transform-origin: left center;
+    }
+
+    .js .steps-compact__line[data-reveal="line"] {
+        transform: scaleX(0);
+        transition: transform 1800ms var(--ease-cinematic);
+    }
+
+    .js .steps-compact__line[data-reveal="line"].is-revealed {
+        transform: none;
+    }
+
+    .steps-compact__icon {
+        position: relative;
+    }
+}
+
 /* ==========================================================
    END HOMEPAGE SECTIONS
 ========================================================== */

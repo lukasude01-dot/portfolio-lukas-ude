@@ -28,10 +28,6 @@ export const servicesRenderers = {
                     <h3 class="package__name">${item.name}</h3>
                     ${item.price ? html`<p class="package__price">${item.price}</p>` : ""}
                     <p class="package__summary">${item.summary}</p>
-                    <ul class="package__list" role="list">
-                        ${item.includes.map((entry) => html`<li>${entry}</li>`)}
-                    </ul>
-                    ${item.idealFor ? html`<p class="package__ideal"><span class="label">Ideal für</span> ${item.idealFor}</p>` : ""}
                     <div class="package__buttons">
                         ${item.url ? html`<a class="button ${item.highlight ? "button--primary" : "button--ghost"}" href="${item.url}">Mehr erfahren<span class="button__arrow" aria-hidden="true">→</span></a>` : ""}
                         <a class="text-link" href="/contact/?thema=${encodeURIComponent(item.topic || "")}">Anfragen →</a>

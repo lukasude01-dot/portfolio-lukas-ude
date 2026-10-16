@@ -29,9 +29,9 @@ headerTheme: light
                     <h1 class="heading-1" id="about-heading" data-reveal data-reveal-delay="1">Ideen mit Wurzeln.<em class="heading-accent">Arbeit mit Struktur.</em></h1>
                     <!-- EDIT: ABOUT INTRODUCTION -->
                     <div class="about-hero__text" data-reveal data-reveal-delay="2">
-                        <p class="text-lead">Ich bin Lukas. Bevor ich ins Marketing gewechselt bin, habe ich Forstwirtschaft und Ökosystemmanagement studiert und bereits während des Studiums in einem Forstdienstleistungsunternehmen gearbeitet. Dort habe ich gelernt, was harte Arbeit bedeutet und worauf es Kunden wirklich ankommt.</p>
-                        <p class="text-muted">Heute verbinde ich Copywriting, Creatives, Funnels und Landingpages mit KI-gestützten Workflows. Mein Leitgedanke ist dabei derselbe geblieben: Jede Arbeit soll sauber und gewissenhaft erledigt sein und am Ende einen zufriedenen Kunden hinterlassen.</p>
-                        <p class="text-muted">In meiner Freizeit bin ich am liebsten draußen in der Natur. Gemeinsam mit meinen Hunden bin ich als Nachsuchengespann im Einsatz und unterrichte zusätzlich als Dozent an einer Jagdschule im Bereich Hundewesen. In der Natur bekomme ich den Kopf frei und finde die Ruhe, die ich in meine Arbeit mitnehme.</p>
+                        <p class="text-lead">Ich bin Lukas. Bevor ich ins Marketing gewechselt bin, habe ich Forstwirtschaft und Ökosystemmanagement studiert und bereits während des Studiums in einem Forstdienstleistungsunternehmen gearbeitet.</p>
+                        <p class="text-muted">Heute verbinde ich Copywriting, Creatives, Funnels und Landingpages mit KI-gestützten Workflows.</p>
+                        <p class="text-muted">In meiner Freizeit bin ich am liebsten draußen in der Natur. Gemeinsam mit meinen Hunden bin ich als Nachsuchengespann im Einsatz und unterrichte zusätzlich als Dozent an einer Jagdschule im Bereich Hundewesen.</p>
                     </div>
                     <div class="button-row" data-reveal data-reveal-delay="3">
                         <a class="button button--primary" href="/contact/">Zusammenarbeiten<span class="button__arrow" aria-hidden="true">→</span></a>
@@ -75,8 +75,6 @@ headerTheme: light
                     <ul class="about-values__list" role="list">
                         <li data-reveal><h3>Aus dem Forst</h3><p class="text-muted">In der Forstwirtschaft habe ich gelernt, was harte körperliche Arbeit und echtes Handwerk bedeuten. Diese Bodenständigkeit und meinen Anspruch an saubere Ergebnisse nehme ich in jedes Projekt mit.</p></li>
                         <li data-reveal><h3>Nah an Menschen</h3><p class="text-muted">Ob im Forst, in der Agentur oder im Community Management: Ich stand immer im direkten Austausch mit Kunden und Zielgruppen. Dadurch weiß ich, was Menschen wirklich bewegt und wie sie auf Botschaften reagieren.</p></li>
-                        <li data-reveal><h3>Gezielt statt laut</h3><p class="text-muted">Anstatt ein Angebot möglichst vielen Menschen vor die Nase zu halten, suche ich gezielt nach denen, die es wirklich brauchen. So entfaltet jede Kampagne ihre größte Wirkung und dein Budget wird sinnvoll eingesetzt.</p></li>
-                        <li data-reveal><h3>Effizient mit KI</h3><p class="text-muted">Ich beschäftige mich intensiv mit KI-Systemen und ihrer Entwicklung. Sie machen meine Arbeit schneller und günstiger, ersetzen aber nicht die Qualität. Diese entsteht weiterhin durch menschliche Erfahrung und Sorgfalt.</p></li>
                     </ul>
                     <div class="about-values__images">
                         <!-- EDIT: IMAGE + CAPTION -->
@@ -122,6 +120,98 @@ headerTheme: light
 
 
         <!-- =========================================================
+             PROCESS SECTION  (detailed, linked from the homepage)
+
+             PURPOSE:
+             How a project moves: IDEE, STRATEGIE, GESTALTUNG, SYSTEM,
+             UMSETZUNG, ANALYSE & OPTIMIERUNG. Followed by a short
+             block about how the collaboration with clients works.
+
+             EDIT HERE:
+             - Each <li class="process__step"> is one step
+               (title, text and the small focus tags)
+             - "EDIT: COLLABORATION TEXT" below the steps
+
+             RELATED STYLES:
+             /frontend/styles/sections/process.css
+             (moved here from the homepage, which shows a compact version)
+        ========================================================= -->
+        <section class="process theme-sand section" id="vorgehen" aria-labelledby="process-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow eyebrow--line" data-reveal>Vorgehen</p>
+                    <h2 class="heading-2" id="process-heading" data-reveal data-reveal-delay="1">Von der Idee zum System.</h2>
+                    <p class="text-lead" data-reveal data-reveal-delay="2">So läuft ein Projekt mit mir ab, ganz gleich, ob es um eine einzelne Landingpage oder eine komplette Kampagne geht. Jeder Schritt baut auf dem vorherigen auf.</p>
+                </header>
+
+                <ol class="process__steps process__steps--detailed" role="list">
+                    <li class="process__line" aria-hidden="true" data-reveal="line"></li>
+                    <li class="process__step" data-reveal data-reveal-delay="1">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">01</p>
+                        <h3 class="process__title">Idee</h3>
+                        <p class="process__text">Bevor etwas gestaltet wird, möchte ich verstehen, worum es wirklich geht. Welches Problem hat deine Zielgruppe und warum ist dein Angebot die richtige Lösung dafür? Wen genau möchtest du erreichen und was hält diese Menschen bisher davon ab, bei dir anzufragen?</p>
+                        <p class="process__text">Häufig zeigt sich schon in diesem Schritt, dass nicht mehr Werbung fehlt, sondern ein klareres Angebot.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Problem</li><li class="badge">Zielgruppe</li><li class="badge">Angebot</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="2">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">02</p>
+                        <h3 class="process__title">Strategie</h3>
+                        <p class="process__text">Aus diesen Erkenntnissen entsteht der Plan, wie dein Angebot zu den richtigen Menschen gelangt. Gemeinsam schärfen wir deine Positionierung, analysieren die Zielgruppe und legen fest, welche Botschaft im Gedächtnis bleiben soll.</p>
+                        <p class="process__text">Anschließend planen wir den gesamten Weg: von der ersten Anzeige im Feed über die Landingpage bis zu dem Moment, in dem sich ein Interessent für dein Angebot entscheidet. Jede Station auf diesem Weg erfüllt eine klare Aufgabe.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Positionierung</li><li class="badge">Zielgruppenanalyse</li><li class="badge">Botschaft</li><li class="badge">Customer Journey</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="1">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">03</p>
+                        <h3 class="process__title">Gestaltung</h3>
+                        <p class="process__text">Texte und Creatives verfolgen ein gemeinsames Ziel: Sie sollen deine Botschaft so vermitteln, dass sie ankommt. Meine Creatives sind auf Performance und auf die jeweilige Zielgruppe ausgerichtet. Nicht jede Zielgruppe braucht eine aufwendige Gestaltung. Oft wirken einfache Motive mit klarer Hierarchie am stärksten, weil sie sich auf einen Blick erfassen lassen.</p>
+                        <p class="process__text">Ein einheitliches Corporate Design zieht sich von der Anzeige über den Funnel bis zur Landingpage und sorgt dafür, dass deine Marke überall wiedererkannt wird. Die Texte formuliere ich zudem so, dass auch KI-Systeme sie gut verarbeiten können. Das hilft Meta beim präziseren Ausspielen deiner Anzeigen und KI-Suchmaschinen dabei, dich zu finden.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Copy</li><li class="badge">Performance Creatives</li><li class="badge">Corporate Design</li><li class="badge">Funnels &amp; Landingpages</li><li class="badge">KI-Suchoptimierung (GEO)</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="2">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">04</p>
+                        <h3 class="process__title">System</h3>
+                        <p class="process__text">KI ist für mich ein Werkzeug und kein Ersatz für gute Arbeit. Ich nutze sie gezielt dort, wo sie Abläufe beschleunigt und reproduzierbar macht, etwa bei der Recherche, beim Erstellen von Varianten oder bei wiederkehrenden Aufgaben. Die Richtung, die Ideen und der Großteil der Arbeit bleiben in menschlicher Hand. So entstehen durchdachte Ergebnisse statt austauschbarer KI-Inhalte.</p>
+                        <p class="process__text">Für dich hat das einen klaren Vorteil: Weil viele Abläufe effizienter werden, sparst du deutlich Kosten, ohne bei der Qualität Abstriche zu machen.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Workflows</li><li class="badge">Menschlich geführt</li><li class="badge">Kosteneffizient</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="1">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">05</p>
+                        <h3 class="process__title">Umsetzung</h3>
+                        <p class="process__text">In diesem Schritt wird aus dem Plan ein laufendes Projekt. Ich richte die Kampagnen ein und baue Landingpages und Funnels. Anfragen landen dabei ohne Umwege genau dort, wo sie bearbeitet werden.</p>
+                        <p class="process__text">Um die technischen Details musst du dich dabei nicht kümmern. Ich halte dich auf dem Laufenden, sodass du jederzeit weißt, wo das Projekt steht und was als Nächstes passiert.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Kampagnen</li><li class="badge">Landingpages</li><li class="badge">Funnels</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="2">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">06</p>
+                        <h3 class="process__title">Analyse &amp; Optimierung</h3>
+                        <p class="process__text">Mit dem Start beginnt die eigentliche Arbeit erst richtig. Ich werte genau aus, was funktioniert und was nicht: Welche Anzeigen bringen Anfragen, an welcher Stelle springen Nutzer ab und welche Zielgruppen reagieren am besten?</p>
+                        <p class="process__text">Daraus ergeben sich zwei wirkungsvolle Hebel. Zum einen lässt sich das Targeting gezielt auf dein Angebot abstimmen. Zum anderen kannst du dein Angebot noch besser an die Bedürfnisse deiner Zielgruppe anpassen. So wird Marketing planbar und hängt nicht länger vom Zufall ab.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Auswertung</li><li class="badge">Optimierung</li><li class="badge">Markt und Produkt</li><li class="badge">Planbarkeit</li></ul>
+                    </li>
+                </ol>
+
+                <!-- EDIT: COLLABORATION TEXT -->
+                <div class="process__collaboration">
+                    <div>
+                        <p class="eyebrow" data-reveal>Mein Anspruch</p>
+                        <h3 class="process__collaboration-title heading-3" data-reveal data-reveal-delay="1">Du konzentrierst dich auf dein Geschäft.<br><em class="heading-accent">Ich kümmere mich um dein Marketing.</em></h3>
+                    </div>
+                    <div class="process__collaboration-text" data-reveal data-reveal-delay="2">
+                        <p class="text-lead">Mein Ziel ist es, dir so viel Arbeit wie möglich abzunehmen. Gleichzeitig bleibt Marketing Teamarbeit: Ich sorge für neue Anfragen und du machst daraus zufriedene Kunden. Deshalb arbeiten wir eng zusammen und stimmen uns regelmäßig ab. So wird das Zusammenspiel mit jeder Runde besser.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= END PROCESS SECTION ================= -->
+
+
+        <!-- =========================================================
              TIMELINE  (MY JOURNEY)
 
              PURPOSE:
@@ -152,67 +242,5 @@ headerTheme: light
         </section>
         <!-- ================= END TIMELINE ================= -->
 
-
-        <!-- =========================================================
-             SKILLS  (written as running text)
-
-             PURPOSE:
-             Explains how the disciplines come together, based on
-             Lukas' experience in forestry, craft and medium-sized
-             companies.
-
-             EDIT HERE:
-             - Text below ("EDIT: SKILLS TEXT")
-             (The old card grid from /content/career/skills.json is
-             no longer shown. Add "<!-- @render skills -->" back here
-             to show it again.)
-
-             RELATED STYLES:
-             /frontend/styles/pages/about.css
-        ========================================================= -->
-        <section class="about-skills theme-light section" aria-labelledby="skills-heading">
-            <div class="container about-skills__inner">
-                <div>
-                    <p class="eyebrow eyebrow--line" data-reveal>Fähigkeiten</p>
-                    <h2 class="heading-2" id="skills-heading" data-reveal data-reveal-delay="1">Ein Werkzeugkasten.<br><em class="heading-accent">Verbundene Disziplinen.</em></h2>
-                </div>
-                <!-- EDIT: SKILLS TEXT -->
-                <div class="about-skills__text" data-reveal data-reveal-delay="2">
-                    <p class="text-lead">
-                        Copywriting, Creatives, Funnels, Meta Ads und KI-Systeme sind für mich keine getrennten
-                        Leistungen. Erst wenn sie ineinandergreifen, entsteht Marketing, das wirklich funktioniert.
-                        Genau dieses Zusammenspiel ist der Kern meiner Arbeit.
-                    </p>
-                    <p>
-                        Mein Blick dafür kommt nicht nur aus dem Marketing. In der Forstwirtschaft und im Handwerk
-                        habe ich gelernt, wie ein Betrieb im Alltag funktioniert: Aufträge müssen sauber geplant sein,
-                        Einsätze müssen sitzen und am Ende zählt, ob der Kunde zufrieden ist. In der Betriebs- und
-                        Einsatzleitung eines mittelständischen Unternehmens habe ich erlebt, wie wenig Zeit im
-                        Tagesgeschäft für Marketing bleibt und wie wertvoll Abläufe sind, die einfach laufen.
-                    </p>
-                    <p>
-                        Diese Erfahrung nehme ich in jedes Projekt mit. Ich weiß, wie Handwerker, Fachkräfte und
-                        Unternehmer denken, welche Sprache sie sprechen und worauf sie bei einem Angebot achten.
-                        Deshalb schreibe ich Texte, die den Nerv der Zielgruppe treffen, statt mit Floskeln zu werben.
-                        Meine Creatives sind so gestaltet, dass man sie im Feed in einer Sekunde versteht. Meine Funnels
-                        führen ohne Umwege zur Anfrage.
-                    </p>
-                    <p>
-                        In der Agentur habe ich Kampagnen für Recruiting und B2B von der ersten Idee bis zum fertigen
-                        Funnel umgesetzt. Durch das Community Management war ich nah an den Menschen, die diese
-                        Kampagnen erreichen sollten. Ich habe gesehen, welche Botschaften ankommen und welche nicht.
-                        Dieses Wissen fließt heute in jede Zielgruppenanalyse und in jede Anzeige ein.
-                    </p>
-                    <p>
-                        KI-Systeme verbinden am Ende alle Bausteine miteinander. Ich nutze sie, um wiederkehrende
-                        Aufgaben zu automatisieren, Anfragen zuverlässig weiterzuleiten und Abläufe reproduzierbar zu
-                        machen. So entsteht aus einzelnen Disziplinen ein rundes System, das auch dann zuverlässig
-                        arbeitet, wenn in deinem Betrieb viel los ist. Die Ideen und die Qualität kommen dabei
-                        weiterhin aus Erfahrung und sorgfältiger Arbeit.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- ================= END SKILLS ================= -->
 
 <!-- @include cta-band -->
