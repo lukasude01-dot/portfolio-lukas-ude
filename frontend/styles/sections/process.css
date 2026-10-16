@@ -100,9 +100,13 @@
     }
 }
 
-/* PROCESS - FOUR STEPS (e.g. /leistungen/) */
+/* PROCESS - THREE OR FOUR STEPS (e.g. /leistungen/) */
 
 @media (min-width: 900px) {
+    .process__steps--three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .process__steps--four {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }

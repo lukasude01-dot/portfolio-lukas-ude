@@ -26,7 +26,7 @@ import { validateContact } from "../shared/contact-schema.js";
 const MESSAGES = {
     sending: "Wird gesendet …",
     successTitle: "Danke, deine Nachricht ist angekommen.",
-    successText: "Ich melde mich so bald wie möglich persönlich bei dir.",
+    successText: "Ich melde mich innerhalb von zwei Werktagen persönlich bei dir.",
     errorTitle: "Deine Nachricht konnte nicht gesendet werden.",
     errorText: "Bitte versuche es gleich noch einmal.",
     rateLimited: "Zu viele Nachrichten in kurzer Zeit. Bitte versuche es später noch einmal.",
