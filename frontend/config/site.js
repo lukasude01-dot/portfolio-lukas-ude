@@ -72,7 +72,7 @@ export const siteConfig = {
 
     // EDIT: LOCATION (optional, e.g. "Hamburg, Germany")
     // EXAMPLE VALUE
-    location: "Deutschland",
+    location: "Gera, Thüringen",
 
     // EDIT: SOCIAL LINKS  (empty url = not shown)
     social: [

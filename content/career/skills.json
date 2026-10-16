@@ -55,7 +55,7 @@
                 "KI-gestützte Kreativ-Workflows",
                 "Prompt- und Workflow-Design"
             ],
-            "tools": "[ADD TOOLS]"
+            "tools": "Claude, Claude Code, Claude API, Model Context Protocol (MCP)"
         },
         {
             "name": "Automatisierung & Systeme",

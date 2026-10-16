@@ -2,25 +2,26 @@
     "_help": "MY JOURNEY (About page). One object per station, newest first. Replace [ADD ...] placeholders with your real information (e.g. dates). 'type' is a short label such as Berufserfahrung, Weiterbildung, Studium. 'tags' are optional small badges. 'organisation' and 'location' can stay empty.",
     "entries": [
         {
-            "period": "[ADD DATUM] bis heute",
+            "period": "Laufend",
             "type": "Weiterbildung",
             "title": "KI-Systeme und effizientes Arbeiten mit KI",
-            "organisation": "",
+            "organisation": "Anthropic Academy",
             "location": "",
-            "description": "Seitdem beschäftige ich mich intensiv mit dem effektiven Einsatz von KI-Systemen und ihrer Entwicklung. Mein Ziel ist es, Marketing-Prozesse schneller, reproduzierbar und kosteneffizient zu gestalten, ohne dabei Abstriche bei der Qualität zu machen.",
+            "description": "Ein besonderer Schwerpunkt meiner Arbeit liegt inzwischen auf künstlicher Intelligenz. Ich entwickle KI-gestützte Systeme und Workflows, die wiederkehrende Aufgaben automatisieren und Prozesse effizienter machen. Mein Wissen rund um generative KI und Claude habe ich durch mehrere Weiterbildungen von Anthropic vertieft.",
             "tags": [
                 "KI-Systeme",
                 "Workflows",
-                "Automatisierung"
+                "Automatisierung",
+                "Claude"
             ]
         },
         {
-            "period": "[ADD DATUM]",
+            "period": "Seit April 2026",
             "type": "Berufserfahrung",
             "title": "Online-Marketing-Manager",
-            "organisation": "Marketingagentur mit Schwerpunkt Recruiting und B2B",
+            "organisation": "TLM Operations GmbH",
             "location": "",
-            "description": "Mein Schwerpunkt lag auf der Konzeption und Erstellung von Kampagnen, vor allem im Recruiting für die Logistikbranche sowie für B2B-Kunden. Dazu gehörten die Gestaltung von Grafiken, das Copywriting und der Aufbau von Funnels. Zuletzt habe ich zusätzlich im Webdesign mitgearbeitet und Landingpages erstellt. Durch das Community Management stand ich im direkten Austausch mit den Zielgruppen und habe so wertvolle Einblicke gewonnen, wie unterschiedliche Menschen auf Botschaften reagieren.",
+            "description": "Als Online-Marketing-Manager in einem Recruiting-Unternehmen mit Schwerpunkt Logistik konzipiere und erstelle ich Kampagnen, auch für B2B-Kunden. Zu meinen Aufgaben gehören Copywriting, Grafikdesign und der Aufbau von Funnels, ergänzt durch Webdesign und Landingpages. Im Community Management stehe ich im direkten Austausch mit den Zielgruppen und gewinne so wertvolle Einblicke, wie unterschiedliche Menschen auf Botschaften reagieren.",
             "tags": [
                 "Kampagnen",
                 "Copywriting",
@@ -31,10 +32,21 @@
             ]
         },
         {
-            "period": "[ADD DATUM]",
+            "period": "März bis Juli 2026",
+            "type": "Studium",
+            "title": "Marketing",
+            "organisation": "IU Internationale Hochschule",
+            "location": "",
+            "description": "Ein Semester Marketing als Ergänzung zur Weiterbildung im Copywriting und als fachliche Grundlage für die Neuausrichtung.",
+            "tags": [
+                "Marketing"
+            ]
+        },
+        {
+            "period": "Jan. bis April 2026",
             "type": "Weiterbildung",
             "title": "Weiterbildung zum Copywriter",
-            "organisation": "[ADD ANBIETER]",
+            "organisation": "Freedom Writer Academy",
             "location": "",
             "description": "Mit der Weiterbildung zum Copywriter bin ich ins Marketing eingestiegen. Im Mittelpunkt standen Texte, die überzeugen, ohne aufdringlich zu sein: Hooks, Headlines sowie Anzeigen- und Landingpage-Texte.",
             "tags": [
@@ -42,36 +54,71 @@
             ]
         },
         {
-            "period": "[ADD DATUM]",
+            "period": "März bis Dez. 2025",
             "type": "Berufserfahrung",
-            "title": "Assistenz der Geschäftsführung",
-            "organisation": "Forstdienstleistungsunternehmen",
-            "location": "",
-            "description": "Bereits während des Studiums habe ich die Geschäftsführung unterstützt und in der Betriebs- und Einsatzleitung mitgearbeitet. Dabei hatte ich viel direkten Kundenkontakt. Mein Leitgedanke war schon damals: saubere, gewissenhafte Arbeit und am Ende zufriedene Kunden.",
+            "title": "Assistent der Geschäftsleitung",
+            "organisation": "Forstbetrieb Diehl",
+            "location": "Harth-Pöllnitz",
+            "description": "Zunächst parallel zum Studium habe ich die Geschäftsleitung unterstützt und früh Verantwortung übernommen. Ich war in die Betriebs- und Einsatzleitung sowie in die Personalverantwortung eingebunden und hatte viel direkten Kundenkontakt. Mein Leitgedanke war schon damals: saubere, gewissenhafte Arbeit und am Ende zufriedene Kunden. Ende 2025 habe ich mich bewusst für eine Neuausrichtung in Richtung Marketing und digitale Kommunikation entschieden.",
             "tags": [
                 "Betriebsleitung",
                 "Einsatzleitung",
+                "Personalverantwortung",
                 "Kundenkontakt"
             ]
         },
         {
-            "period": "[ADD DATUM]",
+            "period": "2023 bis 2025",
             "type": "Studium",
             "title": "Forstwirtschaft und Ökosystemmanagement",
-            "organisation": "[ADD HOCHSCHULE]",
+            "organisation": "Fachhochschule Erfurt",
             "location": "",
             "description": "Das Studium hat mir ein fundiertes Verständnis von Natur und Ökosystemen vermittelt. Schon damals hat mich besonders die wirtschaftliche Seite der Forstwirtschaft begeistert.",
             "tags": [
                 "Forstwirtschaft",
                 "Ökosystemmanagement"
             ]
+        },
+        {
+            "period": "Juni 2023",
+            "type": "Schule",
+            "title": "Abitur",
+            "organisation": "Georg-Samuel-Dörffel-Gymnasium",
+            "location": "",
+            "description": "",
+            "tags": []
         }
     ],
     "certificates": [
         {
-            "year": "[ADD DATUM]",
-            "title": "Copywriter",
-            "issuer": "[ADD ANBIETER]"
+            "year": "2026",
+            "title": "Claude 101",
+            "issuer": "Anthropic Academy"
+        },
+        {
+            "year": "2026",
+            "title": "Claude Code 101",
+            "issuer": "Anthropic Academy"
+        },
+        {
+            "year": "2026",
+            "title": "AI Fluency: Framework and Foundations",
+            "issuer": "Anthropic Academy"
+        },
+        {
+            "year": "2026",
+            "title": "Building with the Claude API",
+            "issuer": "Anthropic Academy"
+        },
+        {
+            "year": "2026",
+            "title": "Introduction to Model Context Protocol",
+            "issuer": "Anthropic Academy"
+        },
+        {
+            "year": "2026",
+            "title": "Copywriting",
+            "issuer": "Freedom Writer Academy"
         }
     ]
 }
