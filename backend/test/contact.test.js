@@ -13,6 +13,8 @@ import { loadConfig } from "../src/config.js";
 import { createApp } from "../src/server.js";
 import { createFormTokens } from "../src/lib/form-token.js";
 import { validateContact } from "../../shared/contact-schema.js";
+import { createContactDelivery } from "../src/services/email.js";
+import nodemailer from "nodemailer";
 
 const ORIGIN = "http://localhost:3000";
 const VALID_MESSAGE = {
@@ -171,4 +173,28 @@ test("production refuses to start without required secrets", () => {
     const { problems } = loadConfig({ NODE_ENV: "production" });
     assert.ok(problems.some((problem) => problem.includes("FORM_TOKEN_SECRET")));
     assert.ok(problems.some((problem) => problem.includes("CONTACT_DELIVERY")));
+});
+
+test("smtp delivery needs mailbox settings", () => {
+    const { problems } = loadConfig({ CONTACT_DELIVERY: "smtp", SMTP_HOST: "smtp.example.com" });
+    assert.ok(problems.some((problem) => problem.includes("SMTP_USER")));
+    const complete = loadConfig({ CONTACT_DELIVERY: "smtp", SMTP_HOST: "smtp.example.com", SMTP_USER: "kontakt@example.com", SMTP_PASSWORD: "x", CONTACT_TO_EMAIL: "kontakt@example.com" });
+    assert.deepEqual(complete.problems, []);
+    assert.equal(complete.config.contact.fromEmail, "kontakt@example.com");
+    assert.equal(complete.config.contact.smtp.port, 465);
+});
+
+test("smtp delivery builds a safe e-mail (no header injection)", async () => {
+    const { config } = loadConfig({ CONTACT_DELIVERY: "smtp", SMTP_HOST: "smtp.example.com", SMTP_USER: "kontakt@example.com", SMTP_PASSWORD: "x", CONTACT_TO_EMAIL: "inbox@example.com" });
+    const sent = [];
+    const fakeTransport = nodemailer.createTransport({ streamTransport: true, buffer: true, newline: "unix" });
+    const recordingTransport = { sendMail: async (mail) => { const info = await fakeTransport.sendMail(mail); sent.push(info.message.toString()); return info; } };
+    const deliver = createContactDelivery({ config, logger: console, smtpTransport: recordingTransport });
+    await deliver({ ...VALID_MESSAGE, name: "Eve\r\nBcc: victim@example.com", message: "<script>alert(1)</script> long enough text" });
+    const raw = sent[0];
+    const headers = raw.slice(0, raw.indexOf("\n\n"));
+    assert.match(headers, /^To: inbox@example\.com$/m);
+    assert.match(headers, /^From: Website Kontaktformular <kontakt@example\.com>$/m);
+    assert.doesNotMatch(headers, /^Bcc:/mi);
+    assert.match(raw, /&lt;script&gt;/);
 });

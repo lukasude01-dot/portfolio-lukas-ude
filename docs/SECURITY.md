@@ -37,7 +37,7 @@
 - [ ] `FORM_TOKEN_SECRET` set (32+ random characters)
 - [ ] `ALLOWED_ORIGINS` = your real domain(s) with `https://`
 - [ ] `TRUST_PROXY=true` if the host uses a proxy/load balancer (otherwise all visitors share one rate limit)
-- [ ] `CONTACT_DELIVERY=resend` or `webhook` with valid keys
+- [ ] `CONTACT_DELIVERY=smtp` (domain mailbox) or `webhook` with valid settings
 - [ ] HTTPS active on the domain
 - [ ] `npm test` and `npm run build && npm run check` pass
 - [ ] Datenschutz page names the hosting and e-mail provider

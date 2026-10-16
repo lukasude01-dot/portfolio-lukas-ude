@@ -8,7 +8,7 @@
         "node": ">=22.9"
     },
     "scripts": {
-        "setup": "npm --prefix frontend install",
+        "setup": "npm --prefix frontend install && npm --prefix backend install",
         "dev": "node scripts/dev.js",
         "build": "npm --prefix frontend run build",
         "start": "npm --prefix backend start",

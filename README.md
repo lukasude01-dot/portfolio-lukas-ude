@@ -37,7 +37,7 @@ news articles written in Markdown, an About page with CV timeline and a secure c
   /src/server.js     entry point
   /src/config.js     reads environment variables
   /src/routes        API endpoints (contact, health)
-  /src/services      contact delivery (log / Resend / webhook)
+  /src/services      contact delivery (log / SMTP / webhook)
   /src/lib           security headers, rate limit, tokens, static files
   /test              automated tests (npm test)
   .env.example       all settings explained – NO real values
@@ -98,7 +98,7 @@ They must match the `path:` of the portfolio pages. Details: [`docs/ARCHITECTURE
 | `POST /api/contact` | validates and delivers a contact message |
 | everything else | the built website from `frontend/dist` (if `SERVE_FRONTEND=true`) |
 
-Contact delivery is configurable: `log` (development), `resend` (e-mail) or
+Contact delivery is configurable: `log` (development), `smtp` (e-mail via your domain mailbox) or
 `webhook` (Make / n8n / Zapier / CRM). Details: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md),
 [`docs/SECURITY.md`](docs/SECURITY.md).
 
@@ -107,7 +107,7 @@ Contact delivery is configurable: `log` (development), `resend` (e-mail) or
 Requirements: **Node.js 22.9 or newer**.
 
 ```bash
-npm run setup      # once: installs the build tools (sharp, qrcode)
+npm run setup      # once: installs the build tools (sharp, qrcode) and nodemailer for the backend
 npm run dev        # builds, watches for changes, starts http://localhost:3000
 ```
 
@@ -142,7 +142,7 @@ Frontend and backend can be deployed **together** or **separately**.
 - Build command: `npm run setup && npm run build`
 - Start command: `npm start`
 - Environment variables: see `backend/.env.example` (at least `NODE_ENV=production`,
-  `FORM_TOKEN_SECRET`, `ALLOWED_ORIGINS`, `CONTACT_DELIVERY` + its keys, `TRUST_PROXY=true`).
+  `FORM_TOKEN_SECRET`, `ALLOWED_ORIGINS`, `CONTACT_DELIVERY` + its settings, `TRUST_PROXY=true`).
 
 **Option B – static hosting + separate API:**
 - Website on Netlify / Cloudflare Pages: base directory `frontend`, build
@@ -178,8 +178,9 @@ Before going live: set `url` in `frontend/config/site.js` to the real domain
 ## 15. Connect a real contact form
 
 1. Choose a delivery method in the backend environment:
-   - **E-mail via Resend:** `CONTACT_DELIVERY=resend`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`,
-     `CONTACT_FROM_EMAIL` (a verified sender domain).
+   - **E-mail via your domain mailbox (free):** `CONTACT_DELIVERY=smtp`, `SMTP_HOST`,
+     `SMTP_PORT` (465), `SMTP_USER` (e.g. `kontakt@your-domain.de`), `SMTP_PASSWORD`,
+     `CONTACT_TO_EMAIL`. The SMTP data is in your domain provider's help pages.
    - **Automation / CRM:** `CONTACT_DELIVERY=webhook`, `CONTACT_WEBHOOK_URL`
      (optionally `CONTACT_WEBHOOK_SECRET` for a signature header).
 2. Set `FORM_TOKEN_SECRET` (32+ random characters) and `ALLOWED_ORIGINS`.

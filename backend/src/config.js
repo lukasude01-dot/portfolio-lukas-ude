@@ -7,7 +7,7 @@
  * On a hosting provider you enter them in its dashboard.
  *
  * SECURITY:
- * - Secrets (API keys, token secret) only exist here, on the server.
+ * - Secrets (mailbox password, token secret) only exist here, on the server.
  * - .env is listed in .gitignore and must never be committed.
  * - In production the server refuses to start if a required
  *   secret is missing (better than running insecurely).
@@ -52,17 +52,17 @@ export function loadConfig(env = process.env) {
     }
 
     const delivery = (env.CONTACT_DELIVERY || "log").toLowerCase();
-    if (!["log", "resend", "webhook"].includes(delivery)) {
-        problems.push(`CONTACT_DELIVERY must be "log", "resend" or "webhook" (got "${delivery}").`);
+    if (!["log", "smtp", "webhook"].includes(delivery)) {
+        problems.push(`CONTACT_DELIVERY must be "log", "smtp" or "webhook" (got "${delivery}").`);
     }
-    if (delivery === "resend" && (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL)) {
-        problems.push('CONTACT_DELIVERY="resend" needs RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL.');
+    if (delivery === "smtp" && (!env.SMTP_HOST || !env.SMTP_USER || !env.SMTP_PASSWORD || !env.CONTACT_TO_EMAIL)) {
+        problems.push('CONTACT_DELIVERY="smtp" needs SMTP_HOST, SMTP_USER, SMTP_PASSWORD and CONTACT_TO_EMAIL.');
     }
     if (delivery === "webhook" && !env.CONTACT_WEBHOOK_URL) {
         problems.push('CONTACT_DELIVERY="webhook" needs CONTACT_WEBHOOK_URL.');
     }
     if (isProduction && delivery === "log") {
-        problems.push('CONTACT_DELIVERY="log" only prints messages to the server log. Choose "resend" or "webhook" for production.');
+        problems.push('CONTACT_DELIVERY="log" only prints messages to the server log. Choose "smtp" or "webhook" for production.');
     }
 
     const config = {
@@ -87,8 +87,14 @@ export function loadConfig(env = process.env) {
         contact: {
             delivery,
             toEmail: env.CONTACT_TO_EMAIL || "",
-            fromEmail: env.CONTACT_FROM_EMAIL || "",
-            resendApiKey: env.RESEND_API_KEY || "",
+            // Most providers only accept the mailbox itself as sender.
+            fromEmail: env.CONTACT_FROM_EMAIL || env.SMTP_USER || "",
+            smtp: {
+                host: env.SMTP_HOST || "",
+                port: readNumber(env.SMTP_PORT, 465),
+                user: env.SMTP_USER || "",
+                password: env.SMTP_PASSWORD || ""
+            },
             webhookUrl: env.CONTACT_WEBHOOK_URL || "",
             webhookSecret: env.CONTACT_WEBHOOK_SECRET || ""
         }

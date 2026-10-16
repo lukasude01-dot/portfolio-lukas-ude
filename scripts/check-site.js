@@ -27,7 +27,7 @@ const SECRET_PATTERNS = [
     { name: "Private key", pattern: /-----BEGIN [A-Z ]*PRIVATE KEY-----/ },
     { name: "AWS access key", pattern: /\bAKIA[0-9A-Z]{16}\b/ },
     { name: "OpenAI/Anthropic style key", pattern: /\bsk-(ant-)?[A-Za-z0-9_-]{20,}/ },
-    { name: "Backend env variable", pattern: /\b(RESEND_API_KEY|FORM_TOKEN_SECRET|CONTACT_WEBHOOK_SECRET)\s*=/ }
+    { name: "Backend env variable", pattern: /\b(SMTP_PASSWORD|FORM_TOKEN_SECRET|CONTACT_WEBHOOK_SECRET)\s*=/ }
 ];
 
 const problems = [];

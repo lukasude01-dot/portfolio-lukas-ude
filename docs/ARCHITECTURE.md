@@ -33,9 +33,9 @@ For print, use the original logo files.
                                                             │ fetch /api/contact
                                                             ▼
                                         ┌───────────────────────────────────┐
-                                        │ /backend (Node, no dependencies)   │
+                                        │ /backend (Node, only nodemailer)   │
                                         │ secrets from environment variables │
-                                        │ → Resend / webhook / log           │
+                                        │ → SMTP / webhook / log             │
                                         └───────────────────────────────────┘
 ```
 
@@ -136,7 +136,7 @@ Everything is disabled under `prefers-reduced-motion`. Parallax and the cursor l
 | `src/config.js` | environment variables, validation, fails fast in production |
 | `src/routes/contact.js` | token + contact endpoint (all checks in order) |
 | `src/routes/health.js` | `/api/health` |
-| `src/services/email.js` | delivery: `log`, `resend`, `webhook` (extendable) |
+| `src/services/email.js` | delivery: `log`, `smtp`, `webhook` (extendable) |
 | `src/lib/form-token.js` | HMAC-signed, single-use, time-limited tokens |
 | `src/lib/rate-limit.js` | per-IP sliding window |
 | `src/lib/http.js` | JSON body limit, origin check, client IP |
