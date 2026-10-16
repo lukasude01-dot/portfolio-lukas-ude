@@ -303,11 +303,14 @@ headerTheme: dark
              PROCESS SECTION
 
              PURPOSE:
-             How a project moves: IDEA → STRATEGY → CREATION →
-             SYSTEM → EXECUTION. The line draws in on scroll.
+             How a project moves: IDEE, STRATEGIE, GESTALTUNG, SYSTEM,
+             UMSETZUNG, ANALYSE & OPTIMIERUNG. Followed by a short
+             block about how the collaboration with clients works.
 
              EDIT HERE:
-             - Each <li> is one step (title + text)
+             - Each <li class="process__step"> is one step
+               (title, text and the small focus tags)
+             - "EDIT: COLLABORATION TEXT" below the steps
 
              RELATED STYLES:
              /frontend/styles/sections/process.css
@@ -317,42 +320,73 @@ headerTheme: dark
                 <header class="section-header">
                     <p class="eyebrow eyebrow--line" data-reveal>Vorgehen</p>
                     <h2 class="heading-2" id="process-heading" data-reveal data-reveal-delay="1">Von der Idee zum System.</h2>
-                    <p class="text-lead" data-reveal data-reveal-delay="2">Immer dieselben fünf Schritte, egal ob einzelne Landingpage oder ganze Kampagne.</p>
+                    <p class="text-lead" data-reveal data-reveal-delay="2">Sechs Schritte, die aufeinander aufbauen. Egal ob einzelne Landingpage oder ganze Kampagne.</p>
                 </header>
 
-                <ol class="process__steps" role="list">
+                <ol class="process__steps process__steps--detailed" role="list">
                     <li class="process__line" aria-hidden="true" data-reveal="line"></li>
                     <li class="process__step" data-reveal data-reveal-delay="1">
                         <span class="process__node" aria-hidden="true"></span>
                         <p class="process__number label">01</p>
                         <h3 class="process__title">Idee</h3>
-                        <p class="process__text">Angebot, Zielgruppe und das eine Problem verstehen, das sich ändern soll.</p>
+                        <p class="process__text">Am Anfang steht das Problem, das gelöst werden soll. Wir klären, an wen sich das Angebot richtet und welches Angebot diese Menschen wirklich weiterbringt.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Problem</li><li class="badge">Zielgruppe</li><li class="badge">Angebot</li></ul>
                     </li>
                     <li class="process__step" data-reveal data-reveal-delay="2">
                         <span class="process__node" aria-hidden="true"></span>
                         <p class="process__number label">02</p>
                         <h3 class="process__title">Strategie</h3>
-                        <p class="process__text">Positionierung, Botschaft und der Weg vom ersten Kontakt bis zur Entscheidung.</p>
+                        <p class="process__text">Wir legen fest, wie das Angebot zur Zielgruppe kommt: mit einer klaren Positionierung, der passenden Botschaft und einem Weg, der von der ersten Anzeige bis zur Entscheidung führt.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Positionierung</li><li class="badge">Zielgruppenanalyse</li><li class="badge">Botschaft</li><li class="badge">Customer Journey</li></ul>
                     </li>
                     <li class="process__step" data-reveal data-reveal-delay="3">
                         <span class="process__node" aria-hidden="true"></span>
                         <p class="process__number label">03</p>
                         <h3 class="process__title">Gestaltung</h3>
-                        <p class="process__text">Texte, Creatives, Design und Landingpages, gestaltet statt zusammengesetzt.</p>
+                        <p class="process__text">Texte, Creatives und Design tragen die Botschaft. Creatives sind auf Performance ausgelegt, und oft wirkt ein klares, einfaches Motiv am besten. Ein einheitliches Corporate Design macht die Marke wiedererkennbar, Funnel und Landingpage führen einfach zur Entscheidung. Die Texte versteht auch KI, vom Meta-Targeting bis zur KI-Suche.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Copy</li><li class="badge">Performance Creatives</li><li class="badge">Corporate Design</li><li class="badge">Funnels &amp; Landingpages</li><li class="badge">KI-Suchoptimierung (GEO)</li></ul>
                     </li>
-                    <li class="process__step" data-reveal data-reveal-delay="4">
+                    <li class="process__step" data-reveal data-reveal-delay="1">
                         <span class="process__node" aria-hidden="true"></span>
                         <p class="process__number label">04</p>
                         <h3 class="process__title">System</h3>
-                        <p class="process__text">Formulare, Automatisierungen und KI-gestützte Workflows, die alles verbinden.</p>
+                        <p class="process__text">Workflows und Automatisierungen sorgen dafür, dass alles zuverlässig läuft. KI macht sie schneller, aber nichts entsteht allein durch KI: Ein Mensch prüft und entscheidet immer mit. So kommen die Möglichkeiten der KI und menschliches Urteilsvermögen zusammen, sicher und verantwortungsvoll.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Workflows</li><li class="badge">Automatisierung</li><li class="badge">Human in the Loop</li><li class="badge">Sichere KI-Nutzung</li></ul>
                     </li>
-                    <li class="process__step" data-reveal data-reveal-delay="5">
+                    <li class="process__step" data-reveal data-reveal-delay="2">
                         <span class="process__node" aria-hidden="true"></span>
                         <p class="process__number label">05</p>
                         <h3 class="process__title">Umsetzung</h3>
-                        <p class="process__text">Launchen, beobachten und verbessern. Entscheidungen fallen auf Basis dessen, was wirklich passiert.</p>
+                        <p class="process__text">Das Projekt geht live. Kampagnen starten, Seiten und Formulare laufen, und Anfragen landen dort, wo sie bearbeitet werden.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Launch</li><li class="badge">Kampagnen</li><li class="badge">Anfragen</li></ul>
+                    </li>
+                    <li class="process__step" data-reveal data-reveal-delay="3">
+                        <span class="process__node" aria-hidden="true"></span>
+                        <p class="process__number label">06</p>
+                        <h3 class="process__title">Analyse &amp; Optimierung</h3>
+                        <p class="process__text">Nach dem Start werten wir aus, was wirklich passiert, und verbessern auf dieser Basis. So lassen sich Produkte an die Bedürfnisse der Zielgruppe anpassen und Targeting und Zielgruppen an die Produkte. Das macht Marketing planbar.</p>
+                        <ul class="process__tags" role="list"><li class="badge">Auswertung</li><li class="badge">Optimierung</li><li class="badge">Markt und Produkt</li><li class="badge">Planbarkeit</li></ul>
                     </li>
                 </ol>
+
+                <!-- EDIT: COLLABORATION TEXT -->
+                <div class="process__collaboration">
+                    <div>
+                        <p class="eyebrow" data-reveal>Mein Anspruch</p>
+                        <h3 class="process__collaboration-title heading-3" data-reveal data-reveal-delay="1">Du konzentrierst dich auf dein Geschäft.<br><em class="heading-accent">Ich kümmere mich um dein Marketing.</em></h3>
+                    </div>
+                    <div class="process__collaboration-text" data-reveal data-reveal-delay="2">
+                        <p class="text-lead">
+                            Mein Ziel ist, dir so viel Arbeit wie möglich abzunehmen. Ich berate und betreue dich,
+                            damit du dich nicht selbst um Marketing kümmern musst.
+                        </p>
+                        <p class="text-muted">
+                            Trotzdem bleibt Marketing Teamarbeit: Ich sorge für Anfragen, du machst Kunden daraus.
+                            Deshalb arbeiten wir eng zusammen und stimmen uns regelmäßig ab, damit das Zusammenspiel
+                            immer besser wird.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- ================= END PROCESS SECTION ================= -->

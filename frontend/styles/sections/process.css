@@ -1,7 +1,8 @@
 /* ==========================================================
    PROCESS SECTION
-   IDEA → STRATEGY → CREATION → SYSTEM → EXECUTION
-   with a connecting line that draws in on scroll.
+   The steps of a project with a connecting line that draws
+   in on scroll. The homepage uses the "--detailed" version
+   (six steps with tags, three columns on desktop).
    HTML: /frontend/pages/index.html -> PROCESS SECTION
    (the same classes are reused on /ai/ and /funnels/)
 ========================================================== */
@@ -96,6 +97,77 @@
     .process__node {
         top: -2.5rem;
         left: 0;
+    }
+}
+
+/* PROCESS - DETAILED VERSION (homepage)
+   Each step has its own top line instead of one long line,
+   so the steps can wrap into two rows on desktop. */
+
+.process__steps--detailed {
+    gap: var(--spacing-xl);
+}
+
+.process__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+}
+
+.process__steps--detailed .process__text {
+    max-width: 34rem;
+}
+
+@media (min-width: 900px) {
+    .process__steps--detailed {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: var(--spacing-large);
+        row-gap: var(--spacing-xl);
+        padding-top: 0;
+    }
+
+    .process__steps--detailed .process__step {
+        align-content: start;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--color-line);
+    }
+
+    .process__steps--detailed .process__node {
+        top: -0.5rem;
+    }
+
+    /* one line per step on desktop, so the long line is hidden */
+    .process__steps--detailed .process__line {
+        display: none;
+    }
+}
+
+
+/* PROCESS - COLLABORATION BLOCK (below the steps) */
+
+.process__collaboration {
+    display: grid;
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-section);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-line);
+}
+
+.process__collaboration-title {
+    margin-top: var(--spacing-small, 1rem);
+}
+
+.process__collaboration-text {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+}
+
+@media (min-width: 900px) {
+    .process__collaboration {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: var(--spacing-xl);
     }
 }
 
