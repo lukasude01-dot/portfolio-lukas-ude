@@ -213,6 +213,31 @@
     color: var(--color-text-muted);
 }
 
+/* ABOUT STORY - why I work directly with clients */
+
+.about-story__inner {
+    display: grid;
+    gap: var(--spacing-large);
+}
+
+.about-story__text {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 40rem;
+}
+
+.about-story__text p:not(.text-lead) {
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 900px) {
+    .about-story__inner {
+        grid-template-columns: 5fr 7fr;
+        column-gap: var(--spacing-xl);
+    }
+}
+
+
 /* ==========================================================
    END ABOUT PAGE
 ========================================================== */
