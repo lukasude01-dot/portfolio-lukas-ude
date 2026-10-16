@@ -23,7 +23,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: calc(100svh - var(--header-height));
 }
 
 
@@ -48,20 +47,20 @@
 
 /* HERO - PORTRAIT  (cut-out photo in front of the wordmark) */
 
+/* Phones: as wide as the screen allows, height follows the photo */
 .hero__figure {
     position: relative;
     z-index: 1;
     align-self: center;
-    height: clamp(380px, 62svh, 720px);
+    width: min(100%, 460px);
     margin-top: -14vw;
     pointer-events: none;
 }
 
 .hero__figure picture,
 .hero__figure img {
-    width: auto;
-    height: 100%;
-    max-width: none;
+    width: 100%;
+    height: auto;
 }
 
 .hero__figure img {
@@ -123,6 +122,13 @@
     }
 
     /* centred with margins (not transform: the reveal animation uses transform) */
+    .hero__figure picture,
+    .hero__figure img {
+        width: auto;
+        height: 100%;
+        max-width: none;
+    }
+
     .hero__figure {
         position: absolute;
         bottom: 0;
