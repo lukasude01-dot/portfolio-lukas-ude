@@ -26,30 +26,35 @@
 }
 
 
-/* HERO - WORDMARK  (behind the portrait) */
+/* HERO - CLAIM  ("Aus Klicks werden Kunden.")
+   Phones: centred block above the portrait.
+   Desktop: the words are placed AROUND the portrait (see below). */
 
 .hero__wordmark {
     position: relative;
     z-index: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: clamp(1rem, 3vw, 2.5rem);
+    margin-top: var(--spacing-medium);
     font-family: var(--font-display);
-    font-size: clamp(2.8rem, 12.5vw, 9rem);
-    text-align: center;
+    font-size: clamp(2.8rem, 13vw, 9rem);
     font-weight: 500;
-    line-height: 0.8;
-    letter-spacing: -0.03em;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--color-obsidian);
 }
 
+.hero__word {
+    display: inline-block;
+}
 
-/* second half of the claim: italic accent, like the CI accent lines */
-.hero__wordmark-line--accent {
+/* "Kunden." is the hero of the claim: much larger, italic, brand colour */
+.hero__word--accent {
+    display: block;
+    font-size: 1.7em;
     font-style: italic;
     font-weight: 400;
+    line-height: 0.95;
     text-transform: none;
     color: var(--color-tobacco);
 }
@@ -123,11 +128,27 @@
         min-height: 0;
     }
 
+    /* The claim frames the portrait: two words left, two words right */
     .hero__wordmark {
-        /* two large lines: "AUS KLICKS WERDEN" / "Kunden." */
-        margin-top: clamp(1rem, 2.5vh, 2rem);
-        font-size: clamp(4rem, 7.6vw, 9rem);
-        line-height: 0.88;
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        font-size: clamp(4.5rem, 8.4vw, 10rem);
+        text-align: left;
+    }
+
+    .hero__word {
+        position: absolute;
+    }
+
+    .hero__word--1 { top: 7%; left: var(--page-gutter); }
+    .hero__word--2 { top: calc(7% + 0.9em); left: var(--page-gutter); }
+    .hero__word--3 { top: 7%; right: var(--page-gutter); }
+
+    .hero__word--accent {
+        top: calc(7% + 0.62em);
+        right: var(--page-gutter);
+        font-size: 1.5em;
     }
 
     /* centred with margins (not transform: the reveal animation uses transform) */
@@ -144,7 +165,7 @@
         left: 0;
         right: 0;
         width: fit-content;
-        height: 72%;
+        height: 88%;
         margin: 0 auto;
     }
 
@@ -163,6 +184,13 @@
     .hero__side--right {
         display: grid;
         right: var(--page-gutter);
+    }
+}
+
+/* Smaller laptops: "Kunden." a little smaller so it clears the head */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .hero__word--accent {
+        font-size: 1.32em;
     }
 }
 

@@ -62,8 +62,10 @@ Jeder große Bereich ist im Code mit START- und END-Kommentaren markiert, z. B.:
 Datei: `frontend/pages/index.html` → suche `EDIT: HERO CLAIM`
 
 ```html
-<span class="hero__wordmark-line" ...>Aus Klicks werden</span>
-<span class="hero__wordmark-line hero__wordmark-line--accent" ...>Kunden.</span>
+<span class="hero__word hero__word--1" ...>Aus</span>
+<span class="hero__word hero__word--2" ...>Klicks</span>
+<span class="hero__word hero__word--3" ...>werden</span>
+<span class="hero__word hero__word--accent" ...>Kunden.</span>
 ```
 
 Nur den Text zwischen `>` und `</span>` ändern. Die zweite Zeile ist kursiv. Der große Claim steht
