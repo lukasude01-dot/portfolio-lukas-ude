@@ -64,7 +64,7 @@ The website is **pre-built into static HTML** (fast, SEO-friendly, nothing to ha
 6. `sitemap.xml`, `robots.txt`, `_headers` (security headers), the QR code and app icons are generated.
 
 Template syntax (intentionally tiny): `{{ site.name }}`, `<!-- @include footer -->`,
-`<!-- @render featured-work -->`. See `frontend/build/lib/template.js`.
+`<!-- @render home-selected-work -->`. See `frontend/build/lib/template.js`.
 
 JavaScript in the browser is small, native ES modules (`frontend/scripts/modules/*`),
 each one documented at the top. Without JavaScript, all content stays visible.

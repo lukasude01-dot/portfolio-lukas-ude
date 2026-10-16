@@ -161,7 +161,7 @@ oben im `---`-Block `title`, `description` und `path: /blog/` anpassen, Inhalt �
 3. Bilder in diesen Ordner legen.
 4. `project.json` öffnen, alle `[ADD …]` ausfüllen, Bildnamen eintragen.
 5. `"status": "draft"` in `"status": "published"` ändern.
-6. Soll es auf der Startseite erscheinen? `"featured": true`.
+6. Startseite: Dort erscheinen automatisch die ersten vier Projekte aus `content/portfolio/` (Reihenfolge über `"order"`).
 
 Details zu jedem Feld: `docs/CONTENT-GUIDE.md`.
 
@@ -322,7 +322,7 @@ Faustregel:
 | Klasse beginnt mit | Datei |
 |---|---|
 | `services-band`, `selected-work`, `work-tile`, `story-banner`, `steps-compact` (Startseite) | `styles/sections/home.css` |
-| `hero`, `services`, `featured-work`, `process`, `cta`, `page-hero`, `brand-core`, `about-teaser` | `styles/sections/<name>.css` |
+| `hero`, `services`, `process`, `cta`, `page-hero`, `brand-core` | `styles/sections/<name>.css` |
 | `button`, `site-header`, `site-footer`, `work-card`, `ad-mockup`, `device-preview`, `timeline`, `filter-bar`, `form-field`, `lightbox`, `qr-share`, `portfolio-subnav` | `styles/components/…` |
 | `funnel`, `creative`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-`, `news-` | `styles/pages/…` |
 | `package` (Leistungen-Seite) | `styles/pages/services.css` |

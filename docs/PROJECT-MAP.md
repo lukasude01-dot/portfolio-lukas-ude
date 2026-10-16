@@ -4,7 +4,7 @@ Find the right file in seconds. Paths are relative to the project root.
 
 **Glossary:** a *section* is a visual band on a page (HERO, SERVICES …). A *project* is one
 content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio/`); its areas
-(Funnels, Creatives, KI) live below it. `work-card` is the card used in FEATURED WORK.
+(Funnels, Creatives, KI) live below it. The homepage SELECTED WORK cards are `work-tile` (`renderers/portfolio.js → home-selected-work`).
 
 ---
 

@@ -103,7 +103,7 @@ links checked with `safeUrl`).
 | Buttons, text links, badges | `components/buttons.css` | `.button--primary`, `.button--ghost`, `.text-link`, `.badge` |
 | Navigation + mobile menu | `components/navigation.css` | `scripts/modules/navigation.js` |
 | Portfolio sub-navigation | `components/portfolio-subnav.css` | `components/portfolio-subnav.html`, `renderers/site.js → portfolio-subnav`, links from `site.js → portfolioNavigation` |
-| Work card | `components/cards.css` | `renderers/work.js → workCard()` (homepage FEATURED WORK) |
+| Work card | `components/cards.css` | `renderers/work.js → workCard()` (currently not used by a page; the homepage uses `home-selected-work` in `renderers/portfolio.js`) |
 | Service packages | `pages/services.css` | `renderers/services.js → service-packages` |
 | News list / teaser / article | `pages/news.css` | `renderers/news.js` (`news-list`, `news-teaser`, `news-cover`, `news-more`) |
 | Ad mockup | `components/ad-mockup.css` | structure of a social ad, labelled "not a live ad" |

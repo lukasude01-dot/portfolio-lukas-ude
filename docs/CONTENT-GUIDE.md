@@ -37,7 +37,7 @@ All portfolio content lives in `/content`. **One folder = one project** (or one 
 | `client` | – | client or brand |
 | `services` | – | list of what you did |
 | `thumbnail` | yes* | `{ "src": "cover.jpg", "alt": "..." }` (*not for AI workflows) |
-| `featured` | – | `true` = shown in FEATURED WORK on the homepage (max. 4) |
+| `featured` | – | currently not used (the homepage shows the first four projects from `/content/portfolio/` by `order`) |
 | `order` | – | sorting, lower first |
 | `status` | – | `"published"` (default) or `"draft"` (not built) |
 | `example` | – | `true` = example content (fictional), shown as "Concept" and listed as a build warning |
@@ -62,7 +62,7 @@ The build creates optimised AVIF/WebP/JPEG copies and leaves the originals untou
 | `approach` | text for **Gestalterischer Ansatz** |
 | `services` | list for **Leistungen** |
 | `images` | all motifs `{ "src", "alt", "caption" }`. The **first** is the main motif, the others appear under "Weitere Motive" |
-| `thumbnail` | image used in other grids (homepage FEATURED WORK) |
+| `thumbnail` | image used in overview grids (portfolio projects also on the homepage) |
 | `layout` | card size on `/portfolio/`: `feature` (large, left), `side` (next to it), `tall` (large vertical), `wide` (broad card showing all motifs), `closing` (full width, all motifs) |
 | `order` | position in the grid (1 = first) |
 
