@@ -104,8 +104,14 @@
     aspect-ratio: 3 / 4;
 }
 
-.about-values__images figure:last-child {
+.about-values__images figure:last-child:not(:only-child) {
     margin-top: var(--spacing-xl);
+}
+
+/* A single image uses the full width of the image column */
+.about-values__images figure:only-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 5;
 }
 
 .about-values__images picture,

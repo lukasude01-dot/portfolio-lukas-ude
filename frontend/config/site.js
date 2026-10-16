@@ -36,7 +36,7 @@ export const siteConfig = {
 
     // EDIT: DEFAULT SEO DESCRIPTION (used when a page has none)
     description:
-        "Lukas Ude verbindet kreatives Marketing, Copywriting, Funnels und Design mit " +
+        "Lukas Ude verbindet kreatives Marketing, Copywriting, Funnels und Meta Ads mit " +
         "KI-gestützten Workflows und klaren Systemen, von der ersten Idee bis zum laufenden Prozess.",
 
 
@@ -107,7 +107,6 @@ export const siteConfig = {
         { label: "Ausgewählte Arbeiten", href: "/portfolio/" },
         { label: "Funnels", href: "/portfolio/funnels/" },
         { label: "Creatives", href: "/portfolio/creatives/" },
-        { label: "Design", href: "/portfolio/design/" },
         { label: "KI & Systeme", href: "/portfolio/ki/" }
     ],
 
@@ -172,7 +171,7 @@ export const siteConfig = {
         "Marketing",
         "Copywriting",
         "Funnels und Landingpages",
-        "Grafikdesign",
+        "Meta Ads",
         "KI-gestütztes Marketing"
     ]
 };

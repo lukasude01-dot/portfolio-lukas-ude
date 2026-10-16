@@ -10,7 +10,6 @@
  *   work.js       project cards, featured work grid
  *   funnels.js    /portfolio/funnels/ list + funnel case parts
  *   creatives.js  /portfolio/creatives/ grid, ad mockups, case parts
- *   design.js     /portfolio/design/ grid + design case gallery
  *   ai.js         /portfolio/ki/ workflow blueprints
  *   career.js     /about/ timeline, certificates, skills
  *   project.js    parts shared by every project page (next project)
@@ -23,7 +22,6 @@ import { siteRenderers } from "./site.js";
 import { workRenderers } from "./work.js";
 import { funnelRenderers } from "./funnels.js";
 import { creativeRenderers } from "./creatives.js";
-import { designRenderers } from "./design.js";
 import { aiRenderers } from "./ai.js";
 import { careerRenderers } from "./career.js";
 import { projectRenderers } from "./project.js";
@@ -36,7 +34,6 @@ export const renderers = {
     ...workRenderers,
     ...funnelRenderers,
     ...creativeRenderers,
-    ...designRenderers,
     ...aiRenderers,
     ...careerRenderers,
     ...projectRenderers,

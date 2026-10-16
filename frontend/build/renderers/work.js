@@ -19,7 +19,6 @@ export const SECTION_LABELS = {
     portfolio: "Portfolio",
     funnels: "Funnel",
     creatives: "Creatives & Copy",
-    design: "Design",
     ai: "KI & Systeme"
 };
 

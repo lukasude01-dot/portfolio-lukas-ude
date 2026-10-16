@@ -2,7 +2,7 @@
  * FILTERS
  *
  * PURPOSE:
- * Category filter buttons on /work/, /creatives/ and /design/.
+ * Category filter buttons, e.g. on /portfolio/creatives/.
  * Clicking a button hides every card that does not belong to
  * that category.
  *

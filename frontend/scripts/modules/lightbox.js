@@ -7,7 +7,7 @@
  *
  * USAGE IN HTML:
  *   <div data-lightbox-group>
- *       <a href="/media/design/x/large.jpg" data-lightbox data-caption="Text">
+ *       <a href="/media/portfolio/x/large.jpg" data-lightbox data-caption="Text">
  *           <img ...>
  *       </a>
  *   </div>

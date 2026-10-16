@@ -59,8 +59,7 @@ const PORTFOLIO_CRUMB = { label: "Portfolio", href: SECTION_PATHS.portfolio };
 const DETAIL_TEMPLATES = {
     portfolio: { template: "portfolio-project.html", parent: PORTFOLIO_CRUMB },
     funnels: { template: "funnel-project.html", parent: { label: "Funnels", href: SECTION_PATHS.funnels } },
-    creatives: { template: "creative-project.html", parent: { label: "Creatives", href: SECTION_PATHS.creatives } },
-    design: { template: "design-project.html", parent: { label: "Designarbeiten", href: SECTION_PATHS.design } }
+    creatives: { template: "creative-project.html", parent: { label: "Creatives", href: SECTION_PATHS.creatives } }
 };
 
 

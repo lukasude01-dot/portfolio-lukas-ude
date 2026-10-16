@@ -8,7 +8,8 @@
  *   /content/<section>/<project-slug>/project.json   <- the text
  *   /content/<section>/<project-slug>/*.jpg|png|webp <- its images
  *
- *   Sections: portfolio, funnels, creatives, design, ai
+ *   Sections: portfolio, funnels, creatives, ai
+ *   (/content/_archiv/ holds retired work, e.g. the former design projects)
  *   The folder name becomes the URL, e.g.
  *   /content/funnels/recruiting-demo/ -> /portfolio/funnels/recruiting-demo/
  *
@@ -41,7 +42,7 @@ import { CONTACT_TOPICS } from "../../../shared/contact-schema.js";
 import { parseFrontMatter } from "./template.js";
 import { markdownToHtml, readingTime } from "./markdown.js";
 
-export const CONTENT_SECTIONS = ["portfolio", "funnels", "creatives", "design", "ai"];
+export const CONTENT_SECTIONS = ["portfolio", "funnels", "creatives", "ai"];
 
 // Public URL of each section. Funnels, Creatives, Design and KI are
 // sub-pages of the Portfolio. EDIT WITH CARE: must match the "path:"
@@ -50,7 +51,6 @@ export const SECTION_PATHS = {
     portfolio: "/portfolio/",
     funnels: "/portfolio/funnels/",
     creatives: "/portfolio/creatives/",
-    design: "/portfolio/design/",
     ai: "/portfolio/ki/"
 };
 
@@ -199,7 +199,7 @@ function loadNews(contentDir, { includeDrafts }) {
     return articles.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
-/** Loads everything from /content. Returns { funnels, creatives, design, ai, career, all } */
+/** Loads everything from /content. Returns { portfolio, funnels, creatives, ai, career, packages, news, all } */
 export function loadContent(contentDir, options = {}) {
     const content = {};
     for (const section of CONTENT_SECTIONS) content[section] = loadSection(contentDir, section, options);
