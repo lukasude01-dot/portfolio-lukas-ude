@@ -116,6 +116,7 @@
 
 .story-banner__media img {
     object-fit: cover;
+    object-position: 50% 62%;   /* keeps the forest road in view */
 }
 
 /* darkens the left side so the headline stays readable */
