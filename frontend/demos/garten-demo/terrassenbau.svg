@@ -1,24 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: Holzterrasse mit Pflanzkübel">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6D3"/><stop offset="1" stop-color="#F1EDE2"/></linearGradient>
-    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B98154"/><stop offset="1" stop-color="#9C6942"/></linearGradient>
-  </defs>
-  <rect width="600" height="400" fill="url(#sky)"/>
-  <circle cx="480" cy="88" r="38" fill="#F3D58B"/>
-  <path d="M0 230 Q150 190 300 215 T600 200 V400 H0Z" fill="#8FAE7C"/>
-  <path d="M0 260 Q180 230 340 250 T600 240 V400 H0Z" fill="#6E9460"/>
-  <!-- deck -->
-  <path d="M60 300 L540 300 L600 400 L0 400 Z" fill="url(#wood)"/>
-  <g stroke="#7E5434" stroke-width="2" opacity=".55">
-    <path d="M48 320 H552"/><path d="M36 340 H564"/><path d="M24 360 H576"/><path d="M12 380 H588"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: Holzterrasse mit Bank und Pflanzkübel">
+  <rect width="600" height="400" fill="#F2F2EF"/>
+  <g fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M90 300 L510 300 L560 360 L40 360 Z"/>
+    <path d="M78 315 H522M66 330 H534M54 345 H546"/>
+    <path d="M150 300 L130 360M230 300 L222 360M310 300 L310 360M390 300 L398 360M470 300 L490 360" opacity=".35"/>
+    <path d="M320 250 H460 M330 250 V300 M450 250 V300 M320 236 H460"/>
+    <path d="M150 300 L160 248 H220 L230 300"/>
+    <path d="M190 248 C185 200 160 180 140 175 M190 248 C195 195 215 170 240 165 M190 248 C190 210 192 180 192 150"/>
   </g>
-  <path d="M60 300 L540 300" stroke="#6B472C" stroke-width="4"/>
-  <!-- bench -->
-  <rect x="300" y="262" width="150" height="12" rx="3" fill="#5E4129"/>
-  <rect x="312" y="274" width="10" height="28" fill="#5E4129"/><rect x="428" y="274" width="10" height="28" fill="#5E4129"/>
-  <!-- planter -->
-  <path d="M120 250 h70 l-8 52 h-54z" fill="#C9643C"/>
-  <path d="M155 250 C125 210 120 175 140 150 C150 185 158 210 160 250Z" fill="#3E6B3A"/>
-  <path d="M158 250 C175 205 195 185 215 175 C205 210 185 235 165 250Z" fill="#4F8248"/>
-  <path d="M152 250 C140 220 105 205 92 200 C110 230 128 245 150 252Z" fill="#5C9152"/>
+  <circle cx="470" cy="110" r="34" fill="#3E6B3A"/>
 </svg>

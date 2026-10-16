@@ -22,7 +22,7 @@
     "demoNotice": "Portfolio-Demonstration für eine fiktive Marke. Die Live-Demo funktioniert wie ein echter Funnel, es werden aber keine Daten gesendet oder gespeichert.",
     "thumbnail": {
         "src": "cover.jpg",
-        "alt": "Landingpage der Musterfirma mit der Headline „Ihr Garten in guten Händen“ und drei Leistungen mit Illustrationen"
+        "alt": "Landingpage der Musterfirma mit großer Headline „Garten- und Landschaftsbau“, abgerundetem Landschaftsfoto und schwebender Beratungskarte"
     },
     "context": "Garten- und Landschaftsbaubetriebe bekommen viele unklare Anfragen per Telefon oder E-Mail. Wichtige Angaben wie die gewünschte Leistung, der Zeitraum oder Besonderheiten auf dem Grundstück fehlen oft. Das kostet Zeit bei der Nachfrage und der Angebotserstellung.",
     "objective": "Interessenten aus einer Meta-Anzeige sollen schnell verstehen, was der Betrieb anbietet, und eine Anfrage stellen, die alle wichtigen Informationen für einen gezielten Rückruf enthält.",
@@ -61,7 +61,7 @@
         }
     ],
     "copy": {
-        "headline": "Ihr Garten in guten Händen.",
+        "headline": "Garten- und Landschaftsbau",
         "subheadline": "Ob neue Terrasse, durchdachte Gartenplanung oder ein Baum, der zum Risiko wird: Wir kümmern uns darum.",
         "hooks": [
             "Ihre neue Terrasse, gebaut für viele Sommer.",
@@ -73,25 +73,25 @@
     "visual": {
         "palette": [
             {
+                "name": "Weiß",
+                "hex": "#FFFFFF"
+            },
+            {
+                "name": "Schwarz",
+                "hex": "#0E0E0E"
+            },
+            {
+                "name": "Stein",
+                "hex": "#F2F2EF"
+            },
+            {
                 "name": "Gartengrün",
                 "hex": "#3E6B3A"
-            },
-            {
-                "name": "Tannengrün",
-                "hex": "#1F3320"
-            },
-            {
-                "name": "Naturstein",
-                "hex": "#F4F1EA"
-            },
-            {
-                "name": "Ton",
-                "hex": "#C9643C"
             }
         ],
-        "typography": "Eine kräftige Sans-Serif für Headlines, gut lesbar und bodenständig.",
-        "imagery": "Klare Illustrationen stehen für die drei Leistungen. In einem echten Projekt kämen Fotos aus abgeschlossenen Projekten des Betriebs zum Einsatz.",
-        "layout": "Mobile first mit großen Auswahlflächen, einem fixierten Anfrage-Button auf dem Handy und einer eigenen Bestätigungsseite."
+        "typography": "Eine moderne Sans-Serif mit sehr großer, eng gesetzter Headline. Klar, selbstbewusst und hochwertig.",
+        "imagery": "Ein großes, abgerundetes Landschaftsfoto im Hero und reduzierte Linienillustrationen für die drei Leistungen. In einem echten Projekt kämen Fotos aus abgeschlossenen Projekten des Betriebs zum Einsatz.",
+        "layout": "Editorialer Aufbau mit viel Weißraum, einer schwebenden Karte über dem Hero-Foto, schwarzen Pill-Buttons und einem fixierten Anfrage-Button auf dem Handy."
     },
     "ctaStructure": [
         {

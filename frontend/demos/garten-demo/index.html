@@ -9,8 +9,13 @@
      It is a PORTFOLIO DEMONSTRATION: the brand is fictional and
      no data is sent anywhere (see demos/shared/demo-funnel.js).
 
+     DESIGN:
+     Clean editorial style: white and black, very large headline,
+     a big rounded photo with a floating card, black pill buttons.
+
      EDIT HERE:
      - Texts directly in this file (German, like a real client page)
+     - Hero photo: the img in "HERO IMAGE"
      - Service images: terrassenbau.svg, gartenplanung.svg,
        baumfaellung.svg in this folder
      - Colours: /frontend/demos/garten-demo/theme.css
@@ -37,76 +42,118 @@
 
 <!-- @include demo-bar -->
 
-    <!-- HEADER (company logo + request button) -->
+    <!-- HEADER -->
     <header class="gl-header">
         <div class="demo-container gl-header__inner">
             <a class="gl-logo" href="#top">
-                <svg class="gl-logo__mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="currentColor"/><path d="M16 25V13M16 17c-4 0-7-3-7-7 4 0 7 3 7 7zm0-2c3.5 0 6-2.5 6-6-3.5 0-6 2.5-6 6z" fill="none" stroke="#F4F1EA" stroke-width="2" stroke-linecap="round"/></svg>
-                <span>Musterfirma<small>Garten- und Landschaftsbau</small></span>
+                <svg class="gl-logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29V14M16 18C9 18 5 13 5 6c7 0 11 5 11 12zm0-2c0-6 4-11 11-11 0 7-4 11-11 11z" fill="currentColor"/></svg>
+                Musterfirma
             </a>
-            <a class="demo-button gl-header__cta" href="#anfrage">Service anfragen</a>
+            <nav class="gl-nav" aria-label="Seitennavigation">
+                <a href="#leistungen">Leistungen</a>
+                <a href="#versprechen">Ihre Vorteile</a>
+                <a href="#anfrage">Anfrage</a>
+            </nav>
+            <a class="gl-pill" href="#anfrage">Service anfragen</a>
         </div>
     </header>
 
     <main id="top">
 
-        <!-- HERO -->
+        <!-- HERO: big headline -->
         <section class="gl-hero" data-hero>
-            <div class="demo-container gl-hero__inner">
-                <div>
-                <p class="gl-eyebrow">Ihr Fachbetrieb für Garten und Außenanlagen</p>
-                <h1 class="gl-hero__title">Ihr Garten in<br><span>guten Händen.</span></h1>
-                <p class="gl-hero__text">Ob neue Terrasse, durchdachte Gartenplanung oder ein Baum, der zum Risiko wird: Wir kümmern uns darum. Sauber, termingerecht und mit festem Ansprechpartner.</p>
-                <div class="gl-hero__actions">
-                    <a class="demo-button" href="#anfrage">Service anfragen →</a>
-                    <a class="demo-button demo-button--ghost gl-ghost" href="#leistungen">Unsere Leistungen</a>
-                </div>
-                <ul class="gl-checks" role="list">
-                    <li>Kostenlose Erstberatung</li>
-                    <li>Festpreis nach Besichtigung</li>
-                    <li>Rückruf innerhalb von 24 Stunden</li>
-                </ul>
-                </div>
-                <figure class="gl-hero__visual">
-                    <img src="/demos/garten-demo/terrassenbau.svg" alt="Illustration einer fertigen Holzterrasse im Garten" width="600" height="400">
-                    <figcaption class="gl-hero__badge">Jetzt für die Saison planen<span>Kostenlose Erstberatung vor Ort</span></figcaption>
+            <div class="demo-container gl-hero__top">
+                <h1 class="gl-hero__title">Garten- und<br>Landschaftsbau</h1>
+                <p class="gl-hero__text">Terrassen, Gartenplanung und sichere Baumfällung aus einer Hand. Sauber geplant, termingerecht umgesetzt und mit festem Ansprechpartner.</p>
+            </div>
+
+            <!-- HERO IMAGE with floating card -->
+            <div class="demo-container gl-stage">
+                <figure class="gl-stage__image">
+                    <img src="/assets/images/nature/waldhang.jpg" alt="Grüne Landschaft mit Bäumen und Wiese" sizes="(min-width: 1200px) 1180px, 94vw" data-responsive>
                 </figure>
+                <div class="gl-card">
+                    <div class="gl-card__top">
+                        <p class="gl-card__label">Kostenlose Erstberatung <span aria-hidden="true">›</span></p>
+                        <p class="gl-card__title">Ihr Projekt, ehrlich geplant.<br><span>Festpreis nach Besichtigung.</span></p>
+                        <p class="gl-card__text">Wir kommen zu Ihnen, schauen uns Ihr Grundstück an und erstellen ein transparentes Angebot ohne versteckte Kosten.</p>
+                        <div class="gl-card__row">
+                            <p class="gl-card__big">0 €<span>für die Erstberatung</span></p>
+                            <a class="gl-pill" href="#anfrage">Service anfragen</a>
+                        </div>
+                    </div>
+                    <div class="gl-card__bottom">
+                        <div>
+                            <p class="gl-card__label gl-card__label--light">Schnelle Rückmeldung</p>
+                            <p class="gl-card__note">Wir rufen Sie innerhalb von 24 Stunden zu Ihrer Wunschzeit zurück.</p>
+                        </div>
+                        <svg class="gl-card__wave" viewBox="0 0 220 90" aria-hidden="true"><path d="M2 80 C40 80 50 20 90 30 S130 85 160 50 S200 10 218 40" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="90" cy="30" r="5" fill="currentColor"/></svg>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- SERVICES (each with an image and a short description) -->
         <section class="gl-section" id="leistungen">
             <div class="demo-container">
-                <p class="gl-eyebrow">Unsere Leistungen</p>
-                <h2 class="gl-heading">Drei Leistungen. Ein Ansprechpartner.</h2>
+                <div class="gl-section__head">
+                    <h2 class="gl-heading">Unsere Leistungen</h2>
+                    <p class="gl-section__intro">Drei Leistungen, ein Ansprechpartner. Wählen Sie, was Sie brauchen, wir kümmern uns um den Rest.</p>
+                </div>
                 <ul class="gl-services" role="list">
                     <li class="gl-service">
-                        <figure class="gl-service__image"><img src="/demos/garten-demo/terrassenbau.svg" alt="Illustration einer Holzterrasse mit Pflanzkübel" width="600" height="400"></figure>
+                        <figure class="gl-service__image"><img src="/demos/garten-demo/terrassenbau.svg" alt="Illustration einer Holzterrasse mit Bank und Pflanzkübel" width="600" height="400"></figure>
+                        <p class="gl-service__number">01</p>
                         <h3>Terrassenbau</h3>
                         <p>Ob Holz, WPC oder Naturstein: Wir bauen Ihre Terrasse auf einem soliden Unterbau, damit Sie viele Jahre Freude daran haben.</p>
                     </li>
                     <li class="gl-service">
                         <figure class="gl-service__image"><img src="/demos/garten-demo/gartenplanung.svg" alt="Illustration eines Gartenplans mit Wegen, Beeten und Bäumen" width="600" height="400"></figure>
+                        <p class="gl-service__number">02</p>
                         <h3>Gartenplanung</h3>
                         <p>Gemeinsam mit Ihnen entwickeln wir einen Plan, der zu Ihrem Grundstück, Ihrem Alltag und Ihrem Budget passt.</p>
                     </li>
                     <li class="gl-service">
                         <figure class="gl-service__image"><img src="/demos/garten-demo/baumfaellung.svg" alt="Illustration eines schief stehenden Baums neben einem Haus und eines Baumstumpfs" width="600" height="400"></figure>
+                        <p class="gl-service__number">03</p>
                         <h3>Problembaumfällung</h3>
                         <p>Schief stehende, kranke oder zu nah am Haus wachsende Bäume fällen wir sicher, fachgerecht und ohne Schäden am Grundstück.</p>
                     </li>
                 </ul>
-                <p class="gl-services__cta"><a class="demo-button" href="#anfrage">Service anfragen →</a></p>
+            </div>
+        </section>
+
+        <!-- PROMISES (icon grid) -->
+        <section class="gl-section gl-section--tight" id="versprechen">
+            <div class="demo-container">
+                <ul class="gl-promises" role="list">
+                    <li>
+                        <span class="gl-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                        <h3>Festpreis</h3>
+                        <p>Nach der Besichtigung erhalten Sie ein verbindliches Angebot ohne Überraschungen.</p>
+                    </li>
+                    <li>
+                        <span class="gl-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
+                        <h3>Fester Ansprechpartner</h3>
+                        <p>Vom ersten Anruf bis zur Abnahme haben Sie immer dieselbe Person an Ihrer Seite.</p>
+                    </li>
+                    <li>
+                        <span class="gl-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>
+                        <h3>Termintreu</h3>
+                        <p>Wir sagen, wann wir kommen, und halten uns daran. Auch beim Aufräumen danach.</p>
+                    </li>
+                </ul>
+                <p class="gl-center"><a class="gl-pill gl-pill--large" href="#anfrage">Service anfragen <span aria-hidden="true">→</span></a></p>
             </div>
         </section>
 
         <!-- REQUEST (multi-step form, 4 steps) -->
-        <section class="gl-section gl-section--green" id="anfrage" data-form-section>
+        <section class="gl-request-section" id="anfrage" data-form-section>
             <div class="demo-container gl-request">
                 <div class="gl-request__intro">
-                    <p class="gl-eyebrow gl-eyebrow--light">Service anfragen</p>
-                    <h2 class="gl-heading">In vier kurzen Schritten zu Ihrem Angebot.</h2>
-                    <p class="gl-request__text">Beantworten Sie ein paar Fragen. Wir melden uns zu Ihrer Wunschzeit und besprechen alles Weitere persönlich.</p>
+                    <p class="gl-kicker">Service anfragen</p>
+                    <h2 class="gl-heading">In vier Schritten<br>zu Ihrem Angebot.</h2>
+                    <p class="gl-request__text">Beantworten Sie ein paar kurze Fragen. Wir melden uns zu Ihrer Wunschzeit und besprechen alles Weitere persönlich.</p>
                 </div>
 
                 <form class="demo-form gl-form" data-demo-funnel data-done-url="/demos/garten-demo/danke.html" novalidate>
@@ -173,8 +220,10 @@
 
     <!-- FOOTER -->
     <footer class="gl-footer">
-        <div class="demo-container">
-            <p>Musterfirma ist eine fiktive Marke, erstellt als Portfolio-Demonstration.</p>
+        <div class="demo-container gl-footer__inner">
+            <p class="gl-footer__brand">Musterfirma</p>
+            <p>Garten- und Landschaftsbau<br>Terrassen, Gartenplanung, Baumfällung</p>
+            <p>Musterfirma ist eine fiktive Marke,<br>erstellt als Portfolio-Demonstration.</p>
         </div>
     </footer>
 
