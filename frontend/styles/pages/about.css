@@ -213,6 +213,31 @@
     color: var(--color-text-muted);
 }
 
+/* ABOUT SKILLS - running text next to the heading */
+
+.about-skills__inner {
+    display: grid;
+    gap: var(--spacing-large);
+}
+
+.about-skills__text {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 42rem;
+}
+
+.about-skills__text p:not(.text-lead) {
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 900px) {
+    .about-skills__inner {
+        grid-template-columns: 5fr 7fr;
+        column-gap: var(--spacing-xl);
+    }
+}
+
+
 /* ABOUT STORY - why I work directly with clients */
 
 .about-story__inner {
