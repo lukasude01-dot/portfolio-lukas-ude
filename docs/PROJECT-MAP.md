@@ -30,12 +30,11 @@ content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio
 
 | Section | CSS | JS / Data |
 |---|---|---|
-| HERO | `styles/sections/hero.css` | `parallax.js`, `reveal.js`, portrait `assets/images/portrait/` |
-| BRAND CORE (Haltung) | `styles/sections/brand-core.css` | – |
-| SERVICES (5 areas, link to the portfolio sub-pages) | `styles/sections/services.css` | `services-preview.js` |
-| FEATURED WORK | `styles/sections/featured-work.css`, `styles/components/cards.css` | `build/renderers/work.js`, `"featured": true` in `/content` |
-| PROCESS (6 steps + "Mein Anspruch") | `styles/sections/process.css` | – |
-| ABOUT (teaser) | `styles/sections/about-teaser.css` | `assets/images/mood/` |
+| HERO (claim "Marketing, das wirkt." with cut-out portrait, name + button left, descriptor right) | `styles/sections/hero.css` | `reveal.js`, portrait `assets/images/portrait/lukas-ude-cutout.png`, descriptor in `site.js` |
+| SERVICES BAND (four areas with small images, links into the portfolio) | `styles/sections/home.css` (SERVICES BAND) | – |
+| SELECTED WORK (four project cards) | `styles/sections/home.css` (SELECTED WORK) | `build/renderers/portfolio.js` (`home-selected-work`), `/content/portfolio` |
+| STORY BANNER ("Vom Forst ins Marketing.", links to `/about/`) | `styles/sections/home.css` (STORY BANNER) | `parallax.js`, `assets/images/nature/` |
+| PROCESS (compact, six steps with icons, links to `/about/#vorgehen`) | `styles/sections/home.css` (STEPS COMPACT) | – |
 | NEWS TEASER (3 newest articles) | `styles/pages/news.css` | `build/renderers/news.js` (`news-teaser`), `/content/news` |
 | CTA | `styles/sections/cta.css` | `components/cta-band.html` |
 
@@ -48,7 +47,7 @@ each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come fro
 
 | Part | File |
 |---|---|
-| Overview page ("Selected Work" + PORTFOLIO AREAS linking to the three sub-pages) | `frontend/pages/portfolio.html` |
+| Overview page ("Selected Work", the areas are linked in the sub-navigation) | `frontend/pages/portfolio.html` |
 | Sub-navigation | `frontend/components/portfolio-subnav.html`, `frontend/build/renderers/site.js` |
 | Project page layout | `frontend/templates/portfolio-project.html` |
 | Grid, motifs, description, next project | `frontend/build/renderers/portfolio.js` |
@@ -87,7 +86,7 @@ each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come fro
 
 | Part | File |
 |---|---|
-| Page (hero, flow, areas, principles) | `frontend/pages/ai.html` |
+| Page (hero, AI & SYSTEMS AREAS, WORKFLOWS) | `frontend/pages/ai.html` |
 | Workflow blueprints | `frontend/build/renderers/ai.js` |
 | Styles | `frontend/styles/pages/ai.css` |
 | Content | `/content/ai/<slug>/project.json` |
@@ -97,7 +96,8 @@ each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come fro
 | Part | File |
 |---|---|
 | Page | `frontend/pages/leistungen.html` |
-| Package cards | `frontend/build/renderers/services.js` (`service-packages`) |
+| Package cards (name, price, summary, "Mehr erfahren" + "Anfragen") | `frontend/build/renderers/services.js` (`service-packages`) |
+| Package pages `/leistungen/<slug>/` (full "includes" list, "Ideal für") | `frontend/templates/service-page.html`, `frontend/build/renderers/services.js` |
 | Styles | `frontend/styles/pages/services.css` |
 | Content | `/content/leistungen/pakete.json` |
 | Package button → contact topic | links to `/contact/?thema=<topic>`, pre-selected by `frontend/scripts/modules/contact-form.js` (topic must be in `CONTACT_TOPICS` in `shared/contact-schema.js`) |
@@ -118,16 +118,17 @@ each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come fro
 
 | Part | File |
 |---|---|
-| Page (hero, ABOUT STORY "Kein Fließband", values, SKILLS as running text) | `frontend/pages/about.html` |
+| Page (hero, ABOUT VALUES "Vermitteln statt Marktschreien", ABOUT STORY "Kein Fließband") | `frontend/pages/about.html` |
+| PROCESS SECTION (detailed, `id="vorgehen"`, 6 steps + "Mein Anspruch") | `frontend/pages/about.html`, `styles/sections/process.css` |
 | TIMELINE, certificates | `frontend/build/renderers/career.js` |
 | Styles | `frontend/styles/pages/about.css`, `styles/components/timeline.css` |
-| Content | `/content/career/timeline.json` (`skills.json` is currently not rendered, re-enable with `<!-- @render skills -->`) |
+| Content | `/content/career/timeline.json` (`skills.json` is not rendered, the About page has no SKILLS section) |
 
 ## CONTACT (`/contact/`)
 
 | Part | File |
 |---|---|
-| Page | `frontend/pages/contact.html` |
+| Page ("Erzähl mir von deinem Projekt.") | `frontend/pages/contact.html` |
 | CONTACT FORM (frontend) | `frontend/components/contact-form.html` |
 | Form styles | `frontend/styles/components/forms.css`, `styles/pages/contact.css` |
 | Form behaviour | `frontend/scripts/modules/contact-form.js` |

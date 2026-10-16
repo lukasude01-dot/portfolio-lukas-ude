@@ -79,7 +79,7 @@ each one documented at the top. Without JavaScript, all content stays visible.
 | `/portfolio/funnels/`, `/portfolio/funnels/<slug>/` | funnels and their case pages |
 | `/portfolio/creatives/`, `/portfolio/creatives/<slug>/` | creatives & copy |
 | `/portfolio/ki/` | AI & systems (workflows as anchors `#workflow-<slug>`) |
-| `/leistungen/` | services and packages |
+| `/leistungen/`, `/leistungen/<slug>/` | services overview (package cards) and one page per package |
 | `/news/`, `/news/<slug>/` | news overview and articles |
 | `/contact/` | contact form |
 | `/demos/<name>/` | live funnel demos (`noindex`) |

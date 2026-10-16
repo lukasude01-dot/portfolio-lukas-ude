@@ -59,15 +59,19 @@ Jeder große Bereich ist im Code mit START- und END-Kommentaren markiert, z. B.:
 
 ## 1. Startseiten-Überschrift ändern
 
-Datei: `frontend/pages/index.html` → suche `EDIT: MAIN HERO HEADLINE`
+Datei: `frontend/pages/index.html` → suche `EDIT: HERO CLAIM`
 
 ```html
-<span class="hero__line" ...>Rooted in ideas.</span>
-<span class="hero__line heading-accent" ...>Built for growth.</span>
+<span class="hero__wordmark-line" ...>Marketing,</span>
+<span class="hero__wordmark-line hero__wordmark-line--accent" ...>das wirkt.</span>
 ```
 
-Nur den Text zwischen `>` und `</span>` ändern. Die zweite Zeile ist kursiv/messingfarben.
-Der Slogan bleibt bewusst Englisch (Logo-Slogan) – alle anderen Texte der Website sind Deutsch.
+Nur den Text zwischen `>` und `</span>` ändern. Die zweite Zeile ist kursiv. Der große Claim steht
+hinter dem freigestellten Porträt.
+
+Name, Slogan und Button links: suche `EDIT: HERO INTRO`. Der Slogan „Rooted in ideas. Built for growth.“
+bleibt bewusst Englisch (Logo-Slogan), alle anderen Texte der Website sind Deutsch.
+Die Zeile rechts („Marketing, Advertising, KI-Systeme“) steht in `frontend/config/site.js` → `descriptor`.
 
 ## 2. Normalen Text ändern
 
@@ -83,6 +87,9 @@ in `content/<bereich>/<projekt>/project.json` → siehe Punkt 9–13.
    `frontend/assets/images/portrait/lukas-ude-portrait.jpg` speichern (alte Datei ersetzen).
 2. Fertig – die Website erstellt automatisch optimierte Versionen (AVIF/WebP).
 3. Das Original bleibt in `source-assets/` gesichert.
+
+Die Startseite nutzt ein freigestelltes Foto mit transparentem Hintergrund:
+`frontend/assets/images/portrait/lukas-ude-cutout.png` (PNG, gleicher Name).
 
 Anderer Dateiname? Dann in `index.html` und `about.html` bei `EDIT: PROFILE IMAGE` /
 `EDIT: ABOUT IMAGE` das `src="…"` anpassen. Auch den Text bei `alt="…"` (Bildbeschreibung) aktualisieren.
@@ -226,6 +233,9 @@ Datei: `content/leistungen/pakete.json`. Jeder Block `{ … }` in `"packages"` i
 
 - **Preis ändern:** `"price"` ist die kleine Zeile unter dem Titel, z. B. `"ab 1.200 €"` oder `"Preis auf Anfrage"`.
 - **Inhalt ändern:** Punkte in `"includes"` ergänzen oder löschen (auf Kommas und Anführungszeichen achten).
+- **Was wo erscheint:** Die Karte auf `/leistungen/` zeigt nur Name, Preis, Kurzbeschreibung und die Buttons
+  „Mehr erfahren“ und „Anfragen“. Die ganze `"includes"`-Liste und `"idealFor"` („Ideal für“) stehen auf der
+  Seite des Pakets (`/leistungen/<slug>/`, siehe Punkt 25).
 - **Hervorheben:** `"highlight": true` gibt einem Paket einen stärkeren Rahmen (höchstens bei einem Paket).
 - **Thema (`"topic"`):** Der Button des Pakets öffnet das Kontaktformular mit diesem Thema schon ausgewählt.
   Das Thema muss **genau** so geschrieben sein wie eines der Themen im Kontaktformular
@@ -239,9 +249,8 @@ Datei: `content/career/timeline.json` – jeder Block `{ … }` in `"entries"` i
 (neueste zuerst). Alle `[ADD …]` ersetzen. Nicht benötigte Blöcke löschen
 (auf Kommas zwischen den Blöcken achten!).
 
-Fähigkeiten: stehen als Fließtext in `frontend/pages/about.html` (suche `EDIT: SKILLS TEXT`).
-Die Datei `content/career/skills.json` wird zurzeit nicht angezeigt.
-Persönlicher Satz auf der Über-mich-Seite: `frontend/pages/about.html` → `[ADD PERSONAL DETAIL …]`.
+Die Über-mich-Seite hat keinen Fähigkeiten-Bereich mehr. Die Datei `content/career/skills.json`
+wird nicht angezeigt.
 
 ## 15. Zertifikate aktualisieren
 
@@ -312,6 +321,7 @@ Faustregel:
 
 | Klasse beginnt mit | Datei |
 |---|---|
+| `services-band`, `selected-work`, `work-tile`, `story-banner`, `steps-compact` (Startseite) | `styles/sections/home.css` |
 | `hero`, `services`, `featured-work`, `process`, `cta`, `page-hero`, `brand-core`, `about-teaser` | `styles/sections/<name>.css` |
 | `button`, `site-header`, `site-footer`, `work-card`, `ad-mockup`, `device-preview`, `timeline`, `filter-bar`, `form-field`, `lightbox`, `qr-share`, `portfolio-subnav` | `styles/components/…` |
 | `funnel`, `creative`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-`, `news-` | `styles/pages/…` |

@@ -9,7 +9,7 @@ All portfolio content lives in `/content`. **One folder = one project** (or one 
   /creatives/<slug>/project.json   + images
   /ai/<slug>/project.json          (workflow blueprints, no images needed)
   /career/timeline.json            CV / MY JOURNEY + certificates
-  /career/skills.json              SKILLS (currently not rendered, see Career)
+  /career/skills.json              skills (not rendered, see Career)
   /leistungen/pakete.json          packages on /leistungen/
   /news/<slug>/article.md          + images   ← news articles (Markdown)
 ```
@@ -185,24 +185,25 @@ Folder: `/content/ai/<slug>/`. Shown on `/portfolio/ki/` as workflow blueprints 
 Newest first. Placeholders like `[ADD DATE]` are highlighted on the page until replaced.
 
 `/content/career/skills.json`: groups with `name`, `summary`, `skills` (list), `tools` (optional).
-The About page currently shows the skills as running text (`EDIT: SKILLS TEXT` in `/frontend/pages/about.html`),
-so this file is not rendered. To show it again, add `<!-- @render skills -->` in the SKILLS section.
+The About page has no SKILLS section, so this file is not rendered.
 
 ---
 
 ## Leistungen
 
 File: `/content/leistungen/pakete.json`. Page: `/leistungen/`. One object in `"packages"` = one package card,
-shown in this order.
+shown in this order. The card shows only `name`, `price`, `summary` and the buttons "Mehr erfahren" and "Anfragen".
+The full `includes` list and `idealFor` ("Ideal für") are shown on the package page `/leistungen/<slug>/`
+(template `/frontend/templates/service-page.html`).
 
 | Field | Meaning |
 |---|---|
 | `name` | package title |
 | `price` | small line under the title, e.g. `"ab 1.200 €"` or `"Preis auf Anfrage"` |
 | `summary` | short description |
-| `includes` | list of what the package contains |
-| `idealFor` | who the package is for |
-| `topic` | contact form topic. The button links to `/contact/?thema=<topic>` and the form opens with it selected |
+| `includes` | list of what the package contains (package page only) |
+| `idealFor` | who the package is for (package page only) |
+| `topic` | contact form topic. The "Anfragen" link goes to `/contact/?thema=<topic>` and the form opens with it selected |
 | `highlight` | `true` = stronger frame (use for one package at most) |
 
 `topic` must match one of the `CONTACT_TOPICS` in `/shared/contact-schema.js` exactly:

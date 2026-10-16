@@ -70,6 +70,7 @@ as environment variables of the backend.
 | `/portfolio/creatives/`, `/portfolio/creatives/<slug>/` | `pages/creatives.html`, `templates/creative-project.html` (+ `/content/creatives`) |
 | `/portfolio/ki/` | `pages/ai.html` (+ workflows from `/content/ai` as anchors `#workflow-<slug>`) |
 | `/leistungen/` | `pages/leistungen.html` (+ packages from `/content/leistungen/pakete.json`) |
+| `/leistungen/<slug>/` | `templates/service-page.html` (one page per package, `"detail"` in `pakete.json`) |
 | `/news/`, `/news/<slug>/` | `pages/news.html`, `templates/news-article.html` (+ `/content/news/<slug>/article.md`) |
 | `/contact/` | `pages/contact.html` (`?thema=<topic>` pre-selects a topic) |
 | `/impressum/`, `/datenschutz/` | legal placeholders (`noindex`) |
