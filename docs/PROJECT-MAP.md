@@ -30,7 +30,7 @@ content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio
 
 | Section | CSS | JS / Data |
 |---|---|---|
-| HERO (claim "Marketing, das wirkt." with cut-out portrait, name + button left, descriptor right) | `styles/sections/hero.css` | `reveal.js`, portrait `assets/images/portrait/lukas-ude-cutout.png`, descriptor in `site.js` |
+| HERO (claim "Aus Klicks werden Kunden." with cut-out portrait, name + button left, descriptor right) | `styles/sections/hero.css` | `reveal.js`, portrait `assets/images/portrait/lukas-ude-cutout.png`, descriptor in `site.js` |
 | SERVICES BAND (four areas with small images, links into the portfolio) | `styles/sections/home.css` (SERVICES BAND) | – |
 | SELECTED WORK (four project cards) | `styles/sections/home.css` (SELECTED WORK) | `build/renderers/portfolio.js` (`home-selected-work`), `/content/portfolio` |
 | STORY BANNER ("Vom Forst ins Marketing.", links to `/about/`) | `styles/sections/home.css` (STORY BANNER) | `parallax.js`, `assets/images/nature/` |
