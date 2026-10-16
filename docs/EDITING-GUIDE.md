@@ -62,7 +62,7 @@ Jeder große Bereich ist im Code mit START- und END-Kommentaren markiert, z. B.:
 Datei: `frontend/pages/index.html` → suche `EDIT: HERO CLAIM`
 
 ```html
-<span class="hero__wordmark-line" ...>Marketing,</span>
+<span class="hero__wordmark-line" ...>Aus Klicks werden</span>
 <span class="hero__wordmark-line hero__wordmark-line--accent" ...>Kunden.</span>
 ```
 
