@@ -1,6 +1,6 @@
 /* ==========================================================
    BRAND CORE SECTION
-   Light editorial statement + the four voice values.
+   Light editorial statement + four working principles.
    HTML: /frontend/pages/index.html -> BRAND CORE SECTION
 ========================================================== */
 
@@ -37,12 +37,20 @@
 
 .brand-core__values {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-large) var(--spacing-medium);
+}
+
+/* Two columns from tablet width upwards */
+@media (min-width: 600px) {
+    .brand-core__values {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .brand-core__value {
     display: grid;
+    align-content: start;
     gap: 0.4rem;
     padding-top: 1.1rem;
     border-top: 1px solid var(--color-line);
