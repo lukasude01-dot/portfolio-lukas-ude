@@ -4,7 +4,7 @@ Find the right file in seconds. Paths are relative to the project root.
 
 **Glossary:** a *section* is a visual band on a page (HERO, SERVICES …). A *project* is one
 content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio/`); its areas
-(Funnels, Creatives, Design, KI) live below it. `work-card` is the card used in FEATURED WORK.
+(Funnels, Creatives, KI) live below it. `work-card` is the card used in FEATURED WORK.
 
 ---
 
@@ -41,14 +41,14 @@ content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio
 
 ## PORTFOLIO HUB (`/portfolio/`, `/portfolio/<slug>/`)
 
-The portfolio is the hub for all work. Funnels, Creatives, Design and KI are sub-pages below it,
+The portfolio is the hub for all work. Funnels, Creatives and KI are sub-pages below it,
 each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come from
 `SECTION_PATHS` in `frontend/build/lib/content.js` (must match the `path:` of each page).
 "Alle Arbeiten" links point to `/portfolio/`.
 
 | Part | File |
 |---|---|
-| Overview page ("Selected Work" + PORTFOLIO AREAS linking to the four sub-pages) | `frontend/pages/portfolio.html` |
+| Overview page ("Selected Work" + PORTFOLIO AREAS linking to the three sub-pages) | `frontend/pages/portfolio.html` |
 | Sub-navigation | `frontend/components/portfolio-subnav.html`, `frontend/build/renderers/site.js` |
 | Project page layout | `frontend/templates/portfolio-project.html` |
 | Grid, motifs, description, next project | `frontend/build/renderers/portfolio.js` |
@@ -82,17 +82,6 @@ each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come fro
 | CREATIVE / COPY / COMBINED (`/portfolio/creatives/?view=copy` opens the copy view) | `frontend/scripts/modules/creative-views.js` |
 | Filters | `frontend/scripts/modules/filters.js` |
 | Content | `/content/creatives/<slug>/` |
-
-## DESIGN (`/portfolio/design/`, `/portfolio/design/<slug>/`)
-
-| Part | File |
-|---|---|
-| Overview page | `frontend/pages/design.html` |
-| Case page layout | `frontend/templates/design-project.html` |
-| Grid + gallery | `frontend/build/renderers/design.js` |
-| Styles | `frontend/styles/pages/design.css`, `styles/components/lightbox.css` |
-| Full-screen preview | `frontend/scripts/modules/lightbox.js` |
-| Content | `/content/design/<slug>/` |
 
 ## AI & SYSTEMS (`/portfolio/ki/`, workflows as `#workflow-<slug>`)
 

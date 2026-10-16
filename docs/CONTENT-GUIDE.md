@@ -4,10 +4,9 @@ All portfolio content lives in `/content`. **One folder = one project** (or one 
 
 ```
 /content
-  /portfolio/<slug>/project.json   + images   ← finished graphic design work (Selected Work)
+  /portfolio/<slug>/project.json   + images   ← finished work (Selected Work)
   /funnels/<slug>/project.json     + images
   /creatives/<slug>/project.json   + images
-  /design/<slug>/project.json      + images
   /ai/<slug>/project.json          (workflow blueprints, no images needed)
   /career/timeline.json            CV / MY JOURNEY + certificates
   /career/skills.json              SKILLS (currently not rendered, see Career)
@@ -15,11 +14,11 @@ All portfolio content lives in `/content`. **One folder = one project** (or one 
   /news/<slug>/article.md          + images   ← news articles (Markdown)
 ```
 
-- The **folder name** becomes the URL: `/content/design/poster-series/` → `/portfolio/design/poster-series/`.
+- The **folder name** becomes the URL: `/content/creatives/recruiting-ads/` → `/portfolio/creatives/recruiting-ads/`.
   Use lowercase letters, numbers and hyphens only. All portfolio sections live below `/portfolio/`
-  (funnels, creatives, design, ki). The content folders keep their names. The URLs are defined in
+  (funnels, creatives, ki). The content folders keep their names. The URLs are defined in
   `SECTION_PATHS` in `/frontend/build/lib/content.js`.
-- Folders starting with `_` (e.g. `_template`) are ignored. **To add a project, copy `_template`.**
+- Folders starting with `_` (e.g. `_template` or `_archiv`) are ignored. `/content/_archiv/design/` holds the former design projects as an archive only; they are not built. **To add a project, copy `_template`.**
 - Images are referenced by **file name only** (`"src": "cover.jpg"`). Put them in the same folder.
   The build optimises them automatically. Large JPGs or PNGs are fine.
 - Every image needs an `"alt"` text that describes it. The build warns if one is missing.
@@ -144,20 +143,6 @@ Write the category exactly like that. The list is in `/frontend/build/renderers/
 
 **Copywriting only (no image)?** Use any neutral image (e.g. a typographic card) and
 switch visitors to the COPY view (link directly with `/portfolio/creatives/?view=copy`), or create the creative as a simple text graphic.
-
----
-
-## Design
-
-Folder: `/content/design/<slug>/`. Page: `/portfolio/design/<slug>/`. Overview: `/portfolio/design/`.
-
-| Field | Meaning |
-|---|---|
-| `layout` | tile size on `/portfolio/design/`: `feature` (large), `wide`, `tall`, `standard` |
-| `body` | list of paragraphs |
-| `images` | gallery: `{ "src", "alt", "caption", "size": "full" \| "half" }` |
-
-Tip: mix layouts (e.g. one `feature`, one `tall`, one `wide`, one `standard`) for an editorial grid.
 
 ---
 

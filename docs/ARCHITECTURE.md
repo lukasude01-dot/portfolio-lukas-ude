@@ -68,7 +68,6 @@ as environment variables of the backend.
 | `/portfolio/funnels/`, `/portfolio/funnels/<slug>/` | `pages/funnels.html`, `templates/funnel-project.html` (+ `/content/funnels`) |
 | `/demos/<slug>/` | `demos/<slug>/index.html` (live demo, `noindex`) |
 | `/portfolio/creatives/`, `/portfolio/creatives/<slug>/` | `pages/creatives.html`, `templates/creative-project.html` (+ `/content/creatives`) |
-| `/portfolio/design/`, `/portfolio/design/<slug>/` | `pages/design.html`, `templates/design-project.html` (+ `/content/design`) |
 | `/portfolio/ki/` | `pages/ai.html` (+ workflows from `/content/ai` as anchors `#workflow-<slug>`) |
 | `/leistungen/` | `pages/leistungen.html` (+ packages from `/content/leistungen/pakete.json`) |
 | `/news/`, `/news/<slug>/` | `pages/news.html`, `templates/news-article.html` (+ `/content/news/<slug>/article.md`) |
@@ -79,7 +78,7 @@ as environment variables of the backend.
 The portfolio sub-pages set their URL with `path:` in the front matter. The project URLs are built
 from `SECTION_PATHS` in `build/lib/content.js`, which is the single source for them and must match
 those `path:` values. Content folders keep their names (`/content/funnels/<slug>/` becomes
-`/portfolio/funnels/<slug>/`). Funnel, creative and design projects get the breadcrumb
+`/portfolio/funnels/<slug>/`). Funnel and creative projects get the breadcrumb
 `Startseite > Portfolio > <Section> > <Project>`. News articles are built by `buildNewsPages`
 in `build.js`. Their Markdown is converted by `lib/markdown.js` (small subset, all text escaped first,
 links checked with `safeUrl`).

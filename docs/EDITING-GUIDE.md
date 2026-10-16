@@ -74,7 +74,7 @@ Der Slogan bleibt bewusst Englisch (Logo-Slogan) – alle anderen Texte der Webs
 Öffne die passende Seite in `frontend/pages/` (z. B. `about.html`) und suche nach `EDIT:`.
 Text zwischen den Tags (`<p>…</p>`) ändern. Die Tags selbst stehen lassen.
 
-Texte von **Projekten** (Funnels, Creatives, Design) stehen nicht in den Seiten, sondern
+Texte von **Projekten** (Portfolio, Funnels, Creatives) stehen nicht in den Seiten, sondern
 in `content/<bereich>/<projekt>/project.json` → siehe Punkt 9–13.
 
 ## 3. Mein Porträt ersetzen
@@ -141,16 +141,16 @@ navigation: [
 ```
 
 Der Link erscheint automatisch in Kopfzeile, Mobilmenü und Footer.
-Die kleine Navigation auf den Portfolio-Seiten (Ausgewählte Arbeiten, Funnels, Creatives, Design, KI & Systeme)
+Die kleine Navigation auf den Portfolio-Seiten (Ausgewählte Arbeiten, Funnels, Creatives, KI & Systeme)
 steht in derselben Datei unter `portfolioNavigation`.
 Für eine **neue Seite**: eine bestehende Datei in `frontend/pages/` kopieren (z. B. `about.html` → `blog.html`),
 oben im `---`-Block `title`, `description` und `path: /blog/` anpassen, Inhalt ändern.
 
 ## 9. Portfolio-Projekt hinzufügen
 
-1. Bereich wählen: `content/funnels`, `content/creatives` oder `content/design`.
+1. Bereich wählen: `content/funnels` oder `content/creatives`.
 2. Den Ordner `_template` **kopieren** und umbenennen, z. B. `mein-projekt`
-   (nur Kleinbuchstaben, Zahlen, Bindestriche – das wird die Adresse `/portfolio/design/mein-projekt/`).
+   (nur Kleinbuchstaben, Zahlen, Bindestriche – das wird die Adresse `/portfolio/creatives/mein-projekt/`).
 3. Bilder in diesen Ordner legen.
 4. `project.json` öffnen, alle `[ADD …]` ausfüllen, Bildnamen eintragen.
 5. `"status": "draft"` in `"status": "published"` ändern.
@@ -173,13 +173,7 @@ Im selben Creative-Projekt:
 Auf `/portfolio/creatives/` kann man mit **COPY** nur die Texte ansehen.
 Direkt-Link zur Text-Ansicht: `/portfolio/creatives/?view=copy`.
 
-## 12. Design-Arbeit hinzufügen
-
-Wie Punkt 9 in `content/design/`. Mit `"layout"` bestimmst du die Kachelgröße:
-`feature` (groß), `wide` (breit), `tall` (hoch), `standard`.
-Alle Bilder für die Projektseite stehen in `"images"` (`"size": "full"` oder `"half"`).
-
-## 12b. Portfolio-Projekt (fertige Grafiken) hinzufügen
+## 12. Portfolio-Projekt (fertige Grafiken) hinzufügen
 
 1. Ordner `content/portfolio/_template` kopieren und umbenennen (z. B. `mein-plakat` → Adresse `/portfolio/mein-plakat/`).
 2. Deine fertigen Grafiken (WebP, JPG oder PNG) in den Ordner legen – unverändert, sie werden **nie beschnitten**.
@@ -289,7 +283,7 @@ path: /portfolio/funnels/
 ---
 ```
 
-Achtung bei den Portfolio-Seiten (Funnels, Creatives, Design, KI): `path:` muss zu `SECTION_PATHS`
+Achtung bei den Portfolio-Seiten (Funnels, Creatives, KI): `path:` muss zu `SECTION_PATHS`
 in `frontend/build/lib/content.js` passen, sonst stimmen die Links zu den Projekten nicht mehr.
 
 `title` = Titel im Browser-Tab und bei Google (es wird automatisch „– Lukas Ude“ angehängt).
@@ -320,7 +314,7 @@ Faustregel:
 |---|---|
 | `hero`, `services`, `featured-work`, `process`, `cta`, `page-hero`, `brand-core`, `about-teaser` | `styles/sections/<name>.css` |
 | `button`, `site-header`, `site-footer`, `work-card`, `ad-mockup`, `device-preview`, `timeline`, `filter-bar`, `form-field`, `lightbox`, `qr-share`, `portfolio-subnav` | `styles/components/…` |
-| `funnel`, `creative`, `design`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-`, `news-` | `styles/pages/…` |
+| `funnel`, `creative`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-`, `news-` | `styles/pages/…` |
 | `package` (Leistungen-Seite) | `styles/pages/services.css` |
 
 Alternativ: `Strg + Shift + F` und den Klassennamen suchen.
