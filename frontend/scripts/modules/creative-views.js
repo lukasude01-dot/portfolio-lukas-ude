@@ -11,7 +11,10 @@
  * Sets data-view="creative|copy|combined" on the grid.
  * The CSS in /frontend/styles/pages/creatives.css shows the
  * matching part of each card. The choice is remembered for
- * the visit (sessionStorage) – nothing is sent anywhere.
+ * the visit (sessionStorage), nothing is sent anywhere.
+ *
+ * A link can open a view directly, e.g. /creatives/?view=copy
+ * (used on the homepage for the "Copy" service).
  */
 
 const STORAGE_KEY = "creative-view";
@@ -35,6 +38,12 @@ export function initCreativeViews() {
     };
 
     buttons.forEach((button) => button.addEventListener("click", () => setView(button.dataset.view)));
+
+    const fromUrl = new URL(window.location.href).searchParams.get("view");
+    if (fromUrl && buttons.some((button) => button.dataset.view === fromUrl)) {
+        setView(fromUrl);
+        return;
+    }
 
     try {
         const saved = sessionStorage.getItem(STORAGE_KEY);

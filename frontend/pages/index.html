@@ -172,7 +172,7 @@ headerTheme: dark
              SERVICES SECTION
 
              PURPOSE:
-             The five disciplines, each linking to its own page.
+             The five service areas, each linking to a matching page.
              On desktop, hovering a row shows a matching image.
 
              EDIT HERE:
@@ -192,46 +192,55 @@ headerTheme: dark
                         <h2 class="heading-2" id="services-heading" data-reveal data-reveal-delay="1">Von der ersten Idee<br>bis zum laufenden System.</h2>
                     </div>
                     <p class="text-lead" data-reveal data-reveal-delay="2">
-                        Vier Disziplinen, die zusammen am besten wirken. Jede hat eine eigene Seite mit
-                        Beispielen, Vorgehen und Ergebnissen.
+                        Du kannst einzelne Bausteine buchen oder alles aus einer Hand bekommen.
+                        Zu jedem Bereich findest du Beispiele und Demos aus meiner Arbeit.
                     </p>
                 </header>
 
                 <div class="services__layout" data-services>
                     <ol class="services__list" role="list">
-                        <!-- SERVICES - FUNNELS -->
+                        <!-- SERVICES - LANDINGPAGES -->
                         <li class="services__item" data-reveal data-service-image="0">
                             <a class="services__link" href="/funnels/">
                                 <span class="services__number label">01</span>
-                                <span class="services__title">Funnels &amp; Landingpages</span>
-                                <span class="services__text">Strategie, Aufbau und Seiten, die Menschen zu einer klaren Entscheidung führen.</span>
+                                <span class="services__title">Landingpages</span>
+                                <span class="services__text">Seiten mit einer klaren Botschaft, die Besucher zu einer Entscheidung führen.</span>
+                                <span class="services__arrow" aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                        <!-- SERVICES - FUNNELS & META ADS -->
+                        <li class="services__item" data-reveal data-service-image="1">
+                            <a class="services__link" href="/funnels/#aufbau">
+                                <span class="services__number label">02</span>
+                                <span class="services__title">Funnels &amp; Meta Ads</span>
+                                <span class="services__text">Kampagnen auf Facebook und Instagram, die Menschen gezielt durch einen Funnel zur Anfrage bringen.</span>
                                 <span class="services__arrow" aria-hidden="true">→</span>
                             </a>
                         </li>
                         <!-- SERVICES - CREATIVES -->
-                        <li class="services__item" data-reveal data-service-image="1">
+                        <li class="services__item" data-reveal data-service-image="2">
                             <a class="services__link" href="/creatives/">
-                                <span class="services__number label">02</span>
-                                <span class="services__title">Creatives &amp; Copy</span>
-                                <span class="services__text">Anzeigenkonzepte, Hooks, Headlines und Primary Texts für Social-Kampagnen.</span>
+                                <span class="services__number label">03</span>
+                                <span class="services__title">Creatives</span>
+                                <span class="services__text">Anzeigenmotive, die im Feed auffallen und zur Marke passen.</span>
                                 <span class="services__arrow" aria-hidden="true">→</span>
                             </a>
                         </li>
-                        <!-- SERVICES - DESIGN -->
-                        <li class="services__item" data-reveal data-service-image="2">
-                            <a class="services__link" href="/design/">
-                                <span class="services__number label">03</span>
-                                <span class="services__title">Design</span>
-                                <span class="services__text">Markenidentität, Print, Social und Kampagnenmaterial mit klarer visueller Linie.</span>
+                        <!-- SERVICES - COPY -->
+                        <li class="services__item" data-reveal data-service-image="3">
+                            <a class="services__link" href="/creatives/?view=copy">
+                                <span class="services__number label">04</span>
+                                <span class="services__title">Copy</span>
+                                <span class="services__text">Hooks, Headlines und Anzeigentexte, die verkaufen, ohne laut zu sein.</span>
                                 <span class="services__arrow" aria-hidden="true">→</span>
                             </a>
                         </li>
                         <!-- SERVICES - AI & SYSTEMS -->
-                        <li class="services__item" data-reveal data-service-image="3">
+                        <li class="services__item" data-reveal data-service-image="4">
                             <a class="services__link" href="/ai/">
-                                <span class="services__number label">04</span>
+                                <span class="services__number label">05</span>
                                 <span class="services__title">KI &amp; Systeme</span>
-                                <span class="services__text">KI-gestützte Workflows, Automatisierung und Prozesse, die alles verbinden.</span>
+                                <span class="services__text">KI-gestützte Workflows und Automatisierungen, die Anfragen und Abläufe verbinden.</span>
                                 <span class="services__arrow" aria-hidden="true">→</span>
                             </a>
                         </li>
@@ -240,8 +249,9 @@ headerTheme: dark
                     <!-- SERVICES - HOVER IMAGES (desktop only, same order as the list) -->
                     <div class="services__preview" aria-hidden="true">
                         <div class="services__preview-image is-active"><img src="/assets/images/mood/mood-planning.jpg" alt="" sizes="30vw" data-responsive></div>
+                        <div class="services__preview-image"><img src="/assets/images/mood/mood-forest.jpg" alt="" sizes="30vw" data-responsive></div>
                         <div class="services__preview-image"><img src="/assets/images/mood/mood-brand-moment.jpg" alt="" sizes="30vw" data-responsive></div>
-                        <div class="services__preview-image"><img src="/assets/images/brand/brand-business-cards.jpg" alt="" sizes="30vw" data-responsive></div>
+                        <div class="services__preview-image"><img src="/assets/images/mood/mood-details.jpg" alt="" sizes="30vw" data-responsive></div>
                         <div class="services__preview-image"><img src="/assets/images/mood/mood-water.jpg" alt="" sizes="30vw" data-responsive></div>
                     </div>
                 </div>
@@ -274,6 +284,12 @@ headerTheme: dark
                     <div>
                         <p class="eyebrow eyebrow--line" data-reveal>Ausgewählte Arbeiten</p>
                         <h2 class="heading-2" id="featured-work-heading" data-reveal data-reveal-delay="1">Gestaltung zum Ansehen.<br><em class="heading-accent">Funnels zum Ausprobieren.</em></h2>
+                        <!-- EDIT: FEATURED WORK INTRO -->
+                        <p class="featured-work__intro text-lead" data-reveal data-reveal-delay="2">
+                            Hinter jeder Arbeit steht eine Frage: Was soll bei den Menschen hängen bleiben?
+                            Diese Auswahl zeigt, wie daraus Motive, Seiten und Kampagnen werden.
+                            Freie Konzepte und Demos sind als solche gekennzeichnet.
+                        </p>
                     </div>
                     <a class="text-link" href="/work/" data-reveal data-reveal-delay="2">Alle Arbeiten →</a>
                 </header>

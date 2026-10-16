@@ -18,6 +18,10 @@
     border-top: 1px solid var(--color-line);
 }
 
+.featured-work__intro {
+    margin-top: var(--spacing-medium);
+}
+
 
 /* FEATURED WORK - GRID */
 
