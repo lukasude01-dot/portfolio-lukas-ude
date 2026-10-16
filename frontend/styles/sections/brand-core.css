@@ -1,6 +1,6 @@
 /* ==========================================================
    BRAND CORE SECTION
-   Light editorial statement + four working principles.
+   Light editorial statement + three working principles (stacked).
    HTML: /frontend/pages/index.html -> BRAND CORE SECTION
 ========================================================== */
 
@@ -39,13 +39,6 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-large) var(--spacing-medium);
-}
-
-/* Two columns from tablet width upwards */
-@media (min-width: 600px) {
-    .brand-core__values {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 .brand-core__value {
