@@ -100,8 +100,8 @@
     .page-hero--pos-moose .page-hero__media img {
         position: absolute;
         top: 50%;
-        left: -12%;
-        width: 160%;
+        left: -4%;
+        width: 135%;
         max-width: none;
         height: auto;
         transform: translateY(-50%);
