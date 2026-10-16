@@ -32,7 +32,7 @@ export const siteConfig = {
     tagline: "Rooted in ideas. Built for growth.",
 
     // EDIT: DESCRIPTOR (the small line above headlines)
-    descriptor: "Marketing, KI, Systeme",
+    descriptor: "Marketing, Advertising, KI-Systeme",
 
     // EDIT: DEFAULT SEO DESCRIPTION (used when a page has none)
     description:
@@ -154,7 +154,7 @@ export const siteConfig = {
     ogImage: "/assets/images/og/og-default.jpg",
 
     // Used in structured data (schema.org/Person)
-    jobTitle: "Marketing, KI & Systeme",
+    jobTitle: "Marketing, Advertising & KI-Systeme",
     knowsAbout: [
         "Marketing",
         "Copywriting",

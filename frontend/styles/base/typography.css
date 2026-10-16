@@ -110,7 +110,11 @@ h3,
 /* Wider spacing between the parts, e.g. the hero descriptor */
 .eyebrow--spaced {
     flex-wrap: wrap;
-    gap: 0.5em 1.75em;
+    gap: 0.5em clamp(1em, 2.5vw, 1.75em);
+}
+
+.eyebrow--spaced > span + span {
+    margin-left: 0;
 }
 
 /* Year next to a label, e.g. on design cards */

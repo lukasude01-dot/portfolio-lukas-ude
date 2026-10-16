@@ -1,6 +1,6 @@
 # Lukas Ude – Portfolio & Business Website
 
-**Rooted in ideas. Built for growth.** · Marketing · KI · Systeme
+**Rooted in ideas. Built for growth.** Marketing, Advertising und KI-Systeme
 
 Website language: **German** (only the logo slogan stays English). Code and developer docs are in English; the editing guide for beginners is in German.
 

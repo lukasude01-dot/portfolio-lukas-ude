@@ -26,7 +26,7 @@ const visibleSocial = (site) => site.social.filter((profile) => profile.url);
 
 export const siteRenderers = {
 
-    // DESCRIPTOR (e.g. "Marketing, KI, Systeme" from site.js)
+    // DESCRIPTOR (e.g. "Marketing, Advertising, KI-Systeme" from site.js)
     // Each part becomes its own <span>; CSS adds the spacing.
     descriptor: ({ site }) => html`${site.descriptor.split(",").map((part) => html`<span>${part.trim()}</span>`)}`,
 
