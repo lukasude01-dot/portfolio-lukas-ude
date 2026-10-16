@@ -10,6 +10,36 @@
     padding-bottom: var(--spacing-section);
 }
 
+/* Background photo with a strong dark veil, so the form stays calm */
+.contact--image {
+    isolation: isolate;
+}
+
+.contact__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.contact__media picture,
+.contact__media img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact__media img {
+    object-fit: cover;
+    object-position: 50% 65%;
+}
+
+.contact--image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(9, 10, 9, 0.9) 0%, rgba(9, 10, 9, 0.75) 50%, rgba(9, 10, 9, 0.6) 100%);
+}
+
 .contact__inner {
     position: relative;
     display: grid;
