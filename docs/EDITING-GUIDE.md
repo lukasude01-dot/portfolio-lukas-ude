@@ -36,6 +36,9 @@ In VS Code: **`Strg + Shift + F`** (Suche in allen Dateien). Nützliche Suchwör
 | `FUNNEL` | Funnel-Seiten und Demos |
 | `CREATIVE` | Creatives-Seite |
 | `ABOUT` | Über-mich-Seite |
+| `PORTFOLIO` | Portfolio-Übersicht und Unter-Navigation |
+| `LEISTUNGEN` | Leistungen-Seite mit den Paketen |
+| `NEWS` | News-Seite und News-Bereich auf der Startseite |
 | `IMAGE` | Bild-Stellen |
 | `SAFE TO EDIT` | Stellen, die du gefahrlos ändern kannst |
 | `EDIT WITH CARE` | Vorsicht – beeinflusst Layout |
@@ -127,21 +130,27 @@ Datei: `frontend/config/site.js` → `navigation`
 
 ```js
 navigation: [
-    { label: "Arbeiten", href: "/work/" },
-    { label: "Blog", href: "/blog/" },   // neuer Punkt
-    ...
+    { label: "Start", href: "/" },
+    { label: "Über mich", href: "/about/" },
+    { label: "Portfolio", href: "/portfolio/" },
+    { label: "Leistungen", href: "/leistungen/" },
+    { label: "News", href: "/news/" },
+    { label: "Kontakt", href: "/contact/" },
+    { label: "Blog", href: "/blog/" }    // neuer Punkt
 ]
 ```
 
 Der Link erscheint automatisch in Kopfzeile, Mobilmenü und Footer.
-Für eine **neue Seite**: eine bestehende Datei in `frontend/pages/` kopieren (z. B. `work.html` → `blog.html`),
+Die kleine Navigation auf den Portfolio-Seiten (Ausgewählte Arbeiten, Funnels, Creatives, Design, KI & Systeme)
+steht in derselben Datei unter `portfolioNavigation`.
+Für eine **neue Seite**: eine bestehende Datei in `frontend/pages/` kopieren (z. B. `about.html` → `blog.html`),
 oben im `---`-Block `title`, `description` und `path: /blog/` anpassen, Inhalt ändern.
 
 ## 9. Portfolio-Projekt hinzufügen
 
 1. Bereich wählen: `content/funnels`, `content/creatives` oder `content/design`.
 2. Den Ordner `_template` **kopieren** und umbenennen, z. B. `mein-projekt`
-   (nur Kleinbuchstaben, Zahlen, Bindestriche – das wird die Adresse `/design/mein-projekt/`).
+   (nur Kleinbuchstaben, Zahlen, Bindestriche – das wird die Adresse `/portfolio/design/mein-projekt/`).
 3. Bilder in diesen Ordner legen.
 4. `project.json` öffnen, alle `[ADD …]` ausfüllen, Bildnamen eintragen.
 5. `"status": "draft"` in `"status": "published"` ändern.
@@ -161,7 +170,8 @@ Im selben Creative-Projekt:
 - `"headlines": [ "…" ]` – Liste von Headlines
 - in jedem Eintrag von `"ads"`: `"primaryText"` (neue Zeile mit `\n`)
 
-Auf `/creatives/` kann man mit **COPY** nur die Texte ansehen.
+Auf `/portfolio/creatives/` kann man mit **COPY** nur die Texte ansehen.
+Direkt-Link zur Text-Ansicht: `/portfolio/creatives/?view=copy`.
 
 ## 12. Design-Arbeit hinzufügen
 
@@ -186,6 +196,48 @@ Alle Bilder für die Projektseite stehen in `"images"` (`"size": "full"` oder `"
 4. Titelbild `cover.jpg` = Screenshot der Demo, in den Content-Ordner legen.
 
 Demos senden **keine Daten**. Das steht auch sichtbar oben in der Demo.
+Die Demo bleibt unter `/demos/<ordnername>/`, die Projektseite liegt unter `/portfolio/funnels/<ordnername>/`.
+
+## 13b. Einen News-Beitrag schreiben
+
+1. Den Ordner `content/news/_vorlage` **kopieren** und umbenennen, z. B. `mein-neuer-beitrag`
+   (nur Kleinbuchstaben, Zahlen und Bindestriche, ohne Umlaute). Das wird die Adresse `/news/mein-neuer-beitrag/`.
+2. Im neuen Ordner die Datei `article.md` öffnen. Oben zwischen den beiden `---` ausfüllen:
+   `title` (Titel), `date` (Datum als `2026-10-16`), `description` (ein bis zwei Sätze für Übersicht und Google),
+   `category` (z. B. „Meta Ads“).
+3. Optional ein Titelbild in den Ordner legen und `image: titelbild.jpg` und `imageAlt: Bildbeschreibung` eintragen
+   (das `#` davor entfernen).
+4. Unter dem zweiten `---` den Text schreiben. Leere Zeile = neuer Absatz.
+   `## ` = Zwischenüberschrift, `- ` = Liste, `> ` = Zitat, `**fett**`, `*kursiv*`, `[Linktext](https://…)`.
+5. Speichern und `/news/` im Browser öffnen. Neue Beiträge stehen automatisch oben (sortiert nach Datum)
+   und die drei neuesten auch auf der Startseite. Die Lesezeit wird automatisch berechnet.
+
+Noch nicht fertig? `status: draft` eintragen, dann wird der Beitrag nicht veröffentlicht.
+Ordner, die mit `_` beginnen (wie `_vorlage`), werden nie veröffentlicht.
+
+## 13c. Pakete auf der Leistungen-Seite ändern
+
+Datei: `content/leistungen/pakete.json`. Jeder Block `{ … }` in `"packages"` ist ein Paket (in dieser Reihenfolge auf `/leistungen/`).
+
+```json
+{
+    "name": "Landingpage",
+    "price": "Preis auf Anfrage",
+    "summary": "Kurze Beschreibung des Pakets.",
+    "includes": ["Erste Leistung", "Zweite Leistung"],
+    "idealFor": "Für wen das Paket gedacht ist",
+    "topic": "Landingpage"
+}
+```
+
+- **Preis ändern:** `"price"` ist die kleine Zeile unter dem Titel, z. B. `"ab 1.200 €"` oder `"Preis auf Anfrage"`.
+- **Inhalt ändern:** Punkte in `"includes"` ergänzen oder löschen (auf Kommas und Anführungszeichen achten).
+- **Hervorheben:** `"highlight": true` gibt einem Paket einen stärkeren Rahmen (höchstens bei einem Paket).
+- **Thema (`"topic"`):** Der Button des Pakets öffnet das Kontaktformular mit diesem Thema schon ausgewählt.
+  Das Thema muss **genau** so geschrieben sein wie eines der Themen im Kontaktformular
+  (`shared/contact-schema.js` → `CONTACT_TOPICS`): Landingpage, Funnel & Meta Ads, Creatives & Copy,
+  KI-Systeme & Automatisierung, Laufende Betreuung, Etwas anderes.
+  Passt es nicht, zeigt `npm run build` eine Warnung. Neues Thema? Dann dort ebenfalls ergänzen.
 
 ## 14. Lebenslauf aktualisieren
 
@@ -193,7 +245,8 @@ Datei: `content/career/timeline.json` – jeder Block `{ … }` in `"entries"` i
 (neueste zuerst). Alle `[ADD …]` ersetzen. Nicht benötigte Blöcke löschen
 (auf Kommas zwischen den Blöcken achten!).
 
-Fähigkeiten: `content/career/skills.json`.
+Fähigkeiten: stehen als Fließtext in `frontend/pages/about.html` (suche `EDIT: SKILLS TEXT`).
+Die Datei `content/career/skills.json` wird zurzeit nicht angezeigt.
 Persönlicher Satz auf der Über-mich-Seite: `frontend/pages/about.html` → `[ADD PERSONAL DETAIL …]`.
 
 ## 15. Zertifikate aktualisieren
@@ -232,9 +285,12 @@ Ganz oben in jeder Seite in `frontend/pages/` steht ein Block zwischen `---`:
 ---
 title: Funnels & Landingpages
 description: Funnels und Landingpages zum Selbst-Ausprobieren ...
-path: /funnels/
+path: /portfolio/funnels/
 ---
 ```
+
+Achtung bei den Portfolio-Seiten (Funnels, Creatives, Design, KI): `path:` muss zu `SECTION_PATHS`
+in `frontend/build/lib/content.js` passen, sonst stimmen die Links zu den Projekten nicht mehr.
 
 `title` = Titel im Browser-Tab und bei Google (es wird automatisch „– Lukas Ude“ angehängt).
 Für Projektseiten: in `project.json` die Felder `"seoTitle"` / `"seoDescription"` ergänzen.
@@ -263,8 +319,9 @@ Faustregel:
 | Klasse beginnt mit | Datei |
 |---|---|
 | `hero`, `services`, `featured-work`, `process`, `cta`, `page-hero`, `brand-core`, `about-teaser` | `styles/sections/<name>.css` |
-| `button`, `site-header`, `site-footer`, `work-card`, `ad-mockup`, `device-preview`, `timeline`, `filter-bar`, `form-field`, `lightbox`, `qr-share` | `styles/components/…` |
-| `funnel`, `creative`, `design`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-` | `styles/pages/…` |
+| `button`, `site-header`, `site-footer`, `work-card`, `ad-mockup`, `device-preview`, `timeline`, `filter-bar`, `form-field`, `lightbox`, `qr-share`, `portfolio-subnav` | `styles/components/…` |
+| `funnel`, `creative`, `design`, `ai-`, `workflow`, `about-`, `contact`, `legal`, `project-`, `news-` | `styles/pages/…` |
+| `package` (Leistungen-Seite) | `styles/pages/services.css` |
 
 Alternativ: `Strg + Shift + F` und den Klassennamen suchen.
 
@@ -281,7 +338,7 @@ Alternativ: `Strg + Shift + F` und den Klassennamen suchen.
 | CREATIVE / COPY / COMBINED | `creative-views.js` |
 | Funnel-Vorschau in Geräte-Rahmen | `device-preview.js` |
 | Vollbild-Bildansicht | `lightbox.js` |
-| Kontaktformular | `contact-form.js` |
+| Kontaktformular (inkl. Thema aus dem Link `?thema=…`) | `contact-form.js` |
 | Mehrstufige Demo-Formulare | `frontend/demos/shared/demo-funnel.js` |
 
 Im HTML erkennst du die Verbindung an `data-…`-Attributen (z. B. `data-contact-form`).
