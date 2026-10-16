@@ -17,7 +17,22 @@
          /frontend/scripts/modules/navigation.js
     ========================================================= -->
     <header class="site-header" data-site-header>
+
+        <!-- NAVIGATION - TOP BAR (location, positioning, contact) -->
+        <div class="topbar">
+            <div class="topbar__inner container">
+                <p class="topbar__item">{{ site.location }}</p>
+                <p class="topbar__item topbar__item--center"><!-- @render descriptor --></p>
+                <p class="topbar__item topbar__item--end"><a href="/contact/">Projekt anfragen</a></p>
+            </div>
+        </div>
+
         <div class="site-header__inner container">
+
+            <!-- NAVIGATION - DESKTOP LINKS, LEFT HALF (generated from site.js) -->
+            <nav class="site-nav site-nav--left" aria-label="Hauptnavigation">
+                <!-- @render navigation-links-left -->
+            </nav>
 
             <!-- EDIT: LOGO (mark + wordmark) -->
             <a class="brand-logo" href="/" aria-label="Startseite {{ site.name }}">
@@ -27,9 +42,9 @@
                 <span class="brand-logo__wordmark"><span class="brand-logo__first">Lukas</span> <span class="brand-logo__last">Ude</span></span>
             </a>
 
-            <!-- NAVIGATION - DESKTOP LINKS (generated from site.js) -->
-            <nav class="site-nav" aria-label="Hauptnavigation">
-                <!-- @render navigation-links -->
+            <!-- NAVIGATION - DESKTOP LINKS, RIGHT HALF (the last item is shown as a button) -->
+            <nav class="site-nav site-nav--right" aria-label="Hauptnavigation, Teil 2">
+                <!-- @render navigation-links-right -->
             </nav>
 
             <!-- NAVIGATION - MOBILE MENU BUTTON -->

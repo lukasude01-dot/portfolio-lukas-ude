@@ -30,7 +30,25 @@ export const siteRenderers = {
     // Each part becomes its own <span>; CSS adds the spacing.
     descriptor: ({ site }) => html`${site.descriptor.split(",").map((part) => html`<span>${part.trim()}</span>`)}`,
 
-    // NAVIGATION - DESKTOP LINKS
+    // NAVIGATION - DESKTOP LINKS, SPLIT AROUND THE CENTRED LOGO
+    // First half left of the logo, second half right of it.
+    // The very last item (Kontakt) is styled as a small button.
+    "navigation-links-left": ({ site, page }) => html`
+                <ul class="site-nav__list" role="list">
+                    ${site.navigation.slice(0, Math.ceil(site.navigation.length / 2)).map((item) => html`
+                    <li><a class="site-nav__link" href="${safeUrl(item.href)}"${currentAttribute(item, page)}>${item.label}</a></li>`)}
+                </ul>`,
+
+    "navigation-links-right": ({ site, page }) => {
+        const items = site.navigation.slice(Math.ceil(site.navigation.length / 2));
+        return html`
+                <ul class="site-nav__list" role="list">
+                    ${items.map((item, index) => html`
+                    <li><a class="site-nav__link${index === items.length - 1 ? " site-nav__link--button" : ""}" href="${safeUrl(item.href)}"${currentAttribute(item, page)}>${item.label}</a></li>`)}
+                </ul>`;
+    },
+
+    // NAVIGATION - DESKTOP LINKS (one list, currently not used)
     "navigation-links": ({ site, page }) => html`
                 <ul class="site-nav__list" role="list">
                     ${site.navigation.map((item) => html`

@@ -28,6 +28,8 @@
     --color-forest: #2D3B30;         /* lighter forest green */
     --color-tobacco: #71543C;        /* warm brown detail colour */
     --color-brass: #9A815C;          /* restrained accent (use rarely!) */
+    --color-taupe: #6E6253;          /* top bar, warm neutral */
+    --color-sand: #E2DACB;           /* warm light band (feature row, cards) */
 
     /* ------------------------------------------------------
        2. DERIVED COLOURS  (shades built from the brand colours)
@@ -74,8 +76,8 @@
     --text-md: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); /* lead text */
     --text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
     --text-xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
-    --text-2xl: clamp(2.25rem, 1.6rem + 2.8vw, 4rem);
-    --text-3xl: clamp(2.75rem, 1.8rem + 4.4vw, 6rem);
+    --text-2xl: clamp(2rem, 1.4rem + 2.4vw, 3.4rem);
+    --text-3xl: clamp(2.4rem, 1.5rem + 3.8vw, 5rem);
     --text-display: clamp(3.1rem, 1.6rem + 6.4vw, 8.25rem); /* hero headline */
 
     --line-height-tight: 1.02;
@@ -106,7 +108,9 @@
     --content-width: 1360px;      /* maximum width of page content */
     --content-width-text: 44rem;  /* comfortable reading width */
     --page-gutter: clamp(1.25rem, 0.6rem + 3vw, 3.5rem); /* left/right page padding */
-    --header-height: 4.75rem;
+    --topbar-height: 2.1rem;      /* thin bar above the menu (hidden on phones) */
+    --header-bar-height: 4.6rem;  /* the menu bar itself */
+    --header-height: var(--header-bar-height); /* total, grows on tablets (below) */
 
     /* ------------------------------------------------------
        7. SHAPES
@@ -140,6 +144,13 @@
     --layer-skip-link: 100;
 }
 
+/* Tablets and larger: the thin top bar is shown above the menu */
+@media (min-width: 760px) {
+    :root {
+        --header-height: calc(var(--topbar-height) + var(--header-bar-height));
+    }
+}
+
 
 /* ==========================================================
    SECTION THEMES
@@ -166,6 +177,15 @@
     --color-accent: var(--color-brass-dark);
 }
 
+.theme-sand {
+    --color-background: var(--color-sand);
+    --color-surface: var(--color-ivory);
+    --color-text: var(--color-obsidian);
+    --color-text-muted: var(--color-ink-muted);
+    --color-line: var(--color-ivory-line);
+    --color-accent: var(--color-brass-dark);
+}
+
 .theme-green {
     --color-background: var(--color-british-green);
     --color-surface: var(--color-forest);
@@ -177,6 +197,7 @@
 
 .theme-dark,
 .theme-light,
+.theme-sand,
 .theme-green {
     background-color: var(--color-background);
     color: var(--color-text);

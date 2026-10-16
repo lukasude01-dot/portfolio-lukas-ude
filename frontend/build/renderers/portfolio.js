@@ -3,6 +3,7 @@
  *
  * PURPOSE:
  * - "portfolio-grid":     the editorial grid on /portfolio/
+ * - "home-selected-work": four project cards on the homepage
  * - "portfolio-*":        the parts of one portfolio project page
  *                         (template: /frontend/templates/portfolio-project.html)
  *
@@ -41,6 +42,23 @@ function cardImages(project, layout) {
 }
 
 export const portfolioRenderers = {
+
+    // HOMEPAGE - SELECTED WORK (first four projects, calm product-style cards)
+    // The graphic sits on a sand-coloured card and is shown completely.
+    "home-selected-work": ({ content }) => html`
+            <ol class="work-tiles" role="list">
+                ${content.portfolio.slice(0, 4).map((project) => html`
+                <li class="work-tile" data-reveal>
+                    <a class="work-tile__link" href="${project.url}" data-cursor-label="Ansehen">
+                        <span class="work-tile__media">
+                            <img src="${project.thumbnail.src}" alt="${project.thumbnail.alt}" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 45vw, 90vw" data-responsive>
+                        </span>
+                        <span class="work-tile__meta label">${project.projectStatus}</span>
+                        <span class="work-tile__title">${project.title}</span>
+                        <span class="work-tile__category">${project.categories.join(", ")}</span>
+                    </a>
+                </li>`)}
+            </ol>`,
 
     // PORTFOLIO PAGE - EDITORIAL GRID
     "portfolio-grid": ({ content }) => html`

@@ -1,0 +1,283 @@
+/* ==========================================================
+   HOMEPAGE SECTIONS
+   - SERVICES BAND   dark band with four service tiles
+   - STORY BANNER    full-width image with big headline
+   - PROMISES ROW    four promises with line icons
+   - SELECTED WORK   four calm project cards
+   HTML: /frontend/pages/index.html
+========================================================== */
+
+
+/* SERVICES BAND */
+
+.services-band {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-block: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.services-band__list {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+.services-band__link {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.services-band__image {
+    flex: none;
+    width: clamp(5.5rem, 8vw, 7.5rem);
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+
+.services-band__image picture,
+.services-band__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.services-band__image img {
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-cinematic);
+}
+
+.services-band__link:hover .services-band__image img {
+    transform: scale(1.06);
+}
+
+.services-band__body {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.services-band__title {
+    font-size: clamp(1.05rem, 0.9rem + 0.5vw, 1.35rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.services-band__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.services-band__more {
+    margin-top: 0.4rem;
+    justify-self: start;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid currentColor;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 700px) {
+    .services-band__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1100px) {
+    .services-band__list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* STORY BANNER */
+
+.story-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: clamp(460px, 70svh, 720px);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.story-banner__media {
+    position: absolute;
+    inset: -8% 0;
+    z-index: -1;
+}
+
+.story-banner__media picture,
+.story-banner__media img {
+    width: 100%;
+    height: 100%;
+}
+
+.story-banner__media img {
+    object-fit: cover;
+}
+
+/* darkens the left side so the headline stays readable */
+.story-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(9, 10, 9, 0.82) 0%, rgba(9, 10, 9, 0.45) 55%, rgba(9, 10, 9, 0.15) 100%);
+}
+
+.story-banner__inner {
+    display: grid;
+    gap: var(--spacing-medium);
+    justify-items: start;
+    padding-block: var(--spacing-2xl);
+}
+
+.story-banner__title {
+    font-size: clamp(2.8rem, 1.6rem + 5vw, 6rem);
+    line-height: 0.92;
+}
+
+.story-banner__text {
+    max-width: 34rem;
+    color: var(--color-ivory);
+}
+
+
+/* PROMISES ROW */
+
+.promises {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-block: clamp(2rem, 4vw, 3.25rem);
+}
+
+.promises__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-large) var(--spacing-medium);
+}
+
+.promises__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.promises__icon {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.promises__title {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.promises__text {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 1000px) {
+    .promises__list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* SELECTED WORK  (four calm project cards) */
+
+.selected-work__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--spacing-xl);
+}
+
+.selected-work__intro {
+    max-width: 36rem;
+    margin-top: var(--spacing-small);
+}
+
+.work-tiles {
+    display: grid;
+    gap: var(--spacing-medium);
+}
+
+@media (min-width: 700px) {
+    .work-tiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1100px) {
+    .work-tiles {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.work-tile__link {
+    display: grid;
+    gap: 0.5rem;
+}
+
+/* The graphic is shown completely (never cropped) on a sand card */
+.work-tile__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 5;
+    margin-bottom: 0.6rem;
+    padding: clamp(1rem, 2vw, 1.75rem);
+    background-color: var(--color-sand);
+    overflow: hidden;
+}
+
+.work-tile__media picture {
+    display: contents;
+}
+
+.work-tile__media img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 18px 30px rgba(9, 10, 9, 0.16);
+    transition: transform var(--duration-slow) var(--ease-cinematic);
+}
+
+.work-tile__link:hover .work-tile__media img,
+.work-tile__link:focus-visible .work-tile__media img {
+    transform: translateY(-6px);
+}
+
+.work-tile__meta {
+    color: var(--color-accent);
+}
+
+.work-tile__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.work-tile__category {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   END HOMEPAGE SECTIONS
+========================================================== */

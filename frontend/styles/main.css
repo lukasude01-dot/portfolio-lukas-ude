@@ -42,6 +42,7 @@
 
 /* SECTIONS */
 @import url("./sections/hero.css");
+@import url("./sections/home.css");
 @import url("./sections/page-hero.css");
 @import url("./sections/brand-core.css");
 @import url("./sections/services.css");

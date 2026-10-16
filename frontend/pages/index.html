@@ -8,91 +8,217 @@ title: Lukas Ude
 description: Lukas Ude verbindet Marketing, Copywriting, Funnels und Design mit KI-gestützten Workflows und klaren Systemen. Rooted in ideas. Built for growth.
 path: /
 bodyClass: page-home
-headerTheme: dark
+headerTheme: light
 ---
 
         <!-- =========================================================
              HERO SECTION
 
              PURPOSE:
-             This is the first section visitors see.
-             It contains the descriptor, main headline, introduction,
-             portrait and the two main call-to-action buttons.
+             The first thing visitors see: the large LUKAS UDE wordmark
+             with the cut-out portrait standing in front of it, a short
+             claim on the left and the positioning on the right.
 
              EDIT HERE:
-             - Descriptor line (MARKETING, ADVERTISING, KI-SYSTEME): site.js -> descriptor
-             - Headline ("EDIT: MAIN HERO HEADLINE")
-             - Intro text ("EDIT: HERO DESCRIPTION")
-             - Buttons: site.js -> cta
-             - Portrait ("EDIT: PROFILE IMAGE")
+             - Claim + button left ("EDIT: HERO CLAIM")
+             - Positioning right: site.js -> descriptor, location
+             - Portrait: /frontend/assets/images/portrait/lukas-ude-cutout.png
+               (a photo with transparent background)
 
              RELATED STYLES:
              /frontend/styles/sections/hero.css
-
-             RELATED SCRIPT:
-             /frontend/scripts/modules/parallax.js (portrait depth)
-             /frontend/scripts/modules/reveal.js   (entrance)
         ========================================================= -->
-        <section class="hero theme-dark texture-grain" aria-labelledby="hero-heading">
-            <div class="texture-contours" aria-hidden="true"></div>
+        <section class="hero theme-light" aria-labelledby="hero-heading">
+            <div class="hero__stage container">
 
-            <!-- EDIT: PROFILE IMAGE
-                 Your real photo. Replace the file, keep the name, or change
-                 the src. The build creates optimised versions automatically. -->
-            <div class="hero__portrait" data-parallax="0.08">
-                <div class="hero__portrait-frame" data-reveal="mask">
-                    <img src="/assets/images/portrait/lukas-ude-portrait.jpg"
-                         alt="Porträt von Lukas Ude im schwarzen T-Shirt"
-                         sizes="(min-width: 900px) 42vw, 100vw"
+                <!-- The big wordmark behind the portrait -->
+                <h1 class="hero__wordmark" id="hero-heading">
+                    <span class="hero__wordmark-line" data-reveal>Lukas</span>
+                    <span class="hero__wordmark-line" data-reveal data-reveal-delay="1">Ude</span>
+                    <span class="visually-hidden">Marketing, Advertising und KI-Systeme</span>
+                </h1>
+
+                <!-- EDIT: PROFILE IMAGE (cut-out, stands in front of the wordmark) -->
+                <div class="hero__figure" data-reveal="fade" data-reveal-delay="2">
+                    <img src="/assets/images/portrait/lukas-ude-cutout.png"
+                         alt="Lukas Ude im schwarzen T-Shirt"
+                         sizes="(min-width: 900px) 34vw, 70vw"
                          loading="eager" fetchpriority="high" data-responsive>
                 </div>
-                <span class="hero__portrait-light" aria-hidden="true"></span>
-            </div>
 
-            <div class="hero__inner container">
-                <div class="hero__content">
-                    <!-- EDIT: HERO DESCRIPTOR (from site.js) -->
-                    <p class="hero__descriptor eyebrow eyebrow--spaced" data-reveal><!-- @render descriptor --></p>
-
-                    <!-- EDIT: MAIN HERO HEADLINE -->
-                    <h1 class="hero__headline heading-display" id="hero-heading">
-                        <span class="hero__line" data-reveal data-reveal-delay="1">Rooted in ideas.</span>
-                        <span class="hero__line heading-accent" data-reveal data-reveal-delay="2">Built for growth.</span>
-                    </h1>
-
-                    <!-- EDIT: HERO DESCRIPTION -->
-                    <p class="hero__intro text-lead" data-reveal data-reveal-delay="3">Ich bin Lukas Ude und helfe Unternehmen dabei, ihr Angebot zu den richtigen Menschen zu bringen. Dafür verbinde ich durchdachtes Marketing, wirkungsvolle Anzeigen und klare Texte mit KI-gestützten Systemen, die auch nach dem Launch verlässlich für dich arbeiten.</p>
-
-                    <!-- EDIT: HERO BUTTONS (labels + links in site.js -> cta) -->
-                    <div class="hero__actions button-row" data-reveal data-reveal-delay="4">
-                        <a class="button button--primary" href="{{ site.cta.primary.href }}">{{ site.cta.primary.label }}<span class="button__arrow" aria-hidden="true">→</span></a>
-                        <a class="button button--ghost" href="{{ site.cta.secondary.href }}">{{ site.cta.secondary.label }}</a>
-                    </div>
+                <!-- EDIT: HERO CLAIM (left) -->
+                <div class="hero__side hero__side--left" data-reveal data-reveal-delay="3">
+                    <p class="hero__claim">Rooted in ideas.<br>Built for growth.</p>
+                    <a class="button button--primary" href="{{ site.cta.primary.href }}">{{ site.cta.primary.label }}<span class="button__arrow" aria-hidden="true">→</span></a>
                 </div>
 
-                <!-- HERO - POSITIONING INDEX (from the CI: Marketing / AI / Systems) -->
-                <dl class="hero__index" data-reveal="fade" data-reveal-delay="5">
-                    <div class="hero__index-item">
-                        <dt class="label">Marketing</dt>
-                        <dd>Strategie, Copy und Funnels</dd>
-                    </div>
-                    <div class="hero__index-item">
-                        <dt class="label">Advertising</dt>
-                        <dd>Meta Ads, Creatives und Kampagnen</dd>
-                    </div>
-                    <div class="hero__index-item">
-                        <dt class="label">KI-Systeme</dt>
-                        <dd>KI-gestützte Workflows</dd>
-                    </div>
-                </dl>
+                <!-- HERO - POSITIONING (right) -->
+                <div class="hero__side hero__side--right" data-reveal data-reveal-delay="4">
+                    <p class="hero__claim hero__claim--stacked"><!-- @render descriptor --></p>
+                    <p class="hero__place label">{{ site.location }}</p>
+                </div>
             </div>
-
-            <a class="hero__scroll" href="#brand-core" aria-label="Zum nächsten Abschnitt scrollen">
-                <span class="hero__scroll-line" aria-hidden="true"></span>
-                <span class="label">Scrollen</span>
-            </a>
         </section>
         <!-- ================= END HERO SECTION ================= -->
+
+
+        <!-- =========================================================
+             SERVICES BAND
+
+             PURPOSE:
+             Dark band below the hero with the four service areas,
+             each with a small image and a link into the portfolio.
+
+             EDIT HERE:
+             - Title, short line, link and image of each tile
+
+             RELATED STYLES:
+             /frontend/styles/sections/services.css
+        ========================================================= -->
+        <section class="services-band theme-dark" aria-labelledby="services-band-heading">
+            <h2 class="visually-hidden" id="services-band-heading">Was ich mache</h2>
+            <ul class="services-band__list container" role="list">
+                <li class="services-band__item" data-reveal data-reveal-delay="1">
+                    <a class="services-band__link" href="/portfolio/funnels/">
+                        <span class="services-band__image"><img src="/media/funnels/recruiting-demo/cover.jpg" alt="" sizes="120px" data-responsive></span>
+                        <span class="services-band__body">
+                            <span class="services-band__title">Landingpages</span>
+                            <span class="services-band__text">Seiten, die überzeugen</span>
+                            <span class="services-band__more">Landingpages ansehen<span aria-hidden="true"> →</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="services-band__item" data-reveal data-reveal-delay="2">
+                    <a class="services-band__link" href="/portfolio/funnels/#aufbau">
+                        <span class="services-band__image"><img src="/media/funnels/lead-generation-demo/cover.jpg" alt="" sizes="120px" data-responsive></span>
+                        <span class="services-band__body">
+                            <span class="services-band__title">Funnels &amp; Meta Ads</span>
+                            <span class="services-band__text">Planbare Anfragen</span>
+                            <span class="services-band__more">Funnels ansehen<span aria-hidden="true"> →</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="services-band__item" data-reveal data-reveal-delay="3">
+                    <a class="services-band__link" href="/portfolio/creatives/">
+                        <span class="services-band__image"><img src="/media/creatives/brand-social-posts/post-rooted.jpg" alt="" sizes="120px" data-responsive></span>
+                        <span class="services-band__body">
+                            <span class="services-band__title">Creatives</span>
+                            <span class="services-band__text">Motive, die stoppen</span>
+                            <span class="services-band__more">Creatives ansehen<span aria-hidden="true"> →</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="services-band__item" data-reveal data-reveal-delay="4">
+                    <a class="services-band__link" href="/portfolio/creatives/?view=copy">
+                        <span class="services-band__image"><img src="/assets/images/mood/mood-planning.jpg" alt="" sizes="120px" data-responsive></span>
+                        <span class="services-band__body">
+                            <span class="services-band__title">Copy</span>
+                            <span class="services-band__text">Worte, die wirken</span>
+                            <span class="services-band__more">Texte ansehen<span aria-hidden="true"> →</span></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- ================= END SERVICES BAND ================= -->
+
+
+        <!-- =========================================================
+             STORY BANNER  (full-width image with big headline)
+
+             PURPOSE:
+             Personal story in one image: from forestry to marketing.
+             Links to the About page.
+
+             EDIT HERE:
+             - Text ("EDIT: STORY BANNER TEXT"), image in the <img>
+
+             RELATED STYLES:
+             /frontend/styles/sections/about-teaser.css
+        ========================================================= -->
+        <section class="story-banner theme-dark" aria-labelledby="story-banner-heading">
+            <div class="story-banner__media" data-parallax="0.06">
+                <img src="/assets/images/mood/mood-forest.jpg" alt="" sizes="100vw" data-responsive>
+            </div>
+            <div class="story-banner__inner container">
+                <!-- EDIT: STORY BANNER TEXT -->
+                <p class="eyebrow" data-reveal>Über mich</p>
+                <h2 class="story-banner__title heading-1" id="story-banner-heading" data-reveal data-reveal-delay="1">Vom Forst<br>ins Marketing.</h2>
+                <p class="story-banner__text text-lead" data-reveal data-reveal-delay="2">
+                    In der Forstwirtschaft habe ich gelernt, was harte Arbeit und echtes Handwerk bedeuten.
+                    Heute bringe ich gute Angebote gezielt zu den Menschen, die sie wirklich brauchen.
+                </p>
+                <a class="button button--primary" href="/about/" data-reveal data-reveal-delay="3">Meine Geschichte<span class="button__arrow" aria-hidden="true">→</span></a>
+            </div>
+        </section>
+        <!-- ================= END STORY BANNER ================= -->
+
+
+        <!-- =========================================================
+             PROMISES ROW  (four short promises with icons)
+
+             PURPOSE:
+             What clients can rely on, at a glance.
+
+             EDIT HERE:
+             - Title and short line of each item
+
+             RELATED STYLES:
+             /frontend/styles/sections/services.css
+        ========================================================= -->
+        <section class="promises theme-sand" aria-label="Was dich bei mir erwartet">
+            <ul class="promises__list container" role="list">
+                <li class="promises__item" data-reveal>
+                    <svg class="promises__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>
+                    <p><strong class="promises__title">Persönlich</strong><span class="promises__text">Ein fester Ansprechpartner</span></p>
+                </li>
+                <li class="promises__item" data-reveal>
+                    <svg class="promises__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+                    <p><strong class="promises__title">Ehrlich</strong><span class="promises__text">Offene, klare Beratung</span></p>
+                </li>
+                <li class="promises__item" data-reveal>
+                    <svg class="promises__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 3 9l9 5 9-5z"/><path d="m3 14 9 5 9-5"/></svg>
+                    <p><strong class="promises__title">Aus einer Hand</strong><span class="promises__text">Text, Design und Funnel</span></p>
+                </li>
+                <li class="promises__item" data-reveal>
+                    <svg class="promises__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m12 8 1.6 2.4L16 12l-2.4 1.6L12 16l-1.6-2.4L8 12l2.4-1.6z"/></svg>
+                    <p><strong class="promises__title">Effizient</strong><span class="promises__text">KI-gestützt und menschlich geführt</span></p>
+                </li>
+            </ul>
+        </section>
+        <!-- ================= END PROMISES ROW ================= -->
+
+
+        <!-- =========================================================
+             SELECTED WORK  (portfolio highlights)
+
+             PURPOSE:
+             The first four projects from /content/portfolio/, shown as
+             calm cards. Graphics are shown completely, never cropped.
+
+             EDIT HERE:
+             Nothing in this file. Order: "order" in project.json.
+
+             GENERATED BY:
+             /frontend/build/renderers/portfolio.js -> "home-selected-work"
+        ========================================================= -->
+        <section class="selected-work theme-light section" aria-labelledby="selected-work-heading">
+            <div class="container">
+                <header class="selected-work__header">
+                    <div>
+                        <p class="eyebrow" data-reveal>Portfolio</p>
+                        <h2 class="heading-2" id="selected-work-heading" data-reveal data-reveal-delay="1">Ausgewählte Arbeiten</h2>
+                        <p class="selected-work__intro text-lead" data-reveal data-reveal-delay="2">
+                            Hinter jeder Arbeit steht dieselbe Frage: Was soll beim Betrachter hängen bleiben?
+                            Freie Konzepte und Demos sind entsprechend gekennzeichnet.
+                        </p>
+                    </div>
+                    <a class="text-link" href="/portfolio/" data-reveal data-reveal-delay="2">Alle ansehen →</a>
+                </header>
+<!-- @render home-selected-work -->
+            </div>
+        </section>
+        <!-- ================= END SELECTED WORK ================= -->
 
 
         <!-- =========================================================
@@ -111,7 +237,7 @@ headerTheme: dark
              RELATED STYLES:
              /frontend/styles/sections/brand-core.css
         ========================================================= -->
-        <section class="brand-core theme-light section" id="brand-core" aria-labelledby="brand-core-heading">
+        <section class="brand-core theme-dark section" id="brand-core" aria-labelledby="brand-core-heading">
             <div class="container brand-core__inner">
                 <p class="eyebrow eyebrow--line" data-reveal>Haltung</p>
 
@@ -150,120 +276,6 @@ headerTheme: dark
             </div>
         </section>
         <!-- ================= END BRAND CORE SECTION ================= -->
-
-
-        <!-- =========================================================
-             SERVICES SECTION
-
-             PURPOSE:
-             The four service areas, each linking to a matching page.
-             On desktop, hovering a row shows a matching image.
-
-             EDIT HERE:
-             - Each <li> is one discipline (number, title, text, image)
-
-             RELATED STYLES:
-             /frontend/styles/sections/services.css
-
-             RELATED SCRIPT:
-             /frontend/scripts/modules/services-preview.js
-        ========================================================= -->
-        <section class="services theme-dark section" aria-labelledby="services-heading">
-            <div class="container">
-                <header class="section-header section-header--split">
-                    <div>
-                        <p class="eyebrow eyebrow--line" data-reveal>Was ich mache</p>
-                        <h2 class="heading-2" id="services-heading" data-reveal data-reveal-delay="1">Von der ersten Idee<br>bis zum laufenden System.</h2>
-                    </div>
-                    <p class="text-lead" data-reveal data-reveal-delay="2">Ob du einen einzelnen Baustein brauchst oder alles aus einer Hand möchtest: Ich unterstütze dich genau dort, wo es in deinem Marketing gerade hakt. Zu jedem Bereich findest du Beispiele und Demos aus meiner Arbeit.</p>
-                </header>
-
-                <div class="services__layout" data-services>
-                    <ol class="services__list" role="list">
-                        <!-- SERVICES - LANDINGPAGES -->
-                        <li class="services__item" data-reveal data-service-image="0">
-                            <a class="services__link" href="/portfolio/funnels/">
-                                <span class="services__number label">01</span>
-                                <span class="services__title">Landingpages</span>
-                                <span class="services__text">Seiten mit einer klaren Botschaft, die Besucher Schritt für Schritt überzeugen und zu einer Anfrage führen.</span>
-                                <span class="services__arrow" aria-hidden="true">→</span>
-                            </a>
-                        </li>
-                        <!-- SERVICES - FUNNELS & META ADS -->
-                        <li class="services__item" data-reveal data-service-image="1">
-                            <a class="services__link" href="/portfolio/funnels/#aufbau">
-                                <span class="services__number label">02</span>
-                                <span class="services__title">Funnels &amp; Meta Ads</span>
-                                <span class="services__text">Durchdachte Kampagnen auf Facebook und Instagram, die die richtigen Menschen erreichen und gezielt durch deinen Funnel begleiten.</span>
-                                <span class="services__arrow" aria-hidden="true">→</span>
-                            </a>
-                        </li>
-                        <!-- SERVICES - CREATIVES -->
-                        <li class="services__item" data-reveal data-service-image="2">
-                            <a class="services__link" href="/portfolio/creatives/">
-                                <span class="services__number label">03</span>
-                                <span class="services__title">Creatives</span>
-                                <span class="services__text">Anzeigenmotive, die im Feed sofort auffallen, schnell verstanden werden und deine Marke wiedererkennbar machen.</span>
-                                <span class="services__arrow" aria-hidden="true">→</span>
-                            </a>
-                        </li>
-                        <!-- SERVICES - COPY -->
-                        <li class="services__item" data-reveal data-service-image="3">
-                            <a class="services__link" href="/portfolio/creatives/?view=copy">
-                                <span class="services__number label">04</span>
-                                <span class="services__title">Copy</span>
-                                <span class="services__text">Hooks, Headlines und Anzeigentexte, die überzeugen statt übertreiben und deine Zielgruppe in ihrer Sprache ansprechen.</span>
-                                <span class="services__arrow" aria-hidden="true">→</span>
-                            </a>
-                        </li>
-                    </ol>
-
-                    <!-- SERVICES - HOVER IMAGES (desktop only, same order as the list) -->
-                    <div class="services__preview" aria-hidden="true">
-                        <div class="services__preview-image is-active"><img src="/assets/images/mood/mood-planning.jpg" alt="" sizes="30vw" data-responsive></div>
-                        <div class="services__preview-image"><img src="/assets/images/mood/mood-forest.jpg" alt="" sizes="30vw" data-responsive></div>
-                        <div class="services__preview-image"><img src="/assets/images/mood/mood-brand-moment.jpg" alt="" sizes="30vw" data-responsive></div>
-                        <div class="services__preview-image"><img src="/assets/images/mood/mood-details.jpg" alt="" sizes="30vw" data-responsive></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ================= END SERVICES SECTION ================= -->
-
-
-        <!-- =========================================================
-             FEATURED WORK SECTION
-
-             PURPOSE:
-             Shows up to four selected projects.
-
-             EDIT HERE:
-             Nothing in this file. In a project's project.json set
-             "featured": true to show it here.
-             (/content/<section>/<project>/project.json)
-
-             RELATED STYLES:
-             /frontend/styles/sections/featured-work.css
-             /frontend/styles/components/cards.css
-
-             GENERATED BY:
-             /frontend/build/renderers/work.js -> "featured-work"
-        ========================================================= -->
-        <section class="featured-work theme-dark section section--flush-top" aria-labelledby="featured-work-heading">
-            <div class="container">
-                <header class="featured-work__header">
-                    <div>
-                        <p class="eyebrow eyebrow--line" data-reveal>Ausgewählte Arbeiten</p>
-                        <h2 class="heading-2" id="featured-work-heading" data-reveal data-reveal-delay="1">Gestaltung zum Ansehen.<br><em class="heading-accent">Funnels zum Ausprobieren.</em></h2>
-                        <!-- EDIT: FEATURED WORK INTRO -->
-                        <p class="featured-work__intro text-lead" data-reveal data-reveal-delay="2">Hinter jeder Arbeit steht dieselbe Frage: Was soll beim Betrachter hängen bleiben? Diese Auswahl zeigt, wie aus einer Idee Motive, Seiten und Kampagnen entstehen. Freie Konzepte und Demos sind entsprechend gekennzeichnet.</p>
-                    </div>
-                    <a class="text-link" href="/portfolio/" data-reveal data-reveal-delay="2">Alle Arbeiten →</a>
-                </header>
-<!-- @render featured-work -->
-            </div>
-        </section>
-        <!-- ================= END FEATURED WORK SECTION ================= -->
 
 
         <!-- =========================================================
@@ -359,42 +371,6 @@ headerTheme: dark
 
 
         <!-- =========================================================
-             ABOUT SECTION (homepage teaser)
-
-             PURPOSE:
-             Short personal introduction with images from the CI
-             image language, linking to the full About page.
-
-             EDIT HERE:
-             - Text ("EDIT: ABOUT TEASER TEXT")
-             - Images (/frontend/assets/images/mood/)
-
-             RELATED STYLES:
-             /frontend/styles/sections/about-teaser.css
-        ========================================================= -->
-        <section class="about-teaser theme-light section section--flush-top" aria-labelledby="about-teaser-heading">
-            <div class="container about-teaser__inner">
-                <div class="about-teaser__images">
-                    <figure class="about-teaser__image about-teaser__image--large" data-reveal="mask" data-parallax="0.05">
-                        <img src="/assets/images/mood/mood-forest.jpg" alt="Morgenlicht fällt durch einen dunklen Wald" sizes="(min-width: 900px) 30vw, 60vw" data-responsive>
-                    </figure>
-                    <figure class="about-teaser__image about-teaser__image--small" data-reveal="mask" data-reveal-delay="2">
-                        <img src="/assets/images/mood/mood-planning.jpg" alt="Hände schreiben Notizen in ein Notizbuch" sizes="(min-width: 900px) 18vw, 40vw" data-responsive>
-                    </figure>
-                </div>
-
-                <div class="about-teaser__content">
-                    <p class="eyebrow eyebrow--line" data-reveal>Über mich</p>
-                    <h2 class="heading-2" id="about-teaser-heading" data-reveal data-reveal-delay="1">Natur für die Perspektive.<br><em class="heading-accent">Systeme für den Fortschritt.</em></h2>
-                    <!-- EDIT: ABOUT TEASER TEXT -->
-                    <p class="text-lead" data-reveal data-reveal-delay="2">Ursprünglich komme ich aus der Forstwirtschaft. Dort habe ich gelernt, was harte Arbeit und echtes Handwerk bedeuten. Heute bringe ich als Marketer gute Angebote zu den Menschen, die sie wirklich brauchen. Ich setze auf gezielte Ansprache statt auf Lautstärke, auf saubere Arbeit und auf zufriedene Kunden als Maßstab.</p>
-                    <a class="text-link" href="/about/" data-reveal data-reveal-delay="3">Mehr über mich →</a>
-                </div>
-            </div>
-        </section>
-        <!-- ================= END ABOUT SECTION ================= -->
-
-        <!-- =========================================================
              NEWS TEASER
 
              PURPOSE:
@@ -407,13 +383,13 @@ headerTheme: dark
              GENERATED BY:
              /frontend/build/renderers/news.js -> "news-teaser"
         ========================================================= -->
-        <section class="news-teaser theme-light section" aria-labelledby="news-teaser-heading">
+        <section class="news-teaser theme-sand section" aria-labelledby="news-teaser-heading">
             <div class="container">
-                <header class="featured-work__header">
+                <header class="selected-work__header">
                     <div>
                         <p class="eyebrow eyebrow--line" data-reveal>News &amp; Wissen</p>
                         <h2 class="heading-2" id="news-teaser-heading" data-reveal data-reveal-delay="1">Wissen aus der Praxis.</h2>
-                        <p class="featured-work__intro text-lead" data-reveal data-reveal-delay="2">
+                        <p class="selected-work__intro text-lead" data-reveal data-reveal-delay="2">
                             Ich teile regelmäßig, was ich in meiner Arbeit mit Meta Ads, Funnels, Creatives und
                             KI-Systemen lerne. Kurz, verständlich und direkt anwendbar.
                         </p>

@@ -6,20 +6,18 @@
 ========================================================== */
 
 
-/* NAVIGATION - HEADER BAR */
+/* NAVIGATION - HEADER BAR
+   A solid, light bar on every page (inspired by editorial shop
+   layouts): thin top bar + menu left, logo centred, menu right. */
 
 .site-header {
     position: fixed;
     inset: 0 0 auto 0;
     z-index: var(--layer-header);
-    height: var(--header-height);
-    color: var(--color-ivory);
-    transition:
-        background-color var(--duration-medium) var(--ease-standard),
-        border-color var(--duration-medium) var(--ease-standard),
-        color var(--duration-medium) var(--ease-standard),
-        transform var(--duration-medium) var(--ease-cinematic);
-    border-bottom: 1px solid transparent;
+    color: var(--color-obsidian);
+    background-color: var(--color-ivory);
+    border-bottom: 1px solid var(--color-ivory-line);
+    transition: transform var(--duration-medium) var(--ease-cinematic);
 }
 
 .site-header__inner {
@@ -27,14 +25,7 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-medium);
-    height: 100%;
-}
-
-/* After scrolling down: solid background (added by navigation.js) */
-.site-header.is-scrolled {
-    background-color: rgba(9, 10, 9, 0.94);
-    border-bottom-color: var(--color-obsidian-line);
-    color: var(--color-ivory);
+    height: var(--header-bar-height);
 }
 
 /* Hidden while scrolling down, shown again when scrolling up */
@@ -42,10 +33,53 @@
     transform: translateY(-100%);
 }
 
-/* Pages with a LIGHT hero: dark logo/text until the visitor scrolls.
-   (set with "headerTheme: light" in the page front matter) */
-[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) {
-    color: var(--color-obsidian);
+/* While the mobile menu is open, the bar matches the dark overlay */
+.site-header.is-menu-open {
+    color: var(--color-ivory);
+    background-color: var(--color-obsidian);
+    border-bottom-color: var(--color-obsidian-line);
+}
+
+
+/* NAVIGATION - TOP BAR (location, positioning, contact) */
+
+.topbar {
+    display: none;
+    height: var(--topbar-height);
+    background-color: var(--color-taupe);
+    color: var(--color-ivory);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.topbar__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 100%;
+}
+
+.topbar__item--center {
+    display: flex;
+    gap: 1.6em;
+}
+
+.topbar__item--end {
+    justify-self: end;
+}
+
+.topbar a:hover,
+.topbar a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+@media (min-width: 760px) {
+    .topbar {
+        display: block;
+    }
 }
 
 
@@ -64,15 +98,13 @@
     height: 2.35rem;
 }
 
-.brand-logo__mark--obsidian {
+/* dark logo on the light bar, light logo while the menu is open */
+.brand-logo__mark--ivory,
+.is-menu-open .brand-logo__mark--obsidian {
     display: none;
 }
 
-[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) .brand-logo__mark--ivory {
-    display: none;
-}
-
-[data-header-theme="light"] .site-header:not(.is-scrolled):not(.is-menu-open) .brand-logo__mark--obsidian {
+.is-menu-open .brand-logo__mark--ivory {
     display: block;
 }
 
@@ -107,16 +139,21 @@
 
 .site-nav__list {
     display: flex;
+    align-items: center;
     gap: clamp(1.25rem, 2.2vw, 2.4rem);
+}
+
+.site-nav--right .site-nav__list {
+    justify-content: flex-end;
 }
 
 .site-nav__link {
     position: relative;
     display: inline-block;
     padding-block: 0.5rem;
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 
@@ -134,14 +171,28 @@
 }
 
 .site-nav__link:hover::after,
-.site-nav__link:focus-visible::after {
+.site-nav__link:focus-visible::after,
+.site-nav__link[aria-current="page"]::after {
     transform: scaleX(1);
     transform-origin: left center;
 }
 
-.site-nav__link[aria-current="page"]::after {
-    transform: scaleX(1);
-    background-color: var(--color-brass);
+/* "Kontakt" as a small dark button */
+.site-nav__link--button {
+    padding: 0.7rem 1.15rem;
+    background-color: var(--color-obsidian);
+    color: var(--color-ivory);
+    transition: background-color var(--duration-fast) ease;
+}
+
+.site-nav__link--button::after {
+    display: none;
+}
+
+.site-nav__link--button:hover,
+.site-nav__link--button:focus-visible,
+.site-nav__link--button[aria-current="page"] {
+    background-color: var(--color-tobacco);
 }
 
 
@@ -262,6 +313,11 @@
    EDIT WITH CARE: below this width the mobile menu is used. */
 
 @media (min-width: 1080px) {
+    .site-header__inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    }
+
     .site-nav {
         display: block;
     }
