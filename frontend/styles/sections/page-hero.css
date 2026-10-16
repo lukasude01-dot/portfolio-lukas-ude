@@ -91,13 +91,14 @@
 /* image focus: "low" shows the lower part, "road" the forest road */
 .page-hero--pos-low .page-hero__media img { object-position: 50% 70%; }
 .page-hero--pos-road .page-hero__media img { object-position: 50% 62%; }
+.page-hero--pos-moose .page-hero__media img { object-position: 50% 55%; }
 
 .page-hero--image::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(90deg, rgba(9, 10, 9, 0.85) 0%, rgba(9, 10, 9, 0.55) 55%, rgba(9, 10, 9, 0.25) 100%);
+    background: linear-gradient(90deg, rgba(9, 10, 9, 0.85) 0%, rgba(9, 10, 9, 0.5) 45%, rgba(9, 10, 9, 0.15) 100%);
 }
 
 .page-hero--image .page-hero__intro {
