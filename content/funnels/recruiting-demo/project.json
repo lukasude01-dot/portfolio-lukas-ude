@@ -4,7 +4,7 @@
     "category": [
         "Recruiting"
     ],
-    "description": "Ein Bewerbungs-Funnel fürs Handwerk, der Lebenslauf und Anschreiben durch vier einfache Fragen ersetzt. Die Bewerbung dauert 60 Sekunden.",
+    "description": "Ein Bewerbungs-Funnel fürs Handwerk: Die Seite stellt Job, Aufgaben und Benefits kurz vor, danach bewerben sich Interessierte in fünf einfachen Schritten ohne Lebenslauf.",
     "year": "2026",
     "client": "Tischlerei Nordholz (fiktive Marke)",
     "services": [
@@ -21,7 +21,7 @@
     "demoNotice": "Portfolio-Demonstration für eine fiktive Marke. Die Live-Demo funktioniert wie ein echter Funnel, es werden aber keine Daten gesendet oder gespeichert.",
     "thumbnail": {
         "src": "cover.jpg",
-        "alt": "Recruiting-Landingpage mit der Headline „Feierabend um 16 Uhr“ auf warmem Nussbaum-Hintergrund"
+        "alt": "Recruiting-Landingpage der Tischlerei Nordholz mit großer Headline „Tischler:in gesucht“, Werkstatt-Illustration und schwebender Jobkarte"
     },
     "context": "Handwerksbetriebe konkurrieren um sehr wenige Bewerber. Viele gute Tischler:innen sind angestellt und suchen nicht aktiv. Ein langes Formular mit Lebenslauf-Upload ist der erste Grund, sich nicht zu bewerben.",
     "objective": "Die Bewerbung soll so einfach sein wie ein paar Fragen am Telefon, damit auch passive Kandidat:innen den ersten Schritt gehen.",
@@ -32,10 +32,10 @@
         "Legen mehr Wert auf faire Arbeitszeiten, Handwerk und ein respektvolles Team als auf Extras"
     ],
     "strategy": [
-        "Mit dem stärksten echten Vorteil (planbare Arbeitszeiten) starten statt mit allgemeinen Arbeitgeber-Floskeln",
-        "Den Lebenslauf weglassen: vier Fragen reichen für ein erstes Telefonat",
-        "Einwände wie Gehalt, Quereinstieg und Ablauf früh in einem kurzen FAQ beantworten",
-        "Auf jedem Screen genau eine Handlung: bewerben"
+        "Zuerst kurz den Job vorstellen, damit Interessierte sofort wissen, worum es geht",
+        "Die drei Hauptaufgaben mit Bildern zeigen, damit sich Bewerber:innen die Arbeit vorstellen können",
+        "Die drei stärksten Benefits ausführlich erklären und weitere Vorteile kompakt auflisten",
+        "Den Lebenslauf weglassen: fünf Fragen reichen für ein erstes Telefonat"
     ],
     "structure": [
         {
@@ -45,23 +45,23 @@
         },
         {
             "step": "Landingpage",
-            "title": "Landingpage",
-            "text": "Auf Headline und drei Belege folgen die Vorteile und ein Ablauf in drei Schritten."
+            "title": "Job, Aufgaben und Benefits",
+            "text": "Die Seite stellt den Job kurz vor, zeigt die drei Hauptaufgaben mit Bildern und erklärt die drei wichtigsten Benefits."
         },
         {
             "step": "Bewerbung",
-            "title": "Formular in 4 Schritten",
-            "text": "Abgefragt werden Ausbildung, Erfahrung, Starttermin und Kontakt, mit einer Frage pro Screen."
+            "title": "Formular in 5 Schritten",
+            "text": "Abgefragt werden Ausbildung, Berufserfahrung, Standort, Erreichbarkeit und am Ende die Kontaktdaten, mit einer Frage pro Screen."
         },
         {
             "step": "Danke",
-            "title": "Bestätigung",
-            "text": "Ein klarer nächster Schritt (Anruf innerhalb von zwei Werktagen) nimmt die Unsicherheit."
+            "title": "Bestätigungsseite",
+            "text": "Eine eigene Seite bestätigt die Bewerbung und erklärt die nächsten Schritte: Telefonat, bezahlter Probetag und Zusage."
         }
     ],
     "copy": {
-        "headline": "Feierabend um 16 Uhr. Und Arbeit, die bleibt.",
-        "subheadline": "Bewirb dich in 60 Sekunden. Ohne Lebenslauf und ohne Anschreiben.",
+        "headline": "Tischler:in gesucht.",
+        "subheadline": "Bei uns baust du Massivholzmöbel für echte Kunden, vom ersten Aufmaß bis zur Montage.",
         "hooks": [
             "Feierabend um 16 Uhr. Wirklich.",
             "Massivholz statt Spanplatte am Fließband.",
@@ -72,25 +72,25 @@
     "visual": {
         "palette": [
             {
+                "name": "Weiß",
+                "hex": "#FFFFFF"
+            },
+            {
                 "name": "Nussbaum",
-                "hex": "#2A1F17"
+                "hex": "#17120E"
             },
             {
                 "name": "Leinen",
-                "hex": "#F3EEE6"
+                "hex": "#F3EFE9"
             },
             {
                 "name": "Kupfer",
                 "hex": "#B4552A"
-            },
-            {
-                "name": "Eiche",
-                "hex": "#6B4630"
             }
         ],
-        "typography": "Eine kräftige Sans-Serif mit eng gesetzten Headlines, praktisch und selbstbewusst.",
-        "imagery": "Holzmaserung ersetzt Stockfotos. In einem echten Projekt kämen authentische Fotos aus Werkstatt und Team zum Einsatz.",
-        "layout": "Mobile first mit großen Touch-Flächen und einem fixierten Bewerben-Button auf kleinen Bildschirmen."
+        "typography": "Eine moderne Sans-Serif mit sehr großer, eng gesetzter Headline. Klar, selbstbewusst und nahbar.",
+        "imagery": "Reduzierte Linienillustrationen von Werkstatt, Möbelbau, Montage und Maschinen. In einem echten Projekt kämen authentische Fotos aus Werkstatt und Team zum Einsatz.",
+        "layout": "Editorialer Aufbau mit viel Weißraum, einer schwebenden Jobkarte, schwarzen Pill-Buttons und einem fixierten Bewerben-Button auf dem Handy."
     },
     "ctaStructure": [
         {
@@ -115,20 +115,20 @@
             "text": "Der Hook zu den Arbeitszeiten trifft einen echten Frust statt einer abstrakten Arbeitgebermarke."
         },
         {
-            "title": "Landet auf der Seite",
-            "text": "Headline und drei Belege bestätigen das Versprechen in Sekunden."
+            "title": "Versteht den Job in Sekunden",
+            "text": "Headline, Jobkarte und die drei Aufgaben zeigen sofort, worum es geht."
         },
         {
-            "title": "Prüft die Details",
-            "text": "Vorteile, Ablauf und FAQ beantworten die typischen Zweifel, bevor sie den Klick verhindern."
+            "title": "Überzeugt sich von den Benefits",
+            "text": "Die drei wichtigsten Vorteile werden erklärt, weitere stehen kompakt darunter."
         },
         {
-            "title": "Bewirbt sich mit vier Taps",
-            "text": "Eine Frage pro Screen, ein Fortschrittsbalken und kein Upload. Das lässt sich bequem vom Sofa aus erledigen."
+            "title": "Bewirbt sich mit fünf Taps",
+            "text": "Ausbildung, Erfahrung, Standort und Erreichbarkeit per Klick, danach nur noch Name und Telefonnummer."
         },
         {
             "title": "Weiß, was als Nächstes passiert",
-            "text": "Die Bestätigung verspricht einen Anruf innerhalb von zwei Werktagen."
+            "text": "Die Bestätigungsseite verspricht einen Anruf innerhalb von zwei Werktagen und erklärt den Probetag."
         }
     ]
 }

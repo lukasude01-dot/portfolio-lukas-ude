@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: Massivholzschrank mit Schubladen">
+  <rect width="600" height="400" fill="#F3EFE9"/>
+  <g fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 340 H540"/>
+    <rect x="190" y="90" width="220" height="230" rx="4"/>
+    <path d="M190 170 H410 M190 245 H410 M300 90 V170"/>
+    <path d="M270 130 h-20 M330 130 h20 M285 207 h30 M285 282 h30"/>
+    <path d="M200 320 v20 M400 320 v20"/>
+    <path d="M440 300 l60 -60 M470 330 l50 -50" opacity=".35"/>
+  </g>
+  <rect x="430" y="250" width="80" height="14" rx="3" transform="rotate(-45 470 257)" fill="#B4552A"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: Montage einer Küchenzeile beim Kunden">
+  <rect width="600" height="400" fill="#F3EFE9"/>
+  <g fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 330 H560"/>
+    <rect x="90" y="220" width="300" height="110"/><path d="M190 220 V330 M290 220 V330 M80 220 H400"/>
+    <rect x="90" y="90" width="300" height="70"/><path d="M190 90 V160 M290 90 V160"/>
+    <path d="M470 120 V330 M470 140 l40 -10 M470 140 l-30 -6"/>
+    <path d="M140 270 h0 M240 270 h0 M340 270 h0"/>
+  </g>
+  <circle cx="470" cy="100" r="16" fill="#B4552A"/>
+</svg>

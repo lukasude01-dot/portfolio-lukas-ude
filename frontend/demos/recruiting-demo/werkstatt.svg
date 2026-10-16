@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Illustration: helle Tischlerwerkstatt mit Hobelbank, Werkzeugwand und Holzstapel">
+  <rect width="1200" height="675" fill="#F3EFE9"/>
+  <g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 520 H1200"/>
+    <rect x="760" y="110" width="330" height="200" rx="6"/>
+    <path d="M925 110 V310 M760 210 H1090" opacity=".35"/>
+    <path d="M150 140 H600 V330 H150 Z"/>
+    <path d="M200 175 V255 M240 175 V275 M290 170 l20 40 -20 40 -20 -40z M360 175 V245 M345 245 H375 M430 180 h60 v20 h-60z M455 200 V270 M540 175 c-25 0 -25 50 0 50 c25 0 25 -50 0 -50"/>
+    <path d="M220 430 H720 M240 430 V520 M700 430 V520 M220 410 H720 V430"/>
+    <path d="M300 410 l40 -40 h120 l40 40"/>
+    <path d="M820 520 V430 H1080 V520 M820 470 H1080 M820 500 H1080"/>
+    <path d="M840 430 V410 H1060 V430"/>
+  </g>
+  <rect x="380" y="372" width="70" height="24" rx="4" fill="#B4552A"/>
+  <circle cx="1010" cy="160" r="26" fill="#B4552A" opacity=".9"/>
+</svg>

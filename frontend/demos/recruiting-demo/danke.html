@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- =========================================================
+     FUNNEL DEMO: RECRUITING, THANK-YOU PAGE
+
+     PURPOSE:
+     Shown after the application (index.html) was sent.
+     Confirms the application, explains the next steps and
+     links to the company website and social media.
+
+     EDIT HERE:
+     - Texts and links directly in this file
+     - Colours: /frontend/demos/recruiting-demo/theme.css
+========================================================= -->
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danke für deine Bewerbung (Demo-Funnel)</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/demos/shared/demo-base.css">
+    <link rel="stylesheet" href="/demos/shared/demo-editorial.css">
+    <link rel="stylesheet" href="/demos/recruiting-demo/theme.css">
+</head>
+<body>
+
+<!-- @include demo-bar -->
+
+    <header class="ed-header">
+        <div class="demo-container ed-header__inner">
+            <a class="ed-logo" href="/demos/recruiting-demo/">
+                <svg class="ed-logo__mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="4" fill="currentColor"/><path d="M10 22V10l12 12V10" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Nordholz
+            </a>
+        </div>
+    </header>
+
+    <main class="ed-thanks">
+        <div class="demo-container ed-thanks__inner">
+            <div class="ed-thanks__icon" aria-hidden="true">✓</div>
+            <p class="ed-kicker">Bewerbung erhalten</p>
+            <h1 class="ed-thanks__title">Danke für deine Bewerbung.</h1>
+            <p class="ed-thanks__text">
+                Schön, dass du dich bei uns beworben hast. Wir schauen uns deine Angaben an
+                und rufen dich innerhalb von zwei Werktagen zu deiner Wunschzeit an.
+                Bis dahin musst du nichts weiter tun.
+            </p>
+
+            <ol class="ed-next" role="list">
+                <li><span>01</span><strong>Kurzes Telefonat</strong>Wir lernen uns kennen und beantworten deine Fragen.</li>
+                <li><span>02</span><strong>Probetag</strong>Du lernst Team und Werkstatt an einem bezahlten Tag kennen.</li>
+                <li><span>03</span><strong>Zusage</strong>Passt es für beide Seiten, bekommst du schnell eine Zusage.</li>
+            </ol>
+
+            <div class="ed-thanks__links">
+                <p class="ed-thanks__links-title">Schau dir gern schon an, was wir in der Werkstatt bauen.</p>
+                <div class="ed-thanks__buttons">
+                    <a class="ed-pill" href="/demos/recruiting-demo/#aufgaben">Unsere Arbeit ansehen <span aria-hidden="true">→</span></a>
+                    <a class="ed-pill ed-pill--ghost" href="/demos/recruiting-demo/">Zur Website</a>
+                </div>
+                <ul class="ed-social" role="list">
+                    <li><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram<span class="demo-visually-hidden"> (öffnet in neuem Tab)</span></a></li>
+                    <li><a href="https://www.facebook.com/" rel="noopener" target="_blank">Facebook<span class="demo-visually-hidden"> (öffnet in neuem Tab)</span></a></li>
+                </ul>
+            </div>
+
+            <p class="demo-done__badge">Demo: Es wurden keine Daten gesendet oder gespeichert.</p>
+        </div>
+    </main>
+
+    <footer class="ed-footer">
+        <div class="demo-container ed-footer__inner">
+            <p class="ed-footer__brand">Nordholz</p>
+            <p>Tischlerei für Massivholzmöbel<br>Möbelbau, Küchen, Innenausbau</p>
+            <p>Tischlerei Nordholz ist eine fiktive Marke,<br>erstellt als Portfolio-Demonstration.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
