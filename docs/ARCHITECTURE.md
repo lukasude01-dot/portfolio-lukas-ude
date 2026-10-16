@@ -51,7 +51,8 @@ as environment variables of the backend.
 | `build.js` | runs all steps, writes `/dist`, watch mode |
 | `lib/template.js` | `{{ value }}`, `{{{ raw }}}`, `<!-- @include -->`, `<!-- @render -->`, front matter |
 | `lib/html.js` | `html` tagged template with automatic escaping (output encoding) |
-| `lib/content.js` | loads `/content`, resolves image paths, warns about placeholders/example content |
+| `lib/content.js` | loads `/content` (incl. news and packages), resolves image paths, `SECTION_PATHS`, warns about placeholders/example content |
+| `lib/markdown.js` | small, safe Markdown subset for news articles |
 | `lib/images.js` | `<img data-responsive>` → `<picture>` with AVIF/WebP/JPEG, cached |
 | `lib/seo.js` | sitemap, robots, `_headers` (CSP), manifest, JSON-LD |
 | `lib/qr.js` | QR code from `siteConfig.url` |
@@ -62,16 +63,26 @@ as environment variables of the backend.
 | Route | Source |
 |---|---|
 | `/` | `pages/index.html` |
-| `/work/` | `pages/work.html` |
-| `/funnels/`, `/funnels/<slug>/` | `pages/funnels.html`, `templates/funnel-project.html` |
-| `/demos/<slug>/` | `demos/<slug>/index.html` (live demo, `noindex`) |
-| `/creatives/`, `/creatives/<slug>/` | `pages/creatives.html`, `templates/creative-project.html` |
-| `/design/`, `/design/<slug>/` | `pages/design.html`, `templates/design-project.html` |
-| `/ai/` | `pages/ai.html` (+ workflows from `/content/ai`) |
 | `/about/` | `pages/about.html` (+ `/content/career`) |
-| `/contact/` | `pages/contact.html` |
+| `/portfolio/`, `/portfolio/<slug>/` | `pages/portfolio.html` (hub), `templates/portfolio-project.html` (+ `/content/portfolio`) |
+| `/portfolio/funnels/`, `/portfolio/funnels/<slug>/` | `pages/funnels.html`, `templates/funnel-project.html` (+ `/content/funnels`) |
+| `/demos/<slug>/` | `demos/<slug>/index.html` (live demo, `noindex`) |
+| `/portfolio/creatives/`, `/portfolio/creatives/<slug>/` | `pages/creatives.html`, `templates/creative-project.html` (+ `/content/creatives`) |
+| `/portfolio/design/`, `/portfolio/design/<slug>/` | `pages/design.html`, `templates/design-project.html` (+ `/content/design`) |
+| `/portfolio/ki/` | `pages/ai.html` (+ workflows from `/content/ai` as anchors `#workflow-<slug>`) |
+| `/leistungen/` | `pages/leistungen.html` (+ packages from `/content/leistungen/pakete.json`) |
+| `/news/`, `/news/<slug>/` | `pages/news.html`, `templates/news-article.html` (+ `/content/news/<slug>/article.md`) |
+| `/contact/` | `pages/contact.html` (`?thema=<topic>` pre-selects a topic) |
 | `/impressum/`, `/datenschutz/` | legal placeholders (`noindex`) |
 | `/404.html` | `pages/404.html` |
+
+The portfolio sub-pages set their URL with `path:` in the front matter. The project URLs are built
+from `SECTION_PATHS` in `build/lib/content.js`, which is the single source for them and must match
+those `path:` values. Content folders keep their names (`/content/funnels/<slug>/` becomes
+`/portfolio/funnels/<slug>/`). Funnel, creative and design projects get the breadcrumb
+`Startseite > Portfolio > <Section> > <Project>`. News articles are built by `buildNewsPages`
+in `build.js`. Their Markdown is converted by `lib/markdown.js` (small subset, all text escaped first,
+links checked with `safeUrl`).
 
 ### Design tokens (`styles/base/variables.css`)
 
@@ -91,7 +102,10 @@ as environment variables of the backend.
 |---|---|---|
 | Buttons, text links, badges | `components/buttons.css` | `.button--primary`, `.button--ghost`, `.text-link`, `.badge` |
 | Navigation + mobile menu | `components/navigation.css` | `scripts/modules/navigation.js` |
-| Work card | `components/cards.css` | `renderers/work.js → workCard()` |
+| Portfolio sub-navigation | `components/portfolio-subnav.css` | `components/portfolio-subnav.html`, `renderers/site.js → portfolio-subnav`, links from `site.js → portfolioNavigation` |
+| Work card | `components/cards.css` | `renderers/work.js → workCard()` (homepage FEATURED WORK) |
+| Service packages | `pages/services.css` | `renderers/services.js → service-packages` |
+| News list / teaser / article | `pages/news.css` | `renderers/news.js` (`news-list`, `news-teaser`, `news-cover`, `news-more`) |
 | Ad mockup | `components/ad-mockup.css` | structure of a social ad, labelled "not a live ad" |
 | Device preview | `components/device-preview.css` | live demo in desktop + phone frame (scaled iframes) |
 | Timeline | `components/timeline.css` | CV, placeholders highlighted |

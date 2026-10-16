@@ -3,7 +3,8 @@
 Find the right file in seconds. Paths are relative to the project root.
 
 **Glossary:** a *section* is a visual band on a page (HERO, SERVICES …). A *project* is one
-content item in `/content`. *Work* is the umbrella name for all projects (`/work/`, `work-card`).
+content item in `/content`. *Portfolio* is the hub for all projects (`/portfolio/`); its areas
+(Funnels, Creatives, Design, KI) live below it. `work-card` is the card used in FEATURED WORK.
 
 ---
 
@@ -14,6 +15,7 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Page frame | `frontend/components/layout.html` | – | – |
 | HEAD / SEO tags | `frontend/components/head.html` | – | `frontend/build/lib/seo.js` |
 | NAVIGATION | `frontend/components/navigation.html` | `frontend/styles/components/navigation.css` | `frontend/scripts/modules/navigation.js`, links in `frontend/config/site.js` |
+| PORTFOLIO SUB-NAVIGATION | `frontend/components/portfolio-subnav.html` | `frontend/styles/components/portfolio-subnav.css` | `frontend/build/renderers/site.js` (`portfolio-subnav`), links in `site.js → portfolioNavigation` |
 | FOOTER | `frontend/components/footer.html` | `frontend/styles/components/footer.css` | links from `site.js` |
 | QR SHARE CARD | `frontend/components/qr-share.html` | `frontend/styles/components/qr-share.css` | `frontend/build/lib/qr.js` |
 | CTA (green band) | `frontend/components/cta-band.html` | `frontend/styles/sections/cta.css` | – |
@@ -29,18 +31,25 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Section | CSS | JS / Data |
 |---|---|---|
 | HERO | `styles/sections/hero.css` | `parallax.js`, `reveal.js`, portrait `assets/images/portrait/` |
-| BRAND CORE | `styles/sections/brand-core.css` | – |
-| SERVICES | `styles/sections/services.css` | `services-preview.js` |
+| BRAND CORE (Haltung) | `styles/sections/brand-core.css` | – |
+| SERVICES (5 areas, link to the portfolio sub-pages) | `styles/sections/services.css` | `services-preview.js` |
 | FEATURED WORK | `styles/sections/featured-work.css`, `styles/components/cards.css` | `build/renderers/work.js`, `"featured": true` in `/content` |
-| PROCESS | `styles/sections/process.css` | – |
+| PROCESS (6 steps + "Mein Anspruch") | `styles/sections/process.css` | – |
 | ABOUT (teaser) | `styles/sections/about-teaser.css` | `assets/images/mood/` |
+| NEWS TEASER (3 newest articles) | `styles/pages/news.css` | `build/renderers/news.js` (`news-teaser`), `/content/news` |
 | CTA | `styles/sections/cta.css` | `components/cta-band.html` |
 
-## PORTFOLIO (`/portfolio/`, `/portfolio/<slug>/`)
+## PORTFOLIO HUB (`/portfolio/`, `/portfolio/<slug>/`)
+
+The portfolio is the hub for all work. Funnels, Creatives, Design and KI are sub-pages below it,
+each with the PORTFOLIO SUB-NAVIGATION under the hero. All project URLs come from
+`SECTION_PATHS` in `frontend/build/lib/content.js` (must match the `path:` of each page).
+"Alle Arbeiten" links point to `/portfolio/`.
 
 | Part | File |
 |---|---|
-| Overview page ("Selected Work") | `frontend/pages/portfolio.html` |
+| Overview page ("Selected Work" + PORTFOLIO AREAS linking to the four sub-pages) | `frontend/pages/portfolio.html` |
+| Sub-navigation | `frontend/components/portfolio-subnav.html`, `frontend/build/renderers/site.js` |
 | Project page layout | `frontend/templates/portfolio-project.html` |
 | Grid, motifs, description, next project | `frontend/build/renderers/portfolio.js` |
 | Contact CTA ("Du hast ein Projekt im Kopf?") | `frontend/components/portfolio-cta.html` |
@@ -48,17 +57,7 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Full-screen view | `frontend/scripts/modules/lightbox.js` |
 | Content + original graphics | `/content/portfolio/<slug>/` |
 
-## WORK (`/work/`)
-
-| Part | File |
-|---|---|
-| Page | `frontend/pages/work.html` |
-| Styles | `frontend/styles/pages/work.css`, `components/cards.css`, `components/filters.css` |
-| Cards + filters | `frontend/build/renderers/work.js` |
-| Filtering | `frontend/scripts/modules/filters.js` |
-| Content | all of `/content` |
-
-## FUNNELS (`/funnels/`, `/funnels/<slug>/`, `/demos/<slug>/`)
+## FUNNELS (`/portfolio/funnels/`, `/portfolio/funnels/<slug>/`, `/demos/<slug>/`)
 
 | Part | File |
 |---|---|
@@ -72,7 +71,7 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Demo logic / base styles | `frontend/demos/shared/demo-funnel.js`, `demo-base.css` |
 | Demo notice bar | `frontend/components/demo-bar.html` |
 
-## CREATIVES (`/creatives/`, `/creatives/<slug>/`)
+## CREATIVES (`/portfolio/creatives/`, `/portfolio/creatives/<slug>/`)
 
 | Part | File |
 |---|---|
@@ -80,11 +79,11 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Case page layout | `frontend/templates/creative-project.html` |
 | Ad mockup, grid, variations | `frontend/build/renderers/creatives.js` |
 | Styles | `frontend/styles/pages/creatives.css`, `styles/components/ad-mockup.css` |
-| CREATIVE / COPY / COMBINED | `frontend/scripts/modules/creative-views.js` |
+| CREATIVE / COPY / COMBINED (`/portfolio/creatives/?view=copy` opens the copy view) | `frontend/scripts/modules/creative-views.js` |
 | Filters | `frontend/scripts/modules/filters.js` |
 | Content | `/content/creatives/<slug>/` |
 
-## DESIGN (`/design/`, `/design/<slug>/`)
+## DESIGN (`/portfolio/design/`, `/portfolio/design/<slug>/`)
 
 | Part | File |
 |---|---|
@@ -95,7 +94,7 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Full-screen preview | `frontend/scripts/modules/lightbox.js` |
 | Content | `/content/design/<slug>/` |
 
-## AI & SYSTEMS (`/ai/`)
+## AI & SYSTEMS (`/portfolio/ki/`, workflows as `#workflow-<slug>`)
 
 | Part | File |
 |---|---|
@@ -104,14 +103,36 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 | Styles | `frontend/styles/pages/ai.css` |
 | Content | `/content/ai/<slug>/project.json` |
 
+## LEISTUNGEN (`/leistungen/`)
+
+| Part | File |
+|---|---|
+| Page | `frontend/pages/leistungen.html` |
+| Package cards | `frontend/build/renderers/services.js` (`service-packages`) |
+| Styles | `frontend/styles/pages/services.css` |
+| Content | `/content/leistungen/pakete.json` |
+| Package button → contact topic | links to `/contact/?thema=<topic>`, pre-selected by `frontend/scripts/modules/contact-form.js` (topic must be in `CONTACT_TOPICS` in `shared/contact-schema.js`) |
+
+## NEWS (`/news/`, `/news/<slug>/`)
+
+| Part | File |
+|---|---|
+| Overview page | `frontend/pages/news.html` |
+| Article page layout | `frontend/templates/news-article.html` |
+| List, teaser, cover, more articles | `frontend/build/renderers/news.js` |
+| Article pages | `frontend/build/build.js` (`buildNewsPages`) |
+| Markdown | `frontend/build/lib/markdown.js` |
+| Styles | `frontend/styles/pages/news.css` |
+| Content | `/content/news/<slug>/article.md` + images (template: `/content/news/_vorlage`) |
+
 ## ABOUT (`/about/`)
 
 | Part | File |
 |---|---|
-| Page (hero, values) | `frontend/pages/about.html` |
-| TIMELINE, certificates, SKILLS | `frontend/build/renderers/career.js` |
+| Page (hero, ABOUT STORY "Kein Fließband", values, SKILLS as running text) | `frontend/pages/about.html` |
+| TIMELINE, certificates | `frontend/build/renderers/career.js` |
 | Styles | `frontend/styles/pages/about.css`, `styles/components/timeline.css` |
-| Content | `/content/career/timeline.json`, `/content/career/skills.json` |
+| Content | `/content/career/timeline.json` (`skills.json` is currently not rendered, re-enable with `<!-- @render skills -->`) |
 
 ## CONTACT (`/contact/`)
 
@@ -141,7 +162,8 @@ content item in `/content`. *Work* is the umbrella name for all projects (`/work
 |---|---|
 | Build entry | `frontend/build/build.js` |
 | Templates `{{ }}` / `@include` / `@render` | `frontend/build/lib/template.js` |
-| Content loading + checks | `frontend/build/lib/content.js` |
+| Content loading + checks, `SECTION_PATHS` | `frontend/build/lib/content.js` |
+| Markdown for news | `frontend/build/lib/markdown.js` |
 | Image optimisation | `frontend/build/lib/images.js` |
 | Sitemap, robots, `_headers`, JSON-LD | `frontend/build/lib/seo.js` |
 | Server entry | `backend/src/server.js` |

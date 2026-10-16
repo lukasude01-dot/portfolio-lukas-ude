@@ -1,6 +1,6 @@
 # Content Guide
 
-All portfolio content lives in `/content`. **One folder = one project.**
+All portfolio content lives in `/content`. **One folder = one project** (or one news article).
 
 ```
 /content
@@ -10,11 +10,15 @@ All portfolio content lives in `/content`. **One folder = one project.**
   /design/<slug>/project.json      + images
   /ai/<slug>/project.json          (workflow blueprints, no images needed)
   /career/timeline.json            CV / MY JOURNEY + certificates
-  /career/skills.json              SKILLS
+  /career/skills.json              SKILLS (currently not rendered, see Career)
+  /leistungen/pakete.json          packages on /leistungen/
+  /news/<slug>/article.md          + images   ← news articles (Markdown)
 ```
 
-- The **folder name** becomes the URL: `/content/design/poster-series/` → `/design/poster-series/`.
-  Use lowercase letters, numbers and hyphens only.
+- The **folder name** becomes the URL: `/content/design/poster-series/` → `/portfolio/design/poster-series/`.
+  Use lowercase letters, numbers and hyphens only. All portfolio sections live below `/portfolio/`
+  (funnels, creatives, design, ki). The content folders keep their names. The URLs are defined in
+  `SECTION_PATHS` in `/frontend/build/lib/content.js`.
 - Folders starting with `_` (e.g. `_template`) are ignored. **To add a project, copy `_template`.**
 - Images are referenced by **file name only** (`"src": "cover.jpg"`). Put them in the same folder.
   The build optimises them automatically. Large JPGs or PNGs are fine.
@@ -59,7 +63,7 @@ The build creates optimised AVIF/WebP/JPEG copies and leaves the originals untou
 | `approach` | text for **Gestalterischer Ansatz** |
 | `services` | list for **Leistungen** |
 | `images` | all motifs `{ "src", "alt", "caption" }`. The **first** is the main motif, the others appear under "Weitere Motive" |
-| `thumbnail` | image used in other grids (homepage, /work/) |
+| `thumbnail` | image used in other grids (homepage FEATURED WORK) |
 | `layout` | card size on `/portfolio/`: `feature` (large, left), `side` (next to it), `tall` (large vertical), `wide` (broad card showing all motifs), `closing` (full width, all motifs) |
 | `order` | position in the grid (1 = first) |
 
@@ -70,7 +74,7 @@ When you add a sixth project, start a new pair, e.g. `feature` + `side` again.
 
 ## Funnels
 
-Folder: `/content/funnels/<slug>/`. Page: `/funnels/<slug>/`.
+Folder: `/content/funnels/<slug>/`. Page: `/portfolio/funnels/<slug>/`. Overview: `/portfolio/funnels/`.
 
 Additional fields:
 
@@ -107,7 +111,7 @@ The case page shows the live demo in a desktop and a phone frame automatically.
 
 ## Creatives
 
-Folder: `/content/creatives/<slug>/`. Page: `/creatives/<slug>/`.
+Folder: `/content/creatives/<slug>/`. Page: `/portfolio/creatives/<slug>/`. Overview: `/portfolio/creatives/`.
 
 | Field | Meaning |
 |---|---|
@@ -135,21 +139,21 @@ One entry in `ads`:
 
 `format`: `square` (1:1), `portrait` (4:5), `story` (9:16). `\n` makes a new line.
 
-**Filters** on `/creatives/`: Recruiting, Leadgenerierung, Marke, Social, Performance.
+**Filters** on `/portfolio/creatives/`: Recruiting, Leadgenerierung, Marke, Social, Performance.
 Write the category exactly like that. The list is in `/frontend/build/renderers/creatives.js`.
 
 **Copywriting only (no image)?** Use any neutral image (e.g. a typographic card) and
-switch visitors to the COPY view, or create the creative as a simple text graphic.
+switch visitors to the COPY view (link directly with `/portfolio/creatives/?view=copy`), or create the creative as a simple text graphic.
 
 ---
 
 ## Design
 
-Folder: `/content/design/<slug>/`. Page: `/design/<slug>/`.
+Folder: `/content/design/<slug>/`. Page: `/portfolio/design/<slug>/`. Overview: `/portfolio/design/`.
 
 | Field | Meaning |
 |---|---|
-| `layout` | tile size on `/design/`: `feature` (large), `wide`, `tall`, `standard` |
+| `layout` | tile size on `/portfolio/design/`: `feature` (large), `wide`, `tall`, `standard` |
 | `body` | list of paragraphs |
 | `images` | gallery: `{ "src", "alt", "caption", "size": "full" \| "half" }` |
 
@@ -159,7 +163,7 @@ Tip: mix layouts (e.g. one `feature`, one `tall`, one `wide`, one `standard`) fo
 
 ## AI
 
-Folder: `/content/ai/<slug>/`. Shown on `/ai/` as workflow blueprints (anchor `#workflow-<slug>`).
+Folder: `/content/ai/<slug>/`. Shown on `/portfolio/ki/` as workflow blueprints (anchor `/portfolio/ki/#workflow-<slug>`).
 
 | Field | Meaning |
 |---|---|
@@ -196,6 +200,66 @@ Folder: `/content/ai/<slug>/`. Shown on `/ai/` as workflow blueprints (anchor `#
 Newest first. Placeholders like `[ADD DATE]` are highlighted on the page until replaced.
 
 `/content/career/skills.json`: groups with `name`, `summary`, `skills` (list), `tools` (optional).
+The About page currently shows the skills as running text (`EDIT: SKILLS TEXT` in `/frontend/pages/about.html`),
+so this file is not rendered. To show it again, add `<!-- @render skills -->` in the SKILLS section.
+
+---
+
+## Leistungen
+
+File: `/content/leistungen/pakete.json`. Page: `/leistungen/`. One object in `"packages"` = one package card,
+shown in this order.
+
+| Field | Meaning |
+|---|---|
+| `name` | package title |
+| `price` | small line under the title, e.g. `"ab 1.200 €"` or `"Preis auf Anfrage"` |
+| `summary` | short description |
+| `includes` | list of what the package contains |
+| `idealFor` | who the package is for |
+| `topic` | contact form topic. The button links to `/contact/?thema=<topic>` and the form opens with it selected |
+| `highlight` | `true` = stronger frame (use for one package at most) |
+
+`topic` must match one of the `CONTACT_TOPICS` in `/shared/contact-schema.js` exactly:
+Landingpage, Funnel & Meta Ads, Creatives & Copy, KI-Systeme & Automatisierung, Laufende Betreuung, Etwas anderes.
+The build warns if a topic is not in that list. To add a new topic, add it there too.
+
+---
+
+## News
+
+Folder: `/content/news/<slug>/article.md`. Page: `/news/<slug>/`. Overview: `/news/` (newest first).
+The three newest articles also appear in the NEWS TEASER on the homepage.
+**To write an article, copy `/content/news/_vorlage`** (folders starting with `_` are ignored).
+
+The file starts with a front matter block between `---` lines (lines starting with `#` are ignored),
+followed by the text in Markdown:
+
+```
+---
+title: Title of the article
+date: 2026-10-16
+description: One or two sentences for the overview and Google.
+category: Meta Ads
+image: titelbild.jpg
+imageAlt: Description of the image
+---
+
+First paragraph ...
+```
+
+| Field | Required | Meaning |
+|---|---|---|
+| `title` | yes | article title |
+| `date` | yes | `YYYY-MM-DD`, decides the order |
+| `description` | recommended | teaser text, also the SEO description |
+| `category` | – | e.g. Meta Ads, Funnels, Creatives, Copywriting, KI-Systeme (default: Wissen) |
+| `image`, `imageAlt` | – | cover image in the same folder + its description. Copied to `/media/news/<slug>/` |
+| `status` | – | `draft` = not published |
+
+Supported Markdown: `##` and `###` headings, paragraphs (separated by an empty line), `-` and `1.` lists,
+`>` quotes, `**bold**`, `*italic*` and `[text](url)` links. Everything else stays plain text.
+All text is escaped (no HTML), and links are checked for safe URLs. The reading time is calculated automatically.
 
 ---
 
