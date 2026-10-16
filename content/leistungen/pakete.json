@@ -4,7 +4,7 @@
         {
             "id": "website",
             "name": "Website für dein Unternehmen",
-            "price": "Preis auf Anfrage",
+            "price": "Preis individuell nach Projekt",
             "summary": "Ein moderner, schneller und sicherer Internetauftritt für kleine und mittelständische Unternehmen. Geplant, umgesetzt und geprüft von mir.",
             "includes": [
                 "Konzept und Seitenstruktur",
@@ -84,7 +84,7 @@
         },
         {
             "name": "Landingpage",
-            "price": "Preis auf Anfrage",
+            "price": "Preis individuell nach Projekt",
             "summary": "Für alle, die ein Angebot klar und überzeugend präsentieren möchten. Du bekommst eine Seite, die genau eine Aufgabe erfüllt: aus Besuchern Anfragen zu machen.",
             "includes": [
                 "Analyse von Zielgruppe und Angebot",
@@ -165,7 +165,7 @@
         },
         {
             "name": "Funnel & Meta Ads",
-            "price": "Preis auf Anfrage",
+            "price": "Preis individuell nach Projekt",
             "summary": "Das Komplettpaket für planbare Anfragen über Facebook und Instagram. Von der Zielgruppenanalyse bis zur laufenden Optimierung kommt alles aus einer Hand.",
             "includes": [
                 "Zielgruppenanalyse und Positionierung",
@@ -247,7 +247,7 @@
         },
         {
             "name": "Creatives & Copy",
-            "price": "Preis auf Anfrage",
+            "price": "Preis individuell nach Projekt",
             "summary": "Für Unternehmen, die bereits Kampagnen schalten und frische Motive mit starken Texten brauchen. Jede Variante ist so angelegt, dass sie sich sauber testen lässt.",
             "includes": [
                 "Anzeigenmotive im Feed- und Story-Format",
@@ -327,7 +327,7 @@
         },
         {
             "name": "Laufende Betreuung",
-            "price": "Monatlich, Preis auf Anfrage",
+            "price": "Monatlich, individuell nach Umfang",
             "summary": "Marketing als feste Partnerschaft. Ich kümmere mich dauerhaft um deine Kampagnen, damit du dich voll auf dein Geschäft konzentrieren kannst.",
             "includes": [
                 "Steuerung und Optimierung deiner Kampagnen",

@@ -1,5 +1,5 @@
 {
-    "_help": "SKILLS. NOTE: currently NOT shown on the About page (the page uses running text instead, see /frontend/pages/about.html -> SKILLS). Add <!-- @render skills --> to the page to show these cards again. SKILLS (About page). One group per discipline. 'skills' lists what you do in that area. 'tools' is optional – replace [ADD TOOLS] with the software you actually use, or delete the line.",
+    "_help": "SKILLS. NOTE: currently NOT shown on the About page (the page uses running text instead, see /frontend/pages/about.html -> SKILLS). Add <!-- @render skills --> to the page to show these cards again. SKILLS (About page). One group per discipline. 'skills' lists what you do in that area.",
     "groups": [
         {
             "name": "Marketing",
@@ -10,8 +10,7 @@
                 "Recruiting-Kampagnen",
                 "B2B-Kampagnen",
                 "Community Management"
-            ],
-            "tools": "[ADD TOOLS]"
+            ]
         },
         {
             "name": "Copywriting",
@@ -21,8 +20,7 @@
                 "Anzeigentexte (Primary Text)",
                 "Landingpage-Texte",
                 "Tonalität"
-            ],
-            "tools": "[ADD TOOLS]"
+            ]
         },
         {
             "name": "Creatives",
@@ -32,8 +30,7 @@
                 "Anzeigenmotive für Meta Ads",
                 "Kampagnenmaterial",
                 "Gestaltung im Corporate Design"
-            ],
-            "tools": "[ADD TOOLS]"
+            ]
         },
         {
             "name": "Funnels",
@@ -43,8 +40,7 @@
                 "Mehrstufige Formulare",
                 "CTA-Struktur",
                 "Funnel-Strategie"
-            ],
-            "tools": "[ADD TOOLS]"
+            ]
         },
         {
             "name": "KI-Systeme",
@@ -54,8 +50,7 @@
                 "KI-gestütztes Copywriting",
                 "KI-gestützte Kreativ-Workflows",
                 "Prompt- und Workflow-Design"
-            ],
-            "tools": "Claude, Claude Code, Claude API, Model Context Protocol (MCP)"
+            ]
         },
         {
             "name": "Automatisierung & Systeme",
@@ -65,8 +60,7 @@
                 "Anfragen-Zuordnung und Follow-up",
                 "Prozessdokumentation",
                 "Workflow-Design"
-            ],
-            "tools": "[ADD TOOLS]"
+            ]
         }
     ]
 }

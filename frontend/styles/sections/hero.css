@@ -93,9 +93,16 @@
     justify-items: start;
 }
 
+/* Phones: big claim first, then name + button, then the portrait */
+.hero__wordmark {
+    order: -2;
+}
+
 .hero__side--left {
-    order: -1;               /* phones: claim + button above the wordmark */
-    margin-top: var(--spacing-medium);
+    order: -1;
+    justify-items: center;
+    margin-top: var(--spacing-large);
+    text-align: center;
 }
 
 .hero__side--right {
