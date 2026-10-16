@@ -1,0 +1,131 @@
+/* ==========================================================
+   GARDEN DEMO THEME  (fictional brand "Musterfirma")
+   Fresh and trustworthy: deep garden green, warm stone, clay.
+========================================================== */
+
+:root {
+    --demo-background: #F4F1EA;
+    --demo-surface: #FFFFFF;
+    --demo-ink: #1F2A1E;
+    --demo-muted: #5C6656;
+    --demo-line: #DDD8CB;
+    --demo-accent: #3E6B3A;
+    --demo-accent-ink: #FFFFFF;
+    --demo-dark: #1F3320;
+    --gl-clay: #C9643C;
+}
+
+/* HEADER */
+.gl-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(244, 241, 234, 0.95);
+    border-bottom: 1px solid var(--demo-line);
+}
+.gl-header__inner { display: flex; justify-content: space-between; align-items: center; min-height: 4.5rem; }
+.gl-logo { display: inline-flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--demo-accent); }
+.gl-logo__mark { width: 2.1rem; height: 2.1rem; }
+.gl-logo span { display: grid; font-weight: 800; font-size: 1.15rem; line-height: 1.1; color: var(--demo-ink); }
+.gl-logo small { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--demo-muted); }
+.gl-header__cta { min-height: 2.6rem; padding: 0.5rem 1.1rem; font-size: 0.9rem; }
+@media (max-width: 560px) { .gl-header__cta { display: none; } }
+
+/* HERO (photo-like gradient landscape with text on top) */
+.gl-hero {
+    position: relative;
+    padding: clamp(4rem, 10vw, 8rem) 0;
+    color: #FFFFFF;
+    overflow: hidden;
+    background: radial-gradient(ellipse 80% 90% at 85% 40%, #3E6B3A 0%, #1F3320 70%);
+}
+.gl-hero__inner { display: grid; gap: 3rem; align-items: center; }
+@media (min-width: 900px) { .gl-hero__inner { grid-template-columns: 1.1fr 1fr; } }
+.gl-hero__visual { position: relative; margin: 0; }
+.gl-hero__visual img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6); }
+.gl-hero__badge {
+    position: absolute;
+    left: -1rem;
+    bottom: -1.25rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    background: #FFFFFF;
+    color: var(--demo-ink);
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.5);
+}
+.gl-hero__badge span { display: block; font-size: 0.78rem; font-weight: 500; color: var(--demo-muted); }
+.gl-eyebrow { margin-bottom: 1rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--demo-accent); }
+.gl-hero .gl-eyebrow, .gl-eyebrow--light { color: #CFE3C5; }
+.gl-hero__title { max-width: 14ch; font-size: clamp(2.5rem, 1.5rem + 4.5vw, 4.8rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; }
+.gl-hero__title span { color: #CFE3C5; }
+.gl-hero__text { margin-top: 1.25rem; max-width: 36rem; font-size: 1.15rem; color: rgba(255, 255, 255, 0.88); }
+.gl-hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.gl-ghost { box-shadow: inset 0 0 0 1px currentColor; background: transparent; color: inherit; }
+.gl-checks { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 1.75rem; padding: 0; list-style: none; font-size: 0.92rem; font-weight: 600; }
+.gl-checks li::before { content: "✓ "; color: #CFE3C5; }
+
+/* SECTIONS */
+.gl-section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.gl-section--green { background: var(--demo-dark); color: #F4F1EA; }
+.gl-heading { max-width: 38rem; font-size: clamp(1.8rem, 1.3rem + 2vw, 2.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+
+/* SERVICES */
+.gl-services { display: grid; gap: 1.25rem; margin-top: 2.5rem; padding: 0; list-style: none; }
+@media (min-width: 820px) { .gl-services { grid-template-columns: repeat(3, 1fr); } }
+.gl-service {
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--demo-surface);
+    border: 1px solid var(--demo-line);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.gl-service:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(31, 51, 32, 0.45); }
+.gl-service__image { margin: 0; aspect-ratio: 3 / 2; background: #E9E4D6; }
+.gl-service__image img { width: 100%; height: 100%; object-fit: cover; }
+.gl-service h3 { margin: 1.25rem 1.4rem 0.4rem; font-size: 1.25rem; }
+.gl-service p { margin: 0 1.4rem 1.5rem; color: var(--demo-muted); font-size: 0.97rem; }
+.gl-services__cta { margin-top: 2.25rem; text-align: center; }
+
+/* REQUEST */
+.gl-request { display: grid; gap: 2.5rem; align-items: start; }
+@media (min-width: 900px) { .gl-request { grid-template-columns: 1fr 1.15fr; } }
+.gl-request__text { margin-top: 1rem; max-width: 30rem; color: rgba(244, 241, 234, 0.8); }
+.gl-form { color: var(--demo-ink); }
+.gl-times { margin-bottom: 1.25rem; }
+
+/* FOOTER */
+.gl-footer { padding: 2rem 0; border-top: 1px solid var(--demo-line); font-size: 0.85rem; color: var(--demo-muted); }
+
+/* THANK-YOU PAGE */
+.gl-thanks { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.gl-thanks__inner { max-width: 760px; }
+.gl-thanks__icon {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: var(--demo-accent);
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    animation: gl-pop 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes gl-pop { from { transform: scale(0.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.gl-thanks__title { font-size: clamp(2.3rem, 1.5rem + 3.5vw, 3.8rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
+.gl-thanks__text { margin-top: 1.25rem; font-size: 1.12rem; color: var(--demo-muted); }
+
+.gl-next { display: grid; gap: 1rem; margin: 2.5rem 0; padding: 0; list-style: none; }
+@media (min-width: 700px) { .gl-next { grid-template-columns: repeat(3, 1fr); } }
+.gl-next li { display: grid; gap: 0.3rem; padding: 1.25rem; border-radius: 14px; background: var(--demo-surface); border: 1px solid var(--demo-line); color: var(--demo-muted); font-size: 0.93rem; }
+.gl-next span { font-size: 0.78rem; font-weight: 800; color: var(--gl-clay); }
+.gl-next strong { color: var(--demo-ink); font-size: 1.05rem; }
+
+.gl-thanks__links { padding: 1.75rem; border-radius: 16px; background: var(--demo-dark); color: #F4F1EA; }
+.gl-thanks__links-title { font-size: 1.1rem; font-weight: 700; }
+.gl-thanks__buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+.gl-social { display: flex; gap: 1.5rem; margin-top: 1.25rem; padding: 0; list-style: none; font-weight: 600; }
+.gl-social a { color: #CFE3C5; }
+.gl-thanks .demo-done__badge { margin-top: 2rem; }

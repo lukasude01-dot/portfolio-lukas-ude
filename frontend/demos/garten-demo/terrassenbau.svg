@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: Holzterrasse mit Pflanzkübel">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6D3"/><stop offset="1" stop-color="#F1EDE2"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B98154"/><stop offset="1" stop-color="#9C6942"/></linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sky)"/>
+  <circle cx="480" cy="88" r="38" fill="#F3D58B"/>
+  <path d="M0 230 Q150 190 300 215 T600 200 V400 H0Z" fill="#8FAE7C"/>
+  <path d="M0 260 Q180 230 340 250 T600 240 V400 H0Z" fill="#6E9460"/>
+  <!-- deck -->
+  <path d="M60 300 L540 300 L600 400 L0 400 Z" fill="url(#wood)"/>
+  <g stroke="#7E5434" stroke-width="2" opacity=".55">
+    <path d="M48 320 H552"/><path d="M36 340 H564"/><path d="M24 360 H576"/><path d="M12 380 H588"/>
+  </g>
+  <path d="M60 300 L540 300" stroke="#6B472C" stroke-width="4"/>
+  <!-- bench -->
+  <rect x="300" y="262" width="150" height="12" rx="3" fill="#5E4129"/>
+  <rect x="312" y="274" width="10" height="28" fill="#5E4129"/><rect x="428" y="274" width="10" height="28" fill="#5E4129"/>
+  <!-- planter -->
+  <path d="M120 250 h70 l-8 52 h-54z" fill="#C9643C"/>
+  <path d="M155 250 C125 210 120 175 140 150 C150 185 158 210 160 250Z" fill="#3E6B3A"/>
+  <path d="M158 250 C175 205 195 185 215 175 C205 210 185 235 165 250Z" fill="#4F8248"/>
+  <path d="M152 250 C140 220 105 205 92 200 C110 230 128 245 150 252Z" fill="#5C9152"/>
+</svg>

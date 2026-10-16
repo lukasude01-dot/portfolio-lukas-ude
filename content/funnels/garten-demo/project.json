@@ -1,0 +1,131 @@
+{
+    "_help": "FUNNEL CASE STUDY. See /docs/CONTENT-GUIDE.md -> Funnels. 'example': true marks example content (shown as 'Concept'); remove it when this is real client work.",
+    "title": "Anfrage-Funnel für einen Gartenbaubetrieb",
+    "category": [
+        "Leadgenerierung"
+    ],
+    "description": "Ein Anfrage-Funnel für einen Dienstleister: Interessenten aus der Anzeige sehen die drei Leistungen auf einen Blick und fragen ihren Wunschservice in vier kurzen Schritten an.",
+    "year": "2026",
+    "client": "Musterfirma Garten- und Landschaftsbau (fiktive Marke)",
+    "services": [
+        "Funnel-Strategie",
+        "Copywriting",
+        "Landingpage",
+        "Mehrstufige Anfrage",
+        "Bestätigungsseite"
+    ],
+    "featured": true,
+    "example": true,
+    "order": 0,
+    "status": "published",
+    "demoPath": "/demos/garten-demo/",
+    "demoNotice": "Portfolio-Demonstration für eine fiktive Marke. Die Live-Demo funktioniert wie ein echter Funnel, es werden aber keine Daten gesendet oder gespeichert.",
+    "thumbnail": {
+        "src": "cover.jpg",
+        "alt": "Landingpage der Musterfirma mit der Headline „Ihr Garten in guten Händen“ und drei Leistungen mit Illustrationen"
+    },
+    "context": "Garten- und Landschaftsbaubetriebe bekommen viele unklare Anfragen per Telefon oder E-Mail. Wichtige Angaben wie die gewünschte Leistung, der Zeitraum oder Besonderheiten auf dem Grundstück fehlen oft. Das kostet Zeit bei der Nachfrage und der Angebotserstellung.",
+    "objective": "Interessenten aus einer Meta-Anzeige sollen schnell verstehen, was der Betrieb anbietet, und eine Anfrage stellen, die alle wichtigen Informationen für einen gezielten Rückruf enthält.",
+    "objectiveShort": "Mehr qualifizierte Anfragen mit allen wichtigen Angaben.",
+    "audience": [
+        "Haus- und Grundstücksbesitzer in der Region, meist zwischen 35 und 65 Jahren",
+        "Planen ein konkretes Projekt oder haben ein akutes Problem, zum Beispiel einen gefährlichen Baum",
+        "Wünschen sich einen verlässlichen Betrieb mit festem Ansprechpartner und klaren Preisen"
+    ],
+    "strategy": [
+        "Die drei Leistungen mit Bild und kurzem Text zeigen, damit Besucher sofort erkennen, ob der Betrieb passt",
+        "Vertrauen durch klare Versprechen aufbauen: kostenlose Erstberatung, Festpreis und Rückruf innerhalb von 24 Stunden",
+        "Die Anfrage in vier kurze Schritte teilen, damit sie sich leicht anfühlt",
+        "Den Rückruf statt eines Termins anbieten, weil Kunden lieber persönlich sprechen, bevor sie sich festlegen"
+    ],
+    "structure": [
+        {
+            "step": "Anzeige",
+            "title": "Meta Ad",
+            "text": "Eine Anzeige mit einem gepflegten Garten spricht Grundstücksbesitzer in der Region an und führt direkt auf die Landingpage."
+        },
+        {
+            "step": "Landingpage",
+            "title": "Leistungen im Überblick",
+            "text": "Terrassenbau, Gartenplanung und Problembaumfällung werden jeweils mit Bild und kurzem Text vorgestellt. Der Button „Service anfragen“ führt zur Anfrage."
+        },
+        {
+            "step": "Anfrage",
+            "title": "Formular in 4 Schritten",
+            "text": "Abgefragt werden der gewünschte Service, der Zeitraum, Besonderheiten im Freitext und die beste Zeit für einen Rückruf."
+        },
+        {
+            "step": "Danke",
+            "title": "Bestätigungsseite",
+            "text": "Eine eigene Seite bestätigt die Anfrage, erklärt die nächsten Schritte und verlinkt auf Projekte, Website und Social Media."
+        }
+    ],
+    "copy": {
+        "headline": "Ihr Garten in guten Händen.",
+        "subheadline": "Ob neue Terrasse, durchdachte Gartenplanung oder ein Baum, der zum Risiko wird: Wir kümmern uns darum.",
+        "hooks": [
+            "Ihre neue Terrasse, gebaut für viele Sommer.",
+            "Der Baum macht Ihnen Sorgen? Wir fällen ihn sicher.",
+            "Vom Plan zum Lieblingsplatz im Garten."
+        ],
+        "tone": "Freundlich, verlässlich und klar. Die Ansprache per Sie passt zu einer eher älteren, bodenständigen Zielgruppe."
+    },
+    "visual": {
+        "palette": [
+            {
+                "name": "Gartengrün",
+                "hex": "#3E6B3A"
+            },
+            {
+                "name": "Tannengrün",
+                "hex": "#1F3320"
+            },
+            {
+                "name": "Naturstein",
+                "hex": "#F4F1EA"
+            },
+            {
+                "name": "Ton",
+                "hex": "#C9643C"
+            }
+        ],
+        "typography": "Eine kräftige Sans-Serif für Headlines, gut lesbar und bodenständig.",
+        "imagery": "Klare Illustrationen stehen für die drei Leistungen. In einem echten Projekt kämen Fotos aus abgeschlossenen Projekten des Betriebs zum Einsatz.",
+        "layout": "Mobile first mit großen Auswahlflächen, einem fixierten Anfrage-Button auf dem Handy und einer eigenen Bestätigungsseite."
+    },
+    "ctaStructure": [
+        {
+            "role": "Primär",
+            "text": "Service anfragen",
+            "where": "Im Header, im Hero, unter den Leistungen und als fixierter Button auf dem Handy"
+        },
+        {
+            "role": "Sekundär",
+            "text": "Unsere Leistungen",
+            "where": "Im Hero für alle, die erst mehr wissen wollen"
+        },
+        {
+            "role": "Formular",
+            "text": "Anfrage absenden",
+            "where": "Letzter Schritt der Anfrage"
+        }
+    ],
+    "journey": [
+        {
+            "title": "Sieht die Anzeige im Feed",
+            "text": "Ein gepflegter Garten und ein klares Versprechen wecken Interesse bei Menschen mit einem konkreten Vorhaben."
+        },
+        {
+            "title": "Erkennt die passende Leistung",
+            "text": "Drei Bilder mit kurzen Texten zeigen in Sekunden, was der Betrieb anbietet."
+        },
+        {
+            "title": "Stellt die Anfrage",
+            "text": "Vier kurze Schritte mit einer Frage pro Screen. Besonderheiten lassen sich im Freitext ergänzen."
+        },
+        {
+            "title": "Weiß, wie es weitergeht",
+            "text": "Die Bestätigungsseite erklärt Rückruf, Besichtigung und Festpreis und verlinkt auf weitere Projekte."
+        }
+    ]
+}

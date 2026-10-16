@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration: großer Baum neben einem Haus und einem frisch gefällten Baumstumpf">
+  <defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D5E1E3"/><stop offset="1" stop-color="#EEEBE1"/></linearGradient></defs>
+  <rect width="600" height="400" fill="url(#sky2)"/>
+  <path d="M0 300 Q200 280 400 295 T600 290 V400 H0Z" fill="#7FA36C"/>
+  <!-- house -->
+  <rect x="380" y="190" width="160" height="110" fill="#E8DCC6"/>
+  <path d="M365 195 L460 130 L555 195Z" fill="#8C4B33"/>
+  <rect x="440" y="240" width="34" height="60" fill="#6B4630"/>
+  <rect x="398" y="215" width="30" height="26" fill="#BFD2D6" stroke="#FBF8F1" stroke-width="3"/>
+  <rect x="492" y="215" width="30" height="26" fill="#BFD2D6" stroke="#FBF8F1" stroke-width="3"/>
+  <!-- leaning tree -->
+  <g transform="rotate(12 230 300)">
+    <rect x="218" y="150" width="24" height="152" rx="6" fill="#6B4A31"/>
+    <circle cx="230" cy="125" r="70" fill="#3E6B3A"/>
+    <circle cx="185" cy="155" r="46" fill="#4F8248"/>
+    <circle cx="275" cy="150" r="48" fill="#4F8248"/>
+    <circle cx="232" cy="88" r="40" fill="#5C9152"/>
+  </g>
+  <!-- warning marks -->
+  <g fill="#E0A23B"><path d="M310 95 l14 26 h-28z"/></g>
+  <rect x="316" y="104" width="3" height="9" fill="#3A2E25"/><rect x="316" y="115" width="3" height="3" fill="#3A2E25"/>
+  <!-- stump -->
+  <ellipse cx="95" cy="300" rx="34" ry="9" fill="#5E4129"/>
+  <rect x="61" y="272" width="68" height="28" fill="#7A5638"/>
+  <ellipse cx="95" cy="272" rx="34" ry="9" fill="#D9B98E"/>
+  <ellipse cx="95" cy="272" rx="20" ry="5" fill="none" stroke="#B08A5E" stroke-width="2"/>
+  <ellipse cx="95" cy="272" rx="8" ry="2" fill="none" stroke="#B08A5E" stroke-width="2"/>
+</svg>

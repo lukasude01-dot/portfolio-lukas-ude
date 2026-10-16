@@ -24,6 +24,13 @@
  *     </div>
  *   </form>
  *
+ * OPTIONAL:
+ *   <form data-demo-funnel data-done-url="danke.html">
+ *     After the last step the visitor is sent to a separate thank-you
+ *     page instead of seeing the [data-done] block.
+ *   <fieldset data-step data-step-optional>  free-text step that may
+ *     stay empty (e.g. a textarea with "Besonderheiten").
+ *
  * Also handles the sticky mobile CTA (data-sticky-cta).
  */
 
@@ -63,7 +70,7 @@ function initFunnel(form) {
             return true;
         }
         let valid = true;
-        for (const input of step.querySelectorAll("input[required]")) {
+        for (const input of step.querySelectorAll("input[required], textarea[required]")) {
             const ok = input.type === "checkbox" ? input.checked : input.checkValidity() && input.value.trim() !== "";
             input.setAttribute("aria-invalid", String(!ok));
             if (!ok) valid = false;
@@ -73,6 +80,13 @@ function initFunnel(form) {
     };
 
     const finish = () => {
+        // Separate thank-you page (e.g. danke.html). Nothing is sent.
+        if (form.dataset.doneUrl) {
+            form.reset();
+            window.location.href = form.dataset.doneUrl;
+            return;
+        }
+
         // DEMO: read the answers only to personalise the final screen.
         const answers = Object.fromEntries(new FormData(form));
         done.querySelectorAll("[data-show-if]").forEach((element) => {

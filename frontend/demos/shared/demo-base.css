@@ -234,7 +234,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .demo-field { display: grid; gap: 0.35rem; margin-bottom: 0.9rem; }
 .demo-field label { font-size: 0.85rem; font-weight: 600; }
 
-.demo-field input {
+.demo-field input,
+.demo-field textarea {
     min-height: 3.25rem;
     padding: 0.75rem 0.9rem;
     border: 1px solid var(--demo-line);
@@ -243,7 +244,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
     font-size: 1rem;
 }
 
-.demo-field input:focus { outline: 2px solid var(--demo-accent); outline-offset: 0; border-color: transparent; }
+.demo-field textarea { min-height: 8rem; resize: vertical; line-height: 1.5; }
+.demo-field input:focus,
+.demo-field textarea:focus { outline: 2px solid var(--demo-accent); outline-offset: 0; border-color: transparent; }
+.demo-field__hint { font-size: 0.85rem; color: var(--demo-muted); }
 .demo-field input[aria-invalid="true"] { border-color: #B3261E; }
 
 .demo-consent {

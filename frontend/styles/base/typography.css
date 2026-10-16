@@ -68,6 +68,8 @@ h3,
 
 .heading-1,
 .heading-2 {
+    overflow-wrap: break-word;   /* very long German words never overflow */
+    hyphens: auto;
     font-family: var(--font-body);
     font-weight: 700;
     text-transform: uppercase;
