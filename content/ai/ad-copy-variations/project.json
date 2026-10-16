@@ -5,7 +5,7 @@
         "Copywriting",
         "Kreation"
     ],
-    "description": "Ein strukturierter Weg, Hook- und Headline-Varianten für Tests zu entwickeln und zu ordnen.",
+    "description": "Ein strukturierter Weg, Hook- und Headline-Varianten für Tests zu entwickeln und zu ordnen. KI beschleunigt das Ausformulieren von Varianten, während Insight, Auswahl und Feinschliff Handarbeit bleiben.",
     "year": "2026",
     "featured": false,
     "concept": true,
@@ -14,17 +14,17 @@
         {
             "label": "Insight",
             "role": "Human",
-            "text": "Ein Kunden-Insight und ein Motiv pro Test."
+            "text": "Am Anfang stehen ein Kunden-Insight und ein Motiv pro Test."
         },
         {
             "label": "Varianten",
             "role": "AI",
-            "text": "KI erzeugt Hook- und Headline-Optionen nach klaren Regeln für Ton und Länge."
+            "text": "KI beschleunigt die Arbeit, indem sie auf Basis von Insight und Motiv weitere Hook- und Headline-Optionen nach klaren Regeln für Ton und Länge liefert."
         },
         {
             "label": "Auswahl",
             "role": "Human",
-            "text": "Die stärksten, ehrlichsten Optionen werden ausgewählt und verfeinert."
+            "text": "Die stärksten und ehrlichsten Optionen werden ausgewählt und von Hand weitergeschrieben."
         },
         {
             "label": "Bibliothek",

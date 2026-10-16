@@ -26,12 +26,12 @@
         "src": "post-idea-to-system.jpg",
         "alt": "Markenpost: „Von der Idee zum System.“ über einem Fluss im Sonnenuntergang"
     },
-    "objective": "Die Markenidee im Feed sichtbar machen: Natur, Handwerk und Systeme. Ruhig statt laut.",
-    "insight": "In einem Feed voller Hype fällt Zurückhaltung auf. Wenige Worte, starke Typografie, echte Atmosphäre.",
+    "objective": "Die Markenidee aus Natur, Handwerk und Systemen soll im Feed sichtbar werden, ruhig statt laut.",
+    "insight": "In einem Feed voller Hype fällt Zurückhaltung auf. Deshalb setzen die Posts auf wenige Worte, starke Typografie und echte Atmosphäre.",
     "approach": [
-        "CI-Typografie: Cormorant Garamond für Statements, Manrope für Details",
-        "Bilder aus der CI-Bildsprache: warmes Licht, tiefe Schatten, Natur",
-        "Ein Gedanke pro Post, kurz genug zum Lesen beim Scrollen"
+        "Die CI-Typografie setzt Cormorant Garamond für Statements und Manrope für Details ein.",
+        "Die Bilder folgen der CI-Bildsprache: warmes Licht, tiefe Schatten, Natur.",
+        "Jeder Post trägt genau einen Gedanken, kurz genug, um ihn beim Scrollen zu lesen."
     ],
     "ads": [
         {

@@ -4,7 +4,7 @@
     "category": [
         "Automatisierung"
     ],
-    "description": "Vom abgeschickten Formular bis zum vorbereiteten Erstgespräch, ohne dass etwas verloren geht.",
+    "description": "Ein Workflow, der jede Anfrage vom abgeschickten Formular bis zum vorbereiteten Erstgespräch begleitet, ohne dass etwas verloren geht.",
     "year": "2026",
     "featured": true,
     "concept": true,
@@ -18,7 +18,7 @@
         {
             "label": "Zusammenfassen",
             "role": "AI",
-            "text": "KI macht aus den Antworten ein kurzes Briefing: Bedarf, Zeitpunkt, offene Fragen."
+            "text": "KI verdichtet die Antworten zu einem kurzen Briefing mit Bedarf, Zeitpunkt und offenen Fragen."
         },
         {
             "label": "Zuordnen",
@@ -28,12 +28,12 @@
         {
             "label": "Prüfen",
             "role": "Human",
-            "text": "Ein Mensch prüft das Briefing und entscheidet über den nächsten Schritt."
+            "text": "Die Anfrage wird persönlich gelesen und eingeordnet. Der nächste Schritt wird individuell geplant."
         },
         {
             "label": "Nachfassen",
             "role": "System",
-            "text": "Bestätigung und Erinnerung gehen pünktlich und persönlich raus."
+            "text": "Bestätigung und Erinnerung werden pünktlich und persönlich verschickt."
         }
     ],
     "outputs": [
@@ -41,5 +41,5 @@
         "Kurzes Briefing pro Anfrage",
         "Follow-up-Aufgabe"
     ],
-    "humanInLoop": "Jede Anfrage wird vor der ersten Antwort von einem Menschen geprüft."
+    "humanInLoop": "Jede Anfrage wird vor der ersten Antwort persönlich gelesen."
 }

@@ -24,18 +24,18 @@
         "alt": "Dunkle Landingpage mit Glut-Schimmer und der Frage „Welcher Kaminofen passt wirklich zu deinem Zuhause?“ neben einem Quiz"
     },
     "context": "Ein Kaminofen ist eine überlegte Anschaffung. Die meisten Besucher stehen noch am Anfang ihrer Recherche und wollen kein Verkaufsgespräch. Ein klassisches „Angebot anfordern“-Formular verliert sie.",
-    "objective": "Zuerst etwas Nützliches bieten (eine Empfehlung) und dabei qualifizierte Anfragen mit allen Infos sammeln, die ein Berater braucht.",
+    "objective": "Der Funnel bietet zuerst etwas Nützliches (eine Empfehlung) und sammelt dabei qualifizierte Anfragen mit allen Infos, die ein Berater braucht.",
     "objectiveShort": "Besucher in der Recherchephase zu qualifizierten Anfragen machen.",
     "audience": [
         "Haus- und künftige Hausbesitzer, die einen Ofen planen",
-        "Früh in der Entscheidung: vergleichen, unsicher bei Größe und Voraussetzungen",
+        "Stehen früh in der Entscheidung, vergleichen noch und sind unsicher bei Größe und Voraussetzungen",
         "Wollen Beratung ohne Verkaufsdruck"
     ],
     "strategy": [
         "„Angebot anfordern“ durch einen „kostenlosen Ofen-Check“ ersetzen, damit der Nutzen vor dem Kontakt kommt",
         "Die Fragen stellen, die ein Berater sowieso stellen würde (Raumgröße, Wohnsituation, Ziel, Zeitpunkt)",
         "Die Ergebnisseite personalisieren, damit der Nutzen sofort sichtbar ist",
-        "Die Beratung als optional positionieren, um Druck rauszunehmen"
+        "Die Beratung als optional positionieren, um Druck herauszunehmen"
     ],
     "structure": [
         {
@@ -46,22 +46,22 @@
         {
             "step": "Quiz",
             "title": "5 Fragen",
-            "text": "Wohnsituation, Raumgröße, Ziel und Zeitpunkt mit je einem Tap."
+            "text": "Wohnsituation, Raumgröße, Ziel und Zeitpunkt lassen sich mit je einem Tap beantworten."
         },
         {
             "step": "Kontakt",
             "title": "Name, E-Mail, PLZ",
-            "text": "Erst gefragt, wenn der Besucher schon in die Antworten investiert hat."
+            "text": "Die Kontaktdaten werden erst abgefragt, wenn der Besucher schon in seine Antworten investiert hat."
         },
         {
             "step": "Ergebnis",
             "title": "Persönliche Empfehlung",
-            "text": "Leistungsbereich und nächste Schritte auf Basis der Antworten."
+            "text": "Der passende Leistungsbereich und die nächsten Schritte, abgeleitet aus den Antworten."
         },
         {
             "step": "Follow-up",
             "title": "Optionaler Termin",
-            "text": "In einem echten Setup: E-Mail mit Empfehlung und Terminlink."
+            "text": "In einem echten Setup folgt eine E-Mail mit der Empfehlung und einem Terminlink."
         }
     ],
     "copy": {
@@ -93,8 +93,8 @@
                 "hex": "#E3DACE"
             }
         ],
-        "typography": "Kräftige Sans-Serif-Headlines, großzügiger Zeilenabstand für die Erklärungen.",
-        "imagery": "Warmer Glut-Schimmer statt Stockfotos. In einem echten Projekt: Fotos eingebauter Öfen bei Kunden.",
+        "typography": "Kräftige Sans-Serif-Headlines und ein großzügiger Zeilenabstand für die Erklärungen.",
+        "imagery": "Ein warmer Glut-Schimmer ersetzt Stockfotos. In einem echten Projekt kämen Fotos eingebauter Öfen bei Kunden zum Einsatz.",
         "layout": "Auf dem Desktop ist das Quiz sofort sichtbar. Die erste Antwort ist nur einen Tap entfernt."
     },
     "ctaStructure": [
@@ -121,19 +121,19 @@
         },
         {
             "title": "Startet sofort das Quiz",
-            "text": "Kein Lesen nötig, denn die erste Frage ist direkt sichtbar."
+            "text": "Lesen ist nicht nötig, denn die erste Frage ist direkt sichtbar."
         },
         {
             "title": "Investiert in die Antworten",
-            "text": "Jeder Tap bringt weiter, der Fortschrittsbalken zeigt, wie wenig noch fehlt."
+            "text": "Jeder Tap bringt ihn weiter und der Fortschrittsbalken zeigt, wie wenig noch fehlt."
         },
         {
             "title": "Gibt Kontaktdaten an",
-            "text": "Erst am Ende gefragt, wenn die Empfehlung nur noch einen Schritt entfernt ist."
+            "text": "Nach den Kontaktdaten wird erst am Ende gefragt, wenn die Empfehlung nur noch einen Schritt entfernt ist."
         },
         {
             "title": "Bekommt echten Nutzen",
-            "text": "Eine persönliche Empfehlung und die Option, mit einem Berater zu sprechen."
+            "text": "Er erhält eine persönliche Empfehlung und die Option, mit einem Berater zu sprechen."
         }
     ]
 }

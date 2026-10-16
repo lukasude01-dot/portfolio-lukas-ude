@@ -5,7 +5,7 @@
         "Social",
         "Performance"
     ],
-    "description": "Sale-Anzeige für eine Streetwear-Marke: Produkt getragen, Rabatt klar, Call-to-Action mit Handschrift.",
+    "description": "Eine Sale-Anzeige für eine Streetwear-Marke. Das Produkt wird getragen gezeigt, der Rabatt ist sofort klar und der Call-to-Action trägt die Handschrift der Marke.",
     "year": "2026",
     "client": "ALLBARK (Konzeptarbeit)",
     "services": [
@@ -27,9 +27,9 @@
     "objective": "Eine Rabattaktion im Feed sofort erkennbar machen, ohne den Markencharakter zu verlieren.",
     "insight": "Ein Sale wirkt glaubwürdiger, wenn man das Produkt im echten Einsatz sieht.",
     "approach": [
-        "Produkt getragen statt freigestellt, mit Rückenprint im Fokus",
-        "Vertikaler SALE-Schriftzug als Rahmen",
-        "Rabatt in Orange, CTA auf einem Pinselstrich"
+        "Das Produkt wird getragen statt freigestellt gezeigt, der Rückenprint steht im Fokus.",
+        "Ein vertikaler SALE-Schriftzug rahmt das Motiv.",
+        "Der Rabatt erscheint in Orange und der CTA sitzt auf einem Pinselstrich."
     ],
     "ads": [
         {
@@ -43,7 +43,7 @@
             "primaryText": "20 % auf alles, auch auf deinen neuen Lieblingshoodie.\nNur für kurze Zeit.",
             "headline": "20 % auf alles",
             "cta": "Jetzt shoppen",
-            "rationale": "Produkt, Angebot und Handlung in einem Blick."
+            "rationale": "Produkt, Angebot und Handlung lassen sich mit einem Blick erfassen."
         }
     ],
     "hooks": [

@@ -5,7 +5,7 @@
         "Performance",
         "Marke"
     ],
-    "description": "Typografie-getriebene Automotive-Anzeige: der Modellname als Bild, das Fahrzeug als Blickfang.",
+    "description": "Eine typografiegetriebene Automotive-Anzeige, in der der Modellname selbst zum Bild wird und das Fahrzeug als Blickfang dient.",
     "year": "2026",
     "client": "Freie Konzeptarbeit, keine Zusammenarbeit mit Ford",
     "services": [
@@ -24,13 +24,13 @@
         "src": "/media/portfolio/ford-ranger/ford-ranger.webp",
         "alt": "Anzeige mit großem orangefarbenem FORD-Schriftzug, weißem RANGER-Outline-Schriftzug und dunklem Pick-up"
     },
-    "objective": "Ein Fahrzeug im Feed mit maximaler Präsenz zeigen, als freie Konzeptstudie.",
+    "objective": "Als freie Konzeptstudie soll ein Fahrzeug im Feed mit maximaler Präsenz erscheinen.",
     "insight": "Bei bekannten Modellen ist der Name selbst das stärkste Gestaltungselement.",
     "approach": [
-        "Modellname als großflächige Typografie: FORD gefüllt, RANGER als Kontur",
-        "Fahrzeug überlagert die Schrift und erzeugt Tiefe",
-        "Reduzierte Farben: Orange, Weiß, dunkle Struktur",
-        "Kleiner, klarer Call-to-Action"
+        "Der Modellname wird zur großflächigen Typografie: FORD gefüllt, RANGER als Kontur.",
+        "Das Fahrzeug überlagert die Schrift und erzeugt so Tiefe.",
+        "Die Farben bleiben reduziert: Orange, Weiß und eine dunkle Struktur.",
+        "Der Call-to-Action bleibt klein und klar."
     ],
     "ads": [
         {

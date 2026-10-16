@@ -5,7 +5,7 @@
         "Recruiting",
         "Performance"
     ],
-    "description": "Drei Meta-Anzeigenvarianten, die mit konkreten Arbeitsbedingungen starten statt mit Arbeitgeber-Klischees.",
+    "description": "Drei Varianten für Meta Ads, die mit konkreten Arbeitsbedingungen statt mit Arbeitgeber-Klischees starten.",
     "year": "2026",
     "client": "Tischlerei Nordholz (fiktive Marke)",
     "services": [
@@ -27,12 +27,12 @@
         "alt": "Recruiting-Anzeige: „Feierabend um 16 Uhr. Wirklich.“ auf Nussbaum-Hintergrund"
     },
     "objective": "Angestellte Tischler:innen erreichen, die gerade nicht aktiv suchen. Ein Bewerbungsfunnel, der nur 60 Sekunden dauert, macht ihnen den Wechsel so leicht wie möglich.",
-    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf das eine, was ihr aktueller Job falsch macht. Oft sind das Planbarkeit und Arbeitszeiten.",
+    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf genau das, was ihr aktueller Job falsch macht. Oft sind das Planbarkeit und Arbeitszeiten.",
     "approach": [
-        "Jede Variante testet EIN Motiv: Arbeitszeit, Qualität der Arbeit, Aufwand der Bewerbung",
-        "Typografische Creatives: im vollen Feed in einer Sekunde lesbar",
-        "Primary Text in der Sprache der Werkstatt, nicht der Personalabteilung",
-        "Gleicher CTA und gleiche Landingpage für einen sauberen Vergleich"
+        "Jede Variante testet genau ein Motiv: Arbeitszeit, Qualität der Arbeit oder Aufwand der Bewerbung.",
+        "Die Creatives sind typografisch und im vollen Feed in einer Sekunde lesbar.",
+        "Der Primary Text spricht die Sprache der Werkstatt, nicht die der Personalabteilung.",
+        "Gleicher CTA und gleiche Landingpage sorgen für einen sauberen Vergleich."
     ],
     "ads": [
         {
@@ -47,7 +47,7 @@
             "headline": "Als Tischler:in (m/w/d) in 60 Sek. bewerben",
             "description": "Ohne Lebenslauf",
             "cta": "Jetzt bewerben",
-            "rationale": "Startet mit dem stärksten konkreten Vorteil. „Wirklich.“ nimmt den Zweifel vorweg."
+            "rationale": "Die Anzeige startet mit dem stärksten konkreten Vorteil. „Wirklich.“ nimmt den Zweifel vorweg."
         },
         {
             "label": "Qualität der Arbeit",
@@ -57,11 +57,11 @@
                 "alt": "Anzeigen-Creative: „Massivholz. Statt Spanplatte am Fließband.“"
             },
             "hook": "Massivholz statt Spanplatte am Fließband.",
-            "primaryText": "Du hast Tischler:in gelernt, um Möbel zu bauen und nicht, um Teile zu sortieren.\nBei uns betreust du Projekte vom Aufmaß bis zur Montage.",
+            "primaryText": "Du hast Tischler:in gelernt, um Möbel zu bauen. Nicht, um Teile zu sortieren.\nBei uns betreust du Projekte vom Aufmaß bis zur Montage.",
             "headline": "Eigene Projekte. Kleines Team.",
             "description": "Tischlerei Nordholz",
             "cta": "Mehr erfahren",
-            "rationale": "Spricht den Berufsstolz aller an, die von industrieller Fertigung frustriert sind."
+            "rationale": "Sie spricht den Berufsstolz aller an, die von industrieller Fertigung frustriert sind."
         },
         {
             "label": "Aufwand der Bewerbung",
@@ -71,11 +71,11 @@
                 "alt": "Anzeigen-Creative: „60 Sekunden. Vier Fragen. Kein Lebenslauf.“"
             },
             "hook": "60 Sekunden. Kein Lebenslauf.",
-            "primaryText": "Bewerben dauert bei uns so lange wie diese Anzeige zu lesen.\nVier Fragen, dann rufen wir dich an.",
+            "primaryText": "Bewerben dauert bei uns nicht länger, als diese Anzeige zu lesen.\nVier Fragen, dann rufen wir dich an.",
             "headline": "Bewerbung ohne Papierkram",
             "description": "Tischler:in (m/w/d)",
             "cta": "Jetzt bewerben",
-            "rationale": "Nimmt die größte Hürde für passive Kandidat:innen: den Aufwand."
+            "rationale": "Sie nimmt passiven Kandidat:innen die größte Hürde: den Aufwand."
         }
     ],
     "hooks": [

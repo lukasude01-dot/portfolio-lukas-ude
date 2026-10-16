@@ -5,7 +5,7 @@
         "Content",
         "Recherche"
     ],
-    "description": "KI beschleunigt Recherche und Strukturierung. Idee, Text und Tonalität entstehen in menschlicher Arbeit.",
+    "description": "Ein Content-Workflow, in dem KI Recherche und Strukturierung beschleunigt. Idee, Text und Tonalität entstehen in menschlicher Arbeit.",
     "year": "2026",
     "featured": false,
     "concept": true,
@@ -29,12 +29,12 @@
         {
             "label": "Schreiben & Redigieren",
             "role": "Human",
-            "text": "Schreiben und Redigieren in der Markenstimme, von Hand und mit klarer Richtung."
+            "text": "Der Text wird von Hand in der Markenstimme geschrieben und redigiert, mit klarer Richtung."
         },
         {
             "label": "Veröffentlichen",
             "role": "System",
-            "text": "Geplant, dokumentiert und für die Wiederverwendung abgelegt."
+            "text": "Der fertige Beitrag wird eingeplant, dokumentiert und für die Wiederverwendung abgelegt."
         }
     ],
     "outputs": [
@@ -42,5 +42,5 @@
         "Entwurf in Markenstimme",
         "Wiederverwendbare Recherche-Notizen"
     ],
-    "humanInLoop": "Fakten werden geprüft und jeder Text wird vor der Veröffentlichung von einem Menschen redigiert."
+    "humanInLoop": "Fakten werden geprüft und jeder Text wird vor der Veröffentlichung von Hand redigiert."
 }

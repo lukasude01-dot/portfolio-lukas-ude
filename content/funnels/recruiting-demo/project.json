@@ -24,7 +24,7 @@
         "alt": "Recruiting-Landingpage mit der Headline „Feierabend um 16 Uhr“ auf warmem Nussbaum-Hintergrund"
     },
     "context": "Handwerksbetriebe konkurrieren um sehr wenige Bewerber. Viele gute Tischler:innen sind angestellt und suchen nicht aktiv. Ein langes Formular mit Lebenslauf-Upload ist der erste Grund, sich nicht zu bewerben.",
-    "objective": "Die Bewerbung so einfach machen wie ein paar Fragen am Telefon, damit auch passive Kandidat:innen den ersten Schritt gehen.",
+    "objective": "Die Bewerbung soll so einfach sein wie ein paar Fragen am Telefon, damit auch passive Kandidat:innen den ersten Schritt gehen.",
     "objectiveShort": "Die Hürde für passive Kandidat:innen senken.",
     "audience": [
         "Ausgebildete Tischler:innen zwischen 22 und 45, aktuell angestellt",
@@ -41,22 +41,22 @@
         {
             "step": "Anzeige",
             "title": "Social Ad",
-            "text": "Ein Hook zu den Arbeitszeiten, der das Scrollen unterbricht. Ausgespielt an Tischler:innen in der Region."
+            "text": "Ein Hook zu den Arbeitszeiten unterbricht das Scrollen. Ausgespielt wird die Anzeige an Tischler:innen in der Region."
         },
         {
             "step": "Landingpage",
             "title": "Landingpage",
-            "text": "Headline, drei Belege, Vorteile und ein Ablauf in drei Schritten."
+            "text": "Auf Headline und drei Belege folgen die Vorteile und ein Ablauf in drei Schritten."
         },
         {
             "step": "Bewerbung",
             "title": "Formular in 4 Schritten",
-            "text": "Ausbildung, Erfahrung, Starttermin und Kontakt. Eine Frage pro Screen."
+            "text": "Abgefragt werden Ausbildung, Erfahrung, Starttermin und Kontakt, mit einer Frage pro Screen."
         },
         {
             "step": "Danke",
             "title": "Bestätigung",
-            "text": "Klarer nächster Schritt (Anruf innerhalb von zwei Werktagen), um Unsicherheit zu nehmen."
+            "text": "Ein klarer nächster Schritt (Anruf innerhalb von zwei Werktagen) nimmt die Unsicherheit."
         }
     ],
     "copy": {
@@ -89,8 +89,8 @@
             }
         ],
         "typography": "Eine kräftige Sans-Serif mit eng gesetzten Headlines, praktisch und selbstbewusst.",
-        "imagery": "Holzmaserung statt Stockfotos. In einem echten Projekt: authentische Fotos aus Werkstatt und Team.",
-        "layout": "Mobile first, große Touch-Flächen und ein fixierter Bewerben-Button auf kleinen Bildschirmen."
+        "imagery": "Holzmaserung ersetzt Stockfotos. In einem echten Projekt kämen authentische Fotos aus Werkstatt und Team zum Einsatz.",
+        "layout": "Mobile first mit großen Touch-Flächen und einem fixierten Bewerben-Button auf kleinen Bildschirmen."
     },
     "ctaStructure": [
         {
@@ -124,7 +124,7 @@
         },
         {
             "title": "Bewirbt sich mit vier Taps",
-            "text": "Eine Frage pro Screen, ein Fortschrittsbalken und kein Upload. Erledigt auf dem Sofa."
+            "text": "Eine Frage pro Screen, ein Fortschrittsbalken und kein Upload. Das lässt sich bequem vom Sofa aus erledigen."
         },
         {
             "title": "Weiß, was als Nächstes passiert",

@@ -5,7 +5,7 @@
         "Social",
         "Marke"
     ],
-    "description": "Ein erklärendes Instagram-Karussell, das eine Arbeitsmethode teilt statt eines Versprechens.",
+    "description": "Ein erklärendes Instagram-Karussell, das statt eines Versprechens eine Arbeitsmethode teilt.",
     "year": "2026",
     "client": "Lukas Ude",
     "services": [
@@ -25,12 +25,12 @@
         "src": "slide-1-cover.jpg",
         "alt": "Karussell-Cover: „3 Fragen vor jedem Funnel“ auf Dunkelgrün"
     },
-    "objective": "Expertise über eine nützliche Methode zeigen. Content, den Menschen speichern und teilen.",
+    "objective": "Expertise über eine nützliche Methode zeigen und Content schaffen, den Menschen speichern und teilen.",
     "insight": "Die meisten Funnels scheitern vor der ersten Textzeile: Unklar ist, zu welcher Entscheidung sie führen sollen.",
     "approach": [
-        "Cover mit klarem Nutzenversprechen",
-        "Eine Frage pro Slide, ein Satz Erklärung",
-        "Abwechselnd dunkle und helle Slides wie im Rhythmus der Website"
+        "Das Cover formuliert ein klares Nutzenversprechen.",
+        "Jede Slide stellt eine Frage und erklärt sie in einem Satz.",
+        "Dunkle und helle Slides wechseln sich im selben Rhythmus ab wie auf der Website."
     ],
     "ads": [
         {

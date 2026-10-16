@@ -5,7 +5,7 @@
         "Recruiting",
         "Performance"
     ],
-    "description": "Zwei Recruiting-Varianten für Story und Feed: Werkstatt-Atmosphäre gegen farbintensive Direktansprache.",
+    "description": "Zwei Recruiting-Varianten für Story und Feed, in denen Werkstatt-Atmosphäre gegen eine farbintensive Direktansprache antritt.",
     "year": "2026",
     "client": "Autohaus Test GmbH (Demo-Kampagne)",
     "services": [
@@ -27,10 +27,10 @@
     "objective": "KFZ-Mechatroniker:innen für eine Werkstatt gewinnen und zwei Ansprachen gegeneinander testen.",
     "insight": "Fachkräfte wollen zuerst wissen, was sie konkret bekommen: Gehalt, Urlaub, Wechselprämie.",
     "approach": [
-        "Variante 1: Werkstatt-Situation, ruhig, Gehalt hervorgehoben",
-        "Variante 2: Kräftiges Blau, direkte Headline, Werkzeuge als Bildrahmen",
-        "Gleicher Call-to-Action für einen sauberen Vergleich",
-        "Hinweis: Unternehmen, Gehalt und Benefits sind illustrative Demo-Angaben"
+        "Variante 1 zeigt eine ruhige Werkstattsituation und hebt das Gehalt hervor.",
+        "Variante 2 setzt auf kräftiges Blau, eine direkte Headline und Werkzeuge als Bildrahmen.",
+        "Beide nutzen denselben Call-to-Action, damit der Vergleich sauber bleibt.",
+        "Hinweis: Unternehmen, Gehalt und Benefits sind illustrative Demo-Angaben."
     ],
     "ads": [
         {
@@ -44,7 +44,7 @@
             "primaryText": "1.000 € Wechselprämie, 30 Tage Urlaub, 48.000 € Jahresgehalt.\nKFZ-Mechatroniker (m/w/d) in Musterstadt.\n(Demo-Kampagne, keine reale Stelle.)",
             "headline": "KFZ-Mechatroniker (m/w/d) gesucht",
             "cta": "Jetzt bewerben",
-            "rationale": "Emotionale Werkstattszene, die Vorteile als klare Liste."
+            "rationale": "Eine emotionale Werkstattszene, ergänzt um die Vorteile als klare Liste."
         },
         {
             "label": "Schrauberprofi (Feed)",
@@ -57,7 +57,7 @@
             "primaryText": "Du kennst jedes Auto von innen? Dann suchen wir dich.\n(Demo-Kampagne, keine reale Stelle.)",
             "headline": "Schrauberprofi in Musterstadt gesucht",
             "cta": "Jetzt bewerben",
-            "rationale": "Hohe Farbintensität und direkte Ansprache für maximale Aufmerksamkeit im Feed."
+            "rationale": "Hohe Farbintensität und eine direkte Ansprache sorgen für maximale Aufmerksamkeit im Feed."
         }
     ],
     "hooks": [
