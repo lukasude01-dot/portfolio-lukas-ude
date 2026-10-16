@@ -4,7 +4,7 @@
     "category": [
         "Automatisierung"
     ],
-    "description": "Vom abgeschickten Formular bis zum vorbereiteten Erstgespräch – ohne dass etwas verloren geht.",
+    "description": "Vom abgeschickten Formular bis zum vorbereiteten Erstgespräch, ohne dass etwas verloren geht.",
     "year": "2026",
     "featured": true,
     "concept": true,
@@ -13,7 +13,7 @@
         {
             "label": "Erfassen",
             "role": "System",
-            "text": "Das Funnel-Formular schickt die Antworten in ein zentrales Postfach oder CRM – geprüft und einheitlich strukturiert."
+            "text": "Das Funnel-Formular schickt die Antworten in ein zentrales Postfach oder CRM. Dort liegen sie geprüft und einheitlich strukturiert."
         },
         {
             "label": "Zusammenfassen",
@@ -33,7 +33,7 @@
         {
             "label": "Nachfassen",
             "role": "System",
-            "text": "Bestätigung und Erinnerung gehen pünktlich raus – persönlich, nicht generisch."
+            "text": "Bestätigung und Erinnerung gehen pünktlich und persönlich raus."
         }
     ],
     "outputs": [

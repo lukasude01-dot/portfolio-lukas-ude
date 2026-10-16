@@ -2,7 +2,7 @@
  * CAREER RENDERERS  (About page: timeline, certificates, skills)
  *
  * PURPOSE:
- * - "timeline":      MY JOURNEY – chronological CV timeline
+ * - "timeline":      MY JOURNEY, chronological CV timeline
  * - "certificates":  list of certificates
  * - "skills":        SKILLS grid
  *
@@ -38,7 +38,7 @@ export const careerRenderers = {
                     <span class="timeline__node" aria-hidden="true"></span>
                     <div class="timeline__content">
                         <h3 class="timeline__title">${withPlaceholders(entry.title)}</h3>
-                        ${entry.organisation ? html`<p class="timeline__organisation">${withPlaceholders(entry.organisation)}${entry.location ? html` · ${withPlaceholders(entry.location)}` : ""}</p>` : ""}
+                        ${entry.organisation ? html`<p class="timeline__organisation">${withPlaceholders(entry.organisation)}${entry.location ? html`, ${withPlaceholders(entry.location)}` : ""}</p>` : ""}
                         ${entry.description ? html`<p class="timeline__text">${withPlaceholders(entry.description)}</p>` : ""}
                         ${entry.tags?.length ? html`<p class="timeline__tags">${entry.tags.map((tag) => html`<span class="badge">${tag}</span>`)}</p>` : ""}
                     </div>

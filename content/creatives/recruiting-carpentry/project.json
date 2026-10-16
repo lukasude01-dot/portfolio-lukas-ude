@@ -27,7 +27,7 @@
         "alt": "Recruiting-Anzeige: „Feierabend um 16 Uhr. Wirklich.“ auf Nussbaum-Hintergrund"
     },
     "objective": "Angestellte Tischler:innen erreichen, die nicht aktiv suchen, und sie zu einem 60-Sekunden-Bewerbungsfunnel führen.",
-    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf das eine, was ihr aktueller Job falsch macht – oft Planbarkeit und Arbeitszeiten.",
+    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf das eine, was ihr aktueller Job falsch macht. Oft sind das Planbarkeit und Arbeitszeiten.",
     "approach": [
         "Jede Variante testet EIN Motiv: Arbeitszeit, Qualität der Arbeit, Aufwand der Bewerbung",
         "Typografische Creatives: im vollen Feed in einer Sekunde lesbar",
@@ -43,8 +43,8 @@
                 "alt": "Anzeigen-Creative: „Feierabend um 16 Uhr. Wirklich.“"
             },
             "hook": "Feierabend um 16 Uhr. Wirklich.",
-            "primaryText": "Kein „mal eben noch“ um 18 Uhr.\nBei Nordholz ist Montag bis Donnerstag um 16 Uhr Schluss – und freitags um 13 Uhr.\nWir suchen Tischler:innen, die gutes Handwerk mit einem planbaren Leben verbinden wollen.",
-            "headline": "Tischler:in (m/w/d) – in 60 Sek. bewerben",
+            "primaryText": "Kein „mal eben noch“ um 18 Uhr.\nBei Nordholz ist Montag bis Donnerstag um 16 Uhr Schluss und freitags um 13 Uhr.\nWir suchen Tischler:innen, die gutes Handwerk mit einem planbaren Leben verbinden wollen.",
+            "headline": "Als Tischler:in (m/w/d) in 60 Sek. bewerben",
             "description": "Ohne Lebenslauf",
             "cta": "Jetzt bewerben",
             "rationale": "Startet mit dem stärksten konkreten Vorteil. „Wirklich.“ nimmt den Zweifel vorweg."
@@ -57,11 +57,11 @@
                 "alt": "Anzeigen-Creative: „Massivholz. Statt Spanplatte am Fließband.“"
             },
             "hook": "Massivholz statt Spanplatte am Fließband.",
-            "primaryText": "Du hast Tischler:in gelernt, um Möbel zu bauen – nicht, um Teile zu sortieren.\nBei uns betreust du Projekte vom Aufmaß bis zur Montage.",
+            "primaryText": "Du hast Tischler:in gelernt, um Möbel zu bauen und nicht, um Teile zu sortieren.\nBei uns betreust du Projekte vom Aufmaß bis zur Montage.",
             "headline": "Eigene Projekte. Kleines Team.",
             "description": "Tischlerei Nordholz",
             "cta": "Mehr erfahren",
-            "rationale": "Spricht den Berufsstolz an – für alle, die von industrieller Fertigung frustriert sind."
+            "rationale": "Spricht den Berufsstolz aller an, die von industrieller Fertigung frustriert sind."
         },
         {
             "label": "Aufwand der Bewerbung",
@@ -86,7 +86,7 @@
         "Freitag, 13 Uhr: Werkstatt zu."
     ],
     "headlines": [
-        "Tischler:in (m/w/d) – in 60 Sek. bewerben",
+        "Als Tischler:in (m/w/d) in 60 Sek. bewerben",
         "Eigene Projekte. Kleines Team.",
         "Bewerbung ohne Papierkram"
     ]

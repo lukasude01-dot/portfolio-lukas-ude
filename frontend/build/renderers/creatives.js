@@ -46,7 +46,7 @@ export function adMockup(ad, brand = {}, { sizes = "(min-width: 900px) 30vw, 90v
                         <span class="ad-mockup__avatar" aria-hidden="true">${brand.initials || initials(brand.name)}</span>
                         <div class="ad-mockup__identity">
                             <p class="ad-mockup__brand">${brand.name}</p>
-                            <p class="ad-mockup__sponsored">Gesponsert · Mockup</p>
+                            <p class="ad-mockup__sponsored">Gesponsert (Mockup)</p>
                         </div>
                         <span class="ad-mockup__dots" aria-hidden="true">···</span>
                     </div>
@@ -62,7 +62,7 @@ export function adMockup(ad, brand = {}, { sizes = "(min-width: 900px) 30vw, 90v
                         </div>
                         <span class="ad-mockup__cta">${ad.cta}</span>
                     </div>
-                    <figcaption class="ad-mockup__label">Portfolio-Mockup – keine echte Anzeige</figcaption>
+                    <figcaption class="ad-mockup__label">Portfolio-Mockup, keine echte Anzeige</figcaption>
                 </figure>`;
 }
 
@@ -109,11 +109,11 @@ export const creativeRenderers = {
                     <div class="creative-card__view creative-card__view--combined">${adMockup(ad, project.brand, { clampText: true })}</div>
 
                     <div class="creative-card__info">
-                        <p class="label">${project.categories.join(" · ")}</p>
+                        <p class="label">${project.categories.join(", ")}</p>
                         <h2 class="creative-card__title"><a href="${project.url}">${project.title}</a></h2>
                         <p class="creative-card__meta text-small text-muted">
                             ${project.ads.length} ${project.ads.length === 1 ? "Variante" : "Varianten"}
-                            ${projectBadges(project).map((badge) => html` · ${badge}`)}
+                            ${projectBadges(project).map((badge) => html`, ${badge}`)}
                         </p>
                         <a class="text-link" href="${project.url}" aria-label="Case öffnen: ${project.title}">Case öffnen →</a>
                     </div>

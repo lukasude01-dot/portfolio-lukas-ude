@@ -56,7 +56,7 @@ export const funnelRenderers = {
                         ${devicePreview(project, { interactiveMobile: false })}
                     </div>
                     <div class="funnel-item__content">
-                        <p class="eyebrow">${String(index + 1).padStart(2, "0")} · ${project.categories.join(" · ")}</p>
+                        <p class="eyebrow"><span>${String(index + 1).padStart(2, "0")}</span><span>${project.categories.join(", ")}</span></p>
                         <h2 class="funnel-item__title heading-2">${project.title}</h2>
                         <p class="text-lead">${project.description}</p>
                         <dl class="fact-list">

@@ -86,7 +86,9 @@ h3,
 
 
 /* EYEBROW - small uppercase label above headlines,
-   e.g. "MARKETING · AI · SYSTEMS" */
+   e.g. "MARKETING  KI  SYSTEME".
+   Several <span> parts inside one eyebrow are separated by the
+   gap below (no dashes or dots needed). */
 
 .eyebrow {
     display: inline-flex;
@@ -100,13 +102,21 @@ h3,
     color: var(--color-accent);
 }
 
-/* Optional short line in front of the eyebrow text */
-.eyebrow--line::before {
-    content: "";
-    width: 2.25rem;
-    height: 1px;
-    background-color: currentColor;
-    opacity: 0.7;
+/* Extra space between several parts, e.g. "AUTOMOTIVE   KONZEPTARBEIT" */
+.eyebrow > span + span {
+    margin-left: 0.6em;
+}
+
+/* Wider spacing between the parts, e.g. the hero descriptor */
+.eyebrow--spaced {
+    flex-wrap: wrap;
+    gap: 0.5em 1.75em;
+}
+
+/* Year next to a label, e.g. on design cards */
+.meta-year {
+    margin-left: 1.25em;
+    opacity: 0.75;
 }
 
 

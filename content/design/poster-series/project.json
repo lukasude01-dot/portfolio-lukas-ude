@@ -1,11 +1,11 @@
 {
     "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design.",
-    "title": "Posterserie – Rooted in Ideas",
+    "title": "Posterserie Rooted in Ideas",
     "category": [
         "Print",
         "Branding"
     ],
-    "description": "Drei Poster, die den Markenslogan und den Prozess in fünf Schritten in Print übersetzen – abwechselnd dunkel, hell und grün.",
+    "description": "Drei Poster, die den Markenslogan und den Prozess in fünf Schritten in Print übersetzen. Sie wechseln zwischen dunkel, hell und grün.",
     "year": "2026",
     "client": "Lukas Ude",
     "services": [
@@ -23,25 +23,25 @@
     },
     "body": [
         "Jedes Poster trägt einen Teil der Marke: den Slogan in zwei Hälften und den Prozess von der Idee bis zur Umsetzung.",
-        "Die Layouts folgen dem Rhythmus der Website – dunkel, hell, grün – und nutzen die Bildsprache des CI: warmes Licht, tiefe Schatten, Natur."
+        "Die Layouts folgen dem Hell-Dunkel-Rhythmus der Website und nutzen die Bildsprache des CI: warmes Licht, tiefe Schatten, Natur."
     ],
     "images": [
         {
             "src": "poster-water.jpg",
             "alt": "Poster 01: Fluss im Sonnenuntergang, „Rooted in ideas.“",
-            "caption": "01 – Rooted in ideas.",
+            "caption": "01 Rooted in ideas.",
             "size": "half"
         },
         {
             "src": "poster-forest.jpg",
             "alt": "Poster 02: nebliger Wald auf Elfenbein, „Built for growth.“",
-            "caption": "02 – Built for growth.",
+            "caption": "02 Built for growth.",
             "size": "half"
         },
         {
             "src": "poster-system.jpg",
             "alt": "Poster 03: Dunkelgrün mit den fünf Prozessschritten und „Von der Idee zum System.“",
-            "caption": "03 – Von der Idee zum System.",
+            "caption": "03 Von der Idee zum System.",
             "size": "half"
         }
     ]

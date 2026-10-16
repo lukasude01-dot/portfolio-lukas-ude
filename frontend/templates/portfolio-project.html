@@ -8,7 +8,7 @@
 
              STRUCTURE:
              A. Project header (title, category, status, introduction)
-             B. Main motif – complete and uncropped
+             B. Main motif, complete and uncropped
              C. Aufgabenstellung / Gestalterischer Ansatz / Leistungen
              D. Further motifs (only if the project has several)
              E. Next project
@@ -29,7 +29,7 @@
         <section class="portfolio-project-hero theme-dark" aria-labelledby="project-heading">
             <div class="container portfolio-project-hero__inner">
 <!-- @render breadcrumbs -->
-                <p class="eyebrow eyebrow--line" data-reveal>{{ project.categories.0 }} · {{ project.projectStatus }}</p>
+                <p class="eyebrow eyebrow--line" data-reveal><span>{{ project.categories.0 }}</span><span>{{ project.projectStatus }}</span></p>
                 <h1 class="portfolio-project-hero__title heading-1" id="project-heading" data-reveal data-reveal-delay="1">{{ project.title }}</h1>
                 <p class="portfolio-project-hero__intro text-lead" data-reveal data-reveal-delay="2">{{ project.description }}</p>
                 <div data-reveal data-reveal-delay="3">

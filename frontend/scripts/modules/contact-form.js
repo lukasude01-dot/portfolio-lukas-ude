@@ -25,7 +25,7 @@ import { validateContact } from "../shared/contact-schema.js";
 // SAFE TO EDIT: messages shown to visitors
 const MESSAGES = {
     sending: "Wird gesendet …",
-    successTitle: "Danke – deine Nachricht ist angekommen.",
+    successTitle: "Danke, deine Nachricht ist angekommen.",
     successText: "Ich melde mich so bald wie möglich persönlich bei dir.",
     errorTitle: "Deine Nachricht konnte nicht gesendet werden.",
     errorText: "Bitte versuche es gleich noch einmal.",

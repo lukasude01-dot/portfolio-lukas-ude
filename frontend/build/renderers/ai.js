@@ -25,7 +25,7 @@ export const aiRenderers = {
                 ${content.ai.map((workflow) => html`
                 <article class="workflow" id="workflow-${workflow.slug}">
                     <header class="workflow__header">
-                        <p class="eyebrow">${workflow.categories.join(" · ")} · Blaupause</p>
+                        <p class="eyebrow"><span>${workflow.categories.join(", ")}</span><span>Blaupause</span></p>
                         <h3 class="workflow__title heading-3">${workflow.title}</h3>
                         <p class="text-muted">${workflow.description}</p>
                     </header>

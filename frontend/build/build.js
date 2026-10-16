@@ -108,7 +108,7 @@ async function loadSiteConfig() {
 /** Builds the `page` object that templates can use as {{ page.* }} */
 function createPageData(site, data, defaults) {
     const page = { ...defaults, ...data };
-    page.fullTitle = page.title === site.name || !page.title ? `${site.name} – ${site.tagline}` : `${page.title} – ${site.name}`;
+    page.fullTitle = page.title === site.name || !page.title ? `${site.name} | ${site.tagline}` : `${page.title} | ${site.name}`;
     page.description = page.description || site.description;
     page.canonical = absoluteUrl(site, page.path);
     page.ogImageUrl = absoluteUrl(site, page.ogImage || site.ogImage);

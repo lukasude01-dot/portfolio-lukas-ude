@@ -2,12 +2,12 @@
     "_help": "MY JOURNEY (About page). One object per station, newest first. Replace every [ADD ...] placeholder with your real information. Delete entries you do not need. 'type' is a short label such as Experience, Education, Project, Certificate. 'tags' are optional small badges.",
     "entries": [
         {
-            "period": "[ADD DATUM] – heute",
+            "period": "[ADD DATUM] bis heute",
             "type": "Berufserfahrung",
             "title": "[ADD POSITION]",
             "organisation": "[ADD ARBEITGEBER]",
             "location": "[ADD ORT]",
-            "description": "[ADD BESCHREIBUNG – wofür du verantwortlich bist, z. B. Kampagnen, Funnels, Creatives, Automatisierung]",
+            "description": "[ADD BESCHREIBUNG: wofür du verantwortlich bist, z. B. Kampagnen, Funnels, Creatives, Automatisierung]",
             "tags": [
                 "Marketing",
                 "Funnels",
@@ -32,7 +32,7 @@
             "title": "[ADD PROJEKT]",
             "organisation": "[ADD KUNDE ODER KONTEXT]",
             "location": "",
-            "description": "[ADD BESCHREIBUNG – ein Projekt, das deine Arbeit mit KI oder Automatisierung geprägt hat]",
+            "description": "[ADD BESCHREIBUNG: ein Projekt, das deine Arbeit mit KI oder Automatisierung geprägt hat]",
             "tags": [
                 "KI",
                 "Automatisierung"

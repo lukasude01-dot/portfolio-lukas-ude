@@ -1,7 +1,7 @@
 {
     "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design.",
     "seoTitle": "Markenanwendungen",
-    "title": "Markenanwendungen – Lukas Ude",
+    "title": "Markenanwendungen für Lukas Ude",
     "category": [
         "Branding",
         "Print"
@@ -41,13 +41,13 @@
         {
             "src": "application-cap.jpg",
             "alt": "Schwarze Cap mit gesticktem Logo",
-            "caption": "Merchandise – Cap.",
+            "caption": "Cap als Merchandise.",
             "size": "half"
         },
         {
             "src": "application-shirt.jpg",
             "alt": "Schwarzes T-Shirt mit kleinem Brustlogo",
-            "caption": "Merchandise – Shirt.",
+            "caption": "Shirt als Merchandise.",
             "size": "half"
         }
     ]

@@ -4,7 +4,7 @@
     "category": [
         "Recruiting"
     ],
-    "description": "Ein Bewerbungs-Funnel in 60 Sekunden, der Lebenslauf und Anschreiben durch vier einfache Fragen ersetzt – gebaut fürs Handwerk.",
+    "description": "Ein Bewerbungs-Funnel fürs Handwerk, der Lebenslauf und Anschreiben durch vier einfache Fragen ersetzt. Die Bewerbung dauert 60 Sekunden.",
     "year": "2026",
     "client": "Tischlerei Nordholz (fiktive Marke)",
     "services": [
@@ -23,7 +23,7 @@
         "src": "cover.jpg",
         "alt": "Recruiting-Landingpage mit der Headline „Feierabend um 16 Uhr“ auf warmem Nussbaum-Hintergrund"
     },
-    "context": "Handwerksbetriebe konkurrieren um sehr wenige Bewerber. Viele gute Tischler:innen sind angestellt und suchen nicht aktiv – ein langes Formular mit Lebenslauf-Upload ist der erste Grund, sich nicht zu bewerben.",
+    "context": "Handwerksbetriebe konkurrieren um sehr wenige Bewerber. Viele gute Tischler:innen sind angestellt und suchen nicht aktiv. Ein langes Formular mit Lebenslauf-Upload ist der erste Grund, sich nicht zu bewerben.",
     "objective": "Die Bewerbung so einfach machen wie ein paar Fragen am Telefon, damit auch passive Kandidat:innen den ersten Schritt gehen.",
     "objectiveShort": "Die Hürde für passive Kandidat:innen senken.",
     "audience": [
@@ -34,14 +34,14 @@
     "strategy": [
         "Mit dem stärksten echten Vorteil (planbare Arbeitszeiten) starten statt mit allgemeinen Arbeitgeber-Floskeln",
         "Den Lebenslauf weglassen: vier Fragen reichen für ein erstes Telefonat",
-        "Einwände früh beantworten (Gehalt, Quereinstieg, Ablauf) – in einem kurzen FAQ",
+        "Einwände wie Gehalt, Quereinstieg und Ablauf früh in einem kurzen FAQ beantworten",
         "Auf jedem Screen genau eine Handlung: bewerben"
     ],
     "structure": [
         {
             "step": "Anzeige",
             "title": "Social Ad",
-            "text": "Ein Hook zu den Arbeitszeiten, der das Scrollen unterbricht – ausgespielt an Tischler:innen in der Region."
+            "text": "Ein Hook zu den Arbeitszeiten, der das Scrollen unterbricht. Ausgespielt an Tischler:innen in der Region."
         },
         {
             "step": "Landingpage",
@@ -51,7 +51,7 @@
         {
             "step": "Bewerbung",
             "title": "Formular in 4 Schritten",
-            "text": "Ausbildung, Erfahrung, Starttermin, Kontakt – eine Frage pro Screen."
+            "text": "Ausbildung, Erfahrung, Starttermin und Kontakt. Eine Frage pro Screen."
         },
         {
             "step": "Danke",
@@ -61,13 +61,13 @@
     ],
     "copy": {
         "headline": "Feierabend um 16 Uhr. Und Arbeit, die bleibt.",
-        "subheadline": "Bewirb dich in 60 Sekunden – ohne Lebenslauf, ohne Anschreiben.",
+        "subheadline": "Bewirb dich in 60 Sekunden. Ohne Lebenslauf und ohne Anschreiben.",
         "hooks": [
             "Feierabend um 16 Uhr. Wirklich.",
             "Massivholz statt Spanplatte am Fließband.",
-            "Bewerben in 60 Sekunden – ohne Lebenslauf."
+            "In 60 Sekunden bewerben, ganz ohne Lebenslauf."
         ],
-        "tone": "Direkt, respektvoll und konkret. Kurze Sätze, die Sprache der Werkstatt – kein HR-Jargon, keine Superlative."
+        "tone": "Direkt, respektvoll und konkret. Kurze Sätze in der Sprache der Werkstatt, ohne HR-Jargon und ohne Superlative."
     },
     "visual": {
         "palette": [
@@ -88,7 +88,7 @@
                 "hex": "#6B4630"
             }
         ],
-        "typography": "Eine kräftige Sans-Serif mit eng gesetzten Headlines – praktisch und selbstbewusst.",
+        "typography": "Eine kräftige Sans-Serif mit eng gesetzten Headlines, praktisch und selbstbewusst.",
         "imagery": "Holzmaserung statt Stockfotos. In einem echten Projekt: authentische Fotos aus Werkstatt und Team.",
         "layout": "Mobile first, große Touch-Flächen und ein fixierter Bewerben-Button auf kleinen Bildschirmen."
     },
@@ -101,7 +101,7 @@
         {
             "role": "Sekundär",
             "text": "So läuft's ab",
-            "where": "Hero – für alle, die erst mehr wissen wollen"
+            "where": "Im Hero für alle, die erst mehr wissen wollen"
         },
         {
             "role": "Formular",
@@ -112,7 +112,7 @@
     "journey": [
         {
             "title": "Sieht die Anzeige am Abend",
-            "text": "Der Hook zu den Arbeitszeiten trifft einen echten Frust – keine abstrakte Arbeitgebermarke."
+            "text": "Der Hook zu den Arbeitszeiten trifft einen echten Frust statt einer abstrakten Arbeitgebermarke."
         },
         {
             "title": "Landet auf der Seite",
@@ -124,7 +124,7 @@
         },
         {
             "title": "Bewirbt sich mit vier Taps",
-            "text": "Eine Frage pro Screen, Fortschrittsbalken, kein Upload – erledigt auf dem Sofa."
+            "text": "Eine Frage pro Screen, ein Fortschrittsbalken und kein Upload. Erledigt auf dem Sofa."
         },
         {
             "title": "Weiß, was als Nächstes passiert",

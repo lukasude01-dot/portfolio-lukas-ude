@@ -1,6 +1,6 @@
 {
     "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
-    "title": "Ford Ranger – Automotive Concept",
+    "title": "Ford Ranger Automotive Concept",
     "category": [
         "Automotive",
         "Advertising",
@@ -22,7 +22,7 @@
         "src": "ford-ranger.webp",
         "alt": "Anzeige mit großem orangefarbenem FORD-Schriftzug, weißem RANGER-Outline-Schriftzug, dunklem Ford Ranger Pick-up und dem Button „Mehr erfahren“"
     },
-    "task": "Ein Fahrzeug mit starker Präsenz als Anzeige inszenieren – als freie Studie zu Typografie, Bildaufbau und Farbkontrast, ohne Kundenauftrag.",
+    "task": "Ein Fahrzeug mit starker Präsenz als Anzeige inszenieren. Eine freie Studie zu Typografie, Bildaufbau und Farbkontrast ohne Kundenauftrag.",
     "approach": "Der Modellname wird selbst zum Bild: FORD als massive, orangefarbene Fläche, RANGER als ruhige weiße Kontur. Das Fahrzeug überlagert die Schrift gezielt, eine dunkle, strukturierte Fläche hält den Hintergrund zurück und lässt Orange und Weiß arbeiten. Der Call-to-Action bleibt klein und klar.",
     "images": [
         {

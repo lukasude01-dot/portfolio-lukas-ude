@@ -1,6 +1,6 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
-    "title": "Lukas Ude – Personal Branding Posts",
+    "title": "Lukas Ude Personal Branding Posts",
     "category": [
         "Marke",
         "Social"
@@ -24,8 +24,8 @@
         "src": "/media/portfolio/personal-branding/personal-branding-lukas.webp",
         "alt": "Markenmotiv mit Portrait von Lukas Ude und vertikalem LUKAS-Schriftzug"
     },
-    "objective": "Die eigene Marke im Feed wiedererkennbar machen – mit Gesicht, Haltung und klarer Bildsprache.",
-    "insight": "Eine Personenmarke braucht das Gesicht im Mittelpunkt – und einen roten Faden, der jedes Motiv verbindet.",
+    "objective": "Die eigene Marke im Feed wiedererkennbar machen, mit Gesicht, Haltung und klarer Bildsprache.",
+    "insight": "Eine Personenmarke braucht das Gesicht im Mittelpunkt und einen roten Faden, der jedes Motiv verbindet.",
     "approach": [
         "Logo, Slogan und Editorial-Typografie als gemeinsame Basis",
         "Natur als zweite Ebene: Wald, Nebel, Weg",
@@ -40,7 +40,7 @@
                 "alt": "Markenmotiv: Portrait von Lukas Ude, vertikaler LUKAS-Schriftzug und Waldtextur"
             },
             "hook": "Rooted in ideas. Built for growth.",
-            "primaryText": "Marketing, Design und Automation – mit Wurzeln in guten Ideen.",
+            "primaryText": "Marketing, Design und Automation mit Wurzeln in guten Ideen.",
             "headline": "Lukas Ude",
             "cta": "Mehr erfahren"
         },

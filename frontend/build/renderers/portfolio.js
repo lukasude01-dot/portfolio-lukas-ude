@@ -61,7 +61,7 @@ export const portfolioRenderers = {
                             <p class="portfolio-card__index label">${String(index + 1).padStart(2, "0")}</p>
                             <div class="portfolio-card__text">
                                 <h2 class="portfolio-card__title">${project.title}</h2>
-                                <p class="portfolio-card__category">${project.categories.join(" · ")}</p>
+                                <p class="portfolio-card__category">${project.categories.join(", ")}</p>
                             </div>
                             <p class="portfolio-card__meta">
                                 ${project.projectStatus ? html`<span class="badge">${project.projectStatus}</span>` : ""}
@@ -148,7 +148,7 @@ export const portfolioRenderers = {
                     <span class="portfolio-next__text">
                         <span class="eyebrow">Nächstes Projekt ansehen</span>
                         <span class="portfolio-next__title heading-2">${next.title}</span>
-                        <span class="portfolio-next__category text-muted">${next.categories.join(" · ")}</span>
+                        <span class="portfolio-next__category text-muted">${next.categories.join(", ")}</span>
                     </span>
                     <span class="portfolio-next__arrow" aria-hidden="true">→</span>
                 </a>

@@ -5,7 +5,7 @@
  * Builds the repeating link lists from /frontend/config/site.js.
  * Used in /frontend/components/navigation.html and footer.html.
  *
- * To change WHICH links appear, edit site.js – not this file.
+ * To change WHICH links appear, edit site.js, not this file.
  * Edit this file only to change the HTML structure of the lists.
  */
 
@@ -25,6 +25,10 @@ function currentAttribute(item, page) {
 const visibleSocial = (site) => site.social.filter((profile) => profile.url);
 
 export const siteRenderers = {
+
+    // DESCRIPTOR (e.g. "Marketing, KI, Systeme" from site.js)
+    // Each part becomes its own <span>; CSS adds the spacing.
+    descriptor: ({ site }) => html`${site.descriptor.split(",").map((part) => html`<span>${part.trim()}</span>`)}`,
 
     // NAVIGATION - DESKTOP LINKS
     "navigation-links": ({ site, page }) => html`

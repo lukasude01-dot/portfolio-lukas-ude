@@ -20,7 +20,7 @@
         <div class="site-header__inner container">
 
             <!-- EDIT: LOGO (mark + wordmark) -->
-            <a class="brand-logo" href="/" aria-label="{{ site.name }} – Startseite">
+            <a class="brand-logo" href="/" aria-label="Startseite {{ site.name }}">
                 <img class="brand-logo__mark brand-logo__mark--ivory" src="/assets/brand/logo-mark-ivory.svg" alt="" width="40" height="40">
                 <img class="brand-logo__mark brand-logo__mark--obsidian" src="/assets/brand/logo-mark-obsidian.svg" alt="" width="40" height="40">
                 <span class="brand-logo__divider" aria-hidden="true"></span>
@@ -44,7 +44,7 @@
             <nav class="mobile-menu__nav container" aria-label="Mobile Navigation">
                 <!-- @render navigation-links-mobile -->
             </nav>
-            <p class="mobile-menu__footer container eyebrow">{{ site.descriptor }}</p>
+            <p class="mobile-menu__footer container eyebrow eyebrow--spaced"><!-- @render descriptor --></p>
         </div>
     </header>
     <!-- ================= END NAVIGATION ================= -->

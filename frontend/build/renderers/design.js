@@ -49,7 +49,7 @@ export const designRenderers = {
                             <img src="${project.thumbnail.src}" alt="${project.thumbnail.alt}" sizes="${TILE_SIZES[layout]}" data-responsive>
                         </div>
                         <div class="design-tile__overlay">
-                            <p class="label">${project.categories.join(" · ")} · ${project.year}</p>
+                            <p class="label">${project.categories.join(", ")}<span class="meta-year">${project.year}</span></p>
                             <h2 class="design-tile__title">${project.title}</h2>
                             <p class="design-tile__badges">${projectBadges(project).map((badge) => html`<span class="badge">${badge}</span>`)}</p>
                         </div>

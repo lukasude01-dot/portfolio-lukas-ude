@@ -1,12 +1,12 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
     "seoTitle": "Markenposts",
-    "title": "Markenposts – Lukas Ude",
+    "title": "Markenposts für Lukas Ude",
     "category": [
         "Marke",
         "Social"
     ],
-    "description": "Eine ruhige, editoriale Post-Serie für die Marke Lukas Ude – gebaut aus der Bildsprache und Typografie des CI.",
+    "description": "Eine ruhige, editoriale Post-Serie für die Marke Lukas Ude, gebaut aus der Bildsprache und Typografie des CI.",
     "year": "2026",
     "client": "Lukas Ude",
     "services": [
@@ -26,12 +26,12 @@
         "src": "post-idea-to-system.jpg",
         "alt": "Markenpost: „Von der Idee zum System.“ über einem Fluss im Sonnenuntergang"
     },
-    "objective": "Die Markenidee im Feed sichtbar machen: Natur, Handwerk und Systeme – ruhig statt laut.",
+    "objective": "Die Markenidee im Feed sichtbar machen: Natur, Handwerk und Systeme. Ruhig statt laut.",
     "insight": "In einem Feed voller Hype fällt Zurückhaltung auf. Wenige Worte, starke Typografie, echte Atmosphäre.",
     "approach": [
         "CI-Typografie: Cormorant Garamond für Statements, Manrope für Details",
         "Bilder aus der CI-Bildsprache: warmes Licht, tiefe Schatten, Natur",
-        "Ein Gedanke pro Post – kurz genug zum Lesen beim Scrollen"
+        "Ein Gedanke pro Post, kurz genug zum Lesen beim Scrollen"
     ],
     "ads": [
         {
@@ -43,7 +43,7 @@
             },
             "hook": "Von der Idee zum System.",
             "primaryText": "Jede gute Kampagne beginnt mit einer Idee.\nWachsen kann sie erst mit einem System dahinter.",
-            "headline": "Marketing · KI · Systeme",
+            "headline": "Marketing, KI, Systeme",
             "cta": "Mehr erfahren"
         },
         {
@@ -77,7 +77,7 @@
         "Rooted in ideas. Built for growth."
     ],
     "headlines": [
-        "Marketing · KI · Systeme",
+        "Marketing, KI, Systeme",
         "Notizen zum Marketing"
     ]
 }

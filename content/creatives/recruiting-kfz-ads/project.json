@@ -1,6 +1,6 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
-    "title": "KFZ-Mechatroniker – Recruiting Ads",
+    "title": "KFZ-Mechatroniker Recruiting Ads",
     "category": [
         "Recruiting",
         "Performance"
@@ -41,7 +41,7 @@
                 "alt": "Recruiting-Anzeige im Story-Format: KFZ-Mechatroniker am Motor, Headline „Schraube an deiner Zukunft!“, Vorteile, Jahresgehalt und Button „Jetzt bewerben!“"
             },
             "hook": "Schraube an deiner Zukunft!",
-            "primaryText": "1.000 € Wechselprämie, 30 Tage Urlaub, 48.000 € Jahresgehalt.\nKFZ-Mechatroniker (m/w/d) in Musterstadt.\n(Demo-Kampagne – keine reale Stelle.)",
+            "primaryText": "1.000 € Wechselprämie, 30 Tage Urlaub, 48.000 € Jahresgehalt.\nKFZ-Mechatroniker (m/w/d) in Musterstadt.\n(Demo-Kampagne, keine reale Stelle.)",
             "headline": "KFZ-Mechatroniker (m/w/d) gesucht",
             "cta": "Jetzt bewerben",
             "rationale": "Emotionale Werkstattszene, die Vorteile als klare Liste."
@@ -54,8 +54,8 @@
                 "alt": "Recruiting-Anzeige im Quadrat: KFZ-Mechatroniker vor blauem Hintergrund, Headline „Wir suchen unseren Schrauberprofi!“ und Button „Jetzt bewerben!“"
             },
             "hook": "Wir suchen unseren Schrauberprofi!",
-            "primaryText": "Du kennst jedes Auto von innen? Dann suchen wir dich.\n(Demo-Kampagne – keine reale Stelle.)",
-            "headline": "Schrauberprofi gesucht – Musterstadt",
+            "primaryText": "Du kennst jedes Auto von innen? Dann suchen wir dich.\n(Demo-Kampagne, keine reale Stelle.)",
+            "headline": "Schrauberprofi in Musterstadt gesucht",
             "cta": "Jetzt bewerben",
             "rationale": "Hohe Farbintensität und direkte Ansprache für maximale Aufmerksamkeit im Feed."
         }
@@ -66,7 +66,7 @@
     ],
     "headlines": [
         "KFZ-Mechatroniker (m/w/d) gesucht",
-        "Schrauberprofi gesucht – Musterstadt"
+        "Schrauberprofi in Musterstadt gesucht"
     ],
     "projectStatus": "Demo-Kampagne"
 }

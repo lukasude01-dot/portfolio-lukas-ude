@@ -1,6 +1,6 @@
 {
     "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
-    "title": "ALLBARK – Fashion Sale Campaign",
+    "title": "ALLBARK Fashion Sale Campaign",
     "category": [
         "Fashion",
         "E-Commerce",

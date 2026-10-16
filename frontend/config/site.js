@@ -28,16 +28,16 @@ export const siteConfig = {
 
     name: "Lukas Ude",
 
-    // EDIT: TAGLINE (logo slogan – deliberately stays English)
+    // EDIT: TAGLINE (logo slogan, deliberately stays English)
     tagline: "Rooted in ideas. Built for growth.",
 
     // EDIT: DESCRIPTOR (the small line above headlines)
-    descriptor: "Marketing · KI · Systeme",
+    descriptor: "Marketing, KI, Systeme",
 
     // EDIT: DEFAULT SEO DESCRIPTION (used when a page has none)
     description:
         "Lukas Ude verbindet kreatives Marketing, Copywriting, Funnels und Design mit " +
-        "KI-gestützten Workflows und klaren Systemen – von der ersten Idee bis zum laufenden Prozess.",
+        "KI-gestützten Workflows und klaren Systemen, von der ersten Idee bis zum laufenden Prozess.",
 
 
     // ---------------------------------------------------------
@@ -67,7 +67,7 @@ export const siteConfig = {
     // ---------------------------------------------------------
 
     // EDIT: PUBLIC E-MAIL ADDRESS (shown on the contact page)
-    // EXAMPLE VALUE – replace with your real address.
+    // EXAMPLE VALUE, replace with your real address.
     email: "hello@example.com",
 
     // EDIT: LOCATION (optional, e.g. "Hamburg, Germany")
@@ -76,7 +76,7 @@ export const siteConfig = {
 
     // EDIT: SOCIAL LINKS  (empty url = not shown)
     social: [
-        // EXAMPLE VALUES – replace with your real profile links.
+        // EXAMPLE VALUES, replace with your real profile links.
         { label: "LinkedIn", url: "https://www.linkedin.com/in/example" },
         { label: "Instagram", url: "https://www.instagram.com/example" }
     ],

@@ -1,13 +1,13 @@
 {
     "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Images starting with /media/portfolio/ are the original graphics from /content/portfolio (no copies). The primary texts are concept copy for the mockup.",
-    "title": "Ford Ranger – Automotive Ad",
+    "title": "Ford Ranger Automotive Ad",
     "category": [
         "Performance",
         "Marke"
     ],
     "description": "Typografie-getriebene Automotive-Anzeige: der Modellname als Bild, das Fahrzeug als Blickfang.",
     "year": "2026",
-    "client": "Freie Konzeptarbeit – keine Zusammenarbeit mit Ford",
+    "client": "Freie Konzeptarbeit, keine Zusammenarbeit mit Ford",
     "services": [
         "Social Ad Design",
         "Typografie",
@@ -16,7 +16,7 @@
     "featured": false,
     "order": 1,
     "brand": {
-        "name": "Ford Ranger · Konzept",
+        "name": "Ford Ranger Konzept",
         "initials": "FR",
         "domain": "Konzeptarbeit"
     },
@@ -24,7 +24,7 @@
         "src": "/media/portfolio/ford-ranger/ford-ranger.webp",
         "alt": "Anzeige mit großem orangefarbenem FORD-Schriftzug, weißem RANGER-Outline-Schriftzug und dunklem Pick-up"
     },
-    "objective": "Ein Fahrzeug im Feed mit maximaler Präsenz zeigen – als freie Konzeptstudie.",
+    "objective": "Ein Fahrzeug im Feed mit maximaler Präsenz zeigen, als freie Konzeptstudie.",
     "insight": "Bei bekannten Modellen ist der Name selbst das stärkste Gestaltungselement.",
     "approach": [
         "Modellname als großflächige Typografie: FORD gefüllt, RANGER als Kontur",
@@ -41,8 +41,8 @@
                 "alt": "Anzeige mit großem orangefarbenem FORD-Schriftzug, weißem RANGER-Outline-Schriftzug, dunklem Pick-up und Button „Mehr erfahren“"
             },
             "hook": "FORD RANGER",
-            "primaryText": "Gebaut für Wege, die nicht auf der Karte stehen.\n(Konzeptarbeit – keine offizielle Ford-Anzeige.)",
-            "headline": "Ford Ranger – Konzeptstudie",
+            "primaryText": "Gebaut für Wege, die nicht auf der Karte stehen.\n(Konzeptarbeit, keine offizielle Ford-Anzeige.)",
+            "headline": "Ford Ranger Konzeptstudie",
             "cta": "Mehr erfahren",
             "rationale": "Der Name trägt das Motiv, das Fahrzeug liefert den Beweis."
         }
@@ -52,7 +52,7 @@
         "Gebaut für Wege, die nicht auf der Karte stehen."
     ],
     "headlines": [
-        "Ford Ranger – Konzeptstudie"
+        "Ford Ranger Konzeptstudie"
     ],
     "projectStatus": "Konzeptarbeit"
 }

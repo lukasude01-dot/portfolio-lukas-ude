@@ -48,7 +48,7 @@ function workflowThumbnail(project) {
  * @param {object} options   { sizes, size: "large"|"standard", headingLevel }
  */
 export function workCard(project, { sizes = "(min-width: 900px) 45vw, 100vw", size = "standard", headingLevel = 3 } = {}) {
-    const meta = [SECTION_LABELS[project.section], project.year].filter(Boolean).join(" · ");
+    const meta = [SECTION_LABELS[project.section], project.year].filter(Boolean).join(", ");
     const filterValues = [project.section, ...project.categories.map((category) => category.toLowerCase())].join(" ");
     const title = headingLevel === 2 ? html`<h2 class="work-card__title">${project.title}</h2>` : html`<h3 class="work-card__title">${project.title}</h3>`;
 

@@ -1,7 +1,7 @@
 {
     "_help": "DESIGN PROJECT. See /docs/CONTENT-GUIDE.md -> Design. 'layout' controls the tile size on /design/: feature | wide | tall | standard. Each image can have 'size': full | half.",
     "seoTitle": "Corporate Identity",
-    "title": "Lukas Ude – Corporate Identity",
+    "title": "Lukas Ude Corporate Identity",
     "category": [
         "Branding"
     ],
@@ -23,20 +23,20 @@
     },
     "body": [
         "Die Identität basiert auf einer Idee: Cinematic Heritage × Modern Systems. Ein Baum wächst aus fließendem Wasser; seine Äste werden zu Verbindungsknoten und einer steigenden Kurve. Natur, Ideen und Wachstum in einem Zeichen.",
-        "Das System ist bewusst zurückhaltend: Logo nur monochrom, vertikaler Trenner, großzügiger Schutzraum. Die Farben kommen aus der Natur – Obsidian, Elfenbein, British Green, Forest und Tobacco – mit Messing als seltenem Akzent (55 % Schwarz, 30 % Elfenbein, 10 % Naturtöne, 5 % Messing).",
+        "Das System ist bewusst zurückhaltend: Logo nur monochrom, vertikaler Trenner, großzügiger Schutzraum. Die Farben kommen aus der Natur: Obsidian, Elfenbein, British Green, Forest und Tobacco. Messing ist ein seltener Akzent (55 % Schwarz, 30 % Elfenbein, 10 % Naturtöne, 5 % Messing).",
         "Die Typografie kombiniert eine editoriale Serif (Cormorant Garamond) mit einer präzisen Sans-Serif (Manrope). Die Bildsprache folgt sechs Prinzipien: cineastisch statt glänzend; authentisch statt inszeniert; warmes, natürliches Licht; tiefe Schatten und Textur; Natur und Technik; keine Neon-KI-Klischees."
     ],
     "images": [
         {
             "src": "logo-system-overview.jpg",
             "alt": "Übersicht des Logosystems mit Varianten und Anwendungen",
-            "caption": "Logosystem – Primär, vertikal, Icon, Favicon, Negativ und Anwendungen.",
+            "caption": "Logosystem mit Primär- und Vertikalvariante, Icon, Favicon, Negativ und Anwendungen.",
             "size": "full"
         },
         {
             "src": "ci-sheet.jpg",
             "alt": "Corporate-Identity-Sheet mit Logo, Farben, Typografie, Bildsprache und Tonalität",
-            "caption": "Corporate Identity Sheet – die einseitige Referenz der Marke.",
+            "caption": "Corporate Identity Sheet als einseitige Referenz der Marke.",
             "size": "full"
         },
         {
@@ -54,7 +54,7 @@
         {
             "src": "icon-sizes-favicon.jpg",
             "alt": "Icon, Minimal-Variante, kleine Größen von 64 bis 16 Pixel und das Favicon",
-            "caption": "Icon und Favicon – getestet bis 16 px.",
+            "caption": "Icon und Favicon, getestet bis 16 px.",
             "size": "full"
         }
     ]

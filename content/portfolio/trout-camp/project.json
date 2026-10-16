@@ -1,6 +1,6 @@
 {
     "_help": "PORTFOLIO PROJECT (shown on /portfolio/). See /docs/CONTENT-GUIDE.md -> Portfolio. 'projectStatus' is the label on the card (e.g. Konzeptarbeit, Eigenprojekt, Kundenprojekt). 'disclaimer' is shown on the detail page. 'layout' sets the card size: feature | side | tall | wide | closing. The first entry in 'images' is the main motif; the others appear under 'Weitere Motive'. Images are shown uncropped.",
-    "title": "Trout Camp 2027 – Schwedisch-Lappland",
+    "title": "Trout Camp 2027 in Schwedisch-Lappland",
     "category": [
         "Outdoor",
         "Travel",
@@ -23,7 +23,7 @@
         "alt": "Reiseanzeige: Fliegenfischer in orangefarbener Jacke im Fluss vor Wald, vertikaler TROUT-Schriftzug, CAMP 2027 und Reisedaten auf hellem Papier"
     },
     "task": "Ein mehrtägiges Fliegenfischer-Erlebnis so darstellen, dass Atmosphäre und die wichtigsten Reiseinfos auf einen Blick erfasst werden.",
-    "approach": "Das Format teilt sich in Papier und Natur: links die Fakten – Dauer, Region, Guiding, Helikopterflug, Ort – in klarer Hierarchie, rechts die Fotografie. Der vertikale TROUT-Schriftzug verbindet beide Hälften. Die orangefarbene Jacke des Anglers greift den Buchungs-Button auf.",
+    "approach": "Das Format teilt sich in Papier und Natur: links die Fakten wie Dauer, Region, Guiding, Helikopterflug und Ort in klarer Hierarchie, rechts die Fotografie. Der vertikale TROUT-Schriftzug verbindet beide Hälften. Die orangefarbene Jacke des Anglers greift den Buchungs-Button auf.",
     "images": [
         {
             "src": "trout-camp-2027.webp",
