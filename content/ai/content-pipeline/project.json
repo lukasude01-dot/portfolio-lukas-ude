@@ -5,7 +5,7 @@
         "Content",
         "Recherche"
     ],
-    "description": "Recherche, Struktur und erste Entwürfe entstehen mit KI. Tonalität, Urteil und finaler Schliff bleiben menschlich.",
+    "description": "KI beschleunigt Recherche und Strukturierung. Idee, Text und Tonalität entstehen in menschlicher Arbeit.",
     "year": "2026",
     "featured": false,
     "concept": true,
@@ -29,7 +29,7 @@
         {
             "label": "Schreiben & Redigieren",
             "role": "Human",
-            "text": "Schreiben und Redigieren in der Markenstimme. KI schlägt vor, ein Mensch entscheidet."
+            "text": "Schreiben und Redigieren in der Markenstimme, von Hand und mit klarer Richtung."
         },
         {
             "label": "Veröffentlichen",

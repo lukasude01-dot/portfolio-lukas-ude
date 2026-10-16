@@ -2,7 +2,7 @@
    PROCESS SECTION
    The steps of a project with a connecting line that draws
    in on scroll. The homepage uses the "--detailed" version
-   (six steps with tags, three columns on desktop).
+   (six steps with tags, two columns on desktop).
    HTML: /frontend/pages/index.html -> PROCESS SECTION
    (the same classes are reused on /ai/ and /funnels/)
 ========================================================== */
@@ -115,14 +115,18 @@
     margin-top: 0.6rem;
 }
 
+.process__steps--detailed .process__step {
+    gap: 0.75rem;
+}
+
 .process__steps--detailed .process__text {
-    max-width: 34rem;
+    max-width: 36rem;
 }
 
 @media (min-width: 900px) {
     .process__steps--detailed {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: var(--spacing-large);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: var(--spacing-xl);
         row-gap: var(--spacing-xl);
         padding-top: 0;
     }
