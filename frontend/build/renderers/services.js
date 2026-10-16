@@ -21,7 +21,7 @@ export const servicesRenderers = {
     "service-packages": ({ content }) => html`
             <ol class="packages" role="list">
                 ${content.packages.map((item, index) => html`
-                <li class="package${item.highlight ? " package--highlight" : ""}" data-reveal data-reveal-delay="${(index % 3) + 1}">
+                <li class="package${item.highlight ? " package--highlight" : ""}"${item.id ? html` id="paket-${item.id}"` : ""} data-reveal data-reveal-delay="${(index % 3) + 1}">
                     <p class="package__number label">${String(index + 1).padStart(2, "0")}</p>
                     <h3 class="package__name">${item.name}</h3>
                     ${item.price ? html`<p class="package__price">${item.price}</p>` : ""}

@@ -1,6 +1,22 @@
 {
-    "_help": "LEISTUNGEN / PAKETE (page /leistungen/). One object per package, shown in this order. 'price' is the small line under the title (e.g. 'ab 1.200 €' or 'Preis auf Anfrage'). 'includes' is the list of what the package contains. 'topic' must match one of the CONTACT_TOPICS in /shared/contact-schema.js, so the contact form opens with this topic selected. 'highlight': true gives the card a stronger frame (use for one package at most).",
+    "_help": "LEISTUNGEN / PAKETE (page /leistungen/). One object per package, shown in this order. 'price' is the small line under the title (e.g. 'ab 1.200 €' or 'Preis auf Anfrage'). 'includes' is the list of what the package contains. 'topic' must match one of the CONTACT_TOPICS in /shared/contact-schema.js, so the contact form opens with this topic selected. 'highlight': true gives the card a stronger frame (use for one package at most). 'id' (optional) becomes an anchor, e.g. /leistungen/#paket-website.",
     "packages": [
+        {
+            "id": "website",
+            "name": "Website für dein Unternehmen",
+            "price": "Preis auf Anfrage",
+            "summary": "Ein moderner, schneller und sicherer Internetauftritt für kleine und mittelständische Unternehmen. Gebaut mit KI-Unterstützung, aber geplant, geprüft und verantwortet von mir.",
+            "includes": [
+                "Struktur, Texte und Gestaltung passend zu deinem Unternehmen",
+                "KI-gestützte Entwicklung, jede Seite von mir geprüft und getestet",
+                "Saubere Trennung von Frontend und Backend",
+                "Sicherheit von Anfang an: keine Zugangsdaten im Browser, geschützte Formulare, Sicherheits-Header",
+                "Datenschutzfreundlich ohne unnötige Tracker und externe Dienste",
+                "Schnelle Ladezeiten und optimiert für das Smartphone"
+            ],
+            "idealFor": "Handwerksbetriebe und Mittelständler, die einen modernen und verlässlichen Auftritt brauchen",
+            "topic": "Website"
+        },
         {
             "name": "Landingpage",
             "price": "Preis auf Anfrage",

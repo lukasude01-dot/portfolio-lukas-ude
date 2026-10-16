@@ -105,6 +105,33 @@
     margin-top: auto;
 }
 
+/* WEBSITES WITH AI  (intro left, four points right) */
+
+.services-websites__inner {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.services-websites__inner .text-lead {
+    margin-top: var(--spacing-medium);
+}
+
+.services-websites__note {
+    margin-top: var(--spacing-medium);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+    .services-websites__inner {
+        grid-template-columns: 5fr 6fr;
+        column-gap: var(--spacing-2xl);
+        align-items: start;
+    }
+}
+
 /* ==========================================================
    END LEISTUNGEN PAGE
 ========================================================== */
