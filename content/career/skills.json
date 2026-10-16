@@ -15,7 +15,7 @@
         },
         {
             "name": "Copywriting",
-            "summary": "Texte, die verkaufen, ohne laut zu sein.",
+            "summary": "Texte, die überzeugen, ohne aufdringlich zu sein.",
             "skills": [
                 "Hooks und Headlines",
                 "Anzeigentexte (Primary Text)",
@@ -26,7 +26,7 @@
         },
         {
             "name": "Grafikdesign",
-            "summary": "Klare Gestaltung, die schnell verstanden wird.",
+            "summary": "Klare Gestaltung, die auf einen Blick verstanden wird.",
             "skills": [
                 "Markenidentität",
                 "Social-Media-Creatives",
@@ -37,7 +37,7 @@
         },
         {
             "name": "Funnels",
-            "summary": "User Journeys, die zu einer Entscheidung führen.",
+            "summary": "User Journeys, die Schritt für Schritt zu einer Entscheidung führen.",
             "skills": [
                 "Landingpages",
                 "Mehrstufige Formulare",
@@ -48,7 +48,7 @@
         },
         {
             "name": "KI-Systeme",
-            "summary": "Ein Werkzeug für Tempo und Effizienz. Die Qualität kommt aus menschlicher Arbeit.",
+            "summary": "Ein Werkzeug für Tempo und Effizienz. Die Qualität entsteht durch menschliche Arbeit.",
             "skills": [
                 "KI-gestützte Recherche",
                 "KI-gestütztes Copywriting",
@@ -59,7 +59,7 @@
         },
         {
             "name": "Automatisierung & Systeme",
-            "summary": "Prozesse, die auch laufen, wenn viel los ist.",
+            "summary": "Abläufe, die auch dann zuverlässig laufen, wenn viel los ist.",
             "skills": [
                 "Marketing-Automatisierung",
                 "Anfragen-Zuordnung und Follow-up",
