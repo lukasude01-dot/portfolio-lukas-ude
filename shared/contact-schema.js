@@ -25,7 +25,6 @@ export const CONTACT_TOPICS = [
     "Landingpage",
     "Funnel & Meta Ads",
     "Creatives & Copy",
-    "KI-Systeme & Automatisierung",
     "Laufende Betreuung",
     "Etwas anderes"
 ];

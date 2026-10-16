@@ -173,7 +173,6 @@ export const siteConfig = {
         "Copywriting",
         "Funnels und Landingpages",
         "Grafikdesign",
-        "KI-gestütztes Marketing",
-        "Marketing-Automatisierung"
+        "KI-gestütztes Marketing"
     ]
 };

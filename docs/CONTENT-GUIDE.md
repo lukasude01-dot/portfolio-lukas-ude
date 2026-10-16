@@ -221,7 +221,7 @@ shown in this order.
 | `highlight` | `true` = stronger frame (use for one package at most) |
 
 `topic` must match one of the `CONTACT_TOPICS` in `/shared/contact-schema.js` exactly:
-Landingpage, Funnel & Meta Ads, Creatives & Copy, KI-Systeme & Automatisierung, Laufende Betreuung, Etwas anderes.
+Landingpage, Funnel & Meta Ads, Creatives & Copy, Laufende Betreuung, Etwas anderes.
 The build warns if a topic is not in that list. To add a new topic, add it there too.
 
 ---

@@ -236,7 +236,7 @@ Datei: `content/leistungen/pakete.json`. Jeder Block `{ … }` in `"packages"` i
 - **Thema (`"topic"`):** Der Button des Pakets öffnet das Kontaktformular mit diesem Thema schon ausgewählt.
   Das Thema muss **genau** so geschrieben sein wie eines der Themen im Kontaktformular
   (`shared/contact-schema.js` → `CONTACT_TOPICS`): Landingpage, Funnel & Meta Ads, Creatives & Copy,
-  KI-Systeme & Automatisierung, Laufende Betreuung, Etwas anderes.
+  Laufende Betreuung, Etwas anderes.
   Passt es nicht, zeigt `npm run build` eine Warnung. Neues Thema? Dann dort ebenfalls ergänzen.
 
 ## 14. Lebenslauf aktualisieren
