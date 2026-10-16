@@ -93,6 +93,21 @@
 .page-hero--pos-road .page-hero__media img { object-position: 50% 62%; }
 .page-hero--pos-moose .page-hero__media img { object-position: 50% 55%; }
 
+/* Moose photo on desktop: the image is shown larger and moved to the
+   right, so the moose stands next to the headline instead of behind it.
+   (The photo itself is not changed, only how much of it is visible.) */
+@media (min-width: 900px) {
+    .page-hero--pos-moose .page-hero__media img {
+        position: absolute;
+        top: 50%;
+        left: -12%;
+        width: 160%;
+        max-width: none;
+        height: auto;
+        transform: translateY(-50%);
+    }
+}
+
 .page-hero--image::after {
     content: "";
     position: absolute;
