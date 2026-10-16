@@ -3,18 +3,19 @@
     "groups": [
         {
             "name": "Marketing",
-            "summary": "Positionierung, Angebote und Kampagnen mit klarem Ziel.",
+            "summary": "Das richtige Angebot zur richtigen Zielgruppe bringen.",
             "skills": [
-                "Kampagnenkonzepte",
                 "Zielgruppenanalyse",
-                "Angebots- und Botschaftsentwicklung",
-                "Recruiting- und Leadgenerierungs-Kampagnen"
+                "Positionierung und Botschaft",
+                "Recruiting-Kampagnen",
+                "B2B-Kampagnen",
+                "Community Management"
             ],
             "tools": "[ADD TOOLS]"
         },
         {
             "name": "Copywriting",
-            "summary": "Texte, die erst klar und dann clever sind.",
+            "summary": "Texte, die verkaufen, ohne laut zu sein.",
             "skills": [
                 "Hooks und Headlines",
                 "Anzeigentexte (Primary Text)",
@@ -25,7 +26,7 @@
         },
         {
             "name": "Grafikdesign",
-            "summary": "Ruhige, präzise Gestaltung mit klarer Linie.",
+            "summary": "Klare Gestaltung, die schnell verstanden wird.",
             "skills": [
                 "Markenidentität",
                 "Social-Media-Creatives",
@@ -46,8 +47,8 @@
             "tools": "[ADD TOOLS]"
         },
         {
-            "name": "KI",
-            "summary": "Ein praktisches Werkzeug im Prozess, mit Menschen in der Verantwortung.",
+            "name": "KI-Systeme",
+            "summary": "Ein Werkzeug für Tempo und Effizienz. Die Qualität kommt aus menschlicher Arbeit.",
             "skills": [
                 "KI-gestützte Recherche",
                 "KI-gestütztes Copywriting",

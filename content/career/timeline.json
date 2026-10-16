@@ -1,62 +1,76 @@
 {
-    "_help": "MY JOURNEY (About page). One object per station, newest first. Replace every [ADD ...] placeholder with your real information. Delete entries you do not need. 'type' is a short label such as Experience, Education, Project, Certificate. 'tags' are optional small badges.",
+    "_help": "MY JOURNEY (About page). One object per station, newest first. Replace [ADD ...] placeholders with your real information (e.g. dates). 'type' is a short label such as Berufserfahrung, Weiterbildung, Studium. 'tags' are optional small badges. 'organisation' and 'location' can stay empty.",
     "entries": [
         {
             "period": "[ADD DATUM] bis heute",
-            "type": "Berufserfahrung",
-            "title": "[ADD POSITION]",
-            "organisation": "[ADD ARBEITGEBER]",
-            "location": "[ADD ORT]",
-            "description": "[ADD BESCHREIBUNG: wofür du verantwortlich bist, z. B. Kampagnen, Funnels, Creatives, Automatisierung]",
-            "tags": [
-                "Marketing",
-                "Funnels",
-                "KI"
-            ]
-        },
-        {
-            "period": "[ADD DATUM]",
-            "type": "Berufserfahrung",
-            "title": "[ADD POSITION]",
-            "organisation": "[ADD ARBEITGEBER]",
-            "location": "[ADD ORT]",
-            "description": "[ADD BESCHREIBUNG]",
-            "tags": [
-                "Copywriting",
-                "Design"
-            ]
-        },
-        {
-            "period": "[ADD DATUM]",
-            "type": "Projekt",
-            "title": "[ADD PROJEKT]",
-            "organisation": "[ADD KUNDE ODER KONTEXT]",
+            "type": "Weiterbildung",
+            "title": "KI-Systeme und effizientes Arbeiten mit KI",
+            "organisation": "",
             "location": "",
-            "description": "[ADD BESCHREIBUNG: ein Projekt, das deine Arbeit mit KI oder Automatisierung geprägt hat]",
+            "description": "Intensive Beschäftigung mit dem effektiven Einsatz von KI-Systemen und ihrer Entwicklung. Ziel ist, Marketing-Arbeit schneller, reproduzierbar und kosteneffizient zu machen, ohne dass die Qualität darunter leidet.",
             "tags": [
-                "KI",
+                "KI-Systeme",
+                "Workflows",
                 "Automatisierung"
             ]
         },
         {
             "period": "[ADD DATUM]",
-            "type": "Ausbildung",
-            "title": "[ADD ABSCHLUSS ODER AUSBILDUNG]",
-            "organisation": "[ADD SCHULE / HOCHSCHULE]",
-            "location": "[ADD ORT]",
-            "description": "[ADD BESCHREIBUNG]",
-            "tags": []
+            "type": "Berufserfahrung",
+            "title": "Online-Marketing-Manager",
+            "organisation": "Marketingagentur mit Schwerpunkt Recruiting und B2B",
+            "location": "",
+            "description": "Schwerpunkt auf der Erstellung von Kampagnen, vor allem im Recruiting für die Logistikbranche und für B2B-Kunden. Dazu gehörten Grafiken, Copywriting und der Aufbau von Funnels, zuletzt auch Webdesign und Landingpages. Im Community Management war ich im direkten Austausch mit den Zielgruppen und habe dadurch tiefe Einblicke gewonnen, wie unterschiedliche Menschen auf Botschaften reagieren.",
+            "tags": [
+                "Kampagnen",
+                "Copywriting",
+                "Grafik",
+                "Funnels",
+                "Landingpages",
+                "Community Management"
+            ]
+        },
+        {
+            "period": "[ADD DATUM]",
+            "type": "Weiterbildung",
+            "title": "Weiterbildung zum Copywriter",
+            "organisation": "[ADD ANBIETER]",
+            "location": "",
+            "description": "Der Einstieg ins Marketing: Texte, die verkaufen, ohne laut zu sein. Hooks, Headlines, Anzeigen- und Landingpage-Texte.",
+            "tags": [
+                "Copywriting"
+            ]
+        },
+        {
+            "period": "[ADD DATUM]",
+            "type": "Berufserfahrung",
+            "title": "Assistenz der Geschäftsführung",
+            "organisation": "Forstdienstleistungsunternehmen",
+            "location": "",
+            "description": "Schon während des Studiums Mitarbeit in Betriebs- und Einsatzleitung mit viel direktem Kundenkontakt. Leitgedanke war immer: saubere, ordentliche Arbeit und am Ende zufriedene Kunden.",
+            "tags": [
+                "Betriebsleitung",
+                "Einsatzleitung",
+                "Kundenkontakt"
+            ]
+        },
+        {
+            "period": "[ADD DATUM]",
+            "type": "Studium",
+            "title": "Forstwirtschaft und Ökosystemmanagement",
+            "organisation": "[ADD HOCHSCHULE]",
+            "location": "",
+            "description": "Fachlicher Hintergrund in Natur und Ökosystemen, mit großem Interesse an der wirtschaftlichen Seite der Forstwirtschaft.",
+            "tags": [
+                "Forstwirtschaft",
+                "Ökosystemmanagement"
+            ]
         }
     ],
     "certificates": [
         {
             "year": "[ADD DATUM]",
-            "title": "[ADD ZERTIFIKAT]",
-            "issuer": "[ADD ANBIETER]"
-        },
-        {
-            "year": "[ADD DATUM]",
-            "title": "[ADD ZERTIFIKAT]",
+            "title": "Copywriter",
             "issuer": "[ADD ANBIETER]"
         }
     ]
