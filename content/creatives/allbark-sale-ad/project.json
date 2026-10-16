@@ -39,19 +39,32 @@
                 "src": "/media/portfolio/allbark-sale/allbark-sale.webp",
                 "alt": "Sale-Anzeige: Person im grünen ALLBARK-Hoodie von hinten, vertikaler SALE-Schriftzug, 20 % auf alles und Button „Jetzt shoppen!“"
             },
-            "hook": "20 % auf alles im SALE",
-            "primaryText": "20 % auf alles, auch auf deinen neuen Lieblingshoodie.\nNur für kurze Zeit.",
-            "headline": "20 % auf alles",
-            "cta": "Jetzt shoppen",
-            "rationale": "Produkt, Angebot und Handlung lassen sich mit einem Blick erfassen."
+            "hook": "20 % auf alles. Aber nur, solange der Sale läuft. 🔥",
+            "primaryText": "20 % auf alles. Aber nur, solange der Sale läuft. 🔥\nDein Lieblingshoodie, endlich zum Preis, auf den du gewartet hast.\n🧥 Hoodies, Shirts und Caps\n🏷️ 20 % Rabatt auf das ganze Sortiment\n🚚 Schneller Versand\n👉 Shoppe jetzt und sichere dir deine Teile, bevor deine Größe weg ist.",
+            "headline": "20 % auf alles im SALE",
+            "cta": "Jetzt einkaufen",
+            "rationale": "Direkter Opener mit Verknappung für den roten Typ, lockere Sprache und Emoji für den gelben Typ. Der Einwand „Meine Größe ist sicher weg“ wird zum Kaufgrund."
         }
     ],
     "hooks": [
-        "20 % auf alles im SALE",
-        "Dein neuer Lieblingshoodie. Jetzt 20 % günstiger."
+        "20 % auf alles. Aber nur, solange der Sale läuft. 🔥",
+        "Dein Lieblingshoodie hat gerade seinen Preis verloren.",
+        "Warum warten, wenn dein Style jetzt 20 % günstiger ist?"
     ],
     "headlines": [
-        "20 % auf alles"
+        "20 % auf alles im SALE",
+        "Nur solange der Vorrat reicht",
+        "Dein Style, 20 % günstiger"
     ],
-    "projectStatus": "Konzeptarbeit"
+    "projectStatus": "Konzeptarbeit",
+    "copyStrategy": {
+        "avatar": "Streetwear-Fans zwischen 18 und 30, markenbewusst und preisbewusst zugleich. Kaufen spontan, wenn ein Deal gut aussieht.",
+        "awareness": "Produktbewusstsein: Sie kennen die Marke und warten auf den richtigen Moment.",
+        "motive": "Gelb mit Rot: Spaß, Style und Community, dazu Verknappung und ein starkes Angebot.",
+        "needs": [
+            "Geld sparen",
+            "Status steigern",
+            "Spaß und Zugehörigkeit"
+        ]
+    }
 }

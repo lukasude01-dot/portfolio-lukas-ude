@@ -1,0 +1,103 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives. Each entry in 'ads' is one variation (image + copy). 'format': square | portrait | story. 'example': true marks example content (shown as 'Concept').",
+    "title": "Recruiting-Anzeigen für eine Tischlerei",
+    "category": [
+        "Recruiting",
+        "Performance"
+    ],
+    "description": "Drei Varianten für Meta Ads, die mit konkreten Arbeitsbedingungen statt mit Arbeitgeber-Klischees starten.",
+    "year": "2026",
+    "client": "Tischlerei Nordholz (fiktive Marke)",
+    "services": [
+        "Anzeigenkonzept",
+        "Hooks & Headlines",
+        "Primary Texts",
+        "Creative-Design"
+    ],
+    "featured": true,
+    "example": true,
+    "order": 10,
+    "brand": {
+        "name": "Tischlerei Nordholz",
+        "initials": "NH",
+        "domain": "nordholz-tischlerei.de"
+    },
+    "thumbnail": {
+        "src": "ad-working-hours.jpg",
+        "alt": "Recruiting-Anzeige: „Feierabend um 16 Uhr. Wirklich.“ auf Nussbaum-Hintergrund"
+    },
+    "objective": "Angestellte Tischler:innen erreichen, die gerade nicht aktiv suchen. Ein Bewerbungsfunnel, der nur 60 Sekunden dauert, macht ihnen den Wechsel so leicht wie möglich.",
+    "insight": "Fachkräfte reagieren nicht auf „tolles Team, tolle Benefits“. Sie reagieren auf genau das, was ihr aktueller Job falsch macht. Oft sind das Planbarkeit und Arbeitszeiten.",
+    "approach": [
+        "Jede Variante testet genau ein Motiv: Arbeitszeit, Qualität der Arbeit oder Aufwand der Bewerbung.",
+        "Die Creatives sind typografisch und im vollen Feed in einer Sekunde lesbar.",
+        "Der Primary Text spricht die Sprache der Werkstatt, nicht die der Personalabteilung.",
+        "Gleicher CTA und gleiche Landingpage sorgen für einen sauberen Vergleich."
+    ],
+    "ads": [
+        {
+            "label": "Arbeitszeit",
+            "format": "portrait",
+            "image": {
+                "src": "ad-working-hours.jpg",
+                "alt": "Anzeigen-Creative: „Feierabend um 16 Uhr. Wirklich.“"
+            },
+            "hook": "Was wäre, wenn du jeden Tag um 16 Uhr Feierabend hättest?",
+            "primaryText": "Was wäre, wenn du jeden Tag um 16 Uhr Feierabend hättest?\nKeine Überstunden, die niemand ausgleicht. Kein Samstag, den du opferst.\nBei Nordholz ist um 16 Uhr Schluss, freitags sogar um 13 Uhr.\n🕓 Planbare Arbeitszeiten\n🪵 Echte Massivholzprojekte\n👥 Ein Team aus acht Leuten\n👉 Bewirb dich jetzt in 60 Sekunden und hol dir deine Abende zurück.\nSelbst wenn du gerade gar nicht suchst: Ein kurzes Telefonat reicht für den ersten Schritt.",
+            "headline": "Feierabend um 16 Uhr",
+            "description": "Ohne Lebenslauf",
+            "cta": "Jetzt bewerben",
+            "rationale": "Konjunktiv-Frage als Opener: Sie umgeht den inneren Kritiker und lässt den Wunschzustand sofort spürbar werden."
+        },
+        {
+            "label": "Qualität der Arbeit",
+            "format": "square",
+            "image": {
+                "src": "ad-solid-wood.jpg",
+                "alt": "Anzeigen-Creative: „Massivholz. Statt Spanplatte am Fließband.“"
+            },
+            "hook": "Der größte Fehler guter Tischler: Spanplatten sortieren statt Möbel bauen.",
+            "primaryText": "Der größte Fehler guter Tischler: Spanplatten sortieren statt Möbel bauen.\nDu hast das Handwerk gelernt, um etwas zu erschaffen, das bleibt.\nBei uns baust du ein Möbelstück vom ersten Strich bis zur Montage:\n✏️ Eigene Projekte von A bis Z\n🪚 Moderne Werkstatt mit CNC\n🤝 Kunden, die deine Arbeit schätzen\n👉 Klicke auf „Mehr dazu“ und lerne die Werkstatt kennen.",
+            "headline": "Massivholz statt Fließband",
+            "description": "Tischlerei Nordholz",
+            "cta": "Mehr dazu",
+            "rationale": "Albtraum-Opener, der den Berufsstolz trifft. Der Gegensatz zwischen Fließband und eigenem Möbelstück schafft das Aha-Erlebnis."
+        },
+        {
+            "label": "Aufwand der Bewerbung",
+            "format": "square",
+            "image": {
+                "src": "ad-no-cv.jpg",
+                "alt": "Anzeigen-Creative: „60 Sekunden. Vier Fragen. Kein Lebenslauf.“"
+            },
+            "hook": "Du brauchst keinen Lebenslauf, um den Job zu wechseln.",
+            "primaryText": "Du brauchst keinen Lebenslauf, um den Job zu wechseln.\nDie Wahrheit ist: Die meisten Bewerbungen scheitern am Papierkram, nicht am Können.\nBei uns geht es anders:\n1️⃣ Vier kurze Fragen beantworten\n2️⃣ Wir rufen dich innerhalb von zwei Tagen an\n3️⃣ Du lernst uns beim bezahlten Probetag kennen\n👉 Bewirb dich jetzt in 60 Sekunden, ganz ohne Anschreiben.",
+            "headline": "Bewerbung in 60 Sekunden",
+            "description": "Tischler:in (m/w/d)",
+            "cta": "Jetzt bewerben",
+            "rationale": "Mythos entkräften: Der Opener räumt den größten Einwand gegen einen Wechsel direkt aus. Drei nummerierte Schritte machen den Ablauf greifbar."
+        }
+    ],
+    "hooks": [
+        "Was wäre, wenn du jeden Tag um 16 Uhr Feierabend hättest?",
+        "Der größte Fehler guter Tischler: Spanplatten sortieren statt Möbel bauen.",
+        "Du brauchst keinen Lebenslauf, um den Job zu wechseln.",
+        "Warum hören so viele Tischler auf, obwohl sie ihr Handwerk lieben?",
+        "Fakt ist: Gutes Handwerk braucht gute Arbeitszeiten."
+    ],
+    "headlines": [
+        "Feierabend um 16 Uhr",
+        "Massivholz statt Fließband",
+        "Bewerbung in 60 Sekunden"
+    ],
+    "copyStrategy": {
+        "avatar": "Ausgebildete Tischler:innen zwischen 22 und 45, angestellt in Betrieben mit Akkord oder Fließbandfertigung. Lieben das Handwerk, nicht die Bedingungen.",
+        "awareness": "Problembewusstsein: Sie sind unzufrieden, halten einen Wechsel aber für aufwendig.",
+        "motive": "Grün mit Blau: Team, Wertschätzung und Familie, dazu klare Fakten zu Arbeitszeiten.",
+        "needs": [
+            "Stress reduzieren",
+            "Zeit sparen",
+            "Anerkennung steigern"
+        ]
+    }
+}

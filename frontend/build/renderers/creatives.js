@@ -131,6 +131,19 @@ export const creativeRenderers = {
                     <div><dt class="label">Leistungen</dt><dd>${(project.services || []).join(", ")}</dd></div>
                 </dl>`,
 
+    // CREATIVE CASE - COPY STRATEGY (target group, awareness, motive type, needs)
+    "creative-strategy": ({ project }) => {
+        const strategy = project.copyStrategy;
+        if (!strategy) return "";
+        return html`
+            <div class="container project-columns project-columns--four project-columns--spaced">
+                <div><p class="eyebrow eyebrow--line">Zielgruppe</p><p>${strategy.avatar}</p></div>
+                <div><p class="eyebrow eyebrow--line">Bewusstsein</p><p>${strategy.awareness}</p></div>
+                <div><p class="eyebrow eyebrow--line">Motivtyp</p><p>${strategy.motive}</p></div>
+                <div><p class="eyebrow eyebrow--line">Bedürfnisse</p><ul class="bullet-list" role="list">${(strategy.needs || []).map((need) => html`<li>${need}</li>`)}</ul></div>
+            </div>`;
+    },
+
     "creative-approach": ({ project }) => html`<ul class="bullet-list" role="list">${(project.approach || []).map((item) => html`<li>${item}</li>`)}</ul>`,
 
     // CREATIVE CASE - ALL VARIATIONS (mockup + copy side by side)

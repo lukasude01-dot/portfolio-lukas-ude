@@ -39,10 +39,11 @@
                 "src": "/media/portfolio/personal-branding/personal-branding-lukas.webp",
                 "alt": "Markenmotiv: Portrait von Lukas Ude, vertikaler LUKAS-Schriftzug und Waldtextur"
             },
-            "hook": "Rooted in ideas. Built for growth.",
-            "primaryText": "Marketing, Advertising und KI-Systeme mit Wurzeln in guten Ideen.",
+            "hook": "Ich bin Lukas. Und ich mache Marketing anders, als du es von Agenturen kennst.",
+            "primaryText": "Ich bin Lukas. Und ich mache Marketing anders, als du es von Agenturen kennst.\nKein Fließband, keine wechselnden Ansprechpartner. Nur ehrliche Beratung und Kampagnen, die zu dir passen.\n🌲 Aus der Forstwirtschaft ins Marketing\n🤝 Ein fester Ansprechpartner\n🎯 Gezielt statt laut\n👉 Lern mich kennen und erzähl mir von deinem Projekt.",
             "headline": "Lukas Ude",
-            "cta": "Mehr erfahren"
+            "cta": "Mehr dazu",
+            "rationale": "Persönlicher Opener mit Abgrenzung zu Agenturen. Der grüne Typ bekommt Nähe und Ehrlichkeit, die Herkunft schafft Glaubwürdigkeit."
         },
         {
             "label": "Built for growth",
@@ -51,10 +52,11 @@
                 "src": "/media/portfolio/personal-branding/personal-branding-wald.webp",
                 "alt": "Portrait von Lukas Ude vor einem Waldweg mit großem Schriftzug „Built for growth“"
             },
-            "hook": "Built for growth.",
-            "primaryText": "Ideen brauchen Wurzeln. Wachstum braucht Systeme.",
-            "headline": "Lukas Ude",
-            "cta": "Mehr erfahren"
+            "hook": "Was der Wald mir über Marketing beigebracht hat.",
+            "primaryText": "Was der Wald mir über Marketing beigebracht hat.\nBäume wachsen nicht über Nacht. Sie brauchen starke Wurzeln, Geduld und den richtigen Standort.\nMit Marketing ist es genauso: Erst verstehen, dann wachsen.\n👉 Folge mir für ehrliche Einblicke in Marketing, das wirklich funktioniert.",
+            "headline": "Built for growth.",
+            "cta": "Mehr dazu",
+            "rationale": "Neugier-Opener mit Metapher aus der eigenen Geschichte. Er macht die Haltung der Marke in wenigen Sätzen verständlich."
         },
         {
             "label": "Fokus",
@@ -63,19 +65,34 @@
                 "src": "/media/portfolio/personal-branding/personal-branding-fokus.webp",
                 "alt": "Portrait von Lukas Ude mit selektiver Unschärfe, nur die Augen sind scharf"
             },
-            "hook": "Built for growth.",
-            "primaryText": "Fokus auf das, was wirkt.",
-            "headline": "Lukas Ude",
-            "cta": "Mehr erfahren"
+            "hook": "Fakt ist: Die meisten Unternehmen brauchen nicht mehr Werbung. Sondern mehr Fokus.",
+            "primaryText": "Fakt ist: Die meisten Unternehmen brauchen nicht mehr Werbung. Sondern mehr Fokus.\nWenn du alle erreichen willst, erreichst du am Ende niemanden richtig.\nGenau da setze ich an: bei der Frage, wer dein Angebot wirklich braucht.\n👉 Lass uns gemeinsam deinen Fokus finden.",
+            "headline": "Built for growth.",
+            "cta": "Mehr dazu",
+            "rationale": "Kontroverses Statement passend zum Fokus-Motiv. Der Gegensatz „alle oder niemanden“ sorgt für das Aha-Erlebnis."
         }
     ],
     "hooks": [
-        "Rooted in ideas. Built for growth.",
-        "Ideen brauchen Wurzeln. Wachstum braucht Systeme.",
-        "Fokus auf das, was wirkt."
+        "Ich bin Lukas. Und ich mache Marketing anders, als du es von Agenturen kennst.",
+        "Was der Wald mir über Marketing beigebracht hat.",
+        "Fakt ist: Die meisten Unternehmen brauchen nicht mehr Werbung. Sondern mehr Fokus.",
+        "Vom Forst ins Marketing: Warum harte Arbeit auch hier zählt.",
+        "Du brauchst keine große Agentur, um gutes Marketing zu bekommen."
     ],
     "headlines": [
-        "Lukas Ude"
+        "Lukas Ude",
+        "Built for growth.",
+        "Gezielt statt laut"
     ],
-    "projectStatus": "Eigenprojekt"
+    "projectStatus": "Eigenprojekt",
+    "copyStrategy": {
+        "avatar": "Unternehmer:innen aus Handwerk und Mittelstand, die einen persönlichen Marketing-Partner statt einer anonymen Agentur suchen.",
+        "awareness": "Lösungsbewusstsein: Sie suchen Unterstützung, wollen aber wissen, wer dahintersteht.",
+        "motive": "Grün mit Blau: Persönlichkeit, Vertrauen und Ehrlichkeit, dazu Herkunft und Erfahrung als Beleg.",
+        "needs": [
+            "Stress reduzieren",
+            "Zeit sparen",
+            "Vertrauen gewinnen"
+        ]
+    }
 }

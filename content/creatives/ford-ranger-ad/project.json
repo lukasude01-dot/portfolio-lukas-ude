@@ -40,19 +40,32 @@
                 "src": "/media/portfolio/ford-ranger/ford-ranger.webp",
                 "alt": "Anzeige mit großem orangefarbenem FORD-Schriftzug, weißem RANGER-Outline-Schriftzug, dunklem Pick-up und Button „Mehr erfahren“"
             },
-            "hook": "FORD RANGER",
-            "primaryText": "Gebaut für Wege, die nicht auf der Karte stehen.\n(Konzeptarbeit, keine offizielle Ford-Anzeige.)",
+            "hook": "Für alle, die mehr bewegen als nur sich selbst.",
+            "primaryText": "Für alle, die mehr bewegen als nur sich selbst.\nMorgens die Baustelle, am Wochenende der Wald. Du brauchst ein Fahrzeug, das beides kann.\n💪 Kraftvoller Auftritt\n🛻 Platz für Werkzeug und Ausrüstung\n🌲 Gebaut für jedes Gelände\n👉 Entdecke den Ranger und vereinbare deine Probefahrt.\n(Freie Konzeptarbeit, keine offizielle Ford-Kampagne.)",
             "headline": "Ford Ranger Konzeptstudie",
-            "cta": "Mehr erfahren",
-            "rationale": "Der Name trägt das Motiv, das Fahrzeug liefert den Beweis."
+            "cta": "Mehr dazu",
+            "rationale": "Identitäts-Opener für den roten Typ. Das Motiv lebt von der Präsenz, der Text liefert den Alltagsnutzen."
         }
     ],
     "hooks": [
-        "FORD RANGER",
-        "Gebaut für Wege, die nicht auf der Karte stehen."
+        "Für alle, die mehr bewegen als nur sich selbst.",
+        "Fakt ist: Dein Fahrzeug sagt mehr über dich, als du denkst.",
+        "Baustelle am Montag, Wald am Samstag. Ein Fahrzeug für beides."
     ],
     "headlines": [
-        "Ford Ranger Konzeptstudie"
+        "Ford Ranger Konzeptstudie",
+        "Gebaut für jedes Gelände",
+        "Stärke, die man sieht"
     ],
-    "projectStatus": "Konzeptarbeit"
+    "projectStatus": "Konzeptarbeit",
+    "copyStrategy": {
+        "avatar": "Selbstständige, Handwerker und Outdoor-Fans zwischen 30 und 55, die ein Fahrzeug für Arbeit und Freizeit brauchen.",
+        "awareness": "Lösungsbewusstsein: Sie suchen einen Pick-up, vergleichen aber noch Modelle.",
+        "motive": "Rot mit Blau: Stärke, Status und Präsenz, dazu belastbare Fakten.",
+        "needs": [
+            "Status steigern",
+            "Komfort steigern",
+            "Zeit sparen"
+        ]
+    }
 }

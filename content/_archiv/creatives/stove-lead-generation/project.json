@@ -41,10 +41,11 @@
                 "alt": "Anzeigen-Creative: „Der häufigste Fehler beim Kaminofen? Zu viel Leistung.“"
             },
             "hook": "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
-            "primaryText": "Ein zu großer Ofen läuft gedrosselt, rußt und wird kaum genutzt.\nMit unserem kostenlosen Ofen-Check findest du in 2 Minuten heraus, welche Leistung zu deinem Raum passt.",
+            "primaryText": "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.\nWas kaum jemand weiß: Ein zu großer Ofen wird gedrosselt, verrußt und macht das Wohnzimmer unangenehm heiß.\nUnser kostenloser Ofen-Check zeigt dir in 2 Minuten:\n🔥 welche Leistung zu deinem Raum passt\n🏠 was dein Schornstein mitmacht\n💶 wie du unnötige Kosten vermeidest\n👉 Starte jetzt deinen Ofen-Check und finde den Ofen, der wirklich zu dir passt.\nUnverbindlich und ohne Verkaufsgespräch.",
             "headline": "Kostenloser Ofen-Check in 2 Minuten",
             "description": "Unverbindliche Empfehlung",
-            "cta": "Mehr erfahren"
+            "cta": "Mehr dazu",
+            "rationale": "Albtraum-Opener mit Labeling „Was kaum jemand weiß“. Der blaue Typ bekommt Fakten, der grüne Typ die Sicherheit, keinen Fehlkauf zu machen."
         },
         {
             "label": "Raumgröße",
@@ -53,20 +54,34 @@
                 "src": "ad-room-size.jpg",
                 "alt": "Anzeigen-Creative, das Raumgrößen mit Ofenleistung vergleicht: 4–6 kW, 6–8 kW, 8+ kW"
             },
-            "hook": "Welcher Ofen passt zu deinem Wohnzimmer?",
-            "primaryText": "Faustregel: Die Raumgröße entscheidet.\nFür deine persönliche Empfehlung brauchst du nur fünf Antworten.",
+            "hook": "Welcher Ofen passt wirklich zu deinem Wohnzimmer?",
+            "primaryText": "Welcher Ofen passt wirklich zu deinem Wohnzimmer?\nStell dir vor, du sitzt an einem kalten Abend vor dem Feuer und es ist genau richtig warm.\nDamit das klappt, kommt es auf die Raumgröße an:\n📏 bis 30 m²: 4 bis 6 kW\n📏 30 bis 60 m²: 6 bis 8 kW\n📏 über 60 m²: 8 bis 10 kW\n👉 Mach jetzt den kostenlosen Ofen-Check und erhalte deine persönliche Empfehlung.",
             "headline": "Welche Ofengröße passt zu dir?",
             "description": "Ofenhaus Alder",
-            "cta": "Jetzt starten"
+            "cta": "Jetzt starten",
+            "rationale": "Neugier-Frage mit Visualisierung. Die konkreten kW-Angaben liefern sofort Nutzen und Glaubwürdigkeit."
         }
     ],
     "hooks": [
         "Der häufigste Fehler beim Kaminofen? Zu viel Leistung.",
-        "Welcher Ofen passt zu deinem Wohnzimmer?",
-        "Erst die Empfehlung, dann das Gespräch."
+        "Welcher Ofen passt wirklich zu deinem Wohnzimmer?",
+        "Du brauchst keinen Fachhändler-Besuch, um die richtige Ofengröße zu kennen.",
+        "Warum frieren manche trotz neuem Kaminofen?",
+        "Wie du den passenden Ofen findest, ohne dich durch 100 Modelle zu klicken."
     ],
     "headlines": [
         "Kostenloser Ofen-Check in 2 Minuten",
-        "Welche Ofengröße passt zu dir?"
-    ]
+        "Welche Ofengröße passt zu dir?",
+        "In 2 Minuten zum passenden Ofen"
+    ],
+    "copyStrategy": {
+        "avatar": "Hausbesitzer:innen zwischen 35 und 65, die mit einem Kaminofen liebäugeln, aber unsicher sind, welcher passt. Recherchieren abends auf dem Sofa.",
+        "awareness": "Lösungsbewusstsein: Sie wollen einen Ofen, kennen aber die Unterschiede nicht.",
+        "motive": "Blau mit Grün: Fakten, Sicherheit und Fehlervermeidung, dazu Gemütlichkeit für die Familie.",
+        "needs": [
+            "Geld sparen",
+            "Komfort steigern",
+            "Schmerzen vermeiden"
+        ]
+    }
 }

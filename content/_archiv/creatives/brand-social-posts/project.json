@@ -1,0 +1,99 @@
+{
+    "_help": "CREATIVE CASE. See /docs/CONTENT-GUIDE.md -> Creatives.",
+    "seoTitle": "Markenposts",
+    "title": "Markenposts für Lukas Ude",
+    "category": [
+        "Marke",
+        "Social"
+    ],
+    "description": "Eine ruhige, editoriale Post-Serie für die Marke Lukas Ude, gebaut aus der Bildsprache und Typografie des CI.",
+    "year": "2026",
+    "client": "Lukas Ude",
+    "services": [
+        "Marken-Content",
+        "Copywriting",
+        "Creative-Design"
+    ],
+    "featured": true,
+    "concept": true,
+    "order": 12,
+    "brand": {
+        "name": "Lukas Ude",
+        "initials": "LU",
+        "domain": "lukasude.de"
+    },
+    "thumbnail": {
+        "src": "post-idea-to-system.jpg",
+        "alt": "Markenpost: „Von der Idee zum System.“ über einem Fluss im Sonnenuntergang"
+    },
+    "objective": "Die Markenidee aus Natur, Handwerk und Systemen soll im Feed sichtbar werden, ruhig statt laut.",
+    "insight": "In einem Feed voller Hype fällt Zurückhaltung auf. Deshalb setzen die Posts auf wenige Worte, starke Typografie und echte Atmosphäre.",
+    "approach": [
+        "Die CI-Typografie setzt Cormorant Garamond für Statements und Manrope für Details ein.",
+        "Die Bilder folgen der CI-Bildsprache: warmes Licht, tiefe Schatten, Natur.",
+        "Jeder Post trägt genau einen Gedanken, kurz genug, um ihn beim Scrollen zu lesen."
+    ],
+    "ads": [
+        {
+            "label": "Von der Idee zum System",
+            "format": "portrait",
+            "image": {
+                "src": "post-idea-to-system.jpg",
+                "alt": "Markenpost: „Von der Idee zum System.“ mit dem Lukas-Ude-Logo"
+            },
+            "hook": "Die meisten Kampagnen scheitern nicht an der Idee. Sondern am System dahinter.",
+            "primaryText": "Die meisten Kampagnen scheitern nicht an der Idee. Sondern am System dahinter.\nEine gute Idee bringt Aufmerksamkeit. Aber erst ein durchdachter Funnel macht daraus Anfragen.\n💡 Idee: Was soll hängen bleiben?\n🧭 Strategie: Wen wollen wir erreichen?\n⚙️ System: Wie wird aus Interesse eine Anfrage?\n👉 Lass uns gemeinsam herausfinden, wo dein Marketing noch Potenzial hat.",
+            "headline": "Marketing, Advertising, KI-Systeme",
+            "cta": "Mehr dazu",
+            "rationale": "Kontroverses Statement, das Unternehmer zum Nachdenken bringt. Die drei Schritte machen den Prozess für den blauen Typ greifbar."
+        },
+        {
+            "label": "Rooted in ideas",
+            "format": "square",
+            "image": {
+                "src": "post-rooted.jpg",
+                "alt": "Markenpost: Logo und Slogan über einem nebligen Wald"
+            },
+            "hook": "Gutes Marketing wächst wie ein Baum: von den Wurzeln aus.",
+            "primaryText": "Gutes Marketing wächst wie ein Baum: von den Wurzeln aus.\nRooted in ideas. Built for growth.\nBevor ich eine Anzeige schalte, verstehe ich dein Angebot und deine Zielgruppe. Erst dann wird gestaltet.\n👉 Schreib mir eine Nachricht und erzähl mir von deinem Unternehmen.",
+            "headline": "Rooted in ideas. Built for growth.",
+            "cta": "Mehr dazu",
+            "rationale": "Metapher aus der Natur, passend zur Marke. Sie macht den Unterschied zu schnellem Werbe-Aktionismus sichtbar."
+        },
+        {
+            "label": "Klar statt laut",
+            "format": "square",
+            "image": {
+                "src": "post-calm-marketing.jpg",
+                "alt": "Markenpost: „Gutes Marketing ist nicht laut. Es ist klar.“ auf Elfenbein"
+            },
+            "hook": "Fakt ist: Lautes Marketing erreicht viele. Gutes Marketing erreicht die Richtigen.",
+            "primaryText": "Fakt ist: Lautes Marketing erreicht viele. Gutes Marketing erreicht die Richtigen.\nWährend andere ihr Budget mit Reichweite verbrennen, suche ich die Menschen, die dein Angebot wirklich brauchen.\n🎯 Genaue Zielgruppenanalyse\n✍️ Texte, die überzeugen statt übertreiben\n📈 Kampagnen, die messbar wirken\n👉 Lass uns sprechen, wie dein Marketing gezielter werden kann.",
+            "headline": "Gezielt statt laut",
+            "cta": "Mehr dazu",
+            "rationale": "Gegensatz als Sprachmuster: laut gegen gezielt. Das Labeling „Fakt ist“ gibt der Aussage Gewicht."
+        }
+    ],
+    "hooks": [
+        "Die meisten Kampagnen scheitern nicht an der Idee. Sondern am System dahinter.",
+        "Gutes Marketing wächst wie ein Baum: von den Wurzeln aus.",
+        "Fakt ist: Lautes Marketing erreicht viele. Gutes Marketing erreicht die Richtigen.",
+        "Du brauchst nicht mehr Werbung. Du brauchst die richtige.",
+        "Warum bringen manche Anzeigen Anfragen und andere nur Likes?"
+    ],
+    "headlines": [
+        "Marketing, Advertising, KI-Systeme",
+        "Rooted in ideas. Built for growth.",
+        "Gezielt statt laut"
+    ],
+    "copyStrategy": {
+        "avatar": "Inhaber:innen von Handwerksbetrieben und Mittelständlern, die Marketing bisher nebenbei machen und keine Zeit dafür haben.",
+        "awareness": "Problembewusstsein: Sie wissen, dass ihr Marketing besser sein könnte, aber nicht, wo sie anfangen sollen.",
+        "motive": "Grün mit Blau: Vertrauen und persönliche Nähe, dazu ein klarer, nachvollziehbarer Prozess.",
+        "needs": [
+            "Mehr Geld verdienen",
+            "Zeit sparen",
+            "Stress reduzieren"
+        ]
+    }
+}

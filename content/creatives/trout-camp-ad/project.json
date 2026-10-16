@@ -39,19 +39,32 @@
                 "src": "/media/portfolio/trout-camp/trout-camp-2027.webp",
                 "alt": "Reiseanzeige: Fliegenfischer in orangefarbener Jacke im Fluss vor Wald, vertikaler TROUT-Schriftzug, CAMP 2027, Reisedaten und Button „Hier buchen!“"
             },
-            "hook": "TROUT CAMP 2027",
-            "primaryText": "7 Tage Schwedisch-Lappland. Guiding, Helikopterflug, klare Flüsse.\n(Beispielangebot, Konzeptarbeit, nicht buchbar.)",
+            "hook": "Stell dir vor, der nächste Biss kommt mitten in der Wildnis Lapplands.",
+            "primaryText": "Stell dir vor, der nächste Biss kommt mitten in der Wildnis Lapplands.\nKein Handyempfang, nur du, der Fluss und wilde Forellen.\nDas Trout Camp 2027 in Kiruna:\n🎣 6 Tage geführtes Fliegenfischen\n🚁 Helikopterflug zu abgelegenen Gewässern\n🏕️ Komplett organisiert, du musst nur ankommen\n👉 Sichere dir jetzt die Infos zum Camp, die Plätze sind begrenzt.\n(Konzeptarbeit, das Angebot ist nicht buchbar.)",
             "headline": "Trout Camp 2027 in Kiruna, Schweden",
-            "cta": "Mehr erfahren",
-            "rationale": "Fotografie für das Gefühl, Typografie für die Entscheidung."
+            "cta": "Mehr dazu",
+            "rationale": "Visualisierung als Opener lässt das Abenteuer sofort entstehen. Die Eckdaten beruhigen den blauen Typ, der Satz „du musst nur ankommen“ nimmt den Planungsstress."
         }
     ],
     "hooks": [
-        "TROUT CAMP 2027",
-        "7 Tage Schwedisch-Lappland."
+        "Stell dir vor, der nächste Biss kommt mitten in der Wildnis Lapplands.",
+        "Warum fliegen Fliegenfischer bis nach Kiruna?",
+        "Du brauchst keine Expedition zu planen, um Lapplands Forellen zu fischen."
     ],
     "headlines": [
-        "Trout Camp 2027 in Kiruna, Schweden"
+        "Trout Camp 2027 in Kiruna, Schweden",
+        "6 Tage Wildnis, komplett organisiert",
+        "Fliegenfischen in Lappland"
     ],
-    "projectStatus": "Konzeptarbeit"
+    "projectStatus": "Konzeptarbeit",
+    "copyStrategy": {
+        "avatar": "Leidenschaftliche Fliegenfischer zwischen 35 und 65, die schon vieles gefischt haben und ein echtes Abenteuer suchen.",
+        "awareness": "Lösungsbewusstsein: Sie träumen von Skandinavien, scheuen aber die Planung.",
+        "motive": "Gelb mit Blau: Freiheit und Abenteuer, dazu klare Eckdaten und Organisation.",
+        "needs": [
+            "Freiheit erleben",
+            "Stress reduzieren",
+            "Anerkennung steigern"
+        ]
+    }
 }

@@ -40,11 +40,11 @@
                 "src": "/media/portfolio/recruiting-kfz/recruiting-werkstatt.webp",
                 "alt": "Recruiting-Anzeige im Story-Format: KFZ-Mechatroniker am Motor, Headline „Schraube an deiner Zukunft!“, Vorteile, Jahresgehalt und Button „Jetzt bewerben!“"
             },
-            "hook": "Schraube an deiner Zukunft!",
-            "primaryText": "1.000 € Wechselprämie, 30 Tage Urlaub, 48.000 € Jahresgehalt.\nKFZ-Mechatroniker (m/w/d) in Musterstadt.\n(Demo-Kampagne, keine reale Stelle.)",
-            "headline": "KFZ-Mechatroniker (m/w/d) gesucht",
+            "hook": "Fakt ist: Gute Mechatroniker verdienen mehr, als ihr Chef zugibt.",
+            "primaryText": "Fakt ist: Gute Mechatroniker verdienen mehr, als ihr Chef zugibt.\nDu reparierst jeden Tag Autos, die andere längst aufgegeben hätten. Aber auf deinem Konto merkst du davon nichts?\nBei uns bekommst du, was du wert bist:\n💶 48.000 € Jahresgehalt\n🌴 30 Tage Urlaub\n🎁 1.000 € Wechselprämie\n👉 Bewirb dich jetzt in 60 Sekunden und finde heraus, was du wirklich verdienen könntest.\nAuch wenn du gerade gar nicht aktiv suchst: Ein Gespräch kostet dich nichts.",
+            "headline": "48.000 € für KFZ-Mechatroniker",
             "cta": "Jetzt bewerben",
-            "rationale": "Eine emotionale Werkstattszene, ergänzt um die Vorteile als klare Liste."
+            "rationale": "Kontroverser Opener mit Zahlen für den blauen Typ. Die Werkstattszene spricht den Berufsstolz an, die Liste beantwortet die wichtigste Frage zuerst: Was bekomme ich?"
         },
         {
             "label": "Schrauberprofi (Feed)",
@@ -53,20 +53,34 @@
                 "src": "/media/portfolio/recruiting-kfz/recruiting-schrauberprofi.webp",
                 "alt": "Recruiting-Anzeige im Quadrat: KFZ-Mechatroniker vor blauem Hintergrund, Headline „Wir suchen unseren Schrauberprofi!“ und Button „Jetzt bewerben!“"
             },
-            "hook": "Wir suchen unseren Schrauberprofi!",
-            "primaryText": "Du kennst jedes Auto von innen? Dann suchen wir dich.\n(Demo-Kampagne, keine reale Stelle.)",
-            "headline": "Schrauberprofi in Musterstadt gesucht",
+            "hook": "Du brauchst keinen neuen Beruf. Nur eine Werkstatt, die dich schätzt.",
+            "primaryText": "Du brauchst keinen neuen Beruf. Nur eine Werkstatt, die dich schätzt.\nStell dir vor, du kommst morgens rein und weißt: Hier zählt dein Können.\n🔧 Moderne Werkstatt mit neuester Diagnosetechnik\n👥 Ein Team, das zusammenhält\n📈 Faire Bezahlung und echte Aufstiegschancen\n👉 Klicke auf „Jetzt bewerben“ und sichere dir dein Kennenlerngespräch.\nKein Lebenslauf nötig. Fünf kurze Fragen reichen.",
+            "headline": "Schrauberprofi gesucht",
             "cta": "Jetzt bewerben",
-            "rationale": "Hohe Farbintensität und eine direkte Ansprache sorgen für maximale Aufmerksamkeit im Feed."
+            "rationale": "Mythos-Opener für alle, die mit dem Beruf zufrieden sind, aber nicht mit dem Arbeitgeber. Die Visualisierung sorgt für das Aha-Erlebnis, das kräftige Blau für den Stopp im Feed."
         }
     ],
     "hooks": [
-        "Schraube an deiner Zukunft!",
-        "Wir suchen unseren Schrauberprofi!"
+        "Fakt ist: Gute Mechatroniker verdienen mehr, als ihr Chef zugibt.",
+        "Du brauchst keinen neuen Beruf. Nur eine Werkstatt, die dich schätzt.",
+        "Warum wechseln die besten Mechatroniker gerade jetzt?",
+        "Der größte Fehler, den gute Schrauber machen: zu lange bleiben.",
+        "Wie du in 60 Sekunden den Job wechselst, ohne einen Lebenslauf zu schreiben."
     ],
     "headlines": [
-        "KFZ-Mechatroniker (m/w/d) gesucht",
-        "Schrauberprofi in Musterstadt gesucht"
+        "48.000 € für KFZ-Mechatroniker",
+        "Schrauberprofi gesucht",
+        "In 60 Sekunden bewerben"
     ],
-    "projectStatus": "Demo-Kampagne"
+    "projectStatus": "Demo-Kampagne",
+    "copyStrategy": {
+        "avatar": "KFZ-Mechatroniker:innen zwischen 25 und 45, fest angestellt, gut in ihrem Job und unzufrieden mit Gehalt oder Wertschätzung. Scrollen abends nach Feierabend.",
+        "awareness": "Problembewusstsein: Sie spüren, dass sie unter Wert arbeiten, suchen aber nicht aktiv.",
+        "motive": "Blau mit Rot: Zahlen, Sicherheit und klare Fakten, dazu Anerkennung für ihr Können.",
+        "needs": [
+            "Mehr Geld verdienen",
+            "Anerkennung steigern",
+            "Stress reduzieren"
+        ]
+    }
 }
