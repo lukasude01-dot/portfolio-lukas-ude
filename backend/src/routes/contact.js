@@ -33,6 +33,11 @@ export function createContactRoutes({ config, logger, rateLimiter, formTokens, d
     async function submit(request, response) {
         const ip = getClientIp(request, config.trustProxy);
 
+        if (!config.contact.enabled) {
+            logger.error({ area: "CONTACT FORM", message: "Contact form is switched off: its settings are incomplete (see the CONFIG message at startup).", module: MODULE });
+            return sendJson(response, 503, { ok: false, error: "Das Kontaktformular ist gerade nicht verfügbar. Bitte schreib mir direkt eine E-Mail." });
+        }
+
         if (!isAllowedOrigin(request, config.allowedOrigins, config.trustProxy)) {
             logger.warn({ area: "CONTACT FORM", message: "Rejected request from a foreign origin.", module: MODULE, origin: request.headers.origin || "(none)" });
             return sendJson(response, 403, { ok: false, error: "Anfrage nicht erlaubt." });

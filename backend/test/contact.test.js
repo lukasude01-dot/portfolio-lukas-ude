@@ -170,10 +170,20 @@ test("form tokens: signature, minimum time and expiry are enforced", () => {
     assert.equal(tokens.verify(late).reason, "token expired");
 });
 
-test("production refuses to start without required secrets", () => {
-    const { problems } = loadConfig({ NODE_ENV: "production" });
+test("missing production settings are reported and switch off only the contact form", async () => {
+    const { config, problems } = loadConfig({ NODE_ENV: "production" });
     assert.ok(problems.some((problem) => problem.includes("FORM_TOKEN_SECRET")));
     assert.ok(problems.some((problem) => problem.includes("CONTACT_DELIVERY")));
+    assert.equal(config.contact.enabled, false);
+    assert.ok(config.formTokenSecret.length >= 32);
+
+    const server = await startServer({ NODE_ENV: "production" });
+    try {
+        const response = await post(server.base, { ...VALID_MESSAGE, token: await getToken(server.base) });
+        assert.equal(response.status, 503);
+    } finally {
+        await server.close();
+    }
 });
 
 test("smtp delivery needs mailbox settings", () => {

@@ -9,8 +9,8 @@
  * SECURITY:
  * - Secrets (mailbox password, token secret) only exist here, on the server.
  * - .env is listed in .gitignore and must never be committed.
- * - In production the server refuses to start if a required
- *   secret is missing (better than running insecurely).
+ * - If a setting for the contact form is missing, the website still
+ *   runs, but the contact form is switched off (and the log says why).
  *
  * All variables are explained in /backend/.env.example
  */
@@ -43,13 +43,12 @@ export function loadConfig(env = process.env) {
 
     let formTokenSecret = env.FORM_TOKEN_SECRET;
     if (!formTokenSecret || formTokenSecret.length < 32) {
-        if (isProduction) {
-            problems.push("FORM_TOKEN_SECRET is missing or shorter than 32 characters.");
-        } else {
-            // Development only: a random secret that changes on every restart.
-            formTokenSecret = crypto.randomBytes(32).toString("hex");
-        }
+        if (isProduction) problems.push("FORM_TOKEN_SECRET is missing or shorter than 32 characters (a temporary one is used).");
+        // A random secret that changes on every restart. Safe, but open
+        // forms stop working after a restart, so set a fixed one in production.
+        formTokenSecret = crypto.randomBytes(32).toString("hex");
     }
+    const problemsBeforeDelivery = problems.length;
 
     const delivery = (env.CONTACT_DELIVERY || "log").toLowerCase();
     if (!["log", "smtp", "webhook"].includes(delivery)) {
@@ -64,6 +63,9 @@ export function loadConfig(env = process.env) {
     if (isProduction && delivery === "log") {
         problems.push('CONTACT_DELIVERY="log" only prints messages to the server log. Choose "smtp" or "webhook" for production.');
     }
+
+    // The contact form only runs when its delivery is configured completely.
+    const contactEnabled = problems.length === problemsBeforeDelivery;
 
     const config = {
         isProduction,
@@ -85,6 +87,7 @@ export function loadConfig(env = process.env) {
         },
 
         contact: {
+            enabled: contactEnabled,
             delivery,
             toEmail: env.CONTACT_TO_EMAIL || "",
             // Most providers only accept the mailbox itself as sender.

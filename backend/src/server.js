@@ -107,9 +107,9 @@ export function startServer() {
     const { config, problems } = loadConfig();
 
     if (problems.length) {
+        // The website keeps running; only the contact form is switched off.
         const log = config.isProduction ? logger.error : logger.warn;
-        log({ area: "CONFIG", message: "Configuration problems found:", module: "backend/config", reason: problems.join(" | ") });
-        if (config.isProduction) process.exit(1);
+        log({ area: "CONFIG", message: config.contact.enabled ? "Configuration problems found:" : "Configuration problems found. The website runs, the CONTACT FORM IS SWITCHED OFF until this is fixed:", module: "backend/config", reason: problems.join(" | ") });
     }
     if (!process.env.FORM_TOKEN_SECRET && !config.isProduction) {
         logger.warn({ area: "CONFIG", message: "FORM_TOKEN_SECRET not set – using a temporary development secret." });

@@ -115,6 +115,7 @@ const DELIVERY_METHODS = {
  */
 export function createContactDelivery({ config, logger, smtpTransport }) {
     const send = DELIVERY_METHODS[config.contact.delivery];
+    if (!config.contact.enabled || !send) return async () => { throw new Error("Contact delivery is not configured."); };
     if (config.contact.delivery === "smtp" && !smtpTransport) smtpTransport = createSmtpTransport(config);
     return (message) => send(message, { config, logger, smtpTransport });
 }
