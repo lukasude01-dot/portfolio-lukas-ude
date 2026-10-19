@@ -67,6 +67,12 @@ export function createApp(config, { deliver } = {}) {
 
             if (serveStatic && (request.method === "GET" || request.method === "HEAD")) return serveStatic(request, response);
 
+            // Website should be served but is not built: say so instead of an empty 404.
+            if (config.serveFrontend && (request.method === "GET" || request.method === "HEAD")) {
+                response.writeHead(503, { "Content-Type": "text/html; charset=utf-8", "Retry-After": "120" });
+                return response.end(MAINTENANCE_PAGE);
+            }
+
             return sendJson(response, 404, { ok: false, error: "Nicht gefunden." });
         } catch (error) {
             if (error instanceof HttpError) {
@@ -83,6 +89,14 @@ export function createApp(config, { deliver } = {}) {
     handler.close = () => rateLimiter.stop();
     return handler;
 }
+
+// Shown only if the website files are missing (build step did not run)
+const MAINTENANCE_PAGE = `<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Lukas Ude</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#EEEAE0;color:#090A09;font:16px/1.6 system-ui,sans-serif;text-align:center;padding:24px}h1{font-size:1.6rem;margin:0 0 .5rem}p{margin:0;color:#5a5a55}</style></head>
+<body><main><h1>Die Website wird gerade aktualisiert.</h1><p>Bitte versuche es in wenigen Minuten noch einmal.</p></main></body>
+</html>`;
 
 /**
  * Starts the HTTP server with the configuration from the environment.
