@@ -8,11 +8,13 @@
         "node": ">=22.9"
     },
     "scripts": {
-        "setup": "npm --prefix frontend install && npm --prefix backend install",
+        "setup": "npm install",
+        "postinstall": "npm --prefix frontend install && npm --prefix backend install --omit=dev",
         "dev": "node scripts/dev.js",
         "build": "npm --prefix frontend run build",
         "start": "npm --prefix backend start",
         "test": "npm --prefix backend test",
         "check": "node scripts/check-site.js"
-    }
+    },
+    "main": "server.cjs"
 }

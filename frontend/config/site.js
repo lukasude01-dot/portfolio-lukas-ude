@@ -73,9 +73,8 @@ export const siteConfig = {
 
     // EDIT: SOCIAL LINKS  (empty url = not shown)
     social: [
-        // EXAMPLE VALUES, replace with your real profile links.
-        { label: "LinkedIn", url: "https://www.linkedin.com/in/example" },
-        { label: "Instagram", url: "https://www.instagram.com/example" }
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/lukas-ude-3b11b7435/" },
+        { label: "Instagram", url: "https://www.instagram.com/lukas_ude/" }
     ],
 
 

@@ -138,6 +138,15 @@ still set to `localhost`. Fix them before going live.
 
 Frontend and backend can be deployed **together** or **separately**.
 
+**Hostinger (Business plan, Node.js web app):**
+- hPanel → Websites → Add website → Node.js web app → import this GitHub repository.
+- Root directory: repository root. Build script: `build`. Entry file: `server.cjs`.
+- Node version: 22 or 24. `npm install` also installs `/frontend` and `/backend` (postinstall).
+- Environment variables (hPanel): `NODE_ENV=production`, `FORM_TOKEN_SECRET`,
+  `ALLOWED_ORIGINS=https://lukasude.de,https://www.lukasude.de`, `TRUST_PROXY=true`,
+  `CONTACT_DELIVERY=smtp`, `SMTP_HOST=smtp.hostinger.com`, `SMTP_PORT=465`,
+  `SMTP_USER=kontakt@lukasude.de`, `SMTP_PASSWORD`, `CONTACT_TO_EMAIL=kontakt@lukasude.de`.
+
 **Option A – one Node server (simplest):** e.g. Render, Railway, Fly.io, a VPS.
 - Build command: `npm run setup && npm run build`
 - Start command: `npm start`

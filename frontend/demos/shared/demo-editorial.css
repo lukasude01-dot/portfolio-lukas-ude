@@ -102,7 +102,7 @@
 /* SERVICES */
 .ed-services { display: grid; gap: 2rem; padding: 0; list-style: none; }
 @media (min-width: 820px) { .ed-services { grid-template-columns: repeat(3, 1fr); } }
-.ed-service__image { margin: 0 0 1.25rem; overflow: hidden; border-radius: 22px; aspect-ratio: 3 / 2; background: var(--ed-soft); }
+.ed-service__image { position: relative; margin: 0 0 1.25rem; overflow: hidden; border-radius: 22px; aspect-ratio: 3 / 2; background: var(--ed-soft); }
 .ed-service__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1); }
 .ed-service:hover .ed-service__image img { transform: scale(1.04); }
 .ed-service__number { font-size: 0.8rem; font-weight: 700; color: var(--ed-accent); }
@@ -168,3 +168,19 @@
 .ed-social a { display: inline-flex; padding: 0.45rem 0.9rem; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); font-size: 0.85rem; text-decoration: none; }
 .ed-social a:hover { background: rgba(255, 255, 255, 0.1); }
 .ed-thanks .demo-done__badge { margin-top: 2rem; background: var(--ed-soft); }
+
+
+/* AI LABEL  (small note on illustrations made with AI) */
+.ed-stage__image { position: relative; }
+.ed-ai-note {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--demo-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+}

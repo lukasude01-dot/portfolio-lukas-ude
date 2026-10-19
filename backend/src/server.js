@@ -84,8 +84,12 @@ export function createApp(config, { deliver } = {}) {
     return handler;
 }
 
-// Start the server only when this file is run directly (not in tests).
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+/**
+ * Starts the HTTP server with the configuration from the environment.
+ * Called below when this file is run directly, or by /server.cjs
+ * (the entry file for hosts like Hostinger).
+ */
+export function startServer() {
     const { config, problems } = loadConfig();
 
     if (problems.length) {
@@ -108,4 +112,10 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     const shutdown = () => server.close(() => process.exit(0));
     process.on("SIGTERM", shutdown);
     process.on("SIGINT", shutdown);
+    return server;
+}
+
+// Start the server only when this file is run directly (not in tests).
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+    startServer();
 }
