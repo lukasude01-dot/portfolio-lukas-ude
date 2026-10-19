@@ -8,6 +8,7 @@
  * `npm run dev` uses on http://localhost:3000.
  *
  * - Clean URLs: /funnels  -> 301 -> /funnels/ -> funnels/index.html
+ * - Short German addresses (/kontakt, /ueber-mich ...) -> 301 to the page
  * - Unknown pages get /404.html with status 404
  * - Path traversal (../) is blocked
  *
@@ -17,6 +18,19 @@
 
 import fs from "node:fs";
 import path from "node:path";
+
+// SAFE TO EDIT: addresses people might type, forwarded to the real page
+const REDIRECTS = {
+    "/kontakt": "/contact/",
+    "/ueber-mich": "/about/",
+    "/über-mich": "/about/",
+    "/uber-mich": "/about/",
+    "/angebot": "/leistungen/",
+    "/angebote": "/leistungen/",
+    "/blog": "/news/",
+    "/home": "/",
+    "/index.htm": "/"
+};
 
 const CONTENT_TYPES = {
     ".html": "text/html; charset=utf-8",
@@ -71,6 +85,14 @@ export function createStaticHandler({ root, isProduction }) {
     return function serveStatic(request, response) {
         const url = new URL(request.url, "http://localhost");
         let urlPath = url.pathname;
+
+        let decodedPath = urlPath;
+        try { decodedPath = decodeURIComponent(urlPath); } catch { /* keep as is */ }
+        const redirect = REDIRECTS[decodedPath.toLowerCase().replace(/\/+$/, "")];
+        if (redirect) {
+            response.writeHead(301, { Location: `${redirect}${url.search}` });
+            return response.end();
+        }
 
         let file;
         try {

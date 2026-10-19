@@ -12,6 +12,7 @@ import http from "node:http";
 import { loadConfig } from "../src/config.js";
 import { createApp } from "../src/server.js";
 import { createFormTokens } from "../src/lib/form-token.js";
+import { isAllowedOrigin } from "../src/lib/http.js";
 import { validateContact } from "../../shared/contact-schema.js";
 import { createContactDelivery } from "../src/services/email.js";
 import nodemailer from "nodemailer";
@@ -197,4 +198,16 @@ test("smtp delivery builds a safe e-mail (no header injection)", async () => {
     assert.match(headers, /^From: Website Kontaktformular <kontakt@example\.com>$/m);
     assert.doesNotMatch(headers, /^Bcc:/mi);
     assert.match(raw, /&lt;script&gt;/);
+});
+
+test("origin check: own domain is allowed, foreign sites are blocked", () => {
+    const allowed = ["https://lukasude.de"];
+    const request = (origin, headers = {}) => ({ headers: { origin, host: "www.lukasude.de", ...headers } });
+    assert.equal(isAllowedOrigin(request("https://lukasude.de"), allowed), true);
+    assert.equal(isAllowedOrigin(request("https://www.lukasude.de"), allowed), true);
+    assert.equal(isAllowedOrigin(request("https://evil.example"), allowed), false);
+    assert.equal(isAllowedOrigin(request("null"), allowed), false);
+    const proxied = request("https://preview.example", { host: "127.0.0.1:3000", "x-forwarded-host": "preview.example" });
+    assert.equal(isAllowedOrigin(proxied, allowed, false), false);
+    assert.equal(isAllowedOrigin(proxied, allowed, true), true);
 });

@@ -65,11 +65,24 @@ export function getClientIp(request, trustProxy) {
  * CSRF protection for the API: browsers always send an Origin header
  * with POST requests. Requests from other websites are rejected.
  */
-export function isAllowedOrigin(request, allowedOrigins) {
+export function isAllowedOrigin(request, allowedOrigins, trustProxy = false) {
     const origin = request.headers.origin;
     if (!origin) {
         // No Origin: allow only if the browser says it is same-origin.
         return request.headers["sec-fetch-site"] === "same-origin";
     }
-    return allowedOrigins.includes(origin.replace(/\/+$/, ""));
+    if (allowedOrigins.includes(origin.replace(/\/+$/, ""))) return true;
+
+    // Same site: the form was sent from the domain this server is reached
+    // under (e.g. www. or a hosting preview address). Browsers cannot fake
+    // the Origin header, so foreign websites are still rejected.
+    let originHost;
+    try {
+        originHost = new URL(origin).host.toLowerCase();
+    } catch {
+        return false;
+    }
+    const forwardedHost = trustProxy ? String(request.headers["x-forwarded-host"] || "").split(",")[0].trim() : "";
+    const hosts = [request.headers.host, forwardedHost].filter(Boolean).map((host) => host.toLowerCase());
+    return hosts.includes(originHost);
 }

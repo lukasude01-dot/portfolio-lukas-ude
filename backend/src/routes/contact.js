@@ -33,7 +33,7 @@ export function createContactRoutes({ config, logger, rateLimiter, formTokens, d
     async function submit(request, response) {
         const ip = getClientIp(request, config.trustProxy);
 
-        if (!isAllowedOrigin(request, config.allowedOrigins)) {
+        if (!isAllowedOrigin(request, config.allowedOrigins, config.trustProxy)) {
             logger.warn({ area: "CONTACT FORM", message: "Rejected request from a foreign origin.", module: MODULE, origin: request.headers.origin || "(none)" });
             return sendJson(response, 403, { ok: false, error: "Anfrage nicht erlaubt." });
         }

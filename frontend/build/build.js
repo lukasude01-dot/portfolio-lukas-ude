@@ -301,6 +301,21 @@ async function buildDemos(site, content) {
     }
 }
 
+/** Wraps one PNG image in an .ico file (supported by all current browsers). */
+function pngToIco(png, size) {
+    const header = Buffer.alloc(22);
+    header.writeUInt16LE(0, 0);        // reserved
+    header.writeUInt16LE(1, 2);        // type: icon
+    header.writeUInt16LE(1, 4);        // one image
+    header.writeUInt8(size, 6);        // width
+    header.writeUInt8(size, 7);        // height
+    header.writeUInt16LE(1, 10);       // colour planes
+    header.writeUInt16LE(32, 12);      // bits per pixel
+    header.writeUInt32LE(png.length, 14);
+    header.writeUInt32LE(22, 18);      // image data starts after this header
+    return Buffer.concat([header, png]);
+}
+
 async function buildIcons() {
     try {
         const sharp = (await import("sharp")).default;
@@ -309,6 +324,10 @@ async function buildIcons() {
         await sharp(svg, { density: 300 }).resize(192, 192).png().toFile(path.join(DIST, "assets", "brand", "icon-192.png"));
         await sharp(svg, { density: 300 }).resize(512, 512).png().toFile(path.join(DIST, "assets", "brand", "icon-512.png"));
         await sharp(svg, { density: 300 }).resize(180, 180).png().toFile(path.join(DIST, "apple-touch-icon.png"));
+        // Older iOS versions ask for this name (avoids 404s in the logs)
+        fs.copyFileSync(path.join(DIST, "apple-touch-icon.png"), path.join(DIST, "apple-touch-icon-precomposed.png"));
+        // Browsers and crawlers request /favicon.ico automatically
+        fs.writeFileSync(path.join(DIST, "favicon.ico"), pngToIco(await sharp(svg, { density: 300 }).resize(48, 48).png().toBuffer(), 48));
     } catch (error) {
         log.warn("ICONS", `PNG app icons not generated (${error.message}).`);
     }
