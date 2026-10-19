@@ -53,9 +53,7 @@ export const siteConfig = {
     //   PUBLIC_SITE_URL=https://staging.example.com npm run build
     // ---------------------------------------------------------
 
-    // EXAMPLE VALUE: local development address. Replace with the real
-    // domain before going live, e.g. "https://www.your-domain.de".
-    url: "http://localhost:3000",
+    url: "https://lukasude.de",
 
     language: "de",
     locale: "de_DE",
@@ -66,9 +64,8 @@ export const siteConfig = {
     // Leave a value empty ("") to hide it on the website.
     // ---------------------------------------------------------
 
-    // EDIT: PUBLIC E-MAIL ADDRESS (shown on the contact page)
-    // EXAMPLE VALUE, replace with your real address.
-    email: "hello@example.com",
+    // EDIT: PUBLIC E-MAIL ADDRESS (contact page, footer, Impressum, Datenschutz)
+    email: "kontakt@lukasude.de",
 
     // EDIT: LOCATION (optional, e.g. "Hamburg, Germany")
     // EXAMPLE VALUE
