@@ -98,6 +98,9 @@ export function initContactForm() {
                 showStatus(status, "error", MESSAGES.invalid);
             } else if (response.status === 429) {
                 showStatus(status, "error", MESSAGES.rateLimited, MESSAGES.errorTitle);
+            } else if (response.status === 503 && typeof data.error === "string") {
+                // Contact form switched off on the server: show its (public) message
+                showStatus(status, "error", data.error, MESSAGES.errorTitle);
             } else {
                 tokenPromise = null;
                 showStatus(status, "error", MESSAGES.errorText, MESSAGES.errorTitle);
