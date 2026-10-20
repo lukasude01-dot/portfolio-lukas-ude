@@ -42,7 +42,7 @@ export function createApp(config, { deliver } = {}) {
     const formTokens = createFormTokens({ secret: config.formTokenSecret, minSeconds: config.formMinSeconds, maxAgeMinutes: config.formMaxAgeMinutes });
 
     const routes = {
-        ...createHealthRoutes(),
+        ...createHealthRoutes(config),
         ...createContactRoutes({ config, logger, rateLimiter, formTokens, deliver: deliver || createContactDelivery({ config, logger }) })
     };
 

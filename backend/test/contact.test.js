@@ -221,3 +221,12 @@ test("origin check: own domain is allowed, foreign sites are blocked", () => {
     assert.equal(isAllowedOrigin(proxied, allowed, false), false);
     assert.equal(isAllowedOrigin(proxied, allowed, true), true);
 });
+
+test("contact diagnosis shows setting names only, never values", () => {
+    const { config } = loadConfig({ NODE_ENV: "production", CONTACT_DELIVERY: "smtp", SMTP_HOST: "smtp.example.com", SMTP_PASSWORD: "super-secret" });
+    assert.equal(config.diagnostics.contactForm, "off");
+    assert.equal(config.diagnostics.SMTP_PASSWORD, "gesetzt");
+    assert.equal(config.diagnostics.SMTP_USER, "fehlt");
+    assert.ok(!JSON.stringify(config.diagnostics).includes("super-secret"));
+    assert.ok(!JSON.stringify(config.diagnostics).includes("smtp.example.com"));
+});

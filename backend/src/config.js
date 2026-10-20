@@ -67,7 +67,17 @@ export function loadConfig(env = process.env) {
     // The contact form only runs when its delivery is configured completely.
     const contactEnabled = problems.length === problemsBeforeDelivery;
 
+    // Public diagnosis: which settings are present. Never contains values.
+    const isSet = (name) => Boolean(env[name] && String(env[name]).trim());
+    const diagnostics = {
+        contactForm: contactEnabled ? "on" : "off",
+        CONTACT_DELIVERY: ["log", "smtp", "webhook"].includes(delivery) ? (isSet("CONTACT_DELIVERY") ? delivery : "fehlt (log)") : "ungültiger Wert",
+        ...Object.fromEntries(["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASSWORD", "CONTACT_TO_EMAIL", "FORM_TOKEN_SECRET", "NODE_ENV", "TRUST_PROXY"]
+            .map((name) => [name, isSet(name) ? "gesetzt" : "fehlt"]))
+    };
+
     const config = {
+        diagnostics,
         isProduction,
         host: env.HOST || "0.0.0.0",
         port,
