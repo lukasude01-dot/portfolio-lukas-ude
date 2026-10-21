@@ -52,7 +52,7 @@ void main() {
     pos += vec2(cos(angle), sin(angle)) * flying * (60.0 + 140.0 * aSeed.z) * uMotion;
 
     // gentle idle drift
-    pos += vec2(sin(uTime * 0.7 + aSeed.x * 40.0), cos(uTime * 0.6 + aSeed.y * 40.0)) * 2.2 * uMotion;
+    pos += vec2(sin(uTime * 0.7 + aSeed.x * 40.0), cos(uTime * 0.6 + aSeed.y * 40.0)) * 0.9 * uMotion;
 
     // mouse pushes points away
     vec2 away = pos - uMouse;
@@ -62,7 +62,7 @@ void main() {
 
     vec2 clip = (pos / uRes) * 2.0 - 1.0;
     gl_Position = vec4(clip.x, -clip.y, 0.0, 1.0);
-    gl_PointSize = (1.7 + aSeed.z * 3.2) * uScale * (1.0 + push * 1.4);
+    gl_PointSize = (1.4 + aSeed.z * 2.0) * uScale * (1.0 + push * 1.4);
     vMix = aSeed.w;
     vGlow = push + flying * 0.6;
 }`;
@@ -79,7 +79,7 @@ void main() {
     vec3 ivory = vec3(0.93, 0.92, 0.88);
     vec3 signal = vec3(1.0, 0.99, 0.95);
     vec3 color = mix(ivory, signal, clamp(step(0.72, vMix) + vGlow * 0.8, 0.0, 1.0));
-    gl_FragColor = vec4(color, a * uAlpha * (0.7 + vMix * 0.3));
+    gl_FragColor = vec4(color, a * uAlpha * (0.92 + vMix * 0.08));
 }`;
 
 const MORPH_DURATION = 2200;   // ms for one shape change
@@ -96,7 +96,7 @@ export function initParticles() {
     if (!gl) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const COUNT = tier === "high" ? 9000 : 4200;
+    const COUNT = tier === "high" ? 14000 : 6500;
 
     // ---- GL SETUP ---------------------------------------------------------
     const program = createProgram(gl, VERTEX_SHADER, FRAGMENT_SHADER);
@@ -247,7 +247,7 @@ export function initParticles() {
         gl.uniform1f(u.time, still ? 0 : now / 1000);
         gl.uniform1f(u.scale, dpr);
         gl.uniform1f(u.motion, still ? 0 : 1);
-        gl.uniform1f(u.alpha, 0.95);
+        gl.uniform1f(u.alpha, 1.0);
         gl.drawArrays(gl.POINTS, 0, COUNT);
 
         if (running && !still) requestFrame();
@@ -368,7 +368,7 @@ async function fromImage(src, w, h, count) {
 
 /** Draws on a small hidden canvas and turns the filled pixels into points */
 function fromDrawing(draw, w, h, count) {
-    const scale = Math.min(1, 420 / Math.max(w, h));   // sample at max ~420px for speed
+    const scale = Math.min(1, 720 / Math.max(w, h));   // sample at max ~720px (sharper shapes)
     const cw = Math.max(20, Math.round(w * scale));
     const ch = Math.max(20, Math.round(h * scale));
     const canvas = document.createElement("canvas");
@@ -391,8 +391,8 @@ function fromDrawing(draw, w, h, count) {
     const pixels = filled.length / 2;
     for (let i = 0; i < count; i++) {
         const p = Math.floor(Math.random() * pixels) * 2;
-        points[i * 2] = (filled[p] + Math.random() - cw / 2) / scale;
-        points[i * 2 + 1] = (filled[p + 1] + Math.random() - ch / 2) / scale;
+        points[i * 2] = (filled[p] + 0.5 + (Math.random() - 0.5) * 0.6 - cw / 2) / scale;
+        points[i * 2 + 1] = (filled[p + 1] + 0.5 + (Math.random() - 0.5) * 0.6 - ch / 2) / scale;
     }
     return points;
 }
