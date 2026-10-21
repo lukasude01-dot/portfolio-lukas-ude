@@ -1,5 +1,5 @@
 {
-    "_help": "LEISTUNGEN / PAKETE. One object per package, shown in this order on /leistungen/. Each package also gets its own page /leistungen/<slug>/ built from 'detail'. Card fields: name, price ('ab 1.200 €' or 'Preis auf Anfrage'), summary, includes (list), idealFor, topic (must match CONTACT_TOPICS in /shared/contact-schema.js, pre-selects the contact form), highlight (stronger frame, one package at most), slug (folder name of the detail page, lower case, no umlauts). Detail page fields in 'detail': headline + headlineAccent, intro, problemTitle + problem (paragraphs), benefits (4 x title/text), steps (4 x title/text), faq (question/answer), related (label/href, a link at the end). Optional 'example': {src, alt, caption, url}, a screenshot shown on the package card and page (bold design variant).",
+    "_help": "LEISTUNGEN / PAKETE. One object per package, shown in this order on /leistungen/. Each package also gets its own page /leistungen/<slug>/ built from 'detail'. Card fields: name, price ('ab 1.200 €' or 'Preis auf Anfrage'), summary, includes (list), idealFor, topic (must match CONTACT_TOPICS in /shared/contact-schema.js, pre-selects the contact form), highlight (stronger frame, one package at most), slug (folder name of the detail page, lower case, no umlauts). Detail page fields in 'detail': headline + headlineAccent, intro, problemTitle + problem (paragraphs), benefits (4 x title/text), steps (4 x title/text), faq (question/answer), related (label/href, a link at the end). Optional 'example': {src, alt, caption, url} = a screenshot, or {type: 'portfolio', caption, url} = all portfolio graphics, scrubbed with the mouse (bold design variant).",
     "packages": [
         {
             "id": "website",
@@ -255,6 +255,11 @@
                     "label": "Funnels zum Ausprobieren",
                     "href": "/portfolio/funnels/"
                 }
+            },
+            "example": {
+                "type": "portfolio",
+                "caption": "Motive aus meinem Portfolio, alle Grafiken im Original. Fahre mit der Maus über das Bild.",
+                "url": "/portfolio/creatives/"
             }
         },
         {
@@ -335,6 +340,11 @@
                     "label": "Anzeigenkonzepte ansehen",
                     "href": "/portfolio/creatives/"
                 }
+            },
+            "example": {
+                "type": "portfolio",
+                "caption": "Motive aus meinem Portfolio, alle Grafiken im Original. Fahre mit der Maus über das Bild.",
+                "url": "/portfolio/creatives/"
             }
         },
         {

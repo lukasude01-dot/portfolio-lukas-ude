@@ -21,6 +21,7 @@ import { initParticles } from "./bold/particles.js";
 import { initStepper } from "./bold/stepper.js";
 import { initScrub } from "./bold/scrub.js";
 import { initGoalSwitch } from "./bold/goal-switch.js";
+import { initScrubGallery } from "./bold/scrub-gallery.js";
 
 const modules = {
     split: initSplit,          // must run before reveal (it adds data-reveal)
@@ -30,6 +31,7 @@ const modules = {
     scenes: initScenes,
     stepper: initStepper,
     "goal-switch": initGoalSwitch,
+    "scrub-gallery": initScrubGallery,
     pointer: initPointer,
     particles: initParticles,
     filters: initFilters,

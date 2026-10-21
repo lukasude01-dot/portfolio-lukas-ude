@@ -23,6 +23,27 @@ function motifs(content) {
         (project.images?.length ? project.images : [project.thumbnail]).map((image, index) => ({ project, image, index })));
 }
 
+/** All portfolio graphics stacked; scripts/bold/scrub-gallery.js shows one per mouse position. */
+function scrubGallery(content, { sizes, caption, url, large = false }) {
+    const items = motifs(content);
+    return html`
+                        <figure class="scrub-gallery${large ? " scrub-gallery--large" : ""}">
+                            <a class="scrub-gallery__stage" href="${url || "/portfolio/"}" data-scrub-gallery aria-label="Portfolio ansehen">
+                                ${items.map(({ project, image }, position) => html`
+                                <img class="scrub-gallery__image${position === 0 ? " is-active" : ""}" src="${image.src}" alt="${image.alt}" sizes="${sizes}" loading="lazy" data-title="${project.title}" data-responsive>`)}
+                                <span class="scrub-gallery__meta" aria-hidden="true"><span data-scrub-title>${items[0]?.project.title}</span><span data-scrub-count>01 / ${String(items.length).padStart(2, "0")}</span></span>
+                                <span class="scrub-gallery__bar" aria-hidden="true"><span data-scrub-progress></span></span>
+                            </a>
+                            <figcaption class="caption">${caption}</figcaption>
+                        </figure>`;
+}
+
+/** Example of a package: portfolio scrubber or a screenshot. */
+function packageExample(content, example, { sizes, large = false }) {
+    if (example.type === "portfolio") return scrubGallery(content, { sizes, caption: example.caption, url: example.url, large });
+    return null;
+}
+
 function newsCard(article, index) {
     return html`
                 <a class="b-news" href="${article.url}" data-reveal data-reveal-delay="${index % 4}">
@@ -86,7 +107,7 @@ export const boldRenderers = {
                     ${content.packages.map((item, index) => html`
                     <li class="b-package glass" data-tilt="4" data-reveal data-reveal-delay="${index % 3}"${item.id ? html` id="paket-${item.id}"` : ""}>
                         <span class="b-package__number">${String(index + 1).padStart(2, "0")}</span>
-                        ${item.example ? html`
+                        ${item.example?.type === "portfolio" ? packageExample(content, item.example, { sizes: "(min-width: 1180px) 28vw, (min-width: 760px) 44vw, 88vw" }) : item.example ? html`
                         <figure class="b-package__example">
                             <img src="${item.example.src}" alt="${item.example.alt}" sizes="(min-width: 1180px) 30vw, (min-width: 760px) 45vw, 90vw" loading="lazy" data-responsive>
                             <figcaption class="caption">${item.example.caption}</figcaption>
@@ -104,18 +125,19 @@ export const boldRenderers = {
 ,
 
     // PACKAGE PAGE - EXAMPLE SCREENSHOT (only if the package has "example")
-    "bold-service-example": ({ item }) => item.example ? html`
+    "bold-service-example": ({ item, content }) => item.example ? html`
         <section class="block service-example-b" aria-labelledby="service-example-heading">
             <div class="wrap">
                 <p class="kicker" data-reveal>Beispiel</p>
                 <h2 class="h2" id="service-example-heading" data-split>So kann es aussehen.</h2>
+                ${item.example.type === "portfolio" ? html`<div class="service-example-b__scrub" data-reveal data-reveal-delay="2">${packageExample(content, item.example, { sizes: "(min-width: 900px) 40vw, 90vw", large: true })}</div>` : html`
                 <figure class="service-example-b__figure" data-reveal data-reveal-delay="2">
                     <a class="service-example-b__frame" href="${item.example.url || "/"}" data-tilt="3">
                         <span class="service-example-b__bar" aria-hidden="true"><i></i><i></i><i></i></span>
                         <img src="${item.example.src}" alt="${item.example.alt}" sizes="(min-width: 1440px) 1300px, 92vw" loading="lazy" data-responsive>
                     </a>
                     <figcaption class="caption">${item.example.caption}</figcaption>
-                </figure>
+                </figure>`}
             </div>
         </section>` : ""
 };
