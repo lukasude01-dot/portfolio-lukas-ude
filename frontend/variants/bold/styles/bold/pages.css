@@ -446,10 +446,11 @@
 .b-package__list li::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 0.6rem;
-    height: 1px;
+    left: 0.1rem;
+    top: 0.5em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
     background: var(--b-ivory);
 }
 

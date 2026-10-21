@@ -132,13 +132,6 @@ html.bold {
     white-space: nowrap;
 }
 
-.kicker::before {
-    content: "";
-    width: 2.2rem;
-    height: 1px;
-    background: currentColor;
-}
-
 .mega {
     font-size: var(--b-display-size);
     font-weight: 850;

@@ -1070,6 +1070,21 @@
 
 .hero-b__word {
     grid-area: 1 / 1;
+    justify-self: start;
+}
+
+/* the ivory block sits on each word, so it is always as wide as the visible word */
+.hero-b__line--signal.hero-b__rotator {
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.hero-b__rotator .hero-b__word {
+    margin-top: 0.06em;
+    padding: 0.06em 0.12em 0;
+    background: var(--b-ivory);
 }
 
 .hero-b__word:nth-child(2) {
@@ -1088,9 +1103,9 @@
 }
 
 @keyframes word-cycle {
-    0% { transform: translate3d(0, 105%, 0); }
+    0% { transform: translate3d(0, 120%, 0); }
     7%, 46% { transform: none; }
-    53%, 100% { transform: translate3d(0, -105%, 0); }
+    53%, 100% { transform: translate3d(0, -120%, 0); }
 }
 
 /* first word starts visible (before its first cycle) */
@@ -1229,10 +1244,11 @@
 .goal__list li::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0.62em;
-    width: 0.8rem;
-    height: 1.5px;
+    left: 0.15rem;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     background: var(--b-ivory);
 }
 
