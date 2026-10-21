@@ -9,20 +9,19 @@
 
          RELATED STYLES:  /frontend/variants/bold/styles/bold/footer.css
     ========================================================= -->
-    <footer class="foot" data-shape="logo" data-shape-size="0.85">
+    <!-- The particles form the slogan in .foot__slogan (scripts/bold/particles.js).
+         Without particles the slogan is shown as large text instead. -->
+    <footer class="foot" data-shape="text:Rooted in ideas.|Built for growth." data-shape-size="0.94">
         <div class="wrap">
-            <div class="foot__top">
             <a class="foot__call" href="/contact/" data-magnetic>
                 <span class="foot__call-small">Bereit für mehr Anfragen und Bewerbungen?</span>
                 <span class="foot__call-big">Lass uns reden<span class="foot__arrow" aria-hidden="true">→</span></span>
             </a>
-            <div class="foot__anchor" data-shape-anchor aria-hidden="true"></div>
-            </div>
 
             <div class="foot__grid">
                 <div class="foot__brand">
                     <img src="/assets/brand/logo-mark-ivory.svg" alt="" width="56" height="56" loading="lazy">
-                    <p>Rooted in ideas.<br>Built for growth.</p>
+                    <p>{{ site.name }}</p>
                 </div>
                 <nav class="foot__col" aria-label="Fußzeile">
                     <h2 class="foot__label">Entdecken</h2>
@@ -40,6 +39,8 @@
             </div>
         </div>
 
-        <p class="foot__giant" aria-hidden="true">LUKAS UDE</p>
+        <div class="foot__slogan" data-shape-anchor>
+            <p class="foot__slogan-text">Rooted in ideas.<br>Built for growth.</p>
+        </div>
     </footer>
     <!-- ================= END FOOTER ================= -->

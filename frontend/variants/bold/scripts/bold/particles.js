@@ -102,6 +102,8 @@ export function initParticles() {
     const program = createProgram(gl, VERTEX_SHADER, FRAGMENT_SHADER);
     if (!program) return;
     gl.useProgram(program);
+    // CSS hides text fallbacks (e.g. the footer slogan) while particles run
+    document.documentElement.classList.add("has-particles");
 
     const start = new Float32Array(COUNT * 2);
     const target = new Float32Array(COUNT * 2);
@@ -397,15 +399,20 @@ function fromDrawing(draw, w, h, count) {
     return points;
 }
 
-function drawWord(ctx, cw, ch, word) {
-    let size = ch * 0.8;
+/** One or more lines ("Line one|Line two"), as large as the box allows */
+function drawWord(ctx, cw, ch, text) {
+    const lines = text.split("|");
+    let size = (ch * 0.82) / lines.length;
     ctx.font = `900 ${size}px Archivo, Arial, sans-serif`;
-    const measured = ctx.measureText(word).width;
-    if (measured > cw * 0.96) size *= (cw * 0.96) / measured;
+    const widest = Math.max(...lines.map((line) => ctx.measureText(line).width));
+    if (widest > cw * 0.96) size *= (cw * 0.96) / widest;
     ctx.font = `900 ${size}px Archivo, Arial, sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(word, cw / 2, ch / 2);
+    const lineHeight = size * 1.02;
+    lines.forEach((line, index) => {
+        ctx.fillText(line, cw / 2, ch / 2 + (index - (lines.length - 1) / 2) * lineHeight);
+    });
 }
 
 function drawFunnel(ctx, cw, ch) {

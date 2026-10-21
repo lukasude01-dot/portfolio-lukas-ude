@@ -8,23 +8,7 @@
     overflow: hidden;
     padding-top: clamp(5rem, 3rem + 8vw, 10rem);
     border-top: 1px solid var(--b-line);
-    background: linear-gradient(180deg, rgba(8, 8, 8, 0.4), #050505 60%);
-}
-
-.foot__top {
-    display: grid;
-    gap: 2rem;
-    align-items: center;
-}
-
-.foot__anchor {
-    height: clamp(200px, 26vw, 360px);
-}
-
-@media (min-width: 980px) {
-    .foot__top {
-        grid-template-columns: 1.6fr 1fr;
-    }
+    background: transparent;
 }
 
 .foot__call {
@@ -136,21 +120,32 @@
     gap: 1.5rem;
 }
 
-.foot__giant {
-    margin: 2rem 0 -0.18em;
-    font-size: clamp(4rem, 19vw, 22rem);
+/* SLOGAN: drawn by the particles; the text is the fallback and stays
+   readable for screen readers */
+.foot__slogan {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: clamp(220px, 30vw, 460px);
+    margin-top: 1rem;
+}
+
+.foot__slogan-text {
+    font-size: clamp(2.4rem, 1rem + 6vw, 7rem);
     font-weight: 900;
-    font-stretch: 125%;
-    line-height: 0.8;
-    letter-spacing: -0.05em;
+    font-stretch: 112%;
+    line-height: 1;
+    letter-spacing: -0.03em;
     text-align: center;
+}
+
+.has-particles .foot__slogan-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
     white-space: nowrap;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(238, 234, 224, 0.14);
-    background: linear-gradient(180deg, rgba(238, 234, 224, 0.22), transparent 75%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    user-select: none;
 }
 
 @media (min-width: 760px) {
