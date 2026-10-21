@@ -17,14 +17,18 @@ bodyClass: page-home
             <div class="wrap hero-b__inner">
                 <div class="hero-b__copy">
                     <p class="kicker" data-reveal><!-- @render descriptor --></p>
-                    <h1 class="hero-b__claim mega" id="hero-heading" data-split>
+                    <h1 class="hero-b__claim mega" id="hero-heading" data-split data-label="Aus Klicks werden Kunden und Bewerber.">
                         <span class="hero-b__line">Aus Klicks</span>
                         <span class="hero-b__line">werden</span>
-                        <span class="hero-b__line hero-b__line--signal">Kunden.</span>
+                        <!-- the inverted word switches between both goals (styles/bold/home.css) -->
+                        <span class="hero-b__line hero-b__line--signal hero-b__rotator">
+                            <span class="hero-b__word">Kunden.</span>
+                            <span class="hero-b__word">Bewerber.</span>
+                        </span>
                     </h1>
                     <p class="lead hero-b__lead" data-reveal data-reveal-delay="4">
                         Ich bin <strong>Lukas Ude</strong>. Ich verbinde Strategie, Creatives und Funnels
-                        zu einem System, das aus Aufmerksamkeit echte Anfragen macht.
+                        zu einem System, das aus Aufmerksamkeit echte Anfragen und Bewerbungen macht.
                     </p>
                     <div class="btn-row" data-reveal data-reveal-delay="5">
                         <a class="btn" href="/contact/" data-magnetic>Projekt anfragen<span class="btn__arrow" aria-hidden="true">→</span></a>
@@ -49,12 +53,14 @@ bodyClass: page-home
                 <span class="marquee__item">Meta Ads <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Creatives <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Copy <span class="marquee__star">✦</span></span>
+                <span class="marquee__item">Recruiting <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Websites <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Landingpages <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Funnels <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Meta Ads <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Creatives <span class="marquee__star">✦</span></span>
                 <span class="marquee__item">Copy <span class="marquee__star">✦</span></span>
+                <span class="marquee__item">Recruiting <span class="marquee__star">✦</span></span>
             </div>
         </div>
 
@@ -67,7 +73,7 @@ bodyClass: page-home
                 <div class="services-b__head">
                     <div>
                         <p class="kicker" data-reveal>Was ich mache</p>
-                        <h2 class="h2" id="services-heading" data-split>Vom ersten Klick bis zur Anfrage.</h2>
+                        <h2 class="h2" id="services-heading" data-split>Vom ersten Klick bis zur Anfrage oder Bewerbung.</h2>
                     </div>
                     <div class="services-b__anchor" data-shape-anchor aria-hidden="true"></div>
                 </div>
@@ -87,7 +93,7 @@ bodyClass: page-home
                             <span class="service-card__number">02</span>
                             <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg>
                             <span class="service-card__title">Funnels &amp; Meta Ads</span>
-                            <span class="service-card__text">Planbare Anfragen über Facebook und Instagram, von der Zielgruppe bis zur Optimierung.</span>
+                            <span class="service-card__text">Planbare Anfragen und Bewerbungen über Facebook und Instagram, von der Zielgruppe bis zur Optimierung.</span>
                             <span class="arrow-link">Mehr erfahren</span>
                         </a>
                     </li>
@@ -110,6 +116,60 @@ bodyClass: page-home
                         </a>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             GOALS  (switch: customers or employees)
+             scripts/bold/goal-switch.js swaps the panel and the
+             particle word. Without JS both panels are shown.
+        ========================================================= -->
+        <section class="block goals-b" data-shape="text:KUNDEN" data-shape-size="0.9" data-goal-switch aria-labelledby="goals-heading">
+            <div class="wrap">
+                <div class="goals-b__head">
+                    <div>
+                        <p class="kicker" data-reveal>Zwei Ziele, ein System</p>
+                        <h2 class="h2" id="goals-heading" data-split>Wen willst du gewinnen?</h2>
+                    </div>
+                    <div class="goals-b__switch" role="tablist" aria-label="Ziel wählen" data-reveal data-reveal-delay="2">
+                        <button class="goals-b__tab" type="button" role="tab" id="goal-tab-kunden" aria-controls="goal-kunden" aria-selected="true" data-goal="kunden" data-goal-shape="text:KUNDEN">Kunden</button>
+                        <button class="goals-b__tab" type="button" role="tab" id="goal-tab-team" aria-controls="goal-team" aria-selected="false" data-goal="team" data-goal-shape="text:TEAM">Mitarbeiter</button>
+                        <span class="goals-b__knob" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <div class="goals-b__stage">
+                    <div class="goals-b__anchor" data-shape-anchor aria-hidden="true"></div>
+
+                    <article class="goal glass" id="goal-kunden" role="tabpanel" aria-labelledby="goal-tab-kunden" data-goal-panel="kunden">
+                        <p class="goal__label">Kundengewinnung</p>
+                        <h3 class="goal__title">Mehr Anfragen für dein Angebot.</h3>
+                        <ul class="goal__list" role="list">
+                            <li>Landingpages und Funnels, die auf genau eine Entscheidung hinführen</li>
+                            <li>Meta Ads, die dein Angebot zu den Menschen bringen, die es wirklich brauchen</li>
+                            <li>Creatives und Texte, die überzeugen statt übertreiben</li>
+                        </ul>
+                        <p class="goal__examples">Beispiele:
+                            <a href="/portfolio/funnels/lead-generation-demo/">Ofen-Check für einen Kaminofen-Händler</a>,
+                            <a href="/portfolio/funnels/garten-demo/">Anfrage-Funnel für einen Gartenbaubetrieb</a></p>
+                        <a class="btn" href="/contact/?thema=Funnel%20%26%20Meta%20Ads" data-magnetic>Mehr Kunden gewinnen<span class="btn__arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="goal glass" id="goal-team" role="tabpanel" aria-labelledby="goal-tab-team" data-goal-panel="team">
+                        <p class="goal__label">Recruiting</p>
+                        <h3 class="goal__title">Bewerbungen statt offener Stellen.</h3>
+                        <ul class="goal__list" role="list">
+                            <li>Recruiting-Kampagnen über Facebook und Instagram, auch für Fachkräfte, die gerade nicht aktiv suchen</li>
+                            <li>Bewerbung in wenigen Klicks, ohne Anschreiben und ohne Lebenslauf</li>
+                            <li>Stellenanzeigen, die zeigen, warum es sich lohnt, zu dir zu wechseln</li>
+                        </ul>
+                        <p class="goal__examples">Beispiele:
+                            <a href="/portfolio/funnels/recruiting-demo/">Recruiting-Funnel für eine Tischlerei</a>,
+                            <a href="/portfolio/recruiting-kfz/">Recruiting-Kampagne KFZ-Mechatroniker</a></p>
+                        <a class="btn" href="/contact/?thema=Funnel%20%26%20Meta%20Ads" data-magnetic>Mitarbeiter finden<span class="btn__arrow" aria-hidden="true">→</span></a>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -166,7 +226,7 @@ bodyClass: page-home
                             <div class="step__copy">
                                 <p class="step__count">Schritt 01 von 06</p>
                                 <h3 class="step__title">Idee.</h3>
-                                <p class="step__text">Bevor etwas gestaltet wird, verstehe ich, worum es wirklich geht: das Problem deiner Zielgruppe, dein Angebot und das, was Menschen bisher von einer Anfrage abhält.</p>
+                                <p class="step__text">Bevor etwas gestaltet wird, verstehe ich, worum es wirklich geht: das Problem deiner Zielgruppe, dein Angebot und das, was Menschen bisher von einer Anfrage oder Bewerbung abhält.</p>
                                 <div class="chip-row"><span class="chip">Problem</span><span class="chip">Zielgruppe</span><span class="chip">Angebot</span></div>
                             </div>
                             <div class="step__ui ui-idea" aria-hidden="true">
@@ -190,7 +250,7 @@ bodyClass: page-home
                                 <span class="ui-journey__line"></span>
                                 <span class="ui-journey__node">Landingpage</span>
                                 <span class="ui-journey__line"></span>
-                                <span class="ui-journey__node ui-journey__node--goal">Anfrage</span>
+                                <span class="ui-journey__node ui-journey__node--goal">Anfrage oder Bewerbung</span>
                             </div>
                         </article>
 
@@ -246,7 +306,7 @@ bodyClass: page-home
                             <div class="step__copy">
                                 <p class="step__count">Schritt 06 von 06</p>
                                 <h3 class="step__title">Analyse.</h3>
-                                <p class="step__text">Mit dem Start beginnt die eigentliche Arbeit. Ich werte aus, welche Anzeigen Anfragen bringen und wo Nutzer abspringen. So wird Marketing planbar statt zufällig.</p>
+                                <p class="step__text">Mit dem Start beginnt die eigentliche Arbeit. Ich werte aus, welche Anzeigen Anfragen und Bewerbungen bringen und wo Nutzer abspringen. So wird Marketing planbar statt zufällig.</p>
                                 <div class="chip-row"><span class="chip">Auswertung</span><span class="chip">Optimierung</span><span class="chip">Planbarkeit</span></div>
                             </div>
                             <div class="step__ui ui-chart" aria-hidden="true">

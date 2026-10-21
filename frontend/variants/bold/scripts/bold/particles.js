@@ -283,6 +283,10 @@ export function initParticles() {
         if (running) requestFrame();
     });
     reducedMotion.addEventListener("change", requestFrame);
+    // a section changed its shape (e.g. the "Kunden | Mitarbeiter" switch)
+    window.addEventListener("particles:refresh", (event) => {
+        if (activeSection && (!event.detail || event.detail === activeSection)) morphTo(activeSection);
+    });
 
     // ---- START ------------------------------------------------------------------
     resize();

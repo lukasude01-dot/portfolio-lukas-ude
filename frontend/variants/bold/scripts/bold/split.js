@@ -11,7 +11,8 @@
 export function initSplit() {
     for (const element of document.querySelectorAll("[data-split]")) {
         let index = 0;
-        const label = element.textContent.replace(/\s+/g, " ").trim();
+        // data-label: the text screen readers get (e.g. when words switch visually)
+        const label = element.dataset.label || element.textContent.replace(/\s+/g, " ").trim();
 
         const wrapText = (node) => {
             const fragment = document.createDocumentFragment();

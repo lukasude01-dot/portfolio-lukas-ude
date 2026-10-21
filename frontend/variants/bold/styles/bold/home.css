@@ -1054,3 +1054,216 @@
 @media (min-width: 900px) {
     .b-news-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+
+/* ----------------------------------------------------------
+   HERO WORD SWITCH  ("Kunden." <-> "Bewerber.")
+   Both words share one grid cell; the block is as wide as the
+   longer word. Screen readers read the h1 data-label instead.
+---------------------------------------------------------- */
+
+.hero-b__rotator {
+    display: inline-grid;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.hero-b__word {
+    grid-area: 1 / 1;
+}
+
+.hero-b__word:nth-child(2) {
+    visibility: hidden;   /* without motion: only "Kunden." */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero-b__word {
+        animation: word-cycle 7s var(--b-ease-in-out) 2.4s infinite both;
+    }
+
+    .hero-b__word:nth-child(2) {
+        visibility: visible;
+        animation-delay: 5.9s;
+    }
+}
+
+@keyframes word-cycle {
+    0% { transform: translate3d(0, 105%, 0); }
+    7%, 46% { transform: none; }
+    53%, 100% { transform: translate3d(0, -105%, 0); }
+}
+
+/* first word starts visible (before its first cycle) */
+.hero-b__word:first-child {
+    animation-fill-mode: backwards;
+}
+
+@media (max-width: 600px) {
+    .hero-b__claim {
+        font-size: min(clamp(3rem, 0.8rem + 6.4vw, 8.4rem), 10.6vw);
+    }
+}
+
+
+/* ----------------------------------------------------------
+   GOALS  (switch: Kunden | Mitarbeiter)
+---------------------------------------------------------- */
+
+.goals-b__head {
+    display: grid;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+}
+
+.goals-b__head .h2 {
+    margin-top: 1rem;
+}
+
+.goals-b__switch {
+    position: relative;
+    display: none;    /* shown when the script runs */
+    grid-template-columns: 1fr 1fr;
+    justify-self: start;
+    padding: 0.4rem;
+    border: 1px solid var(--b-line-strong);
+    border-radius: 999px;
+    background: rgba(238, 234, 224, 0.05);
+    backdrop-filter: blur(12px);
+}
+
+.goals-b.is-enhanced .goals-b__switch {
+    display: grid;
+}
+
+.goals-b__tab {
+    position: relative;
+    z-index: 1;
+    min-width: 9.5rem;
+    padding: 0.95rem 1.6rem;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    font-stretch: 108%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--b-muted);
+    transition: color 0.45s var(--b-ease);
+}
+
+.goals-b__tab[aria-selected="true"] {
+    color: var(--b-night);
+}
+
+.goals-b__knob {
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 0.4rem;
+    width: calc(50% - 0.4rem);
+    border-radius: 999px;
+    background: var(--b-ivory);
+    box-shadow: 0 0 40px -6px rgba(238, 234, 224, 0.5);
+    transition: transform 0.6s var(--b-ease);
+}
+
+.goals-b[data-goal-active="team"] .goals-b__knob {
+    transform: translateX(100%);
+}
+
+.goals-b__stage {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.goals-b__anchor {
+    height: clamp(160px, 22vw, 340px);
+}
+
+.goal {
+    display: grid;
+    gap: 1.2rem;
+    padding: clamp(1.6rem, 1.2rem + 2vw, 3rem);
+}
+
+.goals-b.is-enhanced .goal:not([hidden]) {
+    animation: goal-in 0.8s var(--b-ease) both;
+}
+
+@keyframes goal-in {
+    from { opacity: 0; transform: translate3d(0, 24px, 0); filter: blur(8px); }
+}
+
+.goal__label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--b-muted);
+}
+
+.goal__title {
+    font-size: clamp(1.9rem, 1.2rem + 2.4vw, 3.4rem);
+    font-weight: 850;
+    font-stretch: 110%;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.goal__list {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.goal__list li {
+    position: relative;
+    padding-left: 1.6rem;
+    line-height: 1.5;
+}
+
+.goal__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.8rem;
+    height: 1.5px;
+    background: var(--b-ivory);
+}
+
+.goal__examples {
+    color: var(--b-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.goal__examples a {
+    color: var(--b-ivory);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-color: rgba(238, 234, 224, 0.4);
+}
+
+.goal .btn {
+    justify-self: start;
+}
+
+@media (min-width: 980px) {
+    .goals-b__head {
+        grid-template-columns: 1fr auto;
+    }
+
+    .goals-b__stage {
+        grid-template-columns: 1fr 1.15fr;
+    }
+
+    .goals-b.is-enhanced .goals-b__stage .goal {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
