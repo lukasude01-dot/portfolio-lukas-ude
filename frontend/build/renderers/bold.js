@@ -9,6 +9,7 @@
  * - "bold-work-list":    the portfolio overview with hover previews
  * - "bold-news":         news cards (all, or the newest three)
  * - "bold-packages":     service packages as large glass cards
+ * - "bold-service-example": screenshot of a package example (package page)
  *
  * CONTENT:  /content/portfolio, /content/news, /content/leistungen
  * STYLES:   /frontend/variants/bold/styles/bold/*.css
@@ -85,6 +86,11 @@ export const boldRenderers = {
                     ${content.packages.map((item, index) => html`
                     <li class="b-package glass" data-tilt="4" data-reveal data-reveal-delay="${index % 3}"${item.id ? html` id="paket-${item.id}"` : ""}>
                         <span class="b-package__number">${String(index + 1).padStart(2, "0")}</span>
+                        ${item.example ? html`
+                        <figure class="b-package__example">
+                            <img src="${item.example.src}" alt="${item.example.alt}" sizes="(min-width: 1180px) 30vw, (min-width: 760px) 45vw, 90vw" loading="lazy" data-responsive>
+                            <figcaption class="caption">${item.example.caption}</figcaption>
+                        </figure>` : ""}
                         <h3 class="b-package__name">${item.name}</h3>
                         <p class="b-package__summary">${item.summary}</p>
                         ${item.includes?.length ? html`<ul class="b-package__list" role="list">${item.includes.map((entry) => html`<li>${entry}</li>`)}</ul>` : ""}
@@ -95,4 +101,21 @@ export const boldRenderers = {
                         </div>
                     </li>`)}
                 </ol>`
+,
+
+    // PACKAGE PAGE - EXAMPLE SCREENSHOT (only if the package has "example")
+    "bold-service-example": ({ item }) => item.example ? html`
+        <section class="block service-example-b" aria-labelledby="service-example-heading">
+            <div class="wrap">
+                <p class="kicker" data-reveal>Beispiel</p>
+                <h2 class="h2" id="service-example-heading" data-split>So kann es aussehen.</h2>
+                <figure class="service-example-b__figure" data-reveal data-reveal-delay="2">
+                    <a class="service-example-b__frame" href="${item.example.url || "/"}" data-tilt="3">
+                        <span class="service-example-b__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <img src="${item.example.src}" alt="${item.example.alt}" sizes="(min-width: 1440px) 1300px, 92vw" loading="lazy" data-responsive>
+                    </a>
+                    <figcaption class="caption">${item.example.caption}</figcaption>
+                </figure>
+            </div>
+        </section>` : ""
 };

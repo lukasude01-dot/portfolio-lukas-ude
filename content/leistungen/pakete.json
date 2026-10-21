@@ -1,5 +1,5 @@
 {
-    "_help": "LEISTUNGEN / PAKETE. One object per package, shown in this order on /leistungen/. Each package also gets its own page /leistungen/<slug>/ built from 'detail'. Card fields: name, price ('ab 1.200 €' or 'Preis auf Anfrage'), summary, includes (list), idealFor, topic (must match CONTACT_TOPICS in /shared/contact-schema.js, pre-selects the contact form), highlight (stronger frame, one package at most), slug (folder name of the detail page, lower case, no umlauts). Detail page fields in 'detail': headline + headlineAccent, intro, problemTitle + problem (paragraphs), benefits (4 x title/text), steps (4 x title/text), faq (question/answer), related (label/href, a link at the end).",
+    "_help": "LEISTUNGEN / PAKETE. One object per package, shown in this order on /leistungen/. Each package also gets its own page /leistungen/<slug>/ built from 'detail'. Card fields: name, price ('ab 1.200 €' or 'Preis auf Anfrage'), summary, includes (list), idealFor, topic (must match CONTACT_TOPICS in /shared/contact-schema.js, pre-selects the contact form), highlight (stronger frame, one package at most), slug (folder name of the detail page, lower case, no umlauts). Detail page fields in 'detail': headline + headlineAccent, intro, problemTitle + problem (paragraphs), benefits (4 x title/text), steps (4 x title/text), faq (question/answer), related (label/href, a link at the end). Optional 'example': {src, alt, caption, url}, a screenshot shown on the package card and page (bold design variant).",
     "packages": [
         {
             "id": "website",
@@ -80,6 +80,12 @@
                     "label": "Zum Portfolio",
                     "href": "/portfolio/"
                 }
+            },
+            "example": {
+                "src": "/media/leistungen/beispiel-website.jpg",
+                "alt": "Startseite der Website von Lukas Ude: schwarzer Hintergrund, große Ivory-Headline „Aus Klicks werden Bewerber.“ und ein Baum-Logo aus leuchtenden Partikeln",
+                "caption": "Beispiel: meine eigene Website, konzipiert, gestaltet und umgesetzt von mir.",
+                "url": "/"
             }
         },
         {
@@ -161,6 +167,12 @@
                     "label": "Landingpages zum Ausprobieren",
                     "href": "/portfolio/funnels/"
                 }
+            },
+            "example": {
+                "src": "/media/funnels/garten-demo/cover.jpg",
+                "alt": "Landingpage der Musterfirma mit großer Headline „Garten- und Landschaftsbau“, abgerundetem Landschaftsfoto und schwebender Beratungskarte",
+                "caption": "Beispiel: Anfrage-Landingpage für einen Gartenbaubetrieb (Demo mit fiktiver Marke).",
+                "url": "/portfolio/funnels/garten-demo/"
             }
         },
         {
