@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- =========================================================
+     PAGE LAYOUT  (design variant "bold")
+
+     PURPOSE:
+     Frame around every page of the bold variant: head, the
+     particle stage in the background, navigation, footer.
+
+     EDIT HERE:
+     - Navigation:   /frontend/variants/bold/components/navigation.html
+     - Footer:       /frontend/variants/bold/components/footer.html
+     - Particles:    /frontend/variants/bold/scripts/bold/particles.js
+
+     DO NOT EDIT WITHOUT TESTING: affects every page.
+========================================================= -->
+<html lang="{{ site.language }}" class="bold">
+<head>
+<!-- @include head -->
+</head>
+<body class="{{ page.bodyClass }}" data-header-theme="{{ page.headerTheme }}">
+
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+    <!-- BACKGROUND STAGE: grid lines + WebGL particles (decoration only) -->
+    <div class="stage" aria-hidden="true">
+        <div class="stage__grid"></div>
+        <div class="stage__glow"></div>
+        <canvas class="stage__particles" data-particles></canvas>
+    </div>
+    <div class="cursor-dot" aria-hidden="true" data-cursor></div>
+
+<!-- @include navigation -->
+
+    <main id="main-content" tabindex="-1">
+{{{ page.body }}}
+    </main>
+
+<!-- @include footer -->
+
+</body>
+</html>
+<!-- ================= END PAGE LAYOUT ================= -->

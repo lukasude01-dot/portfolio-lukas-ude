@@ -1,0 +1,41 @@
+    <!-- =========================================================
+         NAVIGATION  (design variant "bold")
+
+         PURPOSE:
+         Floating glass pill with the logo, the menu and a glowing
+         marker under the current page. On phones a full-screen
+         menu opens via the "Menü" button.
+
+         EDIT HERE:
+         - Menu items: /frontend/config/site.js -> navigation
+
+         RELATED STYLES:  /frontend/variants/bold/styles/bold/nav.css
+         RELATED SCRIPT:  /frontend/scripts/modules/navigation.js
+    ========================================================= -->
+    <header class="nav" data-site-header>
+        <div class="nav__pill">
+            <a class="nav__brand" href="/" aria-label="Startseite Lukas Ude">
+                <img src="/assets/brand/logo-mark-ivory.svg" alt="" width="34" height="34">
+                <span>Lukas Ude</span>
+            </a>
+
+            <nav class="nav__links" aria-label="Hauptnavigation">
+<!-- @render navigation-links -->
+            </nav>
+
+            <a class="nav__cta" href="/contact/" data-magnetic>Projekt anfragen</a>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+                <span data-menu-label>Menü</span>
+                <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+            </button>
+        </div>
+
+        <div class="nav__menu" id="mobile-menu" data-mobile-menu hidden>
+            <nav aria-label="Mobile Navigation">
+<!-- @render navigation-links-mobile -->
+            </nav>
+            <p class="nav__menu-foot">Rooted in ideas. Built for growth.</p>
+        </div>
+    </header>
+    <!-- ================= END NAVIGATION ================= -->

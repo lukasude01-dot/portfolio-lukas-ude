@@ -1,0 +1,73 @@
+/* ==========================================================
+   BOLD MOTION  (text reveals, scroll scenes, reduced motion)
+
+   PURPOSE:
+   - data-split:  headlines appear word by word (scripts/bold/split.js)
+   - data-reveal: blocks fade and rise in (scripts/modules/reveal.js)
+   - [data-scene]: pinned scroll scenes get --p (0 to 1) from
+                   scripts/bold/scenes.js
+   Everything falls back to "visible, no motion" without JS and
+   when the visitor prefers reduced motion.
+========================================================== */
+
+/* WORD-BY-WORD HEADLINES */
+.split-word {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+}
+
+.split-word__inner {
+    display: inline-block;
+}
+
+.js [data-split] .split-word__inner {
+    transform: translate3d(0, 105%, 0) rotate(4deg);
+    transform-origin: 0 100%;
+    transition: transform 1.1s var(--b-ease);
+    transition-delay: calc(var(--i, 0) * 55ms + var(--split-delay, 0ms));
+}
+
+.js [data-split].is-revealed .split-word__inner {
+    transform: none;
+}
+
+/* BLOCKS (overrides the calmer default reveal) */
+.bold.js [data-reveal] {
+    --reveal-distance: 46px;
+    filter: blur(8px);
+    transition:
+        opacity 1s var(--b-ease),
+        transform 1.2s var(--b-ease),
+        filter 1s var(--b-ease);
+    transition-delay: calc(var(--d, 0) * 90ms);
+}
+
+.bold [data-reveal-delay="1"] { --d: 1; }
+.bold [data-reveal-delay="2"] { --d: 2; }
+.bold [data-reveal-delay="3"] { --d: 3; }
+.bold [data-reveal-delay="4"] { --d: 4; }
+.bold [data-reveal-delay="5"] { --d: 5; }
+.bold [data-reveal-delay="6"] { --d: 6; }
+
+.bold.js [data-reveal].is-revealed {
+    filter: none;
+}
+
+/* REDUCED MOTION: show everything, no movement */
+@media (prefers-reduced-motion: reduce) {
+    .js [data-split] .split-word__inner,
+    .bold.js [data-reveal] {
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .marquee__track,
+    .stage__glow {
+        animation: none;
+    }
+}

@@ -1,0 +1,94 @@
+/* ==========================================================
+   BOLD TOKENS  (colours, font, shapes of the bold variant)
+
+   PURPOSE:
+   Overrides the design tokens of the normal website. Shared
+   pages (projects, news, packages) pick up the new look
+   automatically because they only use these variables.
+
+   SAFE TO EDIT: the hex codes and sizes.
+========================================================== */
+
+@font-face {
+    font-family: "Archivo";
+    src: url("/assets/fonts/archivo-standard-latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Archivo";
+    src: url("/assets/fonts/archivo-standard-latin-italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* BOLD PALETTE */
+    --b-night: #080808;          /* page background */
+    --b-night-2: #111111;        /* raised areas */
+    --b-panel: rgba(238, 234, 224, 0.045);  /* glass cards */
+    --b-panel-strong: rgba(238, 234, 224, 0.08);
+    --b-line: rgba(238, 234, 224, 0.12);
+    --b-line-strong: rgba(238, 234, 224, 0.22);
+    --b-ivory: #EEEAE0;
+    --b-muted: #9DA39C;
+    --b-signal: #EEEAE0;         /* accent = ivory: this variant lives in ivory and black only */
+    --b-signal-soft: #FFFFFF;
+    --b-signal-glow: rgba(238, 234, 224, 0.3);
+    --b-forest: #1A1C1A;         /* soft light in the background */
+    --b-forest-glow: rgba(238, 234, 224, 0.07);
+
+    /* TYPE */
+    --b-font: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --b-display-size: clamp(3.4rem, 1.2rem + 10vw, 13rem);
+    --b-h1: clamp(2.8rem, 1.4rem + 6vw, 7.5rem);
+    --b-h2: clamp(2.2rem, 1.2rem + 4vw, 5.2rem);
+    --b-h3: clamp(1.35rem, 1.1rem + 0.9vw, 1.9rem);
+
+    /* SHAPES */
+    --b-radius: 26px;
+    --b-radius-small: 14px;
+    --b-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --b-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+    /* OVERRIDES OF THE NORMAL WEBSITE TOKENS */
+    --font-display: var(--b-font);
+    --font-body: var(--b-font);
+    --color-obsidian: var(--b-night);
+    --color-obsidian-raised: var(--b-night-2);
+    --color-obsidian-line: var(--b-line);
+    --color-brass: var(--b-signal);
+    --color-brass-dark: #B8B2A4;
+    --color-british-green: #0D0E0D;
+    --color-forest: #161716;
+    --color-background: var(--b-night);
+    --color-surface: var(--b-panel);
+    --color-text: var(--b-ivory);
+    --color-text-muted: var(--b-muted);
+    --color-line: var(--b-line);
+    --color-accent: var(--b-signal);
+    --border-radius: 10px;
+    --border-radius-large: var(--b-radius);
+    --header-height: 6.5rem;
+    --topbar-height: 0rem;
+    --header-bar-height: 6.5rem;
+}
+
+/* Shared pages alternate dark and light sections. In this variant
+   "light" and "sand" stay dark too, the bold look lives on night. */
+.theme-dark,
+.theme-light,
+.theme-sand,
+.theme-green {
+    --color-background: transparent;
+    --color-surface: var(--b-panel);
+    --color-text: var(--b-ivory);
+    --color-text-muted: var(--b-muted);
+    --color-line: var(--b-line);
+    --color-accent: var(--b-signal);
+}

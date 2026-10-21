@@ -1,0 +1,515 @@
+/* ==========================================================
+   BOLD BASE  (page, background stage, type, buttons, glass)
+
+   PURPOSE:
+   The building blocks every page of the bold variant uses.
+   Pages: /frontend/variants/bold/pages/*.html
+========================================================== */
+
+html.bold {
+    background: var(--b-night);
+    color-scheme: dark;
+    scrollbar-color: #2a2f2b var(--b-night);
+}
+
+.bold body {
+    background: var(--b-night);
+    color: var(--b-ivory);
+    font-family: var(--b-font);
+    font-stretch: 100%;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+}
+
+.bold ::selection {
+    background: var(--b-signal);
+    color: var(--b-night);
+}
+
+.bold main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Everything sits above the fixed background stage */
+.bold .nav,
+.bold .foot {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ----------------------------------------------------------
+   BACKGROUND STAGE  (fixed behind all content)
+   - grid:       fine technical grid that fades out at the edges
+   - glow:       slow moving light (forest + signal)
+   - particles:  WebGL canvas (scripts/bold/particles.js)
+---------------------------------------------------------- */
+
+.stage {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.stage__grid {
+    position: absolute;
+    inset: -2px;
+    background-image:
+        linear-gradient(to right, rgba(238, 234, 224, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(238, 234, 224, 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 85%);
+    transform: translateY(calc(var(--scroll-y, 0) * -0.08px));
+}
+
+.stage__glow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(40vw 40vw at var(--glow-x, 75%) var(--glow-y, 20%), var(--b-forest-glow), transparent 70%),
+        radial-gradient(32vw 32vw at 15% 85%, rgba(238, 234, 224, 0.13), transparent 70%);
+    filter: blur(20px);
+    animation: stage-glow 18s var(--b-ease-in-out) infinite alternate;
+}
+
+@keyframes stage-glow {
+    to { transform: translate3d(-4vw, 6vh, 0) scale(1.08); }
+}
+
+.stage__particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.stage__particles.is-ready {
+    opacity: 1;
+}
+
+
+/* ----------------------------------------------------------
+   LAYOUT
+---------------------------------------------------------- */
+
+.wrap {
+    width: min(100% - 2 * var(--page-gutter), 1440px);
+    margin-inline: auto;
+}
+
+.block {
+    position: relative;
+    padding-block: clamp(5rem, 3rem + 9vw, 12rem);
+}
+
+
+/* ----------------------------------------------------------
+   TYPE
+---------------------------------------------------------- */
+
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--b-signal);
+}
+
+.kicker {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+}
+
+.kicker span {
+    white-space: nowrap;
+}
+
+.kicker::before {
+    content: "";
+    width: 2.2rem;
+    height: 1px;
+    background: currentColor;
+}
+
+.mega {
+    font-size: var(--b-display-size);
+    font-weight: 850;
+    font-stretch: 112%;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+}
+
+.h1 {
+    font-size: var(--b-h1);
+    font-weight: 800;
+    font-stretch: 108%;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.h2 {
+    font-size: var(--b-h2);
+    font-weight: 800;
+    font-stretch: 106%;
+    line-height: 0.95;
+    letter-spacing: -0.028em;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.h3 {
+    font-size: var(--b-h3);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+.lead {
+    max-width: 38rem;
+    font-size: clamp(1.05rem, 0.95rem + 0.45vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--b-muted);
+}
+
+.lead strong {
+    color: var(--b-ivory);
+    font-weight: 600;
+}
+
+.signal {
+    color: var(--b-signal);
+}
+
+/* Outlined giant words */
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(238, 234, 224, 0.55);
+}
+
+.muted {
+    color: var(--b-muted);
+}
+
+
+/* ----------------------------------------------------------
+   BUTTONS  (pill with glow; data-magnetic pulls them to the pointer)
+---------------------------------------------------------- */
+
+.btn {
+    --btn-bg: var(--b-signal);
+    --btn-fg: var(--b-night);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 3.4rem;
+    padding: 0 1.6rem;
+    border-radius: 999px;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    font-weight: 700;
+    font-size: 0.98rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 0 0 0 var(--b-signal-glow), 0 18px 40px -18px var(--b-signal-glow);
+    transition: box-shadow 0.4s var(--b-ease), background-color 0.3s ease, color 0.3s ease;
+    will-change: transform;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.9s var(--b-ease);
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+    transform: translateX(120%);
+}
+
+.btn:hover,
+.btn:focus-visible {
+    box-shadow: 0 0 0 6px rgba(238, 234, 224, 0.18), 0 22px 50px -16px var(--b-signal-glow);
+}
+
+.btn__arrow {
+    display: inline-block;
+    transition: transform 0.4s var(--b-ease);
+}
+
+.btn:hover .btn__arrow {
+    transform: translateX(4px);
+}
+
+.btn--ghost {
+    --btn-bg: rgba(238, 234, 224, 0.06);
+    --btn-fg: var(--b-ivory);
+    border: 1px solid var(--b-line-strong);
+    box-shadow: none;
+    backdrop-filter: blur(12px);
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+    --btn-bg: rgba(238, 234, 224, 0.12);
+    box-shadow: none;
+}
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--b-ivory);
+}
+
+.arrow-link::after {
+    content: "→";
+    color: var(--b-signal);
+    transition: transform 0.4s var(--b-ease);
+}
+
+.arrow-link:hover::after {
+    transform: translateX(5px);
+}
+
+
+/* ----------------------------------------------------------
+   GLASS CARD  (data-tilt adds 3D tilt + a light following the pointer)
+---------------------------------------------------------- */
+
+.glass {
+    position: relative;
+    border: 1px solid var(--b-line);
+    border-radius: var(--b-radius);
+    background:
+        radial-gradient(400px circle at var(--mx, 50%) var(--my, 0%), rgba(238, 234, 224, 0.13), transparent 45%),
+        linear-gradient(160deg, rgba(238, 234, 224, 0.07), rgba(238, 234, 224, 0.02));
+    backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 30px 80px -40px rgba(0, 0, 0, 0.8);
+}
+
+.glass::after {
+    /* glowing edge that follows the pointer */
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%), rgba(238, 234, 224, 0.8), transparent 60%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.glass:hover::after {
+    opacity: 1;
+}
+
+[data-tilt] {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 0.6s var(--b-ease);
+}
+
+[data-tilt].is-tilting {
+    transition: transform 0.12s linear;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.38rem 0.8rem;
+    border: 1px solid var(--b-line);
+    border-radius: 999px;
+    background: rgba(238, 234, 224, 0.04);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--b-ivory);
+}
+
+.chip--signal {
+    border-color: rgba(238, 234, 224, 0.5);
+    color: var(--b-signal-soft);
+    background: rgba(238, 234, 224, 0.08);
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+
+/* ----------------------------------------------------------
+   MARQUEE  (endless ticker; skews with scroll speed)
+---------------------------------------------------------- */
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(1.5rem, 1rem + 2vw, 3rem);
+    border-block: 1px solid var(--b-line);
+    background: rgba(8, 8, 8, 0.55);
+    backdrop-filter: blur(6px);
+    transform: skewY(calc(var(--scroll-skew, 0) * 1deg));
+}
+
+.marquee__track {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+}
+
+.marquee--reverse .marquee__track {
+    animation-direction: reverse;
+}
+
+.marquee__item {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+    padding-right: clamp(1.5rem, 1rem + 2vw, 3rem);
+    font-size: clamp(2.6rem, 1.6rem + 4.5vw, 6.5rem);
+    font-weight: 850;
+    font-stretch: 118%;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+
+.marquee__item:nth-child(even) {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(238, 234, 224, 0.5);
+}
+
+.marquee__star {
+    color: var(--b-signal);
+    font-size: 0.5em;
+    -webkit-text-stroke: 0;
+}
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
+
+/* ----------------------------------------------------------
+   CURSOR  (soft dot that follows the pointer, mouse only)
+---------------------------------------------------------- */
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    border-radius: 50%;
+    background: var(--b-signal);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transform: translate3d(var(--cx, -100px), var(--cy, -100px), 0) scale(var(--cs, 1));
+    transition: opacity 0.3s ease, width 0.3s var(--b-ease), height 0.3s var(--b-ease), margin 0.3s var(--b-ease), background-color 0.3s ease;
+}
+
+.cursor-dot.is-active {
+    opacity: 1;
+}
+
+.cursor-dot.is-hover {
+    width: 54px;
+    height: 54px;
+    margin: -27px 0 0 -27px;
+    background: rgba(238, 234, 224, 0.18);
+    border: 1px solid rgba(238, 234, 224, 0.7);
+}
+
+@media (pointer: coarse) {
+    .cursor-dot { display: none; }
+}
+
+
+/* ----------------------------------------------------------
+   IMAGE CAPTION
+---------------------------------------------------------- */
+
+.caption {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--b-muted);
+}
+
+
+/* ----------------------------------------------------------
+   SKIP LINK + FOCUS
+---------------------------------------------------------- */
+
+.bold :focus-visible {
+    outline: 2px solid var(--b-signal);
+    outline-offset: 3px;
+}
+
+
+/* ----------------------------------------------------------
+   SMALL PHONES: long single words (e.g. "Zusammenarbeit")
+   must fit, so the giant type gets narrower and smaller.
+---------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    .mega,
+    .h1,
+    .h2,
+    .page-b__title,
+    .about-b__title,
+    .contact-b__title {
+        font-stretch: 96%;
+    }
+
+    .mega,
+    .page-b__title,
+    .about-b__title,
+    .contact-b__title {
+        font-size: min(var(--b-display-size), 9.4vw);
+    }
+
+    .h2 {
+        font-size: min(var(--b-h2), 8.4vw);
+    }
+}
+
+html.bold {
+    overflow-x: clip;
+}

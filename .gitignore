@@ -3,6 +3,7 @@ node_modules/
 
 # Generated website (built by `npm run build`)
 frontend/dist/
+frontend/dist-*/
 frontend/.cache/
 
 # Secrets – never commit real environment files

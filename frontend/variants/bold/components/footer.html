@@ -1,0 +1,45 @@
+    <!-- =========================================================
+         FOOTER  (design variant "bold")
+
+         PURPOSE:
+         Giant closing statement, links, contact and legal links.
+
+         EDIT HERE:
+         - Links, e-mail, social profiles: /frontend/config/site.js
+
+         RELATED STYLES:  /frontend/variants/bold/styles/bold/footer.css
+    ========================================================= -->
+    <footer class="foot" data-shape="logo" data-shape-size="0.85">
+        <div class="wrap">
+            <div class="foot__top">
+            <a class="foot__call" href="/contact/" data-magnetic>
+                <span class="foot__call-small">Bereit für mehr Anfragen?</span>
+                <span class="foot__call-big">Lass uns reden<span class="foot__arrow" aria-hidden="true">→</span></span>
+            </a>
+            <div class="foot__anchor" data-shape-anchor aria-hidden="true"></div>
+            </div>
+
+            <div class="foot__grid">
+                <div class="foot__brand">
+                    <img src="/assets/brand/logo-mark-ivory.svg" alt="" width="56" height="56" loading="lazy">
+                    <p>Rooted in ideas.<br>Built for growth.</p>
+                </div>
+                <nav class="foot__col" aria-label="Fußzeile">
+                    <h2 class="foot__label">Entdecken</h2>
+<!-- @render footer-links -->
+                </nav>
+                <div class="foot__col">
+                    <h2 class="foot__label">Kontakt</h2>
+<!-- @render footer-contact -->
+                </div>
+            </div>
+
+            <div class="foot__bottom">
+                <p>© {{ site.year }} {{ site.name }}</p>
+<!-- @render legal-links -->
+            </div>
+        </div>
+
+        <p class="foot__giant" aria-hidden="true">LUKAS UDE</p>
+    </footer>
+    <!-- ================= END FOOTER ================= -->

@@ -12,6 +12,7 @@
         "postinstall": "npm --prefix frontend install && npm --prefix backend install --omit=dev",
         "dev": "node scripts/dev.js",
         "build": "npm --prefix frontend run build",
+        "build:bold": "npm --prefix frontend run build -- --variant=bold",
         "start": "npm --prefix backend start",
         "test": "npm --prefix backend test",
         "check": "node scripts/check-site.js"

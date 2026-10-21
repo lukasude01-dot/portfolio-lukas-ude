@@ -3,6 +3,8 @@
  *
  * RUN:
  *   npm run build            -> builds once into /frontend/dist
+ *   npm run build -- --variant=bold -> builds the design variant from
+ *                               /frontend/variants/bold into /frontend/dist-bold
  *   npm run build -- --watch -> rebuilds whenever a file changes
  *   npm run build -- --drafts -> also builds projects with "status": "draft"
  *
@@ -40,18 +42,41 @@ import { renderers } from "./renderers/index.js";
 
 const FRONTEND = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ROOT = path.resolve(FRONTEND, "..");
-const DIST = path.join(FRONTEND, "dist");
+const args = new Set(process.argv.slice(2));
+const includeDrafts = args.has("--drafts");
+
+// DESIGN VARIANTS: /frontend/variants/<name>/ can contain its own pages,
+// components, templates, styles, scripts and assets. Every file it does
+// not contain is taken from the normal website. Content is shared.
+const VARIANT = (process.argv.find((arg) => arg.startsWith("--variant="))?.split("=")[1] || process.env.SITE_VARIANT || "").replace(/[^\w-]/g, "");
+const VARIANT_DIR = VARIANT ? path.join(FRONTEND, "variants", VARIANT) : null;
+if (VARIANT_DIR && !fs.existsSync(VARIANT_DIR)) throw new Error(`Design variant "${VARIANT}" not found in frontend/variants/`);
+
+const DIST = path.join(FRONTEND, VARIANT ? `dist-${VARIANT}` : "dist");
 const CACHE = path.join(FRONTEND, ".cache", "images");
 const CONTENT = path.join(ROOT, "content");
 const SHARED = path.join(ROOT, "shared");
 
-const PAGES_DIR = path.join(FRONTEND, "pages");
-const COMPONENTS_DIR = path.join(FRONTEND, "components");
-const TEMPLATES_DIR = path.join(FRONTEND, "templates");
 const DEMOS_DIR = path.join(FRONTEND, "demos");
 
-const args = new Set(process.argv.slice(2));
-const includeDrafts = args.has("--drafts");
+/** The variant's folder first, then the normal one (first match wins). */
+const sourceDirs = (folder) => [VARIANT_DIR && path.join(VARIANT_DIR, folder), path.join(FRONTEND, folder)].filter((dir) => dir && fs.existsSync(dir));
+const COMPONENTS_DIR = sourceDirs("components");
+
+function sourceFile(folder, file) {
+    const found = sourceDirs(folder).map((dir) => path.join(dir, file)).find((candidate) => fs.existsSync(candidate));
+    if (!found) throw new Error(`${folder}/${file} not found`);
+    return found;
+}
+
+/** All page files: the variant's pages replace normal pages with the same name. */
+function listPages() {
+    const pages = new Map();
+    for (const dir of sourceDirs("pages").reverse()) {
+        for (const name of fs.readdirSync(dir).filter((file) => file.endsWith(".html") && !file.startsWith("_"))) pages.set(name, path.join(dir, name));
+    }
+    return [...pages.entries()].sort(([a], [b]) => a.localeCompare(b));
+}
 
 // Section pages that get one detail page per project
 // ("parent" is the section page, shown in the breadcrumbs and the back link)
@@ -70,7 +95,10 @@ const DETAIL_TEMPLATES = {
 /** Finds the source file for an image URL used in HTML. */
 function resolveImageSource(url) {
     if (!url) return null;
-    if (url.startsWith("/assets/")) return path.join(FRONTEND, url);
+    if (url.startsWith("/assets/")) {
+        const variantFile = VARIANT_DIR && path.join(VARIANT_DIR, url);
+        return variantFile && fs.existsSync(variantFile) ? variantFile : path.join(FRONTEND, url);
+    }
     if (url.startsWith("/media/")) return path.join(CONTENT, url.replace(/^\/media\//, ""));
     return null;
 }
@@ -126,7 +154,7 @@ async function renderPage({ site, content, page, body, extra = {}, sourceName })
     const options = { componentsDir: COMPONENTS_DIR, renderers, sourceName };
 
     page.body = renderTemplate(body, context, options);
-    const layout = fs.readFileSync(path.join(COMPONENTS_DIR, "layout.html"), "utf8");
+    const layout = fs.readFileSync(sourceFile("components", "layout.html"), "utf8");
     const finished = renderTemplate(layout, context, { ...options, sourceName: `layout (${sourceName})` });
 
     return buildResponsiveImages(finished, { distDir: DIST, cacheDir: CACHE, resolveSource: resolveImageSource, pageName: sourceName });
@@ -139,9 +167,10 @@ async function renderPage({ site, content, page, body, extra = {}, sourceName })
 
 function copyStaticFiles(content) {
     log.step("Copying static files");
-    copyFolder(path.join(FRONTEND, "public"), DIST);
-    copyFolder(path.join(FRONTEND, "assets"), path.join(DIST, "assets"));
-    copyFolder(path.join(FRONTEND, "scripts"), path.join(DIST, "scripts"));
+    // Normal files first, the variant's files on top (they replace same names)
+    for (const dir of sourceDirs("public").reverse()) copyFolder(dir, DIST);
+    for (const dir of sourceDirs("assets").reverse()) copyFolder(dir, path.join(DIST, "assets"));
+    for (const dir of sourceDirs("scripts").reverse()) copyFolder(dir, path.join(DIST, "scripts"));
 
     // Only PUBLIC shared code goes to the browser (validation rules).
     fs.mkdirSync(path.join(DIST, "scripts", "shared"), { recursive: true });
@@ -160,15 +189,15 @@ function copyStaticFiles(content) {
 
 function buildCss() {
     log.step("Bundling CSS");
-    writeFile("styles/main.css", bundleCss(path.join(FRONTEND, "styles", "main.css")));
+    writeFile("styles/main.css", bundleCss(sourceFile("styles", "main.css")));
 }
 
 async function buildPages(site, content) {
     log.step("Building pages");
     const builtPages = [];
 
-    for (const file of fs.readdirSync(PAGES_DIR).filter((name) => name.endsWith(".html") && !name.startsWith("_"))) {
-        const source = fs.readFileSync(path.join(PAGES_DIR, file), "utf8");
+    for (const [file, sourcePath] of listPages()) {
+        const source = fs.readFileSync(sourcePath, "utf8");
         const { data, body } = parseFrontMatter(source, `pages/${file}`);
         const name = file.replace(/\.html$/, "");
         const defaultPath = name === "index" ? "/" : `/${name}/`;
@@ -190,7 +219,7 @@ async function buildProjectPages(site, content) {
     const builtPages = [];
 
     for (const [section, settings] of Object.entries(DETAIL_TEMPLATES)) {
-        const template = fs.readFileSync(path.join(TEMPLATES_DIR, settings.template), "utf8");
+        const template = fs.readFileSync(sourceFile("templates", settings.template), "utf8");
         const projects = content[section];
 
         for (const [index, project] of projects.entries()) {
@@ -225,7 +254,7 @@ async function buildProjectPages(site, content) {
 /** One page per news article: /content/news/<slug>/ -> /news/<slug>/ */
 async function buildNewsPages(site, content) {
     log.step("Building news articles");
-    const template = fs.readFileSync(path.join(TEMPLATES_DIR, "news-article.html"), "utf8");
+    const template = fs.readFileSync(sourceFile("templates", "news-article.html"), "utf8");
     const builtPages = [];
 
     for (const [index, article] of content.news.entries()) {
@@ -254,7 +283,7 @@ async function buildNewsPages(site, content) {
 /** One explanation page per service package: /leistungen/<slug>/ */
 async function buildServicePages(site, content) {
     log.step("Building service pages");
-    const template = fs.readFileSync(path.join(TEMPLATES_DIR, "service-page.html"), "utf8");
+    const template = fs.readFileSync(sourceFile("templates", "service-page.html"), "utf8");
     const builtPages = [];
 
     for (const item of content.packages.filter((entry) => entry.slug && entry.detail)) {
@@ -371,7 +400,7 @@ async function build() {
     await buildSeoFiles(site, pages);
 
     log.printWarnings();
-    console.log(`\n✓ Done in ${((Date.now() - started) / 1000).toFixed(1)}s -> frontend/dist\n`);
+    console.log(`\n✓ Done in ${((Date.now() - started) / 1000).toFixed(1)}s -> frontend/${path.basename(DIST)}\n`);
 }
 
 async function safeBuild() {
@@ -392,7 +421,7 @@ if (args.has("--watch")) {
     console.log("Watching for changes (Ctrl+C to stop) ...");
     let timer;
     const rebuild = (event, file) => {
-        if (!file || /(^|[\\/])(dist|\.cache)([\\/]|$)/.test(file)) return;
+        if (!file || /(^|[\\/])(dist(-[\w-]+)?|\.cache)([\\/]|$)/.test(file)) return;
         clearTimeout(timer);
         timer = setTimeout(() => {
             console.log(`\nChanged: ${file}`);

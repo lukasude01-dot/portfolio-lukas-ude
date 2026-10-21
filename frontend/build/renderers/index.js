@@ -28,6 +28,7 @@ import { projectRenderers } from "./project.js";
 import { portfolioRenderers } from "./portfolio.js";
 import { servicesRenderers } from "./services.js";
 import { newsRenderers } from "./news.js";
+import { boldRenderers } from "./bold.js";
 
 export const renderers = {
     ...siteRenderers,
@@ -39,5 +40,6 @@ export const renderers = {
     ...projectRenderers,
     ...portfolioRenderers,
     ...servicesRenderers,
-    ...newsRenderers
+    ...newsRenderers,
+    ...boldRenderers
 };

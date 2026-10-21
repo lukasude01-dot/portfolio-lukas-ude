@@ -1,0 +1,55 @@
+/* ==========================================================
+   MAIN STYLESHEET  (design variant "bold")
+
+   PURPOSE:
+   1. Loads the normal website CSS (so project, news and package
+      pages that this variant shares keep working).
+   2. Loads the bold layer on top: new tokens, glass look,
+      navigation, footer and the new page sections.
+
+   The build combines everything into /dist-bold/styles/main.css
+
+   EDIT WITH CARE: the order matters (later files win).
+========================================================== */
+
+/* NORMAL WEBSITE CSS (shared building blocks) */
+@import url("../../../styles/base/variables.css");
+@import url("../../../styles/base/reset.css");
+@import url("../../../styles/base/typography.css");
+@import url("../../../styles/base/layout.css");
+@import url("../../../styles/base/motion.css");
+@import url("../../../styles/components/buttons.css");
+@import url("../../../styles/components/cards.css");
+@import url("../../../styles/components/content-blocks.css");
+@import url("../../../styles/components/filters.css");
+@import url("../../../styles/components/forms.css");
+@import url("../../../styles/components/ad-mockup.css");
+@import url("../../../styles/components/device-preview.css");
+@import url("../../../styles/components/timeline.css");
+@import url("../../../styles/components/lightbox.css");
+@import url("../../../styles/components/cursor-label.css");
+@import url("../../../styles/components/portfolio-subnav.css");
+@import url("../../../styles/sections/page-hero.css");
+@import url("../../../styles/sections/services.css");
+@import url("../../../styles/sections/process.css");
+@import url("../../../styles/sections/cta.css");
+@import url("../../../styles/pages/work.css");
+@import url("../../../styles/pages/services.css");
+@import url("../../../styles/pages/news.css");
+@import url("../../../styles/pages/portfolio.css");
+@import url("../../../styles/pages/project.css");
+@import url("../../../styles/pages/funnels.css");
+@import url("../../../styles/pages/creatives.css");
+@import url("../../../styles/pages/ai.css");
+@import url("../../../styles/pages/contact.css");
+@import url("../../../styles/pages/legal.css");
+
+/* BOLD LAYER */
+@import url("./bold/tokens.css");
+@import url("./bold/base.css");
+@import url("./bold/motion.css");
+@import url("./bold/nav.css");
+@import url("./bold/footer.css");
+@import url("./bold/home.css");
+@import url("./bold/pages.css");
+@import url("./bold/shared.css");

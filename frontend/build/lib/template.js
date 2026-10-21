@@ -44,9 +44,11 @@ function lookup(context, dottedPath) {
 function resolveIncludes(source, componentsDir, sourceName, depth = 0) {
     if (depth > 10) log.fail("TEMPLATE", `Includes nested too deeply in ${sourceName} (circular include?)`);
     return source.replace(INCLUDE_PATTERN, (match, name) => {
-        const file = path.join(componentsDir, `${name}.html`);
-        if (!fs.existsSync(file)) {
-            log.fail("TEMPLATE", `"${sourceName}" includes "${name}", but ${path.relative(process.cwd(), file)} does not exist.`);
+        // componentsDir can be one folder or a list (design variant first)
+        const dirs = Array.isArray(componentsDir) ? componentsDir : [componentsDir];
+        const file = dirs.map((dir) => path.join(dir, `${name}.html`)).find((candidate) => fs.existsSync(candidate));
+        if (!file) {
+            log.fail("TEMPLATE", `"${sourceName}" includes "${name}", but components/${name}.html does not exist.`);
         }
         return resolveIncludes(fs.readFileSync(file, "utf8"), componentsDir, name, depth + 1);
     });

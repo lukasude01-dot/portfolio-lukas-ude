@@ -1,0 +1,74 @@
+/* ==========================================================
+   BOLD LOOK FOR SHARED PAGES
+   Project, news article and package pages use the templates of
+   the normal website. These rules give them the bold look.
+========================================================== */
+
+/* BUTTONS of the shared pages: ivory pills with black text */
+.bold .button {
+    border-radius: 999px;
+}
+
+.bold .button--primary,
+.bold .button--primary:hover,
+.bold .button--primary:focus-visible {
+    background-color: var(--b-ivory);
+    color: var(--b-night);
+}
+
+.bold .button--ghost {
+    border-color: var(--b-line-strong);
+    color: var(--b-ivory);
+}
+
+.bold .button--ghost:hover,
+.bold .button--ghost:focus-visible {
+    background-color: rgba(238, 234, 224, 0.1);
+    color: var(--b-ivory);
+}
+
+/* FILTERS + VIEW SWITCH (creatives, funnels) */
+.bold .filter-bar__button,
+.bold .view-switch__button {
+    border-radius: 999px;
+}
+
+.bold .filter-bar__button[aria-pressed="true"],
+.bold .view-switch__button[aria-pressed="true"] {
+    background-color: var(--b-ivory);
+    border-color: var(--b-ivory);
+    color: var(--b-night);
+}
+
+/* HEADLINES: the bold variant writes them extended and uppercase */
+.bold .heading-1,
+.bold .heading-2,
+.bold .heading-display {
+    font-weight: 800;
+    font-stretch: 108%;
+    letter-spacing: -0.025em;
+}
+
+.bold .heading-accent {
+    font-weight: 300;
+    font-stretch: 100%;
+    font-style: italic;
+    text-transform: none;
+}
+
+/* Section backgrounds stay transparent, the stage shows through */
+.bold .theme-light,
+.bold .theme-sand,
+.bold .theme-dark,
+.bold .theme-green {
+    background-color: transparent;
+}
+
+/* Cards and boxes of the shared pages get the glass look */
+.bold .project-facts,
+.bold .notice,
+.bold .faq details,
+.bold .package,
+.bold .news-card {
+    border-color: var(--b-line);
+}
