@@ -309,7 +309,8 @@ async function buildShape(shape, w, h, count) {
     if (shape === "cloud") return cloud(w, h, count);
     if (shape === "orbit") return orbit(w, h, count);
     if (shape === "wave") return wave(w, h, count);
-    if (shape === "logo") return fromImage("/assets/brand/logo-mark-ivory.svg", w, h, count);
+    // path relative to this file, so it also works when the site lives in a subfolder
+    if (shape === "logo") return fromImage(new URL("../../assets/brand/logo-mark-ivory.svg", import.meta.url).href, w, h, count);
     if (shape === "funnel") return fromDrawing(drawFunnel, w, h, count);
     if (shape.startsWith("text:")) return fromDrawing((ctx, cw, ch) => drawWord(ctx, cw, ch, shape.slice(5)), w, h, count);
     return cloud(w, h, count);
