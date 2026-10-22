@@ -2,9 +2,9 @@
  * WEBSITE BUILD  (turns the source files into the finished website)
  *
  * RUN:
- *   npm run build            -> builds once into /frontend/dist
- *   npm run build -- --variant=bold -> builds the design variant from
- *                               /frontend/variants/bold into /frontend/dist-bold
+ *   npm run build            -> builds the live design (variant "bold") into /frontend/dist
+ *   npm run build -- --variant=classic -> builds the earlier design without
+ *                               a variant into /frontend/dist-classic
  *   npm run build -- --watch -> rebuilds whenever a file changes
  *   npm run build -- --drafts -> also builds projects with "status": "draft"
  *
@@ -48,11 +48,15 @@ const includeDrafts = args.has("--drafts");
 // DESIGN VARIANTS: /frontend/variants/<name>/ can contain its own pages,
 // components, templates, styles, scripts and assets. Every file it does
 // not contain is taken from the normal website. Content is shared.
-const VARIANT = (process.argv.find((arg) => arg.startsWith("--variant="))?.split("=")[1] || process.env.SITE_VARIANT || "").replace(/[^\w-]/g, "");
+// LIVE_VARIANT is the design that is published; it is built into /dist.
+// --variant=classic builds the earlier design without a variant into /dist-classic.
+const LIVE_VARIANT = "bold";
+const REQUESTED = (process.argv.find((arg) => arg.startsWith("--variant="))?.split("=")[1] || process.env.SITE_VARIANT || LIVE_VARIANT).replace(/[^\w-]/g, "");
+const VARIANT = REQUESTED === "classic" ? "" : REQUESTED;
 const VARIANT_DIR = VARIANT ? path.join(FRONTEND, "variants", VARIANT) : null;
 if (VARIANT_DIR && !fs.existsSync(VARIANT_DIR)) throw new Error(`Design variant "${VARIANT}" not found in frontend/variants/`);
 
-const DIST = path.join(FRONTEND, VARIANT ? `dist-${VARIANT}` : "dist");
+const DIST = path.join(FRONTEND, REQUESTED === LIVE_VARIANT ? "dist" : `dist-${REQUESTED}`);
 const CACHE = path.join(FRONTEND, ".cache", "images");
 const CONTENT = path.join(ROOT, "content");
 const SHARED = path.join(ROOT, "shared");
