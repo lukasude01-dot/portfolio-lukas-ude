@@ -53,10 +53,13 @@ export function sendJson(response, status, data, headers = {}) {
     response.end(body);
 }
 
+// Proxies append the address they received the request from, so only the
+// last entries are trustworthy. The first one can be sent by anybody.
 export function getClientIp(request, trustProxy) {
-    if (trustProxy) {
-        const forwarded = request.headers["x-forwarded-for"];
-        if (forwarded) return String(forwarded).split(",")[0].trim();
+    const hops = Number(trustProxy) || 0;
+    if (hops > 0) {
+        const forwarded = String(request.headers["x-forwarded-for"] || "").split(",").map((part) => part.trim()).filter(Boolean);
+        if (forwarded.length) return forwarded[Math.max(0, forwarded.length - hops)];
     }
     return request.socket.remoteAddress || "unknown";
 }

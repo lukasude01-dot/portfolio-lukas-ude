@@ -12,7 +12,7 @@ import http from "node:http";
 import { loadConfig } from "../src/config.js";
 import { createApp } from "../src/server.js";
 import { createFormTokens } from "../src/lib/form-token.js";
-import { isAllowedOrigin } from "../src/lib/http.js";
+import { isAllowedOrigin, getClientIp } from "../src/lib/http.js";
 import { validateContact } from "../../shared/contact-schema.js";
 import { createContactDelivery } from "../src/services/email.js";
 import nodemailer from "nodemailer";
@@ -229,4 +229,22 @@ test("contact diagnosis shows setting names only, never values", () => {
     assert.equal(config.diagnostics.SMTP_USER, "fehlt");
     assert.ok(!JSON.stringify(config.diagnostics).includes("super-secret"));
     assert.ok(!JSON.stringify(config.diagnostics).includes("smtp.example.com"));
+});
+
+test("settings are not readable over the internet", async () => {
+    const server = await startServer();
+    try {
+        const response = await fetch(`${server.base}/api/health/contact`);
+        assert.equal(response.status, 404);
+    } finally {
+        await server.close();
+    }
+});
+
+test("client IP: a forged X-Forwarded-For entry is ignored", () => {
+    const request = { headers: { "x-forwarded-for": "1.2.3.4, 203.0.113.9" }, socket: { remoteAddress: "10.0.0.1" } };
+    assert.equal(getClientIp(request, 1), "203.0.113.9");
+    assert.equal(getClientIp(request, 2), "1.2.3.4");
+    assert.equal(getClientIp(request, 0), "10.0.0.1");
+    assert.equal(loadConfig({ TRUST_PROXY: "true" }).config.trustProxy, 1);
 });

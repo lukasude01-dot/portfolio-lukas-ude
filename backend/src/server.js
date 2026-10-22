@@ -42,7 +42,7 @@ export function createApp(config, { deliver } = {}) {
     const formTokens = createFormTokens({ secret: config.formTokenSecret, minSeconds: config.formMinSeconds, maxAgeMinutes: config.formMaxAgeMinutes });
 
     const routes = {
-        ...createHealthRoutes(config),
+        ...createHealthRoutes(),
         ...createContactRoutes({ config, logger, rateLimiter, formTokens, deliver: deliver || createContactDelivery({ config, logger }) })
     };
 
@@ -120,7 +120,7 @@ export function startServer() {
     server.requestTimeout = 20_000;
 
     server.listen(config.port, config.host, () => {
-        logger.info({ area: "SERVER", message: `Running on http://localhost:${config.port}`, delivery: config.contact.delivery, frontend: config.serveFrontend ? config.frontendDist : "not served" });
+        logger.info({ area: "SERVER", message: `Running on http://localhost:${config.port}`, delivery: config.contact.delivery, frontend: config.serveFrontend ? config.frontendDist : "not served", settings: config.diagnostics });
     });
 
     const shutdown = () => server.close(() => process.exit(0));

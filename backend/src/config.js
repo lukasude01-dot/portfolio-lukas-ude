@@ -26,6 +26,13 @@ function readBoolean(value, fallback) {
     return ["1", "true", "yes", "on"].includes(String(value).toLowerCase());
 }
 
+// TRUST_PROXY: false/0 = no proxy, true = one proxy, a number = that many proxies.
+function readProxyHops(value) {
+    const number = Number(value);
+    if (Number.isInteger(number) && number >= 0) return number;
+    return readBoolean(value, false) ? 1 : 0;
+}
+
 function readNumber(value, fallback) {
     const number = Number(value);
     return Number.isFinite(number) && number > 0 ? number : fallback;
@@ -67,7 +74,7 @@ export function loadConfig(env = process.env) {
     // The contact form only runs when its delivery is configured completely.
     const contactEnabled = problems.length === problemsBeforeDelivery;
 
-    // Public diagnosis: which settings are present. Never contains values.
+    // Diagnosis for the server log: which settings are present. Never contains values.
     const isSet = (name) => Boolean(env[name] && String(env[name]).trim());
     const diagnostics = {
         contactForm: contactEnabled ? "on" : "off",
@@ -82,7 +89,7 @@ export function loadConfig(env = process.env) {
         host: env.HOST || "0.0.0.0",
         port,
         allowedOrigins: readList(env.ALLOWED_ORIGINS, [`http://localhost:${port}`, `http://127.0.0.1:${port}`]),
-        trustProxy: readBoolean(env.TRUST_PROXY, false),
+        trustProxy: readProxyHops(env.TRUST_PROXY),
 
         serveFrontend: readBoolean(env.SERVE_FRONTEND, true),
         frontendDist: path.resolve(BACKEND_DIR, env.FRONTEND_DIST || "../frontend/dist"),
