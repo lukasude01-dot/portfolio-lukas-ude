@@ -248,3 +248,16 @@ test("client IP: a forged X-Forwarded-For entry is ignored", () => {
     assert.equal(getClientIp(request, 0), "10.0.0.1");
     assert.equal(loadConfig({ TRUST_PROXY: "true" }).config.trustProxy, 1);
 });
+
+test("order: prices and names come from the catalogue, unknown items are dropped", async () => {
+    const { validateOrder } = await import("../../shared/order-schema.js");
+    const catalog = { "fly-a": { name: "Fliege A", kind: "fly", price: "" }, "course-b-live": { name: "Kurs B", kind: "course", price: "" } };
+    const onlyCourse = validateOrder({ name: "Max", email: "max@example.org", privacy: true, items: [{ id: "course-b-live", quantity: 1 }, { id: "evil", quantity: 3 }] }, catalog);
+    assert.equal(onlyCourse.valid, true);
+    assert.equal(onlyCourse.items.length, 1);
+    const withFly = validateOrder({ name: "Max", email: "max@example.org", privacy: true, items: [{ id: "fly-a", quantity: 2, price: "0 €" }] }, catalog);
+    assert.equal(withFly.valid, false);
+    assert.ok(withFly.errors.street);
+    assert.equal(withFly.items[0].price, "");
+    assert.equal(validateOrder({ name: "Max", email: "max@example.org", privacy: true, items: [{ id: "fly-a", quantity: 999 }] }, catalog).errors.items, "Dein Warenkorb ist leer.");
+});

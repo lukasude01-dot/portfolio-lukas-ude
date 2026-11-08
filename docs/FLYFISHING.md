@@ -44,3 +44,20 @@ Beim Einfügen neuer Fotos: auf höchstens 2000 px verkleinern und die Metadaten
 
 Werden wieder KI-Bilder genutzt, müssen sie sichtbar markiert sein und die Bildunterschrift
 „KI-illustriert“ tragen. KI-Bilder von Personen werden nicht verwendet.
+
+## Shop und Warenkorb
+
+- Fliegen: `content/flyfishing/fliegen.json`, Kurse buchbar über `"offers"` in `kurse.json`.
+- Preise: `"price": "4,50 €"` eintragen. Ohne Preis steht „Preis auf Anfrage“.
+- Warenkorb: `frontend/variants/flyfishing/scripts/flyfishing/cart.js` (speichert nur IDs und Mengen im Browser).
+- Absenden: `POST /api/order` (`backend/src/routes/order.js`). Der Server prüft gegen den Katalog in
+  `content/flyfishing/` und schickt eine unverbindliche Bestellanfrage per E-Mail.
+
+### Online-Bezahlung später zuschalten
+
+Vorgesehen ist Stripe Checkout (Bezahlseite von Stripe, keine Kartendaten auf dieser Seite):
+1. Gewerbe anmelden, Stripe-Konto anlegen.
+2. Preise in `fliegen.json` und `kurse.json` eintragen, AGB, Widerrufsbelehrung und Versandinfos ergänzen.
+3. `STRIPE_SECRET_KEY` und `STRIPE_WEBHOOK_SECRET` nur als Umgebungsvariable bei Hostinger setzen.
+4. `order.js` erzeugt dann eine Checkout-Session statt der E-Mail; ein Webhook bestätigt die Zahlung.
+5. Datenschutzerklärung um den Zahlungsanbieter ergänzen, Button in „Zahlungspflichtig bestellen“ ändern.

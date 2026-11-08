@@ -215,6 +215,7 @@ function copyStaticFiles(content) {
     // Only PUBLIC shared code goes to the browser (validation rules).
     fs.mkdirSync(path.join(DIST, "scripts", "shared"), { recursive: true });
     fs.copyFileSync(path.join(SHARED, "contact-schema.js"), path.join(DIST, "scripts", "shared", "contact-schema.js"));
+    fs.copyFileSync(path.join(SHARED, "order-schema.js"), path.join(DIST, "scripts", "shared", "order-schema.js"));
 
     // News images: /content/news/<slug>/* -> /dist/media/news/<slug>/*
     for (const article of content.news) {
@@ -351,6 +352,17 @@ async function buildServicePages(site, content) {
     return builtPages;
 }
 
+/** Public shop catalogue for the cart in the browser (names, images, prices).
+ *  The server checks every order against /content again (backend/src/services/catalog.js). */
+function writeShopCatalog(content) {
+    const items = {};
+    for (const fly of content.flies || []) items[`fly-${fly.slug}`] = { name: fly.name, kind: "fly", price: fly.price || "", image: fly.image.src, url: "/fliegen/" };
+    for (const course of content.courses || []) {
+        for (const offer of course.offers || []) items[`course-${offer.id}`] = { name: `${course.title}: ${offer.label}`, kind: "course", price: offer.price || "", image: course.image.src, url: course.url };
+    }
+    writeFile("data/katalog.json", JSON.stringify(items));
+}
+
 /** One landing page per course of a standalone variant: /akademie/<slug>/ */
 async function buildCoursePages(site, content) {
     if (!content.courses?.length) return [];
@@ -471,6 +483,7 @@ async function build() {
             ...(await buildServicePages(site, content))
         ];
     if (!STANDALONE) await buildDemos(site, content);
+    if (STANDALONE) writeShopCatalog(content);
     await buildSeoFiles(site, pages);
 
     log.printWarnings();

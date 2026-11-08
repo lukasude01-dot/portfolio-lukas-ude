@@ -4,23 +4,26 @@
 # Flies: /content/flyfishing/fliegen.json
 # Orders go through the contact form (topic "Fly Fishing: Fliegen bestellen").
 # =========================================================
-title: Fliegen kaufen
+title: Fliegen-Shop
 description: Handgebundene Fliegen von Lukas Ude. Streamer, Meerforellenfliegen und Nassfliegen, selbst gebunden und am Wasser erprobt. Bestellung auf Anfrage.
 path: /fliegen/
 bodyClass: page-flies
 ---
 
-        <section class="page-b" data-shape="image:/assets/shapes/streamer.svg" data-shape-size="0.95" aria-labelledby="flies-heading">
+        <section class="page-b ff-photo-hero" data-shape="image:/assets/shapes/streamer.svg" data-shape-size="0.95" aria-labelledby="flies-heading">
             <div class="wrap page-b__inner page-b__inner--split">
                 <div>
-                    <p class="kicker" data-reveal>Fliegen</p>
+                    <p class="kicker" data-reveal>Fliegen-Shop</p>
                     <h1 class="mega page-b__title" id="flies-heading" data-split>Von Hand <span class="outline">gebunden.</span></h1>
-                    <p class="lead" data-reveal data-reveal-delay="3">Jede Fliege hier habe ich selbst gebunden und so oder ähnlich selbst gefischt. Du kannst sie einzeln oder als Set bestellen, auch in anderen Größen und Farben.</p>
+                    <p class="lead" data-reveal data-reveal-delay="3">Jede Fliege hier habe ich selbst gebunden und so oder ähnlich selbst gefischt. Leg sie in den Warenkorb, gern auch mehrere. Andere Größen und Farben binde ich auf Wunsch.</p>
                     <div class="btn-row" data-reveal data-reveal-delay="4">
 <!-- @render ff-order-link -->
                     </div>
                 </div>
-                <div class="page-b__anchor" data-shape-anchor aria-hidden="true"></div>
+                <figure class="ff-hero-figure" data-reveal data-reveal-delay="2">
+                    <img src="/media/bilder/fliege-baitfish-chartreuse.jpg" alt="Ein weiß-chartreuse Fischchen-Streamer mit Klebeaugen." sizes="(min-width: 980px) 40vw, 92vw" loading="eager" data-responsive>
+                    <figcaption class="caption">Baitfish Chartreuse-Weiß, selbst gebunden.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -35,11 +38,12 @@ bodyClass: page-flies
                 <div class="ff-callbox glass" data-reveal>
                     <div>
                         <p class="kicker">So bestellst du</p>
-                        <h2 class="h3" id="order-heading">Schreib mir, welche Fliegen du möchtest.</h2>
-                        <p class="muted">Nenne Muster, Anzahl und gern dein Gewässer. Ich antworte innerhalb von zwei Werktagen mit Preis, Versandkosten und Lieferzeit. Erst wenn du zustimmst, ist die Bestellung verbindlich.</p>
+                        <h2 class="h3" id="order-heading">Warenkorb füllen, Anfrage senden.</h2>
+                        <p class="muted">Leg deine Fliegen in den Warenkorb und sende die Anfrage ab. Ich antworte innerhalb von zwei Werktagen mit Preis, Versandkosten und Lieferzeit. Erst wenn du zustimmst, ist die Bestellung verbindlich. Online bezahlen ist bald möglich.</p>
                     </div>
                     <div class="btn-row">
 <!-- @render ff-order-link -->
+<!-- @render ff-order-question -->
                     </div>
                 </div>
             </div>

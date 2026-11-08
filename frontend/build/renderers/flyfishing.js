@@ -25,17 +25,24 @@ import { html } from "../lib/html.js";
 const START_TOPIC = "Fly Fishing: Info zum Kursstart";
 const startLink = () => `/kontakt/?thema=${encodeURIComponent(START_TOPIC)}`;
 
+function addCourseButton(course) {
+    const offer = course.offers?.[0];
+    return offer ? html`<button class="ff-add" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}">${offer.label} in den Warenkorb</button>` : "";
+}
+
 function courseCard(course, index) {
     return html`
                     <li data-reveal data-reveal-delay="${index % 3}">
-                        <a class="ff-card glass" href="${course.url}" data-tilt="4">
-                            <span class="ff-card__image"><img src="${course.image.src}" alt="${course.image.alt}" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw" loading="lazy" data-responsive></span>
+                        <article class="ff-card glass">
+                            <a class="ff-card__image" href="${course.url}" tabindex="-1" aria-hidden="true"><img src="${course.image.src}" alt="" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw" loading="lazy" data-responsive></a>
                             <span class="caption">${course.image.label || course.image.caption}</span>
                             <span class="chip-row"><span class="ff-status">${course.status}</span><span class="chip">${course.level}</span></span>
-                            <span class="ff-card__title">${course.title}</span>
-                            <span class="ff-card__text">${course.description}</span>
-                            <span class="arrow-link">Zum Kurs</span>
-                        </a>
+                            <h3 class="ff-card__title"><a href="${course.url}">${course.title}</a></h3>
+                            <p class="ff-card__text">${course.description}</p>
+                            <p class="ff-fly__price">${course.offers?.[0]?.price || "Preis auf Anfrage"}</p>
+                            ${addCourseButton(course)}
+                            <a class="arrow-link" href="${course.url}">Zum Kurs</a>
+                        </article>
                     </li>`;
 }
 
@@ -56,6 +63,7 @@ function flyCard(fly, index) {
                         <p class="ff-fly__name">${fly.name}</p>
                         <p class="ff-fly__text">${fly.description}</p>
                         <p class="ff-fly__price">${fly.price || "Preis auf Anfrage"}</p>
+                        <button class="ff-add" type="button" data-cart-add="fly-${fly.slug}" data-cart-name="${fly.name}">In den Warenkorb</button>
                     </li>`;
 }
 
@@ -83,7 +91,7 @@ export const flyfishingRenderers = {
                         </div>
                         <div class="btn-row" data-reveal data-reveal-delay="4">
                             <a class="btn" href="${course.url}" data-magnetic>Zum Kurs<span class="btn__arrow" aria-hidden="true">→</span></a>
-                            <a class="btn btn--ghost" href="${startLink(course)}" data-magnetic>Info zum Start</a>
+                            ${course.offers?.[0] ? html`<button class="btn btn--ghost" type="button" data-cart-add="course-${course.offers[0].id}" data-cart-name="${course.title}">In den Warenkorb</button>` : ""}
                         </div>
                     </div>
                 </div>`;
@@ -123,7 +131,8 @@ export const flyfishingRenderers = {
                     ${(content.flies || []).filter((fly, index) => [0, 7, 14, 18].includes(index)).map(flyCard)}
                 </ul>`,
 
-    "ff-order-link": () => html`<a class="btn" href="${orderLink}" data-magnetic>Fliegen anfragen<span class="btn__arrow" aria-hidden="true">→</span></a>`,
+    "ff-order-link": () => html`<a class="btn" href="/warenkorb/" data-magnetic>Zum Warenkorb<span class="btn__arrow" aria-hidden="true">→</span></a>`,
+    "ff-order-question": () => html`<a class="btn btn--ghost" href="${orderLink}" data-magnetic>Frage zu Fliegen</a>`,
 
     // EVERY PHOTO (galerie.json)
     "ff-photo-gallery": ({ content }) => html`
@@ -141,7 +150,8 @@ export const flyfishingRenderers = {
                         <div><dt>Niveau</dt><dd>${course.level}</dd></div>
                         <div><dt>Status</dt><dd>${course.status}</dd></div>
                         <div><dt>Umfang</dt><dd>${course.modules.length} Module, ${course.modules.reduce((sum, module) => sum + module.lessons.length, 0)} Lektionen geplant</dd></div>
-                        <div><dt>Preis und Zugang</dt><dd>${course.price || "Werden vor dem Start genannt"}</dd></div>
+                        <div><dt>Format</dt><dd>${course.offers?.[0]?.format || "Wird vor dem Start genannt"}</dd></div>
+                        <div><dt>Preis</dt><dd>${course.offers?.[0]?.price || "Auf Anfrage"}</dd></div>
                     </dl>`,
 
     "ff-course-figure": ({ course }) => html`
@@ -188,5 +198,6 @@ export const flyfishingRenderers = {
                     </details>`)}
                 </div>`,
 
-    "ff-course-start": ({ course }) => html`<a class="btn" href="${startLink(course)}" data-magnetic>Info zum Kursstart<span class="btn__arrow" aria-hidden="true">→</span></a>`
+    "ff-course-start": ({ course }) => html`${(course.offers || []).map((offer) => html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}">${offer.label} in den Warenkorb<span class="btn__arrow" aria-hidden="true">→</span></button>`)}
+                        <a class="btn btn--ghost" href="${startLink(course)}" data-magnetic>Frage zum Kurs</a>`
 };

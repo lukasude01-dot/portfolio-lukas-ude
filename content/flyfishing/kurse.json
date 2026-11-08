@@ -1,12 +1,12 @@
 {
-    "_info": "Kurse der Online-Akademie (flyfishing.lukasude.de/akademie/<slug>/). Bilder liegen in /content/flyfishing/bilder/. Preis, Start und Zugangsdauer erst eintragen, wenn sie feststehen.",
+    "_info": "Kurse der Online-Akademie (flyfishing.lukasude.de/akademie/<slug>/). Bilder liegen in /content/flyfishing/bilder/. Preis, Start und Zugangsdauer erst eintragen, wenn sie feststehen. \"offers\": buchbare Varianten (Warenkorb). Erst Live-Kurse, später Videokurse.",
     "courses": [
         {
             "slug": "fliegenbinden-grundkurs",
             "title": "Fliegenbinden von Grund auf",
             "subtitle": "Der Einsteigerkurs",
             "level": "Einsteiger",
-            "status": "In Vorbereitung",
+            "status": "Live-Kurs in Planung",
             "featured": true,
             "description": "Der vollständige Grundkurs: Werkzeuge, Materialien und die wichtigsten Bindetechniken. Am Ende bindest du Nymphen, Nassfliegen, Trockenfliegen und erste Streamer selbst.",
             "image": {
@@ -99,8 +99,12 @@
             ],
             "faq": [
                 {
-                    "q": "Wann startet der Kurs?",
-                    "a": "Der Kurs ist in Vorbereitung. Wenn du den Starttermin erfahren möchtest, schreib mir über das Kontaktformular, dann melde ich mich, sobald er feststeht."
+                    "q": "Wie läuft der Live-Kurs ab?",
+                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
+                },
+                {
+                    "q": "Kommt auch ein Videokurs?",
+                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
                 },
                 {
                     "q": "Was kostet der Kurs?",
@@ -118,6 +122,14 @@
                     "q": "Kann ich den Kurs am Tablet am Bindetisch verfolgen?",
                     "a": "Ja, darauf ist der Lernbereich ausgelegt. Videos, Materiallisten und Anleitungen sollen auf Tablet und Smartphone gut bedienbar sein."
                 }
+            ],
+            "offers": [
+                {
+                    "id": "fliegenbinden-grundkurs-live",
+                    "label": "Platz im Live-Kurs",
+                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
+                    "price": ""
+                }
             ]
         },
         {
@@ -125,7 +137,7 @@
             "title": "Advanced Streamer Tying",
             "subtitle": "Moderne Streamer binden",
             "level": "Fortgeschrittene",
-            "status": "In Vorbereitung",
+            "status": "Live-Kurs in Planung",
             "description": "Der Aufbaukurs für moderne Streamer: Materialien, Profile, Gelenkkonstruktionen und fortgeschrittene Bindetechniken für Fliegen, die im Wasser richtig arbeiten.",
             "image": {
                 "src": "/media/bilder/tubenstreamer-bindestock.jpg",
@@ -199,8 +211,12 @@
             ],
             "faq": [
                 {
-                    "q": "Wann startet der Kurs?",
-                    "a": "Der Kurs folgt nach dem Einsteigerkurs. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite."
+                    "q": "Wie läuft der Live-Kurs ab?",
+                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
+                },
+                {
+                    "q": "Kommt auch ein Videokurs?",
+                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
                 },
                 {
                     "q": "Was kostet der Kurs?",
@@ -210,6 +226,14 @@
                     "q": "Reicht mein Werkzeug aus dem Grundkurs?",
                     "a": "Größtenteils ja. Für große Haken brauchst du einen Bindestock, der sie sicher hält. Alles Weitere steht in den Materiallisten."
                 }
+            ],
+            "offers": [
+                {
+                    "id": "advanced-streamer-tying-live",
+                    "label": "Platz im Live-Kurs",
+                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
+                    "price": ""
+                }
             ]
         },
         {
@@ -217,7 +241,7 @@
             "title": "Meerforellenfliegen binden",
             "subtitle": "Fliegen für die Küste",
             "level": "Fortgeschrittene",
-            "status": "In Vorbereitung",
+            "status": "Live-Kurs in Planung",
             "description": "Der Spezialkurs für die Küstenfischerei: Muster, die Garnelen, Würmer und kleine Fische nachahmen, gebunden mit Material, das Salzwasser verträgt.",
             "image": {
                 "src": "/media/bilder/lukas-meerforelle-strand.jpg",
@@ -278,8 +302,12 @@
             ],
             "faq": [
                 {
-                    "q": "Wann startet der Kurs?",
-                    "a": "Der Kurs ist in Vorbereitung. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite."
+                    "q": "Wie läuft der Live-Kurs ab?",
+                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
+                },
+                {
+                    "q": "Kommt auch ein Videokurs?",
+                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
                 },
                 {
                     "q": "Was kostet der Kurs?",
@@ -288,6 +316,14 @@
                 {
                     "q": "Geht es auch um das Fischen an der Küste?",
                     "a": "Der Schwerpunkt liegt auf dem Binden. Zu jedem Muster erfährst du aber, wofür es gedacht ist und wann es sich lohnt."
+                }
+            ],
+            "offers": [
+                {
+                    "id": "meerforellenfliegen-live",
+                    "label": "Platz im Live-Kurs",
+                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
+                    "price": ""
                 }
             ]
         }

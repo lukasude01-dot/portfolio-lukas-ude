@@ -31,6 +31,8 @@ import { createStaticHandler } from "./lib/static-files.js";
 import { createContactDelivery } from "./services/email.js";
 import { createContactRoutes } from "./routes/contact.js";
 import { createHealthRoutes } from "./routes/health.js";
+import { createOrderRoutes } from "./routes/order.js";
+import { loadCatalog } from "./services/catalog.js";
 
 /**
  * Creates the request handler. Separate from listen() so that the
@@ -41,9 +43,12 @@ export function createApp(config, { deliver } = {}) {
     const rateLimiter = createRateLimiter(config.rateLimit);
     const formTokens = createFormTokens({ secret: config.formTokenSecret, minSeconds: config.formMinSeconds, maxAgeMinutes: config.formMaxAgeMinutes });
 
+    const delivery = deliver || createContactDelivery({ config, logger });
+
     const routes = {
         ...createHealthRoutes(),
-        ...createContactRoutes({ config, logger, rateLimiter, formTokens, deliver: deliver || createContactDelivery({ config, logger }) })
+        ...createContactRoutes({ config, logger, rateLimiter, formTokens, deliver: delivery }),
+        ...createOrderRoutes({ config, logger, rateLimiter, formTokens, deliver: delivery, catalog: loadCatalog(config.catalogDir) })
     };
 
     const serveStatic = config.serveFrontend && fs.existsSync(config.frontendDist)

@@ -42,12 +42,11 @@ export const variant = {
             "und Fliegenfischen. Verständliche Anleitungen, Materiallisten und ehrliche Empfehlungen.",
         url: "https://flyfishing.lukasude.de",
         navigation: [
-            { label: "Akademie", href: "/akademie/" },
+            { label: "Fliegen-Shop", href: "/fliegen/" },
+            { label: "Kurse", href: "/akademie/" },
             { label: "Fliegenbinden", href: "/fliegenbinden/" },
             { label: "Fliegenfischen", href: "/fliegenfischen/" },
-            { label: "Fliegen", href: "/fliegen/" },
             { label: "Blog", href: "/blog/" },
-            { label: "Shop", href: "/shop/" },
             { label: "Über Lukas", href: "/ueber-lukas/" }
         ],
         legalNavigation: [
