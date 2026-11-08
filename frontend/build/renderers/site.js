@@ -79,7 +79,7 @@ export const siteRenderers = {
     // FOOTER - CONTACT LINKS (e-mail + social, only if set in site.js)
     "footer-contact": ({ site }) => html`
                     <ul class="site-footer__list" role="list">
-                        <li><a class="link-underline" href="/contact/">Kontaktformular</a></li>
+                        <li><a class="link-underline" href="${site.contactPath || "/contact/"}">Kontaktformular</a></li>
                         ${site.email ? html`<li><a class="link-underline" href="mailto:${site.email}">${site.email}</a></li>` : ""}
                         ${visibleSocial(site).map((profile) => html`<li><a class="link-underline" href="${safeUrl(profile.url)}" rel="noopener me" target="_blank">${profile.label}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a></li>`)}
                         ${site.location ? html`<li class="text-muted">${site.location}</li>` : ""}
@@ -92,7 +92,8 @@ export const siteRenderers = {
                     </ul>`,
 
     // CONTACT FORM - TOPIC OPTIONS (from /shared/contact-schema.js)
-    "contact-topics": () => html`${CONTACT_TOPICS.map((topic) => html`
+    // site.contactTopics: a website of its own can offer its own topics
+    "contact-topics": ({ site }) => html`${(site.contactTopics || CONTACT_TOPICS).map((topic) => html`
                                 <option value="${topic}">${topic}</option>`)}`,
 
     // CONTACT PAGE - DIRECT CONTACT DETAILS

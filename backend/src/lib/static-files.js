@@ -86,14 +86,6 @@ export function createStaticHandler({ root, isProduction }) {
         const url = new URL(request.url, "http://localhost");
         let urlPath = url.pathname;
 
-        let decodedPath = urlPath;
-        try { decodedPath = decodeURIComponent(urlPath); } catch { /* keep as is */ }
-        const redirect = REDIRECTS[decodedPath.toLowerCase().replace(/\/+$/, "")];
-        if (redirect) {
-            response.writeHead(301, { Location: `${redirect}${url.search}` });
-            return response.end();
-        }
-
         let file;
         try {
             file = resolveFile(urlPath);
@@ -111,6 +103,16 @@ export function createStaticHandler({ root, isProduction }) {
 
         if (file && fs.existsSync(file) && fs.statSync(file).isFile()) {
             return sendFile(request, response, file);
+        }
+
+        // Old or alternative addresses, only when no page of that name exists
+        // (the fly fishing site has its own /kontakt/ and /blog/).
+        let decodedPath = urlPath;
+        try { decodedPath = decodeURIComponent(urlPath); } catch { /* keep as is */ }
+        const redirect = REDIRECTS[decodedPath.toLowerCase().replace(/\/+$/, "")];
+        if (redirect) {
+            response.writeHead(301, { Location: `${redirect}${url.search}` });
+            return response.end();
         }
 
         const notFound = path.join(root, "404.html");

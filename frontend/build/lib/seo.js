@@ -124,8 +124,8 @@ export function createStructuredData(site, page) {
     const person = {
         "@type": "Person",
         "@id": `${site.url}/#person`,
-        name: site.name,
-        url: site.url,
+        name: site.personName || site.name,
+        url: site.personUrl || site.url,
         jobTitle: site.jobTitle,
         knowsAbout: site.knowsAbout,
         image: absoluteUrl(site, "/assets/images/portrait/lukas-ude-portrait.jpg"),

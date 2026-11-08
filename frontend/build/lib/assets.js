@@ -40,6 +40,7 @@ export function bundleCss(entryFile) {
         if (!fs.existsSync(file)) {
             log.fail("CSS", `main.css imports "${importPath}", but that file does not exist.`);
         }
-        return `/* --- from styles/${importPath.replace(/^\.\//, "")} --- */\n${fs.readFileSync(file, "utf8")}`;
+        // nested imports (e.g. a variant that builds on another variant's main.css)
+        return `/* --- from styles/${importPath.replace(/^\.\//, "")} --- */\n${bundleCss(file)}`;
     });
 }

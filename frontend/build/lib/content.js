@@ -157,9 +157,11 @@ function germanDate(value) {
     return `${Number(match[3])}. ${GERMAN_MONTHS[Number(match[2]) - 1]} ${match[1]}`;
 }
 
-/** Reads all news articles, newest first. */
-function loadNews(contentDir, { includeDrafts }) {
-    const newsDir = path.join(contentDir, "news");
+/** Reads all news articles, newest first.
+ *  folder / path: where the articles live and their public address
+ *  (the fly fishing website keeps its articles in /content/flyfishing/blog/). */
+export function loadNews(contentDir, { includeDrafts, folder: newsFolder = "news", path: basePath = "/news/" } = {}) {
+    const newsDir = path.join(contentDir, newsFolder);
     if (!fs.existsSync(newsDir)) return [];
 
     const articles = [];
@@ -167,9 +169,9 @@ function loadNews(contentDir, { includeDrafts }) {
         if (!entry.isDirectory() || entry.name.startsWith("_")) continue;
         const folder = path.join(newsDir, entry.name);
         const file = path.join(folder, "article.md");
-        const label = `content/news/${entry.name}/article.md`;
+        const label = `${folder.slice(folder.lastIndexOf(`${path.sep}content${path.sep}`) + 1).split(path.sep).join("/")}/article.md`;
         if (!fs.existsSync(file)) {
-            log.warn("CONTENT", `content/news/${entry.name}/ has no article.md, folder skipped.`);
+            log.warn("CONTENT", `${path.dirname(label)}/ has no article.md, folder skipped.`);
             continue;
         }
 
@@ -179,7 +181,8 @@ function loadNews(contentDir, { includeDrafts }) {
         if (!/^\d{4}-\d{2}-\d{2}$/.test(data.date || "")) log.warn("CONTENT", `${label}: "date" should look like 2026-10-16.`);
 
         const slug = entry.name;
-        const image = data.image ? resolveMedia(data.image, { folder, section: "news", slug, label }) : "";
+        const section = newsFolder.split("/").pop();
+        const image = data.image ? resolveMedia(data.image, { folder, section, slug, label }) : "";
         if (data.image && !data.imageAlt) log.warn("CONTENT", `${label}: image "${data.image}" has no "imageAlt" text.`);
         countPlaceholders({ data, body }, label);
 
@@ -187,8 +190,8 @@ function loadNews(contentDir, { includeDrafts }) {
             ...data,
             category: data.category || "Wissen",
             slug,
-            section: "news",
-            url: `/news/${slug}/`,
+            section,
+            url: `${basePath}${slug}/`,
             image,
             dateLabel: germanDate(data.date),
             readingTime: readingTime(body),

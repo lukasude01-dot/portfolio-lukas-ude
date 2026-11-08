@@ -1,0 +1,80 @@
+        <!-- =========================================================
+             COURSE PAGE TEMPLATE  (one page per course)
+
+             PURPOSE:
+             Builds /akademie/<slug>/ for every course in
+             /content/flyfishing/kurse.json.
+
+             EDIT HERE:
+             Only the LAYOUT of all course pages. Texts, modules and
+             questions are in /content/flyfishing/kurse.json.
+
+             GENERATED PARTS:  /frontend/build/renderers/flyfishing.js
+             RELATED STYLES:   /frontend/variants/flyfishing/styles/flyfishing.css
+        ========================================================= -->
+
+        <section class="page-b" data-shape="image:/assets/shapes/streamer.svg" data-shape-size="0.9" aria-labelledby="course-heading">
+            <div class="wrap">
+<!-- @render breadcrumbs -->
+                <div class="ff-split">
+                    <div class="ff-split__copy">
+                        <p class="kicker" data-reveal>Online-Akademie <span>{{ course.subtitle }}</span></p>
+                        <h1 class="h1" id="course-heading" data-split>{{ course.title }}</h1>
+                        <p class="lead" data-reveal data-reveal-delay="3">{{ course.description }}</p>
+                    </div>
+<!-- @render ff-course-figure -->
+                </div>
+<!-- @render ff-course-facts -->
+            </div>
+        </section>
+
+        <section class="block" data-shape="wave" aria-label="Für wen und was du lernst">
+            <div class="wrap ff-columns">
+                <div data-reveal>
+                    <h2 class="h3 ff-block-title">Für wen der Kurs ist</h2>
+<!-- @render ff-course-audience -->
+                </div>
+                <div data-reveal data-reveal-delay="1">
+                    <h2 class="h3 ff-block-title">Was du lernst</h2>
+<!-- @render ff-course-goals -->
+                </div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="orbit" aria-labelledby="modules-heading">
+            <div class="wrap">
+                <p class="kicker" data-reveal>Inhalt</p>
+                <h2 class="h2" id="modules-heading" data-split>Module und Lektionen.</h2>
+                <p class="ff-small" data-reveal>Geplanter Aufbau. Einzelne Lektionen können sich bis zum Start noch ändern.</p>
+<!-- @render ff-course-modules -->
+            </div>
+        </section>
+
+        <section class="block" data-shape="cloud" aria-label="Ausrüstung und Fragen">
+            <div class="wrap ff-columns">
+                <div data-reveal>
+                    <h2 class="h3 ff-block-title">Benötigte Ausrüstung</h2>
+<!-- @render ff-course-equipment -->
+                </div>
+                <div data-reveal data-reveal-delay="1">
+                    <h2 class="h3 ff-block-title">Häufige Fragen</h2>
+<!-- @render ff-course-faq -->
+                </div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="cloud" aria-labelledby="start-heading">
+            <div class="wrap">
+                <div class="ff-callbox glass" data-reveal>
+                    <div>
+                        <p class="kicker">Kursstart</p>
+                        <h2 class="h3" id="start-heading">Der Kurs ist in Vorbereitung.</h2>
+                        <p class="muted">Schreib mir kurz, dann melde ich mich persönlich, sobald Start, Preis und Zugang feststehen.</p>
+                    </div>
+                    <div class="btn-row">
+<!-- @render ff-course-start -->
+                    </div>
+                </div>
+                <a class="arrow-link" href="/akademie/">Alle Kurse</a>
+            </div>
+        </section>

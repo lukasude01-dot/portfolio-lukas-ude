@@ -137,7 +137,10 @@ export const siteConfig = {
 
     contactForm: {
         endpoint: "/api/contact",
-        tokenEndpoint: "/api/contact/token"
+        tokenEndpoint: "/api/contact/token",
+        // SAFE TO EDIT: texts of the form
+        companyLabel: "Unternehmen",
+        messageHint: "Wo stehst du heute und was soll besser funktionieren?"
     },
 
 

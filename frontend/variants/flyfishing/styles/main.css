@@ -1,0 +1,14 @@
+/* ==========================================================
+   MAIN STYLESHEET  (fly fishing website)
+
+   PURPOSE:
+   1. The complete design of the main website (variant "bold"):
+      colours, font, glass cards, navigation, footer, particles.
+   2. The building blocks of this website on top
+      (courses, image cards, topic lists).
+
+   The build combines everything into /dist-flyfishing/styles/main.css
+========================================================== */
+
+@import url("../../bold/styles/main.css");
+@import url("./flyfishing.css");

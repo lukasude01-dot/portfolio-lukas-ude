@@ -1,0 +1,47 @@
+    <!-- =========================================================
+         FOOTER  (fly fishing website)
+
+         PURPOSE:
+         Closing call, links, contact and legal links. The particles
+         form the claim of this website in .foot__slogan, like the
+         slogan on the main website (scripts/bold/particles.js).
+
+         EDIT HERE:
+         - Links: /frontend/variants/flyfishing/variant.js -> site
+
+         RELATED STYLES:  /frontend/variants/bold/styles/bold/footer.css
+    ========================================================= -->
+    <footer class="foot" data-shape="text:Fliegenbinden.|Fliegenfischen.|Verstehen." data-shape-size="0.94">
+        <div class="wrap">
+            <a class="foot__call" href="/kontakt/" data-magnetic>
+                <span class="foot__call-small">Eine Frage zu Kursen, Material oder Technik?</span>
+                <span class="foot__call-big">Schreib mir<span class="foot__arrow" aria-hidden="true">→</span></span>
+            </a>
+
+            <div class="foot__grid">
+                <div class="foot__brand">
+                    <img src="/assets/brand/logo-mark-ivory.svg" alt="" width="56" height="56" loading="lazy">
+                    <p>Lukas Ude<br><span class="foot__brand-sub">Fly Fishing</span></p>
+                </div>
+                <nav class="foot__col" aria-label="Fußzeile">
+                    <h2 class="foot__label">Entdecken</h2>
+<!-- @render footer-links -->
+                </nav>
+                <div class="foot__col">
+                    <h2 class="foot__label">Kontakt</h2>
+<!-- @render footer-contact -->
+                    <p class="foot__note">Ein Bereich von <a class="link-underline" href="https://lukasude.de/">lukasude.de</a></p>
+                </div>
+            </div>
+
+            <div class="foot__bottom">
+                <p>© {{ site.year }} Lukas Ude</p>
+<!-- @render legal-links -->
+            </div>
+        </div>
+
+        <div class="foot__slogan" data-shape-anchor>
+            <p class="foot__slogan-text">Fliegenbinden.<br>Fliegenfischen.<br>Verstehen.</p>
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->

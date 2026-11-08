@@ -1,0 +1,42 @@
+    <!-- =========================================================
+         NAVIGATION  (fly fishing website)
+
+         PURPOSE:
+         Same floating glass pill as the main website (variant
+         "bold"), with the logo, the subline "Fly Fishing" and
+         the menu of this website.
+
+         EDIT HERE:
+         - Menu items: /frontend/variants/flyfishing/variant.js -> site.navigation
+
+         RELATED STYLES:  /frontend/variants/bold/styles/bold/nav.css
+                          /frontend/variants/flyfishing/styles/flyfishing.css
+         RELATED SCRIPT:  /frontend/scripts/modules/navigation.js
+    ========================================================= -->
+    <header class="nav" data-site-header>
+        <div class="nav__pill">
+            <a class="nav__brand" href="/" aria-label="Startseite Lukas Ude Fly Fishing">
+                <img src="/assets/brand/logo-mark-ivory.svg" alt="" width="34" height="34">
+                <span class="nav__brand-text">Lukas Ude<small class="nav__brand-sub">Fly Fishing</small></span>
+            </a>
+
+            <nav class="nav__links" aria-label="Hauptnavigation">
+<!-- @render navigation-links -->
+            </nav>
+
+            <a class="nav__cta" href="/kontakt/" data-magnetic>Kontakt</a>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+                <span data-menu-label>Menü</span>
+                <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+            </button>
+        </div>
+
+        <div class="nav__menu" id="mobile-menu" data-mobile-menu hidden>
+            <nav aria-label="Mobile Navigation">
+<!-- @render navigation-links-mobile -->
+            </nav>
+            <p class="nav__menu-foot">Fliegenbinden. Fliegenfischen. Verstehen.</p>
+        </div>
+    </header>
+    <!-- ================= END NAVIGATION ================= -->

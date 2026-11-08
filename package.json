@@ -13,6 +13,7 @@
         "dev": "node scripts/dev.js",
         "build": "npm --prefix frontend run build",
         "build:classic": "npm --prefix frontend run build -- --variant=classic",
+        "build:flyfishing": "npm --prefix frontend run build -- --variant=flyfishing",
         "start": "npm --prefix backend start",
         "test": "npm --prefix backend test",
         "check": "node scripts/check-site.js"

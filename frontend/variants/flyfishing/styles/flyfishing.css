@@ -1,0 +1,476 @@
+/* ==========================================================
+   FLY FISHING BUILDING BLOCKS
+   HTML: /frontend/variants/flyfishing/pages/*.html
+         /frontend/variants/flyfishing/templates/course-page.html
+   Colours and type come from the bold tokens (ivory and black).
+========================================================== */
+
+
+/* ----------------------------------------------------------
+   BRAND (navigation and footer subline "Fly Fishing")
+---------------------------------------------------------- */
+
+.nav__brand-text {
+    display: grid;
+    line-height: 1;
+}
+
+.nav__brand-sub {
+    margin-top: 0.22rem;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    opacity: 0.72;
+}
+
+.foot__brand-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.72;
+}
+
+.foot__note {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--b-muted);
+}
+
+/* three lines of particles need a little more room */
+.foot__slogan {
+    height: clamp(260px, 36vw, 560px);
+}
+
+
+/* ----------------------------------------------------------
+   HERO (claim in three lines, the trout forms on the right)
+---------------------------------------------------------- */
+
+/* The longest word ("FLIEGENFISCHEN.") must fit its column without breaking */
+.ff-hero__claim {
+    font-size: min(clamp(2rem, 0.6rem + 6vw, 7.6rem), 8.6vw);
+    word-break: keep-all;
+    overflow-wrap: normal;
+    font-weight: 850;
+    font-stretch: 112%;
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+}
+
+.ff-hero__claim span {
+    display: block;
+}
+
+@media (min-width: 980px) {
+    .ff-hero__claim {
+        font-size: min(4.6vw, 6.4rem);
+    }
+}
+
+.ff-hero__brand {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------
+   IMAGES WITH "KI-illustriert" CAPTION
+   The images are shown in full (the "KI-Bild" mark stays visible).
+---------------------------------------------------------- */
+
+.ff-figure {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+}
+
+.ff-figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--b-line);
+    border-radius: var(--b-radius-small);
+    background: var(--b-night-2);
+}
+
+.ff-figure--narrow {
+    max-width: 460px;
+}
+
+.ff-gallery {
+    display: grid;
+    gap: clamp(1rem, 0.6rem + 1.4vw, 1.8rem);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    margin-top: clamp(2rem, 1.4rem + 2vw, 3.4rem);
+}
+
+
+/* ----------------------------------------------------------
+   SPLIT SECTION (text next to an image)
+---------------------------------------------------------- */
+
+.ff-split {
+    display: grid;
+    gap: clamp(2rem, 1.4rem + 3vw, 4.5rem);
+    align-items: center;
+}
+
+.ff-split__copy {
+    display: grid;
+    gap: 1.3rem;
+    justify-items: start;
+}
+
+/* The images are small originals: keep them at a size where they stay sharp */
+.ff-split__media,
+.ff-split > .ff-figure {
+    width: 100%;
+    max-width: 480px;
+}
+
+@media (min-width: 900px) {
+    .ff-split {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    }
+
+    .ff-split--reverse .ff-split__media {
+        order: 2;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   STATUS NOTE ("In Vorbereitung")
+---------------------------------------------------------- */
+
+.ff-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--b-line-strong);
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ff-status::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--b-ivory);
+    animation: ff-pulse 2.4s var(--b-ease-in-out) infinite;
+}
+
+@keyframes ff-pulse {
+    50% { opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ff-status::before { animation: none; }
+}
+
+
+/* ----------------------------------------------------------
+   CARDS (courses, products, knowledge areas)
+---------------------------------------------------------- */
+
+.ff-cards {
+    display: grid;
+    gap: clamp(1rem, 0.6rem + 1.4vw, 1.8rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    margin-top: clamp(2.4rem, 1.6rem + 2.4vw, 4rem);
+    padding: 0;
+    list-style: none;
+}
+
+.ff-card {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    height: 100%;
+    padding: clamp(1.2rem, 1rem + 0.8vw, 1.8rem);
+    color: inherit;
+    text-decoration: none;
+}
+
+.ff-card__image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--b-radius-small);
+}
+
+.ff-card__title {
+    font-size: var(--b-h3);
+    font-weight: 750;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.ff-card__text {
+    color: var(--b-muted);
+}
+
+.ff-card .chip-row {
+    margin-top: 0.2rem;
+}
+
+.ff-card .arrow-link {
+    margin-top: auto;
+    justify-self: start;
+}
+
+
+/* ----------------------------------------------------------
+   NUMBERED TOPIC LIST (knowledge pages)
+---------------------------------------------------------- */
+
+.ff-topics {
+    display: grid;
+    gap: 0;
+    margin-top: clamp(2.4rem, 1.6rem + 2.4vw, 4rem);
+    padding: 0;
+    list-style: none;
+    counter-reset: ff-topic;
+}
+
+.ff-topic {
+    display: grid;
+    gap: 0.6rem 2rem;
+    padding: clamp(1.4rem, 1rem + 1vw, 2rem) 0;
+    border-top: 1px solid var(--b-line);
+    counter-increment: ff-topic;
+}
+
+.ff-topic:last-child {
+    border-bottom: 1px solid var(--b-line);
+}
+
+.ff-topic__title {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    font-size: var(--b-h3);
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.ff-topic__title::before {
+    content: counter(ff-topic, decimal-leading-zero);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--b-muted);
+}
+
+.ff-topic__text {
+    max-width: 62ch;
+    color: var(--b-muted);
+}
+
+.ff-topic__text a {
+    color: var(--b-ivory);
+}
+
+@media (min-width: 900px) {
+    .ff-topic {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    }
+}
+
+
+/* ----------------------------------------------------------
+   COURSE PAGE (template course-page.html)
+---------------------------------------------------------- */
+
+.ff-facts {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--b-line);
+    border-radius: var(--b-radius-small);
+    background: var(--b-line);
+}
+
+.ff-facts div {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.1rem 1.2rem;
+    background: var(--b-night);
+}
+
+.ff-facts dt {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--b-muted);
+}
+
+.ff-facts dd {
+    margin: 0;
+    font-weight: 600;
+}
+
+.ff-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ff-list li {
+    position: relative;
+    padding-left: 1.6rem;
+}
+
+.ff-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 0.7rem;
+    height: 1px;
+    background: var(--b-ivory);
+}
+
+.ff-columns {
+    display: grid;
+    gap: clamp(2rem, 1.4rem + 3vw, 4rem);
+}
+
+@media (min-width: 900px) {
+    .ff-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.ff-columns h2,
+.ff-block-title {
+    margin-bottom: 1.4rem;
+}
+
+
+/* course title next to its image; long words ("MEERFORELLENFLIEGEN")
+   must fit on phones too */
+.page-course .page-b .h1 {
+    font-size: min(clamp(2rem, 0.8rem + 4vw, 5.2rem), 6.2vw);
+    hyphens: auto;
+}
+
+@media (min-width: 900px) {
+    .page-course .page-b .ff-split {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    }
+
+    .page-course .page-b .h1 {
+        font-size: min(4.2vw, 5.2rem);
+    }
+}
+
+.page-course .page-b .ff-split {
+    margin-block: 1.6rem clamp(2rem, 1.4rem + 2vw, 3.4rem);
+}
+
+
+/* ----------------------------------------------------------
+   ACCORDION (course modules and questions; <details>)
+---------------------------------------------------------- */
+
+.ff-accordion {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: clamp(1.8rem, 1.2rem + 2vw, 3rem);
+}
+
+.ff-accordion details {
+    border: 1px solid var(--b-line);
+    border-radius: var(--b-radius-small);
+    background: var(--b-panel);
+}
+
+.ff-accordion summary {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.3rem;
+    font-weight: 650;
+    cursor: pointer;
+    list-style: none;
+}
+
+.ff-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.ff-accordion summary::after {
+    content: "+";
+    flex: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.4s var(--b-ease);
+}
+
+.ff-accordion details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.ff-accordion summary:focus-visible {
+    outline: 2px solid var(--b-ivory);
+    outline-offset: 2px;
+    border-radius: var(--b-radius-small);
+}
+
+.ff-accordion__body {
+    display: grid;
+    gap: 0.8rem;
+    padding: 0 1.3rem 1.3rem;
+    color: var(--b-muted);
+}
+
+.ff-accordion__label {
+    color: var(--b-muted);
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    margin-right: 0.6rem;
+}
+
+
+/* ----------------------------------------------------------
+   CALL BOX (course start info instead of a newsletter)
+---------------------------------------------------------- */
+
+.ff-callbox {
+    display: grid;
+    gap: 1.4rem;
+    justify-items: start;
+    padding: clamp(1.6rem, 1.2rem + 2vw, 3.4rem);
+}
+
+@media (min-width: 900px) {
+    .ff-callbox {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: center;
+    }
+
+    .ff-callbox .btn-row {
+        justify-self: end;
+    }
+}
+
+.ff-small {
+    font-size: 0.88rem;
+    color: var(--b-muted);
+}

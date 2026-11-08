@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 400 160">
+  <!-- Streamer-Fliege: Haken, Körper, Kopf mit Auge und lange Schwinge.
+       Nur Form für den Partikel-Effekt, kein sichtbares Bild. -->
+  <g fill="none" stroke="#fff" stroke-linecap="round">
+    <!-- Haken: Öhr, Schenkel, Bogen, Spitze -->
+    <circle cx="352" cy="74" r="9" stroke-width="5"/>
+    <path d="M343 78 L150 82 C112 83 104 104 112 120 C120 136 146 136 154 120 L156 108" stroke-width="6"/>
+    <path d="M156 108 L148 114" stroke-width="5"/>
+    <!-- Schwinge: lange Fasern vom Kopf bis weit hinter den Bogen -->
+    <path d="M318 72 C260 52 170 44 40 58" stroke-width="3"/>
+    <path d="M318 74 C250 58 160 56 20 72" stroke-width="3"/>
+    <path d="M318 76 C250 66 150 68 30 86" stroke-width="3"/>
+    <path d="M316 70 C262 40 180 30 70 38" stroke-width="2.5"/>
+    <path d="M316 72 C240 48 140 42 60 48" stroke-width="2"/>
+    <path d="M318 78 C240 76 150 82 50 98" stroke-width="2.5"/>
+    <path d="M316 80 C250 84 160 92 70 110" stroke-width="2"/>
+    <path d="M318 74 C230 62 120 62 8 80" stroke-width="2"/>
+  </g>
+  <!-- Körper mit Rippung und Kopf -->
+  <path fill="#fff" d="M300 70 C310 66 336 66 340 74 C336 84 310 86 300 82 Z"/>
+  <path fill="#fff" d="M200 74 L300 70 L300 84 L200 86 Z"/>
+  <!-- Bart unter dem Kopf -->
+  <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+    <path d="M318 84 C304 98 290 104 276 106"/>
+    <path d="M318 84 C306 100 296 110 284 116"/>
+  </g>
+</svg>

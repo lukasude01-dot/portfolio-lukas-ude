@@ -12,7 +12,7 @@
  *     <div data-shape-anchor></div>             optional: where it sits
  *   </section>
  *
- * Shapes: logo | text:WORT | funnel | orbit | wave | cloud
+ * Shapes: logo | text:WORT | image:/pfad.svg | funnel | orbit | wave | cloud
  * Optional: data-shape-size="0.8" (share of the anchor box)
  *
  * PERFORMANCE / ACCESSIBILITY:
@@ -319,6 +319,8 @@ async function buildShape(shape, w, h, count) {
     if (shape === "logo") return fromImage(new URL("../../assets/brand/logo-mark-ivory.svg", import.meta.url).href, w, h, count);
     if (shape === "funnel") return fromDrawing(drawFunnel, w, h, count);
     if (shape.startsWith("text:")) return fromDrawing((ctx, cw, ch) => drawWord(ctx, cw, ch, shape.slice(5)), w, h, count);
+    // any image of this website (filled pixels become points), keeps its proportions
+    if (shape.startsWith("image:/")) return fromImage(new URL(shape.slice(6), location.origin).href, w, h, count, { fit: true });
     return cloud(w, h, count);
 }
 
@@ -358,11 +360,18 @@ function wave(w, h, count) {
     return points;
 }
 
-async function fromImage(src, w, h, count) {
+async function fromImage(src, w, h, count, { fit = false } = {}) {
     const image = new Image();
     image.src = src;
     await image.decode().catch(() => null);
     return fromDrawing((ctx, cw, ch) => {
+        if (fit && image.naturalWidth && image.naturalHeight) {
+            const scale = Math.min(cw / image.naturalWidth, ch / image.naturalHeight);
+            const iw = image.naturalWidth * scale;
+            const ih = image.naturalHeight * scale;
+            ctx.drawImage(image, (cw - iw) / 2, (ch - ih) / 2, iw, ih);
+            return;
+        }
         const size = Math.min(cw, ch);
         ctx.drawImage(image, (cw - size) / 2, (ch - size) / 2, size, size);
     }, w, h, count);

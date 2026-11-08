@@ -18,7 +18,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DIST = path.join(ROOT, "frontend", "dist");
+// Optional: another build folder, e.g. `node scripts/check-site.js dist-flyfishing`
+const DIST = path.join(ROOT, "frontend", process.argv[2] || "dist");
 
 // Patterns that should never appear in public files.
 const SECRET_PATTERNS = [
@@ -48,7 +49,7 @@ function existsInDist(urlPath) {
 }
 
 if (!fs.existsSync(DIST)) {
-    console.error("✗ frontend/dist does not exist. Run `npm run build` first.");
+    console.error(`✗ frontend/${path.basename(DIST)} does not exist. Run \`npm run build\` first.`);
     process.exit(1);
 }
 

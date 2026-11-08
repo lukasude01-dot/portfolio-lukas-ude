@@ -5,6 +5,10 @@
  *   npm run build            -> builds the live design (variant "bold") into /frontend/dist
  *   npm run build -- --variant=classic -> builds the earlier design without
  *                               a variant into /frontend/dist-classic
+ *   npm run build -- --variant=flyfishing -> builds the separate fly fishing
+ *                               website into /frontend/dist-flyfishing
+ *   SITE_VARIANT=flyfishing npm run build -> the same into /frontend/dist
+ *                               (set on the host of flyfishing.lukasude.de)
  *   npm run build -- --watch -> rebuilds whenever a file changes
  *   npm run build -- --drafts -> also builds projects with "status": "draft"
  *
@@ -28,7 +32,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { log } from "./lib/logger.js";
 import { renderTemplate, parseFrontMatter } from "./lib/template.js";
-import { loadContent, SECTION_PATHS } from "./lib/content.js";
+import { loadContent, loadNews, SECTION_PATHS } from "./lib/content.js";
 import { buildResponsiveImages } from "./lib/images.js";
 import { copyFolder, bundleCss } from "./lib/assets.js";
 import { createQrCode } from "./lib/qr.js";
@@ -56,15 +60,27 @@ const VARIANT = REQUESTED === "classic" ? "" : REQUESTED;
 const VARIANT_DIR = VARIANT ? path.join(FRONTEND, "variants", VARIANT) : null;
 if (VARIANT_DIR && !fs.existsSync(VARIANT_DIR)) throw new Error(`Design variant "${VARIANT}" not found in frontend/variants/`);
 
-const DIST = path.join(FRONTEND, REQUESTED === LIVE_VARIANT ? "dist" : `dist-${REQUESTED}`);
+// OPTIONAL VARIANT SETTINGS: /frontend/variants/<name>/variant.js
+// A "standalone" variant is a website of its own (e.g. flyfishing.lukasude.de):
+// only its own pages are built (plus "sharedPages"), with its own content folder.
+// "base" names a variant whose files are used where this one has none.
+const VARIANT_FILE = VARIANT_DIR && path.join(VARIANT_DIR, "variant.js");
+const VARIANT_CONFIG = VARIANT_FILE && fs.existsSync(VARIANT_FILE) ? (await import(pathToFileURL(VARIANT_FILE).href)).variant : {};
+const STANDALONE = Boolean(VARIANT_CONFIG.standalone);
+const VARIANT_DIRS = [VARIANT_DIR, VARIANT_CONFIG.base && path.join(FRONTEND, "variants", VARIANT_CONFIG.base)].filter(Boolean);
+
+// The site a server publishes is built into /dist: the live design by default,
+// or the variant named in SITE_VARIANT (set on the host of that website).
+const PUBLISHED = (process.env.SITE_VARIANT || LIVE_VARIANT).replace(/[^\w-]/g, "");
+const DIST = path.join(FRONTEND, REQUESTED === PUBLISHED ? "dist" : `dist-${REQUESTED}`);
 const CACHE = path.join(FRONTEND, ".cache", "images");
-const CONTENT = path.join(ROOT, "content");
+const CONTENT = path.join(ROOT, "content", VARIANT_CONFIG.content || "");
 const SHARED = path.join(ROOT, "shared");
 
 const DEMOS_DIR = path.join(FRONTEND, "demos");
 
-/** The variant's folder first, then the normal one (first match wins). */
-const sourceDirs = (folder) => [VARIANT_DIR && path.join(VARIANT_DIR, folder), path.join(FRONTEND, folder)].filter((dir) => dir && fs.existsSync(dir));
+/** The variant's folder first, then its base variant, then the normal one (first match wins). */
+const sourceDirs = (folder) => [...VARIANT_DIRS.map((dir) => path.join(dir, folder)), path.join(FRONTEND, folder)].filter((dir) => fs.existsSync(dir));
 const COMPONENTS_DIR = sourceDirs("components");
 
 function sourceFile(folder, file) {
@@ -73,11 +89,17 @@ function sourceFile(folder, file) {
     return found;
 }
 
-/** All page files: the variant's pages replace normal pages with the same name. */
+/** All page files: the variant's pages replace normal pages with the same name.
+ *  A standalone variant gets only its own pages plus its "sharedPages". */
 function listPages() {
     const pages = new Map();
     for (const dir of sourceDirs("pages").reverse()) {
         for (const name of fs.readdirSync(dir).filter((file) => file.endsWith(".html") && !file.startsWith("_"))) pages.set(name, path.join(dir, name));
+    }
+    if (STANDALONE) {
+        const own = path.join(VARIANT_DIR, "pages");
+        const shared = VARIANT_CONFIG.sharedPages || [];
+        for (const [name, file] of pages) if (path.dirname(file) !== own && !shared.includes(name)) pages.delete(name);
     }
     return [...pages.entries()].sort(([a], [b]) => a.localeCompare(b));
 }
@@ -92,6 +114,19 @@ const DETAIL_TEMPLATES = {
 };
 
 
+// Articles: /content/news/ on the main website, the variant's folder on a standalone one
+const NEWS = { folder: "news", path: "/news/", label: "News", ...(VARIANT_CONFIG.news || {}) };
+
+/** Content of a standalone variant: articles and courses (/content/<variant>/). */
+function loadStandaloneContent() {
+    const coursesFile = path.join(CONTENT, "kurse.json");
+    const courses = fs.existsSync(coursesFile) ? JSON.parse(fs.readFileSync(coursesFile, "utf8")).courses || [] : [];
+    for (const course of courses) course.url = `/akademie/${course.slug}/`;
+    const news = loadNews(CONTENT, { includeDrafts, folder: NEWS.folder, path: NEWS.path });
+    return { news, courses, all: [], packages: [] };
+}
+
+
 // ------------------------------------------------------------
 // HELPERS
 // ------------------------------------------------------------
@@ -100,8 +135,8 @@ const DETAIL_TEMPLATES = {
 function resolveImageSource(url) {
     if (!url) return null;
     if (url.startsWith("/assets/")) {
-        const variantFile = VARIANT_DIR && path.join(VARIANT_DIR, url);
-        return variantFile && fs.existsSync(variantFile) ? variantFile : path.join(FRONTEND, url);
+        const variantFile = VARIANT_DIRS.map((dir) => path.join(dir, url)).find((file) => fs.existsSync(file));
+        return variantFile || path.join(FRONTEND, url);
     }
     if (url.startsWith("/media/")) return path.join(CONTENT, url.replace(/^\/media\//, ""));
     return null;
@@ -122,7 +157,7 @@ function outputPathFor(pagePath) {
 async function loadSiteConfig() {
     // A fresh import on every (watch) rebuild, so config edits are picked up.
     const module = await import(`${pathToFileURL(path.join(FRONTEND, "config", "site.js")).href}?t=${Date.now()}`);
-    const site = structuredClone(module.siteConfig);
+    const site = { ...structuredClone(module.siteConfig), ...structuredClone(VARIANT_CONFIG.site || {}) };
     if (process.env.PUBLIC_SITE_URL) site.url = process.env.PUBLIC_SITE_URL;
     site.url = site.url.replace(/\/+$/, "");
     site.apiOrigin = (site.apiOrigin || "").replace(/\/+$/, "");
@@ -182,8 +217,11 @@ function copyStaticFiles(content) {
 
     // News images: /content/news/<slug>/* -> /dist/media/news/<slug>/*
     for (const article of content.news) {
-        copyFolder(article.sourceFolder, path.join(DIST, "media", "news", article.slug), (file) => !file.endsWith(".md") && !path.basename(file).startsWith("."));
+        copyFolder(article.sourceFolder, path.join(DIST, "media", article.section, article.slug), (file) => !file.endsWith(".md") && !path.basename(file).startsWith("."));
     }
+
+    // Standalone variant: shared images /content/<variant>/bilder/* -> /dist/media/bilder/*
+    if (STANDALONE) copyFolder(path.join(CONTENT, "bilder"), path.join(DIST, "media", "bilder"), (file) => !path.basename(file).startsWith("."));
 
     // Project images: /content/<section>/<slug>/* -> /dist/media/<section>/<slug>/*
     for (const project of content.all) {
@@ -260,6 +298,7 @@ async function buildNewsPages(site, content) {
     log.step("Building news articles");
     const template = fs.readFileSync(sourceFile("templates", "news-article.html"), "utf8");
     const builtPages = [];
+    const listCrumb = { label: NEWS.label, href: NEWS.path };
 
     for (const [index, article] of content.news.entries()) {
         const page = createPageData(site, {
@@ -269,7 +308,7 @@ async function buildNewsPages(site, content) {
             ogImage: article.image,
             bodyClass: "page-news-article",
             headerTheme: "light",
-            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: "News", href: "/news/" }, { label: article.title, href: article.url }]
+            breadcrumbs: [{ label: "Startseite", href: "/" }, listCrumb, { label: article.title, href: article.url }]
         }, {});
 
         const htmlOutput = await renderPage({
@@ -279,7 +318,7 @@ async function buildNewsPages(site, content) {
         });
         writeFile(outputPathFor(page.path), htmlOutput);
         builtPages.push(page);
-        log.info(`${page.path.padEnd(34)} <- content/news/${article.slug}`);
+        log.info(`${page.path.padEnd(34)} <- ${path.relative(ROOT, article.sourceFolder)}`);
     }
     return builtPages;
 }
@@ -307,6 +346,30 @@ async function buildServicePages(site, content) {
         writeFile(outputPathFor(page.path), htmlOutput);
         builtPages.push(page);
         log.info(`${page.path.padEnd(34)} <- content/leistungen/pakete.json (${item.slug})`);
+    }
+    return builtPages;
+}
+
+/** One landing page per course of a standalone variant: /akademie/<slug>/ */
+async function buildCoursePages(site, content) {
+    if (!content.courses?.length) return [];
+    log.step("Building course pages");
+    const template = fs.readFileSync(sourceFile("templates", "course-page.html"), "utf8");
+    const builtPages = [];
+
+    for (const course of content.courses) {
+        const page = createPageData(site, {
+            title: course.title,
+            description: course.description,
+            path: course.url,
+            bodyClass: "page-course",
+            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: "Online-Akademie", href: "/akademie/" }, { label: course.title, href: course.url }]
+        }, {});
+
+        const htmlOutput = await renderPage({ site, content, page, body: template, extra: { course }, sourceName: `templates/course-page.html (${course.slug})` });
+        writeFile(outputPathFor(page.path), htmlOutput);
+        builtPages.push(page);
+        log.info(`${page.path.padEnd(34)} <- ${path.relative(ROOT, path.join(CONTENT, "kurse.json"))} (${course.slug})`);
     }
     return builtPages;
 }
@@ -387,20 +450,26 @@ async function build() {
     console.log("Building website ...");
 
     const site = await loadSiteConfig();
-    const content = loadContent(CONTENT, { includeDrafts });
+    const content = STANDALONE ? loadStandaloneContent() : loadContent(CONTENT, { includeDrafts });
 
     fs.rmSync(DIST, { recursive: true, force: true });
     fs.mkdirSync(DIST, { recursive: true });
 
     copyStaticFiles(content);
     buildCss();
-    const pages = [
-        ...(await buildPages(site, content)),
-        ...(await buildProjectPages(site, content)),
-        ...(await buildNewsPages(site, content)),
-        ...(await buildServicePages(site, content))
-    ];
-    await buildDemos(site, content);
+    const pages = STANDALONE
+        ? [
+            ...(await buildPages(site, content)),
+            ...(await buildNewsPages(site, content)),
+            ...(await buildCoursePages(site, content))
+        ]
+        : [
+            ...(await buildPages(site, content)),
+            ...(await buildProjectPages(site, content)),
+            ...(await buildNewsPages(site, content)),
+            ...(await buildServicePages(site, content))
+        ];
+    if (!STANDALONE) await buildDemos(site, content);
     await buildSeoFiles(site, pages);
 
     log.printWarnings();

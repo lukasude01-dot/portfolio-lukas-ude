@@ -16,6 +16,8 @@
  *   portfolio.js  /portfolio/ grid + portfolio project pages
  *   services.js   /leistungen/ package cards
  *   news.js       /news/ article list, homepage news teaser
+ *   bold.js       blocks of the bold design (main website)
+ *   flyfishing.js courses of flyfishing.lukasude.de
  */
 
 import { siteRenderers } from "./site.js";
@@ -29,6 +31,7 @@ import { portfolioRenderers } from "./portfolio.js";
 import { servicesRenderers } from "./services.js";
 import { newsRenderers } from "./news.js";
 import { boldRenderers } from "./bold.js";
+import { flyfishingRenderers } from "./flyfishing.js";
 
 export const renderers = {
     ...siteRenderers,
@@ -41,5 +44,6 @@ export const renderers = {
     ...portfolioRenderers,
     ...servicesRenderers,
     ...newsRenderers,
-    ...boldRenderers
+    ...boldRenderers,
+    ...flyfishingRenderers
 };
