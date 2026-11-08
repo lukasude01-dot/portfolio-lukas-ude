@@ -1,0 +1,58 @@
+{
+    "_info": "Kurs der Jagdhunde-Seite (huntingwithdogs.lukasude.de). Datum, Dauer, Preis und Inhalte ergänzen, sobald sie feststehen.",
+    "courses": [
+        {
+            "slug": "dein-erster-jagdhund",
+            "path": "/kurs/",
+            "title": "Dein erster Jagdhund",
+            "subtitle": "Live-Onlinekurs für angehende Erstlingsführer",
+            "level": "Jungjäger und Erstlingsführer",
+            "status": "Anmeldung bald möglich",
+            "featured": true,
+            "description": "Praxiswissen eines erfahrenen Jagdhundeführers für angehende Erstlingsführer. Damit du nicht einfach irgendeinen Jagdhund kaufst, sondern dich bewusst und gut vorbereitet für deinen zukünftigen Jagdpartner entscheidest.",
+            "intro": [
+                "Ein Jagdhund ist kein Ausrüstungsgegenstand, sondern ein Partner für viele Jahre. Mit der Haltung und Führung eines Jagdhundes ist viel Verantwortung verbunden. Deshalb ist es wichtig, sich schon vor der Anschaffung intensiv mit den Anforderungen auseinanderzusetzen.",
+                "In diesem Live-Onlinekurs verbinde ich die Erfahrungen aus der praktischen Jagdhundearbeit mit der strukturierten Vermittlung jagdhundekundlicher Grundlagen.",
+                "Ich empfehle dir dabei keine bestimmte Rasse, nur weil ich selbst gute Erfahrungen mit ihr gemacht habe. Ich helfe dir, die unterschiedlichen Anforderungen und Einsatzmöglichkeiten von Jagdhunden zu verstehen und eine Entscheidung zu treffen, die zu deiner Jagdpraxis und deinem Alltag passt."
+            ],
+            "date": "",
+            "dateFallback": "Wird in Kürze bekanntgegeben",
+            "time": "",
+            "facts": [
+                {
+                    "label": "Format",
+                    "value": "Live-Onlinekurs"
+                },
+                {
+                    "label": "Teilnehmerzahl",
+                    "value": "Maximal 30 Personen"
+                },
+                {
+                    "label": "Für wen",
+                    "value": "Jungjäger und angehende Erstlingsführer"
+                },
+                {
+                    "label": "Termin",
+                    "value": "{date}"
+                },
+                {
+                    "label": "Teilnahmegebühr",
+                    "value": "Wird mit dem Termin bekanntgegeben"
+                }
+            ],
+            "image": {
+                "src": "/media/bilder/lukas-hund-kueste.jpg",
+                "alt": "Lukas Ude kniet mit seinem Hund im Gras an der Küste.",
+                "caption": "Lukas Ude mit seinem Hund."
+            },
+            "offers": [
+                {
+                    "id": "dein-erster-jagdhund-live",
+                    "label": "Platz im Live-Onlinekurs",
+                    "format": "Live-Onlinekurs",
+                    "price": ""
+                }
+            ]
+        }
+    ]
+}

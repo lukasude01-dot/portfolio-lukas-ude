@@ -40,12 +40,20 @@ export const FLYFISHING_TOPICS = [
     "Fly Fishing: Allgemeine Anfrage"
 ];
 
+// Topics of the hunting dog website (huntingwithdogs.lukasude.de)
+export const JAGDHUNDE_TOPICS = [
+    "Jagdhunde: Frage zum Kurs",
+    "Jagdhunde: Kooperation",
+    "Jagdhunde: Presse",
+    "Jagdhunde: Allgemeine Anfrage"
+];
+
 // "required" = message when the field is empty
 export const CONTACT_FIELDS = {
     name: { label: "Name", required: "Bitte gib deinen Namen ein.", maxLength: 120 },
     email: { label: "E-Mail", required: "Bitte gib deine E-Mail-Adresse ein.", maxLength: 200, type: "email" },
     company: { label: "Unternehmen", required: false, maxLength: 160 },
-    topic: { label: "Thema", required: "Bitte wähle ein Thema.", options: [...CONTACT_TOPICS, ...FLYFISHING_TOPICS] },
+    topic: { label: "Thema", required: "Bitte wähle ein Thema.", options: [...CONTACT_TOPICS, ...FLYFISHING_TOPICS, ...JAGDHUNDE_TOPICS] },
     message: { label: "Nachricht", required: "Bitte schreib mir eine kurze Nachricht.", minLength: 20, maxLength: 4000 },
     privacy: { label: "Datenschutz", required: "Bitte bestätige, dass du die Datenschutzhinweise gelesen hast.", type: "checkbox" }
 };

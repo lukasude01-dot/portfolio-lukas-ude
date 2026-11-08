@@ -7,6 +7,7 @@
  *                               a variant into /frontend/dist-classic
  *   npm run build -- --variant=flyfishing -> builds the separate fly fishing
  *                               website into /frontend/dist-flyfishing
+ *   npm run build -- --variant=jagdhunde -> builds the hunting dog website
  *   SITE_VARIANT=flyfishing npm run build -> the same into /frontend/dist
  *                               (set on the host of flyfishing.lukasude.de)
  *   npm run build -- --watch -> rebuilds whenever a file changes
@@ -67,7 +68,14 @@ if (VARIANT_DIR && !fs.existsSync(VARIANT_DIR)) throw new Error(`Design variant 
 const VARIANT_FILE = VARIANT_DIR && path.join(VARIANT_DIR, "variant.js");
 const VARIANT_CONFIG = VARIANT_FILE && fs.existsSync(VARIANT_FILE) ? (await import(pathToFileURL(VARIANT_FILE).href)).variant : {};
 const STANDALONE = Boolean(VARIANT_CONFIG.standalone);
-const VARIANT_DIRS = [VARIANT_DIR, VARIANT_CONFIG.base && path.join(FRONTEND, "variants", VARIANT_CONFIG.base)].filter(Boolean);
+// The variant, then its base, the base's base and so on (e.g. jagdhunde -> flyfishing -> bold)
+const VARIANT_DIRS = [];
+for (let dir = VARIANT_DIR, config = VARIANT_CONFIG; dir; ) {
+    VARIANT_DIRS.push(dir);
+    dir = config.base ? path.join(FRONTEND, "variants", config.base) : null;
+    const file = dir && path.join(dir, "variant.js");
+    config = file && fs.existsSync(file) ? (await import(pathToFileURL(file).href)).variant : {};
+}
 
 // The site a server publishes is built into /dist: the live design by default,
 // or the variant named in SITE_VARIANT (set on the host of that website).

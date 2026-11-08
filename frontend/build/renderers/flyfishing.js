@@ -79,7 +79,8 @@ function factsList(course, delay) {
 function bookButton(course) {
     const offer = course?.offers?.[0];
     if (!offer) return "";
-    return html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">Jetzt anmelden<span class="btn__arrow" aria-hidden="true">→</span></button>`;
+    // without a price yet the place can be reserved ("vormerken")
+    return html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">${offer.price ? "Jetzt anmelden" : "Platz vormerken"}<span class="btn__arrow" aria-hidden="true">→</span></button>`;
 }
 
 const featured = (content) => content.courses.find((course) => course.featured) || content.courses[0];
@@ -224,5 +225,6 @@ ${factsList(course, 3)}
     "ff-course-start": ({ course }) => html`${bookButton(course)}
                             <a class="btn btn--ghost" href="#anmelden" data-magnetic>${course.offers?.[0]?.price || ""} pro Person</a>`,
 
-    "ff-book-button": ({ content }) => bookButton(featured(content))
+    "ff-book-button": ({ content }) => bookButton(featured(content)),
+    "ff-book-button-course": ({ course }) => bookButton(course)
 };

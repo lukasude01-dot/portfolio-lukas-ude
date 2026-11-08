@@ -1,0 +1,106 @@
+---
+# =========================================================
+# PAGE SETTINGS - HOME (hunting dog website)
+# Course: /content/jagdhunde/kurse.json
+# =========================================================
+title: Lukas Ude Jagdhunde
+description: Dein erster Jagdhund. Praxiswissen eines erfahrenen Jagdhundeführers für angehende Erstlingsführer. Live-Onlinekurs mit maximal 30 Teilnehmern.
+path: /
+bodyClass: page-home page-dogs-home
+---
+
+        <!-- =========================================================
+             HERO  (the particles form a pointing dog:
+             /frontend/variants/jagdhunde/assets/shapes/jagdhund.svg)
+        ========================================================= -->
+        <section class="hero-b" data-shape="image:/assets/shapes/jagdhund.svg" data-shape-size="0.98" aria-labelledby="hero-heading">
+            <div class="wrap hero-b__inner">
+                <div class="hero-b__copy">
+                    <p class="kicker ff-hero__brand" data-reveal>Lukas Ude | Hunting with Dogs</p>
+                    <h1 class="ff-hero__claim" id="hero-heading" data-split data-label="Dein erster Jagdhund.">
+                        <span>Dein erster</span>
+                        <span class="outline">Jagdhund.</span>
+                    </h1>
+                    <p class="lead hero-b__lead" data-reveal data-reveal-delay="4">
+                        Praxiswissen eines erfahrenen Jagdhundeführers für angehende Erstlingsführer.
+                    </p>
+                    <ul class="chip-row hj-trust" role="list" data-reveal data-reveal-delay="4">
+                        <li class="chip">Aktiver Jagdhundeführer</li>
+                        <li class="chip">Dozent für Jagdhundewesen an einer Jagdschule</li>
+                        <li class="chip">Live-Kurs mit maximal 30 Teilnehmern</li>
+                    </ul>
+                    <div class="btn-row" data-reveal data-reveal-delay="5">
+                        <a class="btn" href="/kurs/" data-magnetic>Zum Kurs<span class="btn__arrow" aria-hidden="true">→</span></a>
+                        <a class="btn btn--ghost" href="/referent/" data-magnetic>Dein Referent</a>
+                    </div>
+                </div>
+                <div class="hero-b__anchor" data-shape-anchor aria-hidden="true">
+                    <span class="hero-b__ring"></span>
+                    <span class="hero-b__ring hero-b__ring--2"></span>
+                </div>
+            </div>
+            <a class="hero-b__scroll" href="#kurs" aria-label="Weiter nach unten"><span></span></a>
+        </section>
+
+
+        <!-- =========================================================
+             THE COURSE  (from /content/jagdhunde/kurse.json)
+        ========================================================= -->
+        <section class="block" id="kurs" data-shape="orbit" data-shape-size="1.1" aria-labelledby="course-heading">
+            <div class="wrap">
+<!-- @render ff-course-featured -->
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             STATEMENT  (the words light up while scrolling)
+        ========================================================= -->
+        <section class="statement-b" data-scene data-shape="text:JAGDPARTNER" data-shape-size="0.9" aria-labelledby="goal-heading">
+            <div class="statement-b__sticky">
+                <div class="wrap">
+                    <p class="kicker">Das Ziel des Kurses</p>
+                    <h2 class="h2 statement-b__title" id="goal-heading">Bewusst entscheiden.</h2>
+                    <p class="statement-b__text" data-scrub>Mein Ziel ist, dass du nicht einfach irgendeinen Jagdhund kaufst, sondern dich bewusst und gut vorbereitet für deinen zukünftigen Jagdpartner entscheidest.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             REFERENT  (practice first, teaching second)
+        ========================================================= -->
+        <section class="block" data-shape="cloud" aria-labelledby="referent-heading">
+            <div class="wrap ff-split ff-split--reverse">
+                <figure class="ff-figure ff-split__media" data-reveal>
+                    <img src="/media/bilder/strand-hund-wurf.jpg" alt="Ein Hund liegt am Kiesstrand, im Hintergrund steht Lukas Ude im Wasser." sizes="(min-width: 900px) 45vw, 92vw" loading="lazy" data-responsive>
+                    <figcaption class="caption">Immer mit dabei.</figcaption>
+                </figure>
+                <div class="ff-split__copy">
+                    <p class="kicker" data-reveal>Dein Referent</p>
+                    <h2 class="h2" id="referent-heading" data-split>Jagdhundeführer aus der Praxis.</h2>
+                    <p class="lead" data-reveal data-reveal-delay="2">Als aktiver Jagdhundeführer weiß ich aus eigener Erfahrung, welche Verantwortung mit der Haltung und Führung eines Jagdhundes verbunden ist.</p>
+                    <p class="muted" data-reveal data-reveal-delay="3">Zusätzlich bin ich als Dozent für Jagdhundewesen an einer Jagdschule tätig und gebe dort mein Wissen an angehende Jäger weiter.</p>
+                    <a class="arrow-link" href="/referent/">Mehr über mich</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             BOOKING
+        ========================================================= -->
+        <section class="block" data-shape="cloud" aria-labelledby="start-heading">
+            <div class="wrap">
+                <div class="ff-callbox glass" data-reveal>
+                    <div>
+                        <p class="kicker">Live-Onlinekurs</p>
+                        <h2 class="h3" id="start-heading">Sichere dir deinen Platz.</h2>
+                        <p class="muted">Maximal 30 Teilnehmer. Termin und Teilnahmegebühr werden in Kürze bekanntgegeben. Du kannst dir schon jetzt unverbindlich einen Platz vormerken lassen.</p>
+                    </div>
+                    <div class="btn-row">
+<!-- @render ff-book-button -->
+                    </div>
+                </div>
+            </div>
+        </section>

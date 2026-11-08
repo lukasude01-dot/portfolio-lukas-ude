@@ -1,0 +1,67 @@
+        <!-- =========================================================
+             COURSE PAGE TEMPLATE  (hunting dog website)
+
+             Builds the page of every course in /content/jagdhunde/kurse.json
+             (address: "path", e.g. /kurs/). Texts and facts live there.
+             GENERATED PARTS:  /frontend/build/renderers/flyfishing.js
+        ========================================================= -->
+
+        <section class="page-b" data-shape="image:/assets/shapes/jagdhund.svg" data-shape-size="0.9" aria-labelledby="course-heading">
+            <div class="wrap">
+<!-- @render breadcrumbs -->
+                <div class="ff-split">
+                    <div class="ff-split__copy">
+                        <p class="kicker" data-reveal>{{ course.subtitle }}</p>
+                        <h1 class="h1" id="course-heading" data-split>{{ course.title }}</h1>
+                        <p class="lead" data-reveal data-reveal-delay="3">{{ course.description }}</p>
+                        <div class="btn-row" data-reveal data-reveal-delay="4">
+<!-- @render ff-book-button-course -->
+                        </div>
+                    </div>
+<!-- @render ff-course-figure -->
+                </div>
+            </div>
+        </section>
+
+        <section class="block ff-block-tight" data-shape="cloud" aria-label="Die wichtigsten Informationen">
+            <div class="wrap ff-columns">
+                <div class="ff-prose">
+<!-- @render ff-course-intro -->
+                </div>
+                <div>
+                    <h2 class="h3 ff-block-title">Auf einen Blick</h2>
+<!-- @render ff-course-facts -->
+                </div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="wave" aria-labelledby="referent-heading">
+            <div class="wrap ff-split ff-split--reverse">
+                <figure class="ff-figure ff-split__media" data-reveal>
+                    <img src="/media/bilder/strand-hund-wurf.jpg" alt="Ein Hund liegt am Kiesstrand, im Hintergrund steht Lukas Ude im Wasser." sizes="(min-width: 900px) 45vw, 92vw" loading="lazy" data-responsive>
+                    <figcaption class="caption">Lukas Ude, dein Referent.</figcaption>
+                </figure>
+                <div class="ff-split__copy">
+                    <p class="kicker" data-reveal>Dein Referent</p>
+                    <h2 class="h2" id="referent-heading" data-split>Jagdhundeführer aus der Praxis.</h2>
+                    <p class="muted" data-reveal data-reveal-delay="2">Aktiver Jagdhundeführer und zusätzlich Dozent für Jagdhundewesen an einer Jagdschule. Im Kurs verbinde ich beide Perspektiven.</p>
+                    <a class="arrow-link" href="/referent/">Mehr über mich</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="image:/assets/shapes/jagdhund.svg" data-shape-size="0.8" aria-label="Anmeldung">
+            <div class="wrap">
+                <div class="ff-callbox glass" id="anmelden" data-reveal>
+                    <div>
+                        <p class="kicker">Jetzt Platz vormerken</p>
+                        <h2 class="h3">{{ course.title }}: Live-Onlinekurs, maximal 30 Teilnehmer</h2>
+                        <p class="muted">Termin und Teilnahmegebühr werden in Kürze bekanntgegeben. Mit der Anmeldung schickst du mir eine unverbindliche Anfrage. Ich melde mich per E-Mail, sobald der Termin feststeht.</p>
+                    </div>
+                    <div class="btn-row">
+<!-- @render ff-book-button-course -->
+                        <a class="btn btn--ghost" href="/kontakt/?thema=Jagdhunde%3A%20Frage%20zum%20Kurs" data-magnetic>Frage zum Kurs</a>
+                    </div>
+                </div>
+            </div>
+        </section>

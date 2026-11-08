@@ -93,8 +93,8 @@ export function loadConfig(env = process.env) {
 
         serveFrontend: readBoolean(env.SERVE_FRONTEND, true),
         frontendDist: path.resolve(BACKEND_DIR, env.FRONTEND_DIST || "../frontend/dist"),
-        // Shop catalogue of the fly fishing website (flies and courses)
-        catalogDir: path.resolve(BACKEND_DIR, "../content/flyfishing"),
+        // Shop catalogues of the standalone websites (flies and courses)
+        catalogDirs: ["flyfishing", "jagdhunde"].map((name) => path.resolve(BACKEND_DIR, "../content", name)),
 
         formTokenSecret,
         formMinSeconds: readNumber(env.FORM_MIN_SECONDS, 3),

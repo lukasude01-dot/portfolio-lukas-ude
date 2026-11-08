@@ -61,3 +61,16 @@ Vorgesehen ist Stripe Checkout (Bezahlseite von Stripe, keine Kartendaten auf di
 3. `STRIPE_SECRET_KEY` und `STRIPE_WEBHOOK_SECRET` nur als Umgebungsvariable bei Hostinger setzen.
 4. `order.js` erzeugt dann eine Checkout-Session statt der E-Mail; ein Webhook bestätigt die Zahlung.
 5. Datenschutzerklärung um den Zahlungsanbieter ergänzen, Button in „Zahlungspflichtig bestellen“ ändern.
+
+
+## Dritte Seite: Jagdhunde (huntingwithdogs.lukasude.de)
+
+Aufbau wie Fly Fishing, Variante `frontend/variants/jagdhunde/` (Basis: flyfishing).
+Kurs in `content/jagdhunde/kurse.json`, Bilder in `content/jagdhunde/bilder/`.
+
+```bash
+npm run build:jagdhunde
+node scripts/check-site.js dist-jagdhunde
+```
+
+Hosting: eigene Node.js-App mit `SITE_VARIANT=jagdhunde`, sonst wie oben.

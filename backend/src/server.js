@@ -48,7 +48,7 @@ export function createApp(config, { deliver } = {}) {
     const routes = {
         ...createHealthRoutes(),
         ...createContactRoutes({ config, logger, rateLimiter, formTokens, deliver: delivery }),
-        ...createOrderRoutes({ config, logger, rateLimiter, formTokens, deliver: delivery, catalog: loadCatalog(config.catalogDir) })
+        ...createOrderRoutes({ config, logger, rateLimiter, formTokens, deliver: delivery, catalog: Object.assign({}, ...config.catalogDirs.map(loadCatalog)) })
     };
 
     const serveStatic = config.serveFrontend && fs.existsSync(config.frontendDist)
