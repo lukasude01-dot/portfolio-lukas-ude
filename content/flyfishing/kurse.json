@@ -1,329 +1,169 @@
 {
-    "_info": "Kurse der Online-Akademie (flyfishing.lukasude.de/akademie/<slug>/). Bilder liegen in /content/flyfishing/bilder/. Preis, Start und Zugangsdauer erst eintragen, wenn sie feststehen. \"offers\": buchbare Varianten (Warenkorb). Erst Live-Kurse, später Videokurse.",
+    "_info": "Angebotene Kurse (flyfishing.lukasude.de). Derzeit nur der Einsteiger-Workshop. Datum in \"date\" eintragen, z. B. \"Freitag, 16. Januar 2027\". Spätere Kurse liegen in _spaeter/kurse.json.",
     "courses": [
         {
-            "slug": "fliegenbinden-grundkurs",
-            "title": "Fliegenbinden von Grund auf",
-            "subtitle": "Der Einsteigerkurs",
+            "slug": "fliegenbinden-einsteiger",
+            "path": "/workshop/",
+            "title": "Fliegenbinden für Einsteiger",
+            "subtitle": "Dein Live-Online-Workshop",
             "level": "Einsteiger",
-            "status": "Live-Kurs in Planung",
+            "status": "Anmeldung offen",
             "featured": true,
-            "description": "Der vollständige Grundkurs: Werkzeuge, Materialien und die wichtigsten Bindetechniken. Am Ende bindest du Nymphen, Nassfliegen, Trockenfliegen und erste Streamer selbst.",
+            "description": "Lerne die Grundlagen des Fliegenbindens und binde deine ersten eigenen Fliegen. Schritt für Schritt, gemeinsam mit mir und bequem von zu Hause aus.",
+            "intro": [
+                "Du möchtest mit dem Fliegenbinden anfangen, weißt aber noch nicht genau, welche Werkzeuge du benötigst, welche Materialien sinnvoll sind oder wie du deine ersten Fliegen bindest?",
+                "In diesem vierstündigen Live-Workshop lernst du die wichtigsten Grundlagen des Fliegenbindens kennen. Wir beschäftigen uns mit Werkzeugen, Materialien, unterschiedlichen Fliegentypen und grundlegenden Bindetechniken. Anschließend setzen wir das Gelernte direkt um und binden gemeinsam drei ausgewählte Fliegenmuster.",
+                "Dabei geht es nicht darum, möglichst viele Fliegen in möglichst kurzer Zeit zu produzieren. Vielmehr möchte ich dir vermitteln, wie die einzelnen Bindetechniken funktionieren, warum bestimmte Materialien verwendet werden und worauf es beim Aufbau einer Fliege ankommt.",
+                "Du bindest während des gesamten praktischen Teils selbst mit, kannst jederzeit Fragen stellen und die einzelnen Arbeitsschritte direkt nachvollziehen."
+            ],
+            "date": "",
+            "dateFallback": "Freitag, Datum folgt",
+            "time": "16:00 bis 20:00 Uhr",
+            "facts": [
+                {
+                    "label": "Termin",
+                    "value": "{date}, {time}"
+                },
+                {
+                    "label": "Ort",
+                    "value": "Online über Google Meet"
+                },
+                {
+                    "label": "Dauer",
+                    "value": "4 Stunden inklusive kurzer Pause"
+                },
+                {
+                    "label": "Teilnehmerzahl",
+                    "value": "Maximal 15 Personen"
+                },
+                {
+                    "label": "Teilnahmegebühr",
+                    "value": "49 € pro Person"
+                },
+                {
+                    "label": "Vorkenntnisse",
+                    "value": "Nicht erforderlich"
+                },
+                {
+                    "label": "Materialien",
+                    "value": "Bringst du selbst mit. Eine detaillierte Einkaufsliste erhältst du vorab."
+                }
+            ],
             "image": {
                 "src": "/media/bilder/rehhaarfliege-bindestock.jpg",
                 "alt": "Eine Köcherfliege aus Rehhaar steckt im Bindestock.",
                 "caption": "Selbst gebunden: Köcherfliege aus Rehhaar im Bindestock.",
                 "label": "Foto: Lukas Ude"
             },
-            "audience": [
-                "Du willst Fliegenbinden lernen und fängst bei null an.",
-                "Du hast schon ein paar Fliegen gebunden und willst die Grundlagen sauber nachholen.",
-                "Du suchst eine klare Reihenfolge statt einzelner Videos ohne Zusammenhang."
-            ],
-            "prerequisites": "Kein Vorwissen nötig. Etwas Geduld und ein ruhiger Arbeitsplatz reichen.",
-            "goals": [
-                "Du kennst die wichtigsten Werkzeuge und weißt, was du am Anfang wirklich brauchst.",
-                "Du legst den Bindefaden sicher an und fixierst Material so, dass es hält.",
-                "Du beherrschst Dubbing, das Wickeln von Hechelfedern und den Abschlussknoten.",
-                "Du bindest Nymphen, Nassfliegen, Trockenfliegen und einfache Streamer nach Anleitung.",
-                "Du verstehst, warum eine Fliege so gebaut ist und wie sie im Wasser wirkt."
-            ],
-            "modules": [
+            "agenda": [
                 {
-                    "title": "Werkzeug und Arbeitsplatz",
-                    "lessons": [
-                        "Bindestock, Spulenhalter, Schere und Hechelklemme",
-                        "Der Arbeitsplatz: Licht, Ordnung, Haltung",
-                        "Was du am Anfang nicht kaufen musst"
+                    "title": "Werkzeuge und Materialkunde",
+                    "image": {
+                        "src": "/media/bilder/streamer-und-nassfliegen.jpg",
+                        "alt": "Ein weißer Streamer mit roten Augen im Bindestock, daneben zwei Nassfliegen.",
+                        "caption": "Am Bindetisch."
+                    },
+                    "text": [
+                        "Zu Beginn beschäftigen wir uns mit der Grundausstattung zum Fliegenbinden. Du lernst die wichtigsten Werkzeuge kennen, darunter Bindestock, Bobbin, Bindeschere, Hechelklemme und Whip Finisher. Wir besprechen ihre Funktionen und worauf du bei der Auswahl achten solltest.",
+                        "Anschließend schauen wir uns verschiedene Bindematerialien an: Natur- und Kunstfasern, Federn, Felle, Dubbing, Chenille und weitere häufig verwendete Materialien. Welche Materialien sorgen für Bewegung im Wasser? Welche nehmen Wasser auf? Welche eignen sich für schlanke Körper und welche für voluminöse Streamer?"
                     ]
                 },
                 {
-                    "title": "Material verstehen",
-                    "lessons": [
-                        "Haken: Form, Größe und Drahtstärke",
-                        "Bindefaden und Draht",
-                        "Federn, Haare, Dubbing und Kunstfasern"
+                    "title": "Fliegentypen und ihre Einsatzgebiete",
+                    "image": {
+                        "src": "/media/bilder/eintagsfliege.jpg",
+                        "alt": "Eine Eintagsfliege mit gelbem Hinterleib und gemusterten Flügeln im Bindestock.",
+                        "caption": "Eine Eintagsfliege als Trockenfliege."
+                    },
+                    "text": [
+                        "Bevor wir mit dem eigentlichen Binden beginnen, schauen wir uns an, welche Fliegentypen es gibt. Wir beschäftigen uns mit Trockenfliegen, Nassfliegen, Nymphen und Streamern und besprechen, welche natürlichen Nahrungsorganismen oder Beutetiere sie nachahmen können.",
+                        "Dabei betrachten wir auch Auftrieb, Sinkverhalten, Beschwerung und die Bewegung verschiedener Materialien im Wasser. Ziel ist, dass du nicht nur lernst, eine Fliege nachzubinden, sondern verstehst, warum sie so konstruiert ist."
                     ]
                 },
                 {
-                    "title": "Die Grundtechniken",
-                    "lessons": [
-                        "Faden anlegen und Fadenspannung",
-                        "Material einbinden mit der weichen Schlaufe",
-                        "Dubbing auftragen",
-                        "Hechel wickeln",
-                        "Abschlussknoten und Lack"
+                    "title": "Die grundlegenden Bindetechniken",
+                    "image": {
+                        "src": "/media/bilder/trockenfliege-bindestock.jpg",
+                        "alt": "Eine Trockenfliege mit gelbem Flügel und brauner Hechel im Bindestock.",
+                        "caption": "Saubere Proportionen sind das Ziel."
+                    },
+                    "text": [
+                        "Jetzt geht es an den Bindestock. Gemeinsam üben wir die wichtigsten Handgriffe, die du später für zahlreiche Fliegenmuster benötigen wirst. Wir gehen die Techniken Schritt für Schritt durch, damit du sie anschließend selbstständig anwenden kannst."
+                    ],
+                    "list": [
+                        "Den Bindefaden sicher am Haken befestigen",
+                        "Fadenspannung und Fadenführung kontrollieren",
+                        "Unterschiedliche Materialien sauber einbinden",
+                        "Körper und Proportionen einer Fliege aufbauen",
+                        "Beschwerungen anbringen und ihre Wirkung verstehen",
+                        "Mit Materialmengen bewusst und sparsam umgehen",
+                        "Einen sauberen Abschlussknoten herstellen"
                     ]
                 },
                 {
-                    "title": "Nymphen",
-                    "lessons": [
-                        "Aufbau einer Nymphe",
-                        "Eine einfache Goldkopfnymphe",
-                        "Proportionen und typische Fehler"
-                    ]
-                },
-                {
-                    "title": "Nassfliegen",
-                    "lessons": [
-                        "Aufbau und Einsatz",
-                        "Schwinge und Kehlhechel",
-                        "Eine klassische Nassfliege"
-                    ]
-                },
-                {
-                    "title": "Trockenfliegen",
-                    "lessons": [
-                        "Was eine Fliege schwimmen lässt",
-                        "Flügel, Hechel und Schwanzfasern",
-                        "Eine Trockenfliege für den Bach"
-                    ]
-                },
-                {
-                    "title": "Erste Streamer",
-                    "lessons": [
-                        "Aufbau eines Streamers",
-                        "Ein einfacher Marabou-Streamer",
-                        "Haltbar binden"
+                    "title": "Gemeinsam binden wir drei Fliegenmuster",
+                    "image": null,
+                    "text": [
+                        "Im praktischen Hauptteil setzen wir das Gelernte direkt um. Bei allen drei Mustern gehen wir gemeinsam Schritt für Schritt vor. Die Geschwindigkeit richtet sich nach dem Lernfortschritt der Gruppe."
                     ]
                 }
+            ],
+            "patterns": [
+                {
+                    "name": "Woolly Bugger",
+                    "subtitle": "Der Einstieg ins Streamerbinden",
+                    "text": "Wir beginnen mit einem klassischen Woolly Bugger. Durch seine Größe und den übersichtlichen Aufbau eignet er sich gut für den Einstieg. Du lernst unter anderem, einen Marabou-Schwanz einzubinden, einen Körper aufzubauen und eine Hechel sauber zu verarbeiten."
+                },
+                {
+                    "name": "Zonker",
+                    "subtitle": "Arbeiten mit Fellstreifen",
+                    "text": "Als zweites Muster binden wir einen einfachen Zonker-Streamer. Hier geht es um das Einbinden von Fellstreifen, den Aufbau eines Streamerkörpers und die Eigenschaften beweglicher Naturmaterialien."
+                },
+                {
+                    "name": "Goldkopfnymphe",
+                    "subtitle": "Grundlagen des Nymphenbindens",
+                    "text": "Zum Abschluss binden wir eine einfache Goldkopfnymphe. Wir arbeiten mit einem kleineren Haken, einem Perlenkopf und einem schlanken Körperaufbau. So bekommst du ein Gefühl für die Proportionen kleinerer Fliegen.",
+                    "image": {
+                        "src": "/media/bilder/goldkopfnymphe.jpg",
+                        "alt": "Eine Goldkopfnymphe mit Schwanzfasern im Bindestock.",
+                        "caption": "Eine Goldkopfnymphe."
+                    }
+                }
+            ],
+            "together": [
+                "Dieser Workshop ist bewusst auf maximal 15 Teilnehmer begrenzt. Du sollst nicht vier Stunden lang nur einer Vorführung folgen, sondern selbst am Bindestock arbeiten und das Gelernte direkt ausprobieren.",
+                "Während des Workshops kannst du Fragen stellen, dir einzelne Schritte erneut erklären lassen und bei Schwierigkeiten Unterstützung bekommen. Wir nehmen uns Zeit für die Grundlagen. Wenn ein Arbeitsschritt nicht sofort klappt, ist das kein Problem. Genau dafür ist dieser Workshop gedacht."
             ],
             "equipment": [
-                "Bindestock",
-                "Spulenhalter und Bindefaden",
-                "Feine, scharfe Schere",
-                "Hechelklemme",
-                "Dubbingnadel",
-                "Abschlussknotenwerkzeug (optional)",
-                "Eine Materialliste je Lektion folgt mit dem Kurs"
+                "Für die Teilnahme benötigst du einen Bindestock, grundlegende Bindewerkzeuge und die Materialien für unsere drei Fliegenmuster. Eine teure Komplettausstattung musst du dafür nicht kaufen.",
+                "Nach deiner Anmeldung erhältst du eine detaillierte Werkzeug- und Materialliste mit den benötigten Mengen, Größen und möglichen Alternativen, spätestens zehn Tage vor dem Workshop.",
+                "Falls du noch keine Ausrüstung besitzt oder unsicher bist, welche Produkte du kaufen solltest, unterstütze ich dich gern vorab bei der Auswahl. So stellst du eine sinnvolle Grundausstattung zusammen, mit der du auch nach dem Workshop weiterarbeiten kannst, ohne unnötig Geld auszugeben."
             ],
-            "faq": [
+            "extras": [
                 {
-                    "q": "Wie läuft der Live-Kurs ab?",
-                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
+                    "title": "Material- und Werkzeugliste",
+                    "text": "Eine übersichtliche Einkaufsliste mit allen benötigten Materialien und Werkzeugen sowie Hinweisen zu möglichen Alternativen."
                 },
                 {
-                    "q": "Kommt auch ein Videokurs?",
-                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
+                    "title": "Hilfe bei der Ausrüstung",
+                    "text": "Du kannst mir vor dem Workshop Fragen zu deiner geplanten Ausstattung schicken und bekommst eine Einschätzung, was für den Einstieg sinnvoll ist."
                 },
                 {
-                    "q": "Was kostet der Kurs?",
-                    "a": "Der Preis steht noch nicht fest. Er wird vor dem Start auf dieser Seite genannt, zusammen mit allem, was enthalten ist."
-                },
-                {
-                    "q": "Wie lange habe ich Zugang und gibt es Updates?",
-                    "a": "Zugangsdauer und Updates werden vor dem Start verbindlich festgelegt und hier transparent beschrieben."
-                },
-                {
-                    "q": "Brauche ich teures Werkzeug?",
-                    "a": "Nein. Für den Anfang reicht solides Grundwerkzeug. Im Kurs erfährst du, wo sich Qualität lohnt und wo nicht."
-                },
-                {
-                    "q": "Kann ich den Kurs am Tablet am Bindetisch verfolgen?",
-                    "a": "Ja, darauf ist der Lernbereich ausgelegt. Videos, Materiallisten und Anleitungen sollen auf Tablet und Smartphone gut bedienbar sein."
+                    "title": "Begleitunterlagen als PDF",
+                    "text": "Nach dem Workshop erhältst du die wichtigsten Inhalte der Grundlagenpräsentation sowie Materiallisten und Bindeschritte der drei Muster zum Nachschlagen."
                 }
+            ],
+            "audience": [
+                "Der Workshop richtet sich an Fliegenfischer und andere Interessierte, die das Fliegenbinden von Grund auf erlernen möchten.",
+                "Du bist hier richtig, wenn du bisher noch keine Fliege gebunden hast, gerade deine ersten Versuche unternimmst oder deine grundlegenden Bindetechniken systematisch verbessern möchtest.",
+                "Vorkenntnisse brauchst du nicht. Etwas Geduld, Freude an handwerklicher Arbeit und Interesse am Fliegenbinden reichen vollkommen aus."
             ],
             "offers": [
                 {
-                    "id": "fliegenbinden-grundkurs-live",
-                    "label": "Platz im Live-Kurs",
-                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
-                    "price": ""
-                }
-            ]
-        },
-        {
-            "slug": "advanced-streamer-tying",
-            "title": "Advanced Streamer Tying",
-            "subtitle": "Moderne Streamer binden",
-            "level": "Fortgeschrittene",
-            "status": "Live-Kurs in Planung",
-            "description": "Der Aufbaukurs für moderne Streamer: Materialien, Profile, Gelenkkonstruktionen und fortgeschrittene Bindetechniken für Fliegen, die im Wasser richtig arbeiten.",
-            "image": {
-                "src": "/media/bilder/tubenstreamer-bindestock.jpg",
-                "alt": "Ein olivgrüner Tubenstreamer mit Kegelkopf auf der Nadel des Bindestocks.",
-                "caption": "Selbst gebunden: Tubenstreamer in Oliv.",
-                "label": "Foto: Lukas Ude"
-            },
-            "audience": [
-                "Du beherrschst die Grundtechniken und willst größere Fliegen binden.",
-                "Du fischst mit Streamern und willst verstehen, warum ein Muster im Wasser lebt oder nicht.",
-                "Du willst eigene Muster entwickeln statt nur Vorlagen nachzubinden."
-            ],
-            "prerequisites": "Du legst den Faden sicher an, bindest Material sauber ein und setzt einen haltbaren Abschlussknoten.",
-            "goals": [
-                "Du wählst Material nach Volumen, Bewegung und Sinkverhalten aus.",
-                "Du baust Profile, die im Wasser ihre Form behalten.",
-                "Du verbindest mehrteilige Streamer mit beweglichen Gelenken.",
-                "Du steuerst Gewicht und Laufverhalten deiner Fliegen.",
-                "Du bindest so, dass ein Streamer viele Würfe und Bisse übersteht."
-            ],
-            "modules": [
-                {
-                    "title": "Material für Streamer",
-                    "lessons": [
-                        "Naturhaar und Federn",
-                        "Kunstfasern und Flash",
-                        "Marabou und Fellstreifen",
-                        "Köpfe, Augen und Gewichte"
-                    ]
-                },
-                {
-                    "title": "Profil und Volumen",
-                    "lessons": [
-                        "Hohl binden: viel Volumen, wenig Gewicht",
-                        "Stufenweise Profile aufbauen",
-                        "Proportionen für ruhiges Laufverhalten"
-                    ]
-                },
-                {
-                    "title": "Gelenkstreamer",
-                    "lessons": [
-                        "Shanks und Verbindungen",
-                        "Bewegung zwischen den Gliedern",
-                        "Haken richtig platzieren"
-                    ]
-                },
-                {
-                    "title": "Gewicht und Laufverhalten",
-                    "lessons": [
-                        "Wo das Gewicht sitzt und was es bewirkt",
-                        "Sinkende und schwebende Muster",
-                        "Fliegen im Wasser testen"
-                    ]
-                },
-                {
-                    "title": "Haltbarkeit und Feinschliff",
-                    "lessons": [
-                        "Kleber und Harze gezielt einsetzen",
-                        "Farben und Kontraste",
-                        "Vom Muster zur eigenen Idee"
-                    ]
-                }
-            ],
-            "equipment": [
-                "Bindestock mit sicherem Halt für große Haken",
-                "Kräftiger Bindefaden",
-                "Schere für Kunstfasern",
-                "Bürste zum Auskämmen von Fasern",
-                "Kleber oder UV-Harz",
-                "Eine Materialliste je Lektion folgt mit dem Kurs"
-            ],
-            "faq": [
-                {
-                    "q": "Wie läuft der Live-Kurs ab?",
-                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
-                },
-                {
-                    "q": "Kommt auch ein Videokurs?",
-                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
-                },
-                {
-                    "q": "Was kostet der Kurs?",
-                    "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt."
-                },
-                {
-                    "q": "Reicht mein Werkzeug aus dem Grundkurs?",
-                    "a": "Größtenteils ja. Für große Haken brauchst du einen Bindestock, der sie sicher hält. Alles Weitere steht in den Materiallisten."
-                }
-            ],
-            "offers": [
-                {
-                    "id": "advanced-streamer-tying-live",
-                    "label": "Platz im Live-Kurs",
-                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
-                    "price": ""
-                }
-            ]
-        },
-        {
-            "slug": "meerforellenfliegen",
-            "title": "Meerforellenfliegen binden",
-            "subtitle": "Fliegen für die Küste",
-            "level": "Fortgeschrittene",
-            "status": "Live-Kurs in Planung",
-            "description": "Der Spezialkurs für die Küstenfischerei: Muster, die Garnelen, Würmer und kleine Fische nachahmen, gebunden mit Material, das Salzwasser verträgt.",
-            "image": {
-                "src": "/media/bilder/lukas-meerforelle-strand.jpg",
-                "alt": "Lukas Ude hält eine Meerforelle an einem steinigen Strand.",
-                "caption": "Lukas Ude mit einer Meerforelle an der Küste.",
-                "label": "Lukas Ude an der Küste"
-            },
-            "audience": [
-                "Du fischst an der Küste auf Meerforelle oder willst damit anfangen.",
-                "Du bindest bereits und willst Muster für das Salzwasser lernen.",
-                "Du willst verstehen, welche Fliege zu welcher Situation passt."
-            ],
-            "prerequisites": "Sichere Grundtechniken. Der Einsteigerkurs ist eine gute Vorbereitung.",
-            "goals": [
-                "Du kennst die wichtigsten Beutetiere der Meerforelle an der Küste.",
-                "Du bindest Garnelen, Wurm- und Fischchenmuster.",
-                "Du wählst Haken und Material, die im Salzwasser lange halten.",
-                "Du passt Größe und Farbe an Jahreszeit und Bedingungen an."
-            ],
-            "modules": [
-                {
-                    "title": "Die Küste verstehen",
-                    "lessons": [
-                        "Beutetiere und Jahreszeiten",
-                        "Was eine gute Küstenfliege ausmacht"
-                    ]
-                },
-                {
-                    "title": "Material für das Salzwasser",
-                    "lessons": [
-                        "Korrosionsbeständige Haken",
-                        "Material, das Salzwasser verträgt",
-                        "Pflege nach dem Angeltag"
-                    ]
-                },
-                {
-                    "title": "Garnelenmuster",
-                    "lessons": [
-                        "Aufbau einer Garnele",
-                        "Ein einfaches Garnelenmuster",
-                        "Varianten in Farbe und Größe"
-                    ]
-                },
-                {
-                    "title": "Wurm- und Fischchenmuster",
-                    "lessons": [
-                        "Bewegliche Wurmmuster",
-                        "Schlanke Fischchen",
-                        "Muster mit Glanz für trübes Licht"
-                    ]
-                }
-            ],
-            "equipment": [
-                "Grundwerkzeug aus dem Einsteigerkurs",
-                "Salzwasserfeste Haken",
-                "Kunstfasern, Flash und Dubbing",
-                "Eine Materialliste je Lektion folgt mit dem Kurs"
-            ],
-            "faq": [
-                {
-                    "q": "Wie läuft der Live-Kurs ab?",
-                    "a": "Wir treffen uns online in einer kleinen Gruppe per Video. Du bindest am eigenen Bindestock mit und kannst jederzeit nachfragen. Die Termine stimmen wir gemeinsam ab, sobald die Gruppe voll ist."
-                },
-                {
-                    "q": "Kommt auch ein Videokurs?",
-                    "a": "Ja. Aus den Live-Kursen entsteht nach und nach ein Videokurs, den du jederzeit in deinem Tempo ansehen kannst."
-                },
-                {
-                    "q": "Was kostet der Kurs?",
-                    "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt."
-                },
-                {
-                    "q": "Geht es auch um das Fischen an der Küste?",
-                    "a": "Der Schwerpunkt liegt auf dem Binden. Zu jedem Muster erfährst du aber, wofür es gedacht ist und wann es sich lohnt."
-                }
-            ],
-            "offers": [
-                {
-                    "id": "meerforellenfliegen-live",
-                    "label": "Platz im Live-Kurs",
-                    "format": "Live online in kleiner Gruppe, Termine nach Absprache",
-                    "price": ""
+                    "id": "fliegenbinden-einsteiger-live",
+                    "label": "Platz im Live-Workshop",
+                    "format": "Live online über Google Meet",
+                    "price": "49 €"
                 }
             ]
         }

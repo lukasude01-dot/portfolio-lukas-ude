@@ -3,6 +3,7 @@
  *
  * PURPOSE:
  * - "In den Warenkorb" buttons:  <button data-cart-add="fly-slug">
+ *   (with data-cart-go="/warenkorb/" the cart opens right away)
  * - Counter in the navigation:   <span data-cart-count>
  * - Cart page /warenkorb/:       <div data-cart> + <form data-order-form>
  *
@@ -89,6 +90,11 @@ function initButtons() {
         const button = event.target.closest("[data-cart-add]");
         if (!button) return;
         addItem(button.dataset.cartAdd);
+        // "Jetzt anmelden": straight to the cart
+        if (button.dataset.cartGo) {
+            window.location.href = siteUrl(button.dataset.cartGo);
+            return;
+        }
         status.textContent = `${button.dataset.cartName || "Artikel"} liegt im Warenkorb.`;
         status.classList.add("is-visible");
         clearTimeout(timer);
@@ -223,7 +229,7 @@ function initOrderForm(form, getCatalog) {
                 writeCart([]);
                 form.reset();
                 tokenPromise = null;
-                say("success", "Danke! Deine Anfrage ist angekommen. Ich melde mich innerhalb von zwei Werktagen mit Preis, Versand und Terminen.");
+                say("success", "Danke! Deine Anmeldung ist angekommen. Ich melde mich innerhalb von zwei Werktagen per E-Mail.");
                 return;
             }
             if (response.status === 422 && answer.errors) showErrors(answer.errors);

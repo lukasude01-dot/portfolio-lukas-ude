@@ -907,3 +907,98 @@
     border: 1px solid var(--b-line);
     border-radius: var(--b-radius);
 }
+
+
+/* ----------------------------------------------------------
+   WORKSHOP PAGE  (template course-page.html)
+---------------------------------------------------------- */
+
+.ff-block-tight {
+    padding-top: clamp(2rem, 1rem + 3vw, 4rem);
+}
+
+.ff-prose {
+    display: grid;
+    gap: 1.1rem;
+    max-width: 62ch;
+}
+
+.ff-agenda {
+    display: grid;
+    gap: clamp(2.6rem, 2rem + 3vw, 5rem);
+    margin: clamp(2.4rem, 1.6rem + 2.4vw, 4rem) 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ff-agenda__step {
+    display: grid;
+    gap: clamp(1.4rem, 1rem + 2vw, 3rem);
+    align-items: center;
+}
+
+.ff-agenda__copy {
+    display: grid;
+    gap: 1rem;
+    max-width: 62ch;
+}
+
+.ff-agenda__number,
+.ff-pattern__number {
+    font-size: clamp(2.6rem, 1.6rem + 3vw, 4.6rem);
+    font-weight: 850;
+    font-stretch: 112%;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--b-ivory);
+}
+
+.ff-agenda__step .ff-figure {
+    max-width: 560px;
+}
+
+@media (min-width: 900px) {
+    .ff-agenda__step {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .ff-agenda__step:nth-child(even) .ff-figure {
+        order: -1;
+    }
+
+    .ff-agenda__step--wide {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ff-patterns .ff-figure img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.ff-booking__price {
+    margin: 0.6rem 0;
+    font-size: clamp(2.4rem, 1.6rem + 2.6vw, 3.8rem);
+    font-weight: 850;
+    font-stretch: 112%;
+    line-height: 1;
+}
+
+.ff-booking__price span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--b-muted);
+}
+
+.ff-closing {
+    margin-top: 1.6rem;
+    text-align: center;
+}
+
+.ff-split--offer .ff-facts {
+    margin: 0.4rem 0;
+}
+
+.ff-facts dd {
+    font-weight: 600;
+}

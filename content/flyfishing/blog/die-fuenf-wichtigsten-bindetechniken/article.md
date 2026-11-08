@@ -3,6 +3,7 @@ title: Die fünf wichtigsten Bindetechniken
 date: 2026-11-04
 description: Fadenführung, Materialfixierung, Dubbing, Hecheln und Abschlussknoten. Die Handgriffe, auf denen fast jede Fliege aufbaut.
 category: Bindetechnik
+status: draft
 ---
 
 Es gibt tausende Fliegenmuster, aber nur eine überschaubare Zahl an Grundtechniken. Wer diese fünf Handgriffe beherrscht, kann die meisten Muster nachbinden und versteht, warum eine Anleitung so aufgebaut ist.

@@ -121,7 +121,12 @@ const NEWS = { folder: "news", path: "/news/", label: "News", ...(VARIANT_CONFIG
 function loadStandaloneContent() {
     const coursesFile = path.join(CONTENT, "kurse.json");
     const courses = fs.existsSync(coursesFile) ? JSON.parse(fs.readFileSync(coursesFile, "utf8")).courses || [] : [];
-    for (const course of courses) course.url = `/akademie/${course.slug}/`;
+    for (const course of courses) {
+        course.url = course.path || `/akademie/${course.slug}/`;
+        // "{date}" and "{time}" in the facts come from the course ("date" empty = "dateFallback")
+        course.dateLabel = course.date || course.dateFallback || "";
+        for (const fact of course.facts || []) fact.value = fact.value.replace("{date}", course.dateLabel).replace("{time}", course.time || "");
+    }
     const readList = (file, key) => fs.existsSync(path.join(CONTENT, file)) ? JSON.parse(fs.readFileSync(path.join(CONTENT, file), "utf8"))[key] || [] : [];
     const news = loadNews(CONTENT, { includeDrafts, folder: NEWS.folder, path: NEWS.path });
     return { news, courses, flies: readList("fliegen.json", "flies"), photos: readList("galerie.json", "photos"), all: [], packages: [] };
@@ -376,7 +381,8 @@ async function buildCoursePages(site, content) {
             description: course.description,
             path: course.url,
             bodyClass: "page-course",
-            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: "Online-Akademie", href: "/akademie/" }, { label: course.title, href: course.url }]
+            ogImage: course.image?.src,
+            breadcrumbs: [{ label: "Startseite", href: "/" }, { label: course.title, href: course.url }]
         }, {});
 
         const htmlOutput = await renderPage({ site, content, page, body: template, extra: { course }, sourceName: `templates/course-page.html (${course.slug})` });

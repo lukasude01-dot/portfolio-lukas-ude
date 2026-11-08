@@ -3,6 +3,7 @@ title: Große Streamer an kleinen Bächen
 date: 2026-11-07
 description: Warum Streamerlänge und natürliche Beutegröße nicht gleichzusetzen sind und was das für die Wahl der Fliege am kleinen Gewässer bedeutet.
 category: Streamerfischen
+status: draft
 ---
 
 An kleinen Bächen greifen viele Fliegenfischer automatisch zu kleinen Fliegen. Das ist naheliegend: kleines Gewässer, kleine Fische, kleine Beute. Trotzdem können gerade dort größere Streamer überraschend gut funktionieren. Der Grund liegt darin, wie eine Forelle Beute wahrnimmt und bewertet.

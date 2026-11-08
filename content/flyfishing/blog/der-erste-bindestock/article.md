@@ -3,6 +3,7 @@ title: Der erste Bindestock: Worauf sollte man achten?
 date: 2026-11-06
 description: Spannmechanismus, Stabilität, Hakenbereich und Ergonomie. Woran du einen guten Bindestock erkennst und wo du sparen kannst.
 category: Werkzeug
+status: draft
 ---
 
 Der Bindestock ist das zentrale Werkzeug beim Fliegenbinden. Er hält den Haken, während du mit beiden Händen arbeitest. Ein guter Bindestock fällt nicht auf. Ein schlechter macht jede Fliege zur Geduldsprobe.

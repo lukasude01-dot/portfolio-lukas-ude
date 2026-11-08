@@ -3,6 +3,7 @@ title: Nymphe, Nassfliege, Trockenfliege oder Streamer?
 date: 2026-11-05
 description: Die vier großen Fliegentypen im Vergleich. Unterschiede in Aufbau, Einsatz und Verhalten im Wasser.
 category: Fliegentypen
+status: draft
 ---
 
 Fliegen werden meist danach eingeteilt, was sie nachahmen und wo sie im Wasser gefischt werden. Daraus ergeben sich vier große Gruppen. Wer die Unterschiede kennt, versteht auch, warum eine Fliege genau so gebunden ist.

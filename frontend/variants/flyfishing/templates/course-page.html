@@ -1,13 +1,13 @@
         <!-- =========================================================
-             COURSE PAGE TEMPLATE  (one page per course)
+             COURSE / WORKSHOP PAGE TEMPLATE  (one page per course)
 
              PURPOSE:
-             Builds /akademie/<slug>/ for every course in
-             /content/flyfishing/kurse.json.
+             Builds the page of every course in /content/flyfishing/kurse.json
+             (address: "path", e.g. /workshop/).
 
              EDIT HERE:
-             Only the LAYOUT of all course pages. Texts, modules and
-             questions are in /content/flyfishing/kurse.json.
+             Only the LAYOUT. Texts, facts, agenda and patterns are in
+             /content/flyfishing/kurse.json.
 
              GENERATED PARTS:  /frontend/build/renderers/flyfishing.js
              RELATED STYLES:   /frontend/variants/flyfishing/styles/flyfishing.css
@@ -18,63 +18,77 @@
 <!-- @render breadcrumbs -->
                 <div class="ff-split">
                     <div class="ff-split__copy">
-                        <p class="kicker" data-reveal>Online-Akademie <span>{{ course.subtitle }}</span></p>
+                        <p class="kicker" data-reveal>{{ course.subtitle }}</p>
                         <h1 class="h1" id="course-heading" data-split>{{ course.title }}</h1>
                         <p class="lead" data-reveal data-reveal-delay="3">{{ course.description }}</p>
+                        <div class="btn-row" data-reveal data-reveal-delay="4">
+<!-- @render ff-course-start -->
+                        </div>
                     </div>
 <!-- @render ff-course-figure -->
                 </div>
+            </div>
+        </section>
+
+        <section class="block ff-block-tight" data-shape="cloud" aria-label="Die wichtigsten Informationen">
+            <div class="wrap ff-columns">
+                <div class="ff-prose">
+<!-- @render ff-course-intro -->
+                </div>
+                <div>
+                    <h2 class="h3 ff-block-title">Auf einen Blick</h2>
 <!-- @render ff-course-facts -->
-            </div>
-        </section>
-
-        <section class="block" data-shape="wave" aria-label="Für wen und was du lernst">
-            <div class="wrap ff-columns">
-                <div data-reveal>
-                    <h2 class="h3 ff-block-title">Für wen der Kurs ist</h2>
-<!-- @render ff-course-audience -->
-                </div>
-                <div data-reveal data-reveal-delay="1">
-                    <h2 class="h3 ff-block-title">Was du lernst</h2>
-<!-- @render ff-course-goals -->
                 </div>
             </div>
         </section>
 
-        <section class="block" data-shape="orbit" aria-labelledby="modules-heading">
+        <section class="block" data-shape="wave" aria-labelledby="agenda-heading">
             <div class="wrap">
-                <p class="kicker" data-reveal>Inhalt</p>
-                <h2 class="h2" id="modules-heading" data-split>Module und Lektionen.</h2>
-                <p class="ff-small" data-reveal>Geplanter Aufbau. Einzelne Lektionen können sich bis zum Start noch ändern.</p>
-<!-- @render ff-course-modules -->
+                <p class="kicker" data-reveal>Ablauf</p>
+                <h2 class="h2" id="agenda-heading" data-split>Was dich im Workshop erwartet.</h2>
+<!-- @render ff-course-agenda -->
+<!-- @render ff-course-patterns -->
             </div>
         </section>
 
-        <section class="block" data-shape="cloud" aria-label="Ausrüstung und Fragen">
+        <section class="block" data-shape="orbit" aria-labelledby="together-heading">
+            <div class="wrap ff-split">
+                <figure class="ff-figure ff-split__media" data-reveal>
+                    <img src="/media/bilder/wurf-nahaufnahme.jpg" alt="Lukas Ude steht im Wasser und führt mit ausgestrecktem Arm die Fliegenrute." sizes="(min-width: 900px) 45vw, 92vw" loading="lazy" data-responsive>
+                    <figcaption class="caption">Lukas Ude, dein Ansprechpartner im Workshop.</figcaption>
+                </figure>
+                <div class="ff-split__copy">
+                    <p class="kicker" data-reveal>Maximal 15 Personen</p>
+                    <h2 class="h2" id="together-heading" data-split>Gemeinsam binden statt nur zuschauen.</h2>
+<!-- @render ff-course-together -->
+                </div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="cloud" aria-label="Ausrüstung und Zielgruppe">
             <div class="wrap ff-columns">
                 <div data-reveal>
-                    <h2 class="h3 ff-block-title">Benötigte Ausrüstung</h2>
+                    <h2 class="h3 ff-block-title">Welche Ausrüstung brauchst du?</h2>
 <!-- @render ff-course-equipment -->
                 </div>
                 <div data-reveal data-reveal-delay="1">
-                    <h2 class="h3 ff-block-title">Häufige Fragen</h2>
-<!-- @render ff-course-faq -->
+                    <h2 class="h3 ff-block-title">Für wen eignet sich der Workshop?</h2>
+<!-- @render ff-course-audience -->
                 </div>
             </div>
         </section>
 
-        <section class="block" data-shape="cloud" aria-labelledby="start-heading">
+        <section class="block" data-shape="wave" aria-labelledby="extras-heading">
             <div class="wrap">
-                <div class="ff-callbox glass" data-reveal>
-                    <div>
-                        <p class="kicker">Kursstart</p>
-                        <h2 class="h3" id="start-heading">Der Kurs ist in Vorbereitung.</h2>
-                        <p class="muted">Schreib mir kurz, dann melde ich mich persönlich, sobald Start, Preis und Zugang feststehen.</p>
-                    </div>
-                    <div class="btn-row">
-<!-- @render ff-course-start -->
-                    </div>
-                </div>
-                <a class="arrow-link" href="/akademie/">Alle Kurse</a>
+                <p class="kicker" data-reveal>Inklusive</p>
+                <h2 class="h2" id="extras-heading" data-split>Das bekommst du zusätzlich.</h2>
+<!-- @render ff-course-extras -->
+            </div>
+        </section>
+
+        <section class="block" data-shape="image:/assets/shapes/forelle.svg" data-shape-size="0.8" aria-label="Anmeldung">
+            <div class="wrap">
+<!-- @render ff-course-booking -->
+                <p class="ff-small ff-closing" data-reveal>Ich freue mich darauf, mit dir gemeinsam die ersten Fliegen zu binden!</p>
             </div>
         </section>

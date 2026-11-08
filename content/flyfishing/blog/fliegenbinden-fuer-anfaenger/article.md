@@ -3,6 +3,7 @@ title: Fliegenbinden für Anfänger: Was braucht man wirklich?
 date: 2026-11-03
 description: Werkzeuge, erste Materialien und typische Fehlkäufe. Womit der Einstieg ins Fliegenbinden gelingt, ohne gleich ein kleines Vermögen auszugeben.
 category: Grundlagen
+status: draft
 ---
 
 Wer mit dem Fliegenbinden anfängt, steht schnell vor einer langen Einkaufsliste. Bindesets mit dutzenden Teilen, Materialpakete in allen Farben und Werkzeuge, deren Zweck nicht sofort klar ist. Die gute Nachricht: Für den Anfang brauchst du deutlich weniger, als es scheint.

@@ -3,6 +3,7 @@ title: Fliegenbindematerialien verstehen
 date: 2026-11-08
 description: Naturmaterialien, Kunstfasern und sinnvolle Alternativen. Welche Eigenschaften zählen und wie du Material gezielt auswählst.
 category: Material
+status: draft
 ---
 
 Ein Blick in einen Fliegenbindeladen kann überfordern. Hunderte Federn, Haare, Fasern und Fäden in allen Farben. Wer versteht, welche Eigenschaft ein Material mitbringt, kann gezielter einkaufen und findet leichter Alternativen, wenn ein bestimmtes Material fehlt.

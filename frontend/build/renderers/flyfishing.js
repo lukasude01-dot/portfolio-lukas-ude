@@ -22,7 +22,7 @@
 
 import { html } from "../lib/html.js";
 
-const START_TOPIC = "Fly Fishing: Info zum Kursstart";
+const START_TOPIC = "Fly Fishing: Frage zum Workshop";
 const startLink = () => `/kontakt/?thema=${encodeURIComponent(START_TOPIC)}`;
 
 function addCourseButton(course) {
@@ -67,16 +67,31 @@ function flyCard(fly, index) {
                     </li>`;
 }
 
+/** Key facts as a list ("facts" in kurse.json). */
+function factsList(course, delay) {
+    return html`
+                        <dl class="ff-facts" data-reveal data-reveal-delay="${delay}">
+                            ${(course.facts || []).map((fact) => html`<div><dt>${fact.label}</dt><dd>${fact.value}</dd></div>`)}
+                        </dl>`;
+}
+
+/** Puts the workshop place in the cart and opens the cart (data-cart-go). */
+function bookButton(course) {
+    const offer = course?.offers?.[0];
+    if (!offer) return "";
+    return html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">Jetzt anmelden<span class="btn__arrow" aria-hidden="true">→</span></button>`;
+}
+
 const featured = (content) => content.courses.find((course) => course.featured) || content.courses[0];
 
 export const flyfishingRenderers = {
 
-    // HOMEPAGE - HIGHLIGHTED COURSE
+    // HOMEPAGE - THE WORKSHOP (main offer)
     "ff-course-featured": ({ content }) => {
         const course = featured(content);
         if (!course) return "";
         return html`
-                <div class="ff-split">
+                <div class="ff-split ff-split--offer">
                     <figure class="ff-figure ff-split__media" data-reveal>
                         <img src="${course.image.src}" alt="${course.image.alt}" sizes="(min-width: 900px) 45vw, 92vw" loading="lazy" data-responsive>
                         <figcaption class="caption">${course.image.caption}</figcaption>
@@ -85,28 +100,18 @@ export const flyfishingRenderers = {
                         <p class="kicker" data-reveal>${course.subtitle}</p>
                         <h2 class="h2" id="course-heading" data-split>${course.title}</h2>
                         <p class="lead" data-reveal data-reveal-delay="2">${course.description}</p>
-                        <div class="chip-row" data-reveal data-reveal-delay="3">
-                            <span class="ff-status">${course.status}</span>
-                            ${course.modules.map((module) => html`<span class="chip">${module.title}</span>`)}
-                        </div>
+${factsList(course, 3)}
                         <div class="btn-row" data-reveal data-reveal-delay="4">
-                            <a class="btn" href="${course.url}" data-magnetic>Zum Kurs<span class="btn__arrow" aria-hidden="true">→</span></a>
-                            ${course.offers?.[0] ? html`<button class="btn btn--ghost" type="button" data-cart-add="course-${course.offers[0].id}" data-cart-name="${course.title}">In den Warenkorb</button>` : ""}
+                            ${bookButton(course)}
+                            <a class="btn btn--ghost" href="${course.url}" data-magnetic>Alle Details</a>
                         </div>
                     </div>
                 </div>`;
     },
 
-    // ALL COURSES
     "ff-course-cards": ({ content }) => html`
                 <ul class="ff-cards" role="list">
                     ${content.courses.map(courseCard)}
-                </ul>`,
-
-    // ALL COURSES EXCEPT THE HIGHLIGHTED ONE (homepage)
-    "ff-course-cards-more": ({ content }) => html`
-                <ul class="ff-cards" role="list">
-                    ${content.courses.filter((course) => course !== featured(content)).map(courseCard)}
                 </ul>`,
 
     // FLIES FOR SALE, GROUPED BY TYPE
@@ -144,15 +149,8 @@ export const flyfishingRenderers = {
                     </figure>`)}
                 </div>`,
 
-    // COURSE PAGE - FACTS (level, status, price, start)
-    "ff-course-facts": ({ course }) => html`
-                    <dl class="ff-facts" data-reveal data-reveal-delay="4">
-                        <div><dt>Niveau</dt><dd>${course.level}</dd></div>
-                        <div><dt>Status</dt><dd>${course.status}</dd></div>
-                        <div><dt>Umfang</dt><dd>${course.modules.length} Module, ${course.modules.reduce((sum, module) => sum + module.lessons.length, 0)} Lektionen geplant</dd></div>
-                        <div><dt>Format</dt><dd>${course.offers?.[0]?.format || "Wird vor dem Start genannt"}</dd></div>
-                        <div><dt>Preis</dt><dd>${course.offers?.[0]?.price || "Auf Anfrage"}</dd></div>
-                    </dl>`,
+    // COURSE PAGE (template course-page.html)
+    "ff-course-facts": ({ course }) => factsList(course, 4),
 
     "ff-course-figure": ({ course }) => html`
                 <figure class="ff-figure" data-reveal>
@@ -160,44 +158,71 @@ export const flyfishingRenderers = {
                     <figcaption class="caption">${course.image.caption}</figcaption>
                 </figure>`,
 
-    "ff-course-audience": ({ course }) => html`
-                        <ul class="ff-list" role="list">
-                            ${course.audience.map((item) => html`<li>${item}</li>`)}
-                        </ul>
-                        <p class="ff-small"><strong>Vorwissen:</strong> ${course.prerequisites}</p>`,
+    "ff-course-intro": ({ course }) => html`${(course.intro || []).map((text, index) => html`
+                    <p class="${index === 0 ? "lead" : "muted"}" data-reveal>${text}</p>`)}`,
 
-    "ff-course-goals": ({ course }) => html`
-                        <ul class="ff-list" role="list">
-                            ${course.goals.map((item) => html`<li>${item}</li>`)}
-                        </ul>`,
-
-    "ff-course-modules": ({ course }) => html`
-                <div class="ff-accordion">
-                    ${course.modules.map((module, index) => html`
-                    <details${index === 0 ? " open" : ""}>
-                        <summary><span><span class="ff-accordion__label">Modul ${String(index + 1).padStart(2, "0")}</span>${module.title}</span></summary>
-                        <div class="ff-accordion__body">
-                            <ul class="ff-list" role="list">
-                                ${module.lessons.map((lesson) => html`<li>${lesson}</li>`)}
-                            </ul>
+    "ff-course-agenda": ({ course }) => html`
+                <ol class="ff-agenda" role="list">
+                    ${(course.agenda || []).map((step, index) => html`
+                    <li class="ff-agenda__step${step.image ? "" : " ff-agenda__step--wide"}" data-reveal>
+                        <div class="ff-agenda__copy">
+                            <p class="ff-agenda__number">${String(index + 1).padStart(2, "0")}</p>
+                            <h3 class="h3">${step.title}</h3>
+                            ${step.text.map((text) => html`<p class="muted">${text}</p>`)}
+                            ${step.list ? html`<ul class="ff-list" role="list">${step.list.map((item) => html`<li>${item}</li>`)}</ul>` : ""}
                         </div>
-                    </details>`)}
+                        ${step.image ? html`<figure class="ff-figure">
+                            <img src="${step.image.src}" alt="${step.image.alt}" sizes="(min-width: 900px) 36vw, 92vw" loading="lazy" data-responsive>
+                            <figcaption class="caption">${step.image.caption}</figcaption>
+                        </figure>` : ""}
+                    </li>`)}
+                </ol>`,
+
+    "ff-course-patterns": ({ course }) => html`
+                <ul class="ff-cards ff-patterns" role="list">
+                    ${(course.patterns || []).map((pattern, index) => html`
+                    <li data-reveal data-reveal-delay="${index}">
+                        <article class="ff-card glass">
+                            ${pattern.image ? html`<figure class="ff-figure"><img src="${pattern.image.src}" alt="${pattern.image.alt}" sizes="(min-width: 1100px) 30vw, 92vw" loading="lazy" data-responsive><figcaption class="caption">${pattern.image.caption}</figcaption></figure>` : html`<p class="ff-pattern__number" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>`}
+                            <p class="kicker">${pattern.subtitle}</p>
+                            <h3 class="ff-card__title">${pattern.name}</h3>
+                            <p class="ff-card__text">${pattern.text}</p>
+                        </article>
+                    </li>`)}
+                </ul>`,
+
+    "ff-course-together": ({ course }) => html`${(course.together || []).map((text) => html`<p class="muted">${text}</p>`)}`,
+    "ff-course-equipment": ({ course }) => html`${(course.equipment || []).map((text) => html`<p class="muted">${text}</p>`)}`,
+    "ff-course-audience": ({ course }) => html`${(course.audience || []).map((text) => html`<p class="muted">${text}</p>`)}`,
+
+    "ff-course-extras": ({ course }) => html`
+                <ul class="ff-cards" role="list">
+                    ${(course.extras || []).map((extra, index) => html`
+                    <li data-reveal data-reveal-delay="${index}">
+                        <article class="glass ff-card">
+                            <span class="value-card__number">${String(index + 1).padStart(2, "0")}</span>
+                            <h3 class="ff-card__title">${extra.title}</h3>
+                            <p class="ff-card__text">${extra.text}</p>
+                        </article>
+                    </li>`)}
+                </ul>`,
+
+    "ff-course-booking": ({ course }) => html`
+                <div class="ff-callbox glass ff-booking" id="anmelden" data-reveal>
+                    <div>
+                        <p class="kicker">Jetzt deinen Platz sichern</p>
+                        <h2 class="h3">${course.dateLabel} | ${course.time} | ${course.offers?.[0]?.format || ""}</h2>
+                        <p class="ff-booking__price">${course.offers?.[0]?.price || ""} <span>pro Person</span></p>
+                        <p class="muted">Die Teilnehmerzahl ist auf 15 Personen begrenzt, damit genug Zeit für Fragen und die gemeinsame praktische Arbeit bleibt. Mit der Anmeldung schickst du mir eine Anfrage. Ich bestätige deinen Platz per E-Mail. Online bezahlen ist bald möglich.</p>
+                    </div>
+                    <div class="btn-row">
+                        ${bookButton(course)}
+                        <a class="btn btn--ghost" href="${startLink()}" data-magnetic>Frage zum Workshop</a>
+                    </div>
                 </div>`,
 
-    "ff-course-equipment": ({ course }) => html`
-                        <ul class="ff-list" role="list">
-                            ${course.equipment.map((item) => html`<li>${item}</li>`)}
-                        </ul>`,
+    "ff-course-start": ({ course }) => html`${bookButton(course)}
+                            <a class="btn btn--ghost" href="#anmelden" data-magnetic>${course.offers?.[0]?.price || ""} pro Person</a>`,
 
-    "ff-course-faq": ({ course }) => html`
-                <div class="ff-accordion">
-                    ${course.faq.map((item) => html`
-                    <details>
-                        <summary>${item.q}</summary>
-                        <div class="ff-accordion__body"><p>${item.a}</p></div>
-                    </details>`)}
-                </div>`,
-
-    "ff-course-start": ({ course }) => html`${(course.offers || []).map((offer) => html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}">${offer.label} in den Warenkorb<span class="btn__arrow" aria-hidden="true">→</span></button>`)}
-                        <a class="btn btn--ghost" href="${startLink(course)}" data-magnetic>Frage zum Kurs</a>`
+    "ff-book-button": ({ content }) => bookButton(featured(content))
 };

@@ -11,7 +11,7 @@
  *   SITE_VARIANT=flyfishing npm run build     -> /frontend/dist (on its host)
  *
  * CONTENT:
- *   /content/flyfishing/kurse.json            courses (/akademie/<slug>/)
+ *   /content/flyfishing/kurse.json            courses ("path", e.g. /workshop/)
  *   /content/flyfishing/fliegen.json          flies for sale (/fliegen/)
  *   /content/flyfishing/galerie.json          photos on /ueber-lukas/
  *   /content/flyfishing/blog/<slug>/article.md   articles (/blog/<slug>/)
@@ -42,11 +42,9 @@ export const variant = {
             "und Fliegenfischen. Verständliche Anleitungen, Materiallisten und ehrliche Empfehlungen.",
         url: "https://flyfishing.lukasude.de",
         navigation: [
-            { label: "Fliegen-Shop", href: "/fliegen/" },
-            { label: "Kurse", href: "/akademie/" },
+            { label: "Workshop", href: "/workshop/" },
             { label: "Fliegenbinden", href: "/fliegenbinden/" },
             { label: "Fliegenfischen", href: "/fliegenfischen/" },
-            { label: "Blog", href: "/blog/" },
             { label: "Über Lukas", href: "/ueber-lukas/" }
         ],
         legalNavigation: [
@@ -54,7 +52,7 @@ export const variant = {
             { label: "Datenschutz", href: "/datenschutz/" }
         ],
         cta: {
-            primary: { label: "Online-Kurse entdecken", href: "/akademie/" },
+            primary: { label: "Zum Workshop", href: "/workshop/" },
             secondary: { label: "Wissensbereich erkunden", href: "/fliegenbinden/" }
         },
         contactTopics: FLYFISHING_TOPICS,
