@@ -26,7 +26,7 @@
                 },
                 {
                     "label": "Ort",
-                    "value": "Online über Google Meet"
+                    "value": "Online per Videokonferenz, den Zugangslink bekommst du vor dem Termin"
                 },
                 {
                     "label": "Dauer",
@@ -38,7 +38,7 @@
                 },
                 {
                     "label": "Teilnahmegebühr",
-                    "value": "49 € pro Person"
+                    "value": "69 € pro Person"
                 },
                 {
                     "label": "Vorkenntnisse",
@@ -162,8 +162,8 @@
                 {
                     "id": "fliegenbinden-einsteiger-live",
                     "label": "Platz im Live-Workshop",
-                    "format": "Live online über Google Meet",
-                    "price": "49 €"
+                    "format": "Live online per Videokonferenz",
+                    "price": "69 €"
                 }
             ]
         }
