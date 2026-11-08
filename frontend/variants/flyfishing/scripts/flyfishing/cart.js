@@ -17,6 +17,9 @@
 import { validateOrder, ORDER_LIMITS } from "../shared/order-schema.js";
 
 const STORAGE_KEY = "ff-cart";
+// Website root, from this file's address (/scripts/flyfishing/cart.js), so it also works in a subfolder
+const ROOT = new URL("../../", import.meta.url);
+const siteUrl = (path) => new URL(String(path).replace(/^\//, ""), ROOT).href;
 let memoryCart = [];
 
 function readCart() {
@@ -55,7 +58,7 @@ function setQuantity(id, quantity) {
 
 let catalogPromise = null;
 const loadCatalog = () => {
-    catalogPromise ??= fetch("/data/katalog.json", { headers: { Accept: "application/json" } })
+    catalogPromise ??= fetch(siteUrl("/data/katalog.json"), { headers: { Accept: "application/json" } })
         .then((response) => (response.ok ? response.json() : {}))
         .catch(() => ({}));
     return catalogPromise;
@@ -128,7 +131,7 @@ function initCartPage(root, form) {
     function row(item, product) {
         const li = element("li", "ff-cart-row");
         const image = element("img", "ff-cart-row__image");
-        image.src = product.image;
+        image.src = siteUrl(product.image);
         image.alt = "";
         image.width = 120;
         image.height = 80;
@@ -136,7 +139,7 @@ function initCartPage(root, form) {
 
         const info = element("div", "ff-cart-row__info");
         const name = element("a", "ff-cart-row__name", product.name);
-        name.href = product.url;
+        name.href = siteUrl(product.url);
         info.append(name, element("span", "ff-cart-row__price", product.price || "Preis auf Anfrage"));
 
         const controls = element("div", "ff-cart-row__controls");
