@@ -320,7 +320,7 @@ async function buildShape(shape, w, h, count) {
     if (shape === "funnel") return fromDrawing(drawFunnel, w, h, count);
     if (shape.startsWith("text:")) return fromDrawing((ctx, cw, ch) => drawWord(ctx, cw, ch, shape.slice(5)), w, h, count);
     // any image of this website (filled pixels become points), keeps its proportions
-    if (shape.startsWith("image:/")) return fromImage(new URL(shape.slice(6), location.origin).href, w, h, count, { fit: true });
+    if (shape.startsWith("image:")) return fromImage(new URL(shape.slice(6), document.baseURI).href, w, h, count, { fit: true });
     return cloud(w, h, count);
 }
 
