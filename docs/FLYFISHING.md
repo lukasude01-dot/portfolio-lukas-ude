@@ -38,8 +38,9 @@ Für das Kontaktformular braucht die App dieselben Variablen wie die Hauptseite
 
 ## Bilder
 
-Die Bilder sind KI-generiert, tragen die sichtbare Markierung „KI-Bild“ und
-eine Bildunterschrift „KI-illustriert“. KI-Bilder von Personen werden nicht verwendet.
-Die aktuellen Dateien sind kleine Ausschnitte aus der Konzepttafel: Für eine
-schärfere Darstellung die Originaldateien in `content/flyfishing/bilder/` unter
-gleichem Namen ersetzen.
+Alle Bilder sind echte Fotos von Lukas Ude (Fliegen vom eigenen Bindetisch, Fänge, Gewässer).
+Beim Einfügen neuer Fotos: auf höchstens 2000 px verkleinern und die Metadaten entfernen
+(GPS-Daten verraten sonst den Angelplatz). Jedes Bild braucht einen Alt-Text und eine Bildunterschrift.
+
+Werden wieder KI-Bilder genutzt, müssen sie sichtbar markiert sein und die Bildunterschrift
+„KI-illustriert“ tragen. KI-Bilder von Personen werden nicht verwendet.

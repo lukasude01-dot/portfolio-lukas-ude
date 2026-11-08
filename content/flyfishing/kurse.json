@@ -10,9 +10,10 @@
             "featured": true,
             "description": "Der vollständige Grundkurs: Werkzeuge, Materialien und die wichtigsten Bindetechniken. Am Ende bindest du Nymphen, Nassfliegen, Trockenfliegen und erste Streamer selbst.",
             "image": {
-                "src": "/media/bilder/fliege-im-bindestock.jpg",
-                "alt": "Eine fertig gebundene Fliege steckt im Bindestock vor dunklem Hintergrund.",
-                "caption": "KI-illustriert: Fliege im Bindestock. Im Kurs zeigen echte Aufnahmen jeden Bindeschritt."
+                "src": "/media/bilder/rehhaarfliege-bindestock.jpg",
+                "alt": "Eine Köcherfliege aus Rehhaar steckt im Bindestock.",
+                "caption": "Selbst gebunden: Köcherfliege aus Rehhaar im Bindestock.",
+                "label": "Foto: Lukas Ude"
             },
             "audience": [
                 "Du willst Fliegenbinden lernen und fängst bei null an.",
@@ -30,31 +31,61 @@
             "modules": [
                 {
                     "title": "Werkzeug und Arbeitsplatz",
-                    "lessons": ["Bindestock, Spulenhalter, Schere und Hechelklemme", "Der Arbeitsplatz: Licht, Ordnung, Haltung", "Was du am Anfang nicht kaufen musst"]
+                    "lessons": [
+                        "Bindestock, Spulenhalter, Schere und Hechelklemme",
+                        "Der Arbeitsplatz: Licht, Ordnung, Haltung",
+                        "Was du am Anfang nicht kaufen musst"
+                    ]
                 },
                 {
                     "title": "Material verstehen",
-                    "lessons": ["Haken: Form, Größe und Drahtstärke", "Bindefaden und Draht", "Federn, Haare, Dubbing und Kunstfasern"]
+                    "lessons": [
+                        "Haken: Form, Größe und Drahtstärke",
+                        "Bindefaden und Draht",
+                        "Federn, Haare, Dubbing und Kunstfasern"
+                    ]
                 },
                 {
                     "title": "Die Grundtechniken",
-                    "lessons": ["Faden anlegen und Fadenspannung", "Material einbinden mit der weichen Schlaufe", "Dubbing auftragen", "Hechel wickeln", "Abschlussknoten und Lack"]
+                    "lessons": [
+                        "Faden anlegen und Fadenspannung",
+                        "Material einbinden mit der weichen Schlaufe",
+                        "Dubbing auftragen",
+                        "Hechel wickeln",
+                        "Abschlussknoten und Lack"
+                    ]
                 },
                 {
                     "title": "Nymphen",
-                    "lessons": ["Aufbau einer Nymphe", "Eine einfache Goldkopfnymphe", "Proportionen und typische Fehler"]
+                    "lessons": [
+                        "Aufbau einer Nymphe",
+                        "Eine einfache Goldkopfnymphe",
+                        "Proportionen und typische Fehler"
+                    ]
                 },
                 {
                     "title": "Nassfliegen",
-                    "lessons": ["Aufbau und Einsatz", "Schwinge und Kehlhechel", "Eine klassische Nassfliege"]
+                    "lessons": [
+                        "Aufbau und Einsatz",
+                        "Schwinge und Kehlhechel",
+                        "Eine klassische Nassfliege"
+                    ]
                 },
                 {
                     "title": "Trockenfliegen",
-                    "lessons": ["Was eine Fliege schwimmen lässt", "Flügel, Hechel und Schwanzfasern", "Eine Trockenfliege für den Bach"]
+                    "lessons": [
+                        "Was eine Fliege schwimmen lässt",
+                        "Flügel, Hechel und Schwanzfasern",
+                        "Eine Trockenfliege für den Bach"
+                    ]
                 },
                 {
                     "title": "Erste Streamer",
-                    "lessons": ["Aufbau eines Streamers", "Ein einfacher Marabou-Streamer", "Haltbar binden"]
+                    "lessons": [
+                        "Aufbau eines Streamers",
+                        "Ein einfacher Marabou-Streamer",
+                        "Haltbar binden"
+                    ]
                 }
             ],
             "equipment": [
@@ -67,11 +98,26 @@
                 "Eine Materialliste je Lektion folgt mit dem Kurs"
             ],
             "faq": [
-                { "q": "Wann startet der Kurs?", "a": "Der Kurs ist in Vorbereitung. Wenn du den Starttermin erfahren möchtest, schreib mir über das Kontaktformular, dann melde ich mich, sobald er feststeht." },
-                { "q": "Was kostet der Kurs?", "a": "Der Preis steht noch nicht fest. Er wird vor dem Start auf dieser Seite genannt, zusammen mit allem, was enthalten ist." },
-                { "q": "Wie lange habe ich Zugang und gibt es Updates?", "a": "Zugangsdauer und Updates werden vor dem Start verbindlich festgelegt und hier transparent beschrieben." },
-                { "q": "Brauche ich teures Werkzeug?", "a": "Nein. Für den Anfang reicht solides Grundwerkzeug. Im Kurs erfährst du, wo sich Qualität lohnt und wo nicht." },
-                { "q": "Kann ich den Kurs am Tablet am Bindetisch verfolgen?", "a": "Ja, darauf ist der Lernbereich ausgelegt. Videos, Materiallisten und Anleitungen sollen auf Tablet und Smartphone gut bedienbar sein." }
+                {
+                    "q": "Wann startet der Kurs?",
+                    "a": "Der Kurs ist in Vorbereitung. Wenn du den Starttermin erfahren möchtest, schreib mir über das Kontaktformular, dann melde ich mich, sobald er feststeht."
+                },
+                {
+                    "q": "Was kostet der Kurs?",
+                    "a": "Der Preis steht noch nicht fest. Er wird vor dem Start auf dieser Seite genannt, zusammen mit allem, was enthalten ist."
+                },
+                {
+                    "q": "Wie lange habe ich Zugang und gibt es Updates?",
+                    "a": "Zugangsdauer und Updates werden vor dem Start verbindlich festgelegt und hier transparent beschrieben."
+                },
+                {
+                    "q": "Brauche ich teures Werkzeug?",
+                    "a": "Nein. Für den Anfang reicht solides Grundwerkzeug. Im Kurs erfährst du, wo sich Qualität lohnt und wo nicht."
+                },
+                {
+                    "q": "Kann ich den Kurs am Tablet am Bindetisch verfolgen?",
+                    "a": "Ja, darauf ist der Lernbereich ausgelegt. Videos, Materiallisten und Anleitungen sollen auf Tablet und Smartphone gut bedienbar sein."
+                }
             ]
         },
         {
@@ -82,9 +128,10 @@
             "status": "In Vorbereitung",
             "description": "Der Aufbaukurs für moderne Streamer: Materialien, Profile, Gelenkkonstruktionen und fortgeschrittene Bindetechniken für Fliegen, die im Wasser richtig arbeiten.",
             "image": {
-                "src": "/media/bilder/streamer-muster.jpg",
-                "alt": "Ein grüner Streamer mit langen Fasern liegt auf einem Stein.",
-                "caption": "KI-illustriert: Streamer. Im Kurs zeigen echte Aufnahmen die verwendeten Materialien."
+                "src": "/media/bilder/streamer-und-nassfliegen.jpg",
+                "alt": "Ein weißer Streamer mit roten Augen im Bindestock, daneben zwei Nassfliegen.",
+                "caption": "Selbst gebunden: Streamer mit Augen und zwei Nassfliegen.",
+                "label": "Foto: Lukas Ude"
             },
             "audience": [
                 "Du beherrschst die Grundtechniken und willst größere Fliegen binden.",
@@ -102,23 +149,44 @@
             "modules": [
                 {
                     "title": "Material für Streamer",
-                    "lessons": ["Naturhaar und Federn", "Kunstfasern und Flash", "Marabou und Fellstreifen", "Köpfe, Augen und Gewichte"]
+                    "lessons": [
+                        "Naturhaar und Federn",
+                        "Kunstfasern und Flash",
+                        "Marabou und Fellstreifen",
+                        "Köpfe, Augen und Gewichte"
+                    ]
                 },
                 {
                     "title": "Profil und Volumen",
-                    "lessons": ["Hohl binden: viel Volumen, wenig Gewicht", "Stufenweise Profile aufbauen", "Proportionen für ruhiges Laufverhalten"]
+                    "lessons": [
+                        "Hohl binden: viel Volumen, wenig Gewicht",
+                        "Stufenweise Profile aufbauen",
+                        "Proportionen für ruhiges Laufverhalten"
+                    ]
                 },
                 {
                     "title": "Gelenkstreamer",
-                    "lessons": ["Shanks und Verbindungen", "Bewegung zwischen den Gliedern", "Haken richtig platzieren"]
+                    "lessons": [
+                        "Shanks und Verbindungen",
+                        "Bewegung zwischen den Gliedern",
+                        "Haken richtig platzieren"
+                    ]
                 },
                 {
                     "title": "Gewicht und Laufverhalten",
-                    "lessons": ["Wo das Gewicht sitzt und was es bewirkt", "Sinkende und schwebende Muster", "Fliegen im Wasser testen"]
+                    "lessons": [
+                        "Wo das Gewicht sitzt und was es bewirkt",
+                        "Sinkende und schwebende Muster",
+                        "Fliegen im Wasser testen"
+                    ]
                 },
                 {
                     "title": "Haltbarkeit und Feinschliff",
-                    "lessons": ["Kleber und Harze gezielt einsetzen", "Farben und Kontraste", "Vom Muster zur eigenen Idee"]
+                    "lessons": [
+                        "Kleber und Harze gezielt einsetzen",
+                        "Farben und Kontraste",
+                        "Vom Muster zur eigenen Idee"
+                    ]
                 }
             ],
             "equipment": [
@@ -130,9 +198,18 @@
                 "Eine Materialliste je Lektion folgt mit dem Kurs"
             ],
             "faq": [
-                { "q": "Wann startet der Kurs?", "a": "Der Kurs folgt nach dem Einsteigerkurs. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite." },
-                { "q": "Was kostet der Kurs?", "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt." },
-                { "q": "Reicht mein Werkzeug aus dem Grundkurs?", "a": "Größtenteils ja. Für große Haken brauchst du einen Bindestock, der sie sicher hält. Alles Weitere steht in den Materiallisten." }
+                {
+                    "q": "Wann startet der Kurs?",
+                    "a": "Der Kurs folgt nach dem Einsteigerkurs. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite."
+                },
+                {
+                    "q": "Was kostet der Kurs?",
+                    "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt."
+                },
+                {
+                    "q": "Reicht mein Werkzeug aus dem Grundkurs?",
+                    "a": "Größtenteils ja. Für große Haken brauchst du einen Bindestock, der sie sicher hält. Alles Weitere steht in den Materiallisten."
+                }
             ]
         },
         {
@@ -143,9 +220,10 @@
             "status": "In Vorbereitung",
             "description": "Der Spezialkurs für die Küstenfischerei: Muster, die Garnelen, Würmer und kleine Fische nachahmen, gebunden mit Material, das Salzwasser verträgt.",
             "image": {
-                "src": "/media/bilder/kueste-abendlicht.jpg",
-                "alt": "Steinige Meeresküste im Abendlicht.",
-                "caption": "KI-illustriert: Küste im Abendlicht."
+                "src": "/media/bilder/lukas-meerforelle-strand.jpg",
+                "alt": "Lukas Ude hält eine Meerforelle an einem steinigen Strand.",
+                "caption": "Lukas Ude mit einer Meerforelle an der Küste.",
+                "label": "Lukas Ude an der Küste"
             },
             "audience": [
                 "Du fischst an der Küste auf Meerforelle oder willst damit anfangen.",
@@ -162,19 +240,34 @@
             "modules": [
                 {
                     "title": "Die Küste verstehen",
-                    "lessons": ["Beutetiere und Jahreszeiten", "Was eine gute Küstenfliege ausmacht"]
+                    "lessons": [
+                        "Beutetiere und Jahreszeiten",
+                        "Was eine gute Küstenfliege ausmacht"
+                    ]
                 },
                 {
                     "title": "Material für das Salzwasser",
-                    "lessons": ["Korrosionsbeständige Haken", "Material, das Salzwasser verträgt", "Pflege nach dem Angeltag"]
+                    "lessons": [
+                        "Korrosionsbeständige Haken",
+                        "Material, das Salzwasser verträgt",
+                        "Pflege nach dem Angeltag"
+                    ]
                 },
                 {
                     "title": "Garnelenmuster",
-                    "lessons": ["Aufbau einer Garnele", "Ein einfaches Garnelenmuster", "Varianten in Farbe und Größe"]
+                    "lessons": [
+                        "Aufbau einer Garnele",
+                        "Ein einfaches Garnelenmuster",
+                        "Varianten in Farbe und Größe"
+                    ]
                 },
                 {
                     "title": "Wurm- und Fischchenmuster",
-                    "lessons": ["Bewegliche Wurmmuster", "Schlanke Fischchen", "Muster mit Glanz für trübes Licht"]
+                    "lessons": [
+                        "Bewegliche Wurmmuster",
+                        "Schlanke Fischchen",
+                        "Muster mit Glanz für trübes Licht"
+                    ]
                 }
             ],
             "equipment": [
@@ -184,9 +277,18 @@
                 "Eine Materialliste je Lektion folgt mit dem Kurs"
             ],
             "faq": [
-                { "q": "Wann startet der Kurs?", "a": "Der Kurs ist in Vorbereitung. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite." },
-                { "q": "Was kostet der Kurs?", "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt." },
-                { "q": "Geht es auch um das Fischen an der Küste?", "a": "Der Schwerpunkt liegt auf dem Binden. Zu jedem Muster erfährst du aber, wofür es gedacht ist und wann es sich lohnt." }
+                {
+                    "q": "Wann startet der Kurs?",
+                    "a": "Der Kurs ist in Vorbereitung. Den Termin erfährst du über das Kontaktformular oder hier auf der Seite."
+                },
+                {
+                    "q": "Was kostet der Kurs?",
+                    "a": "Der Preis steht noch nicht fest und wird vor dem Start auf dieser Seite genannt."
+                },
+                {
+                    "q": "Geht es auch um das Fischen an der Küste?",
+                    "a": "Der Schwerpunkt liegt auf dem Binden. Zu jedem Muster erfährst du aber, wofür es gedacht ist und wann es sich lohnt."
+                }
             ]
         }
     ]

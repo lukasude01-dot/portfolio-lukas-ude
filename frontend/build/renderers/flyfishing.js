@@ -9,8 +9,8 @@
  * - "ff-course-*":          the parts of one course page
  *                           (template /frontend/variants/flyfishing/templates/course-page.html)
  *
- * Every image gets its caption ("KI-illustriert" where it applies),
- * see "caption" in kurse.json.
+ * Every image gets its caption ("caption", short "label" on cards),
+ * see kurse.json. AI images must say "KI-illustriert" there.
  *
  * STYLES:  /frontend/variants/flyfishing/styles/flyfishing.css
  */
@@ -25,7 +25,7 @@ function courseCard(course, index) {
                     <li data-reveal data-reveal-delay="${index % 3}">
                         <a class="ff-card glass" href="${course.url}" data-tilt="4">
                             <span class="ff-card__image"><img src="${course.image.src}" alt="${course.image.alt}" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw" loading="lazy" data-responsive></span>
-                            <span class="caption">KI-illustriert</span>
+                            <span class="caption">${course.image.label || course.image.caption}</span>
                             <span class="chip-row"><span class="ff-status">${course.status}</span><span class="chip">${course.level}</span></span>
                             <span class="ff-card__title">${course.title}</span>
                             <span class="ff-card__text">${course.description}</span>

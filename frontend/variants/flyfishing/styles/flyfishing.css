@@ -78,8 +78,8 @@
 
 
 /* ----------------------------------------------------------
-   IMAGES WITH "KI-illustriert" CAPTION
-   The images are shown in full (the "KI-Bild" mark stays visible).
+   IMAGES WITH CAPTION
+   Shown in full, never cropped. AI images need the caption "KI-illustriert".
 ---------------------------------------------------------- */
 
 .ff-figure {
@@ -94,6 +94,35 @@
     border: 1px solid var(--b-line);
     border-radius: var(--b-radius-small);
     background: var(--b-night-2);
+}
+
+/* photos in a gallery share one format, so the rows stay even */
+.ff-figure {
+    align-content: start;
+}
+
+.ff-figure picture {
+    display: block;
+}
+
+.ff-gallery .ff-figure img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.ff-gallery--large {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+
+/* real photo instead of the cut-out portrait (Über Lukas) */
+.about-b__portrait--photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 40%;
+    filter: none;
 }
 
 .ff-figure--narrow {
@@ -124,11 +153,10 @@
     justify-items: start;
 }
 
-/* The images are small originals: keep them at a size where they stay sharp */
 .ff-split__media,
 .ff-split > .ff-figure {
     width: 100%;
-    max-width: 480px;
+    max-width: 640px;
 }
 
 @media (min-width: 900px) {
