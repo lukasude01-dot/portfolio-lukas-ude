@@ -1,0 +1,46 @@
+---
+# =========================================================
+# PAGE SETTINGS - FLIES FOR SALE (fly fishing website)
+# Flies: /content/flyfishing/fliegen.json
+# Orders go through the contact form (topic "Fly Fishing: Fliegen bestellen").
+# =========================================================
+title: Fliegen kaufen
+description: Handgebundene Fliegen von Lukas Ude. Streamer, Meerforellenfliegen und Nassfliegen, selbst gebunden und am Wasser erprobt. Bestellung auf Anfrage.
+path: /fliegen/
+bodyClass: page-flies
+---
+
+        <section class="page-b" data-shape="image:/assets/shapes/streamer.svg" data-shape-size="0.95" aria-labelledby="flies-heading">
+            <div class="wrap page-b__inner page-b__inner--split">
+                <div>
+                    <p class="kicker" data-reveal>Fliegen</p>
+                    <h1 class="mega page-b__title" id="flies-heading" data-split>Von Hand <span class="outline">gebunden.</span></h1>
+                    <p class="lead" data-reveal data-reveal-delay="3">Jede Fliege hier habe ich selbst gebunden und so oder ähnlich selbst gefischt. Du kannst sie einzeln oder als Set bestellen, auch in anderen Größen und Farben.</p>
+                    <div class="btn-row" data-reveal data-reveal-delay="4">
+<!-- @render ff-order-link -->
+                    </div>
+                </div>
+                <div class="page-b__anchor" data-shape-anchor aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="block" data-shape="wave" aria-label="Alle Fliegen">
+            <div class="wrap">
+<!-- @render ff-flies -->
+            </div>
+        </section>
+
+        <section class="block" data-shape="cloud" aria-labelledby="order-heading">
+            <div class="wrap">
+                <div class="ff-callbox glass" data-reveal>
+                    <div>
+                        <p class="kicker">So bestellst du</p>
+                        <h2 class="h3" id="order-heading">Schreib mir, welche Fliegen du möchtest.</h2>
+                        <p class="muted">Nenne Muster, Anzahl und gern dein Gewässer. Ich antworte innerhalb von zwei Werktagen mit Preis, Versandkosten und Lieferzeit. Erst wenn du zustimmst, ist die Bestellung verbindlich.</p>
+                    </div>
+                    <div class="btn-row">
+<!-- @render ff-order-link -->
+                    </div>
+                </div>
+            </div>
+        </section>

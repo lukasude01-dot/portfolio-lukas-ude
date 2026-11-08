@@ -1,0 +1,205 @@
+{
+    "_info": "Fliegen zum Verkauf (flyfishing.lukasude.de/fliegen/). Preise erst eintragen, wenn sie feststehen (\"price\": \"4,50 €\"). Bilder liegen in /content/flyfishing/bilder/.",
+    "flies": [
+        {
+            "slug": "fliege-streamer-gelb-schwarz",
+            "name": "Streamer Gelb-Schwarz",
+            "type": "Streamer",
+            "description": "Streamer mit gelbem Haarflügel, schwarzer Hechel und Glitzerfasern. Für Bach- und Seeforelle.",
+            "image": {
+                "src": "/media/bilder/fliege-streamer-gelb-schwarz.jpg",
+                "alt": "Ein Streamer mit gelbem Haarflügel und schwarzer Hechel im Bindestock."
+            }
+        },
+        {
+            "slug": "fliege-baitfish-chartreuse",
+            "name": "Baitfish Chartreuse-Weiß",
+            "type": "Streamer",
+            "description": "Schlanker Fischchen-Streamer mit Klebeaugen, gut sichtbar in trübem Wasser.",
+            "image": {
+                "src": "/media/bilder/fliege-baitfish-chartreuse.jpg",
+                "alt": "Ein weiß-chartreuse Fischchen-Streamer mit Klebeaugen."
+            }
+        },
+        {
+            "slug": "fliege-baitfish-orange-schwarz",
+            "name": "Baitfish Orange-Schwarz",
+            "type": "Streamer",
+            "description": "Fischchen-Streamer mit dunklem Rücken und orangem Bauch, Klebeaugen.",
+            "image": {
+                "src": "/media/bilder/fliege-baitfish-orange-schwarz.jpg",
+                "alt": "Ein Fischchen-Streamer mit schwarzem Rücken, orangem Bauch und Klebeaugen."
+            }
+        },
+        {
+            "slug": "fliege-baitfish-blau-orange",
+            "name": "Baitfish Blau-Orange",
+            "type": "Streamer",
+            "description": "Volles Fischchenprofil aus Kunstfasern mit blauem Rücken und weißem Bauch.",
+            "image": {
+                "src": "/media/bilder/fliege-baitfish-blau-orange.jpg",
+                "alt": "Ein Fischchen-Streamer mit blauem Rücken, orangen Fasern und weißem Bauch."
+            }
+        },
+        {
+            "slug": "fliege-baitfish-braun-weiss",
+            "name": "Baitfish Braun-Weiß",
+            "type": "Streamer",
+            "description": "Kompakter Kopf, lange weiße Fasern. Imitiert kleine Grundfische.",
+            "image": {
+                "src": "/media/bilder/fliege-baitfish-braun-weiss.jpg",
+                "alt": "Ein Fischchen-Streamer mit braunem Kopf, weißen Fasern und Klebeauge."
+            }
+        },
+        {
+            "slug": "fliege-rot-pinkkopf",
+            "name": "Streamer Rot mit Pinkkopf",
+            "type": "Streamer",
+            "description": "Roter Marabou-Streamer mit pinker Perle, viel Bewegung schon bei langsamer Führung.",
+            "image": {
+                "src": "/media/bilder/fliege-rot-pinkkopf.jpg",
+                "alt": "Ein roter Marabou-Streamer mit pinkem Perlenkopf."
+            }
+        },
+        {
+            "slug": "fliege-tube-natur",
+            "name": "Tubenfliege Natur",
+            "type": "Streamer",
+            "description": "Tubenfliege in Naturtönen mit grauer Hechel und Glitzer.",
+            "image": {
+                "src": "/media/bilder/fliege-tube-natur.jpg",
+                "alt": "Eine Tubenfliege in Braun- und Grautönen mit Glitzerfasern."
+            }
+        },
+        {
+            "slug": "fliege-garnele-pink-augen",
+            "name": "Garnele Pink mit Augen",
+            "type": "Meerforelle",
+            "description": "Pinkes Küstenmuster mit Hantelaugen, sinkt zügig.",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-pink-augen.jpg",
+                "alt": "Eine pinke Garnelenfliege mit Hantelaugen, von vorne fotografiert."
+            }
+        },
+        {
+            "slug": "fliege-pink-goldkopf",
+            "name": "Pink mit Kopfperle",
+            "type": "Meerforelle",
+            "description": "Pinkes Muster mit Kopfperle und Glitzerkörper für die Küste.",
+            "image": {
+                "src": "/media/bilder/fliege-pink-goldkopf.jpg",
+                "alt": "Eine pinke Fliege mit Kopfperle und Glitzer."
+            }
+        },
+        {
+            "slug": "fliege-pink-grau",
+            "name": "Pink-Grau mit Kopfperle",
+            "type": "Meerforelle",
+            "description": "Grauer Federkörper und pinke Hechel, ein Klassiker im kalten Wasser.",
+            "image": {
+                "src": "/media/bilder/fliege-pink-grau.jpg",
+                "alt": "Eine Fliege mit grauem Federkörper, pinker Hechel und Kopfperle."
+            }
+        },
+        {
+            "slug": "fliege-pink-grau-augen",
+            "name": "Pink-Grau mit Augen",
+            "type": "Meerforelle",
+            "description": "Wie Pink-Grau, mit Hantelaugen für mehr Gewicht.",
+            "image": {
+                "src": "/media/bilder/fliege-pink-grau-augen.jpg",
+                "alt": "Eine pink-graue Fliege mit Hantelaugen, von vorne fotografiert."
+            }
+        },
+        {
+            "slug": "fliege-braun-augen",
+            "name": "Braun mit Augen",
+            "type": "Meerforelle",
+            "description": "Dunkles Küstenmuster mit Hantelaugen für trübe Tage.",
+            "image": {
+                "src": "/media/bilder/fliege-braun-augen.jpg",
+                "alt": "Eine braune Fliege mit schwarzen Hantelaugen, von vorne fotografiert."
+            }
+        },
+        {
+            "slug": "fliege-braun-orange",
+            "name": "Braun-Orange mit Kopfperle",
+            "type": "Meerforelle",
+            "description": "Braunes Muster mit oranger Kopfwicklung und violettem Glitzer.",
+            "image": {
+                "src": "/media/bilder/fliege-braun-orange.jpg",
+                "alt": "Eine braun-orange Fliege mit schwarzer Kopfperle."
+            }
+        },
+        {
+            "slug": "fliege-garnele-chartreuse",
+            "name": "Garnele Chartreuse",
+            "type": "Meerforelle",
+            "description": "Schlanke Garnele mit Augen und langen Fühlern.",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-chartreuse.jpg",
+                "alt": "Eine chartreuse Garnelenfliege mit schwarzem Auge."
+            }
+        },
+        {
+            "slug": "fliege-garnele-orange",
+            "name": "Garnele Orange",
+            "type": "Meerforelle",
+            "description": "Orange Garnele mit Rückenschild und Fühlern.",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-orange.jpg",
+                "alt": "Eine orange Garnelenfliege mit langen Fühlern."
+            }
+        },
+        {
+            "slug": "fliege-garnele-grau",
+            "name": "Garnele Grau",
+            "type": "Meerforelle",
+            "description": "Natürliche Garnele in Grau und Braun.",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-grau.jpg",
+                "alt": "Eine graue Garnelenfliege mit Auge und langen Fasern."
+            }
+        },
+        {
+            "slug": "fliege-garnele-natur",
+            "name": "Garnele Natur",
+            "type": "Meerforelle",
+            "description": "Kleine, unauffällige Garnele mit Kupferrippe und Rückenschild.",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-natur.jpg",
+                "alt": "Eine kleine helle Garnelenfliege mit Kupferdraht, vor schwarzem Hintergrund."
+            }
+        },
+        {
+            "slug": "fliege-spider-braun",
+            "name": "Spider Braun",
+            "type": "Nassfliege",
+            "description": "Spinnenfliege mit Glitzerkörper und weicher Hechel.",
+            "image": {
+                "src": "/media/bilder/fliege-spider-braun.jpg",
+                "alt": "Eine braune Spinnenfliege mit Glitzerkörper."
+            }
+        },
+        {
+            "slug": "fliege-spider-orange",
+            "name": "Spider Orange",
+            "type": "Nassfliege",
+            "description": "Orange Spinnenfliege mit Schwänzchen aus Fasanenfeder.",
+            "image": {
+                "src": "/media/bilder/fliege-spider-orange.jpg",
+                "alt": "Eine orange Spinnenfliege mit langer Hechel."
+            }
+        },
+        {
+            "slug": "fliege-spider-oliv-trio",
+            "name": "Spider Oliv",
+            "type": "Nassfliege",
+            "description": "Olive Spinnenfliegen mit Glitzerkörper, als Set gebunden.",
+            "image": {
+                "src": "/media/bilder/fliege-spider-oliv-trio.jpg",
+                "alt": "Drei olive Spinnenfliegen nebeneinander in Klemmen."
+            }
+        }
+    ]
+}

@@ -117,13 +117,14 @@ const DETAIL_TEMPLATES = {
 // Articles: /content/news/ on the main website, the variant's folder on a standalone one
 const NEWS = { folder: "news", path: "/news/", label: "News", ...(VARIANT_CONFIG.news || {}) };
 
-/** Content of a standalone variant: articles and courses (/content/<variant>/). */
+/** Content of a standalone variant: articles, courses, flies and photos (/content/<variant>/). */
 function loadStandaloneContent() {
     const coursesFile = path.join(CONTENT, "kurse.json");
     const courses = fs.existsSync(coursesFile) ? JSON.parse(fs.readFileSync(coursesFile, "utf8")).courses || [] : [];
     for (const course of courses) course.url = `/akademie/${course.slug}/`;
+    const readList = (file, key) => fs.existsSync(path.join(CONTENT, file)) ? JSON.parse(fs.readFileSync(path.join(CONTENT, file), "utf8"))[key] || [] : [];
     const news = loadNews(CONTENT, { includeDrafts, folder: NEWS.folder, path: NEWS.path });
-    return { news, courses, all: [], packages: [] };
+    return { news, courses, flies: readList("fliegen.json", "flies"), photos: readList("galerie.json", "photos"), all: [], packages: [] };
 }
 
 

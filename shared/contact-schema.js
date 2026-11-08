@@ -33,6 +33,7 @@ export const CONTACT_TOPICS = [
 // Topics of the fly fishing website (flyfishing.lukasude.de). The prefix
 // shows in the e-mail which website the message came from.
 export const FLYFISHING_TOPICS = [
+    "Fly Fishing: Fliegen bestellen",
     "Fly Fishing: Frage zu einem Kurs",
     "Fly Fishing: Info zum Kursstart",
     "Fly Fishing: Kooperation",

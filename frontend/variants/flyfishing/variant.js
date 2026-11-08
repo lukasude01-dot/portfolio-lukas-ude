@@ -12,6 +12,8 @@
  *
  * CONTENT:
  *   /content/flyfishing/kurse.json            courses (/akademie/<slug>/)
+ *   /content/flyfishing/fliegen.json          flies for sale (/fliegen/)
+ *   /content/flyfishing/galerie.json          photos on /ueber-lukas/
  *   /content/flyfishing/blog/<slug>/article.md   articles (/blog/<slug>/)
  *   /content/flyfishing/bilder/               images (/media/bilder/...)
  *
@@ -43,6 +45,7 @@ export const variant = {
             { label: "Akademie", href: "/akademie/" },
             { label: "Fliegenbinden", href: "/fliegenbinden/" },
             { label: "Fliegenfischen", href: "/fliegenfischen/" },
+            { label: "Fliegen", href: "/fliegen/" },
             { label: "Blog", href: "/blog/" },
             { label: "Shop", href: "/shop/" },
             { label: "Über Lukas", href: "/ueber-lukas/" }
