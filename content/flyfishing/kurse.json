@@ -1,5 +1,5 @@
 {
-    "_info": "Angebotene Kurse (flyfishing.lukasude.de). Derzeit nur der Einsteiger-Workshop. Datum in \"date\" eintragen, z. B. \"Freitag, 16. Januar 2027\". Spätere Kurse liegen in _spaeter/kurse.json.",
+    "_info": "Angebotene Kurse (flyfishing.lukasude.de). Derzeit nur der Einsteiger-Workshop. Datum in \"date\" eintragen, z. B. \"Freitag, 16. Januar 2027\". Spätere Kurse liegen in _spaeter/kurse.json. \"angebote\": alle Kurse auf /kurse/ (Gruppen: vor Ort, online, Vereine).",
     "courses": [
         {
             "slug": "fliegenbinden-einsteiger",
@@ -166,6 +166,118 @@
                     "price": "69 €"
                 }
             ]
+        }
+    ],
+    "angebote": [
+        {
+            "id": "wurfkurs-quick",
+            "group": "Vor Ort",
+            "title": "Wurfkurs kompakt",
+            "subtitle": "Quickkurs, ein Tag",
+            "image": {
+                "src": "/media/bilder/wurf-schnurschlaufe.jpg",
+                "alt": "Lukas Ude steht im Fluss und wirft, die Fliegenschnur bildet eine Schlaufe über dem Wasser."
+            },
+            "text": "An einem Tag die Grundlagen des Fliegenwurfs: Überkopfwurf, Rollwurf, Schnurkontrolle und die häufigsten Fehler. Ich komme zu dir an dein Hausgewässer.",
+            "facts": [
+                "1 Tag, 6 Stunden",
+                "1 bis 3 Personen",
+                "An deinem Hausgewässer"
+            ],
+            "price": "140 €",
+            "priceNote": "pro Person, zzgl. Fahrtkosten je nach Entfernung",
+            "label": "Platz im Wurfkurs"
+        },
+        {
+            "id": "grundlagenkurs-vor-ort",
+            "group": "Vor Ort",
+            "title": "Grundlagenkurs Fliegenfischen",
+            "subtitle": "Alles, was du für den Start brauchst",
+            "image": {
+                "src": "/media/bilder/lukas-grosse-bachforelle.jpg",
+                "alt": "Lukas Ude hält eine große Bachforelle vor einem Fluss mit bewaldetem Ufer."
+            },
+            "text": "Der komplette Einstieg: Wurftechnik, Gewässer lesen, Fischerei in der Praxis, Natur- und Gewässerschutz und Fischbiologie. Nur vor Ort, in einer ganz kleinen Gruppe an deinem Gewässer.",
+            "facts": [
+                "Wurf, Fischerei, Natur, Fischbiologie",
+                "1 bis 3 Personen",
+                "An deinem Hausgewässer"
+            ],
+            "price": "399 €",
+            "priceNote": "pro Person, zzgl. Fahrtkosten je nach Entfernung",
+            "label": "Platz im Grundlagenkurs"
+        },
+        {
+            "id": "webinar-sommerfischen",
+            "group": "Online",
+            "title": "Sommerfischen auf Bachforelle",
+            "subtitle": "Webinar",
+            "image": {
+                "src": "/media/bilder/lukas-bachforelle-abendlicht.jpg",
+                "alt": "Lukas Ude hält eine Bachforelle vor einem Fluss im Abendlicht."
+            },
+            "text": "Warmes Wasser, wenig Wasser, scheue Fische: Wie du Bachforellen im Sommer findest und mit welchen Fliegen und Techniken du sie überlistest.",
+            "facts": [
+                "Live online",
+                "Termin folgt"
+            ],
+            "price": "20 €",
+            "priceNote": "pro Person",
+            "label": "Platz im Webinar"
+        },
+        {
+            "id": "webinar-theorie",
+            "group": "Online",
+            "title": "Theoriekurs Fliegenfischen",
+            "subtitle": "Webinar",
+            "image": {
+                "src": "/media/bilder/rute-fliegenbox-kueste.jpg",
+                "alt": "Rute, Rolle und eine offene Fliegenbox am steinigen Ufer."
+            },
+            "text": "Die Theorie hinter dem Fliegenfischen kompakt erklärt: Ausrüstung, Schnurklassen, Vorfächer, Fliegentypen, Gewässer und Fischbiologie.",
+            "facts": [
+                "Live online",
+                "Termin folgt"
+            ],
+            "price": "49 €",
+            "priceNote": "pro Person",
+            "label": "Platz im Theoriekurs"
+        },
+        {
+            "id": "verein-wurfkurs",
+            "group": "Für Vereine",
+            "title": "Wurfkurs für Vereine",
+            "subtitle": "An eurem Vereinsgewässer",
+            "image": {
+                "src": "/media/bilder/wurf-segelboote.jpg",
+                "alt": "Lukas Ude wirft im Meer, im Hintergrund Segelboote."
+            },
+            "text": "Ich komme zu eurem Verein und gebe den Wurfkurs direkt an eurem Vereinsgewässer. Ideal für neue Mitglieder und alle, die ihren Wurf verbessern wollen.",
+            "facts": [
+                "5 bis 10 Teilnehmer",
+                "An eurem Vereinsgewässer"
+            ],
+            "price": "",
+            "priceNote": "Preis nach Absprache",
+            "topic": "Fly Fishing: Kurs für Vereine"
+        },
+        {
+            "id": "verein-grundlagen",
+            "group": "Für Vereine",
+            "title": "Fliegenfischen-Kurs für Vereine",
+            "subtitle": "Der komplette Kurs",
+            "image": {
+                "src": "/media/bilder/fluss-abendlicht.jpg",
+                "alt": "Ein Fluss im Abendlicht, hinten zwei Fliegenfischer im Wasser."
+            },
+            "text": "Der komplette Fliegenfischen-Kurs mit Wurf, Gewässer, Fischerei, Natur und Fischbiologie für eure Vereinsmitglieder, an eurem Gewässer.",
+            "facts": [
+                "Gruppengröße nach Absprache",
+                "An eurem Vereinsgewässer"
+            ],
+            "price": "",
+            "priceNote": "Preis nach Absprache",
+            "topic": "Fly Fishing: Kurs für Vereine"
         }
     ]
 }

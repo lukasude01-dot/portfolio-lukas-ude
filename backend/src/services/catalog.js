@@ -20,7 +20,11 @@ export function loadCatalog(contentDir) {
     for (const fly of readJson(path.join(contentDir, "fliegen.json")).flies || []) {
         catalog[`fly-${fly.slug}`] = { name: fly.name, kind: "fly", price: fly.price || "" };
     }
-    for (const course of readJson(path.join(contentDir, "kurse.json")).courses || []) {
+    const courses = readJson(path.join(contentDir, "kurse.json"));
+    for (const offer of courses.angebote || []) {
+        if (offer.label) catalog[`course-${offer.id}`] = { name: offer.title, kind: "course", price: offer.price || "" };
+    }
+    for (const course of courses.courses || []) {
         for (const offer of course.offers || []) {
             catalog[`course-${offer.id}`] = { name: `${course.title}: ${offer.label}`, kind: "course", price: offer.price || "" };
         }

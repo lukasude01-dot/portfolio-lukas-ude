@@ -1209,3 +1209,74 @@
     color: transparent;
     -webkit-text-stroke: 1px rgba(238, 234, 224, 0.75);
 }
+
+
+/* ----------------------------------------------------------
+   COURSE OFFERS  (/kurse/)
+---------------------------------------------------------- */
+
+.ff-offer-group + .ff-offer-group {
+    margin-top: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+}
+
+.ff-offer-group__title {
+    margin-bottom: clamp(1.4rem, 1rem + 1.4vw, 2.4rem);
+}
+
+.ff-offers {
+    display: grid;
+    gap: clamp(1rem, 0.6rem + 1.4vw, 1.8rem);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ff-offer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+}
+
+.ff-offer__image {
+    margin: 0;
+}
+
+.ff-offer__image picture,
+.ff-offer__image img {
+    display: block;
+    width: 100%;
+}
+
+.ff-offer__image img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.ff-offer__body {
+    display: grid;
+    align-content: start;
+    gap: 0.8rem;
+    padding: clamp(1.1rem, 0.9rem + 0.8vw, 1.6rem);
+}
+
+.ff-offer__body .chip-row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ff-offer__price {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.ff-offer__price span {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--b-muted);
+}
+
+.ff-offer .ff-add {
+    text-decoration: none;
+}

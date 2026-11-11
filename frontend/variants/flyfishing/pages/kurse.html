@@ -1,0 +1,45 @@
+---
+# =========================================================
+# PAGE SETTINGS - ALL COURSES (fly fishing website)
+# Offers: /content/flyfishing/kurse.json -> "angebote"
+# =========================================================
+title: Kurse
+description: Kurse von Lukas Ude. Wurfkurs und Grundlagenkurs Fliegenfischen vor Ort, Webinare, Fliegenbinde-Workshop und Kurse für Vereine an eurem Gewässer.
+path: /kurse/
+bodyClass: page-courses
+---
+
+        <section class="page-b ff-page-photo" aria-labelledby="courses-heading">
+            <div class="ff-page-photo__image" aria-hidden="true"><img src="/media/bilder/wurf-wolken.jpg" alt="" sizes="100vw" loading="eager" data-responsive></div>
+            <div class="wrap page-b__inner">
+                <p class="kicker" data-reveal>Kurse</p>
+                <h1 class="mega page-b__title" id="courses-heading" data-split>Lernen <span class="outline">am Wasser.</span></h1>
+                <p class="lead" data-reveal data-reveal-delay="3">Vor Ort an deinem Gewässer, online im Webinar oder für deinen Verein. Such dir aus, was zu dir passt.</p>
+                <ul class="chip-row" role="list" data-reveal data-reveal-delay="4">
+                    <li><a class="chip" href="#vor-ort">Vor Ort</a></li>
+                    <li><a class="chip" href="#online">Online</a></li>
+                    <li><a class="chip" href="#vereine">Für Vereine</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block" aria-label="Alle Kurse">
+            <div class="wrap">
+<!-- @render ff-offers -->
+            </div>
+        </section>
+
+        <section class="block" aria-labelledby="travel-heading">
+            <div class="wrap">
+                <div class="ff-callbox glass" data-reveal>
+                    <div>
+                        <p class="kicker">Kurse vor Ort</p>
+                        <h2 class="h3" id="travel-heading">Ich komme zu dir.</h2>
+                        <p class="muted">Bei Kursen vor Ort kommen Fahrtkosten je nach Entfernung dazu. Schreib mir, wo dein Gewässer liegt, dann bekommst du einen genauen Preis. Vereinsangebote stimmen wir individuell ab.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="/kontakt/?thema=Fly%20Fishing%3A%20Kurs%20vor%20Ort" data-magnetic>Anfrage senden<span class="btn__arrow" aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>

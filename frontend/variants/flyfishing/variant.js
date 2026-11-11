@@ -42,7 +42,7 @@ export const variant = {
             "und Fliegenfischen. Verständliche Anleitungen, Materiallisten und ehrliche Empfehlungen.",
         url: "https://flyfishing.lukasude.de",
         navigation: [
-            { label: "Workshop", href: "/workshop/" },
+            { label: "Kurse", href: "/kurse/" },
             { label: "Fliegen-Shop", href: "/fliegen/" },
             { label: "Fliegenbinden", href: "/fliegenbinden/" },
             { label: "Fliegenfischen", href: "/fliegenfischen/" },
@@ -53,7 +53,7 @@ export const variant = {
             { label: "Datenschutz", href: "/datenschutz/" }
         ],
         cta: {
-            primary: { label: "Zum Workshop", href: "/workshop/" },
+            primary: { label: "Zu den Kursen", href: "/kurse/" },
             secondary: { label: "Wissensbereich erkunden", href: "/fliegenbinden/" }
         },
         contactTopics: FLYFISHING_TOPICS,

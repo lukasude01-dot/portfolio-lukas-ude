@@ -128,7 +128,8 @@ const NEWS = { folder: "news", path: "/news/", label: "News", ...(VARIANT_CONFIG
 /** Content of a standalone variant: articles, courses, flies and photos (/content/<variant>/). */
 function loadStandaloneContent() {
     const coursesFile = path.join(CONTENT, "kurse.json");
-    const courses = fs.existsSync(coursesFile) ? JSON.parse(fs.readFileSync(coursesFile, "utf8")).courses || [] : [];
+    const coursesData = fs.existsSync(coursesFile) ? JSON.parse(fs.readFileSync(coursesFile, "utf8")) : {};
+    const courses = coursesData.courses || [];
     for (const course of courses) {
         course.url = course.path || `/akademie/${course.slug}/`;
         // "{date}" and "{time}" in the facts come from the course ("date" empty = "dateFallback")
@@ -137,7 +138,7 @@ function loadStandaloneContent() {
     }
     const readList = (file, key) => fs.existsSync(path.join(CONTENT, file)) ? JSON.parse(fs.readFileSync(path.join(CONTENT, file), "utf8"))[key] || [] : [];
     const news = loadNews(CONTENT, { includeDrafts, folder: NEWS.folder, path: NEWS.path });
-    return { news, courses, flies: readList("fliegen.json", "flies"), photos: readList("galerie.json", "photos"), all: [], packages: [] };
+    return { news, courses, angebote: coursesData.angebote || [], flies: readList("fliegen.json", "flies"), photos: readList("galerie.json", "photos"), all: [], packages: [] };
 }
 
 
@@ -370,6 +371,9 @@ async function buildServicePages(site, content) {
 function writeShopCatalog(content) {
     const items = {};
     for (const fly of content.flies || []) items[`fly-${fly.slug}`] = { name: fly.name, kind: "fly", price: fly.price || "", image: fly.image.src, url: "/fliegen/" };
+    for (const offer of content.angebote || []) {
+        if (offer.label) items[`course-${offer.id}`] = { name: offer.title, kind: "course", price: offer.price || "", image: offer.image.src, url: "/kurse/" };
+    }
     for (const course of content.courses || []) {
         for (const offer of course.offers || []) items[`course-${offer.id}`] = { name: `${course.title}: ${offer.label}`, kind: "course", price: offer.price || "", image: course.image.src, url: course.url };
     }
