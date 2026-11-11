@@ -9,31 +9,31 @@ bodyClass: page-home page-ff-home
 ---
 
         <!-- =========================================================
-             HERO
-             The particles form a brown trout in the anchor box
-             (shape: /frontend/variants/flyfishing/assets/shapes/forelle.svg).
+             HERO  (photo slideshow in the background, background images
+             without caption; styles: .ff-hero-photo in flyfishing.css)
         ========================================================= -->
-        <section class="hero-b" data-shape="image:/assets/shapes/forelle.svg" data-shape-size="0.98" aria-labelledby="hero-heading">
-            <div class="wrap hero-b__inner">
-                <div class="hero-b__copy">
-                    <p class="kicker ff-hero__brand" data-reveal>Lukas Ude | Fly Fishing</p>
-                    <h1 class="ff-hero__claim" id="hero-heading" data-split data-label="Fliegenbinden. Fliegenfischen. Verstehen.">
-                        <span>Fliegenbinden.</span>
-                        <span>Fliegenfischen.</span>
-                        <span class="outline">Verstehen.</span>
-                    </h1>
-                    <p class="lead hero-b__lead" data-reveal data-reveal-delay="4">
-                        Lerne die Grundlagen des Fliegenbindens und binde deine ersten eigenen Fliegen.
-                        Im Live-Online-Workshop, Schritt für Schritt, gemeinsam mit mir.
-                    </p>
-                    <div class="btn-row" data-reveal data-reveal-delay="5">
-                        <a class="btn" href="/workshop/" data-magnetic>Zum Workshop<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <section class="ff-hero-photo" aria-labelledby="hero-heading">
+            <div class="ff-slides" aria-hidden="true">
+                <img src="/media/bilder/sonnenuntergang-kueste.jpg" alt="" sizes="100vw" loading="eager" data-responsive>
+                <img src="/media/bilder/fluss-fruehjahr-wurf.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+                <img src="/media/bilder/wurf-wolken.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+                <img src="/media/bilder/lukas-grosse-bachforelle.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+                <img src="/media/bilder/tubenstreamer-bindestock.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+            </div>
+            <div class="wrap ff-hero-photo__inner">
+                <p class="kicker ff-hero__brand" data-reveal>Lukas Ude | Fly Fishing</p>
+                <h1 class="ff-hero__claim" id="hero-heading" data-split data-label="Fliegenbinden. Fliegenfischen. Verstehen.">
+                    <span>Fliegenbinden.</span>
+                    <span>Fliegenfischen.</span>
+                    <span class="outline">Verstehen.</span>
+                </h1>
+                <p class="lead ff-hero-photo__lead" data-reveal data-reveal-delay="4">
+                    Lerne die Grundlagen des Fliegenbindens und binde deine ersten eigenen Fliegen.
+                    Im Live-Online-Workshop, Schritt für Schritt, gemeinsam mit mir.
+                </p>
+                <div class="btn-row" data-reveal data-reveal-delay="5">
+                    <a class="btn" href="/workshop/" data-magnetic>Zum Workshop<span class="btn__arrow" aria-hidden="true">→</span></a>
 <!-- @render ff-book-button -->
-                    </div>
-                </div>
-                <div class="hero-b__anchor" data-shape-anchor aria-hidden="true">
-                    <span class="hero-b__ring"></span>
-                    <span class="hero-b__ring hero-b__ring--2"></span>
                 </div>
             </div>
             <a class="hero-b__scroll" href="#workshop" aria-label="Weiter nach unten"><span></span></a>
@@ -64,9 +64,21 @@ bodyClass: page-home page-ff-home
         <!-- =========================================================
              THE WORKSHOP  (main offer, from /content/flyfishing/kurse.json)
         ========================================================= -->
-        <section class="block" id="workshop" data-shape="orbit" data-shape-size="1.1" aria-labelledby="course-heading">
+        <section class="block" id="workshop" aria-labelledby="course-heading">
             <div class="wrap">
 <!-- @render ff-course-featured -->
+            </div>
+        </section>
+
+
+        <!-- PHOTO BAND  (background image, no caption) -->
+        <section class="ff-band" aria-label="Selbst gebunden">
+            <div class="ff-band__image" data-parallax="0.12" aria-hidden="true">
+                <img src="/media/bilder/wurf-vom-stein.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+            </div>
+            <div class="wrap ff-band__inner">
+                <p class="kicker" data-reveal>Selbst gebunden</p>
+                <p class="ff-band__text" data-reveal data-reveal-delay="1">Eine Fliege, die du selbst gebunden hast, passt zu deinem Gerät, deiner Art zu fischen und deinem Gewässer.</p>
             </div>
         </section>
 
@@ -74,7 +86,7 @@ bodyClass: page-home page-ff-home
         <!-- =========================================================
              PHOTO MOSAIC  (real photos, captions below the images)
         ========================================================= -->
-        <section class="block ff-mosaic-block" data-shape="wave" aria-labelledby="mosaic-heading">
+        <section class="block ff-mosaic-block" aria-labelledby="mosaic-heading">
             <div class="wrap">
                 <p class="kicker" data-reveal>Am Wasser</p>
                 <h2 class="h2" id="mosaic-heading" data-split>Selbst gebunden. Selbst gefangen.</h2>
@@ -104,14 +116,14 @@ bodyClass: page-home page-ff-home
         <!-- =========================================================
              LEARNING AREAS  (four glass cards; particles form a streamer)
         ========================================================= -->
-        <section class="block services-b" data-shape="image:/assets/shapes/streamer.svg" data-shape-size="0.9" aria-labelledby="areas-heading">
+        <section class="block services-b" aria-labelledby="areas-heading">
             <div class="wrap">
                 <div class="services-b__head">
                     <div>
                         <p class="kicker" data-reveal>Mehr entdecken</p>
                         <h2 class="h2" id="areas-heading" data-split>Vom ersten Faden bis ans Wasser.</h2>
                     </div>
-                    <div class="services-b__anchor" data-shape-anchor aria-hidden="true"></div>
+                    <div class="services-b__anchor" aria-hidden="true"></div>
                 </div>
 
                 <ul class="services-b__grid" role="list">
@@ -159,7 +171,7 @@ bodyClass: page-home page-ff-home
         <!-- =========================================================
              ABOUT LUKAS  (photo opens up as a growing circle; background image)
         ========================================================= -->
-        <section class="story-b" data-scene data-shape="cloud" aria-labelledby="story-heading">
+        <section class="story-b" data-scene aria-labelledby="story-heading">
             <div class="story-b__sticky">
                 <div class="story-b__photo" aria-hidden="true">
                     <img src="/media/bilder/sonnenuntergang-kueste.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
@@ -174,10 +186,23 @@ bodyClass: page-home page-ff-home
         </section>
 
 
+        <!-- PHOTO BAND  (background image, no caption) -->
+        <section class="ff-band" aria-label="Draußen">
+            <div class="ff-band__image" data-parallax="0.12" aria-hidden="true">
+                <img src="/media/bilder/kueste-brandung.jpg" alt="" sizes="100vw" loading="lazy" data-responsive>
+            </div>
+            <div class="wrap ff-band__inner">
+                <p class="kicker" data-reveal>Draußen</p>
+                <p class="ff-band__text" data-reveal data-reveal-delay="1">Was du am Bindetisch lernst, zeigt sich am Wasser.</p>
+                <a class="arrow-link" href="/fliegenfischen/">Zum Fliegenfischen</a>
+            </div>
+        </section>
+
+
         <!-- =========================================================
              BOOKING  (repeats the call to action at the end)
         ========================================================= -->
-        <section class="block" data-shape="cloud" aria-labelledby="start-heading">
+        <section class="block" aria-labelledby="start-heading">
             <div class="wrap">
                 <div class="ff-callbox glass" data-reveal>
                     <div>

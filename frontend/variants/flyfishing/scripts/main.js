@@ -23,6 +23,7 @@ import { initScrub } from "./bold/scrub.js";
 import { initGoalSwitch } from "./bold/goal-switch.js";
 import { initScrubGallery } from "./bold/scrub-gallery.js";
 import { initCart } from "./flyfishing/cart.js";
+import { initParallax } from "./modules/parallax.js";
 
 const modules = {
     split: initSplit,          // must run before reveal (it adds data-reveal)
@@ -40,7 +41,8 @@ const modules = {
     "device-preview": initDevicePreview,
     lightbox: initLightbox,
     "contact-form": initContactForm,
-    cart: initCart
+    cart: initCart,
+    parallax: initParallax
 };
 
 for (const [name, init] of Object.entries(modules)) {

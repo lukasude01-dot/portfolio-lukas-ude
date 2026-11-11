@@ -2,16 +2,17 @@
          FOOTER  (fly fishing website)
 
          PURPOSE:
-         Closing call, links, contact and legal links. The particles
-         form the claim of this website in .foot__slogan, like the
-         slogan on the main website (scripts/bold/particles.js).
+         Closing call, links, contact and legal links. The
+         claim of this website stands large in .foot__slogan, on a
+         background photo.
 
          EDIT HERE:
          - Links: /frontend/variants/flyfishing/variant.js -> site
 
          RELATED STYLES:  /frontend/variants/bold/styles/bold/footer.css
     ========================================================= -->
-    <footer class="foot" data-shape="text:Fliegenbinden.|Fliegenfischen.|Verstehen." data-shape-size="0.94">
+    <footer class="foot ff-foot-photo">
+        <div class="ff-page-photo__image ff-foot-photo__image" aria-hidden="true"><img src="/media/bilder/sonnenuntergang-kueste.jpg" alt="" sizes="100vw" loading="lazy" data-responsive></div>
         <div class="wrap">
             <a class="foot__call" href="/kontakt/" data-magnetic>
                 <span class="foot__call-small">Eine Frage zu Kursen, Material oder Technik?</span>
@@ -40,7 +41,7 @@
             </div>
         </div>
 
-        <div class="foot__slogan" data-shape-anchor>
+        <div class="foot__slogan">
             <p class="foot__slogan-text">Fliegenbinden.<br>Fliegenfischen.<br>Verstehen.</p>
         </div>
     </footer>

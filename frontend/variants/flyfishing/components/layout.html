@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- =========================================================
+     PAGE LAYOUT  (fly fishing website)
+
+     PURPOSE:
+     Frame around every page: head, navigation, footer.
+     Natural look: no particle stage, the photos carry the design
+     (hero slideshow, photo bands, photo backgrounds).
+
+     EDIT HERE:
+     - Navigation:   /frontend/variants/flyfishing/components/navigation.html
+     - Footer:       /frontend/variants/flyfishing/components/footer.html
+
+     DO NOT EDIT WITHOUT TESTING: affects every page.
+========================================================= -->
+<html lang="{{ site.language }}" class="bold ff-natural">
+<head>
+<!-- @include head -->
+</head>
+<body class="{{ page.bodyClass }}" data-header-theme="{{ page.headerTheme }}">
+
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<!-- @include navigation -->
+
+    <main id="main-content" tabindex="-1">
+{{{ page.body }}}
+    </main>
+
+<!-- @include footer -->
+
+</body>
+</html>
+<!-- ================= END PAGE LAYOUT ================= -->
