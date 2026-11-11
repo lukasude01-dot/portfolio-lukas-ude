@@ -37,6 +37,48 @@
     color: var(--b-muted);
 }
 
+/* ----------------------------------------------------------
+   PHONES: navigation pill and full-screen menu
+   The menu words of this website are long ("FLIEGENFISCHEN"),
+   so they get a size that always fits the screen width.
+---------------------------------------------------------- */
+
+.nav__menu .mobile-menu__link {
+    font-size: clamp(1.35rem, 7vw, 4rem);
+    overflow-wrap: anywhere;
+}
+
+/* contact page: the long Instagram address must not widen the column */
+.contact-b__inner > *,
+.contact-details__item dd {
+    min-width: 0;
+}
+
+.contact-details__item dd {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 459px) {
+    .nav__pill {
+        gap: 0.5rem;
+    }
+
+    /* only the icon: "Schließen" would push the cart onto the logo.
+       The word stays readable for screen readers. */
+    .nav__toggle {
+        padding: 0 0.85rem;
+    }
+
+    .nav__toggle [data-menu-label] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+}
+
 /* three lines of particles need a little more room */
 .foot__slogan {
     height: clamp(260px, 36vw, 560px);
@@ -49,7 +91,9 @@
 
 /* The longest word ("FLIEGENFISCHEN.") must fit its column without breaking */
 .ff-hero__claim {
-    font-size: min(clamp(2rem, 0.6rem + 6vw, 7.6rem), 8.6vw);
+    /* the longest line ("FLIEGENFISCHEN.") is about 10.4 times the font size wide:
+       8.2vw keeps it inside the page gutters on every phone */
+    font-size: min(clamp(1.6rem, 0.6rem + 6vw, 7.6rem), 8.2vw);
     word-break: keep-all;
     overflow-wrap: normal;
     font-weight: 850;
@@ -1079,7 +1123,7 @@
 }
 
 .ff-hero-photo .ff-hero__claim {
-    font-size: min(clamp(2.4rem, 0.8rem + 6.4vw, 8rem), 10vw);
+    font-size: min(clamp(1.6rem, 0.8rem + 6.4vw, 8rem), 8.2vw);
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
 }
 
