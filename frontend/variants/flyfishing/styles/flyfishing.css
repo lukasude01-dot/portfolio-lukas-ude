@@ -1330,3 +1330,8 @@
     grid-row: 1 / span 2;
     margin: 0;
 }
+
+/* about page main photo: keep Lukas in the frame */
+.about-b__portrait img.about-b__img--cast {
+    object-position: 68% 50%;
+}
