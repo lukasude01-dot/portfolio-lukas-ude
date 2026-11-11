@@ -205,9 +205,22 @@
                 "1 bis 3 Personen",
                 "An deinem Hausgewässer"
             ],
-            "price": "140 €",
-            "priceNote": "pro Person, zzgl. Fahrtkosten je nach Entfernung",
-            "label": "Platz im Wurfkurs"
+            "price": "",
+            "priceNote": "zzgl. Anfahrt je nach Entfernung",
+            "variants": [
+                {
+                    "id": "einzel",
+                    "label": "Einzelkurs, 1 Person",
+                    "price": "399 €",
+                    "priceNote": "für 1 Person"
+                },
+                {
+                    "id": "gruppe",
+                    "label": "2 bis 3 Personen",
+                    "price": "199 €",
+                    "priceNote": "pro Person"
+                }
+            ]
         },
         {
             "id": "grundlagenkurs-vor-ort",
@@ -224,20 +237,33 @@
                 "1 bis 3 Personen",
                 "An deinem Hausgewässer"
             ],
-            "price": "399 €",
-            "priceNote": "pro Person, zzgl. Fahrtkosten je nach Entfernung",
-            "label": "Platz im Grundlagenkurs"
+            "price": "",
+            "priceNote": "zzgl. Anfahrt je nach Entfernung",
+            "variants": [
+                {
+                    "id": "einzel",
+                    "label": "Einzelkurs, 1 Person",
+                    "price": "540 €",
+                    "priceNote": "für 1 Person"
+                },
+                {
+                    "id": "gruppe",
+                    "label": "2 bis 3 Personen",
+                    "price": "399 €",
+                    "priceNote": "pro Person"
+                }
+            ]
         },
         {
-            "id": "webinar-sommerfischen",
+            "id": "webinar-streamer-bachforelle",
             "group": "Online",
-            "title": "Sommerfischen auf Bachforelle",
+            "title": "Mit großen Streamern auf Bachforelle",
             "subtitle": "Webinar",
             "image": {
                 "src": "/media/bilder/lukas-bachforelle-abendlicht.jpg",
                 "alt": "Lukas Ude hält eine Bachforelle vor einem Fluss im Abendlicht."
             },
-            "text": "Warmes Wasser, wenig Wasser, scheue Fische: Wie du Bachforellen im Sommer findest und mit welchen Fliegen und Techniken du sie überlistest.",
+            "text": "Große Bachforellen jagen kleine Fische. Wie du sie mit großen Streamern gezielt befischst: die passenden Muster, die Führung im Wasser und die Stellen, an denen die großen Fische stehen.",
             "facts": [
                 "Live online",
                 "Termin folgt"

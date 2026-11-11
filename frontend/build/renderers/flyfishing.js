@@ -83,8 +83,32 @@ function bookButton(course) {
     return html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">${offer.price ? "Jetzt anmelden" : "Platz vormerken"}<span class="btn__arrow" aria-hidden="true">→</span></button>`;
 }
 
+/** A course offer with price levels (e.g. 1 person / 2 to 3 persons), one button each. */
+function offerCardWithVariants(offer, index) {
+    return html`
+                    <li class="ff-offer glass" data-reveal data-reveal-delay="${index % 3}">
+                        <figure class="ff-offer__image"><img src="${offer.image.src}" alt="${offer.image.alt}" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw" loading="lazy" data-responsive></figure>
+                        <div class="ff-offer__body">
+                            <p class="kicker">${offer.subtitle}</p>
+                            <h3 class="ff-card__title">${offer.title}</h3>
+                            <p class="ff-card__text">${offer.text}</p>
+                            <ul class="chip-row" role="list">${offer.facts.map((fact) => html`<li class="chip">${fact}</li>`)}</ul>
+                            <ul class="ff-variants" role="list">
+                                ${offer.variants.map((variant) => html`
+                                <li class="ff-variant">
+                                    <span class="ff-variant__label">${variant.label}</span>
+                                    <span class="ff-offer__price">${variant.price} <span>${variant.priceNote}</span></span>
+                                    <button class="ff-add" type="button" data-cart-add="course-${offer.id}-${variant.id}" data-cart-name="${offer.title}" data-cart-go="/warenkorb/">Anmelden</button>
+                                </li>`)}
+                            </ul>
+                            <p class="ff-small">${offer.priceNote}</p>
+                        </div>
+                    </li>`;
+}
+
 /** One course offer: bookable (cart) or on request (contact form). */
 function offerCard(offer, index) {
+    if (offer.variants?.length) return offerCardWithVariants(offer, index);
     const action = offer.label
         ? html`<button class="ff-add" type="button" data-cart-add="course-${offer.id}" data-cart-name="${offer.title}" data-cart-go="/warenkorb/">Jetzt anmelden</button>`
         : html`<a class="ff-add" href="/kontakt/?thema=${encodeURIComponent(offer.topic || START_TOPIC)}">${offer.actionLabel || "Anfrage senden"}</a>`;

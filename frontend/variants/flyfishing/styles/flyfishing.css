@@ -1297,3 +1297,36 @@
         justify-self: end;
     }
 }
+
+/* price levels of an offer (1 person / 2 to 3 persons) */
+.ff-variants {
+    display: grid;
+    gap: 0;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--b-line);
+}
+
+.ff-variant {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.3rem 1rem;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--b-line);
+}
+
+.ff-variant__label {
+    font-weight: 600;
+}
+
+.ff-variant .ff-offer__price {
+    grid-column: 1;
+}
+
+.ff-variant .ff-add {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin: 0;
+}

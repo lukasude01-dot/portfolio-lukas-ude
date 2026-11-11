@@ -373,6 +373,9 @@ function writeShopCatalog(content) {
     for (const fly of content.flies || []) items[`fly-${fly.slug}`] = { name: fly.name, kind: "fly", price: fly.price || "", image: fly.image.src, url: "/fliegen/" };
     for (const offer of content.angebote || []) {
         if (offer.label) items[`course-${offer.id}`] = { name: offer.title, kind: "course", price: offer.price || "", image: offer.image.src, url: "/kurse/" };
+        for (const variant of offer.variants || []) {
+            items[`course-${offer.id}-${variant.id}`] = { name: `${offer.title}: ${variant.label}`, kind: "course", price: `${variant.price} ${variant.priceNote}`, image: offer.image.src, url: "/kurse/" };
+        }
     }
     for (const course of content.courses || []) {
         for (const offer of course.offers || []) items[`course-${offer.id}`] = { name: `${course.title}: ${offer.label}`, kind: "course", price: offer.price || "", image: course.image.src, url: course.url };

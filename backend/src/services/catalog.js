@@ -23,6 +23,10 @@ export function loadCatalog(contentDir) {
     const courses = readJson(path.join(contentDir, "kurse.json"));
     for (const offer of courses.angebote || []) {
         if (offer.label) catalog[`course-${offer.id}`] = { name: offer.title, kind: "course", price: offer.price || "" };
+        // price levels, e.g. single person / 2 to 3 persons
+        for (const variant of offer.variants || []) {
+            catalog[`course-${offer.id}-${variant.id}`] = { name: `${offer.title}: ${variant.label}`, kind: "course", price: `${variant.price} ${variant.priceNote}` };
+        }
     }
     for (const course of courses.courses || []) {
         for (const offer of course.offers || []) {
