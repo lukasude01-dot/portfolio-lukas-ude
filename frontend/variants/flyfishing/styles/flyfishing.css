@@ -1280,3 +1280,20 @@
 .ff-offer .ff-add {
     text-decoration: none;
 }
+
+
+/* Call to action card in a page head (e.g. workshop on /fliegenbinden/) */
+.ff-cta-card {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 460px;
+    padding: clamp(1.3rem, 1rem + 1.4vw, 2.2rem);
+    background: rgba(11, 12, 10, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+@media (min-width: 980px) {
+    .ff-cta-card {
+        justify-self: end;
+    }
+}
