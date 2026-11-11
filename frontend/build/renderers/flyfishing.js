@@ -186,7 +186,7 @@ ${factsList(course, 3)}
                     <ul class="ff-offers" role="list">
                         ${extra.map((course, index) => offerCard({
                             id: course.offers[0].id, title: course.title, subtitle: "Live-Online-Workshop", image: course.image,
-                            text: course.description, facts: ["4 Stunden", "Maximal 15 Personen"], price: course.offers[0].price,
+                            text: course.description, facts: ["4 Stunden", "Maximal 15 Personen", "Sonderkonditionen bei ADH Fishing"], price: course.offers[0].price,
                             priceNote: "pro Person", label: course.offers[0].label, url: course.url
                         }, index))}
                         ${offers.map((offer, index) => offerCard(offer, extra.length + index))}

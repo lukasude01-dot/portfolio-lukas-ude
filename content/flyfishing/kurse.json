@@ -47,6 +47,10 @@
                 {
                     "label": "Materialien",
                     "value": "Bringst du selbst mit. Eine detaillierte Einkaufsliste erhältst du vorab."
+                },
+                {
+                    "label": "Erstausstattung",
+                    "value": "Sonderkonditionen bei ADH Fishing für alle Teilnehmer"
                 }
             ],
             "image": {
@@ -137,12 +141,17 @@
             "equipment": [
                 "Für die Teilnahme benötigst du einen Bindestock, grundlegende Bindewerkzeuge und die Materialien für unsere drei Fliegenmuster. Eine teure Komplettausstattung musst du dafür nicht kaufen.",
                 "Nach deiner Anmeldung erhältst du eine detaillierte Werkzeug- und Materialliste mit den benötigten Mengen, Größen und möglichen Alternativen, spätestens zehn Tage vor dem Workshop.",
-                "Falls du noch keine Ausrüstung besitzt oder unsicher bist, welche Produkte du kaufen solltest, unterstütze ich dich gern vorab bei der Auswahl. So stellst du eine sinnvolle Grundausstattung zusammen, mit der du auch nach dem Workshop weiterarbeiten kannst, ohne unnötig Geld auszugeben."
+                "Falls du noch keine Ausrüstung besitzt oder unsicher bist, welche Produkte du kaufen solltest, unterstütze ich dich gern vorab bei der Auswahl. So stellst du eine sinnvolle Grundausstattung zusammen, mit der du auch nach dem Workshop weiterarbeiten kannst, ohne unnötig Geld auszugeben.",
+                "Als Teilnehmer meines Workshops bekommst du Sonderkonditionen auf deine Erstausstattung bei ADH Fishing. Die Details schicke ich dir zusammen mit der Materialliste."
             ],
             "extras": [
                 {
                     "title": "Material- und Werkzeugliste",
                     "text": "Eine übersichtliche Einkaufsliste mit allen benötigten Materialien und Werkzeugen sowie Hinweisen zu möglichen Alternativen."
+                },
+                {
+                    "title": "Sonderkonditionen bei ADH Fishing",
+                    "text": "Wenn du bei mir buchst, kaufst du deine Erstausstattung, also Werkzeug und Material, bei ADH Fishing zu Sonderkonditionen."
                 },
                 {
                     "title": "Hilfe bei der Ausrüstung",
@@ -183,7 +192,8 @@
             "facts": [
                 "Streamer auf Technik und Gewässer abstimmen",
                 "Materialkunde für Streamer",
-                "Große Bachforellen-Streamer"
+                "Große Bachforellen-Streamer",
+                "Sonderkonditionen bei ADH Fishing"
             ],
             "price": "",
             "priceNote": "Termin und Preis folgen",
