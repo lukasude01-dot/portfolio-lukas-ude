@@ -43,6 +43,7 @@ export const variant = {
         url: "https://flyfishing.lukasude.de",
         navigation: [
             { label: "Workshop", href: "/workshop/" },
+            { label: "Fliegen-Shop", href: "/fliegen/" },
             { label: "Fliegenbinden", href: "/fliegenbinden/" },
             { label: "Fliegenfischen", href: "/fliegenfischen/" },
             { label: "Über Lukas", href: "/ueber-lukas/" }

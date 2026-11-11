@@ -35,6 +35,7 @@ export const CONTACT_TOPICS = [
 export const FLYFISHING_TOPICS = [
     "Fly Fishing: Frage zum Workshop",
     "Fly Fishing: Hilfe bei der Ausrüstung",
+    "Fly Fishing: Frage zu Fliegen",
     "Fly Fishing: Kooperation",
     "Fly Fishing: Presse",
     "Fly Fishing: Allgemeine Anfrage"

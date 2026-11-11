@@ -1,0 +1,38 @@
+{
+    "_info": "Fliegen im Shop (flyfishing.lukasude.de/fliegen/). Derzeit 3 Platzhalter. Preis als \"price\": \"4,50 €\" eintragen. Alle früheren Fliegen liegen in _spaeter/fliegen.json.",
+    "flies": [
+        {
+            "slug": "beispiel-streamer",
+            "name": "Beispiel: Streamer",
+            "type": "Streamer",
+            "description": "Platzhalter. Hier stehen später Beschreibung, Hakengröße und Einsatzgebiet der Fliege.",
+            "price": "",
+            "image": {
+                "src": "/media/bilder/fliege-streamer-gelb-schwarz.jpg",
+                "alt": "Ein Streamer mit gelbem Haarflügel und schwarzer Hechel im Bindestock."
+            }
+        },
+        {
+            "slug": "beispiel-meerforelle",
+            "name": "Beispiel: Meerforellenfliege",
+            "type": "Meerforelle",
+            "description": "Platzhalter. Hier stehen später Beschreibung, Hakengröße und Einsatzgebiet der Fliege.",
+            "price": "",
+            "image": {
+                "src": "/media/bilder/fliege-garnele-orange.jpg",
+                "alt": "Eine orange Garnelenfliege mit langen Fühlern."
+            }
+        },
+        {
+            "slug": "beispiel-nassfliege",
+            "name": "Beispiel: Nassfliege",
+            "type": "Nassfliege",
+            "description": "Platzhalter. Hier stehen später Beschreibung, Hakengröße und Einsatzgebiet der Fliege.",
+            "price": "",
+            "image": {
+                "src": "/media/bilder/fliege-spider-orange.jpg",
+                "alt": "Eine orange Spinnenfliege mit langer Hechel."
+            }
+        }
+    ]
+}

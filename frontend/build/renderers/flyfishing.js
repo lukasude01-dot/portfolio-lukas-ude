@@ -46,7 +46,7 @@ function courseCard(course, index) {
                     </li>`;
 }
 
-const ORDER_TOPIC = "Fly Fishing: Fliegen bestellen";
+const ORDER_TOPIC = "Fly Fishing: Frage zu Fliegen";
 const orderLink = `/kontakt/?thema=${encodeURIComponent(ORDER_TOPIC)}`;
 const FLY_TYPES = [
     { type: "Streamer", text: "Für Bach-, See- und Meerforelle. Profil und Bewegung stehen im Vordergrund." },
@@ -130,6 +130,12 @@ ${factsList(course, 3)}
                     </ul>
                 </div>`;
     })}`,
+
+    // ALL FLIES IN ONE GRID (while the range is small)
+    "ff-flies-all": ({ content }) => html`
+                <ul class="ff-flies" role="list">
+                    ${(content.flies || []).map(flyCard)}
+                </ul>`,
 
     // A FEW FLIES (homepage, shop)
     "ff-flies-teaser": ({ content }) => html`
