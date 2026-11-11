@@ -34,6 +34,7 @@ export const CONTACT_TOPICS = [
 // shows in the e-mail which website the message came from.
 export const FLYFISHING_TOPICS = [
     "Fly Fishing: Frage zum Workshop",
+    "Fly Fishing: Streamerbinden Spezial",
     "Fly Fishing: Kurs vor Ort",
     "Fly Fishing: Kurs für Vereine",
     "Fly Fishing: Hilfe bei der Ausrüstung",

@@ -87,12 +87,12 @@ function bookButton(course) {
 function offerCard(offer, index) {
     const action = offer.label
         ? html`<button class="ff-add" type="button" data-cart-add="course-${offer.id}" data-cart-name="${offer.title}" data-cart-go="/warenkorb/">Jetzt anmelden</button>`
-        : html`<a class="ff-add" href="/kontakt/?thema=${encodeURIComponent(offer.topic || START_TOPIC)}">Anfrage senden</a>`;
+        : html`<a class="ff-add" href="/kontakt/?thema=${encodeURIComponent(offer.topic || START_TOPIC)}">${offer.actionLabel || "Anfrage senden"}</a>`;
     return html`
                     <li class="ff-offer glass" data-reveal data-reveal-delay="${index % 3}">
                         <figure class="ff-offer__image"><img src="${offer.image.src}" alt="${offer.image.alt}" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 92vw" loading="lazy" data-responsive></figure>
                         <div class="ff-offer__body">
-                            <p class="kicker">${offer.subtitle}</p>
+                            <p class="kicker">${offer.status ? html`<span class="ff-status">${offer.status}</span>` : offer.subtitle}</p>
                             <h3 class="ff-card__title">${offer.url ? html`<a href="${offer.url}">${offer.title}</a>` : offer.title}</h3>
                             <p class="ff-card__text">${offer.text}</p>
                             <ul class="chip-row" role="list">${offer.facts.map((fact) => html`<li class="chip">${fact}</li>`)}</ul>
@@ -151,20 +151,21 @@ ${factsList(course, 3)}
     })}`,
 
     // ALL COURSE OFFERS (/kurse/), grouped: "Vor Ort", "Online", "Für Vereine"
-    "ff-offers": ({ content }) => html`${["Vor Ort", "Online", "Für Vereine"].map((group) => {
+    "ff-offers": ({ content }) => html`${["Fliegenbinden", "Vor Ort", "Online", "Für Vereine"].map((group) => {
         const offers = (content.angebote || []).filter((offer) => offer.group === group);
-        if (!offers.length) return "";
-        const extra = group === "Online" ? content.courses.filter((course) => course.offers?.length) : [];
+        if (!offers.length && !extra.length) return "";
+        // the fly tying workshop (its own page) leads the "Fliegenbinden" group
+        const extra = group === "Fliegenbinden" ? content.courses.filter((course) => course.offers?.length) : [];
         return html`
-                <div class="ff-offer-group" id="${group === "Vor Ort" ? "vor-ort" : group === "Online" ? "online" : "vereine"}">
+                <div class="ff-offer-group" id="${{ "Fliegenbinden": "fliegenbinden", "Vor Ort": "vor-ort", "Online": "online" }[group] || "vereine"}">
                     <h2 class="h2 ff-offer-group__title" data-reveal>${group}</h2>
                     <ul class="ff-offers" role="list">
-                        ${offers.map((offer, index) => offerCard(offer, index))}
                         ${extra.map((course, index) => offerCard({
                             id: course.offers[0].id, title: course.title, subtitle: "Live-Online-Workshop", image: course.image,
                             text: course.description, facts: ["4 Stunden", "Maximal 15 Personen"], price: course.offers[0].price,
                             priceNote: "pro Person", label: course.offers[0].label, url: course.url
-                        }, offers.length + index))}
+                        }, index))}
+                        ${offers.map((offer, index) => offerCard(offer, extra.length + index))}
                     </ul>
                 </div>`;
     })}`,

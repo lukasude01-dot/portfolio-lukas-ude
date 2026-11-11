@@ -170,6 +170,27 @@
     ],
     "angebote": [
         {
+            "id": "streamerbinden-spezial",
+            "group": "Fliegenbinden",
+            "title": "Streamerbinden Spezial",
+            "subtitle": "In Planung",
+            "status": "In Planung",
+            "image": {
+                "src": "/media/bilder/tubenstreamer-bindestock.jpg",
+                "alt": "Ein olivgrüner Tubenstreamer mit Kegelkopf auf der Nadel des Bindestocks."
+            },
+            "text": "Für alle, die gezielt große Bachforellen mit dem Streamer fangen wollen. Wir stimmen Streamer auf Angeltechnik und Gewässer ab, vertiefen die Materialkunde und binden große Streamer für Bachforellen.",
+            "facts": [
+                "Streamer auf Technik und Gewässer abstimmen",
+                "Materialkunde für Streamer",
+                "Große Bachforellen-Streamer"
+            ],
+            "price": "",
+            "priceNote": "Termin und Preis folgen",
+            "topic": "Fly Fishing: Streamerbinden Spezial",
+            "actionLabel": "Interesse vormerken"
+        },
+        {
             "id": "wurfkurs-quick",
             "group": "Vor Ort",
             "title": "Wurfkurs kompakt",
