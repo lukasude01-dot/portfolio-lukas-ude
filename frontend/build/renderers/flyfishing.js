@@ -27,6 +27,8 @@ const startLink = () => `/kontakt/?thema=${encodeURIComponent(START_TOPIC)}`;
 
 function addCourseButton(course) {
     const offer = course.offers?.[0];
+    // several dates: the date is chosen on the course page
+    if (course.offers?.length > 1) return html`<a class="ff-add" href="${course.url}#anmelden">Termin wählen</a>`;
     return offer ? html`<button class="ff-add" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}">${offer.label} in den Warenkorb</button>` : "";
 }
 
@@ -75,10 +77,14 @@ function factsList(course, delay) {
                         </dl>`;
 }
 
-/** Puts the workshop place in the cart and opens the cart (data-cart-go). */
-function bookButton(course) {
+/** Puts the workshop place in the cart and opens the cart (data-cart-go).
+ *  With several dates ("offers") it links to the date choice (#anmelden) instead. */
+function bookButton(course, onCoursePage = false) {
     const offer = course?.offers?.[0];
     if (!offer) return "";
+    if (course.offers.length > 1) {
+        return html`<a class="btn" href="${onCoursePage ? "" : course.url}#anmelden" data-magnetic>Termin wählen<span class="btn__arrow" aria-hidden="true">→</span></a>`;
+    }
     // without a price yet the place can be reserved ("vormerken")
     return html`<button class="btn" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">${offer.price ? "Jetzt anmelden" : "Platz vormerken"}<span class="btn__arrow" aria-hidden="true">→</span></button>`;
 }
@@ -98,7 +104,7 @@ function offerCardWithVariants(offer, index) {
                                 <li class="ff-variant">
                                     <span class="ff-variant__label">${variant.label}</span>
                                     <span class="ff-offer__price">${variant.price} <span>${variant.priceNote}</span></span>
-                                    <button class="ff-add" type="button" data-cart-add="course-${offer.id}-${variant.id}" data-cart-name="${offer.title}" data-cart-go="/warenkorb/">Anmelden</button>
+                                    <button class="ff-add" type="button" data-cart-add="${variant.cartId || `course-${offer.id}-${variant.id}`}" data-cart-name="${offer.title}" data-cart-go="/warenkorb/">Anmelden</button>
                                 </li>`)}
                             </ul>
                             <p class="ff-small">${offer.priceNote}</p>
@@ -187,7 +193,11 @@ ${factsList(course, 3)}
                         ${extra.map((course, index) => offerCard({
                             id: course.offers[0].id, title: course.title, subtitle: "Live-Online-Workshop", image: course.image,
                             text: course.description, facts: ["4 Stunden", "Maximal 15 Personen", "Sonderkonditionen bei ADH Fishing"], price: course.offers[0].price,
-                            priceNote: "pro Person", label: course.offers[0].label, url: course.url
+                            priceNote: "pro Person", label: course.offers[0].label, url: course.url,
+                            // several dates: one button per date
+                            variants: course.offers.length > 1
+                                ? course.offers.map((offer) => ({ label: offer.date, price: offer.price, priceNote: "pro Person", cartId: `course-${offer.id}` }))
+                                : undefined
                         }, index))}
                         ${offers.map((offer, index) => offerCard(offer, extra.length + index))}
                     </ul>
@@ -281,17 +291,25 @@ ${factsList(course, 3)}
                 <div class="ff-callbox glass ff-booking" id="anmelden" data-reveal>
                     <div>
                         <p class="kicker">Jetzt deinen Platz sichern</p>
-                        <h2 class="h3">${course.dateLabel} | ${course.time} | ${course.offers?.[0]?.format || ""}</h2>
+                        <h2 class="h3">${course.offers?.length > 1 ? html`${course.offers.length} Termine` : course.dateLabel} | ${course.time} | ${course.offers?.[0]?.format || ""}</h2>
                         <p class="ff-booking__price">${course.offers?.[0]?.price || ""} <span>pro Person</span></p>
                         <p class="muted">Die Teilnehmerzahl ist auf 15 Personen begrenzt, damit genug Zeit für Fragen und die gemeinsame praktische Arbeit bleibt. Mit der Anmeldung schickst du mir eine Anfrage. Ich bestätige deinen Platz per E-Mail. Online bezahlen ist bald möglich.</p>
                     </div>
+                    ${course.offers?.length > 1 ? html`
+                    <ul class="ff-variants" role="list">
+                        ${course.offers.map((offer) => html`
+                        <li class="ff-variant">
+                            <span class="ff-variant__label">${offer.date}</span>
+                            <button class="ff-add" type="button" data-cart-add="course-${offer.id}" data-cart-name="${course.title}" data-cart-go="/warenkorb/">${offer.price ? "Anmelden" : "Platz vormerken"}</button>
+                        </li>`)}
+                    </ul>` : ""}
                     <div class="btn-row">
-                        ${bookButton(course)}
+                        ${course.offers?.length > 1 ? "" : bookButton(course)}
                         <a class="btn btn--ghost" href="${startLink()}" data-magnetic>Frage zum Workshop</a>
                     </div>
                 </div>`,
 
-    "ff-course-start": ({ course }) => html`${bookButton(course)}
+    "ff-course-start": ({ course }) => html`${bookButton(course, true)}
                             <a class="btn btn--ghost" href="#anmelden" data-magnetic>${course.offers?.[0]?.price || ""} pro Person</a>`,
 
     "ff-book-button": ({ content }) => bookButton(featured(content)),

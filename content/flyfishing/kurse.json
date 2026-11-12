@@ -1,5 +1,5 @@
 {
-    "_info": "Angebotene Kurse (flyfishing.lukasude.de). Derzeit nur der Einsteiger-Workshop. Datum in \"date\" eintragen, z. B. \"Freitag, 16. Januar 2027\". Spätere Kurse liegen in _spaeter/kurse.json. \"angebote\": alle Kurse auf /kurse/ (Gruppen: vor Ort, online, Vereine).",
+    "_info": "Angebotene Kurse (flyfishing.lukasude.de). Derzeit nur der Einsteiger-Workshop. Termine: ein Eintrag pro Termin in \"offers\" (eigene \"id\", \"date\", \"label\"), dazu alle Termine als Text in \"date\". Spätere Kurse liegen in _spaeter/kurse.json. \"angebote\": alle Kurse auf /kurse/ (Gruppen: vor Ort, online, Vereine).",
     "courses": [
         {
             "slug": "fliegenbinden-einsteiger",
@@ -16,13 +16,13 @@
                 "Dabei geht es nicht darum, möglichst viele Fliegen in möglichst kurzer Zeit zu produzieren. Vielmehr möchte ich dir vermitteln, wie die einzelnen Bindetechniken funktionieren, warum bestimmte Materialien verwendet werden und worauf es beim Aufbau einer Fliege ankommt.",
                 "Du bindest während des gesamten praktischen Teils selbst mit, kannst jederzeit Fragen stellen und die einzelnen Arbeitsschritte direkt nachvollziehen."
             ],
-            "date": "",
-            "dateFallback": "Freitag, Datum folgt",
+            "date": "Mittwoch, 16. Dezember 2026 oder Samstag, 2. Januar 2027",
+            "dateFallback": "Datum folgt",
             "time": "16:00 bis 20:00 Uhr",
             "facts": [
                 {
                     "label": "Termin",
-                    "value": "{date}, {time}"
+                    "value": "{date}, jeweils {time}"
                 },
                 {
                     "label": "Ort",
@@ -169,8 +169,16 @@
             ],
             "offers": [
                 {
-                    "id": "fliegenbinden-einsteiger-live",
-                    "label": "Platz im Live-Workshop",
+                    "id": "fliegenbinden-einsteiger-2026-12-16",
+                    "date": "Mittwoch, 16. Dezember 2026",
+                    "label": "Platz am 16. Dezember 2026",
+                    "format": "Live online per Videokonferenz",
+                    "price": "69 €"
+                },
+                {
+                    "id": "fliegenbinden-einsteiger-2027-01-02",
+                    "date": "Samstag, 2. Januar 2027",
+                    "label": "Platz am 2. Januar 2027",
                     "format": "Live online per Videokonferenz",
                     "price": "69 €"
                 }
